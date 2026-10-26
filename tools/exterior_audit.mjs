@@ -51,7 +51,7 @@ try{
  page.on('console',m=>{if(m.type()==='error')errors.push(m.text())})
  await page.goto((process.env.SUNNY_BASE_URL || 'http://localhost:5173'),{waitUntil:'domcontentloaded',timeout:120000})
  await page.waitForFunction(()=>window.__ship&&!document.body.innerText.includes('Loading the ship'),{timeout:120000});await page.mouse.click(720,450)
- await page.evaluate(async()=>{const {_roots}=await import('/node_modules/.vite/deps/@react-three_fiber.js');window.__audit=_roots.get(document.querySelector('canvas')).store.getState();window.__audit.controls.enabled=false})
+ await page.evaluate(async()=>{const {_roots}=await import('/.vite-cache/deps/@react-three_fiber.js');window.__audit=_roots.get(document.querySelector('canvas')).store.getState();window.__audit.controls.enabled=false})
  const views=[
   ['top',[0,75,-cy],[0,-29,-cy],true],
   ['port',[0,-4,132],[0,-4,-cy],false],['starboard',[0,-4,-134],[0,-4,-cy],false],

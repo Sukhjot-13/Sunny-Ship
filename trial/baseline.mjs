@@ -22,7 +22,7 @@ try{
  page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text())})
  await page.goto(url,{waitUntil:'domcontentloaded',timeout:120000});await page.waitForFunction(()=>window.__ship&&!document.body.innerText.includes('Loading the ship'),{timeout:120000});await page.mouse.click(720,450)
  await page.evaluate(async()=>{
-  const {_roots}=await import('/node_modules/.vite/deps/@react-three_fiber.js');const s=window.__trialState=_roots.get(document.querySelector('canvas')).store.getState();s.controls.enabled=false
+  const {_roots}=await import('/.vite-cache/deps/@react-three_fiber.js');const s=window.__trialState=_roots.get(document.querySelector('canvas')).store.getState();s.controls.enabled=false
   s.scene.onBeforeRender=function cameraSurvey(_r,_s,c){if(c!==s.camera||!window.__trialPose)return;window.__ship.updateWorldMatrix(true,false);const m=window.__ship.matrixWorld,p=window.__trialPose;c.position.fromArray(p.eye).applyMatrix4(m);c.up.set(0,1,0).transformDirection(m);c.lookAt(c.position.clone().fromArray(p.target).applyMatrix4(m));c.updateMatrixWorld(true)}
  })
  for(const [name,eye,target] of views){
