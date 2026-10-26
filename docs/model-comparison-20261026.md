@@ -19,3 +19,13 @@ Dependencies/caches/dist, credentials/local settings, giant generated historical
 ## Live checkpoint
 
 Preparing Git baseline and isolated workspaces. No participants dispatched yet. Previous product capture/server jobs have stopped; their orphaned project-owned browser was terminated. No general texture, repair or asset work is authorized.
+
+## Git/workspace checkpoint
+
+- Sanitized product baseline: `9fd7a1b74837e3d6d1b03cefdfbaee22d141ef3a`, local main; configured existing Git identity used, no remote. Required models/master/original FBX/all25 images are tracked. Existing saved HTML whitespace is retained, not rewritten to make a clean-looking baseline.
+- Sol worktree: `/Users/sukhjot/.codex/worktrees/sol-c01-trial/test`; common harness commit `913c0e06b07f54e9ffc26029020e6ae302a5ee59`.
+- Terra worktree: `/Users/sukhjot/.codex/worktrees/terra-c02-trial/test`; common harness commit `429e21829709b435496b459541020961fca5578f`.
+- Both common trees are **identical**: `4b82ea30e49cae5f0d693670febd305a808bd446`, both descend directly from the same sanitized baseline. Only15 URL-parameterized audit/test files, strict port/cache config, neutral architecture/packet/evidence and the common lock/capture helpers differ from baseline. No assertions or product code changes in that harness.
+- Sol preview port8171; Terra8172. Environment: `SUNNY_PORT`, `SUNNY_BASE_URL`, and legacy `URL`, all pointing to the assigned workspace. Vite cache is `.vite-cache` in each worktree; existing dependency tree is read-only shared through a symlink, no installs. Heavy Blender/GPU/browser jobs use the same advisory lock wrapper, with queue/execution events saved independently.
+- Original audit/resume/architecture/to-do/section/suggestions and selected review Markdown receive a **separate main-only local documentation checkpoint** after worktrees are created. These contain prior private solution context and are never copied to participants. Participants must not inspect other refs or original paths. This preserves recovery without contaminating the neutral trial.
+- Common baseline render/hash/ray and static/build checks are in progress before dispatch. No participant has started.
