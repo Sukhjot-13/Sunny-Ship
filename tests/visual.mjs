@@ -24,7 +24,7 @@ await page.setViewport({ width: 1440, height: 900 })
 const errors = []
 page.on('pageerror', (e) => errors.push(e.message))
 
-await page.goto('http://localhost:5173/', { waitUntil: 'domcontentloaded', timeout: 120000 })
+await page.goto((process.env.SUNNY_BASE_URL || 'http://localhost:5173/'), { waitUntil: 'domcontentloaded', timeout: 120000 })
 await page.waitForSelector('canvas', { timeout: 60000 })
 await page.waitForFunction(()=>window.__ship && !document.body.innerText.includes('Loading the ship'),{timeout:120000})
 await sleep(3000)

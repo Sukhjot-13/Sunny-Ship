@@ -10,7 +10,7 @@ try{
  page.on('pageerror',e=>errors.push(e.message))
  /** Start exactly through the title card, without injecting app state. */
  async function start(){
-  await page.goto('http://localhost:5173/',{waitUntil:'domcontentloaded',timeout:120000})
+  await page.goto((process.env.SUNNY_BASE_URL || 'http://localhost:5173/'),{waitUntil:'domcontentloaded',timeout:120000})
   await page.waitForFunction(()=>window.__ship&&!document.body.innerText.includes('Loading the ship'),{timeout:120000})
   await page.mouse.click(640,400)
   await page.waitForSelector('button[aria-controls="cannon-panel"]')

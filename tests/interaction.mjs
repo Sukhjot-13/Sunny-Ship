@@ -13,7 +13,7 @@
  */
 import puppeteer from 'puppeteer'
 
-const URL = process.env.URL || 'http://localhost:5173/'
+const URL = process.env.URL || (process.env.SUNNY_BASE_URL || 'http://localhost:5173/')
 
 let pass = 0, fail = 0
 const check = (name, cond, detail = '') => {
