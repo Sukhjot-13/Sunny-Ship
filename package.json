@@ -1,0 +1,31 @@
+{
+  "name": "thousand-sunny",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "assets": "blender -b --factory-startup --python-exit-code 1 --python tools/build_assets.py",
+    "test": "node tests/run-all.mjs",
+    "test:physics": "node tests/physics.test.mjs",
+    "test:gameplay": "node tests/gameplay.mjs",
+    "visual": "node tests/visual.mjs",
+    "test:interaction": "node tests/interaction.mjs"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.114.0",
+    "@react-three/fiber": "^8.17.10",
+    "@react-three/rapier": "^1.5.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.169.0",
+    "zustand": "^4.5.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.3",
+    "puppeteer": "^25.12.0",
+    "vite": "^5.4.10"
+  }
+}

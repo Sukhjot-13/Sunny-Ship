@@ -1,0 +1,21 @@
+# Local dependencies, generated output and private settings stay on disk.
+node_modules/
+dist/
+.DS_Store
+**/__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+.aws/
+.codex/
+.agents/
+*.blend1
+public/.models-staging/
+tests/screenshots/
+# Historical evidence/progress contains a prior C01 solution: excluded for a fair trial.
+docs/*
+!docs/exterior-reference.md
+!docs/interior-reference.md
+!docs/model-comparison-20261026.md
+# These report/evidence files are added explicitly after the experiment.

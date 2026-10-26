@@ -1,0 +1,70 @@
+import assert from 'node:assert/strict'
+import {voyage,resetVoyage,shipYaw,rotatePoint,dockBounds,advanceVoyage,advanceCannon,cannonAvailability,operateCannon,startBurst,fireGaon,shutterPose,channelName,BURST,CHANNELS,LOG_BEARINGS} from '../src/systems/navigation.js'
+resetVoyage()
+assert.equal(shipYaw(),0)
+assert.equal(CHANNELS.length,6)
+assert.equal(LOG_BEARINGS.length,3)
+voyage.helm=true
+for(let i=0;i<100;i++)advanceVoyage(.1,{forward:true,right:true})
+assert(voyage.heading!==270 && voyage.speed>2 && voyage.throttle===1)
+assert(Math.hypot(voyage.east,voyage.south)>10)
+const local=[-25,-30,2],world=rotatePoint(local,shipYaw())
+const restored=rotatePoint(world,-shipYaw())
+assert(restored.every((v,i)=>Math.abs(v-local[i])<1e-10))
+assert(startBurst());assert.equal(voyage.cola,0);assert(!startBurst())
+for(let i=0;i<30;i++)advanceVoyage(.1)
+assert(Math.abs(voyage.lift-BURST.height)<.01,'Burst should reach its airborne apex')
+for(let i=0;i<31;i++)advanceVoyage(.1)
+assert.equal(voyage.lift,0);assert.equal(voyage.pitch,0);assert.equal(voyage.burst,0)
+voyage.channel=4
+const angle=voyage.dockAngle
+advanceVoyage(.1,{},true);assert.equal(voyage.dockAngle,angle)
+for(let i=0;i<100;i++)advanceVoyage(.1,{},false)
+assert(Math.abs(voyage.dockAngle+Math.PI)<1e-6)
+const solid=[{name:'bay',min:[1,0,0],max:[2,3,1]}]
+const result=dockBounds(solid,[0,0,0],Math.PI/2)[0]
+assert(Math.abs(result.min[0])<1e-10 && Math.abs(result.max[0]-1)<1e-10)
+assert(Math.abs(result.min[2]+2)<1e-10 && Math.abs(result.max[2]+1)<1e-10)
+assert.equal(result.min[1],0);assert.equal(result.max[1],3)
+resetVoyage();assert.equal(voyage.speed,0);assert.equal(voyage.cola,3)
+assert.equal(channelName(0),'Paddles')
+voyage.dockOpen=true
+for(let i=0;i<30;i++)advanceVoyage(.1)
+assert.equal(voyage.shutter,1)
+voyage.dockOpen=false
+advanceVoyage(.1,{},false,true);assert.equal(voyage.shutter,1,'occupied aperture closure must pause')
+voyage.channel=3;advanceVoyage(.1);assert.equal(voyage.dockAngle,0,'carousel must wait for full closure')
+for(let i=0;i<30;i++)advanceVoyage(.1)
+assert(voyage.shutter===0&&voyage.dockAngle<-.5)
+const slat=shutterPose([1,2,3],4,.5,5,1,'port')
+assert(slat.angle>0&&slat.centre[1]<=4.6,'shutter wraps rather than translating above the hull')
+assert.deepEqual(shutterPose([1,2,3],4,.5,5,0,'port'),{centre:[1,2,3],angle:0})
+resetVoyage();voyage.chicken=true;voyage.throttle=1
+advanceVoyage(.1);assert(voyage.maneAngle>0&&voyage.speed<0)
+assert(fireGaon());assert.equal(voyage.cola,0);assert(voyage.jawOpen);assert(!fireGaon())
+for(let i=0;i<15;i++)advanceVoyage(.1)
+assert(voyage.jaw>.99&&voyage.speed<0,'jaw opening and reverse recoil must agree')
+resetVoyage();voyage.channel=0;voyage.shutter=1;voyage.dockOpen=true;voyage.throttle=1
+advanceVoyage(.1);assert(voyage.paddleAngle>0&&voyage.cola<3)
+resetVoyage()
+assert(cannonAvailability().canFire)
+assert(!voyage.helm,'global control must not need the helm')
+assert(operateCannon('toggle-mouth').ok)
+for(let i=0;i<20;i++)advanceCannon(.1)
+assert(voyage.jaw>.99,'Inspect must animate the real jaw')
+assert.equal(voyage.east,0);assert.equal(voyage.south,0,'Inspect cannon ticking must not start a voyage')
+assert(operateCannon('toggle-mouth').ok)
+for(let i=0;i<20;i++)advanceCannon(.1)
+assert(voyage.jaw<.01)
+assert(operateCannon('fire').ok)
+assert.equal(voyage.cola,0);assert(voyage.jawOpen);assert(voyage.gaon>0)
+assert(!cannonAvailability().canFire);assert(!operateCannon('fire').ok)
+for(let i=0;i<30;i++)advanceCannon(.1)
+assert.equal(voyage.gaon,0);assert(!cannonAvailability().canFire,'empty cola remains unavailable after cooldown')
+resetVoyage();voyage.burst=1
+assert(!operateCannon('fire').ok);assert.equal(voyage.cola,3,'Burst guard preserves cola')
+resetVoyage();voyage.gaon=1
+assert(!operateCannon('fire').ok);assert.equal(voyage.cola,3,'cooldown guard preserves cola')
+assert(!operateCannon('invalid').ok)
+resetVoyage()
+console.log('PASS navigation: steering, air arc/landing, three-barrel costs, seven selector states, occupied roller/carousel, Chicken reverse, Gaon jaw/recoil and cola-powered paddles')

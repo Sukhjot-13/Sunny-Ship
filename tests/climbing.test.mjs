@@ -1,0 +1,47 @@
+import assert from 'node:assert/strict'
+import {normalizeClimbs,pointAt,closestOnPath,reachedClimbPoint,createClimbingSystem,CLIMB_SPEED} from '../src/systems/climbing.js'
+import {createInteractionBus} from '../src/systems/interactions.js'
+import {EYE_HEIGHT_M,PLAYER_HEIGHT_M,SHIP_LENGTH_M,SHIP_HEIGHT_M,WALK_SPEED} from '../src/config/shipConfig.js'
+assert.equal(EYE_HEIGHT_M,1.7,'normal human eyes stay unchanged')
+assert.equal(PLAYER_HEIGHT_M,1.75,'normal human body stays unchanged')
+assert.equal(WALK_SPEED,3.4,'ordinary walking stays at human speed')
+assert(Math.abs(SHIP_LENGTH_M-85.8)<1e-9&&Math.abs(SHIP_HEIGHT_M-123.2)<1e-9,'the user-approved enlarged ship stays unchanged')
+const raw=[{id:'rope',points:[[0,0,0],[0,0,4],[2,0,4]]}]
+assert.equal(normalizeClimbs([{id:'invalid',points:[[0,0,0],[Infinity,0,1]]}]).length,0)
+assert.equal(normalizeClimbs([{id:'empty',points:[[0,0,0],[0,0,0]]}]).length,0)
+const path=normalizeClimbs(raw)[0]
+assert(reachedClimbPoint([-12.061300,29.22300067,-2.25985],[-12.061300,29.22097397,-2.25985]),'actual swept floor gap and GLB quantization must permit progress')
+assert.equal(reachedClimbPoint([0,.02,0],[0,0,0]),false,'a blocked proposal cannot advance climbing progress')
+assert.equal(path.length,6)
+assert.deepEqual(pointAt(path,4.5),[.5,4,0])
+assert.deepEqual(pointAt(path,-100),[0,0,0])
+assert.deepEqual(pointAt(path,100),[2,4,0])
+const near=closestOnPath(path,[.7,4,.2])
+assert(Math.abs(near.progress-4.7)<1e-10&&Math.abs(near.distance-.2)<1e-10)
+const system=createClimbingSystem(raw)
+assert.equal(system.attach([0,2,0]),false,'cannot grab a remote midpoint or jump up a rope')
+assert.equal(system.attach([.5,0,0]),true)
+const first=system.propose(1,10)
+assert(Math.abs(first.progress-CLIMB_SPEED/30)<1e-10,'frame hitch cannot skip collision travel')
+assert.equal(system.progress,0,'a proposed move does not commit before physical collision succeeds')
+system.commit(first.progress)
+assert.equal(system.propose(-1,1/30).progress,0,'descent returns along the same path')
+system.detach();assert.equal(system.propose(1,1),null)
+assert.equal(system.attach([2,4,0]),true)
+assert.equal(system.progress,6)
+assert(system.propose(-1,1/30).progress<6)
+system.detach()
+assert.equal(system.restore({id:'rope',progress:2},[0,0,0]),false,'Inspect restoration cannot relocate a player onto a remote path')
+assert.equal(system.restore({id:'rope',progress:2},[0,2,0]),true,'Inspect restoration preserves a physically matching climb pose')
+assert.equal(system.progress,2)
+assert.equal(system.restore({id:'rope',progress:Infinity},[0,2,0]),false)
+const bus=createInteractionBus(),calls=[]
+bus.subscribe(()=>{calls.push('hatch')})
+const unsubscribe=bus.subscribe(()=>{calls.push('climb');return true},100)
+assert.equal(bus.emit(),true)
+assert.deepEqual(calls,['climb'],'grabbing a ladder cannot also toggle the adjacent hatch')
+unsubscribe();calls.length=0
+bus.subscribe(()=>{calls.push('pass');return false},100)
+assert.equal(bus.emit(),false)
+assert.deepEqual(calls,['pass','hatch'],'an active climber can pass E through to the actual hatch')
+console.log('PASS climbing path validation, physical endpoint reach, continuous corners, return descent and bounded uncommitted collision proposals')
