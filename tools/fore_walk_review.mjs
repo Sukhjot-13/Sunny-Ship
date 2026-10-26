@@ -18,7 +18,7 @@ try {
  const errors=[],journeys=[],shots=[]
  page.on('pageerror',e=>errors.push(e.message))
  page.on('console',m=>{if(m.type()==='error')errors.push(m.text())})
- await page.goto('http://localhost:5173',{waitUntil:'domcontentloaded',timeout:120000})
+ await page.goto((process.env.SUNNY_BASE_URL || 'http://localhost:5173'),{waitUntil:'domcontentloaded',timeout:120000})
  await page.waitForFunction(()=>window.__ship&&!document.body.innerText.includes('Loading the ship'),{timeout:120000})
  await page.mouse.click(720,450);await page.keyboard.press('v')
  await page.waitForFunction(()=>!!window.__sunny,{timeout:120000})

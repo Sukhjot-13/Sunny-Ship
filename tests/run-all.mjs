@@ -18,7 +18,7 @@ const root = path.join(here, '..')
 // ensure the dev server is up for the browser suites
 async function ensureServer() {
   try {
-    const r = await fetch('http://localhost:5173/', { signal: AbortSignal.timeout(2000) })
+    const r = await fetch((process.env.SUNNY_BASE_URL || 'http://localhost:5173/'), { signal: AbortSignal.timeout(2000) })
     if (r.ok) return true
   } catch {}
   console.log('  starting dev server...')
@@ -29,7 +29,7 @@ async function ensureServer() {
   for (let i = 0; i < 40; i++) {
     await new Promise((r) => setTimeout(r, 500))
     try {
-      const res = await fetch('http://localhost:5173/', { signal: AbortSignal.timeout(1500) })
+      const res = await fetch((process.env.SUNNY_BASE_URL || 'http://localhost:5173/'), { signal: AbortSignal.timeout(1500) })
       if (res.ok) return true
     } catch {}
   }

@@ -37,7 +37,7 @@ page.on('requestfailed', (r) =>
   errors.push(`REQFAIL: ${r.url()} ${r.failure()?.errorText}`)
 )
 
-await page.goto('http://localhost:5173/', { waitUntil: 'networkidle2', timeout: 120000 })
+await page.goto((process.env.SUNNY_BASE_URL || 'http://localhost:5173/'), { waitUntil: 'networkidle2', timeout: 120000 })
 
 // wait for the canvas + a few frames
 await page.waitForSelector('canvas', { timeout: 60000 })

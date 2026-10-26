@@ -14,7 +14,7 @@ const sleep=ms=>new Promise(r=>setTimeout(r,ms)),trace=[],errors=[]
 try{
  const page=await browser.newPage();await page.setViewport({width:1440,height:900})
  page.on('pageerror',e=>errors.push(e.message))
- await page.goto('http://localhost:5173',{waitUntil:'domcontentloaded',timeout:120000})
+ await page.goto((process.env.SUNNY_BASE_URL || 'http://localhost:5173'),{waitUntil:'domcontentloaded',timeout:120000})
  await page.waitForFunction(()=>window.__ship&&!document.body.innerText.includes('Loading the ship'),{timeout:120000})
  await page.mouse.click(720,450);await page.keyboard.press('v');await page.waitForFunction(()=>window.__sunny);await page.mouse.click(720,450)
  const read=()=>page.evaluate(()=>({p:window.__sunny.position,c:window.__sunny.climbing,g:window.__sunny.grounded,r:window.__sunny.recoveries,

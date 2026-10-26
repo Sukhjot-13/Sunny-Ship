@@ -11,7 +11,7 @@ const browser=await puppeteer.launch({headless:true,args:['--use-gl=angle','--us
 try{
  const page=await browser.newPage();await page.setViewport({width:1440,height:900})
  const errors=[];page.on('pageerror',e=>errors.push(e.message))
- await page.goto('http://localhost:5173',{waitUntil:'domcontentloaded',timeout:120000})
+ await page.goto((process.env.SUNNY_BASE_URL || 'http://localhost:5173'),{waitUntil:'domcontentloaded',timeout:120000})
  await page.waitForFunction(()=>window.__ship&&!document.body.innerText.includes('Loading the ship'),{timeout:120000})
  await page.mouse.click(720,450);await page.screenshot({path:`${out}/exterior-overview.png`})
  for(const [i,dx] of [[1,280],[2,280]]){

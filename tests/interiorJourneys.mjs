@@ -10,7 +10,7 @@ const browser=await puppeteer.launch({headless:true,args:['--use-gl=angle','--us
 try{
  const page=await browser.newPage();await page.setViewport({width:1440,height:900})
  const errors=[];page.on('pageerror',e=>errors.push(e.message))
- await page.goto(process.env.URL||'http://localhost:5173/',{waitUntil:'domcontentloaded',timeout:120000});await page.waitForFunction(()=>window.__ship,{timeout:120000})
+ await page.goto(process.env.URL||(process.env.SUNNY_BASE_URL || 'http://localhost:5173/'),{waitUntil:'domcontentloaded',timeout:120000});await page.waitForFunction(()=>window.__ship,{timeout:120000})
  await page.mouse.click(720,450);await page.keyboard.press('v');await page.waitForFunction(()=>window.__sunny&&window.__sunnyDoors)
  await page.mouse.click(720,450)
  /** Follow a planned route with actual input; interact with hatches in reach. */

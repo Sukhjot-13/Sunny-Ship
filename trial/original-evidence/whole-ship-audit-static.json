@@ -1,0 +1,1027 @@
+{
+  "notice": "Exact GLB visual triangle rays plus disclosed AABB candidates. Not continuous walking or proof of all surface fit.",
+  "triangleCount": 792008,
+  "kotatsuPit": [
+    {
+      "origin": [
+        -24.26,
+        -39.8,
+        -3.48
+      ],
+      "hits": [
+        {
+          "name": "Sunny_Quarters_kotatsu_well",
+          "material": "Sunny_timber",
+          "distance": 1.130718384683135,
+          "point": [
+            -24.26,
+            -40.93071838468313,
+            -3.48
+          ]
+        },
+        {
+          "name": "Sunny_Kotatsu_sunken_floor",
+          "material": "Sunny_deck",
+          "distance": 1.1707183837890653,
+          "point": [
+            -24.26,
+            -40.97071838378906,
+            -3.48
+          ]
+        },
+        {
+          "name": "Sunny_Quarters_kotatsu_well",
+          "material": "Sunny_timber",
+          "distance": 1.2107183828949957,
+          "point": [
+            -24.26,
+            -41.01071838289499,
+            -3.48
+          ]
+        }
+      ]
+    },
+    {
+      "origin": [
+        -25.95,
+        -39.8,
+        -3.48
+      ],
+      "hits": [
+        {
+          "name": "Sunny_Quarters_kotatsu_well",
+          "material": "Sunny_timber",
+          "distance": 1.130718384683135,
+          "point": [
+            -25.95,
+            -40.93071838468313,
+            -3.48
+          ]
+        },
+        {
+          "name": "Sunny_Kotatsu_sunken_floor",
+          "material": "Sunny_deck",
+          "distance": 1.1707183837890653,
+          "point": [
+            -25.95,
+            -40.97071838378906,
+            -3.48
+          ]
+        },
+        {
+          "name": "Sunny_Quarters_kotatsu_well",
+          "material": "Sunny_timber",
+          "distance": 1.2107183828949957,
+          "point": [
+            -25.95,
+            -41.01071838289499,
+            -3.48
+          ]
+        }
+      ]
+    },
+    {
+      "origin": [
+        -24.26,
+        -39.8,
+        -1.8
+      ],
+      "hits": [
+        {
+          "name": "Sunny_Quarters_kotatsu_well",
+          "material": "Sunny_timber",
+          "distance": 1.130718384683135,
+          "point": [
+            -24.26,
+            -40.93071838468313,
+            -1.8
+          ]
+        },
+        {
+          "name": "Sunny_Kotatsu_sunken_floor",
+          "material": "Sunny_deck",
+          "distance": 1.1707183837890653,
+          "point": [
+            -24.26,
+            -40.97071838378906,
+            -1.8
+          ]
+        },
+        {
+          "name": "Sunny_Quarters_kotatsu_well",
+          "material": "Sunny_timber",
+          "distance": 1.2107183828949957,
+          "point": [
+            -24.26,
+            -41.01071838289499,
+            -1.8
+          ]
+        }
+      ]
+    }
+  ],
+  "cannonLines": [
+    {
+      "prefix": "Sunny_Quarters_cannon1",
+      "muzzleOrigin": [
+        -25.8028564453125,
+        -40.03871536254883,
+        -9.780498932555318
+      ],
+      "outward": [
+        0,
+        0,
+        -1
+      ],
+      "structuralHits": [
+        {
+          "name": "Sunny_ForeF1_shell",
+          "material": "Sunny_timber",
+          "distance": 3.90936129902345,
+          "point": [
+            -25.8028564453125,
+            -40.03871536254883,
+            -13.689860231578768
+          ]
+        },
+        {
+          "name": "Sunny_ForeF1_shell",
+          "material": "Sunny_cream",
+          "distance": 4.164317954401135,
+          "point": [
+            -25.8028564453125,
+            -40.03871536254883,
+            -13.944816886956453
+          ]
+        },
+        {
+          "name": "Line002",
+          "material": "Sunny_timber",
+          "distance": 4.493171408761029,
+          "point": [
+            -25.8028564453125,
+            -40.03871536254883,
+            -14.273670341316347
+          ]
+        },
+        {
+          "name": "Circle038.001",
+          "material": "Sunny_red",
+          "distance": 4.913512789647413,
+          "point": [
+            -25.8028564453125,
+            -40.03871536254883,
+            -14.694011722202731
+          ]
+        },
+        {
+          "name": "Circle038.001",
+          "material": "Sunny_white",
+          "distance": 8.648416035471776,
+          "point": [
+            -25.8028564453125,
+            -40.03871536254883,
+            -18.428914968027094
+          ]
+        }
+      ]
+    },
+    {
+      "prefix": "Sunny_Quarters_cannon-1",
+      "muzzleOrigin": [
+        -25.8028564453125,
+        -40.03871536254883,
+        10.580498169615865
+      ],
+      "outward": [
+        0,
+        0,
+        1
+      ],
+      "structuralHits": [
+        {
+          "name": "Sunny_ForeF1_shell",
+          "material": "Sunny_timber",
+          "distance": 0.6280918804487996,
+          "point": [
+            -25.8028564453125,
+            -40.03871536254883,
+            11.208590050064664
+          ]
+        },
+        {
+          "name": "Sunny_ForeF1_shell",
+          "material": "Sunny_cream",
+          "distance": 0.8830477082966119,
+          "point": [
+            -25.8028564453125,
+            -40.03871536254883,
+            11.463545877912477
+          ]
+        },
+        {
+          "name": "Line002",
+          "material": "Sunny_timber",
+          "distance": 1.2120419539380372,
+          "point": [
+            -25.8028564453125,
+            -40.03871536254883,
+            11.792540123553902
+          ]
+        },
+        {
+          "name": "Circle038.001",
+          "material": "Sunny_red",
+          "distance": 1.616478682071964,
+          "point": [
+            -25.8028564453125,
+            -40.03871536254883,
+            12.196976851687829
+          ]
+        },
+        {
+          "name": "Circle038.001",
+          "material": "Sunny_white",
+          "distance": 5.351260967346372,
+          "point": [
+            -25.8028564453125,
+            -40.03871536254883,
+            15.931759136962237
+          ]
+        }
+      ]
+    },
+    {
+      "prefix": "Sunny_Womens_cannon1",
+      "muzzleOrigin": [
+        -26.9228572845459,
+        -35.90271759033203,
+        -9.730498741820455
+      ],
+      "outward": [
+        0,
+        0,
+        -1
+      ],
+      "structuralHits": [
+        {
+          "name": "Sunny_ForeF2_shell",
+          "material": "Sunny_timber",
+          "distance": 3.173200308074138,
+          "point": [
+            -26.9228572845459,
+            -35.90271759033203,
+            -12.903699049894593
+          ]
+        },
+        {
+          "name": "Sunny_ForeF2_shell",
+          "material": "Sunny_cream",
+          "distance": 3.431621434392646,
+          "point": [
+            -26.9228572845459,
+            -35.90271759033203,
+            -13.1621201762131
+          ]
+        },
+        {
+          "name": "Circle038.001",
+          "material": "Sunny_red",
+          "distance": 3.9096933877675646,
+          "point": [
+            -26.9228572845459,
+            -35.90271759033203,
+            -13.64019212958802
+          ]
+        },
+        {
+          "name": "Line002",
+          "material": "Sunny_timber",
+          "distance": 4.0229223047189,
+          "point": [
+            -26.9228572845459,
+            -35.90271759033203,
+            -13.753421046539355
+          ]
+        },
+        {
+          "name": "Circle038.001",
+          "material": "Sunny_white",
+          "distance": 6.641731460502395,
+          "point": [
+            -26.9228572845459,
+            -35.90271759033203,
+            -16.37223020232285
+          ]
+        }
+      ]
+    },
+    {
+      "prefix": "Sunny_Womens_cannon-1",
+      "muzzleOrigin": [
+        -26.9228572845459,
+        -35.90271759033203,
+        10.530498932555318
+      ],
+      "outward": [
+        0,
+        0,
+        1
+      ],
+      "structuralHits": [
+        {
+          "name": "Sunny_ForeF2_shell",
+          "material": "Sunny_cream",
+          "distance": 0.15034996472824425,
+          "point": [
+            -26.9228572845459,
+            -35.90271759033203,
+            10.680848897283562
+          ]
+        },
+        {
+          "name": "Circle038.001",
+          "material": "Sunny_red",
+          "distance": 0.6124300823616569,
+          "point": [
+            -26.9228572845459,
+            -35.90271759033203,
+            11.142929014916975
+          ]
+        },
+        {
+          "name": "Line002",
+          "material": "Sunny_timber",
+          "distance": 0.7490852931527563,
+          "point": [
+            -26.9228572845459,
+            -35.90271759033203,
+            11.279584225708074
+          ]
+        },
+        {
+          "name": "Circle038.001",
+          "material": "Sunny_white",
+          "distance": 3.3442974883181797,
+          "point": [
+            -26.9228572845459,
+            -35.90271759033203,
+            13.874796420873498
+          ]
+        }
+      ]
+    }
+  ],
+  "lift": {
+    "mast": [
+      {
+        "name": "Sunny_InteriorMainMast",
+        "min": [
+          17.422889709472656,
+          -40.550716400146484,
+          -2.5154807567596436
+        ],
+        "max": [
+          20.16643524169922,
+          -29.119098663330078,
+          0.22806668281555176
+        ]
+      }
+    ],
+    "components": [
+      {
+        "name": "Sunny_Aquarium_dumbwaiter_car",
+        "min": [
+          15.649999151496175,
+          -39.530717162415385,
+          -1.7470000145980815
+        ],
+        "max": [
+          16.44999932262492,
+          -39.47071716375649,
+          -0.8269998671463032
+        ]
+      },
+      {
+        "name": "Sunny_Aquarium_dumbwaiter_guidel",
+        "min": [
+          15.59999942779541,
+          -40.550716400146484,
+          -0.8020000457763672
+        ],
+        "max": [
+          16.5,
+          -36.3507194519043,
+          -0.7319999933242798
+        ]
+      },
+      {
+        "name": "Sunny_Aquarium_dumbwaiter_guider",
+        "min": [
+          15.59999942779541,
+          -40.550716400146484,
+          -1.8420000076293945
+        ],
+        "max": [
+          16.5,
+          -36.3507194519043,
+          -1.7720000743865967
+        ]
+      },
+      {
+        "name": "Sunny_Aquarium_dumbwaiter_hatch",
+        "min": [
+          15.54999914262606,
+          -39.47071746736765,
+          -1.837000035375382
+        ],
+        "max": [
+          16.549999331495034,
+          -39.39071746915579,
+          -0.7369998463690028
+        ]
+      },
+      {
+        "name": "Sunny_Aquarium_dumbwaiter_rope",
+        "min": [
+          16.035999236628413,
+          -39.45071983337402,
+          -1.3003147325491673
+        ],
+        "max": [
+          16.06399923749268,
+          -36.350717544555664,
+          -1.2736851491952175
+        ]
+      },
+      {
+        "name": "Sunny_Aquarium_mast_cupboard_back",
+        "min": [
+          15.774999618530273,
+          -40.550716400146484,
+          -1.8119999170303345
+        ],
+        "max": [
+          15.815000534057617,
+          -39.83071517944336,
+          -0.7619999647140503
+        ]
+      },
+      {
+        "name": "Sunny_Aquarium_mast_cupboard_shelf0",
+        "min": [
+          15.774999711757008,
+          -40.450717467814684,
+          -1.8119999345531335
+        ],
+        "max": [
+          16.124999906773265,
+          -40.410717468708754,
+          -0.7619999471912513
+        ]
+      },
+      {
+        "name": "Sunny_Aquarium_mast_cupboard_shelf1",
+        "min": [
+          15.774999711757008,
+          -39.93071701005101,
+          -1.8119999345531335
+        ],
+        "max": [
+          16.124999906773265,
+          -39.89071701094508,
+          -0.7619999471912513
+        ]
+      },
+      {
+        "name": "Sunny_Aquarium_mast_cupboard_side",
+        "min": [
+          15.774999618530273,
+          -40.550716400146484,
+          -0.812000036239624
+        ],
+        "max": [
+          16.125,
+          -39.83071517944336,
+          -0.7619999647140503
+        ]
+      },
+      {
+        "name": "Sunny_Aquarium_mast_cupboard_side.001",
+        "min": [
+          15.774999618530273,
+          -40.550716400146484,
+          -1.8119999170303345
+        ],
+        "max": [
+          16.125,
+          -39.83071517944336,
+          -1.7619999647140503
+        ]
+      },
+      {
+        "name": "Sunny_Kitchen_dumbwaiter_car",
+        "min": [
+          15.649999151496175,
+          -34.60271575860679,
+          -1.7470000145980815
+        ],
+        "max": [
+          16.44999932262492,
+          -34.542715759947896,
+          -0.8269998671463032
+        ]
+      },
+      {
+        "name": "Sunny_Kitchen_dumbwaiter_guidel",
+        "min": [
+          15.59999942779541,
+          -35.622718811035156,
+          -0.8020000457763672
+        ],
+        "max": [
+          16.5,
+          -32.622718811035156,
+          -0.7319999933242798
+        ]
+      },
+      {
+        "name": "Sunny_Kitchen_dumbwaiter_guider",
+        "min": [
+          15.59999942779541,
+          -35.622718811035156,
+          -1.8420000076293945
+        ],
+        "max": [
+          16.5,
+          -32.622718811035156,
+          -1.7720000743865967
+        ]
+      },
+      {
+        "name": "Sunny_Kitchen_dumbwaiter_hatch",
+        "min": [
+          15.54999914262606,
+          -34.542716063559055,
+          -1.837000035375382
+        ],
+        "max": [
+          16.549999331495034,
+          -34.462716065347195,
+          -0.7369998463690028
+        ]
+      },
+      {
+        "name": "Sunny_Kitchen_dumbwaiter_rope",
+        "min": [
+          16.035999236628413,
+          -34.522714614868164,
+          -1.3003147325491673
+        ],
+        "max": [
+          16.06399923749268,
+          -32.62271690368652,
+          -1.2736851491952175
+        ]
+      }
+    ],
+    "verticalStructuralHits": [
+      {
+        "name": "Sunny_Aquarium_ceiling",
+        "material": "Sunny_deck",
+        "distance": 3.397284698486331,
+        "point": [
+          16.05,
+          -35.80271530151367,
+          -1.287
+        ]
+      },
+      {
+        "name": "Sunny_InteriorFloor_F2_aft",
+        "material": "Sunny_tile_dark",
+        "distance": 3.5772811889648466,
+        "point": [
+          16.05,
+          -35.622718811035156,
+          -1.287
+        ]
+      },
+      {
+        "name": "Sunny_RoomPartition_bar_seg2",
+        "material": "Sunny_cream",
+        "distance": 6.677283477783206,
+        "point": [
+          16.05,
+          -32.5227165222168,
+          -1.287
+        ]
+      },
+      {
+        "name": "Sunny_AftF2_ceiling",
+        "material": "Sunny_deck",
+        "distance": 9.645281982421878,
+        "point": [
+          16.05,
+          -29.554718017578125,
+          -1.287
+        ]
+      }
+    ]
+  },
+  "hatch": {
+    "lid": {
+      "min": [
+        -5.75,
+        -40.640716552734375,
+        -9.5
+      ],
+      "max": [
+        -1.3863635063171387,
+        -40.55072021484375,
+        -8.100000381469727
+      ]
+    },
+    "railAABBCandidates": [
+      {
+        "name": "Sunny_SoldierDockStair_over_rail0",
+        "min": [
+          -5.617740369752465,
+          -42.89544648406207,
+          -8.162000440505533
+        ],
+        "max": [
+          -0.9822595348801038,
+          -39.545990283516055,
+          -8.097999788376303
+        ],
+        "aboveLid": 1.0047299313276952
+      },
+      {
+        "name": "Sunny_SoldierDockStair_over_rail1",
+        "min": [
+          -5.617740369752465,
+          -42.89544648406207,
+          -9.502000593093424
+        ],
+        "max": [
+          -0.9822595348801038,
+          -39.545990283516055,
+          -9.437999940964193
+        ],
+        "aboveLid": 1.0047299313276952
+      }
+    ]
+  },
+  "dockApertures": [
+    {
+      "side": "starboard",
+      "origin": [
+        0.495,
+        -45.94072,
+        -25
+      ],
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "hits": [
+        {
+          "name": "Sunny_InteriorWall_B1_199_seg0",
+          "material": "Sunny_timber",
+          "distance": 8.408844152946138,
+          "point": [
+            0.495,
+            -45.94072,
+            -16.591155847053862
+          ]
+        },
+        {
+          "name": "Sunny_InteriorWall_B1_199_seg0",
+          "material": "Sunny_timber",
+          "distance": 8.588844160098695,
+          "point": [
+            0.495,
+            -45.94072,
+            -16.411155839901305
+          ]
+        }
+      ]
+    },
+    {
+      "side": "port",
+      "origin": [
+        0.495,
+        -45.94072,
+        25
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "hits": [
+        {
+          "name": "Sunny_InteriorWall_B1_73_seg0",
+          "material": "Sunny_timber",
+          "distance": 10.890112072229384,
+          "point": [
+            0.495,
+            -45.94072,
+            14.109887927770616
+          ]
+        },
+        {
+          "name": "Sunny_InteriorWall_B1_73_seg0",
+          "material": "Sunny_timber",
+          "distance": 11.070112079381943,
+          "point": [
+            0.495,
+            -45.94072,
+            13.929887920618057
+          ]
+        }
+      ]
+    }
+  ],
+  "lookoutContainedMeshes": [
+    "Sunny_Hatch_CrowNestHatch_frame_x1",
+    "Sunny_Hatch_CrowNestHatch_frame_x-1",
+    "Sunny_Hatch_CrowNestHatch_frame_y1",
+    "Sunny_Hatch_CrowNestHatch_frame_y-1",
+    "Sunny_Hatch_CrowNestHatch_lid",
+    "Sunny_CrowNestHatch_hinge0",
+    "Sunny_CrowNestHatch_hinge1",
+    "Sunny_CrowNestHatch_ring",
+    "Sunny_Lookout_band",
+    "Sunny_Lookout_band.001",
+    "Sunny_Lookout_band.002",
+    "Sunny_Lookout_band.003",
+    "Sunny_Lookout_band.004",
+    "Sunny_Lookout_band.005",
+    "Sunny_Lookout_band.006",
+    "Sunny_Lookout_band.007",
+    "Sunny_Lookout_band.008",
+    "Sunny_Lookout_band.009",
+    "Sunny_Lookout_band.010",
+    "Sunny_Lookout_band.011",
+    "Sunny_Lookout_band.012",
+    "Sunny_Lookout_band.013",
+    "Sunny_Lookout_band.014",
+    "Sunny_Lookout_band.015",
+    "Sunny_Lookout_band.016",
+    "Sunny_Lookout_band.017",
+    "Sunny_Lookout_band.018",
+    "Sunny_Lookout_band.019",
+    "Sunny_Lookout_band.020",
+    "Sunny_Lookout_band.021",
+    "Sunny_Lookout_band.022",
+    "Sunny_Lookout_band.023",
+    "Sunny_Lookout_band.024",
+    "Sunny_Lookout_band.025",
+    "Sunny_Lookout_band.026",
+    "Sunny_Lookout_band.027",
+    "Sunny_Lookout_band.028",
+    "Sunny_Lookout_band.029",
+    "Sunny_Lookout_band.030",
+    "Sunny_Lookout_band.031",
+    "Sunny_Lookout_band.032",
+    "Sunny_Lookout_band.033",
+    "Sunny_Lookout_band.034",
+    "Sunny_Lookout_band.035",
+    "Sunny_Lookout_band.036",
+    "Sunny_Lookout_band.037",
+    "Sunny_Lookout_band.038",
+    "Sunny_Lookout_band.039",
+    "Sunny_Lookout_band.040",
+    "Sunny_Lookout_band.041",
+    "Sunny_Lookout_band.042",
+    "Sunny_Lookout_band.043",
+    "Sunny_Lookout_band.044",
+    "Sunny_Lookout_band.045",
+    "Sunny_Lookout_band.046",
+    "Sunny_Lookout_band.047",
+    "Sunny_Lookout_band.048",
+    "Sunny_Lookout_band.049",
+    "Sunny_Lookout_band.050",
+    "Sunny_Lookout_band.051",
+    "Sunny_Lookout_band.052",
+    "Sunny_Lookout_band.053",
+    "Sunny_Lookout_band.054",
+    "Sunny_Lookout_band.055",
+    "Sunny_Lookout_band.056",
+    "Sunny_Lookout_band.057",
+    "Sunny_Lookout_band.058",
+    "Sunny_Lookout_band.059",
+    "Sunny_Lookout_band.060",
+    "Sunny_Lookout_band.061",
+    "Sunny_Lookout_band.062",
+    "Sunny_Lookout_band.063",
+    "Sunny_Lookout_crossbar0_1",
+    "Sunny_Lookout_crossbar0_2",
+    "Sunny_Lookout_crossbar2_1",
+    "Sunny_Lookout_crossbar2_2",
+    "Sunny_Lookout_crossbar4_1",
+    "Sunny_Lookout_crossbar4_2",
+    "Sunny_Lookout_crossbar6_1",
+    "Sunny_Lookout_crossbar6_2",
+    "Sunny_Lookout_crossbar8_1",
+    "Sunny_Lookout_crossbar8_2",
+    "Sunny_Lookout_crossbar10_1",
+    "Sunny_Lookout_crossbar10_2",
+    "Sunny_Lookout_crossbar12_1",
+    "Sunny_Lookout_crossbar12_2",
+    "Sunny_Lookout_crossbar14_1",
+    "Sunny_Lookout_crossbar14_2",
+    "Sunny_Lookout_dormer_arch",
+    "Sunny_Lookout_dormer_arch.001",
+    "Sunny_Lookout_dormer_arch.002",
+    "Sunny_Lookout_dormer_arch.003",
+    "Sunny_Lookout_dormer_arch.004",
+    "Sunny_Lookout_dormer_arch.005",
+    "Sunny_Lookout_dormer_arch.006",
+    "Sunny_Lookout_dormer_arch.007",
+    "Sunny_Lookout_dormer_arch.008",
+    "Sunny_Lookout_dormer_arch.009",
+    "Sunny_Lookout_dormer_arch.010",
+    "Sunny_Lookout_dormer_arch.011",
+    "Sunny_Lookout_dormer_arch.012",
+    "Sunny_Lookout_dormer_arch.013",
+    "Sunny_Lookout_dormer_arch.014",
+    "Sunny_Lookout_dormer_arch.015",
+    "Sunny_Lookout_dormer_arch.016",
+    "Sunny_Lookout_dormer_arch.017",
+    "Sunny_Lookout_dormer_arch.018",
+    "Sunny_Lookout_dormer_arch.019",
+    "Sunny_Lookout_dormer_arch.020",
+    "Sunny_Lookout_dormer_arch.021",
+    "Sunny_Lookout_dormer_arch.022",
+    "Sunny_Lookout_dormer_arch.023",
+    "Sunny_Lookout_dormer_arch.024",
+    "Sunny_Lookout_dormer_arch.025",
+    "Sunny_Lookout_dormer_arch.026",
+    "Sunny_Lookout_dormer_arch.027",
+    "Sunny_Lookout_dormer_arch.028",
+    "Sunny_Lookout_dormer_arch.029",
+    "Sunny_Lookout_dormer_arch.030",
+    "Sunny_Lookout_dormer_arch.031",
+    "Sunny_Lookout_dormer_arch.032",
+    "Sunny_Lookout_dormer_arch.033",
+    "Sunny_Lookout_dormer_arch.034",
+    "Sunny_Lookout_dormer_arch.035",
+    "Sunny_Lookout_dormer_arch.036",
+    "Sunny_Lookout_dormer_arch.037",
+    "Sunny_Lookout_dormer_arch.038",
+    "Sunny_Lookout_dormer_arch.039",
+    "Sunny_Lookout_dormer_arch.040",
+    "Sunny_Lookout_dormer_arch.041",
+    "Sunny_Lookout_dormer_arch.042",
+    "Sunny_Lookout_dormer_arch.043",
+    "Sunny_Lookout_dormer_arch.044",
+    "Sunny_Lookout_dormer_arch.045",
+    "Sunny_Lookout_dormer_arch.046",
+    "Sunny_Lookout_dormer_arch.047",
+    "Sunny_Lookout_dormer_arch.048",
+    "Sunny_Lookout_dormer_arch.049",
+    "Sunny_Lookout_dormer_arch.050",
+    "Sunny_Lookout_dormer_arch.051",
+    "Sunny_Lookout_dormer_arch.052",
+    "Sunny_Lookout_dormer_arch.053",
+    "Sunny_Lookout_dormer_arch.054",
+    "Sunny_Lookout_dormer_arch.055",
+    "Sunny_Lookout_dormer_arch.056",
+    "Sunny_Lookout_dormer_arch.057",
+    "Sunny_Lookout_dormer_arch.058",
+    "Sunny_Lookout_dormer_arch.059",
+    "Sunny_Lookout_dormer_arch.060",
+    "Sunny_Lookout_dormer_arch.061",
+    "Sunny_Lookout_dormer_arch.062",
+    "Sunny_Lookout_dormer_arch.063",
+    "Sunny_Lookout_dormer_bar",
+    "Sunny_Lookout_dormer_bar.001",
+    "Sunny_Lookout_dormer_bar.002",
+    "Sunny_Lookout_dormer_bar.003",
+    "Sunny_Lookout_dormer_pane0",
+    "Sunny_Lookout_dormer_pane1",
+    "Sunny_Lookout_dormer_pane2",
+    "Sunny_Lookout_dormer_pane3",
+    "Sunny_Lookout_floor",
+    "Sunny_Lookout_ladder_rung27",
+    "Sunny_Lookout_pane0",
+    "Sunny_Lookout_pane2",
+    "Sunny_Lookout_pane4",
+    "Sunny_Lookout_pane6",
+    "Sunny_Lookout_pane8",
+    "Sunny_Lookout_pane10",
+    "Sunny_Lookout_pane12",
+    "Sunny_Lookout_pane14",
+    "Sunny_Lookout_sash_jamb0_0",
+    "Sunny_Lookout_sash_jamb0_1",
+    "Sunny_Lookout_sash_jamb2_0",
+    "Sunny_Lookout_sash_jamb2_1",
+    "Sunny_Lookout_sash_jamb4_0",
+    "Sunny_Lookout_sash_jamb4_1",
+    "Sunny_Lookout_sash_jamb6_0",
+    "Sunny_Lookout_sash_jamb6_1",
+    "Sunny_Lookout_sash_jamb8_0",
+    "Sunny_Lookout_sash_jamb8_1",
+    "Sunny_Lookout_sash_jamb10_0",
+    "Sunny_Lookout_sash_jamb10_1",
+    "Sunny_Lookout_sash_jamb12_0",
+    "Sunny_Lookout_sash_jamb12_1",
+    "Sunny_Lookout_sash_jamb14_0",
+    "Sunny_Lookout_sash_jamb14_1",
+    "Sunny_Lookout_sash_mullion0",
+    "Sunny_Lookout_sash_mullion2",
+    "Sunny_Lookout_sash_mullion4",
+    "Sunny_Lookout_sash_mullion6",
+    "Sunny_Lookout_sash_mullion8",
+    "Sunny_Lookout_sash_mullion10",
+    "Sunny_Lookout_sash_mullion12",
+    "Sunny_Lookout_sash_mullion14",
+    "Sunny_Lookout_wall_0_header",
+    "Sunny_Lookout_wall_0_left",
+    "Sunny_Lookout_wall_0_right",
+    "Sunny_Lookout_wall_0_sill",
+    "Sunny_Lookout_wall_1_pier",
+    "Sunny_Lookout_wall_2_header",
+    "Sunny_Lookout_wall_2_left",
+    "Sunny_Lookout_wall_2_right",
+    "Sunny_Lookout_wall_2_sill",
+    "Sunny_Lookout_wall_3_pier",
+    "Sunny_Lookout_wall_4_header",
+    "Sunny_Lookout_wall_4_left",
+    "Sunny_Lookout_wall_4_right",
+    "Sunny_Lookout_wall_4_sill",
+    "Sunny_Lookout_wall_5_pier",
+    "Sunny_Lookout_wall_6_header",
+    "Sunny_Lookout_wall_6_left",
+    "Sunny_Lookout_wall_6_right",
+    "Sunny_Lookout_wall_6_sill",
+    "Sunny_Lookout_wall_7_pier",
+    "Sunny_Lookout_wall_8_header",
+    "Sunny_Lookout_wall_8_left",
+    "Sunny_Lookout_wall_8_right",
+    "Sunny_Lookout_wall_8_sill",
+    "Sunny_Lookout_wall_9_pier",
+    "Sunny_Lookout_wall_10_header",
+    "Sunny_Lookout_wall_10_left",
+    "Sunny_Lookout_wall_10_right",
+    "Sunny_Lookout_wall_10_sill",
+    "Sunny_Lookout_wall_11_pier",
+    "Sunny_Lookout_wall_12_header",
+    "Sunny_Lookout_wall_12_left",
+    "Sunny_Lookout_wall_12_right",
+    "Sunny_Lookout_wall_12_sill",
+    "Sunny_Lookout_wall_13_pier",
+    "Sunny_Lookout_wall_14_header",
+    "Sunny_Lookout_wall_14_left",
+    "Sunny_Lookout_wall_14_right",
+    "Sunny_Lookout_wall_14_sill",
+    "Sunny_Lookout_wall_15_pier"
+  ],
+  "absentNamedFixtures": [
+    {
+      "term": "telescope",
+      "matches": []
+    },
+    {
+      "term": "dumbbell",
+      "matches": []
+    },
+    {
+      "term": "training",
+      "matches": []
+    },
+    {
+      "term": "gym",
+      "matches": []
+    },
+    {
+      "term": "binocular",
+      "matches": [
+        "Sunny_Vehicle1_binocular",
+        "Sunny_Vehicle1_binocular.001"
+      ]
+    },
+    {
+      "term": "speaker",
+      "matches": [
+        "Sunny_Lookout_loudspeaker",
+        "Sunny_Lookout_speaker_bracket",
+        "Sunny_Lookout_speaker_throat"
+      ]
+    },
+    {
+      "term": "capstan",
+      "matches": [
+        "Sunny_Dock_capstan_spoke0",
+        "Sunny_Dock_capstan_spoke1",
+        "Sunny_Dock_capstan_spoke2",
+        "Sunny_Dock_capstan_spoke3",
+        "Sunny_Dock_capstan_spoke4",
+        "Sunny_Dock_capstan_spoke5"
+      ]
+    }
+  ]
+}

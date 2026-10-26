@@ -1,0 +1,2967 @@
+{
+  "records": [
+    {
+      "name": "mens-reverse",
+      "eye": [
+        -27.2,
+        -3.5,
+        -38.851
+      ],
+      "target": [
+        -23.7,
+        5,
+        -39.351
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        -26.75169478008284,
+        -39.13399519311285,
+        3.030349729865931
+      ],
+      "hits": [
+        {
+          "name": "Sunny_Quarters_bunk1_blanket001",
+          "distance": 0.1483787680474741
+        },
+        {
+          "name": "Sunny_Quarters_bunk1_blanket001",
+          "distance": 0.43023778144395664
+        },
+        {
+          "name": "Sunny_RoomPartition_q_cannon_seg2001",
+          "distance": 12.249363723497224
+        },
+        {
+          "name": "Sunny_RoomPartition_q_cannon_seg2001",
+          "distance": 12.444314140791107
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "womens-reverse",
+      "eye": [
+        -27.2,
+        3,
+        -34.714999999999996
+      ],
+      "target": [
+        -23.7,
+        -4.8,
+        -35.214999999999996
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        -26.671580565554798,
+        -34.994518624535814,
+        -3.4190342066541612
+      ],
+      "hits": [
+        {
+          "name": "Line002_1",
+          "distance": 16.91846117031053
+        },
+        {
+          "name": "Sunny_ForeF2_shell001_1",
+          "distance": 19.28992490585959
+        },
+        {
+          "name": "Sunny_ForeF2_shell001",
+          "distance": 19.487551092005777
+        },
+        {
+          "name": "Sunny_HullPort6_port_bore_rear",
+          "distance": 20.520554291620293
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "mens-wash-wide",
+      "eye": [
+        -20.8,
+        5.9,
+        -38.851
+      ],
+      "target": [
+        -19.8,
+        7.35,
+        -39.451
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        -20.128679447617973,
+        -39.02549275107379,
+        -6.355370362400232
+      ],
+      "hits": [
+        {
+          "name": "Sunny_RoomPartition_wash_back_seg0",
+          "distance": 2.617924204085549
+        },
+        {
+          "name": "Sunny_RoomPartition_wash_back_seg0",
+          "distance": 2.771920206244582
+        },
+        {
+          "name": "Sunny_InteriorFloor_F1_fore",
+          "distance": 5.271340621251362
+        },
+        {
+          "name": "Sunny_B1_ceiling",
+          "distance": 5.829563559153706
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "womens-wash-wide",
+      "eye": [
+        -22.2,
+        5.8,
+        -34.714999999999996
+      ],
+      "target": [
+        -21,
+        8.3,
+        -35.315
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        -21.58085114860043,
+        -34.92192785438121,
+        -6.191366226702895
+      ],
+      "hits": [
+        {
+          "name": "Sunny_RoomPartition_wwash_side_seg0001",
+          "distance": 3.5330569116333783
+        },
+        {
+          "name": "Sunny_RoomPartition_wwash_side_seg0001",
+          "distance": 3.816779605388689
+        },
+        {
+          "name": "Cylinder037",
+          "distance": 4.388786110936021
+        },
+        {
+          "name": "Line002_1",
+          "distance": 4.5265206582007185
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "cannon-men-starboard",
+      "eye": [
+        -23.8,
+        9,
+        -39.051
+      ],
+      "target": [
+        -25.8,
+        9.35,
+        -40.051
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        -23.122188441187536,
+        -39.24217972622105,
+        -9.41478865772604
+      ],
+      "hits": [
+        {
+          "name": "Sunny_Quarters_cannon1_barrel",
+          "distance": 2.166764724370939
+        },
+        {
+          "name": "Sunny_Quarters_cannon1_barrel",
+          "distance": 2.187771885787823
+        },
+        {
+          "name": "Sunny_Quarters_cannon1_barrel",
+          "distance": 2.3335989685752536
+        },
+        {
+          "name": "Sunny_Quarters_cannon1_barrel",
+          "distance": 2.3549681587803324
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "cannon-men-port",
+      "eye": [
+        -23.8,
+        -9.7,
+        -39.051
+      ],
+      "target": [
+        -25.8,
+        -10.1,
+        -40.051
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        -23.172055263064678,
+        -39.40462633866558,
+        9.316505663562955
+      ],
+      "hits": [
+        {
+          "name": "Sunny_Quarters_cannon-1_barrel",
+          "distance": 2.176011715363498
+        },
+        {
+          "name": "Sunny_Quarters_cannon-1_barrel",
+          "distance": 2.1971645728991813
+        },
+        {
+          "name": "Sunny_Quarters_cannon-1_barrel",
+          "distance": 2.3407848344834252
+        },
+        {
+          "name": "Sunny_Quarters_cannon-1_barrel",
+          "distance": 2.362323216306168
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "cannon-women-starboard",
+      "eye": [
+        -24.5,
+        9,
+        -34.915
+      ],
+      "target": [
+        -26.92,
+        9.25,
+        -35.915
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        -23.99599452203278,
+        -35.07413554054819,
+        -9.31061255228793
+      ],
+      "hits": [
+        {
+          "name": "Sunny_Womens_cannon1_barrel",
+          "distance": 2.536601228085121
+        },
+        {
+          "name": "Sunny_Womens_cannon1_barrel",
+          "distance": 2.5573510896470513
+        },
+        {
+          "name": "Sunny_Womens_cannon1_barrel",
+          "distance": 2.6996417111255084
+        },
+        {
+          "name": "Sunny_Womens_cannon1_barrel",
+          "distance": 2.720473063222071
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "cannon-women-port",
+      "eye": [
+        -24.5,
+        -9.7,
+        -34.915
+      ],
+      "target": [
+        -26.92,
+        -10,
+        -35.915
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        -24.061208508004306,
+        -35.19406400753971,
+        9.425766311323734
+      ],
+      "hits": [
+        {
+          "name": "Sunny_Womens_cannon-1_barrel",
+          "distance": 2.542936872688225
+        },
+        {
+          "name": "Sunny_Womens_cannon-1_barrel",
+          "distance": 2.563797292931682
+        },
+        {
+          "name": "Sunny_Womens_cannon-1_barrel",
+          "distance": 2.70369631438272
+        },
+        {
+          "name": "Sunny_Womens_cannon-1_barrel",
+          "distance": 2.7246553971917313
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "aquarium-reverse",
+      "eye": [
+        19,
+        -2.713,
+        -38.851
+      ],
+      "target": [
+        10,
+        1.287,
+        -38.951
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        19.41568797473546,
+        -38.57419712227717,
+        2.4571657564946543
+      ],
+      "hits": [
+        {
+          "name": "Line002_1",
+          "distance": 10.022736692178244
+        },
+        {
+          "name": "Sunny_Door_AquariumDoor_leaf",
+          "distance": 11.285731546076596
+        },
+        {
+          "name": "Sunny_Door_AquariumDoor_leaf",
+          "distance": 11.367809584645087
+        },
+        {
+          "name": "Line002_1",
+          "distance": 39.17281906925934
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "aquarium-lift",
+      "eye": [
+        13.6,
+        2.487,
+        -38.851
+      ],
+      "target": [
+        17.5,
+        1.287,
+        -39.151
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        13.950184462266002,
+        -38.63953314235713,
+        -2.6865856750926267
+      ],
+      "hits": [
+        {
+          "name": "Sunny_Aquarium_dumbwaiter_guider",
+          "distance": 2.1991567726262065
+        },
+        {
+          "name": "Sunny_Aquarium_dumbwaiter_guider",
+          "distance": 2.4378247247117444
+        },
+        {
+          "name": "Sunny_InteriorMainMast",
+          "distance": 4.037020757827231
+        },
+        {
+          "name": "Sunny_Aquarium_sector11_glass_inner",
+          "distance": 6.638549558132183
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "aquarium-entrance",
+      "eye": [
+        5.4,
+        1.287,
+        -38.851
+      ],
+      "target": [
+        8.65,
+        1.287,
+        -39.351
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        5.706691087435043,
+        -38.74214134416213,
+        -1.4261230543133934
+      ],
+      "hits": [
+        {
+          "name": "Sunny_Door_AquariumDoor_leaf",
+          "distance": 3.2502950316767762
+        },
+        {
+          "name": "Sunny_Door_AquariumDoor_leaf",
+          "distance": 3.326177415390688
+        },
+        {
+          "name": "Line002_1",
+          "distance": 4.493835145698075
+        },
+        {
+          "name": "Sunny_Aquarium_mast_cupboard_shelf0",
+          "distance": 10.497062838704299
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "aquarium-overhead",
+      "eye": [
+        24.55,
+        1.287,
+        -38.851
+      ],
+      "target": [
+        24.6,
+        6.287,
+        -37.551
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        24.83477187466463,
+        -38.61937294059369,
+        -1.3590135551888551
+      ],
+      "hits": [
+        {
+          "name": "Sunny_Aquarium_passage_ceiling_tankbed",
+          "distance": 2.5843602680005593
+        },
+        {
+          "name": "Sunny_Aquarium_passage_ceiling_water",
+          "distance": 2.9817907866548046
+        },
+        {
+          "name": "Sunny_Aquarium_passage_ceiling_tankbed",
+          "distance": 3.061276890385652
+        },
+        {
+          "name": "Sunny_Aquarium_passage_ceiling_water",
+          "distance": 6.359866812883157
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "dining-reverse",
+      "eye": [
+        19.5,
+        -7.412999999999999,
+        -33.922999999999995
+      ],
+      "target": [
+        13.7,
+        -0.9130000000000003,
+        -34.272999999999996
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        19.74579927845817,
+        -33.74286570498573,
+        7.41100857138328
+      ],
+      "hits": [
+        {
+          "name": "对象003_2",
+          "distance": 10.462217795470206
+        },
+        {
+          "name": "Sunny_RoomPartition_DiningEntrance_seg2",
+          "distance": 10.702728318701922
+        },
+        {
+          "name": "对象003_2",
+          "distance": 10.732791417327988
+        },
+        {
+          "name": "Sunny_RoomPartition_DiningEntrance_seg2",
+          "distance": 10.943238841933638
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "kitchen-reverse",
+      "eye": [
+        19.5,
+        8.687000000000001,
+        -33.922999999999995
+      ],
+      "target": [
+        13,
+        5.487,
+        -34.422999999999995
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        19.74681966526815,
+        -33.76224906876989,
+        -8.631165232401695
+      ],
+      "hits": [
+        {
+          "name": "Sunny_Door_KitchenEntrance_leaf",
+          "distance": 8.002419857900245
+        },
+        {
+          "name": "Sunny_Door_KitchenEntrance_leaf",
+          "distance": 8.086214840522523
+        },
+        {
+          "name": "Sunny_ForeF1_ceiling_2",
+          "distance": 40.6429554214847
+        },
+        {
+          "name": "Sunny_ForeF1_shell001",
+          "distance": 40.70999080383531
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "dining-stair-enclosure",
+      "eye": [
+        17.5,
+        -6.213,
+        -33.922999999999995
+      ],
+      "target": [
+        14.7,
+        -11.713000000000001,
+        -32.623
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        17.737220535038325,
+        -33.74983363034738,
+        6.328421557496785
+      ],
+      "hits": [
+        {
+          "name": "对象003_2",
+          "distance": 5.879400300731278
+        },
+        {
+          "name": "对象003_2",
+          "distance": 6.085816102737453
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "kitchen-stair-enclosure",
+      "eye": [
+        17.5,
+        8.786999999999999,
+        -33.922999999999995
+      ],
+      "target": [
+        14.7,
+        14.286999999999999,
+        -32.623
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        17.70189308688312,
+        -33.836184734575426,
+        -8.613944495037021
+      ],
+      "hits": [
+        {
+          "name": "对象003_2",
+          "distance": 5.8793996183071595
+        },
+        {
+          "name": "对象003_2",
+          "distance": 6.085816513941752
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "pantry-reverse",
+      "eye": [
+        23.9,
+        10.887,
+        -33.922999999999995
+      ],
+      "target": [
+        21,
+        4.287,
+        -34.522999999999996
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        24.026758473645508,
+        -33.88148102564165,
+        -10.658254586689381
+      ],
+      "hits": [
+        {
+          "name": "Sunny_RoomPartition_pantry_sickbay_seg2",
+          "distance": 8.007230483834997
+        },
+        {
+          "name": "Sunny_RoomPartition_pantry_sickbay_seg2",
+          "distance": 8.456234898320151
+        },
+        {
+          "name": "Sunny_InteriorMainMast",
+          "distance": 9.874748977316838
+        },
+        {
+          "name": "Sunny_Kitchen_serving_bar_carcass",
+          "distance": 10.220691414681161
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "infirmary-reverse",
+      "eye": [
+        23.9,
+        -8.312999999999999,
+        -33.922999999999995
+      ],
+      "target": [
+        21,
+        -0.7130000000000001,
+        -34.522999999999996
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        23.86511485789056,
+        -33.85498067199442,
+        8.606050743946277
+      ],
+      "hits": [
+        {
+          "name": "Sunny_RoomPartition_pantry_sickbay_seg2",
+          "distance": 9.028502527795244
+        },
+        {
+          "name": "Sunny_RoomPartition_pantry_sickbay_seg2",
+          "distance": 9.534774640150982
+        },
+        {
+          "name": "Sunny_Kitchen_serving_bar_top",
+          "distance": 10.041044405475297
+        },
+        {
+          "name": "Sunny_RoomPartition_bar_seg2",
+          "distance": 10.206472791376399
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "bath-reverse",
+      "eye": [
+        29.2,
+        -1.613,
+        -24.405
+      ],
+      "target": [
+        29.2,
+        4.186999999999999,
+        -24.905
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        29.06390235194751,
+        -24.538210262547544,
+        1.8534873646631729
+      ],
+      "hits": [
+        {
+          "name": "Sunny_Door_BathDoor_leaf",
+          "distance": 4.9507944402577895
+        },
+        {
+          "name": "Sunny_Door_BathDoor_leaf",
+          "distance": 5.0260726134792195
+        },
+        {
+          "name": "Sunny_Door_BathWCDoor_leaf",
+          "distance": 6.526617403404008
+        },
+        {
+          "name": "Sunny_Door_BathWCDoor_leaf",
+          "distance": 6.601895576625437
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "bath-wc-wide",
+      "eye": [
+        29.1,
+        5.087,
+        -24.405
+      ],
+      "target": [
+        29.6,
+        5.687,
+        -25.405
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        28.859049172765978,
+        -24.740556527979148,
+        -4.824696325203294
+      ],
+      "hits": [
+        {
+          "name": "Sunny_RoomPartition_bathwc_back_seg0",
+          "distance": 1.6706624029396657
+        },
+        {
+          "name": "Sunny_RoomPartition_bathwc_back_seg0",
+          "distance": 1.9244337117332468
+        },
+        {
+          "name": "Sunny_InteriorFloor_F3_bath_2",
+          "distance": 2.156699418232283
+        },
+        {
+          "name": "Sunny_InteriorFloor_F3_bath_3",
+          "distance": 2.385094201185032
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "library-reverse",
+      "eye": [
+        32.6,
+        1.287,
+        -27.455000000000002
+      ],
+      "target": [
+        25.4,
+        1.287,
+        -27.855
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        32.22230720960252,
+        -27.920962948028976,
+        -0.9742404995958778
+      ],
+      "hits": [
+        {
+          "name": "Sunny_Door_LibraryDoor_leaf",
+          "distance": 8.018964873112095
+        },
+        {
+          "name": "Sunny_Door_LibraryDoor_leaf",
+          "distance": 8.094080525097992
+        },
+        {
+          "name": "Cylinder007",
+          "distance": 12.476690975273536
+        },
+        {
+          "name": "Cylinder007",
+          "distance": 15.177326288250553
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "factory-reverse",
+      "eye": [
+        18.3,
+        -8,
+        -45.451
+      ],
+      "target": [
+        10,
+        -3,
+        -46.051
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        17.48812561232714,
+        -45.70286095329271,
+        8.536045861869692
+      ],
+      "hits": [
+        {
+          "name": "Sunny_RoomPartition_b1_1_seg2",
+          "distance": 11.334083182452405
+        },
+        {
+          "name": "Sunny_RoomPartition_b1_1_seg2",
+          "distance": 11.59141008807354
+        },
+        {
+          "name": "Sunny_Dock_bay0_side",
+          "distance": 14.731289311315718
+        },
+        {
+          "name": "Sunny_Dock_bay0_side",
+          "distance": 14.925454192598478
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "weapons-reverse",
+      "eye": [
+        18.3,
+        10,
+        -45.451
+      ],
+      "target": [
+        10,
+        5,
+        -46.051
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        17.36875008865787,
+        -45.98069628789917,
+        -9.451491221348782
+      ],
+      "hits": [
+        {
+          "name": "Sunny_RoomPartition_b1_1_seg2",
+          "distance": 11.334081681918372
+        },
+        {
+          "name": "Sunny_RoomPartition_b1_1_seg2",
+          "distance": 11.591408650419028
+        },
+        {
+          "name": "Sunny_Dock_bay0_side001",
+          "distance": 13.616782849642675
+        },
+        {
+          "name": "Sunny_Dock_bay0_side001",
+          "distance": 13.810947730925433
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "energy-front",
+      "eye": [
+        23.1,
+        5.5,
+        -45.451
+      ],
+      "target": [
+        23.15,
+        8.55,
+        -45.451
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        22.100942316677088,
+        -46.07929160599226,
+        -4.949185956987668
+      ],
+      "hits": [
+        {
+          "name": "Sunny_Energy_chamber_grille004",
+          "distance": 2.4152548528099897
+        },
+        {
+          "name": "Sunny_Energy_chamber_grille004",
+          "distance": 2.435639990155486
+        },
+        {
+          "name": "Sunny_Energy_chamber_back",
+          "distance": 3.4904691205553537
+        },
+        {
+          "name": "Sunny_Energy_chamber_back",
+          "distance": 3.610485241487233
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "dock-centre",
+      "eye": [
+        0.5,
+        1.287,
+        -45.451
+      ],
+      "target": [
+        6,
+        1.287,
+        -46.051
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        -0.49041279037415714,
+        -45.553946768926046,
+        -0.7506512956097182
+      ],
+      "hits": [
+        {
+          "name": "Sunny_Vehicle1_horse_neck",
+          "distance": 6.081054859706095
+        },
+        {
+          "name": "Sunny_Vehicle1_horse_neck",
+          "distance": 6.332821536471444
+        },
+        {
+          "name": "Sunny_RoomPartition_b1_1_seg2",
+          "distance": 7.936809907491505
+        },
+        {
+          "name": "Sunny_RoomPartition_workshops_seg0_1",
+          "distance": 8.047462272820349
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "dock-waiting",
+      "eye": [
+        -7.8,
+        -2.713,
+        -45.451
+      ],
+      "target": [
+        0.5,
+        5.287,
+        -45.951
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        -8.706582998376327,
+        -45.36421749540316,
+        3.2254740749979036
+      ],
+      "hits": [
+        {
+          "name": "Sunny_RoomPartition_b1_1_seg4",
+          "distance": 22.507281621788714
+        },
+        {
+          "name": "Sunny_RoomPartition_b1_1_seg4",
+          "distance": 22.813124894626387
+        },
+        {
+          "name": "Line007",
+          "distance": 26.907159217649436
+        },
+        {
+          "name": "Sunny_InteriorWall_B1_176_seg0",
+          "distance": 27.58331339758181
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "lookout-reverse",
+      "eye": [
+        -15.8,
+        -0.4,
+        30.921
+      ],
+      "target": [
+        -10.1,
+        1.4,
+        30.221
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        -15.284002208035973,
+        31.054554940159388,
+        0.07007685541079173
+      ],
+      "hits": [
+        {
+          "name": "Sunny_Lookout_pane0",
+          "distance": 7.276998748228568
+        },
+        {
+          "name": "Plane005",
+          "distance": 30.85874310835395
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "lawn-aft",
+      "eye": [
+        -7,
+        1.287,
+        -38.851
+      ],
+      "target": [
+        12,
+        1.287,
+        -37.551
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        -7.478148070499497,
+        -38.90770458970274,
+        -0.9140634389674271
+      ],
+      "hits": [
+        {
+          "name": "Sunny_RoomPartition_aqua_fwd_lintel0_2",
+          "distance": 15.576332281759347
+        },
+        {
+          "name": "Sunny_Aquarium_shell_3_seg0",
+          "distance": 15.596378544431865
+        },
+        {
+          "name": "Sunny_Aquarium_shell_3_seg0",
+          "distance": 15.77679957410537
+        },
+        {
+          "name": "Sunny_RoomPartition_aqua_fwd_lintel0_1",
+          "distance": 15.796845950677005
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "lawn-fore",
+      "eye": [
+        -7,
+        1.287,
+        -38.851
+      ],
+      "target": [
+        -16,
+        1.287,
+        -37.151
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        -7.267076015195061,
+        -38.94563596249111,
+        -0.967409656669073
+      ],
+      "hits": [
+        {
+          "name": "Cylinder003",
+          "distance": 4.813907072484165
+        },
+        {
+          "name": "Cylinder003",
+          "distance": 7.531523447027386
+        },
+        {
+          "name": "Sunny_ForeF1_shell001",
+          "distance": 10.112861471304882
+        },
+        {
+          "name": "Sunny_ForeF1_shell001",
+          "distance": 10.29604475051778
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "dock-hatch-closed",
+      "eye": [
+        -5.5,
+        6.7,
+        -38.851
+      ],
+      "target": [
+        -3.5,
+        8.8,
+        -40.301
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        -5.574936747184404,
+        -39.00628062168973,
+        -6.442059990460877
+      ],
+      "hits": [
+        {
+          "name": "Sunny_Hatch_SoldierDockHatch_lid",
+          "distance": 3.800689943121092
+        },
+        {
+          "name": "Sunny_Hatch_SoldierDockHatch_lid",
+          "distance": 4.001927872370569
+        },
+        {
+          "name": "Sunny_InteriorWall_B1_193_seg0",
+          "distance": 14.99355258640151
+        },
+        {
+          "name": "Sunny_InteriorWall_B1_193_seg0",
+          "distance": 15.271463943184882
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "fore-toilet-port",
+      "eye": [
+        -13,
+        -3.7,
+        -38.851
+      ],
+      "target": [
+        -15.8,
+        -3.7,
+        -39.501000000000005
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        -12.894466866029436,
+        -38.96298472976915,
+        3.870299431126914
+      ],
+      "hits": [
+        {
+          "name": "Box110",
+          "distance": 1.154049101002592
+        },
+        {
+          "name": "Box110",
+          "distance": 1.4259088042009531
+        },
+        {
+          "name": "Sunny_ForeToilet_front_seg0",
+          "distance": 2.09424681781591
+        },
+        {
+          "name": "Sunny_ForeToilet_front_seg0",
+          "distance": 2.2174386709527663
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "fore-toilet-starboard",
+      "eye": [
+        -13,
+        3.7,
+        -38.851
+      ],
+      "target": [
+        -15.8,
+        3.7,
+        -39.501000000000005
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        -12.805895267351625,
+        -38.98343804096532,
+        -3.6113480862625096
+      ],
+      "hits": [
+        {
+          "name": "Sunny_ForeStarRail_post002",
+          "distance": 1.3365485182570358
+        },
+        {
+          "name": "Box091",
+          "distance": 1.3465036962678705
+        },
+        {
+          "name": "Sunny_ForeStarRail_post002",
+          "distance": 1.3874178886623463
+        },
+        {
+          "name": "Box091",
+          "distance": 1.4259198606395451
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "garden-plants",
+      "eye": [
+        17,
+        -5,
+        -27.675
+      ],
+      "target": [
+        21,
+        3,
+        -28.675
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        17.162169368249003,
+        -27.59881233317228,
+        5.007689585550789
+      ],
+      "hits": [
+        {
+          "name": "Cylinder007",
+          "distance": 5.581197686254002
+        },
+        {
+          "name": "Cylinder007",
+          "distance": 7.073962355420847
+        },
+        {
+          "name": "Tube006",
+          "distance": 12.78070350637133
+        },
+        {
+          "name": "Tube006",
+          "distance": 13.080250861757154
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "garden-office",
+      "eye": [
+        14,
+        -10,
+        -27.675
+      ],
+      "target": [
+        20,
+        -6,
+        -28.575
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        14.168063632221092,
+        -27.59890248747537,
+        9.954115657455114
+      ],
+      "hits": [
+        {
+          "name": "Sunny_Mikan2_pot",
+          "distance": 8.963606384114785
+        },
+        {
+          "name": "Sunny_Mikan2_rim",
+          "distance": 8.968254335575358
+        },
+        {
+          "name": "Sunny_Mikan2_pot",
+          "distance": 9.017634486348827
+        },
+        {
+          "name": "Sunny_Mikan2_rim",
+          "distance": 9.053682973727355
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "garden-library",
+      "eye": [
+        21.8,
+        1.287,
+        -27.675
+      ],
+      "target": [
+        26,
+        1.287,
+        -27.755000000000003
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        21.972254216388745,
+        -27.4971960852526,
+        -1.3861758577538141
+      ],
+      "hits": [
+        {
+          "name": "Sunny_Door_LibraryDoor_leaf",
+          "distance": 2.718874585748176
+        },
+        {
+          "name": "Sunny_Door_LibraryDoor_leaf",
+          "distance": 2.7938881903696937
+        },
+        {
+          "name": "Sunny_Library_globe",
+          "distance": 10.505814463012108
+        },
+        {
+          "name": "Sunny_Library_globe",
+          "distance": 11.00794805620964
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "gallery-slide",
+      "eye": [
+        11,
+        10.5,
+        -33.922999999999995
+      ],
+      "target": [
+        6,
+        12.5,
+        -36.623
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        11.228501070037582,
+        -33.73646008028779,
+        -10.675455701087964
+      ],
+      "hits": [
+        {
+          "name": "Tube008001",
+          "distance": 1.0290875764148706
+        },
+        {
+          "name": "Tube008001",
+          "distance": 1.1595802459916567
+        },
+        {
+          "name": "Sunny_LawnSidewalk-1",
+          "distance": 14.787461730872039
+        },
+        {
+          "name": "Line002_4",
+          "distance": 15.123654848008343
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "lawn-swing",
+      "eye": [
+        3,
+        -9,
+        -38.851
+      ],
+      "target": [
+        7,
+        -11,
+        -39.451
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        3.3104435296786785,
+        -38.81376319713256,
+        8.734715399047168
+      ],
+      "hits": [
+        {
+          "name": "Line002_3",
+          "distance": 7.717647722897175
+        },
+        {
+          "name": "Line002_3",
+          "distance": 9.071391247459879
+        },
+        {
+          "name": "Line004",
+          "distance": 12.537619330726333
+        },
+        {
+          "name": "Line004",
+          "distance": 14.110118641741334
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "figurehead-close",
+      "eye": [
+        -53,
+        1.287,
+        -30.5
+      ],
+      "target": [
+        -40,
+        1.287,
+        -32
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        -52.69486448711263,
+        -30.93156602317436,
+        -1.5424653659783438
+      ],
+      "hits": [
+        {
+          "name": "Sphere005",
+          "distance": 10.205255956257968
+        },
+        {
+          "name": "Sphere002",
+          "distance": 10.481846252141313
+        },
+        {
+          "name": "Sphere005",
+          "distance": 10.862630301263884
+        },
+        {
+          "name": "Sphere001_1",
+          "distance": 11.529293972807853
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "anchor-port",
+      "eye": [
+        -33,
+        -20,
+        -32.5
+      ],
+      "target": [
+        -27.5,
+        -13.5,
+        -35.5
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        -32.576590297551654,
+        -33.033535299888506,
+        19.679797866796633
+      ],
+      "hits": [
+        {
+          "name": "Sunny_Anchor_port_rope",
+          "distance": 9.356457381205454
+        },
+        {
+          "name": "Sunny_Anchor_port_rope",
+          "distance": 9.511187394158718
+        },
+        {
+          "name": "Sunny_Anchor_port_bore",
+          "distance": 9.529388556628396
+        },
+        {
+          "name": "Sunny_Anchor_port_bore",
+          "distance": 9.560307399492784
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "anchor-starboard",
+      "eye": [
+        -33,
+        22,
+        -32.5
+      ],
+      "target": [
+        -27.5,
+        16.1,
+        -35.5
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        -32.4757725015379,
+        -32.70456928053884,
+        -22.35644104700264
+      ],
+      "hits": [
+        {
+          "name": "Sunny_Anchor_starboard_rope001",
+          "distance": 8.527995930122982
+        },
+        {
+          "name": "Sunny_Anchor_starboard_rope001",
+          "distance": 8.672174564217933
+        },
+        {
+          "name": "Sunny_Anchor_starboard_bore",
+          "distance": 9.179533350851967
+        },
+        {
+          "name": "Sunny_Anchor_starboard_bore",
+          "distance": 9.212000578522046
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "stern-barrel",
+      "eye": [
+        46,
+        1.287,
+        -38
+      ],
+      "target": [
+        34,
+        1.287,
+        -41
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        46.680198795368916,
+        -37.07225037087102,
+        -1.7180349702139193
+      ],
+      "hits": [
+        {
+          "name": "Sunny_CoupDeBurst_bore",
+          "distance": 15.356308087775835
+        },
+        {
+          "name": "Sunny_CoupDeBurst_bore",
+          "distance": 15.418154121666108
+        },
+        {
+          "name": "Line002_1",
+          "distance": 19.642583556189827
+        },
+        {
+          "name": "Sunny_InteriorWall_B1_136_seg0",
+          "distance": 21.564908246783343
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "rigging-near",
+      "eye": [
+        -7,
+        17,
+        -18
+      ],
+      "target": [
+        -11,
+        1.287,
+        6
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        -6.669125784507426,
+        -17.85595840236806,
+        -17.215613592084445
+      ],
+      "hits": [
+        {
+          "name": "Plane004",
+          "distance": 46.997281078278355
+        },
+        {
+          "name": "Cylinder004",
+          "distance": 48.564465147707594
+        },
+        {
+          "name": "Cylinder004",
+          "distance": 50.53058537567836
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "helm-inspect",
+      "eye": [
+        -24,
+        1.287,
+        -30.9
+      ],
+      "target": [
+        -27.7,
+        1.287,
+        -31.9
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        -23.471323720803493,
+        -31.22482834565563,
+        -1.661954195016245
+      ],
+      "hits": [
+        {
+          "name": "Sunny_SoldierDock_pointer",
+          "distance": 3.745295990853602
+        },
+        {
+          "name": "Sunny_SoldierDock_pointer",
+          "distance": 3.7825876058938035
+        },
+        {
+          "name": "Sunny_SoldierDock_drum",
+          "distance": 3.851990593473467
+        },
+        {
+          "name": "Sunny_Helm_spoke",
+          "distance": 3.910000010821823
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "vehicle-1",
+      "eye": [
+        2.995,
+        -1.513,
+        -45.001000000000005
+      ],
+      "target": [
+        5.795,
+        1.287,
+        -46.051
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        3.624172342920123,
+        -44.90999583448131,
+        0.9847656929198231
+      ],
+      "hits": [
+        {
+          "name": "Sunny_Vehicle1_saddle",
+          "distance": 4.1048634287165875
+        },
+        {
+          "name": "Sunny_Vehicle1_saddle",
+          "distance": 4.189477126021376
+        },
+        {
+          "name": "Sunny_Dock_bay0_side001",
+          "distance": 6.43758500282746
+        },
+        {
+          "name": "Sunny_Dock_bay0_side001",
+          "distance": 6.5838937538916245
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "vehicle-2",
+      "eye": [
+        4.169871130596428,
+        2.052063509461097,
+        -45.001000000000005
+      ],
+      "target": [
+        3.1450000000000005,
+        5.876934640057525,
+        -46.051
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        4.6129551125873425,
+        -44.8714140894706,
+        -2.5594774510719933
+      ],
+      "hits": [
+        {
+          "name": "Sunny_Vehicle2_boat_hull",
+          "distance": 4.2059652735794675
+        },
+        {
+          "name": "Sunny_Vehicle2_deck",
+          "distance": 4.466184927227476
+        },
+        {
+          "name": "Sunny_Vehicle2_deck",
+          "distance": 4.81732593850216
+        },
+        {
+          "name": "Sunny_Vehicle2_boat_hull",
+          "distance": 4.957205791627933
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "vehicle-3",
+      "eye": [
+        1.669871130596429,
+        4.852063509461096,
+        -45.001000000000005
+      ],
+      "target": [
+        -2.1549999999999985,
+        5.876934640057525,
+        -46.051
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        1.8971336834020922,
+        -44.87489473667523,
+        -5.330589346359972
+      ],
+      "hits": [
+        {
+          "name": "Sunny_Vehicle3_shark_hull",
+          "distance": 3.2064882307636213
+        },
+        {
+          "name": "Sunny_Vehicle3_shark_hull",
+          "distance": 5.037839592583056
+        },
+        {
+          "name": "Sunny_Dock_bay2_side001",
+          "distance": 6.437584893325953
+        },
+        {
+          "name": "Sunny_Dock_bay2_side001",
+          "distance": 6.5838936300318895
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "vehicle-4",
+      "eye": [
+        -2.0049999999999994,
+        4.087,
+        -45.001000000000005
+      ],
+      "target": [
+        -4.805,
+        1.2870000000000006,
+        -46.051
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        -2.0290994108116633,
+        -44.89137011241751,
+        -4.524649928140019
+      ],
+      "hits": [
+        {
+          "name": "Sunny_Vehicle4_seat",
+          "distance": 3.666364355016789
+        },
+        {
+          "name": "Sunny_Vehicle4_seat",
+          "distance": 3.9503363919555965
+        },
+        {
+          "name": "Sunny_Dock_bay3_side001",
+          "distance": 6.437585311300952
+        },
+        {
+          "name": "Sunny_Dock_bay3_side001",
+          "distance": 6.583894084457134
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "vehicle-5",
+      "eye": [
+        -3.1798711305964282,
+        0.5219364905389048,
+        -45.001000000000005
+      ],
+      "target": [
+        -2.155000000000002,
+        -3.302934640057524,
+        -46.051
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        -3.4277386347760754,
+        -44.90683204531759,
+        -0.9141352171868538
+      ],
+      "hits": [
+        {
+          "name": "Sunny_Vehicle5_cylindrical_body",
+          "distance": 3.0499002541889615
+        },
+        {
+          "name": "Sunny_Vehicle5_cylindrical_body",
+          "distance": 4.974422487988746
+        },
+        {
+          "name": "Sunny_Vehicle5_tread001",
+          "distance": 5.223222394100895
+        },
+        {
+          "name": "Sunny_Vehicle5_roller009",
+          "distance": 5.475534825788744
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "name": "vehicle-6",
+      "eye": [
+        -0.6798711305964276,
+        -2.278063509461097,
+        -45.001000000000005
+      ],
+      "target": [
+        3.1450000000000005,
+        -3.302934640057525,
+        -46.051
+      ],
+      "notice": "Inspect camera appearance; not walking proof",
+      "worldEye": [
+        -1.1299559637680179,
+        -44.936672841900496,
+        1.9392734228397686
+      ],
+      "hits": [
+        {
+          "name": "Sunny_Dock_bay5_side001",
+          "distance": 6.4375847347225905
+        },
+        {
+          "name": "Sunny_Dock_bay5_side001",
+          "distance": 6.583893484954353
+        },
+        {
+          "name": "Sunny_InteriorFloor_lower_1",
+          "distance": 8.387270715599596
+        },
+        {
+          "name": "Line002_1",
+          "distance": 25.972995644507872
+        }
+      ],
+      "nav": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    }
+  ],
+  "errors": [],
+  "notice": "All original meshes retained. Camera only; no player placement. Not route/functional proof."
+}

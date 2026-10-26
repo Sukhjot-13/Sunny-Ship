@@ -20,7 +20,7 @@ import { OCEAN_SIZE_M, OCEAN_SEGMENTS } from '../src/config/renderConfig.js'
 
 const OUT = 'tests/screenshots'
 fs.mkdirSync(OUT, { recursive: true })
-const URL = process.env.URL || 'http://localhost:5173/'
+const URL = process.env.URL || (process.env.SUNNY_BASE_URL || 'http://localhost:5173/')
 const shipMeta = JSON.parse(fs.readFileSync('public/models/ship-metadata.json','utf8'))
 const waterLevel = shipMeta.waterLevel
 
