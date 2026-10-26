@@ -45,7 +45,7 @@ try{
  await page.waitForFunction(()=>window.__ship&&!document.body.innerText.includes('Loading the ship'),{timeout:120000})
  await page.mouse.click(720,450)
  await page.evaluate(async()=>{
-  const {_roots}=await import('/node_modules/.vite/deps/@react-three_fiber.js')
+  const {_roots}=await import('/.vite-cache/deps/@react-three_fiber.js')
   const s=window.__roomAudit=_roots.get(document.querySelector('canvas')).store.getState()
   s.controls.enabled=false
   // Ship uses real Inspect bobbing each frame. Follow its actual transform at

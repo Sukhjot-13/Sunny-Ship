@@ -22,7 +22,7 @@ function checkJawBounds(boxes,amount){
 /** The rendered hull must carry the actual human eye during steering/Burst. */
 async function checkCameraFrame(page){
  const error=await page.evaluate(async()=>{
-  const {_roots}=await import('/node_modules/.vite/deps/@react-three_fiber.js')
+  const {_roots}=await import('/.vite-cache/deps/@react-three_fiber.js')
   const camera=_roots.get(document.querySelector('canvas')).store.getState().camera
   const eye=camera.position.clone().fromArray(window.__sunny.position);eye.y+=1.7
   window.__ship.updateWorldMatrix(true,false);eye.applyMatrix4(window.__ship.matrixWorld)
