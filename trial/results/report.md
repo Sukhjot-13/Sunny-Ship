@@ -12,6 +12,7 @@ The relevant supplied reference personally inspected was `stuff/images/Thousand_
 - HIGH `terra-c02-high-assets`: failed exit 1 after 84.587 s, queue 4.508 s, due to downstream material averaging of an empty mesh (`trial/results/c02-high-assets.log`).
 - HIGH `terra-c02-high-assets-retry`: exit 0, execution 220.654 s, queue 0.001 s. Coherently published the visual model, collision model, metadata and editable master (`trial/results/c02-high-assets-retry.log`).
 - `node tests/dockApertures.test.mjs`: 149 visual triangle and lining collision box probes per side passed (`trial/results/c02-apertures.log`). Before rebuilding, the same regression failed against the old lining. Its sampling is not a continuous mathematical proof or a check of other obstacles.
+- Static collision centre rays from each side to the centre had no collision boxes of any name (`trial/results/c02-centre-collision.log`); this excludes dynamic objects and is not a full-path or player test.
 - `npm run build` via wrapper: exit 0, execution 2.214 s, queue 150.127 s (`trial/results/c02-high-build.log`).
 - Full `npm test` and real-control open-view survey are queued; see `resource-events.jsonl` for definitive state and logs `c02-high-test.log` and `c02-high-views.log`. No completion, walking, return or open-view pass is claimed while pending.
 - `git diff --check`, Python compile and JS syntax checks passed; fresh scans cover the new `obj_bounds`, empty-segment handling, regression registration and Environment Variables section.
@@ -23,4 +24,4 @@ SHA-256:
 - `public/models/ship-metadata.json`: `373e505c0191209459aec1b0de2aff15a5fa3ca040a3764f7ff301eb407bcff0`
 - `assets/sunny-master.blend`: `0c693396eba129770c2feaca55ae40a3420e1b1ac6637396b5da8902adf19d6b`
 
-Preview port 8172 was started for this worktree. Hash equality with the HTTP responses is a prerequisite in the queued view script; it has not yet passed. Resource queue and execution records are in `trial/results/resource-events.jsonl`. No ranking or usage score is inferred.
+Preview port 8172 was started for this worktree. All three HTTP-served asset hashes match the local files (`trial/results/c02-http-hashes.log`); the queued view script independently checks them again. Resource queue and execution records are in `trial/results/resource-events.jsonl`. No ranking or usage score is inferred.
