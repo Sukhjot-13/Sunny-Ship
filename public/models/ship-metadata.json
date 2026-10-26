@@ -210,20 +210,6 @@
         "channel": 1
       },
       {
-        "name": "Sunny_Dock_bay0_side.001",
-        "min": [
-          3.6449999809265137,
-          2.88700008392334,
-          -47.150718688964844
-        ],
-        "max": [
-          7.945000171661377,
-          2.986999988555908,
-          -46.25071716308594
-        ],
-        "channel": 1
-      },
-      {
         "name": "Sunny_Dock_bay0_side",
         "min": [
           3.6449999809265137,
@@ -233,6 +219,20 @@
         "max": [
           7.945000171661377,
           -0.31299999356269836,
+          -46.25071716308594
+        ],
+        "channel": 1
+      },
+      {
+        "name": "Sunny_Dock_bay0_side.001",
+        "min": [
+          3.6449999809265137,
+          2.88700008392334,
+          -47.150718688964844
+        ],
+        "max": [
+          7.945000171661377,
+          2.986999988555908,
           -46.25071716308594
         ],
         "channel": 1
@@ -252,20 +252,6 @@
         "channel": 2
       },
       {
-        "name": "Sunny_Dock_bay1_side.001",
-        "min": [
-          0.5977569222450256,
-          4.8149800300598145,
-          -47.150718688964844
-        ],
-        "max": [
-          2.8343594074249268,
-          8.588890075683594,
-          -46.25071716308594
-        ],
-        "channel": 2
-      },
-      {
         "name": "Sunny_Dock_bay1_side",
         "min": [
           3.4556405544281006,
@@ -275,6 +261,20 @@
         "max": [
           5.6922430992126465,
           6.938889503479004,
+          -46.25071716308594
+        ],
+        "channel": 2
+      },
+      {
+        "name": "Sunny_Dock_bay1_side.001",
+        "min": [
+          0.5977569222450256,
+          4.8149800300598145,
+          -47.150718688964844
+        ],
+        "max": [
+          2.8343594074249268,
+          8.588890075683594,
           -46.25071716308594
         ],
         "channel": 2
@@ -336,20 +336,6 @@
         "channel": 4
       },
       {
-        "name": "Sunny_Dock_bay3_side.001",
-        "min": [
-          -6.954999923706055,
-          -0.4130001962184906,
-          -47.150718688964844
-        ],
-        "max": [
-          -2.6549997329711914,
-          -0.31299981474876404,
-          -46.25071716308594
-        ],
-        "channel": 4
-      },
-      {
         "name": "Sunny_Dock_bay3_side",
         "min": [
           -6.954999923706055,
@@ -359,6 +345,20 @@
         "max": [
           -2.6549997329711914,
           2.9870002269744873,
+          -46.25071716308594
+        ],
+        "channel": 4
+      },
+      {
+        "name": "Sunny_Dock_bay3_side.001",
+        "min": [
+          -6.954999923706055,
+          -0.4130001962184906,
+          -47.150718688964844
+        ],
+        "max": [
+          -2.6549997329711914,
+          -0.31299981474876404,
           -46.25071716308594
         ],
         "channel": 4
@@ -420,20 +420,6 @@
         "channel": 6
       },
       {
-        "name": "Sunny_Dock_bay5_side",
-        "min": [
-          0.5977570414543152,
-          -6.014889240264893,
-          -47.150718688964844
-        ],
-        "max": [
-          2.8343591690063477,
-          -2.2409796714782715,
-          -46.25071716308594
-        ],
-        "channel": 6
-      },
-      {
         "name": "Sunny_Dock_bay5_side.001",
         "min": [
           3.4556405544281006,
@@ -443,6 +429,20 @@
         "max": [
           5.692242622375488,
           -0.590979814529419,
+          -46.25071716308594
+        ],
+        "channel": 6
+      },
+      {
+        "name": "Sunny_Dock_bay5_side",
+        "min": [
+          0.5977570414543152,
+          -6.014889240264893,
+          -47.150718688964844
+        ],
+        "max": [
+          2.8343591690063477,
+          -2.2409796714782715,
           -46.25071716308594
         ],
         "channel": 6
@@ -38592,7 +38592,7 @@
     ],
     "doorCount": 35,
     "partitions": 70,
-    "furniture": 2323
+    "furniture": 2281
   },
   "exterior": {
     "version": "post-timeskip",
@@ -43699,30 +43699,9 @@
       "Sunny_InteriorWall_B1_186_seg0",
       "Sunny_InteriorWall_B1_187_seg0",
       "Sunny_InteriorWall_B1_188_seg0",
-      "Sunny_InteriorWall_B1_189_seg0",
       "Sunny_InteriorWall_B1_18_seg0",
-      "Sunny_InteriorWall_B1_190_seg0",
-      "Sunny_InteriorWall_B1_191_seg0",
-      "Sunny_InteriorWall_B1_192_seg0",
-      "Sunny_InteriorWall_B1_193_seg0",
-      "Sunny_InteriorWall_B1_194_seg0",
-      "Sunny_InteriorWall_B1_195_seg0",
-      "Sunny_InteriorWall_B1_196_seg0",
-      "Sunny_InteriorWall_B1_197_seg0",
-      "Sunny_InteriorWall_B1_198_seg0",
-      "Sunny_InteriorWall_B1_199_seg0",
       "Sunny_InteriorWall_B1_19_seg0",
       "Sunny_InteriorWall_B1_1_seg0",
-      "Sunny_InteriorWall_B1_200_seg0",
-      "Sunny_InteriorWall_B1_201_seg0",
-      "Sunny_InteriorWall_B1_202_seg0",
-      "Sunny_InteriorWall_B1_203_seg0",
-      "Sunny_InteriorWall_B1_204_seg0",
-      "Sunny_InteriorWall_B1_205_seg0",
-      "Sunny_InteriorWall_B1_206_seg0",
-      "Sunny_InteriorWall_B1_207_seg0",
-      "Sunny_InteriorWall_B1_208_seg0",
-      "Sunny_InteriorWall_B1_209_seg0",
       "Sunny_InteriorWall_B1_20_seg0",
       "Sunny_InteriorWall_B1_210_seg0",
       "Sunny_InteriorWall_B1_211_seg0",
@@ -43834,29 +43813,8 @@
       "Sunny_InteriorWall_B1_60_seg0",
       "Sunny_InteriorWall_B1_61_seg0",
       "Sunny_InteriorWall_B1_62_seg0",
-      "Sunny_InteriorWall_B1_63_seg0",
-      "Sunny_InteriorWall_B1_64_seg0",
-      "Sunny_InteriorWall_B1_65_seg0",
-      "Sunny_InteriorWall_B1_66_seg0",
-      "Sunny_InteriorWall_B1_67_seg0",
-      "Sunny_InteriorWall_B1_68_seg0",
-      "Sunny_InteriorWall_B1_69_seg0",
       "Sunny_InteriorWall_B1_6_seg0",
-      "Sunny_InteriorWall_B1_70_seg0",
-      "Sunny_InteriorWall_B1_71_seg0",
-      "Sunny_InteriorWall_B1_72_seg0",
-      "Sunny_InteriorWall_B1_73_seg0",
-      "Sunny_InteriorWall_B1_74_seg0",
-      "Sunny_InteriorWall_B1_75_seg0",
-      "Sunny_InteriorWall_B1_76_seg0",
-      "Sunny_InteriorWall_B1_77_seg0",
-      "Sunny_InteriorWall_B1_78_seg0",
-      "Sunny_InteriorWall_B1_79_seg0",
       "Sunny_InteriorWall_B1_7_seg0",
-      "Sunny_InteriorWall_B1_80_seg0",
-      "Sunny_InteriorWall_B1_81_seg0",
-      "Sunny_InteriorWall_B1_82_seg0",
-      "Sunny_InteriorWall_B1_83_seg0",
       "Sunny_InteriorWall_B1_84_seg0",
       "Sunny_InteriorWall_B1_85_seg0",
       "Sunny_InteriorWall_B1_86_seg0",
@@ -46946,7 +46904,7 @@
     "floorSlabDepth": 0.6
   },
   "counts": {
-    "shipObjects": 7549,
+    "shipObjects": 7507,
     "removedJunkObjects": 102,
     "skippedDegenerateMeshes": 3
   }

@@ -674,6 +674,26 @@ def rolling_dock(objects,bounds,cy):
                 lo, hi = bounds(obj)
                 depth = (y-3.0, y+3.0) if obj.name == 'Line002' else (lo.y-.01, hi.y+.01)
                 circular_cut(obj,p,radius,1,*depth,32)
+        # Cut the independently authored B1 lining through the same aperture.
+        for obj in list(objects):
+            if not obj.name.startswith('Sunny_InteriorWall_B1_'):
+                continue
+            obj_bounds = bounds(obj)
+            if obj_bounds is None:
+                continue
+            lo, hi = obj_bounds
+            if (hi.x < x-radius or lo.x > x+radius or
+                hi.z < z-radius or lo.z > z+radius or
+                (direction < 0 and lo.y > cy) or
+                (direction > 0 and hi.y < cy)):
+                continue
+            circular_cut(obj, p, radius, 1, min(cy, y)-1, max(cy, y)+1, 32)
+            if not obj.data.polygons:
+                objects.remove(obj)
+                bpy.data.objects.remove(obj, do_unlink=True)
+                continue
+            # Build collision from the retained faces, not the original bounds.
+            obj['sunny_rail'] = True
         ring('Dock1_rim',(x,y+direction*.09,z),radius+.28,.59,'black','Y',64,10)
         ring('Dock1_reveal',(x,y-direction*.18,z),radius-.08,.16,'darkwood','Y',64,8)
         count=32
