@@ -1,0 +1,100 @@
+{
+  "baselineCommit": "9fd7a1b74837e3d6d1b03cefdfbaee22d141ef3a",
+  "workspaces": [
+    {
+      "path": "/Users/sukhjot/.codex/worktrees/sol-c01-trial/test",
+      "harnessChanged": [
+        "tests/interaction.mjs",
+        "tests/visual.mjs",
+        "tests/smoke.mjs",
+        "tests/exteriorJourneys.mjs",
+        "tests/navigation.mjs",
+        "tests/exteriorAccess.mjs",
+        "tests/run-all.mjs",
+        "tests/interiorJourneys.mjs",
+        "tests/climbing.mjs",
+        "tests/cannonControls.mjs",
+        "tests/exteriorMotion.mjs",
+        "tests/gameplay.mjs",
+        "tools/fore_walk_review.mjs",
+        "tools/interior_audit.mjs",
+        "tools/exterior_audit.mjs",
+        "vite.config.js",
+        ".gitignore"
+      ],
+      "productionIdentityVerified": true,
+      "copiedOriginalEvidence": [
+        "whole-ship-audit-cannon-men-port.png",
+        "whole-ship-audit-cannon-men-starboard.png",
+        "whole-ship-audit-cannon-women-port.png",
+        "whole-ship-audit-cannon-women-starboard.png",
+        "whole-ship-audit-dock-centre.png",
+        "whole-ship-audit-dock-waiting.png",
+        "whole-ship-audit-exterior-bow-quarter.png",
+        "whole-ship-audit-exterior-port.png",
+        "whole-ship-audit-exterior-starboard.png",
+        "whole-ship-audit-room-mens.png",
+        "whole-ship-audit-room-storage.png",
+        "whole-ship-audit-room-views.json",
+        "whole-ship-audit-room-womens.png",
+        "whole-ship-audit-static.json",
+        "whole-ship-audit-supplemental-views.json",
+        "whole-ship-audit-verified-dock-open-port.png"
+      ]
+    },
+    {
+      "path": "/Users/sukhjot/.codex/worktrees/terra-c02-trial/test",
+      "harnessChanged": [
+        "tests/interaction.mjs",
+        "tests/visual.mjs",
+        "tests/smoke.mjs",
+        "tests/exteriorJourneys.mjs",
+        "tests/navigation.mjs",
+        "tests/exteriorAccess.mjs",
+        "tests/run-all.mjs",
+        "tests/interiorJourneys.mjs",
+        "tests/climbing.mjs",
+        "tests/cannonControls.mjs",
+        "tests/exteriorMotion.mjs",
+        "tests/gameplay.mjs",
+        "tools/fore_walk_review.mjs",
+        "tools/interior_audit.mjs",
+        "tools/exterior_audit.mjs",
+        "vite.config.js",
+        ".gitignore"
+      ],
+      "productionIdentityVerified": true,
+      "copiedOriginalEvidence": [
+        "whole-ship-audit-cannon-men-port.png",
+        "whole-ship-audit-cannon-men-starboard.png",
+        "whole-ship-audit-cannon-women-port.png",
+        "whole-ship-audit-cannon-women-starboard.png",
+        "whole-ship-audit-dock-centre.png",
+        "whole-ship-audit-dock-waiting.png",
+        "whole-ship-audit-exterior-bow-quarter.png",
+        "whole-ship-audit-exterior-port.png",
+        "whole-ship-audit-exterior-starboard.png",
+        "whole-ship-audit-room-mens.png",
+        "whole-ship-audit-room-storage.png",
+        "whole-ship-audit-room-views.json",
+        "whole-ship-audit-room-womens.png",
+        "whole-ship-audit-static.json",
+        "whole-ship-audit-supplemental-views.json",
+        "whole-ship-audit-verified-dock-open-port.png"
+      ]
+    }
+  ],
+  "exclusions": [
+    "all prior docs/review/c01-*",
+    "historical architecture/progress/suggestion/checklist docs",
+    "generated historical review/test outputs",
+    "dependencies/caches/dist/private settings"
+  ],
+  "sharedReadOnlyDependencyRoot": "/Users/sukhjot/codes/test/node_modules",
+  "mainDocumentationCheckpoint": "af9ab4d5d74319563afecff96bab679453461a39",
+  "commonTree": "9096df1e678df3ed513f3ce1b5077f3c842741e4",
+  "commonCommits": {
+    "sol": "bcdee1e94666378515ed56a527a00e8bde2261ba",
+    "terra": "9e8274ddace174497002ca5ad0cc06b6a995a759"
+  }
+}

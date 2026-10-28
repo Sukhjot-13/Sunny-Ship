@@ -1,3 +1,9 @@
+# Current status — model trial finished, October28,2026
+
+General ship work remains STOPPED. The bounded Sol/C01 versus Terra/C02 experiment is complete as an assessment: both outputs partial/unmerged, original findings not closed. Read [the compact result/recommendation](model-comparison-20261026.md). Sol leaves visible upper storage trim and strict-test failures; Terra clears both sampled/visible linings but full containment/travel proof remains unverified. Original runtime/model inputs are preserved; no automatic repair, merge or texture resumption. Earlier active queues below are historical.
+
+---
+
 # Current authority — October26,2026
 
 Sukhjot authorized section-by-section whole-ship blueprint repairs after the interior texture verification gate. Start at [the sole live checkpoint](whole-ship-blueprint-audit.md): IF03/IF04 current, C01 next, then structural dependencies and remaining59 findings. Preserve completed materials/controls and unresolved U09/U11 choices. Older “construction paused” and active-run records below are historical, not the current queue.

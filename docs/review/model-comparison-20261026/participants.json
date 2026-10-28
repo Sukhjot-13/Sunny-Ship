@@ -1,0 +1,93 @@
+{
+  "dispatchRecordedUTC": "2026-10-26T19:21:28.047986+00:00",
+  "participants": [
+    {
+      "task": "/root/sol_c01",
+      "modelRequested": "gpt-6.1-sol",
+      "worktree": "/Users/sukhjot/.codex/worktrees/sol-c01-trial/test",
+      "commonCommit": "bcdee1e94666378515ed56a527a00e8bde2261ba",
+      "port": 8171
+    },
+    {
+      "task": "/root/terra_c02",
+      "modelRequested": "gpt-6.1-terra",
+      "worktree": "/Users/sukhjot/.codex/worktrees/terra-c02-trial/test",
+      "commonCommit": "9e8274ddace174497002ca5ad0cc06b6a995a759",
+      "port": 8172
+    }
+  ],
+  "settings": {
+    "fork_turns": "none",
+    "reasoning_effort": "same inherited parent setting; exact label not exposed by spawn response",
+    "toolAccess": "same inherited tools",
+    "childDelegation": "forbidden for both"
+  },
+  "stage": "terminal bounded assessment, both candidates partial/unmerged",
+  "usage": "not exposed; no estimate",
+  "mutationGateReleasedUTC": "2026-10-26T19:22:05.636033+00:00",
+  "commonBaseline": {
+    "staticSuites": 10,
+    "staticPasses": 10,
+    "buildExit": 0,
+    "renderViews": 10,
+    "shaderErrors": [],
+    "servedAssetHashesMatch": true,
+    "portLiningFirstDistance": 10.890112072229382,
+    "starboardLiningFirstDistance": 8.408844152946138
+  },
+  "effortCorrection": {
+    "requestedByUser": "both participants at least high",
+    "initialEffort": "Light per user-visible settings report; original spawn inherited unspecified parent setting",
+    "interruptedUTC": "2026-10-26T19:26:16Z",
+    "newDispatchRecordedUTC": "2026-10-26T19:29:54.620724+00:00",
+    "newAgents": [
+      {
+        "task": "/root/sol_c01_high",
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "fork_turns": "none",
+        "dispatch": "succeeded"
+      },
+      {
+        "task": "/root/terra_c02_high",
+        "model": "gpt-6.1-terra",
+        "reasoning_effort": "high",
+        "fork_turns": "none",
+        "dispatch": "succeeded"
+      }
+    ],
+    "preservation": "Each candidate continued in its own existing worktree with only its own saved source/evidence handoff; no other model solution or excluded private prototype supplied. Sol live wrapper31356/Blender31386 preserved; Terra prior failed build/log retained. No separate Light-source commit was made; candidate changes were retained in place.",
+    "timingRule": "Report initial Light diagnosis/implementation, interruption/relaunch and High continuation separately; heavy resource queues separate. Token usage remains unexposed."
+  },
+  "recoveryOct28": {
+    "recordedUTC": "2026-10-28T20:09:25.076716+00:00",
+    "cause": "account usage limit interrupted both High agents; not a repair failure",
+    "oldLiveJobs": [],
+    "solAssetRecovery": {
+      "exitCode": 0,
+      "executionMs": 526797,
+      "queueMs": 156129,
+      "finishedUTC": "2026-10-26T19:41:40.038Z"
+    },
+    "terraFullTest": "interrupted without terminal summary; must complete a fresh unfiltered run",
+    "commonHarnessRevision": 2,
+    "relaunch": [
+      {
+        "task": "/root/sol_c01_high_recovery",
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "fork_turns": "none",
+        "dispatch": "succeeded"
+      },
+      {
+        "task": "/root/terra_c02_high_recovery",
+        "model": "gpt-6.1-terra",
+        "reasoning_effort": "high",
+        "fork_turns": "none",
+        "dispatch": "succeeded"
+      }
+    ],
+    "dispatchRecordedUTC": "2026-10-28T20:11:29.165580+00:00"
+  },
+  "completedReviewUTC": "2026-10-28T20:41:26.018074+00:00"
+}

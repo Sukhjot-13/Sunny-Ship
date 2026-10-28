@@ -1,0 +1,121 @@
+{
+  "reviewedUTC": "2026-10-28T20:41:26.018074+00:00",
+  "originalInputCount": 113,
+  "originalChangedInputs": [],
+  "baselineCommit": "9fd7a1b74837e3d6d1b03cefdfbaee22d141ef3a",
+  "mainDocumentationCheckpoint": "af9ab4d5d74319563afecff96bab679453461a39",
+  "models": {
+    "sol": {
+      "worktree": "/Users/sukhjot/.codex/worktrees/sol-c01-trial/test",
+      "candidateCommit": "1a62f963fb326815617ffaa3be7e4470a5d531bf",
+      "explicitFinalModel": "gpt-6.1-sol",
+      "reasoningEffort": "high",
+      "initialPhase": "user-reported Light, retained; High continuations thereafter",
+      "assetHashes": {
+        "public/models/sunny.glb": "da8b042505486825ffd7392216b0185804c0623d7449ac731900fdf80ac479ae",
+        "public/models/sunny-collision.glb": "59fe62724ce2d727237c4ebf1f32c0f65fd56464b8c201c1c2a9ae96bd2d4907",
+        "public/models/ship-metadata.json": "3a5fd4c757a6a36f7c52eca77f244fd71dbcde128ec36dc8e5225333c97d3783",
+        "assets/sunny-master.blend": "5314eb506eeae3c8ac8562664fd14ae73465235171ab78a6854b0dc9c69083c0",
+        "stuff/1.FBX": "8a770f19926e304cce1839fde4797fc1d98db5a49814f7b049e5a83be69cec10"
+      },
+      "runtimeSourceChanged": [],
+      "sourceMetadataPatch": "/Users/sukhjot/codes/test/docs/review/model-comparison-20261026/sol/source-metadata.patch",
+      "sourceMetadataPatchSHA256": "39ceeec21ab901976bdc079b6d62ada27f7df3db43b7480e946cbbd1ff6faa6b",
+      "completedAssetAttempts": [
+        {
+          "label": "c01-high-assets-recovery",
+          "pid": 32946,
+          "cwd": "/Users/sukhjot/.codex/worktrees/sol-c01-trial/test",
+          "time": "2026-10-26T19:41:40.038Z",
+          "event": "finished",
+          "executionMs": 526797,
+          "queueMs": 156129,
+          "exitCode": 0,
+          "signal": null
+        },
+        {
+          "label": "c01-high-double-cuts",
+          "pid": 18668,
+          "cwd": "/Users/sukhjot/.codex/worktrees/sol-c01-trial/test",
+          "time": "2026-10-28T20:29:44.389Z",
+          "event": "finished",
+          "executionMs": 219943,
+          "queueMs": 814159,
+          "exitCode": 0,
+          "signal": null
+        }
+      ],
+      "completedAssetExecutionMs": 746740,
+      "assetQueueMsForTheseAttempts": 970288,
+      "modelTokenUsage": null,
+      "modelInferenceTime": null,
+      "usageNote": "Per-agent token and model-active inference counters were not exposed; account percentages/estimates not used."
+    },
+    "terra": {
+      "worktree": "/Users/sukhjot/.codex/worktrees/terra-c02-trial/test",
+      "candidateCommit": "610e313b3ddd7969419607a1df18c4fe03d40a47",
+      "explicitFinalModel": "gpt-6.1-terra",
+      "reasoningEffort": "high",
+      "initialPhase": "user-reported Light, retained; High continuations thereafter",
+      "assetHashes": {
+        "public/models/sunny.glb": "f8c1b02c09cadecd3e11163dff46227c5b067001a92ecc184003026d65c83243",
+        "public/models/sunny-collision.glb": "86dc8b4218cd28efeaf55a0b6e59eaf685231a26bf1311ff069f2905c1bb73da",
+        "public/models/ship-metadata.json": "373e505c0191209459aec1b0de2aff15a5fa3ca040a3764f7ff301eb407bcff0",
+        "assets/sunny-master.blend": "0c693396eba129770c2feaca55ae40a3420e1b1ac6637396b5da8902adf19d6b",
+        "stuff/1.FBX": "8a770f19926e304cce1839fde4797fc1d98db5a49814f7b049e5a83be69cec10"
+      },
+      "runtimeSourceChanged": [],
+      "sourceMetadataPatch": "/Users/sukhjot/codes/test/docs/review/model-comparison-20261026/terra/source-metadata.patch",
+      "sourceMetadataPatchSHA256": "4c3fcd507bf906bd710b139eca441fe9220cd266933128e27fc79f8e042220ef",
+      "completedAssetAttempts": [
+        {
+          "label": "terra-c02-assets",
+          "pid": 31266,
+          "cwd": "/Users/sukhjot/.codex/worktrees/terra-c02-trial/test",
+          "time": "2026-10-26T19:25:11.013Z",
+          "event": "finished",
+          "executionMs": 58447,
+          "queueMs": 1,
+          "exitCode": 1,
+          "signal": null
+        },
+        {
+          "label": "terra-c02-high-assets",
+          "pid": 31966,
+          "cwd": "/Users/sukhjot/.codex/worktrees/terra-c02-trial/test",
+          "time": "2026-10-26T19:28:54.650Z",
+          "event": "finished",
+          "executionMs": 84587,
+          "queueMs": 4508,
+          "exitCode": 1,
+          "signal": null
+        },
+        {
+          "label": "terra-c02-high-assets-retry",
+          "pid": 32633,
+          "cwd": "/Users/sukhjot/.codex/worktrees/terra-c02-trial/test",
+          "time": "2026-10-26T19:32:49.329Z",
+          "event": "finished",
+          "executionMs": 220654,
+          "queueMs": 1,
+          "exitCode": 0,
+          "signal": null
+        }
+      ],
+      "completedAssetExecutionMs": 363688,
+      "assetQueueMsForTheseAttempts": 4510,
+      "modelTokenUsage": null,
+      "modelInferenceTime": null,
+      "usageNote": "Per-agent token and model-active inference counters were not exposed; account percentages/estimates not used.",
+      "participantBinaryPatch": "/private/tmp/c02-candidate.patch",
+      "participantBinaryPatchSHA256": "d8b34a4a79dbbdcd71344f103c7c0b3a791fd0430b6758ab1a5b49803397d2d6"
+    }
+  },
+  "generalShipWork": "paused; both candidates unmerged; original findings not closed",
+  "fullSuite": "not cleanly completed; user stopped broad run and prohibited further whole-ship testing",
+  "offScopeEvaluatorOverhead": {
+    "terraStoppedBroadRunExecutionMs": 857694,
+    "terraStoppedBroadRunQueueMs": 30024,
+    "note": "Not model task/inference speed; common baseline/broad verification and setup recovery are evaluator overhead. Two-day account-usage interruption excluded."
+  }
+}

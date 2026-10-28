@@ -1,0 +1,458 @@
+{
+  "date": "2026-10-26",
+  "notice": "Original project actual inputs before isolated model trial; partial interior work is unverified, preserved unchanged.",
+  "inputs": {
+    "assets/sunny-master.blend": {
+      "bytes": 19848179,
+      "sha256": "feb806bbc036615e72e73978287d04c6d185c8225df5a750e2d40158420cfd8b"
+    },
+    "index.html": {
+      "bytes": 786,
+      "sha256": "2ee28c1ab0bf4d1eb7f5d7763fdce1cc1307059fa0473fe96b88680b81c08ada"
+    },
+    "package-lock.json": {
+      "bytes": 103376,
+      "sha256": "99bf9ec3a5e8c73de0812c5e3318826667acd06a0cdef7690ec1ef320eacb1ba"
+    },
+    "package.json": {
+      "bytes": 870,
+      "sha256": "c0d1ba7dd1b38462eddf3c2369b9fe4a96f7b398ec08b97560038eeb45ae956c"
+    },
+    "plan.md": {
+      "bytes": 12073,
+      "sha256": "5ea450bd8fce748ea6becd4bba29592a571f30093949b3967f8c7f3cb40e5824"
+    },
+    "public/artwork/straw-hat-jolly-roger.svg": {
+      "bytes": 1352,
+      "sha256": "4fe5417bdeff7453ad72ce3cdb8daa1a2434db496f96d8db0ce3f413d3d404f4"
+    },
+    "public/favicon.svg": {
+      "bytes": 211,
+      "sha256": "36ed9dccde0190d69c0aa3e3a963315aee055ea11495b5aa87cf5d9529a3b09c"
+    },
+    "public/models/ship-metadata.json": {
+      "bytes": 1274177,
+      "sha256": "f8b75353c28b19b1e67db702b9ad3863520e28aa4af73da305ca589dbcc62394"
+    },
+    "public/models/sunny-collision.glb": {
+      "bytes": 46018572,
+      "sha256": "59fe62724ce2d727237c4ebf1f32c0f65fd56464b8c201c1c2a9ae96bd2d4907"
+    },
+    "public/models/sunny.glb": {
+      "bytes": 45989016,
+      "sha256": "986080f794d8c99b074c48a01942a01e98d882a45a54b6a5a68e09ad4999397c"
+    },
+    "readme.md": {
+      "bytes": 12832,
+      "sha256": "331fac1aa6cb986e823a65fbccbc68c344ffc984270f6d690821aba64b02ca1b"
+    },
+    "src/App.jsx": {
+      "bytes": 5245,
+      "sha256": "02ef74327eb79c547a3c5212104b2a1d4ef512b287847b547fb28f3763e13125"
+    },
+    "src/components/CannonControls.jsx": {
+      "bytes": 4073,
+      "sha256": "82d4d9c99317d664122db10185fb77ac1b6e69a8b2d11607af9c27ae9a5bf39b"
+    },
+    "src/components/DoorSystem.jsx": {
+      "bytes": 5507,
+      "sha256": "d96ac6c4c1cc14f9fc567e0beca86720680bc1ec5192d64f3ea8bcd187c59049"
+    },
+    "src/components/Environment.jsx": {
+      "bytes": 4308,
+      "sha256": "0fda4c4b6f6a0dc09210211f9388beb3eaa6c6e96f06210974a65cc3ea5af61c"
+    },
+    "src/components/EnvironmentMap.jsx": {
+      "bytes": 2487,
+      "sha256": "2229cf7ede143d7d46ed2064101f11f8dc26658ade11c96e8f26d403e11910af"
+    },
+    "src/components/NavigationSystem.jsx": {
+      "bytes": 12777,
+      "sha256": "9185757c5c8d651fb0445336189f8108b6b7d89a4adff968b5a0b5680508815d"
+    },
+    "src/components/Ocean.jsx": {
+      "bytes": 13657,
+      "sha256": "0f2fc450bbbb19afc43189eaab7dc204abc85b0ded19236cf703e29f86d28cf0"
+    },
+    "src/components/PlayerController.jsx": {
+      "bytes": 20793,
+      "sha256": "cfa79b029d6ecddabb49cd78377f381247f1a32d47e14b637801706ccbd681a2"
+    },
+    "src/components/Ship.jsx": {
+      "bytes": 7412,
+      "sha256": "777cce5ae9404dbe6f9defe4ba23daf55242c6dcefc240e12c9963527e73d659"
+    },
+    "src/components/UI.jsx": {
+      "bytes": 9659,
+      "sha256": "26e05228f93a4a4d3d168e5026cd8ca77e4b5b7610dfeffcbaa8410d8c503f57"
+    },
+    "src/config/exteriorConfig.json": {
+      "bytes": 81,
+      "sha256": "2ba97357e3d957113e94366f7c9b8ffc545c7f027986b712deb04726fe4ba58f"
+    },
+    "src/config/renderConfig.js": {
+      "bytes": 218,
+      "sha256": "08c8d8f12388c7a63e19cab9afe7b7cc5e81e5e0a3e8407948667b6d95fc6142"
+    },
+    "src/config/shipConfig.js": {
+      "bytes": 2302,
+      "sha256": "eb7b0553c82b3a50504c40603793fbfb5a941999caf90412ea684843a9a3f307"
+    },
+    "src/hooks/useInput.js": {
+      "bytes": 4716,
+      "sha256": "d5e12d0a145be5e3147afdc335b2cb28bcc2606fc81f8ceecd795542fa79f830"
+    },
+    "src/main.jsx": {
+      "bytes": 210,
+      "sha256": "78477f6030a6615a43fbc79897f67777da769e90f5dd16b2563933253c40c17c"
+    },
+    "src/state/useStore.js": {
+      "bytes": 3765,
+      "sha256": "ab8886c64e5ab641ad456ec8be141364797880e3579b501ea09b71f4a18f2921"
+    },
+    "src/systems/climbing.js": {
+      "bytes": 3564,
+      "sha256": "0c88257610f381bab9e15641a1d15fe7ff3b21036fcea92aed3862383c2cf4ad"
+    },
+    "src/systems/collision.js": {
+      "bytes": 12073,
+      "sha256": "834ec55ec5b8a38eef2012fdde1634fb19fe4fd419b9e5df144f57084a6e49f6"
+    },
+    "src/systems/doors.js": {
+      "bytes": 21117,
+      "sha256": "711407b48d77c736b67986af807b4d24fbfb13e4abb819b943c5b657deb3eb45"
+    },
+    "src/systems/exteriorMaterials.js": {
+      "bytes": 6385,
+      "sha256": "0dc0a0d0ee7ba87ffc2ddf4424052af0f273656c9c8a895d0a0e273f1128430c"
+    },
+    "src/systems/flightCollision.js": {
+      "bytes": 1259,
+      "sha256": "2b9a9f035901d9db7f6b41b55ada73a1f05f904f61ba2c0bdb0aaa37b79d6ae6"
+    },
+    "src/systems/interactions.js": {
+      "bytes": 483,
+      "sha256": "974a4502d87b77b1ddede580960463c9cf4d613751c91ff13c11042daaaf2efa"
+    },
+    "src/systems/interiorLighting.js": {
+      "bytes": 2303,
+      "sha256": "af726b9bb446244a90c60ab6ebb05be0ec5ffc3b5197577de6417d73ca772dca"
+    },
+    "src/systems/materials.js": {
+      "bytes": 20696,
+      "sha256": "c7abe9186b32fa0fb1519819f77bc4ae2f2f99962ca469349b05a7c96176d734"
+    },
+    "src/systems/navigation.js": {
+      "bytes": 5553,
+      "sha256": "86b962ecd5a9fd338ad926e9e6d72b1eb7be0a300ab0d33947162d0850f84643"
+    },
+    "src/systems/oceanReflection.js": {
+      "bytes": 2989,
+      "sha256": "074c3258b5df629638826c65d2728a00ea2d7d355a9168398f8df6bd99214347"
+    },
+    "src/systems/realisticExterior.js": {
+      "bytes": 9941,
+      "sha256": "19e7435181b0808ae4dc72fa76155bce32bb6f9be744ce61c419820de70aac8a"
+    },
+    "src/systems/realisticInterior.js": {
+      "bytes": 10673,
+      "sha256": "f627ba5f8cacd24d4b3e394d9cbdebb3725f4b12bf628c70957e6be6203b39cf"
+    },
+    "src/systems/sails.js": {
+      "bytes": 8566,
+      "sha256": "4eab060705d2a10c900c5d8485e14b9ee754e60df15089ec5468ba2e98a5ac33"
+    },
+    "src/systems/shipMeta.js": {
+      "bytes": 2599,
+      "sha256": "c97dbb8a8a528de27274f8a90a0fde1ba967620ae895449e0234434731df0a01"
+    },
+    "src/systems/stepSupport.js": {
+      "bytes": 554,
+      "sha256": "a9c2d96d77691d219fd484d00b38be342b86427dec5e5730c6d58f2939e2537f"
+    },
+    "src/systems/surfaceCollision.js": {
+      "bytes": 2591,
+      "sha256": "57951d4b3f4bf8fa94da5ded7d48a44514622cb2803f5e5ce4dc09e8263f112b"
+    },
+    "stuff/1.FBX": {
+      "bytes": 23765440,
+      "sha256": "8a770f19926e304cce1839fde4797fc1d98db5a49814f7b049e5a83be69cec10"
+    },
+    "stuff/Thousand Sunny at Golden Hour.png": {
+      "bytes": 2501956,
+      "sha256": "54297e1c5a29db108ecb31285fc0da538b44b7d30a34245b117f7c47c3c767b6"
+    },
+    "stuff/images/Mini_Merry_II.html": {
+      "bytes": 338319,
+      "sha256": "248be68d7e8a2c7dfe012f32a3db54b55e37b7da0f84f5d3901fc78c4873c2a9"
+    },
+    "stuff/images/Sunnyworkroom.webp": {
+      "bytes": 76312,
+      "sha256": "60915cf8f7a82918663be5ba96b08af03f0ea2848f98c20cafb520f7a863172c"
+    },
+    "stuff/images/Thousand_Sunny%27s_Aquarium_Bar.webp": {
+      "bytes": 558240,
+      "sha256": "914f76a94c67badbce16628746e9fd3d908fd1d6dfb676080d5a8096ea4374f7"
+    },
+    "stuff/images/Thousand_Sunny%27s_Crow%27s_Nest_and_Survey_Room.webp": {
+      "bytes": 529756,
+      "sha256": "19077e36506a7301aa79ea51ea14919769c686e7e551afcc9a3e55fa3b9f006a"
+    },
+    "stuff/images/Thousand_Sunny%27s_Figurehead%2C_Helm%2C_and_Anchors.webp": {
+      "bytes": 243280,
+      "sha256": "d647e8d47dc9a1452a2a69847404fca11a21bcbfb4142f00519a135986e989ca"
+    },
+    "stuff/images/Thousand_Sunny%27s_Kitchen%2C_Dining_Room%2C_and_Sick_Bay.webp": {
+      "bytes": 581710,
+      "sha256": "630186543a6ba648a24d31ffc1ee33d3f0b88c2a44ef875542d51cdc110f6492"
+    },
+    "stuff/images/Thousand_Sunny%27s_Library%2C_Workrooms%2C_and_Bathhouse.webp": {
+      "bytes": 588526,
+      "sha256": "09ab64fce33988dc35bb5c542ea48c03193aebeaecf43006e2475d031c43b180"
+    },
+    "stuff/images/Thousand_Sunny%27s_Men_and_Woman_Quarters.webp": {
+      "bytes": 567490,
+      "sha256": "2cbccc4e1c6e28a78189d7e82aa84f53e1ea152b180173969e26ed494cd83218"
+    },
+    "stuff/images/Thousand_Sunny_Digitally_Colored_Manga.webp": {
+      "bytes": 280584,
+      "sha256": "ff2a75471798d35efcd8cec3282447075c69f1aa1c19a1747611492d28486091"
+    },
+    "stuff/images/Thousand_Sunny_Infobox.webp": {
+      "bytes": 240472,
+      "sha256": "05350db9df7b30f66f5f4153816a3b89c9d43dd0e09766c4163d9f11e6f85adf"
+    },
+    "stuff/images/Thousand_Sunny_pg.126.webp": {
+      "bytes": 321108,
+      "sha256": "c1a64ed24c5380888c5346dbae75b0d692e0402f87218682c1218710327e9944"
+    },
+    "stuff/images/Thousand_Sunny_pg.192-193.webp": {
+      "bytes": 761486,
+      "sha256": "fe7ce8bcf670613099dd9c5f3d47e08a8f1d2dc76166c35fa6517582fdd54e87"
+    },
+    "stuff/images/Thousand_Sunny_pg.26.webp": {
+      "bytes": 239434,
+      "sha256": "ee5b506135ee307d75cd5a1317d76c132979b95c52d57a377920711fe1cca5c3"
+    },
+    "stuff/images/Thousand_Sunny_pg.46.webp": {
+      "bytes": 229234,
+      "sha256": "dc10b0b4b194269cd7a4b0b3df26763cfc5563ee9b19feb2e5ddf2127291b292"
+    },
+    "stuff/images/Thousand_Sunny_pg.66.webp": {
+      "bytes": 208470,
+      "sha256": "eebdc31ddcb7e52c9412a4d303440b0c529700e7b5881ecb2b9de5bbfbf3d6a7"
+    },
+    "stuff/images/Thousand_Sunny_pg.86.webp": {
+      "bytes": 183866,
+      "sha256": "940e6e5f375eb7c98badbf5b5ec247a5a79c69599f1a608f77714e79b02e1e18"
+    },
+    "stuff/images/Thousand_sunny_aquarium_bar.webp": {
+      "bytes": 72860,
+      "sha256": "72e87d56de790f671f888c1058b6684dbe19b397a3896a7d5d1fa3d497d5200f"
+    },
+    "stuff/images/Thousand_sunny_bathroom.webp": {
+      "bytes": 87130,
+      "sha256": "7d65be2b7f6ad258196f4db932543787ad24320e785c1c1cbb49904b1dc08d5a"
+    },
+    "stuff/images/Thousand_sunny_boys_room.webp": {
+      "bytes": 82384,
+      "sha256": "4a1988e10fe43e64e4a4ba7e64a765dec2fded42ecc90a7cb53dc586198e16d2"
+    },
+    "stuff/images/Thousand_sunny_crows_nest.webp": {
+      "bytes": 52660,
+      "sha256": "b80428592ed24a182286975fab8ec751871bfd8eb1410ccb71159fcf3faf5a7b"
+    },
+    "stuff/images/Thousand_sunny_girls_room.webp": {
+      "bytes": 61620,
+      "sha256": "bbcda06c4e71d3166876c457138194c9d8d0e69c0727d6be3adbf23eb314d84a"
+    },
+    "stuff/images/Thousand_sunny_kitchen.webp": {
+      "bytes": 77472,
+      "sha256": "142a8e2acdaf804b9f5f90c885efc22004dd3121c3092a9d212e589b977654eb"
+    },
+    "stuff/images/Thousand_sunny_library.webp": {
+      "bytes": 77332,
+      "sha256": "fe8e85e7f1b4b4ad7bb150e2f36c11f07f66444dcfcb9f0c25a81cd790f306a3"
+    },
+    "stuff/images/Thousand_sunny_sick_bay.webp": {
+      "bytes": 74170,
+      "sha256": "d2609e52cd287012ee909d8b4a372567344196d5b58f4959a9ae0913c5dd4975"
+    },
+    "stuff/images/Thousand_sunny_usopp_factory.webp": {
+      "bytes": 77588,
+      "sha256": "9311ea5b5d69a98cbafcd34db50f4fe45078316f14be6f911bf1fdc7046dbb7a"
+    },
+    "stuff/images/Usopp%27s_Garden_of_Pop_Greens.webp": {
+      "bytes": 49206,
+      "sha256": "dcb5955f3cd665e5c4dda9937fa3b30518c019f51fb6c4dc57dd73cde19dcaf1"
+    },
+    "tests/assets.test.mjs": {
+      "bytes": 42260,
+      "sha256": "e42aa026af52a3e4fec6beb9b482911d241a9d4af11e4c75c17e2031e9497aec"
+    },
+    "tests/cannonControls.mjs": {
+      "bytes": 6333,
+      "sha256": "e534a4116b13a0e6f7d9a5dc1c22c9cc5cd7773f6cc24eccf211f494230cd462"
+    },
+    "tests/climbing.mjs": {
+      "bytes": 6728,
+      "sha256": "addc7cf45c3ae46205bfef3c1703622019bb0c77cae9e3aeb6e57ae4e14cd573"
+    },
+    "tests/climbing.test.mjs": {
+      "bytes": 3227,
+      "sha256": "68c04d13874329bc06f63c39fdbe850b2285ba9729061a1757e7597dbeeae1e4"
+    },
+    "tests/doors.test.mjs": {
+      "bytes": 6270,
+      "sha256": "0540aaa4b0ac7fa2fc7a8063cdb13bb10ab8b90bf6cadd2e81128900dbe96930"
+    },
+    "tests/exterior.test.mjs": {
+      "bytes": 111607,
+      "sha256": "82c176e0be136e8283c564166da64f9f63002f8ba86a5b1e62388f54d4804cef"
+    },
+    "tests/exteriorAccess.mjs": {
+      "bytes": 9050,
+      "sha256": "2d62a2a07ccd9160e430f086dc33c88da43371c67dd5a41419f0265518f6ad7b"
+    },
+    "tests/exteriorJourneys.mjs": {
+      "bytes": 13260,
+      "sha256": "cb6807e251c3afce7a39c64247a684d14700b34ae3281e66051802401825cbce"
+    },
+    "tests/exteriorMaterials.test.mjs": {
+      "bytes": 6777,
+      "sha256": "c9750d1280b42d52f41997aeb4dbaf791a7c10d0af0a92f3891470af442cb139"
+    },
+    "tests/exteriorMotion.mjs": {
+      "bytes": 9889,
+      "sha256": "e2ef1685c666de9d15d71904b28403ae463d11b58048ede2bc369d2b6a70af1b"
+    },
+    "tests/gameplay.mjs": {
+      "bytes": 15842,
+      "sha256": "421a969ceff7dc6f35bb307c124d240c86792eac4151aff94dd487e4d979dcff"
+    },
+    "tests/glb.mjs": {
+      "bytes": 3977,
+      "sha256": "5f0762c6159cc51f5b13ec9b681f62d5270668c5cf716b6c13fc1e7287f0f69d"
+    },
+    "tests/interaction.mjs": {
+      "bytes": 4668,
+      "sha256": "84deac048245dd6d60aa7b0a74b3e3a9dcfdaa70e203a8c96d3825ec25b5ee8e"
+    },
+    "tests/interiorJourneys.mjs": {
+      "bytes": 5476,
+      "sha256": "9cb4061c8478c04536209b89093e46128aa7206e4eaa83817d8a1fab8ddd5369"
+    },
+    "tests/interiorMaterials.test.mjs": {
+      "bytes": 8299,
+      "sha256": "4f8298f629b8b7114971d92f0f94adec868ca3172f1631105cfe579c0125368d"
+    },
+    "tests/ladderJourney.mjs": {
+      "bytes": 4997,
+      "sha256": "42eea87b1089737fc11cf1a11d1ed0a42fc02b6076aedf603199f60ce665444d"
+    },
+    "tests/navigation.mjs": {
+      "bytes": 10577,
+      "sha256": "a74592b2ea777a63cb9a2e558029c7ba11cefd163cc73ab0fa64b93035ba5ba8"
+    },
+    "tests/navigation.test.mjs": {
+      "bytes": 4065,
+      "sha256": "e989e2ae4f33975ca3810d9835475c2ce4c3bdb2ace6077adb906bad2ff3bce4"
+    },
+    "tests/physics.test.mjs": {
+      "bytes": 9772,
+      "sha256": "e4ef578d01b162c96144d04a1d28dfcecbaa3017cc6473499c6c2f966b478c57"
+    },
+    "tests/reachability.mjs": {
+      "bytes": 3725,
+      "sha256": "f22b5a5f216c7fb5846875fcd737cefa9982fe4532275db575dedc92e9cd3677"
+    },
+    "tests/roomRoutes.mjs": {
+      "bytes": 10952,
+      "sha256": "9b403668f1d0a4d3644ce3c356c79e2aebf015a41f01571c92d393588c3cace2"
+    },
+    "tests/run-all.mjs": {
+      "bytes": 3623,
+      "sha256": "ba41c1611aa695bafc6c78dbd8a8fc85a5b848b3b8bffe47206d354f89416b39"
+    },
+    "tests/smoke.mjs": {
+      "bytes": 3231,
+      "sha256": "7ec6b61dd073de37aa1f66c37e5e7b489c23c54a104655ea91b3dc84c1d17d74"
+    },
+    "tests/stairFlights.mjs": {
+      "bytes": 9388,
+      "sha256": "a1babd4507da0a1af7c443a82f2cba112a9d8a6c99381b93c0c7980cb1143468"
+    },
+    "tests/visual.mjs": {
+      "bytes": 3239,
+      "sha256": "4cf03a21e4bbd9b7f7cf1df9a61915a988b89c4d34e1983670c132713a59840d"
+    },
+    "tools/build_assets.py": {
+      "bytes": 52008,
+      "sha256": "7215d48afdbd106396a0f7f36d42017732d49aeb694c8202dc472788c58c4f7f"
+    },
+    "tools/collision_glb.py": {
+      "bytes": 2361,
+      "sha256": "a4a52aeb2bd32ce6c0196579e8f9f69ca987103a91b0452505473d4d32f40e4a"
+    },
+    "tools/exterior_audit.mjs": {
+      "bytes": 6248,
+      "sha256": "3d8c775ca80c78df43fbfb539115e1068083db2ef5bf237e7b551d96ea6d13ff"
+    },
+    "tools/exterior_plates.py": {
+      "bytes": 3130,
+      "sha256": "8098db6764f900e28da2a47936524b13d1ab6a9c2d12c3123e5bb3576eef6ff7"
+    },
+    "tools/fore_walk_review.mjs": {
+      "bytes": 3244,
+      "sha256": "c73fb96db301c4f9abc80d8c29cf8d1ef31135c41aeec48940fb036aec587c02"
+    },
+    "tools/interior_audit.mjs": {
+      "bytes": 5303,
+      "sha256": "d403037ad42c5a12d5770816a8a8ca06e3820f7bba899b85096dede9e22f6232"
+    },
+    "tools/sunny_accuracy.py": {
+      "bytes": 121070,
+      "sha256": "702d87a5426f6b15957b166258f81862ea441b9d65198e187b9eb8537c5c34fd"
+    },
+    "tools/sunny_accuracy.py.orig": {
+      "bytes": 115399,
+      "sha256": "e9ca3d327ffa15ae9cb5a49108019207aef46c31bdad23d824eaa35785e6d982"
+    },
+    "tools/sunny_aft_envelope.py": {
+      "bytes": 36534,
+      "sha256": "5eba3ccbc23ee2f9d15a8c145c40cf89c2c3de48cab403df493be5e29c7e0546"
+    },
+    "tools/sunny_details.py": {
+      "bytes": 8944,
+      "sha256": "8718ad8b88303c1ee919e55a66d1e22126f97c8dc03e4e3baa12d49b3343f19b"
+    },
+    "tools/sunny_exterior.py": {
+      "bytes": 69951,
+      "sha256": "8d47fd438c2d60f3cb07dad7c27e32000037c84b85bc52bb937ff057d31918bc"
+    },
+    "tools/sunny_interiors.py": {
+      "bytes": 84521,
+      "sha256": "1f87df4afedbc83e7c72a60e5c5be7def49bd0e67f3057e760c94259cfa60f45"
+    },
+    "tools/sunny_room_accuracy.py": {
+      "bytes": 26813,
+      "sha256": "e79a49b54309be182147af39d9f28656248df00fa78314d1d4a82a059ca57344"
+    },
+    "tools/sunny_room_details.py": {
+      "bytes": 5382,
+      "sha256": "f6c7281f68fecd4c20f619f8d640dc19d174670c50e63523660c8fee33d2312a"
+    },
+    "tools/sunny_surfaces.py": {
+      "bytes": 7050,
+      "sha256": "346060626240e1fba99486d0cc9829f0ea4af0dbdb7cdd61fd38c7a1cca7eb25"
+    },
+    "tools/sunny_uv.py": {
+      "bytes": 8975,
+      "sha256": "5382d2beec8e6f927ca5a76d203ffb01651a6241800ef6f0ecfc93fae9c99684"
+    },
+    "vite.config.js": {
+      "bytes": 231,
+      "sha256": "5c8e76f1d69e66b0b04b54da032d1dac1248420b116c0c42b11232ed9567e079"
+    }
+  }
+}

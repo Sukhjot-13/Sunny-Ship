@@ -1,0 +1,46 @@
+[
+  {
+    "file": "interiorMaterials.test.mjs",
+    "exit": 0
+  },
+  {
+    "file": "exteriorMaterials.test.mjs",
+    "exit": 0
+  },
+  {
+    "file": "navigation.test.mjs",
+    "exit": 0
+  },
+  {
+    "file": "climbing.test.mjs",
+    "exit": 0
+  },
+  {
+    "file": "assets.test.mjs",
+    "exit": 0
+  },
+  {
+    "file": "exterior.test.mjs",
+    "exit": 0
+  },
+  {
+    "file": "doors.test.mjs",
+    "exit": 0
+  },
+  {
+    "file": "physics.test.mjs",
+    "exit": 0
+  },
+  {
+    "file": "reachability.mjs",
+    "exit": 0
+  },
+  {
+    "file": "roomRoutes.mjs",
+    "exit": 0
+  },
+  {
+    "file": "npm run build",
+    "exit": 0
+  }
+]

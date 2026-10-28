@@ -1,0 +1,16 @@
+{
+  "state": "terminal bounded assessment",
+  "recordedUTC": "2026-10-28T20:41:26.018074+00:00",
+  "activeHeavyJobs": [],
+  "activeTrialPreviews": [],
+  "normalShipWork": "STOPPED; no candidate merge or original finding closure",
+  "agents": {
+    "sol": "/root/sol_c01_high_recovery",
+    "terra": "/root/terra_c02_high_recovery"
+  },
+  "modelVerdicts": {
+    "sol": "partial; strict failure and visible upper storage trim",
+    "terra": "both lining cuts demonstrated; containment/travel unverified"
+  },
+  "historicalJobRecords": "progress-history.md and per-model resource-events.jsonl; do not restart historical PIDs"
+}

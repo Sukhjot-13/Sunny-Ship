@@ -29,6 +29,9 @@ the reasoning is not lost.
 
 ## 🟢 Improvements
 
+- **2026-10-28 — Isolated verification scaffolding (implemented for the model trial).** Create existing browser tests’ generated output directories before dispatch, route preview/cache paths symmetrically, and tolerate incomplete exclusive-lock JSON writes. Preserve failed setup runs separately from repair failures; hash frozen inputs across focused retries. The Sol/Terra experiment retains all original assertions and discloses these common harness corrections.
+
+
 - **2026-10-23 — Interior finish consistency (active).** Add physically scaled timber, cloth, tile, ceramic, paper and metal detail to the existing rooms. Keep authored tile colors and patterns, existing construction and exterior finishes; use source-relative projection for unmapped furniture so texture stays fixed during ship motion.
 
 ## 🟡 New features

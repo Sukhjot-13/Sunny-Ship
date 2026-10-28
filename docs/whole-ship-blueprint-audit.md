@@ -1,3 +1,9 @@
+# Current status — model trial finished, October28,2026
+
+General ship work remains STOPPED. The bounded Sol/C01 versus Terra/C02 experiment is complete as an assessment: both outputs partial/unmerged, original findings not closed. Read [the compact result/recommendation](model-comparison-20261026.md). Sol leaves visible upper storage trim and strict-test failures; Terra clears both sampled/visible linings but full containment/travel proof remains unverified. Original runtime/model inputs are preserved; no automatic repair, merge or texture resumption. Earlier active queues below are historical.
+
+---
+
 # STOPPED — current authorization, October26,2026
 
 Sukhjot said “stop all things.” General texture/repair work is stopped and must not resume automatically. Only a bounded isolated Sol/C01 versus Terra/C02 experiment and a local Git baseline checkpoint are now authorized. Neither candidate may be merged or close C01/C02 in this original ship. Earlier resumption instructions below are superseded. Earlier capture/server sessions ended; their orphaned project-owned Chrome browser was identified by working directory and terminated. Existing files and partial interior materials are preserved. See `model-comparison-20261026.md` for the isolated trial, exact baseline, processes and results.

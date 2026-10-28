@@ -1,0 +1,327 @@
+diff --git a/public/models/ship-metadata.json b/public/models/ship-metadata.json
+index 69cf6c0..273b456 100644
+--- a/public/models/ship-metadata.json
++++ b/public/models/ship-metadata.json
+@@ -210,29 +210,29 @@
+         "channel": 1
+       },
+       {
+-        "name": "Sunny_Dock_bay0_side.001",
++        "name": "Sunny_Dock_bay0_side",
+         "min": [
+           3.6449999809265137,
+-          2.88700008392334,
++          -0.4130000174045563,
+           -47.150718688964844
+         ],
+         "max": [
+           7.945000171661377,
+-          2.986999988555908,
++          -0.31299999356269836,
+           -46.25071716308594
+         ],
+         "channel": 1
+       },
+       {
+-        "name": "Sunny_Dock_bay0_side",
++        "name": "Sunny_Dock_bay0_side.001",
+         "min": [
+           3.6449999809265137,
+-          -0.4130000174045563,
++          2.88700008392334,
+           -47.150718688964844
+         ],
+         "max": [
+           7.945000171661377,
+-          -0.31299999356269836,
++          2.986999988555908,
+           -46.25071716308594
+         ],
+         "channel": 1
+@@ -252,29 +252,29 @@
+         "channel": 2
+       },
+       {
+-        "name": "Sunny_Dock_bay1_side.001",
++        "name": "Sunny_Dock_bay1_side",
+         "min": [
+-          0.5977569222450256,
+-          4.8149800300598145,
++          3.4556405544281006,
++          3.164979934692383,
+           -47.150718688964844
+         ],
+         "max": [
+-          2.8343594074249268,
+-          8.588890075683594,
++          5.6922430992126465,
++          6.938889503479004,
+           -46.25071716308594
+         ],
+         "channel": 2
+       },
+       {
+-        "name": "Sunny_Dock_bay1_side",
++        "name": "Sunny_Dock_bay1_side.001",
+         "min": [
+-          3.4556405544281006,
+-          3.164979934692383,
++          0.5977569222450256,
++          4.8149800300598145,
+           -47.150718688964844
+         ],
+         "max": [
+-          5.6922430992126465,
+-          6.938889503479004,
++          2.8343594074249268,
++          8.588890075683594,
+           -46.25071716308594
+         ],
+         "channel": 2
+@@ -336,29 +336,29 @@
+         "channel": 4
+       },
+       {
+-        "name": "Sunny_Dock_bay3_side.001",
++        "name": "Sunny_Dock_bay3_side",
+         "min": [
+           -6.954999923706055,
+-          -0.4130001962184906,
++          2.8869998455047607,
+           -47.150718688964844
+         ],
+         "max": [
+           -2.6549997329711914,
+-          -0.31299981474876404,
++          2.9870002269744873,
+           -46.25071716308594
+         ],
+         "channel": 4
+       },
+       {
+-        "name": "Sunny_Dock_bay3_side",
++        "name": "Sunny_Dock_bay3_side.001",
+         "min": [
+           -6.954999923706055,
+-          2.8869998455047607,
++          -0.4130001962184906,
+           -47.150718688964844
+         ],
+         "max": [
+           -2.6549997329711914,
+-          2.9870002269744873,
++          -0.31299981474876404,
+           -46.25071716308594
+         ],
+         "channel": 4
+@@ -420,29 +420,29 @@
+         "channel": 6
+       },
+       {
+-        "name": "Sunny_Dock_bay5_side",
++        "name": "Sunny_Dock_bay5_side.001",
+         "min": [
+-          0.5977570414543152,
+-          -6.014889240264893,
++          3.4556405544281006,
++          -4.364889621734619,
+           -47.150718688964844
+         ],
+         "max": [
+-          2.8343591690063477,
+-          -2.2409796714782715,
++          5.692242622375488,
++          -0.590979814529419,
+           -46.25071716308594
+         ],
+         "channel": 6
+       },
+       {
+-        "name": "Sunny_Dock_bay5_side.001",
++        "name": "Sunny_Dock_bay5_side",
+         "min": [
+-          3.4556405544281006,
+-          -4.364889621734619,
++          0.5977570414543152,
++          -6.014889240264893,
+           -47.150718688964844
+         ],
+         "max": [
+-          5.692242622375488,
+-          -0.590979814529419,
++          2.8343591690063477,
++          -2.2409796714782715,
+           -46.25071716308594
+         ],
+         "channel": 6
+@@ -38592,7 +38592,7 @@
+     ],
+     "doorCount": 35,
+     "partitions": 70,
+-    "furniture": 2323
++    "furniture": 2281
+   },
+   "exterior": {
+     "version": "post-timeskip",
+@@ -43699,30 +43699,9 @@
+       "Sunny_InteriorWall_B1_186_seg0",
+       "Sunny_InteriorWall_B1_187_seg0",
+       "Sunny_InteriorWall_B1_188_seg0",
+-      "Sunny_InteriorWall_B1_189_seg0",
+       "Sunny_InteriorWall_B1_18_seg0",
+-      "Sunny_InteriorWall_B1_190_seg0",
+-      "Sunny_InteriorWall_B1_191_seg0",
+-      "Sunny_InteriorWall_B1_192_seg0",
+-      "Sunny_InteriorWall_B1_193_seg0",
+-      "Sunny_InteriorWall_B1_194_seg0",
+-      "Sunny_InteriorWall_B1_195_seg0",
+-      "Sunny_InteriorWall_B1_196_seg0",
+-      "Sunny_InteriorWall_B1_197_seg0",
+-      "Sunny_InteriorWall_B1_198_seg0",
+-      "Sunny_InteriorWall_B1_199_seg0",
+       "Sunny_InteriorWall_B1_19_seg0",
+       "Sunny_InteriorWall_B1_1_seg0",
+-      "Sunny_InteriorWall_B1_200_seg0",
+-      "Sunny_InteriorWall_B1_201_seg0",
+-      "Sunny_InteriorWall_B1_202_seg0",
+-      "Sunny_InteriorWall_B1_203_seg0",
+-      "Sunny_InteriorWall_B1_204_seg0",
+-      "Sunny_InteriorWall_B1_205_seg0",
+-      "Sunny_InteriorWall_B1_206_seg0",
+-      "Sunny_InteriorWall_B1_207_seg0",
+-      "Sunny_InteriorWall_B1_208_seg0",
+-      "Sunny_InteriorWall_B1_209_seg0",
+       "Sunny_InteriorWall_B1_20_seg0",
+       "Sunny_InteriorWall_B1_210_seg0",
+       "Sunny_InteriorWall_B1_211_seg0",
+@@ -43834,29 +43813,8 @@
+       "Sunny_InteriorWall_B1_60_seg0",
+       "Sunny_InteriorWall_B1_61_seg0",
+       "Sunny_InteriorWall_B1_62_seg0",
+-      "Sunny_InteriorWall_B1_63_seg0",
+-      "Sunny_InteriorWall_B1_64_seg0",
+-      "Sunny_InteriorWall_B1_65_seg0",
+-      "Sunny_InteriorWall_B1_66_seg0",
+-      "Sunny_InteriorWall_B1_67_seg0",
+-      "Sunny_InteriorWall_B1_68_seg0",
+-      "Sunny_InteriorWall_B1_69_seg0",
+       "Sunny_InteriorWall_B1_6_seg0",
+-      "Sunny_InteriorWall_B1_70_seg0",
+-      "Sunny_InteriorWall_B1_71_seg0",
+-      "Sunny_InteriorWall_B1_72_seg0",
+-      "Sunny_InteriorWall_B1_73_seg0",
+-      "Sunny_InteriorWall_B1_74_seg0",
+-      "Sunny_InteriorWall_B1_75_seg0",
+-      "Sunny_InteriorWall_B1_76_seg0",
+-      "Sunny_InteriorWall_B1_77_seg0",
+-      "Sunny_InteriorWall_B1_78_seg0",
+-      "Sunny_InteriorWall_B1_79_seg0",
+       "Sunny_InteriorWall_B1_7_seg0",
+-      "Sunny_InteriorWall_B1_80_seg0",
+-      "Sunny_InteriorWall_B1_81_seg0",
+-      "Sunny_InteriorWall_B1_82_seg0",
+-      "Sunny_InteriorWall_B1_83_seg0",
+       "Sunny_InteriorWall_B1_84_seg0",
+       "Sunny_InteriorWall_B1_85_seg0",
+       "Sunny_InteriorWall_B1_86_seg0",
+@@ -46946,7 +46904,7 @@
+     "floorSlabDepth": 0.6
+   },
+   "counts": {
+-    "shipObjects": 7549,
++    "shipObjects": 7507,
+     "removedJunkObjects": 102,
+     "skippedDegenerateMeshes": 3
+   }
+diff --git a/tests/dockApertures.test.mjs b/tests/dockApertures.test.mjs
+new file mode 100644
+index 0000000..0b866c3
+--- /dev/null
++++ b/tests/dockApertures.test.mjs
+@@ -0,0 +1,34 @@
++/** Independent exported-mesh and collision probes through the dock openings. */
++import assert from 'node:assert/strict'
++import * as THREE from 'three'
++import {readGLB,readAccessor,nodeMatrix,loadColliders} from './glb.mjs'
++const gltf=readGLB('public/models/sunny.glb'), triangles=[]
++function walk(i,parent){
++ const n=gltf.json.nodes[i],m=new THREE.Matrix4().multiplyMatrices(parent,nodeMatrix(n))
++ if(n.mesh!==undefined && n.name?.startsWith('Sunny_InteriorWall_B1_')){
++  for(const p of gltf.json.meshes[n.mesh].primitives){
++   const pos=readAccessor(gltf,p.attributes.POSITION),idx=p.indices===undefined?null:readAccessor(gltf,p.indices).data
++   const count=idx?.length??pos.count
++   const v=j=>new THREE.Vector3(...pos.data.slice(j*3,j*3+3)).applyMatrix4(m)
++   for(let k=0;k<count;k+=3) triangles.push([v(idx?idx[k]:k),v(idx?idx[k+1]:k+1),v(idx?idx[k+2]:k+2)])
++  }
++ }
++ for(const c of n.children||[])walk(c,m)
++}
++for(const i of gltf.json.scenes[gltf.json.scene??0].nodes)walk(i,new THREE.Matrix4())
++assert(triangles.length>0,'B1 lining must remain present')
++const boxes=loadColliders('public/models/sunny-collision.glb').filter(b=>b.name.includes('Sunny_InteriorWall_B1_'))
++assert(boxes.length>0,'B1 lining must retain physical collision')
++for(const side of [-1,1]){
++ let rays=0
++ for(let dx=-7;dx<=7;dx++)for(let dy=-7;dy<=7;dy++){
++  if(dx*dx+dy*dy>49)continue
++  const origin=new THREE.Vector3(.495+dx,-45.94072+dy,side*25),dir=new THREE.Vector3(0,0,-side),ray=new THREE.Ray(origin,dir)
++  const hit=triangles.some(t=>{const p=ray.intersectTriangle(...t,false,new THREE.Vector3());return p&&Math.abs(p.z)<25&&p.z*side>=0})
++  assert(!hit,`visual lining blocks ${side} at ${dx},${dy}`)
++  const blocked=boxes.some(b=>origin.x>b.min.x&&origin.x<b.max.x&&origin.y>b.min.y&&origin.y<b.max.y&&b.max.z>=Math.min(0,side*25)&&b.min.z<=Math.max(0,side*25))
++  assert(!blocked,`collision lining blocks ${side} at ${dx},${dy}`)
++  rays++
++ }
++ console.log(`PASS ${rays} visual/collision lining rays on side ${side}`)
++}
+diff --git a/tests/run-all.mjs b/tests/run-all.mjs
+index 41d2044..9d2f6d4 100644
+--- a/tests/run-all.mjs
++++ b/tests/run-all.mjs
+@@ -3,7 +3,7 @@
+  *
+  *   npm test
+  *
+- * Twenty serial suites: pure navigation/climbing, physical interior/exterior materials, exported geometry/collision,
++ * Twenty-one serial suites: pure navigation/climbing, physical interior/exterior materials, exported geometry/collision,
+  * all room routes, real exterior/interior/controls journeys, interaction,
+  * motion comparisons and visual capture. The suites array is authoritative.
+  */
+@@ -60,6 +60,7 @@ if (!serverUp) {
+ }
+ 
+ const suites=[
++ ['dockApertures.test.mjs','dock aperture lining and collision'],
+  ['interiorMaterials.test.mjs','physical interior materials and metric projection'],
+  ['exteriorMaterials.test.mjs','physical exterior materials and reflection guards'],
+  ['navigation.test.mjs','navigation logic'],['climbing.test.mjs','climbing and interaction logic'],['assets.test.mjs','asset structure'],['exterior.test.mjs','exterior coplanar geometry'],['doors.test.mjs','door and hatch collision'],
+diff --git a/tools/sunny_accuracy.py b/tools/sunny_accuracy.py
+index 5aa0769..d8ed354 100644
+--- a/tools/sunny_accuracy.py
++++ b/tools/sunny_accuracy.py
+@@ -674,6 +674,26 @@ def rolling_dock(objects,bounds,cy):
+                 lo, hi = bounds(obj)
+                 depth = (y-3.0, y+3.0) if obj.name == 'Line002' else (lo.y-.01, hi.y+.01)
+                 circular_cut(obj,p,radius,1,*depth,32)
++        # Cut the independently authored B1 lining through the same aperture.
++        for obj in list(objects):
++            if not obj.name.startswith('Sunny_InteriorWall_B1_'):
++                continue
++            obj_bounds = bounds(obj)
++            if obj_bounds is None:
++                continue
++            lo, hi = obj_bounds
++            if (hi.x < x-radius or lo.x > x+radius or
++                hi.z < z-radius or lo.z > z+radius or
++                (direction < 0 and lo.y > cy) or
++                (direction > 0 and hi.y < cy)):
++                continue
++            circular_cut(obj, p, radius, 1, min(cy, y)-1, max(cy, y)+1, 32)
++            if not obj.data.polygons:
++                objects.remove(obj)
++                bpy.data.objects.remove(obj, do_unlink=True)
++                continue
++            # Build collision from the retained faces, not the original bounds.
++            obj['sunny_rail'] = True
+         ring('Dock1_rim',(x,y+direction*.09,z),radius+.28,.59,'black','Y',64,10)
+         ring('Dock1_reveal',(x,y-direction*.18,z),radius-.08,.16,'darkwood','Y',64,8)
+         count=32

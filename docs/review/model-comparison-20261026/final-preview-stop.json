@@ -1,0 +1,7 @@
+{
+  "stoppedUTC": "2026-10-28T20:39:25.284411+00:00",
+  "pid": 18541,
+  "command": "node /Users/sukhjot/.codex/worktrees/sol-c01-trial/test/node_modules/.bin/vite --host localhost",
+  "cwdRecord": "p18541\nfcwd\nn/Users/sukhjot/.codex/worktrees/sol-c01-trial/test\n",
+  "reason": "Bounded comparison complete; stop only the owned Sol trial preview. Terra preview already not listening; no heavy lock remains."
+}

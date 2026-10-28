@@ -1,0 +1,38 @@
+PASS Storage Room 67 waypoints, -19.6,-47.150699615478516,-0.4
+PASS Soldier Dock System 60 waypoints, -5.2,-47.05070114135742,0.8
+PASS Usopp's Main Factory 80 waypoints, 14.4,-47.15060043334961,5.2
+PASS Franky's Weapon Development Room 68 waypoints, 14.4,-47.15060043334961,-7.2
+PASS Energy Room 87 waypoints, 24,-47.15060043334961,-0.4
+PASS Men's Quarters 36 waypoints, -24.8,-40.55070114135742,0.4
+PASS Men's Washroom 31 waypoints, -20.400000000000002,-40.55070114135742,-6.800000000000001
+PASS Aquarium Service Passage 111 waypoints, 24.8,-40.55070114135742,-1.2000000000000002
+PASS Aquarium Bar 26 waypoints, 17,-40.55070114135742,-1.4000000000000001
+PASS Women's Quarters 45 waypoints, -26,-36.41469955444336,0.4
+PASS Women's Washroom 48 waypoints, -21.8,-36.41469955444336,-7.4
+PASS Dining Room 70 waypoints, 16.400000000000002,-35.62269973754883,6
+PASS Kitchen 59 waypoints, 16.400000000000002,-35.62269973754883,-7.4
+PASS Pantry 66 waypoints, 22.8,-35.62269973754883,-7.4
+PASS Sick Bay 68 waypoints, 22.8,-35.62269973754883,5.2
+PASS Library 91 waypoints, 30.400000000000002,-29.154699325561523,-1.2000000000000002
+PASS Bath 98 waypoints, 29.6,-26.104700088500977,-0.6000000000000001
+PASS Bath Washroom 96 waypoints, 29.400000000000002,-26.104700088500977,-4.800000000000001
+PASS Observation Deck 76 waypoints, 20.6,-29.37470054626465,-1.4000000000000001
+PASS Men Starboard Cannon Closet 32 waypoints, -24.8,-40.55070114135742,-8.6
+PASS Men Port Cannon Closet 46 waypoints, -24.8,-40.55070114135742,9.4
+PASS Women Starboard Cannon Closet 52 waypoints, -26,-36.41469955444336,-8.6
+PASS Women Port Cannon Closet 44 waypoints, -26,-36.41469955444336,9.4
+PASS Fore Port Toilet 21 waypoints, -15.600000000000001,-40.55070114135742,3.8000000000000003
+PASS Fore Starboard Toilet 23 waypoints, -15.600000000000001,-40.55070114135742,-3.8000000000000003
+PASS Stern Ladder Access 73 waypoints, 29.6,-35.62269973754883,-1.2000000000000002
+PASS Bath Toilet 98 waypoints, 29,-26.104700088500977,-5.4
+PASS Stair: BathStair 103 waypoints, 31,-26.104700088500977,-4.2
+PASS Stair: EnergyStair 117 waypoints, 22.400000000000002,-40.55070114135742,6.800000000000001
+PASS Stair: SoldierDockStair_over 45 waypoints, -6,-40.55070114135742,-8.8
+PASS Stair: SoldierDockStair_up 60 waypoints, -0.6000000000000001,-43.85070037841797,-11.600000000000001
+PASS Stair: StorageStair_over 224 waypoints, -18.8,-40.55022048950195,7.4
+PASS Stair: StorageStair_up 89 waypoints, -13.600000000000001,-43.8502197265625,4.4
+PASS Ladder: Aquarium gallery ladder 25 waypoints, 11.55,-35.62271716308594,5.913
+PASS Ladder: Stern Library ladder 72 waypoints, 27.608023262023927,-29.15471716308594,-1.5494378089904786
+PASS Fore cabin approach: fore lower starboard 61 waypoints, -26,-36.41469955444336,0.4
+PASS Fore cabin approach: fore lower port 53 waypoints, -26,-36.41469955444336,0.4
+Reachable 148139/222839 grid nodes

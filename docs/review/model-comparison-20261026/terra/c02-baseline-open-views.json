@@ -1,0 +1,143 @@
+{
+  "url": "http://localhost:8172/",
+  "hashes": {
+    "sunny.glb": "986080f794d8c99b074c48a01942a01e98d882a45a54b6a5a68e09ad4999397c",
+    "sunny-collision.glb": "59fe62724ce2d727237c4ebf1f32c0f65fd56464b8c201c1c2a9ae96bd2d4907",
+    "ship-metadata.json": "f8b75353c28b19b1e67db702b9ad3863520e28aa4af73da305ca589dbcc62394"
+  },
+  "state": {
+    "heading": 270,
+    "throttle": 0,
+    "speed": 0,
+    "east": 0,
+    "south": 0,
+    "helm": false,
+    "channel": 2,
+    "dockOpen": true,
+    "shutter": 1,
+    "dockAngle": -1.0275181592832425,
+    "logNeedle": 0,
+    "cola": 3,
+    "burst": 0,
+    "lift": 0,
+    "pitch": 0,
+    "wheel": 0,
+    "chicken": false,
+    "maneAngle": 0,
+    "jawOpen": false,
+    "jaw": 0,
+    "gaon": 0,
+    "paddleAngle": 0
+  },
+  "trace": [
+    {
+      "label": "lawn approach",
+      "ok": true,
+      "pos": [
+        -4.289999999999999,
+        -40.55070114135742,
+        2.352663498869549
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "lower entrance",
+      "ok": true,
+      "pos": [
+        -12.595386236011926,
+        -40.55070114135742,
+        2.3894950356720437
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "fore lower port",
+      "ok": true,
+      "recoveries": 0,
+      "pos": [
+        -17.34735168413481,
+        -36.41469955444336,
+        3.921549261055475
+      ],
+      "grounded": true,
+      "blocker": null
+    },
+    {
+      "label": "cross landing",
+      "ok": true,
+      "pos": [
+        -17.35185270713298,
+        -36.41469955444336,
+        3.9213250916292752
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "upper entrance",
+      "ok": true,
+      "pos": [
+        -17.404964977452206,
+        -36.41469955444336,
+        -3.328151255474044
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "fore upper",
+      "ok": true,
+      "recoveries": 0,
+      "pos": [
+        -20.92124241582865,
+        -33.16210174560547,
+        -3.079821407663648
+      ],
+      "grounded": true,
+      "blocker": null
+    },
+    {
+      "label": "mast bypass",
+      "ok": true,
+      "pos": [
+        -22.153038860459688,
+        -33.16210174560547,
+        -4.555625752538907
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "forward helm approach",
+      "ok": true,
+      "pos": [
+        -27.101258204679603,
+        -33.16210174560547,
+        -4.499969031673197
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "helm deck",
+      "ok": true,
+      "pos": [
+        -27.09850976558662,
+        -33.16210174560547,
+        -0.2020896312776884
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    }
+  ],
+  "errors": []
+}

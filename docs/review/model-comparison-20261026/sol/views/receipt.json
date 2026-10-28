@@ -1,0 +1,302 @@
+{
+  "url": "http://localhost:8171/",
+  "hashes": {
+    "sunny.glb": {
+      "local": "da8b042505486825ffd7392216b0185804c0623d7449ac731900fdf80ac479ae",
+      "served": "da8b042505486825ffd7392216b0185804c0623d7449ac731900fdf80ac479ae"
+    },
+    "sunny-collision.glb": {
+      "local": "59fe62724ce2d727237c4ebf1f32c0f65fd56464b8c201c1c2a9ae96bd2d4907",
+      "served": "59fe62724ce2d727237c4ebf1f32c0f65fd56464b8c201c1c2a9ae96bd2d4907"
+    },
+    "ship-metadata.json": {
+      "local": "3a5fd4c757a6a36f7c52eca77f244fd71dbcde128ec36dc8e5225333c97d3783",
+      "served": "3a5fd4c757a6a36f7c52eca77f244fd71dbcde128ec36dc8e5225333c97d3783"
+    }
+  },
+  "records": [
+    {
+      "phase": "before",
+      "name": "mens",
+      "eye": [
+        -21.700000000000003,
+        -38.851,
+        -4.287
+      ],
+      "target": [
+        -27.700000000000003,
+        -39.501000000000005,
+        0.7130000000000001
+      ]
+    },
+    {
+      "phase": "before",
+      "name": "womens",
+      "eye": [
+        -23.424999999999997,
+        -34.714999999999996,
+        1.713
+      ],
+      "target": [
+        -27.525,
+        -35.365,
+        -3.787
+      ]
+    },
+    {
+      "phase": "before",
+      "name": "storage",
+      "eye": [
+        -15,
+        -45.451,
+        -1.287
+      ],
+      "target": [
+        -23,
+        -46.301,
+        4
+      ]
+    },
+    {
+      "phase": "before",
+      "name": "cannon-men-starboard",
+      "eye": [
+        -23.8,
+        -39.051,
+        -9
+      ],
+      "target": [
+        -25.8,
+        -40.051,
+        -9.35
+      ]
+    },
+    {
+      "phase": "before",
+      "name": "cannon-men-port",
+      "eye": [
+        -23.8,
+        -39.051,
+        9.7
+      ],
+      "target": [
+        -25.8,
+        -40.051,
+        10.1
+      ]
+    },
+    {
+      "phase": "before",
+      "name": "cannon-women-starboard",
+      "eye": [
+        -24.5,
+        -34.915,
+        -9
+      ],
+      "target": [
+        -26.92,
+        -35.915,
+        -9.25
+      ]
+    },
+    {
+      "phase": "before",
+      "name": "cannon-women-port",
+      "eye": [
+        -24.5,
+        -34.915,
+        9.7
+      ],
+      "target": [
+        -26.92,
+        -35.915,
+        10
+      ]
+    },
+    {
+      "phase": "before",
+      "name": "exterior-bow-port",
+      "eye": [
+        -92,
+        -8,
+        88
+      ],
+      "target": [
+        -18,
+        -22,
+        0
+      ]
+    },
+    {
+      "phase": "before",
+      "name": "exterior-bow-starboard",
+      "eye": [
+        -92,
+        -8,
+        -88
+      ],
+      "target": [
+        -18,
+        -22,
+        0
+      ]
+    },
+    {
+      "phase": "before",
+      "name": "exterior-profile",
+      "eye": [
+        0,
+        -5,
+        125
+      ],
+      "target": [
+        0,
+        -20,
+        0
+      ]
+    },
+    {
+      "phase": "after",
+      "name": "mens",
+      "eye": [
+        -21.700000000000003,
+        -38.851,
+        -4.287
+      ],
+      "target": [
+        -27.700000000000003,
+        -39.501000000000005,
+        0.7130000000000001
+      ]
+    },
+    {
+      "phase": "after",
+      "name": "womens",
+      "eye": [
+        -23.424999999999997,
+        -34.714999999999996,
+        1.713
+      ],
+      "target": [
+        -27.525,
+        -35.365,
+        -3.787
+      ]
+    },
+    {
+      "phase": "after",
+      "name": "storage",
+      "eye": [
+        -15,
+        -45.451,
+        -1.287
+      ],
+      "target": [
+        -23,
+        -46.301,
+        4
+      ]
+    },
+    {
+      "phase": "after",
+      "name": "cannon-men-starboard",
+      "eye": [
+        -23.8,
+        -39.051,
+        -9
+      ],
+      "target": [
+        -25.8,
+        -40.051,
+        -9.35
+      ]
+    },
+    {
+      "phase": "after",
+      "name": "cannon-men-port",
+      "eye": [
+        -23.8,
+        -39.051,
+        9.7
+      ],
+      "target": [
+        -25.8,
+        -40.051,
+        10.1
+      ]
+    },
+    {
+      "phase": "after",
+      "name": "cannon-women-starboard",
+      "eye": [
+        -24.5,
+        -34.915,
+        -9
+      ],
+      "target": [
+        -26.92,
+        -35.915,
+        -9.25
+      ]
+    },
+    {
+      "phase": "after",
+      "name": "cannon-women-port",
+      "eye": [
+        -24.5,
+        -34.915,
+        9.7
+      ],
+      "target": [
+        -26.92,
+        -35.915,
+        10
+      ]
+    },
+    {
+      "phase": "after",
+      "name": "exterior-bow-port",
+      "eye": [
+        -92,
+        -8,
+        88
+      ],
+      "target": [
+        -18,
+        -22,
+        0
+      ]
+    },
+    {
+      "phase": "after",
+      "name": "exterior-bow-starboard",
+      "eye": [
+        -92,
+        -8,
+        -88
+      ],
+      "target": [
+        -18,
+        -22,
+        0
+      ]
+    },
+    {
+      "phase": "after",
+      "name": "exterior-profile",
+      "eye": [
+        0,
+        -5,
+        125
+      ],
+      "target": [
+        0,
+        -20,
+        0
+      ]
+    }
+  ],
+  "errors": [],
+  "before": "Saved unmodified GLBs/metadata served by explicit browser interception; actual candidate HTTP assets hash-verified before loading after views.",
+  "notice": "Camera inspection only. No geometry or materials hidden. Ordinary body journeys are separate."
+}

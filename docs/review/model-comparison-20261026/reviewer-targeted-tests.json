@@ -1,0 +1,34 @@
+{
+  "notice": "Coordinator independently reran only the two scoped candidate checks and their negative baselines; no broad suite. Nonzero baseline exits are expected; Sol candidate failure remains a failure.",
+  "checkedUTC": "2026-10-28T20:39:23.102Z",
+  "tests": {
+    "sol-candidate": {
+      "chunk_id": "6d07f0",
+      "wall_time_seconds": 0.297957875,
+      "exit_code": 1,
+      "original_token_count": 292,
+      "output": "C01 exported shield / construction overlap: {\"source\":\"public/models/sunny.glb\",\"results\":[{\"level\":\"B1\",\"hits\":0,\"areaM2\":0},{\"level\":\"F1\",\"hits\":4,\"areaM2\":0.000002843342907650442},{\"level\":\"F2F\",\"hits\":2,\"areaM2\":9.173214757390309e-7}]}\nnode:internal/modules/esm/module_job:702\n    return this.module.evaluateSync();\n                       ^\n\nAssertionError [ERR_ASSERTION]: no shield triangle may enter any fore floor/wall/ceiling construction volume\n    at file:///Users/sukhjot/.codex/worktrees/sol-c01-trial/test/tests/foreTrim.test.mjs:109:1\n    at #evaluateSync (node:internal/modules/esm/module_job:702:24)\n    at ModuleJobSync.runSync (node:internal/modules/esm/module_job:717:43)\n    at node:internal/modules/esm/loader:383:11\n    at TracingChannel.traceSync (node:diagnostics_channel:557:14)\n    at ModuleLoader.importForEntryPoint (node:internal/modules/esm/loader:372:21)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:184:34)\n    at node:internal/main/run_main_module:33:47 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v26.12.0\n"
+    },
+    "sol-baseline": {
+      "chunk_id": "fdab60",
+      "wall_time_seconds": 0.321809167,
+      "exit_code": 1,
+      "original_token_count": 298,
+      "output": "C01 exported shield / construction overlap: {\"source\":\"trial/results/before-sunny.glb\",\"results\":[{\"level\":\"B1\",\"hits\":148,\"areaM2\":21.179819789252317},{\"level\":\"F1\",\"hits\":397,\"areaM2\":21.421282176076723},{\"level\":\"F2F\",\"hits\":1109,\"areaM2\":68.43455850332428}]}\nnode:internal/modules/esm/module_job:702\n    return this.module.evaluateSync();\n                       ^\n\nAssertionError [ERR_ASSERTION]: no shield triangle may enter any fore floor/wall/ceiling construction volume\n    at file:///Users/sukhjot/.codex/worktrees/sol-c01-trial/test/tests/foreTrim.test.mjs:109:1\n    at #evaluateSync (node:internal/modules/esm/module_job:702:24)\n    at ModuleJobSync.runSync (node:internal/modules/esm/module_job:717:43)\n    at node:internal/modules/esm/loader:383:11\n    at TracingChannel.traceSync (node:diagnostics_channel:557:14)\n    at ModuleLoader.importForEntryPoint (node:internal/modules/esm/loader:372:21)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:184:34)\n    at node:internal/main/run_main_module:33:47 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v26.12.0\n"
+    },
+    "terra-candidate": {
+      "chunk_id": "6c2add",
+      "wall_time_seconds": 0.307586292,
+      "exit_code": 0,
+      "original_token_count": 25,
+      "output": "PASS 149 visual/collision lining rays on side -1\nPASS 149 visual/collision lining rays on side 1\n"
+    },
+    "terra-baseline": {
+      "chunk_id": "efa8c2",
+      "wall_time_seconds": 0.2532,
+      "exit_code": 1,
+      "original_token_count": 223,
+      "output": "node:internal/modules/esm/module_job:702\n    return this.module.evaluateSync();\n                       ^\n\nAssertionError [ERR_ASSERTION]: visual lining blocks -1 at -7,0\n    at file:///Users/sukhjot/.codex/worktrees/terra-c02-trial/test/tests/dockApertures.test.mjs:28:3\n    at #evaluateSync (node:internal/modules/esm/module_job:702:24)\n    at ModuleJobSync.runSync (node:internal/modules/esm/module_job:717:43)\n    at node:internal/modules/esm/loader:383:11\n    at TracingChannel.traceSync (node:diagnostics_channel:557:14)\n    at ModuleLoader.importForEntryPoint (node:internal/modules/esm/loader:372:21)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:184:34)\n    at node:internal/main/run_main_module:33:47 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v26.12.0\n"
+    }
+  }
+}

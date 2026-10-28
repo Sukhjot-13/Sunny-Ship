@@ -1,0 +1,125 @@
+=== SOURCE ASSET ===
+  PASS  source FBX still present and untouched in size  23.8 MB
+  PASS  source FBX checksum stays unchanged
+
+=== VISUAL SHIP ===
+  PASS  GLB contains every ship object the pipeline kept  7549 meshes (pipeline kept 7549)
+  PASS  GLB has a single named root node  ThousandSunny
+  PASS  every moving door handle and all five hatch hinges/rings stay attached after geometry baking
+  PASS  every exported vertex is finite  size 85.8 x 123.2 x 45.7
+  PASS  GLB bounds match the hull Blender measured  glb 85.8 x 123.2 x 45.7 vs hull 85.8 x 123.2 x 45.7
+  PASS  GLB is centred on the origin  -0.01, 0.00, 0.00
+  PASS  no stray geometry parked away from the hull  7549 meshes all in place
+  PASS  every tagged part exists in the GLB
+  PASS  semantic tags cover the whole ship  {"deck":362,"rigging":61,"hull":31,"detail":7085,"trim":4,"mast":1,"sail":3,"flag":2}
+
+=== COLLISION PROXY ===
+  PASS  floor cells exist  15188 cells
+  PASS  boundary walls exist  1356 walls
+  PASS  obstacle colliders exist  17 obstacles
+  PASS  safety hull exists
+  PASS  floor cells are solid slabs (thick enough not to fall through)  0.60 m thick
+  PASS  safety hull sits below every deck  hull top -49.01 < lowest deck -48.61
+  PASS  the main deck is above the waterline  highest deck 61.60 > water -54.85071716308594
+
+=== METADATA ===
+  PASS  spawn point is finite  -4.29, 0.99, -40.55
+  PASS  metadata is in blender Z-up  blender-z-up
+  PASS  part groups recorded  deck, rigging, hull, detail, trim, mast, sail, flag
+  PASS  deck regions recorded  66 regions
+  PASS  ship length follows the authorized uniform experience scale  85.82 m
+  PASS  ship height follows the same proportional experience scale  123.20 m
+  PASS  rope ladders are rigging, not sails
+  PASS  three actual sails and two pirate flags
+  PASS  post-timeskip exterior features recorded
+  PASS  exterior metre/blade UVs export finite coordinates on every selected primitive
+  PASS  normalized sail paint and furnished room furniture keep separate UV scope
+  PASS  source hull and garden deck retain one UV metre per physical metre
+  PASS  fore and main mast grain UVs follow their full physical height
+  PASS  individual batched leaf blades export bounded normalized vein UVs
+  PASS  every exterior map uses repeating trilinear mipmaps and anisotropy
+  PASS  albedo and data maps keep correct colour spaces and metre repeats
+  PASS  filtered relief normals remain finite unit vectors
+  PASS  new exterior finish preserves the sourced palette and room material isolation
+  PASS  exported deck mast joins the actual aft mast and its supporting floor
+  PASS  fourteen pale/dark small hull-port frames replace the blind source caps
+  PASS  curved canvas exports UVs and a genuinely separated pair of gaff panels
+  PASS  exactly three human-sized mikan pots form one port-side cluster
+  PASS  mikan have oblate fruit plus calyx/stem/branch attachments
+  PASS  two rolling apertures have 64 shared-pivot dynamic timber slats and all seven digits
+  PASS  wheel integrates its controls and the convenience console is removed
+  PASS  seven source mane petals and a lower jaw have explicit exported pivots
+  PASS  paired stern lanterns have twelve transparent glass panes
+  PASS  both fore shroud fans connect to the real mast and supported deck
+  PASS  both retained anchor balls carry three transverse painted bands
+  PASS  both painted anchor balls export smooth normals across actual colour seams
+  PASS  exposed ladder access floors have real 12 cm undersides at unchanged walking heights
+  PASS  bow panel and lion disk preserve their distinct reference paint fields
+  PASS  lion disk has a broad gold collar rather than a thin painted rim  projected gold 49.1%
+  PASS  both retained foremast collars match the dark anime bands
+  PASS  mainmast platforms have timber decks, dark rims and mounted supports
+  PASS  all eight exposed facade sashes are arched and physically glazed
+  PASS  reference dark hull mouldings and rudder straps retain their authored geometry
+  PASS  outer bow shield has all three white painted divisions
+  PASS  lawn beside the dock hatch preserves support above its lower stair treads
+  PASS  both stowed anchor ropes end at measured hawse and retained anchor surfaces
+  PASS  lookout and library soffits preserve flared reference supports
+  PASS  red side panels remain within their measured white scroll border
+  PASS  lookout rope/ladder endpoints meet actual human-height walking floors
+  PASS  lookout cream enclosure and every bounded pane retain physical face colliders
+  PASS  lookout authoring publishes the retained floor independently of the raised glass sill
+  PASS  full lookout path and real hatch hole clear a 1.75 m body with 0.34 m radius
+  PASS  Aquarium uses the small sealed hinged gallery hatch and actual ladder from N
+  PASS  full Aquarium ladder shaft/landing clear the unchanged human body
+  PASS  F2 stern ladder replaces the central-garden cover with a small supported Library hatch
+  PASS  full stern ladder shaft/landings clear the unchanged human body
+  PASS  both outdoor toilet entries sit on the lawn below the foremast stairs
+  PASS  authored paint colors survive export
+  PASS  Tube005/Tube009 side pieces have matching attached heights
+  PASS  Line004/Line007 side pieces have matching attached heights
+  PASS  Box118/Box119 side pieces have matching attached heights
+  PASS  lion eyes are centered on its face
+  PASS  both lateral mane petals point radially and mirror across the face
+  PASS  helm pedestal is attached at the measured foredeck height
+  PASS  duplicate corner/bow stairs are removed
+  PASS  all blueprint levels and furnished rooms are exported
+  PASS  doors and five access hatches have moving nodes and no static leaf colliders
+  PASS  all five access hatches expose an actual hole instead of a static exit plate
+  PASS  door leaves keep realistic independent height and width
+  PASS  sixteen human-sized dining chairs have 0.45 m seats
+  PASS  dining table stays 0.76 m high
+  PASS  rectangular aquarium water stays inside glass tank bounds
+  PASS  curved aquarium has 24 contained water sectors
+  PASS  Soldier Dock turntable is centered beneath the lawn
+  PASS  dining and kitchen share longitudinal span on opposite ship sides
+  PASS  SBS F2 dining/infirmary are port and kitchen/pantry are starboard
+  PASS  both F2 entrances are on the same side as their actual named rooms
+  PASS  room build retains an editable Blender master
+  PASS  three-barrel cola chamber replaces the provisional five tanks
+  PASS  SBS room fixtures include library table, canopy, oven, showers and workshop furnace
+  PASS  all eleven authored room lamps have usable finite metadata
+  PASS  all three bunk suspension beams meet the actual fore ceiling
+  PASS  reference curved bench has closed physical seating and supported base
+  PASS  curved bench surface collision leaves the central room open
+  PASS  range hood connects to the retained exterior chimney
+  PASS  hull ocean profile has 32 ordered cross-sections
+  PASS  enlargement retains a human-height helm pedestal
+  PASS  deck trees, pots, planters, bench and instruments meet their support floors
+  PASS  every rear tread is inboard of the hull sides
+  PASS  Soldier Dock plates are mounted symmetrically on both hull sides
+  PASS  every bare partition has full-height physical collision
+  PASS  both masts have full-height surface collision
+  PASS  replacement library shell has full-height physical wall/window segments
+  PASS  library lining stays at the stern and joins its floor
+  PASS  six physical dock contents have recognizable geometry and moving bounds
+  PASS  women tea cupboard has a teapot and four supported cups
+  PASS  ceilings preserve sampled stair apertures instead of full-room solid boxes
+  PASS  unsupported garden porthole duplicates and imported hut arches are removed
+  PASS  walkable lawn is enlarged to the requested experience scale
+  PASS  ship is centred on the origin  -0.0089, 0.0000, 0.0000
+  PASS  safety hull spans the hull length  83.2 m vs hull 85.8 m
+  PASS  safety hull spans the hull beam  44.5 m vs hull 45.7 m
+  PASS  safety hull only covers the part below the decks  11.0 m of 123.2 m tall hull
+  PASS  object counts recorded  7549 ship objects, 102 junk removed
+
+=== RESULT: 116 passed, 0 failed ===
