@@ -1,0 +1,462 @@
+Heavy job acquired: terra-c02-recovery-full-test queueMs 30024
+
+> thousand-sunny@0.1.0 test
+> node tests/run-all.mjs
+
+
+============================================================
+  1/21  dock aperture lining and collision
+============================================================
+PASS 149 visual/collision lining rays on side -1
+PASS 149 visual/collision lining rays on side 1
+
+============================================================
+  2/21  physical interior materials and metric projection
+============================================================
+PASS: six interior map sets, physical projection/source invariants, palette/cache isolation, patterned floor grids and fixture finishes
+
+============================================================
+  3/21  physical exterior materials and reflection guards
+============================================================
+PASS: 15 physical exterior finishes, source/room isolation, canvas metre UVs, mirrored camera and render-state restoration
+
+============================================================
+  4/21  navigation logic
+============================================================
+PASS navigation: steering, air arc/landing, three-barrel costs, seven selector states, occupied roller/carousel, Chicken reverse, Gaon jaw/recoil and cola-powered paddles
+
+============================================================
+  5/21  climbing and interaction logic
+============================================================
+PASS climbing path validation, physical endpoint reach, continuous corners, return descent and bounded uncommitted collision proposals
+
+============================================================
+  6/21  asset structure
+============================================================
+=== SOURCE ASSET ===
+  PASS  source FBX still present and untouched in size  23.8 MB
+  PASS  source FBX checksum stays unchanged
+
+=== VISUAL SHIP ===
+  PASS  GLB contains every ship object the pipeline kept  7507 meshes (pipeline kept 7507)
+  PASS  GLB has a single named root node  ThousandSunny
+  PASS  every moving door handle and all five hatch hinges/rings stay attached after geometry baking
+  PASS  every exported vertex is finite  size 85.8 x 123.2 x 45.7
+  PASS  GLB bounds match the hull Blender measured  glb 85.8 x 123.2 x 45.7 vs hull 85.8 x 123.2 x 45.7
+  PASS  GLB is centred on the origin  -0.01, 0.00, 0.00
+  PASS  no stray geometry parked away from the hull  7507 meshes all in place
+  PASS  every tagged part exists in the GLB
+  PASS  semantic tags cover the whole ship  {"deck":362,"rigging":61,"hull":31,"detail":7043,"trim":4,"mast":1,"sail":3,"flag":2}
+
+=== COLLISION PROXY ===
+  PASS  floor cells exist  15188 cells
+  PASS  boundary walls exist  1356 walls
+  PASS  obstacle colliders exist  17 obstacles
+  PASS  safety hull exists
+  PASS  floor cells are solid slabs (thick enough not to fall through)  0.60 m thick
+  PASS  safety hull sits below every deck  hull top -49.01 < lowest deck -48.61
+  PASS  the main deck is above the waterline  highest deck 61.60 > water -54.85071716308594
+
+=== METADATA ===
+  PASS  spawn point is finite  -4.29, 0.99, -40.55
+  PASS  metadata is in blender Z-up  blender-z-up
+  PASS  part groups recorded  deck, rigging, hull, detail, trim, mast, sail, flag
+  PASS  deck regions recorded  66 regions
+  PASS  ship length follows the authorized uniform experience scale  85.82 m
+  PASS  ship height follows the same proportional experience scale  123.20 m
+  PASS  rope ladders are rigging, not sails
+  PASS  three actual sails and two pirate flags
+  PASS  post-timeskip exterior features recorded
+  PASS  exterior metre/blade UVs export finite coordinates on every selected primitive
+  PASS  normalized sail paint and furnished room furniture keep separate UV scope
+  PASS  source hull and garden deck retain one UV metre per physical metre
+  PASS  fore and main mast grain UVs follow their full physical height
+  PASS  individual batched leaf blades export bounded normalized vein UVs
+  PASS  every exterior map uses repeating trilinear mipmaps and anisotropy
+  PASS  albedo and data maps keep correct colour spaces and metre repeats
+  PASS  filtered relief normals remain finite unit vectors
+  PASS  new exterior finish preserves the sourced palette and room material isolation
+  PASS  exported deck mast joins the actual aft mast and its supporting floor
+  PASS  fourteen pale/dark small hull-port frames replace the blind source caps
+  PASS  curved canvas exports UVs and a genuinely separated pair of gaff panels
+  PASS  exactly three human-sized mikan pots form one port-side cluster
+  PASS  mikan have oblate fruit plus calyx/stem/branch attachments
+  PASS  two rolling apertures have 64 shared-pivot dynamic timber slats and all seven digits
+  PASS  wheel integrates its controls and the convenience console is removed
+  PASS  seven source mane petals and a lower jaw have explicit exported pivots
+  PASS  paired stern lanterns have twelve transparent glass panes
+  PASS  both fore shroud fans connect to the real mast and supported deck
+  PASS  both retained anchor balls carry three transverse painted bands
+  PASS  both painted anchor balls export smooth normals across actual colour seams
+  PASS  exposed ladder access floors have real 12 cm undersides at unchanged walking heights
+  PASS  bow panel and lion disk preserve their distinct reference paint fields
+  PASS  lion disk has a broad gold collar rather than a thin painted rim  projected gold 49.1%
+  PASS  both retained foremast collars match the dark anime bands
+  PASS  mainmast platforms have timber decks, dark rims and mounted supports
+  PASS  all eight exposed facade sashes are arched and physically glazed
+  PASS  reference dark hull mouldings and rudder straps retain their authored geometry
+  PASS  outer bow shield has all three white painted divisions
+  PASS  lawn beside the dock hatch preserves support above its lower stair treads
+  PASS  both stowed anchor ropes end at measured hawse and retained anchor surfaces
+  PASS  lookout and library soffits preserve flared reference supports
+  PASS  red side panels remain within their measured white scroll border
+  PASS  lookout rope/ladder endpoints meet actual human-height walking floors
+  PASS  lookout cream enclosure and every bounded pane retain physical face colliders
+  PASS  lookout authoring publishes the retained floor independently of the raised glass sill
+  PASS  full lookout path and real hatch hole clear a 1.75 m body with 0.34 m radius
+  PASS  Aquarium uses the small sealed hinged gallery hatch and actual ladder from N
+  PASS  full Aquarium ladder shaft/landing clear the unchanged human body
+  PASS  F2 stern ladder replaces the central-garden cover with a small supported Library hatch
+  PASS  full stern ladder shaft/landings clear the unchanged human body
+  PASS  both outdoor toilet entries sit on the lawn below the foremast stairs
+  PASS  authored paint colors survive export
+  PASS  Tube005/Tube009 side pieces have matching attached heights
+  PASS  Line004/Line007 side pieces have matching attached heights
+  PASS  Box118/Box119 side pieces have matching attached heights
+  PASS  lion eyes are centered on its face
+  PASS  both lateral mane petals point radially and mirror across the face
+  PASS  helm pedestal is attached at the measured foredeck height
+  PASS  duplicate corner/bow stairs are removed
+  PASS  all blueprint levels and furnished rooms are exported
+  PASS  doors and five access hatches have moving nodes and no static leaf colliders
+  PASS  all five access hatches expose an actual hole instead of a static exit plate
+  PASS  door leaves keep realistic independent height and width
+  PASS  sixteen human-sized dining chairs have 0.45 m seats
+  PASS  dining table stays 0.76 m high
+  PASS  rectangular aquarium water stays inside glass tank bounds
+  PASS  curved aquarium has 24 contained water sectors
+  PASS  Soldier Dock turntable is centered beneath the lawn
+  PASS  dining and kitchen share longitudinal span on opposite ship sides
+  PASS  SBS F2 dining/infirmary are port and kitchen/pantry are starboard
+  PASS  both F2 entrances are on the same side as their actual named rooms
+  PASS  room build retains an editable Blender master
+  PASS  three-barrel cola chamber replaces the provisional five tanks
+  PASS  SBS room fixtures include library table, canopy, oven, showers and workshop furnace
+  PASS  all eleven authored room lamps have usable finite metadata
+  PASS  all three bunk suspension beams meet the actual fore ceiling
+  PASS  reference curved bench has closed physical seating and supported base
+  PASS  curved bench surface collision leaves the central room open
+  PASS  range hood connects to the retained exterior chimney
+  PASS  hull ocean profile has 32 ordered cross-sections
+  PASS  enlargement retains a human-height helm pedestal
+  PASS  deck trees, pots, planters, bench and instruments meet their support floors
+  PASS  every rear tread is inboard of the hull sides
+  PASS  Soldier Dock plates are mounted symmetrically on both hull sides
+  PASS  every bare partition has full-height physical collision
+  PASS  both masts have full-height surface collision
+  PASS  replacement library shell has full-height physical wall/window segments
+  PASS  library lining stays at the stern and joins its floor
+  PASS  six physical dock contents have recognizable geometry and moving bounds
+  PASS  women tea cupboard has a teapot and four supported cups
+  PASS  ceilings preserve sampled stair apertures instead of full-room solid boxes
+  PASS  unsupported garden porthole duplicates and imported hut arches are removed
+  PASS  walkable lawn is enlarged to the requested experience scale
+  PASS  ship is centred on the origin  -0.0089, 0.0000, 0.0000
+  PASS  safety hull spans the hull length  83.2 m vs hull 85.8 m
+  PASS  safety hull spans the hull beam  44.5 m vs hull 45.7 m
+  PASS  safety hull only covers the part below the decks  11.0 m of 123.2 m tall hull
+  PASS  object counts recorded  7507 ship objects, 102 junk removed
+
+=== RESULT: 116 passed, 0 failed ===
+
+============================================================
+  7/21  exterior coplanar geometry
+============================================================
+PASS exported exterior has no coplanar overlap above 1 cm² within 3 mm of walking planes
+PASS all room floor tops have one physical surface owner, including tiled service and Aquarium floors
+PASS all five hatch coaming tops and inner walls have one visible surface owner
+PASS shared Library/Bath slab has opaque 18 cm undersides and no competing visible faces
+PASS both rounded fore enclosures have opaque 18 cm ceilings and stay inside the retained hull curve
+PASS curved helm floor has an opaque 18 cm underside and stays within the retained rim foot contour
+PASS forward chest/partitions remain enclosed and both fore plans are published
+PASS retained curved helm rail has supported human-height posts and no duplicate pole
+PASS three hollow mikan containers expose soil, face cavity walls inward and have supported solid collision
+PASS 1120 actual slide sections have no Aquarium/gallery intrusion, retained surrounding decks, a closed 6 cm underside and four floor-supported fitted physical posts
+PASS normal-body approach has bed step support before all four physical slide posts
+PASS every upper/lower balcony rail segment meets retained supporting post axes
+PASS seven opaque mane bodies retain supported roots/tips and swept source-led side contours
+PASS tall source-led mouth opens over a deep hollow cannon and closes with sealed muzzle/chin bodies
+PASS source-led compact ivory muzzle, circular eyes/black pupils and smaller nose meet their actual supporting skin
+PASS both white canvas head edges and all 26 fitted lashings meet actual oval yard skin
+PASS actual lookout and bathhouse undersides have eight recessed scalloped bays at both sampled sections
+PASS all retained mast-brace roots, fore fan tips and lookout yard tie meet actual tapered/oval wood skin
+PASS both deployed striped panels meet their retained gaff skins and white free leeches curve gently with all original corners retained
+PASS actual cream lookout piers/sill/header enclose bounded supported glazing on the unchanged floor/hatch
+PASS both retained bones are continuous closed round shafts with two-lobe ends, unchanged envelopes and source-supported roots
+PASS all sixteen retained collar stations have closed shallow rounded gold heads embedded in their actual gold support skin
+PASS fourteen retained side ports have closed hollow reveals, connected pale rims and unobstructed actual depth through source layers
+PASS both retained three-fluke anchors keep continuous stowed ropes entering hollow circular hawses supported by the actual sloped bow skin
+PASS six retained outer bow shield bosses have rounded crowns, red centres and actual painted-skin support at unchanged stations
+PASS the single C/N lowest-main-gaff diagonal tie has actual closed end rings contacting the retained free spar tip and Library roof rim
+PASS aft native red/cream envelope is closed, curved through height and supported on retained floors
+PASS retained/new aft arches have real crown corners, closed curved glazing, skin openings and attached sash frames
+PASS all fixed aft door stations and both real garden flights retain human body/headroom through the recovered envelope
+PASS both N upper-aft entrances retain exact dynamic roots/slide, real closed arch leaves and surface-collision crowns, true wall corners and normal-human headroom
+PASS six lower Aquarium side/rear true arches have unoccluded closed 28 mm glass, physically joined deep reveals, actual crown corners and bounded cream source paint
+PASS 972 actual garden body positions above highest footprint-supported treads clear the native wall on both complete flights
+PASS 972 actual garden body positions remain free of unsupported coarse terrain floors
+PASS all three aft entrance lintels have reference cream outside faces and retained timber inside
+PASS 168 actual room-to-stair rays terminate on the opaque 18 cm enclosures; native outside wall, windows and all prior real body/headroom guards retained
+
+============================================================
+  8/21  door and hatch collision
+============================================================
+PASS: 35 moving openings match GLB and safely open/close
+
+============================================================
+  9/21  collision physics
+============================================================
+colliders: 97715
+  floors: 15188
+  hull:   1
+  walls:  1356
+  obst:   17
+spawn (three): -4.29,-40.55,-0.99
+water level:   -54.85071716308594
+
+=== TEST 1: spawn is supported ===
+  PASS  ground found under spawn y=-40.55
+  PASS  spawn is just above ground dy=-0.00
+  PASS  deck is above water deck=-40.55 water=-54.85071716308594
+
+=== TEST 2: player falls at a plausible rate then lands ===
+  PASS  player lands after 0 frames (0.00s)
+  PASS  landing is on the deck y=-40.55
+
+=== TEST 3: walking forward stays supported ===
+  PASS  stays mostly supported while walking 0/600 frames airborne
+  PASS  did not sink below the hull y=-40.55
+
+=== TEST 4: cannot walk off the deck edge ===
+  (max horizontal travel from spawn: 21.01 m)
+  PASS  boundary walls contain the player max radius 21.01 m
+
+=== TEST 5: obstacles are solid ===
+  PASS  obstacles sit near walkable floor 7/17
+  PASS  has obstacle colliders 17 obstacles
+
+=== TEST 6: no degenerate colliders ===
+  PASS  no zero-size colliders 
+
+=== TEST 7: low diagonal edges are climbable ===
+  PASS  step probe sees a floor corner outside the centre ray 
+  PASS  step probe ignores overhead decks and distant edges 
+  PASS  step probe respects maximum climbing height 
+  PASS  sectioned moving blade keeps every sampled real surface solid 
+  PASS  sectioned moving blade leaves its empty upper-front corner clear 
+  PASS  surface collision skin gives every bound finite physical thickness 
+  PASS  non-finite moving surfaces cannot enter the collision world 
+  PASS  boosted flight cannot tunnel through a thin wall 
+  PASS  flight preserves motion along a wall 
+  PASS  flight head cannot pass upward through a floor 
+  PASS  flight feet cannot pass downward through a floor 
+  PASS  flight ignores synthetic walking edge guards 
+
+=== RESULT: 23 passed, 0 failed ===
+
+============================================================
+  10/21  deck reachability
+============================================================
+REACHABLE floor layers: 640872 of 891393 (71.9%)
+Reach along ship: -32.1 to 36.7 m
+Blocked boundaries: [
+  [ 'COLL_Solid_Sunny_InteriorMainMast', 2820 ],
+  [ 'COLL_Solid_Sunny_RoomPartition_pantry_sickbay_seg0', 1844 ],
+  [ 'COLL_Solid_Sunny_RoomPartition_pantry_sickbay_seg2', 1604 ],
+  [ 'COLL_Solid_Sunny_PopGreens_planter', 1152 ],
+  [ 'COLL_Solid_Sunny_RobinGarden_planter', 1152 ],
+  [ 'COLL_Solid_Sunny_RoomPartition_q_cannon_seg2', 1116 ],
+  [ 'COLL_Solid_Sunny_Aquarium_side-1_glass', 1040 ],
+  [ 'COLL_Solid_Sunny_Aquarium_side1_glass', 1008 ]
+]
+  PASS  outdoor route to lawn
+  PASS  outdoor route to foredeck
+  PASS  outdoor route to aft deck
+  PASS  outdoor route to garden
+  PASS  outdoor route to stern balcony
+  PASS  outdoor route to men's quarters
+  PASS  outdoor route to aquarium bar
+  PASS  outdoor route to library
+  PASS  outdoor route to soldier dock
+
+============================================================
+  11/21  all room and interior stair routes
+============================================================
+PASS Storage Room 67 waypoints, -19.6,-47.150699615478516,-0.4
+PASS Soldier Dock System 60 waypoints, -5.2,-47.05070114135742,0.8
+PASS Usopp's Main Factory 80 waypoints, 14.4,-47.15060043334961,5.2
+PASS Franky's Weapon Development Room 68 waypoints, 14.4,-47.15060043334961,-7.2
+PASS Energy Room 87 waypoints, 24,-47.15060043334961,-0.4
+PASS Men's Quarters 36 waypoints, -24.8,-40.55070114135742,0.4
+PASS Men's Washroom 31 waypoints, -20.400000000000002,-40.55070114135742,-6.800000000000001
+PASS Aquarium Service Passage 111 waypoints, 24.8,-40.55070114135742,-1.2000000000000002
+PASS Aquarium Bar 26 waypoints, 17,-40.55070114135742,-1.4000000000000001
+PASS Women's Quarters 45 waypoints, -26,-36.41469955444336,0.4
+PASS Women's Washroom 48 waypoints, -21.8,-36.41469955444336,-7.4
+PASS Dining Room 70 waypoints, 16.400000000000002,-35.62269973754883,6
+PASS Kitchen 59 waypoints, 16.400000000000002,-35.62269973754883,-7.4
+PASS Pantry 66 waypoints, 22.8,-35.62269973754883,-7.4
+PASS Sick Bay 68 waypoints, 22.8,-35.62269973754883,5.2
+PASS Library 91 waypoints, 30.400000000000002,-29.154699325561523,-1.2000000000000002
+PASS Bath 98 waypoints, 29.6,-26.104700088500977,-0.6000000000000001
+PASS Bath Washroom 96 waypoints, 29.400000000000002,-26.104700088500977,-4.800000000000001
+PASS Observation Deck 76 waypoints, 20.6,-29.37470054626465,-1.4000000000000001
+PASS Men Starboard Cannon Closet 32 waypoints, -24.8,-40.55070114135742,-8.6
+PASS Men Port Cannon Closet 46 waypoints, -24.8,-40.55070114135742,9.4
+PASS Women Starboard Cannon Closet 52 waypoints, -26,-36.41469955444336,-8.6
+PASS Women Port Cannon Closet 44 waypoints, -26,-36.41469955444336,9.4
+PASS Fore Port Toilet 21 waypoints, -15.600000000000001,-40.55070114135742,3.8000000000000003
+PASS Fore Starboard Toilet 23 waypoints, -15.600000000000001,-40.55070114135742,-3.8000000000000003
+PASS Stern Ladder Access 73 waypoints, 29.6,-35.62269973754883,-1.2000000000000002
+PASS Bath Toilet 98 waypoints, 29,-26.104700088500977,-5.4
+PASS Stair: BathStair 103 waypoints, 31,-26.104700088500977,-4.2
+PASS Stair: EnergyStair 117 waypoints, 22.400000000000002,-40.55070114135742,6.800000000000001
+PASS Stair: SoldierDockStair_over 45 waypoints, -6,-40.55070114135742,-8.8
+PASS Stair: SoldierDockStair_up 60 waypoints, -0.6000000000000001,-43.85070037841797,-11.600000000000001
+PASS Stair: StorageStair_over 224 waypoints, -18.8,-40.55022048950195,7.4
+PASS Stair: StorageStair_up 89 waypoints, -13.600000000000001,-43.8502197265625,4.4
+PASS Ladder: Aquarium gallery ladder 25 waypoints, 11.55,-35.62271716308594,5.913
+PASS Ladder: Stern Library ladder 72 waypoints, 27.608023262023927,-29.15471716308594,-1.5494378089904786
+PASS Fore cabin approach: fore lower starboard 61 waypoints, -26,-36.41469955444336,0.4
+PASS Fore cabin approach: fore lower port 53 waypoints, -26,-36.41469955444336,0.4
+Reachable 148431/222839 grid nodes
+
+============================================================
+  12/21  in-browser gameplay
+============================================================
+=== LOADING ===
+  PASS  player controller is alive
+  PASS  collision world loaded  97715 colliders, 15188 floors
+  PASS  player is grounded at spawn  grounded=true
+  PASS  player is above the sea  y=-40.55 (water=-54.85)
+  PASS  player is near deck height  y=-40.55 spawn=-40.55
+
+=== WALKING ===
+  PASS  player moves under WASD  moved 4.71 m
+  PASS  walking speed is sensible  peak 3.40 m/s (expect ~3.4)
+  PASS  still grounded while walking
+  PASS  still above water while walking  y=-40.55
+
+=== RUNNING ===
+  PASS  running is faster than walking  walk=3.40 run=6.60 m/s
+  PASS  running speed is sensible  peak 6.60 m/s (expect ~6.6)
+
+=== JUMPING ===
+file:///Users/sukhjot/codes/test/node_modules/puppeteer-core/lib/puppeteer/util/decorators.js:99
+                throw new Error(message(this));
+                      ^
+
+Error: Attempted to use detached Frame 'C1D1B4778D612C2E7F6BEDD5BA6C4F21'.
+    at CdpFrame.<anonymous> (file:///Users/sukhjot/codes/test/node_modules/puppeteer-core/lib/puppeteer/util/decorators.js:99:23)
+    at CdpPage.evaluate (file:///Users/sukhjot/codes/test/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:832:43)
+    at state (file:///Users/sukhjot/.codex/worktrees/terra-c02-trial/test/tests/gameplay.mjs:54:26)
+    at file:///Users/sukhjot/.codex/worktrees/terra-c02-trial/test/tests/gameplay.mjs:139:24
+
+Node.js v26.12.0
+
+============================================================
+  13/21  universal visible cannon controls
+============================================================
+node:internal/fs/promises:1467
+  return new FileHandle(await PromisePrototypeThen(
+                        ^
+
+Error: ENOENT: no such file or directory, open 'docs/review/cannon-ui-inspect-open.png'
+    at async open (node:internal/fs/promises:1467:25)
+    at async Object.writeFile (node:internal/fs/promises:2210:14)
+    at async Object.writeFile (file:///Users/sukhjot/codes/test/node_modules/puppeteer-core/lib/puppeteer/node-env-setup.js:46:13)
+    at async CdpPage._maybeWriteTypedArrayToFile (file:///Users/sukhjot/codes/test/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:841:13)
+    at async CdpPage.screenshot (file:///Users/sukhjot/codes/test/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:1174:17)
+    at async CdpPage.<anonymous> (file:///Users/sukhjot/codes/test/node_modules/puppeteer-core/lib/puppeteer/util/decorators.js:164:24)
+    at async file:///Users/sukhjot/.codex/worktrees/terra-c02-trial/test/tests/cannonControls.mjs:35:31 {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'docs/review/cannon-ui-inspect-open.png'
+}
+
+Node.js v26.12.0
+
+============================================================
+  14/21  continuous balcony, gallery, slide and exterior passages
+============================================================
+node:fs:3028
+    return binding.writeFileUtf8(
+                   ^
+
+Error: ENOENT: no such file or directory, open 'docs/review/exterior-additional-journeys.json'
+    at Object.writeFileSync (node:fs:3028:20)
+    at file:///Users/sukhjot/.codex/worktrees/terra-c02-trial/test/tests/exteriorJourneys.mjs:101:6 {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'docs/review/exterior-additional-journeys.json'
+}
+
+Node.js v26.12.0
+
+============================================================
+  15/21  outdoor thresholds, exterior hatch descents and returns
+============================================================
+PASS Fore Port Toilet outside → inside [ -15.600926866477689, -40.55070114135742, 3.7855317806840505 ]
+PASS Fore Port Toilet inside → lawn [ -4.217599717245513, -40.55070114135742, -0.9972222068471461 ]
+PASS Fore Port Toilet return to original spawn [ -4.2175311823923805, -40.55070114135742, -0.9972330437040424 ]
+PASS Fore Starboard Toilet outside → inside [ -15.600081002027046, -40.55070114135742, -3.843304979983754 ]
+PASS Fore Starboard Toilet inside → lawn [ -4.306860757175905, -40.55070114135742, -1.009556876317404 ]
+PASS Fore Starboard Toilet return to original spawn [ -4.306796222208299, -40.55070114135742, -1.0095510802585699 ]
+PASS aft port lower exterior entrance [ 2.8050904003487607, -40.55070114135742, 13.073824544666213 ]
+PASS Aquarium gallery ladder upper landing [ 11.609347821402467, -35.62269973754883, 6.066595361779059 ]
+PASS Aquarium gallery ladder complete descent [ 11.55, -40.54870114135742, 7.513000000000001 ]
+PASS Aquarium gallery ladder lower floor excursion [ 11.998904463524287, -40.55070114135742, 6.635264616942176 ]
+PASS Aquarium gallery ladder walking return to ladder [ 11.698030183239053, -40.55070114135742, 7.584105502883653 ]
+PASS Aquarium gallery ladder complete ascent [ 11.55, -35.62269973754883, 5.913 ]
+PASS Aquarium gallery ladder return along upper walking approach [ 10.475959012212217, -35.62269973754883, 13.016826109069097 ]
+PASS aft port upper exterior entrance [ 10.475888647004023, -35.62269973754883, 13.016810655003686 ]
+PASS Aquarium gallery ladder continuous return to spawn [ -4.200000000003445, -40.55070114135742, -0.8840091527755093 ]
+PASS aft port lower exterior entrance [ 2.8001433712481374, -40.55070114135742, 13.001889372021312 ]
+PASS garden port lower exterior entrance [ 11.13410120654429, -35.62269973754883, 13.196480189076723 ]
+PASS Stern Library ladder upper landing [ 27.57332541685873, -29.154699325561523, -1.600000998755844 ]
+PASS Stern Library ladder complete descent [ 27.608023262023927, -35.62269973754883, 0.05056219100952153 ]
+PASS Stern Library ladder lower floor excursion [ 27.999415123953224, -35.62269973754883, -0.980736914226296 ]
+PASS Stern Library ladder walking return to ladder [ 27.638427469619465, -35.62269973754883, -0.009727190359506737 ]
+PASS Stern Library ladder complete ascent [ 27.608023262023927, -29.15471716308594, -1.5494378089904786 ]
+PASS Stern Library ladder return along upper walking approach [ 18.747494246005463, -29.37470054626465, 13.25250575399442 ]
+PASS garden port upper exterior entrance [ 18.658798996258017, -29.37470054626465, 13.220974733357922 ]
+PASS aft port upper exterior entrance [ 10.471639092554595, -35.62269973754883, 13.005818496012504 ]
+PASS Stern Library ladder continuous return to spawn [ -4.199999999999657, -40.55070114135742, -0.9526360614293791 ]
+PASS SoldierDockHatch adjacent exit landing [ -6.4000000000446065, -40.55070114135742, -8.766462267198593 ]
+PASS SoldierDockHatch through opening to real upper treads [ -3.5672443930171926, -41.65021896362305, -8.799999778522293 ]
+PASS SoldierDockHatch upper treads → exit landing [ -6.507918661584097, -40.55070114135742, -8.800000000001878 ]
+PASS SoldierDockHatch continuous return to original spawn [ -4.19999999963391, -40.55070114135742, -1.0048824884815404 ]
+PASS both outdoor toilet thresholds, both reference ladder full descents/ascents/closures and Soldier Dock stair-hatch descent/return; real W/E, no placement/flight/recovery
+
+============================================================
+  16/21  continuous lookout rope, ladder, hatch and return descent
+============================================================
+PASS clear dock stair opening
+PASS rope-side lawn approach
+PASS actual rope endpoint
+PASS rope ascent [ -11.027986278879599, -25.311479007978512, -8.409609210783392 ]
+PASS ladder ascent to shut hatch [ -10.478835105895996, 27.338973968505858, -2.259850263595581 ]
+PASS through hatch to lookout floor [ -12.078835487365723, 29.22100067138672, -2.259850263595581 ]
+PASS lookout floor excursion
+PASS return to ladder endpoint
+PASS return to shut hatch [ -10.478835105895996, 29.22297396850586, -2.259850263595581 ]
+PASS ladder return descent [ -11.171552615377731, 19.133546309950432, -3.3823872166958564 ]
+file:///Users/sukhjot/codes/test/node_modules/puppeteer-core/lib/puppeteer/util/assert.js:15
+        throw new Error(message);
+              ^
+
+Error: Tab target session is not defined.
+    at assert (file:///Users/sukhjot/codes/test/node_modules/puppeteer-core/lib/puppeteer/util/assert.js:15:15)
+    at new CdpPage (file:///Users/sukhjot/codes/test/node_modules/puppeteer-core/lib/puppeteer/cdp/Page.js:153:9)
+    at CdpPage._create (file:///Users/sukhjot/codes/test/node_modules/puppeteer-core/lib/puppeteer/cdp/Page.js:109:22)
+    at file:///Users/sukhjot/codes/test/node_modules/puppeteer-core/lib/puppeteer/cdp/Target.js:215:32
+    at async PageTarget.page (file:///Users/sukhjot/codes/test/node_modules/puppeteer-core/lib/puppeteer/cdp/Target.js:218:17)
+    at async Promise.all (index 0)
+    at async CdpBrowserContext.pages (file:///Users/sukhjot/codes/test/node_modules/puppeteer-core/lib/puppeteer/cdp/BrowserContext.js:84:23)
+    at async Promise.all (index 0)
+    at async CdpBrowser.pages (file:///Users/sukhjot/codes/test/node_modules/puppeteer-core/lib/puppeteer/api/Browser.js:117:30)
+    at async file:///Users/sukhjot/.codex/worktrees/terra-c02-trial/test/tests/climbing.mjs:92:14
+
+Node.js v26.12.0

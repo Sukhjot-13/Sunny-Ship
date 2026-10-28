@@ -14,6 +14,12 @@ Common harness correction: audit/navigation/baseline inspection imports now read
 
 `tests/dockApertures.test.mjs` — `walk` reads transformed exported B1 triangles; top-level checks a grid through both apertures against visual triangles and lining collision boxes. `tests/run-all.mjs` includes this regression with the existing suites. `rolling_dock` skips empty evaluated bounds and removes fully consumed segments before downstream material processing.
 
-`trial/c02-views.mjs` — verifies served hashes, walks to real Dock controls, selects channel 2 and opens the shutters, then captures fixed port/starboard survey views and records state/errors.
+`trial/c02-views.mjs` — verifies served hashes, walks to real Dock controls, selects channel 2 and opens the shutters, then captures fixed port/starboard survey views and records state/errors; it tolerates absent optional camera controls.
 
 `docs/suggestions.md` — dated follow-up improvements; no functions.
+
+## Common harness recovery — October28,2026
+
+Coordinator applied identical resource-wrapper revision2 to both worktrees. New `readOwner` tolerates the transient empty/missing JSON file between exclusive creation and complete write; lock acquisition retries, stale-owner cleanup rechecks ownership, and `release` tolerates concurrent missing files. No participant implementation/assertion changed. Prior missing terminal jobs were interrupted by account usage limits, not counted as repair failures. All product/assets and previous results are preserved; build reruns are not required merely to resume.
+
+Common isolated-output fixture correction (October28): `docs/review/` is created in both worktrees for existing browser suites' generated JSON/PNG output. No test assertion/product file changed. Terra’s initial full-run exteriorJourneys output failure is preserved as setup failure; rerun/terminal proof must be labeled accurately. Review scope remains the assigned C01 trim or C02 lining/apertures; unrelated existing room/C03 reconstruction limits are separate and do not automatically fail the assigned geometry.

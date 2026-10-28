@@ -1,0 +1,15 @@
+Heavy job acquired: terra-c02-recovery-views-retry queueMs 1
+node:internal/modules/run_main:111
+    triggerUncaughtException(
+    ^
+
+Error [TypeError]: Cannot set properties of null (setting 'enabled')
+    at evaluate (evaluate at file:///Users/sukhjot/.codex/worktrees/terra-c02-trial/test/trial/c02-views.mjs:20:13, <anonymous>:0:190)
+    at #evaluate (file:///Users/sukhjot/codes/test/node_modules/puppeteer-core/lib/puppeteer/cdp/ExecutionContext.js:402:19)
+    at async ExecutionContext.evaluate (file:///Users/sukhjot/codes/test/node_modules/puppeteer-core/lib/puppeteer/cdp/ExecutionContext.js:288:16)
+    at async IsolatedWorld.evaluate (file:///Users/sukhjot/codes/test/node_modules/puppeteer-core/lib/puppeteer/cdp/IsolatedWorld.js:104:16)
+    at async CdpFrame.evaluate (file:///Users/sukhjot/codes/test/node_modules/puppeteer-core/lib/puppeteer/api/Frame.js:364:20)
+    at async CdpPage.evaluate (file:///Users/sukhjot/codes/test/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:832:20)
+    at async file:///Users/sukhjot/.codex/worktrees/terra-c02-trial/test/trial/c02-views.mjs:20:2
+
+Node.js v26.12.0

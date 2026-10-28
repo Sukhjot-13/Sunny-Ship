@@ -1,0 +1,17 @@
+Heavy job acquired: terra-c02-recovery-views queueMs 1
+file:///Users/sukhjot/codes/test/node_modules/@puppeteer/browsers/lib/launch.js:347
+                reject(new Error([
+                       ^
+
+Error: Failed to launch the browser process:  Code: null
+
+stderr:
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+    at ChildProcess.onClose (file:///Users/sukhjot/codes/test/node_modules/@puppeteer/browsers/lib/launch.js:347:24)
+    at ChildProcess.emit (node:events:526:24)
+    at ChildProcess._handle.onexit (node:internal/child_process:323:12)
+
+Node.js v26.12.0
