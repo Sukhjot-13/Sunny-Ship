@@ -3,7 +3,7 @@
  *
  *   npm test
  *
- * Twenty serial suites: pure navigation/climbing, physical interior/exterior materials, exported geometry/collision,
+ * Twenty-one serial suites: pure navigation/climbing, physical interior/exterior materials, exported geometry/collision,
  * all room routes, real exterior/interior/controls journeys, interaction,
  * motion comparisons and visual capture. The suites array is authoritative.
  */
@@ -63,7 +63,7 @@ const suites=[
  ['interiorMaterials.test.mjs','physical interior materials and metric projection'],
  ['exteriorMaterials.test.mjs','physical exterior materials and reflection guards'],
  ['navigation.test.mjs','navigation logic'],['climbing.test.mjs','climbing and interaction logic'],['assets.test.mjs','asset structure'],['exterior.test.mjs','exterior coplanar geometry'],['doors.test.mjs','door and hatch collision'],
- ['physics.test.mjs','collision physics'],['reachability.mjs','deck reachability'],
+ ['physics.test.mjs','collision physics'],['foreTrim.test.mjs','fore trim room construction regression'],['reachability.mjs','deck reachability'],
  ['roomRoutes.mjs','all room and interior stair routes'],['gameplay.mjs','in-browser gameplay'],
  ['cannonControls.mjs','universal visible cannon controls'],
  ['exteriorJourneys.mjs','continuous balcony, gallery, slide and exterior passages'],

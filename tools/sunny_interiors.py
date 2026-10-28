@@ -1137,6 +1137,7 @@ def build_interiors(objects, vertex_bbox, shift, aft_snapshot=None):
     B1 = level_of['B1']
     b1_floor = fit_floor(objects, 'InteriorFloor_lower', f, -12.8, 11.8, LEVEL_B1, centre)
     outline=[tuple((b1_floor.matrix_world @ v.co)[:2]) for v in b1_floor.data.vertices]
+    b1_trim_outline = list(outline)
     perimeter_lining('InteriorWall_B1',outline,B1,5.82,'timber')
     b1_ceiling=plan_floor('B1_ceiling',outline,level_of['F1']-.18)
     b1_ceiling['sunny_walkable']=True;b1_ceiling['sunny_obstacle']=False
@@ -1596,6 +1597,11 @@ def build_interiors(objects, vertex_bbox, shift, aft_snapshot=None):
         'dockCentre':[dcentre[0],cy,B1], 'dockSolids':dock_solids,
         'levels': level_of,
         'aftEnclosures': [aft_enclosure],
+        'foreTrimVolumes': [dict(level=level, outline=outline, bottom=bottom, top=top)
+            for level,outline,bottom,top in (
+                ('B1',b1_trim_outline,B1-.12,F1),
+                ('F1',fore_outline,F1-.12,F2F),
+                ('F2F',women_outline,F2F-.12,F2F+2.80))],
         'foreEnclosures': [dict(level=level, outline=outline,
             reference='F1/F2 rounded plans; retained hull sections and existing aft door transfer in reconstructed metres')
             for level, outline in (('F1', fore_outline), ('F2F', women_outline))],

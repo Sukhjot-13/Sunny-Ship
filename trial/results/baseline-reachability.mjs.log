@@ -1,0 +1,21 @@
+REACHABLE floor layers: 639704 of 891393 (71.8%)
+Reach along ship: -32.1 to 36.7 m
+Blocked boundaries: [
+  [ 'COLL_Solid_Sunny_InteriorMainMast', 2820 ],
+  [ 'COLL_Solid_Sunny_RoomPartition_pantry_sickbay_seg0', 1844 ],
+  [ 'COLL_Solid_Sunny_RoomPartition_pantry_sickbay_seg2', 1604 ],
+  [ 'COLL_Solid_Sunny_PopGreens_planter', 1152 ],
+  [ 'COLL_Solid_Sunny_RobinGarden_planter', 1152 ],
+  [ 'COLL_Solid_Sunny_RoomPartition_q_cannon_seg2', 1116 ],
+  [ 'COLL_Solid_Sunny_Aquarium_side-1_glass', 1040 ],
+  [ 'COLL_Solid_Sunny_Aquarium_side1_glass', 1008 ]
+]
+  PASS  outdoor route to lawn
+  PASS  outdoor route to foredeck
+  PASS  outdoor route to aft deck
+  PASS  outdoor route to garden
+  PASS  outdoor route to stern balcony
+  PASS  outdoor route to men's quarters
+  PASS  outdoor route to aquarium bar
+  PASS  outdoor route to library
+  PASS  outdoor route to soldier dock

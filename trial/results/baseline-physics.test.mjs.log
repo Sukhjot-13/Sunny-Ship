@@ -1,0 +1,47 @@
+colliders: 97345
+  floors: 15188
+  hull:   1
+  walls:  1356
+  obst:   17
+spawn (three): -4.29,-40.55,-0.99
+water level:   -54.85071716308594
+
+=== TEST 1: spawn is supported ===
+  PASS  ground found under spawn y=-40.55
+  PASS  spawn is just above ground dy=-0.00
+  PASS  deck is above water deck=-40.55 water=-54.85071716308594
+
+=== TEST 2: player falls at a plausible rate then lands ===
+  PASS  player lands after 0 frames (0.00s)
+  PASS  landing is on the deck y=-40.55
+
+=== TEST 3: walking forward stays supported ===
+  PASS  stays mostly supported while walking 0/600 frames airborne
+  PASS  did not sink below the hull y=-40.55
+
+=== TEST 4: cannot walk off the deck edge ===
+  (max horizontal travel from spawn: 21.01 m)
+  PASS  boundary walls contain the player max radius 21.01 m
+
+=== TEST 5: obstacles are solid ===
+  PASS  obstacles sit near walkable floor 7/17
+  PASS  has obstacle colliders 17 obstacles
+
+=== TEST 6: no degenerate colliders ===
+  PASS  no zero-size colliders 
+
+=== TEST 7: low diagonal edges are climbable ===
+  PASS  step probe sees a floor corner outside the centre ray 
+  PASS  step probe ignores overhead decks and distant edges 
+  PASS  step probe respects maximum climbing height 
+  PASS  sectioned moving blade keeps every sampled real surface solid 
+  PASS  sectioned moving blade leaves its empty upper-front corner clear 
+  PASS  surface collision skin gives every bound finite physical thickness 
+  PASS  non-finite moving surfaces cannot enter the collision world 
+  PASS  boosted flight cannot tunnel through a thin wall 
+  PASS  flight preserves motion along a wall 
+  PASS  flight head cannot pass upward through a floor 
+  PASS  flight feet cannot pass downward through a floor 
+  PASS  flight ignores synthetic walking edge guards 
+
+=== RESULT: 23 passed, 0 failed ===

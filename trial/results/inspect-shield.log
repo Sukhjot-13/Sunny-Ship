@@ -1,0 +1,8 @@
+Heavy job acquired: inspect-shield queueMs 1
+00:02.623  blend            | Read blend: "/Users/sukhjot/.codex/worktrees/sol-c01-trial/test/assets/sunny-master.blend"
+BlenderMCP addon registered
+SHIELD 22971 26441 nonmanifold 3259 boundary 3259 volume 1391.5686464970106
+BlenderMCP addon unregistered
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:49:19)
+
+Blender quit

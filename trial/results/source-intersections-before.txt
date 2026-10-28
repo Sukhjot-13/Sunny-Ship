@@ -1,0 +1,21 @@
+Box052 { F2F: 12 }
+Box053 { F2F: 12 }
+Box054 { F2F: 12 }
+Box055 { F2F: 12 }
+Box056 { F2F: 12 }
+Box057 { F2F: 12 }
+Box058 { F2F: 12 }
+Box059 { F2F: 12 }
+Box060 { F2F: 12 }
+Box061 { F2F: 12 }
+Box062 { F2F: 10 }
+Box063 { F2F: 10 }
+Box065.001 { F2F: 10 }
+Box070 { F1: 28 }
+Box084 { F1: 42 }
+Circle038.001 { F2F: 1071, B1: 162, F1: 348 }
+Cylinder003 { F1: 46 }
+Line002 { B1: 13, F2F: 153, F1: 338 }
+Line004 { F1: 189, F2F: 136 }
+Line007 { F1: 148, F2F: 33 }
+Tube010 { B1: 504 }

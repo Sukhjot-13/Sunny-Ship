@@ -1,0 +1,181 @@
+{
+  "url": "http://localhost:8171/",
+  "hashes": {
+    "sunny.glb": {
+      "local": "986080f794d8c99b074c48a01942a01e98d882a45a54b6a5a68e09ad4999397c",
+      "served": "986080f794d8c99b074c48a01942a01e98d882a45a54b6a5a68e09ad4999397c"
+    },
+    "sunny-collision.glb": {
+      "local": "59fe62724ce2d727237c4ebf1f32c0f65fd56464b8c201c1c2a9ae96bd2d4907",
+      "served": "59fe62724ce2d727237c4ebf1f32c0f65fd56464b8c201c1c2a9ae96bd2d4907"
+    },
+    "ship-metadata.json": {
+      "local": "f8b75353c28b19b1e67db702b9ad3863520e28aa4af73da305ca589dbcc62394",
+      "served": "f8b75353c28b19b1e67db702b9ad3863520e28aa4af73da305ca589dbcc62394"
+    }
+  },
+  "records": [
+    {
+      "name": "mens",
+      "eye": [
+        -21.700000000000003,
+        -38.851,
+        -4.287
+      ],
+      "target": [
+        -27.700000000000003,
+        -39.501000000000005,
+        0.7130000000000001
+      ]
+    },
+    {
+      "name": "womens",
+      "eye": [
+        -23.424999999999997,
+        -34.714999999999996,
+        1.713
+      ],
+      "target": [
+        -27.525,
+        -35.365,
+        -3.787
+      ]
+    },
+    {
+      "name": "soldier-dock",
+      "eye": [
+        7.2,
+        -45.451,
+        5.413
+      ],
+      "target": [
+        -1.5,
+        -45.951,
+        -1.287
+      ]
+    },
+    {
+      "name": "storage",
+      "eye": [
+        -15,
+        -45.451,
+        -1.287
+      ],
+      "target": [
+        -23,
+        -46.301,
+        4
+      ]
+    },
+    {
+      "name": "cannon-men-starboard",
+      "eye": [
+        -23.8,
+        -39.051,
+        -9
+      ],
+      "target": [
+        -25.8,
+        -40.051,
+        -9.35
+      ]
+    },
+    {
+      "name": "cannon-men-port",
+      "eye": [
+        -23.8,
+        -39.051,
+        9.7
+      ],
+      "target": [
+        -25.8,
+        -40.051,
+        10.1
+      ]
+    },
+    {
+      "name": "cannon-women-starboard",
+      "eye": [
+        -24.5,
+        -34.915,
+        -9
+      ],
+      "target": [
+        -26.92,
+        -35.915,
+        -9.25
+      ]
+    },
+    {
+      "name": "cannon-women-port",
+      "eye": [
+        -24.5,
+        -34.915,
+        9.7
+      ],
+      "target": [
+        -26.92,
+        -35.915,
+        10
+      ]
+    },
+    {
+      "name": "dock-port-outside",
+      "eye": [
+        0.495,
+        -45.94,
+        25
+      ],
+      "target": [
+        0.495,
+        -45.94,
+        10
+      ]
+    },
+    {
+      "name": "dock-starboard-outside",
+      "eye": [
+        0.495,
+        -45.94,
+        -25
+      ],
+      "target": [
+        0.495,
+        -45.94,
+        -10
+      ]
+    }
+  ],
+  "rays": [
+    {
+      "side": "port",
+      "hits": [
+        {
+          "name": "Sunny_InteriorWall_B1_73_seg0",
+          "distance": 10.890112072229382
+        },
+        {
+          "name": "Sunny_InteriorWall_B1_73_seg0",
+          "distance": 11.07011207938194
+        }
+      ],
+      "wallFound": true
+    },
+    {
+      "side": "starboard",
+      "hits": [
+        {
+          "name": "Sunny_InteriorWall_B1_199_seg0",
+          "distance": 8.408844152946138
+        },
+        {
+          "name": "Sunny_InteriorWall_B1_199_seg0",
+          "distance": 8.588844160098697
+        }
+      ],
+      "wallFound": true
+    }
+  ],
+  "errors": [],
+  "notice": "Current before images retain all geometry. Shutters remain CLOSED in these new outside views; old supplied open-shutter image is separately labeled original audit. Lining rays directly test actual original geometry; no player placement or current functional claim."
+}

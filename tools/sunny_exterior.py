@@ -1336,6 +1336,8 @@ def restore_exterior(objects, vertex_bbox):
                     vertex.co = inv @ p
             obj.data.update()
     bpy.context.view_layer.update()
+    from sunny_fore_trim import reconcile_fore_trim
+    log(f'[pipeline]   fore shield construction cuts: {reconcile_fore_trim(objects,interiors)}')
     from sunny_surfaces import prepare_exterior_surfaces
     log(f'[pipeline]   exterior coplanar faces trimmed: {prepare_exterior_surfaces(objects,vertex_bbox)}')
     bpy.context.view_layer.update()
