@@ -1,0 +1,220 @@
+{
+  "phase": "C02 verified, reviewed, applied and confirmed in actual original ship",
+  "checkedAt": "2026-10-29T13:57:08.696Z",
+  "productHashes": {
+    "sunny.glb": "716d89824bb63d1dfe2f8b145ade81c35d9cdd4dfc1978350682e180ea8cff10",
+    "sunny-collision.glb": "aac7150f403ded4ec81bfaecc8877555dc5e748e063be5be875975d4e100b7cd",
+    "ship-metadata.json": "87318580d39d8e36510a261b9dbff88cdb498b127674186926041ece5b48e757"
+  },
+  "closedStops": [
+    {
+      "side": "port",
+      "position": [
+        0.4950000026280035,
+        -43.766884613577716,
+        16.671844527304174
+      ]
+    },
+    {
+      "side": "starboard",
+      "position": [
+        0.49500000000000144,
+        -43.74852611770839,
+        -19.245845839560033
+      ]
+    }
+  ],
+  "liveOpenCrossings": [
+    {
+      "side": "port",
+      "position": [
+        0.49499680221320036,
+        -43.55069961605753,
+        17.976014281380976
+      ],
+      "state": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 2,
+        "dockOpen": true,
+        "shutter": 1,
+        "dockAngle": -1.0273484646966222,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      },
+      "collision": true
+    },
+    {
+      "side": "starboard",
+      "position": [
+        0.4950000000008334,
+        -43.550699615560795,
+        -20.78547975684022
+      ],
+      "state": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 2,
+        "dockOpen": true,
+        "shutter": 1,
+        "dockAngle": -1.0273484646966222,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      },
+      "collision": true
+    }
+  ],
+  "openReturns": [
+    {
+      "phase": "open mouth actual body return",
+      "side": "port",
+      "position": [
+        0.4950000048795901,
+        -43.55069961563621,
+        10.414522428915236
+      ]
+    },
+    {
+      "phase": "open mouth actual body return",
+      "side": "starboard",
+      "position": [
+        0.4949999999999704,
+        -43.55069961560547,
+        -12.82383923746297
+      ]
+    }
+  ],
+  "lawnReturn": {
+    "position": [
+      -4.207481861955665,
+      -40.55070114135742,
+      -0.9585110830082332
+    ],
+    "grounded": true,
+    "recoveries": 0
+  },
+  "actualSelectedBay": {
+    "phase": "actual selected bay2 outer region",
+    "vehicleCentre": [
+      5.793955970755998,
+      -47.151,
+      -1.39219325068356
+    ],
+    "position": [
+      7.7382965628888245,
+      -43.550699615478514,
+      -1.4448244203080147
+    ]
+  },
+  "geometry": {
+    "liningRaysPerSide": 149,
+    "closedReveals": 2,
+    "radialGeometryAndPhysicalSamplesPerSide": 96,
+    "normalBody": {
+      "radius": 0.34,
+      "height": 1.75
+    },
+    "allStaticVisualBodyRaysPerSide": 9,
+    "outsideLiningPreservationRays": 112
+  },
+  "appearance": {
+    "records": [
+      {
+        "side": "port",
+        "inside": false,
+        "path": "docs/review/post-comparison-c02/open-port.png",
+        "eye": [
+          0.495,
+          -45.94,
+          25
+        ],
+        "target": [
+          0.495,
+          -45.94,
+          10
+        ]
+      },
+      {
+        "side": "starboard",
+        "inside": false,
+        "path": "docs/review/post-comparison-c02/open-starboard.png",
+        "eye": [
+          0.495,
+          -45.94,
+          -25
+        ],
+        "target": [
+          0.495,
+          -45.94,
+          -10
+        ]
+      },
+      {
+        "side": "port",
+        "inside": true,
+        "path": "docs/review/post-comparison-c02/open-inside-port.png",
+        "eye": [
+          0.4949997663497925,
+          -45.94071960449219,
+          6.098844528198242
+        ],
+        "target": [
+          0.4949997663497925,
+          -45.94071960449219,
+          25
+        ]
+      },
+      {
+        "side": "starboard",
+        "inside": true,
+        "path": "docs/review/post-comparison-c02/open-inside-starboard.png",
+        "eye": [
+          0.49499964714050293,
+          -45.94071960449219,
+          -8.672845840454102
+        ],
+        "target": [
+          0.49499964714050293,
+          -45.94071960449219,
+          -25
+        ]
+      }
+    ],
+    "personallyReviewed": true,
+    "independentReview": "Coordinating root approved scoped geometry, physical controls, external views and original inside/body views; implementer personally reviewed corrected inside framing."
+  },
+  "retainedC01": "all three quick target regressions PASS; 1888 exterior guard hits unchanged",
+  "runtime": "original body, collision, navigation and realistic material/control runtime files unchanged",
+  "scope": "C02 local mouth shell/lining/actual full-body collision clearance only. C03 water-bearing channels, radial chamber support/alignment and M10 vehicle launch remain pending; no ordinary walking across unsupported water-channel gaps or vehicle operation is claimed.",
+  "comparisonFrozenAt": "12e2dde",
+  "wholeShipAggregateRun": false,
+  "currentShipConfirmation": "current-ship-confirmation.json"
+}

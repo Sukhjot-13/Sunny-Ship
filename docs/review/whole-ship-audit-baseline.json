@@ -1,0 +1,804 @@
+{
+  "time": "2026-10-22T13:27:42.096211+00:00",
+  "notice": "Current published asset baseline; no regeneration. Pre-existing Vite 6782 and full runner 7019 preserved.",
+  "files": [
+    {
+      "path": "assets/sunny-master.blend",
+      "bytes": 19848179,
+      "mtime_ns": 1792673806003569687,
+      "sha256": "feb806bbc036615e72e73978287d04c6d185c8225df5a750e2d40158420cfd8b"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 103376,
+      "mtime_ns": 1790826254277177899,
+      "sha256": "99bf9ec3a5e8c73de0812c5e3318826667acd06a0cdef7690ec1ef320eacb1ba"
+    },
+    {
+      "path": "package.json",
+      "bytes": 870,
+      "mtime_ns": 1790881448139565758,
+      "sha256": "c0d1ba7dd1b38462eddf3c2369b9fe4a96f7b398ec08b97560038eeb45ae956c"
+    },
+    {
+      "path": "public/models/ship-metadata.json",
+      "bytes": 1274177,
+      "mtime_ns": 1792673816622567882,
+      "sha256": "f8b75353c28b19b1e67db702b9ad3863520e28aa4af73da305ca589dbcc62394"
+    },
+    {
+      "path": "public/models/sunny-collision.glb",
+      "bytes": 46018572,
+      "mtime_ns": 1792673816504192403,
+      "sha256": "59fe62724ce2d727237c4ebf1f32c0f65fd56464b8c201c1c2a9ae96bd2d4907"
+    },
+    {
+      "path": "public/models/sunny.glb",
+      "bytes": 45989016,
+      "mtime_ns": 1792673813982165432,
+      "sha256": "986080f794d8c99b074c48a01942a01e98d882a45a54b6a5a68e09ad4999397c"
+    },
+    {
+      "path": "src/App.jsx",
+      "bytes": 5169,
+      "mtime_ns": 1790926196716184463,
+      "sha256": "77d77d1afb5b9440aae2d0043a59b3448542930898859b753642aab622716343"
+    },
+    {
+      "path": "src/components/DoorSystem.jsx",
+      "bytes": 5507,
+      "mtime_ns": 1790939576858985901,
+      "sha256": "d96ac6c4c1cc14f9fc567e0beca86720680bc1ec5192d64f3ea8bcd187c59049"
+    },
+    {
+      "path": "src/components/Environment.jsx",
+      "bytes": 4109,
+      "mtime_ns": 1790889434637748782,
+      "sha256": "f9024212025962740bb7bc165886f2d881dbf58718e9f3e424cf35342e6f3458"
+    },
+    {
+      "path": "src/components/EnvironmentMap.jsx",
+      "bytes": 2487,
+      "mtime_ns": 1790832441888825133,
+      "sha256": "2229cf7ede143d7d46ed2064101f11f8dc26658ade11c96e8f26d403e11910af"
+    },
+    {
+      "path": "src/components/NavigationSystem.jsx",
+      "bytes": 12717,
+      "mtime_ns": 1791987870650912684,
+      "sha256": "d8784327e9397ce96555963ab7f2e01cc1a575f9f7a2577fe4b95a2c78436706"
+    },
+    {
+      "path": "src/components/Ocean.jsx",
+      "bytes": 10504,
+      "mtime_ns": 1790904554850460599,
+      "sha256": "74ec09ddeee250ab9b7b61487f1837b5e730c7b280f38138330a3627b2a8de32"
+    },
+    {
+      "path": "src/components/PlayerController.jsx",
+      "bytes": 20793,
+      "mtime_ns": 1791986963204047096,
+      "sha256": "cfa79b029d6ecddabb49cd78377f381247f1a32d47e14b637801706ccbd681a2"
+    },
+    {
+      "path": "src/components/Ship.jsx",
+      "bytes": 6232,
+      "mtime_ns": 1790954382685612971,
+      "sha256": "ec9c167d4bee43a3d42253597de24abaa1af267ce74f051c9177cbdc4af7e366"
+    },
+    {
+      "path": "src/components/UI.jsx",
+      "bytes": 9325,
+      "mtime_ns": 1790941143529386528,
+      "sha256": "b4c2c5b2126c277b1985eacee21a65a3c09869bbf79df1ca1a4d59ff5642d1f3"
+    },
+    {
+      "path": "src/config/exteriorConfig.json",
+      "bytes": 81,
+      "mtime_ns": 1790889434535682447,
+      "sha256": "2ba97357e3d957113e94366f7c9b8ffc545c7f027986b712deb04726fe4ba58f"
+    },
+    {
+      "path": "src/config/renderConfig.js",
+      "bytes": 218,
+      "mtime_ns": 1790863440791106682,
+      "sha256": "08c8d8f12388c7a63e19cab9afe7b7cc5e81e5e0a3e8407948667b6d95fc6142"
+    },
+    {
+      "path": "src/config/shipConfig.js",
+      "bytes": 2302,
+      "mtime_ns": 1790938580964744831,
+      "sha256": "eb7b0553c82b3a50504c40603793fbfb5a941999caf90412ea684843a9a3f307"
+    },
+    {
+      "path": "src/hooks/useInput.js",
+      "bytes": 4098,
+      "mtime_ns": 1790926196669519950,
+      "sha256": "646eb263a5f2dce0ee1db9d1c5beb45bfdf72a2d8252358d477ef892b94adee5"
+    },
+    {
+      "path": "src/main.jsx",
+      "bytes": 210,
+      "mtime_ns": 1790826197030552020,
+      "sha256": "78477f6030a6615a43fbc79897f67777da769e90f5dd16b2563933253c40c17c"
+    },
+    {
+      "path": "src/state/useStore.js",
+      "bytes": 3672,
+      "mtime_ns": 1790926196694513618,
+      "sha256": "e2cc9054952c6d2e00ce7a87dcd71a2ccb51b6266d7d7fa927e825d97d1fcd41"
+    },
+    {
+      "path": "src/systems/climbing.js",
+      "bytes": 3564,
+      "mtime_ns": 1790936311850339430,
+      "sha256": "0c88257610f381bab9e15641a1d15fe7ff3b21036fcea92aed3862383c2cf4ad"
+    },
+    {
+      "path": "src/systems/collision.js",
+      "bytes": 12073,
+      "mtime_ns": 1791989325231393946,
+      "sha256": "834ec55ec5b8a38eef2012fdde1634fb19fe4fd419b9e5df144f57084a6e49f6"
+    },
+    {
+      "path": "src/systems/doors.js",
+      "bytes": 21117,
+      "mtime_ns": 1791989325230619824,
+      "sha256": "711407b48d77c736b67986af807b4d24fbfb13e4abb819b943c5b657deb3eb45"
+    },
+    {
+      "path": "src/systems/exteriorMaterials.js",
+      "bytes": 6385,
+      "mtime_ns": 1790954451285146083,
+      "sha256": "0dc0a0d0ee7ba87ffc2ddf4424052af0f273656c9c8a895d0a0e273f1128430c"
+    },
+    {
+      "path": "src/systems/flightCollision.js",
+      "bytes": 1259,
+      "mtime_ns": 1790936311828071343,
+      "sha256": "2b9a9f035901d9db7f6b41b55ada73a1f05f904f61ba2c0bdb0aaa37b79d6ae6"
+    },
+    {
+      "path": "src/systems/interactions.js",
+      "bytes": 483,
+      "mtime_ns": 1790925796512921078,
+      "sha256": "974a4502d87b77b1ddede580960463c9cf4d613751c91ff13c11042daaaf2efa"
+    },
+    {
+      "path": "src/systems/materials.js",
+      "bytes": 20696,
+      "mtime_ns": 1790889434743666253,
+      "sha256": "c7abe9186b32fa0fb1519819f77bc4ae2f2f99962ca469349b05a7c96176d734"
+    },
+    {
+      "path": "src/systems/navigation.js",
+      "bytes": 4579,
+      "mtime_ns": 1790904490377031306,
+      "sha256": "b45228dccaac02377bd0f56e4ca8717b458bc240c4a1b50e46b4f1a99412eed8"
+    },
+    {
+      "path": "src/systems/sails.js",
+      "bytes": 6583,
+      "mtime_ns": 1790907077851488585,
+      "sha256": "d8f67afa2b9eb45a8e2f2ae3102a4e17f678ff1b7ba951652e4c90141d0a7da9"
+    },
+    {
+      "path": "src/systems/shipMeta.js",
+      "bytes": 2599,
+      "mtime_ns": 1790857863612219803,
+      "sha256": "c97dbb8a8a528de27274f8a90a0fde1ba967620ae895449e0234434731df0a01"
+    },
+    {
+      "path": "src/systems/stepSupport.js",
+      "bytes": 554,
+      "mtime_ns": 1790855841899323238,
+      "sha256": "a9c2d96d77691d219fd484d00b38be342b86427dec5e5730c6d58f2939e2537f"
+    },
+    {
+      "path": "src/systems/surfaceCollision.js",
+      "bytes": 2591,
+      "mtime_ns": 1791987530279633835,
+      "sha256": "57951d4b3f4bf8fa94da5ded7d48a44514622cb2803f5e5ce4dc09e8263f112b"
+    },
+    {
+      "path": "stuff/1.FBX",
+      "bytes": 23765440,
+      "mtime_ns": 1579311102000000000,
+      "sha256": "8a770f19926e304cce1839fde4797fc1d98db5a49814f7b049e5a83be69cec10"
+    },
+    {
+      "path": "stuff/images/Mini_Merry_II.html",
+      "bytes": 338319,
+      "mtime_ns": 1790889232686926880,
+      "sha256": "248be68d7e8a2c7dfe012f32a3db54b55e37b7da0f84f5d3901fc78c4873c2a9"
+    },
+    {
+      "path": "stuff/images/Sunnyworkroom.webp",
+      "bytes": 76312,
+      "mtime_ns": 1790889193639034795,
+      "sha256": "60915cf8f7a82918663be5ba96b08af03f0ea2848f98c20cafb520f7a863172c"
+    },
+    {
+      "path": "stuff/images/Thousand_Sunny%27s_Aquarium_Bar.webp",
+      "bytes": 558240,
+      "mtime_ns": 1790889212472394000,
+      "sha256": "914f76a94c67badbce16628746e9fd3d908fd1d6dfb676080d5a8096ea4374f7"
+    },
+    {
+      "path": "stuff/images/Thousand_Sunny%27s_Crow%27s_Nest_and_Survey_Room.webp",
+      "bytes": 529756,
+      "mtime_ns": 1790889224073587000,
+      "sha256": "19077e36506a7301aa79ea51ea14919769c686e7e551afcc9a3e55fa3b9f006a"
+    },
+    {
+      "path": "stuff/images/Thousand_Sunny%27s_Figurehead%2C_Helm%2C_and_Anchors.webp",
+      "bytes": 243280,
+      "mtime_ns": 1790889201092168000,
+      "sha256": "d647e8d47dc9a1452a2a69847404fca11a21bcbfb4142f00519a135986e989ca"
+    },
+    {
+      "path": "stuff/images/Thousand_Sunny%27s_Kitchen%2C_Dining_Room%2C_and_Sick_Bay.webp",
+      "bytes": 581710,
+      "mtime_ns": 1790889209370263000,
+      "sha256": "630186543a6ba648a24d31ffc1ee33d3f0b88c2a44ef875542d51cdc110f6492"
+    },
+    {
+      "path": "stuff/images/Thousand_Sunny%27s_Library%2C_Workrooms%2C_and_Bathhouse.webp",
+      "bytes": 588526,
+      "mtime_ns": 1790889221051612000,
+      "sha256": "09ab64fce33988dc35bb5c542ea48c03193aebeaecf43006e2475d031c43b180"
+    },
+    {
+      "path": "stuff/images/Thousand_Sunny%27s_Men_and_Woman_Quarters.webp",
+      "bytes": 567490,
+      "mtime_ns": 1790889205098072000,
+      "sha256": "2cbccc4e1c6e28a78189d7e82aa84f53e1ea152b180173969e26ed494cd83218"
+    },
+    {
+      "path": "stuff/images/Thousand_Sunny_Digitally_Colored_Manga.webp",
+      "bytes": 280584,
+      "mtime_ns": 1790889137452615000,
+      "sha256": "ff2a75471798d35efcd8cec3282447075c69f1aa1c19a1747611492d28486091"
+    },
+    {
+      "path": "stuff/images/Thousand_Sunny_Infobox.webp",
+      "bytes": 240472,
+      "mtime_ns": 1790889125286518000,
+      "sha256": "05350db9df7b30f66f5f4153816a3b89c9d43dd0e09766c4163d9f11e6f85adf"
+    },
+    {
+      "path": "stuff/images/Thousand_Sunny_pg.126.webp",
+      "bytes": 321108,
+      "mtime_ns": 1790889149182208000,
+      "sha256": "c1a64ed24c5380888c5346dbae75b0d692e0402f87218682c1218710327e9944"
+    },
+    {
+      "path": "stuff/images/Thousand_Sunny_pg.192-193.webp",
+      "bytes": 761486,
+      "mtime_ns": 1790889228531389000,
+      "sha256": "fe7ce8bcf670613099dd9c5f3d47e08a8f1d2dc76166c35fa6517582fdd54e87"
+    },
+    {
+      "path": "stuff/images/Thousand_Sunny_pg.26.webp",
+      "bytes": 239434,
+      "mtime_ns": 1790889140672494000,
+      "sha256": "ee5b506135ee307d75cd5a1317d76c132979b95c52d57a377920711fe1cca5c3"
+    },
+    {
+      "path": "stuff/images/Thousand_Sunny_pg.46.webp",
+      "bytes": 229234,
+      "mtime_ns": 1790889142555743000,
+      "sha256": "dc10b0b4b194269cd7a4b0b3df26763cfc5563ee9b19feb2e5ddf2127291b292"
+    },
+    {
+      "path": "stuff/images/Thousand_Sunny_pg.66.webp",
+      "bytes": 208470,
+      "mtime_ns": 1790889144539680000,
+      "sha256": "eebdc31ddcb7e52c9412a4d303440b0c529700e7b5881ecb2b9de5bbfbf3d6a7"
+    },
+    {
+      "path": "stuff/images/Thousand_Sunny_pg.86.webp",
+      "bytes": 183866,
+      "mtime_ns": 1790889146229749000,
+      "sha256": "940e6e5f375eb7c98badbf5b5ec247a5a79c69599f1a608f77714e79b02e1e18"
+    },
+    {
+      "path": "stuff/images/Thousand_sunny_aquarium_bar.webp",
+      "bytes": 72860,
+      "mtime_ns": 1790889185810202000,
+      "sha256": "72e87d56de790f671f888c1058b6684dbe19b397a3896a7d5d1fa3d497d5200f"
+    },
+    {
+      "path": "stuff/images/Thousand_sunny_bathroom.webp",
+      "bytes": 87130,
+      "mtime_ns": 1790889187897688007,
+      "sha256": "7d65be2b7f6ad258196f4db932543787ad24320e785c1c1cbb49904b1dc08d5a"
+    },
+    {
+      "path": "stuff/images/Thousand_sunny_boys_room.webp",
+      "bytes": 82384,
+      "mtime_ns": 1790889160726396000,
+      "sha256": "4a1988e10fe43e64e4a4ba7e64a765dec2fded42ecc90a7cb53dc586198e16d2"
+    },
+    {
+      "path": "stuff/images/Thousand_sunny_crows_nest.webp",
+      "bytes": 52660,
+      "mtime_ns": 1790889196631223000,
+      "sha256": "b80428592ed24a182286975fab8ec751871bfd8eb1410ccb71159fcf3faf5a7b"
+    },
+    {
+      "path": "stuff/images/Thousand_sunny_girls_room.webp",
+      "bytes": 61620,
+      "mtime_ns": 1790889173789761243,
+      "sha256": "bbcda06c4e71d3166876c457138194c9d8d0e69c0727d6be3adbf23eb314d84a"
+    },
+    {
+      "path": "stuff/images/Thousand_sunny_kitchen.webp",
+      "bytes": 77472,
+      "mtime_ns": 1790889180937994815,
+      "sha256": "142a8e2acdaf804b9f5f90c885efc22004dd3121c3092a9d212e589b977654eb"
+    },
+    {
+      "path": "stuff/images/Thousand_sunny_library.webp",
+      "bytes": 77332,
+      "mtime_ns": 1790889189623658823,
+      "sha256": "fe8e85e7f1b4b4ad7bb150e2f36c11f07f66444dcfcb9f0c25a81cd790f306a3"
+    },
+    {
+      "path": "stuff/images/Thousand_sunny_sick_bay.webp",
+      "bytes": 74170,
+      "mtime_ns": 1790889183806709000,
+      "sha256": "d2609e52cd287012ee909d8b4a372567344196d5b58f4959a9ae0913c5dd4975"
+    },
+    {
+      "path": "stuff/images/Thousand_sunny_usopp_factory.webp",
+      "bytes": 77588,
+      "mtime_ns": 1790889191285302356,
+      "sha256": "9311ea5b5d69a98cbafcd34db50f4fe45078316f14be6f911bf1fdc7046dbb7a"
+    },
+    {
+      "path": "stuff/images/Usopp%27s_Garden_of_Pop_Greens.webp",
+      "bytes": 49206,
+      "mtime_ns": 1790889239283339000,
+      "sha256": "dcb5955f3cd665e5c4dda9937fa3b30518c019f51fb6c4dc57dd73cde19dcaf1"
+    },
+    {
+      "path": "tests/assets.test.mjs",
+      "bytes": 42260,
+      "mtime_ns": 1792063910858158085,
+      "sha256": "e42aa026af52a3e4fec6beb9b482911d241a9d4af11e4c75c17e2031e9497aec"
+    },
+    {
+      "path": "tests/climbing.mjs",
+      "bytes": 6728,
+      "mtime_ns": 1790939857860771430,
+      "sha256": "addc7cf45c3ae46205bfef3c1703622019bb0c77cae9e3aeb6e57ae4e14cd573"
+    },
+    {
+      "path": "tests/climbing.test.mjs",
+      "bytes": 3227,
+      "mtime_ns": 1790938580987624765,
+      "sha256": "68c04d13874329bc06f63c39fdbe850b2285ba9729061a1757e7597dbeeae1e4"
+    },
+    {
+      "path": "tests/doors.test.mjs",
+      "bytes": 6270,
+      "mtime_ns": 1791989325231962236,
+      "sha256": "0540aaa4b0ac7fa2fc7a8063cdb13bb10ab8b90bf6cadd2e81128900dbe96930"
+    },
+    {
+      "path": "tests/exterior.test.mjs",
+      "bytes": 111607,
+      "mtime_ns": 1792673072523661421,
+      "sha256": "82c176e0be136e8283c564166da64f9f63002f8ba86a5b1e62388f54d4804cef"
+    },
+    {
+      "path": "tests/exteriorAccess.mjs",
+      "bytes": 9050,
+      "mtime_ns": 1790940727126249644,
+      "sha256": "2d62a2a07ccd9160e430f086dc33c88da43371c67dd5a41419f0265518f6ad7b"
+    },
+    {
+      "path": "tests/exteriorJourneys.mjs",
+      "bytes": 13260,
+      "mtime_ns": 1791043961151806816,
+      "sha256": "cb6807e251c3afce7a39c64247a684d14700b34ae3281e66051802401825cbce"
+    },
+    {
+      "path": "tests/exteriorMotion.mjs",
+      "bytes": 9889,
+      "mtime_ns": 1790942991439605508,
+      "sha256": "e2ef1685c666de9d15d71904b28403ae463d11b58048ede2bc369d2b6a70af1b"
+    },
+    {
+      "path": "tests/gameplay.mjs",
+      "bytes": 15842,
+      "mtime_ns": 1791987618471631769,
+      "sha256": "421a969ceff7dc6f35bb307c124d240c86792eac4151aff94dd487e4d979dcff"
+    },
+    {
+      "path": "tests/glb.mjs",
+      "bytes": 3977,
+      "mtime_ns": 1790853163727749569,
+      "sha256": "5f0762c6159cc51f5b13ec9b681f62d5270668c5cf716b6c13fc1e7287f0f69d"
+    },
+    {
+      "path": "tests/interaction.mjs",
+      "bytes": 4668,
+      "mtime_ns": 1790850370413199891,
+      "sha256": "84deac048245dd6d60aa7b0a74b3e3a9dcfdaa70e203a8c96d3825ec25b5ee8e"
+    },
+    {
+      "path": "tests/interiorJourneys.mjs",
+      "bytes": 5476,
+      "mtime_ns": 1790987525259641284,
+      "sha256": "9cb4061c8478c04536209b89093e46128aa7206e4eaa83817d8a1fab8ddd5369"
+    },
+    {
+      "path": "tests/ladderJourney.mjs",
+      "bytes": 4997,
+      "mtime_ns": 1790940817402880224,
+      "sha256": "42eea87b1089737fc11cf1a11d1ed0a42fc02b6076aedf603199f60ce665444d"
+    },
+    {
+      "path": "tests/navigation.mjs",
+      "bytes": 10577,
+      "mtime_ns": 1791075769349250082,
+      "sha256": "a74592b2ea777a63cb9a2e558029c7ba11cefd163cc73ab0fa64b93035ba5ba8"
+    },
+    {
+      "path": "tests/navigation.test.mjs",
+      "bytes": 2948,
+      "mtime_ns": 1790904918190278013,
+      "sha256": "d84221ee795b82ea710267a4c6d9ed7cb86fee27f7fe7cc1768e3e321fef529d"
+    },
+    {
+      "path": "tests/physics.test.mjs",
+      "bytes": 9772,
+      "mtime_ns": 1791987278676528212,
+      "sha256": "e4ef578d01b162c96144d04a1d28dfcecbaa3017cc6473499c6c2f966b478c57"
+    },
+    {
+      "path": "tests/reachability.mjs",
+      "bytes": 3725,
+      "mtime_ns": 1790862277741883868,
+      "sha256": "f22b5a5f216c7fb5846875fcd737cefa9982fe4532275db575dedc92e9cd3677"
+    },
+    {
+      "path": "tests/roomRoutes.mjs",
+      "bytes": 10952,
+      "mtime_ns": 1792067762553837926,
+      "sha256": "9b403668f1d0a4d3644ce3c356c79e2aebf015a41f01571c92d393588c3cace2"
+    },
+    {
+      "path": "tests/run-all.mjs",
+      "bytes": 3357,
+      "mtime_ns": 1790928690833544259,
+      "sha256": "ccbea986d3f2494e5f57faf3275c4bacfdbaef9f69dba0c22067799dedcfcf04"
+    },
+    {
+      "path": "tests/screenshots/01-title.png",
+      "bytes": 326903,
+      "mtime_ns": 1790829183128635499,
+      "sha256": "c5798689126216765313cc89eff6b790adebd40590678c3dd854ebd3901b5af0"
+    },
+    {
+      "path": "tests/screenshots/02-after-click.png",
+      "bytes": 465000,
+      "mtime_ns": 1790829184515765376,
+      "sha256": "44a8732e0790ce0ffeeb6caab2e021db9de57eb16403f93d077511e738acab70"
+    },
+    {
+      "path": "tests/screenshots/03-explore.png",
+      "bytes": 362111,
+      "mtime_ns": 1790829186206703791,
+      "sha256": "8ff406d2d634f58d9b2dbc531945ff835fc40103aa2c72591ab6312ed5f1a4e4"
+    },
+    {
+      "path": "tests/screenshots/04-walk.png",
+      "bytes": 201005,
+      "mtime_ns": 1790829188860166678,
+      "sha256": "22d786d8f18efac1a1c6924d7e3af445edc2d8eff75f19f48b2218c00886a40b"
+    },
+    {
+      "path": "tests/screenshots/05-fly-third.png",
+      "bytes": 194619,
+      "mtime_ns": 1790829191005037298,
+      "sha256": "0a269f02b7f7b0bf053f29b349e156527dc997c5ec6fc95b14e75a5abe500304"
+    },
+    {
+      "path": "tests/screenshots/exterior-final.png",
+      "bytes": 890494,
+      "mtime_ns": 1790858915808004478,
+      "sha256": "631cedb64ccf858fc70288f394915b1ea6291916a750d89fbd664117b67a172f"
+    },
+    {
+      "path": "tests/screenshots/exterior-front.png",
+      "bytes": 538478,
+      "mtime_ns": 1790856033677682693,
+      "sha256": "a39538c56d776d4db13a3cd02b32dfc9c2f4eb6d31cee20f68e988c8add512eb"
+    },
+    {
+      "path": "tests/screenshots/exterior-lawn.png",
+      "bytes": 292633,
+      "mtime_ns": 1790855992691414994,
+      "sha256": "ba9f428d83f064aa863d330a97db1550a2d40091b9c5d4ff5ccc5868fda4f86d"
+    },
+    {
+      "path": "tests/screenshots/exterior-side.png",
+      "bytes": 687698,
+      "mtime_ns": 1790856039633396071,
+      "sha256": "a52e667bea8eba4bdf3ec064d9193188203f3b10d5ba4c81a6c5cf0c1b99cfb3"
+    },
+    {
+      "path": "tests/screenshots/g1-spawn-deck.png",
+      "bytes": 492853,
+      "mtime_ns": 1792674897007143469,
+      "sha256": "b04be9f836ef4cc6db9ecc7fcc8ae15cfbe6cf090c5a0afdb44e4ad5352b774a"
+    },
+    {
+      "path": "tests/screenshots/g2-walked.png",
+      "bytes": 365514,
+      "mtime_ns": 1792674900140969727,
+      "sha256": "9fc97d44a6e305a0f41088d707af2b22ee49380bf050daf56b646e7a117fde45"
+    },
+    {
+      "path": "tests/screenshots/g3-after-sprint.png",
+      "bytes": 470876,
+      "mtime_ns": 1792674932704780216,
+      "sha256": "f7f0af47b3eed9560171b902848f2ef69c6ab35eb5e87c39b77ef277ec572767"
+    },
+    {
+      "path": "tests/screenshots/g3-traversed.png",
+      "bytes": 492853,
+      "mtime_ns": 1792674920568431203,
+      "sha256": "b04be9f836ef4cc6db9ecc7fcc8ae15cfbe6cf090c5a0afdb44e4ad5352b774a"
+    },
+    {
+      "path": "tests/screenshots/g4-inspect.png",
+      "bytes": 563285,
+      "mtime_ns": 1792674935855492733,
+      "sha256": "b51a06b022cc6dfc83bfb70f64f3ca92ce749c4e89d7f97f16f852d52e64e170"
+    },
+    {
+      "path": "tests/screenshots/g5-third-person.png",
+      "bytes": 486079,
+      "mtime_ns": 1792674940405868210,
+      "sha256": "074f7989a203c56e1969ba50ab8e68a7ee15e95a3003ddd0213f9f0331038e70"
+    },
+    {
+      "path": "tests/screenshots/g6-fly.png",
+      "bytes": 239076,
+      "mtime_ns": 1792674943391031124,
+      "sha256": "5bc4d5f052b1f7b5a55559bd06df10deaa76a48d0394de8a1c8f3f28be5beb20"
+    },
+    {
+      "path": "tests/screenshots/g7-dry-interior-shell.png",
+      "bytes": 126953,
+      "mtime_ns": 1792675099998711855,
+      "sha256": "4eee3a056e2ef516d7b643007d71f3c3986b9f2422b5291c6a6b37894cfd34f9"
+    },
+    {
+      "path": "tests/screenshots/interior-shell-final.png",
+      "bytes": 308966,
+      "mtime_ns": 1790859108738801984,
+      "sha256": "d1ea15640487be0c76955faf33f6cf4f68e143b22882fce579222a2fc9180aa3"
+    },
+    {
+      "path": "tests/screenshots/v0-title.png",
+      "bytes": 558193,
+      "mtime_ns": 1792067025932275480,
+      "sha256": "74449d6889c9404fd39e7d0ad623c9d9fe22cc18c931244a59199eeb3f587fa4"
+    },
+    {
+      "path": "tests/screenshots/v1-inspect-a.png",
+      "bytes": 551340,
+      "mtime_ns": 1792067029535934150,
+      "sha256": "c90ea833519180c0136a6bff3fe52580c7d4642dd969d4308b36b90b54d6f320"
+    },
+    {
+      "path": "tests/screenshots/v10-deck-up.png",
+      "bytes": 575788,
+      "mtime_ns": 1792067043278265144,
+      "sha256": "0d7fc93990eb32f27b1cc6392edf088a5b687ed5605373ac0c58c8fe664a79f3"
+    },
+    {
+      "path": "tests/screenshots/v11-third-person.png",
+      "bytes": 449406,
+      "mtime_ns": 1792067045082470621,
+      "sha256": "b99bb8c52f0c639aacd8348b422e8137c0e00be09f0e9943b56ae7ecd6e95537"
+    },
+    {
+      "path": "tests/screenshots/v12-flying.png",
+      "bytes": 397112,
+      "mtime_ns": 1792067048594713345,
+      "sha256": "e8203210020d33497a0fe74d9f4a38e89a3f1a3b014056cbb7ab06b647e8ef75"
+    },
+    {
+      "path": "tests/screenshots/v2-inspect-b.png",
+      "bytes": 563872,
+      "mtime_ns": 1792067031646014154,
+      "sha256": "3fbfbd755ef443a1625fe6a43fb6f74066a9baa447a8818b5ab8dd342c9c6798"
+    },
+    {
+      "path": "tests/screenshots/v3-inspect-c.png",
+      "bytes": 592260,
+      "mtime_ns": 1792067033759288694,
+      "sha256": "25185a1bd466188ac03599d356985f77dc07feff2be4dff80a3833640f096e4f"
+    },
+    {
+      "path": "tests/screenshots/v4-inspect-top.png",
+      "bytes": 420318,
+      "mtime_ns": 1792067035852403064,
+      "sha256": "0540b17cc57fcbba6eb211db68a804fe5c538671213d9c39548c687ba6d832e4"
+    },
+    {
+      "path": "tests/screenshots/v5-inspect-close.png",
+      "bytes": 414925,
+      "mtime_ns": 1792067037139284384,
+      "sha256": "7f1f616351a8c3df8202e2b80631809804fb0082e416dcfc03ff7f7b6820ba53"
+    },
+    {
+      "path": "tests/screenshots/v6-deck-forward.png",
+      "bytes": 488021,
+      "mtime_ns": 1792067039685698744,
+      "sha256": "18a33e64eef7e3f484f04dc0b7a4ce9a0029da8e30ffff4fc52ebe54d8ad0918"
+    },
+    {
+      "path": "tests/screenshots/v7-deck-back.png",
+      "bytes": 286610,
+      "mtime_ns": 1792067040577087795,
+      "sha256": "dcc498c38e2dd62e47bcc7a98c27b155e241ecf7e86c9ef2595de363bbc88a65"
+    },
+    {
+      "path": "tests/screenshots/v7-deck-right.png",
+      "bytes": 326990,
+      "mtime_ns": 1790832226322203240,
+      "sha256": "8cdf5de22bfd53c9540ed09ee60b337e9abae52b74765915b1b4f039d9bcabd9"
+    },
+    {
+      "path": "tests/screenshots/v8-deck-back.png",
+      "bytes": 336891,
+      "mtime_ns": 1790832227214257590,
+      "sha256": "73ba6054599a44692514188d9ee514d10b7987d7cffd3b8d5f57a9ad0e6284ed"
+    },
+    {
+      "path": "tests/screenshots/v8-deck-starboard.png",
+      "bytes": 475985,
+      "mtime_ns": 1792067041479255158,
+      "sha256": "be68205b0a317b434dc02537bbfe578e420d119acf7bf2987b04734daa884210"
+    },
+    {
+      "path": "tests/screenshots/v9-deck-left.png",
+      "bytes": 388654,
+      "mtime_ns": 1790832228149833632,
+      "sha256": "355000e425cd1e34186fc3ec0a7b7525e4d2c6e5ac8c1178300ad9b4db5f2615"
+    },
+    {
+      "path": "tests/screenshots/v9-deck-port.png",
+      "bytes": 439433,
+      "mtime_ns": 1792067042361187519,
+      "sha256": "f4e82373fe806821d6aa0e585043c97a684b170827fba4ae20b1f65c645d4204"
+    },
+    {
+      "path": "tests/smoke.mjs",
+      "bytes": 3231,
+      "mtime_ns": 1790826271662797730,
+      "sha256": "7ec6b61dd073de37aa1f66c37e5e7b489c23c54a104655ea91b3dc84c1d17d74"
+    },
+    {
+      "path": "tests/stairFlights.mjs",
+      "bytes": 9388,
+      "mtime_ns": 1792067762529874462,
+      "sha256": "a1babd4507da0a1af7c443a82f2cba112a9d8a6c99381b93c0c7980cb1143468"
+    },
+    {
+      "path": "tests/visual.mjs",
+      "bytes": 3239,
+      "mtime_ns": 1790889739676231813,
+      "sha256": "4cf03a21e4bbd9b7f7cf1df9a61915a988b89c4d34e1983670c132713a59840d"
+    },
+    {
+      "path": "tools/build_assets.py",
+      "bytes": 52008,
+      "mtime_ns": 1791988946795331190,
+      "sha256": "7215d48afdbd106396a0f7f36d42017732d49aeb694c8202dc472788c58c4f7f"
+    },
+    {
+      "path": "tools/collision_glb.py",
+      "bytes": 2361,
+      "mtime_ns": 1790883228530021415,
+      "sha256": "a4a52aeb2bd32ce6c0196579e8f9f69ca987103a91b0452505473d4d32f40e4a"
+    },
+    {
+      "path": "tools/exterior_audit.mjs",
+      "bytes": 6248,
+      "mtime_ns": 1790955187359665439,
+      "sha256": "3d8c775ca80c78df43fbfb539115e1068083db2ef5bf237e7b551d96ea6d13ff"
+    },
+    {
+      "path": "tools/exterior_plates.py",
+      "bytes": 3130,
+      "mtime_ns": 1790893711814369242,
+      "sha256": "8098db6764f900e28da2a47936524b13d1ab6a9c2d12c3123e5bb3576eef6ff7"
+    },
+    {
+      "path": "tools/fore_walk_review.mjs",
+      "bytes": 3244,
+      "mtime_ns": 1790984590148841185,
+      "sha256": "c73fb96db301c4f9abc80d8c29cf8d1ef31135c41aeec48940fb036aec587c02"
+    },
+    {
+      "path": "tools/interior_audit.mjs",
+      "bytes": 5303,
+      "mtime_ns": 1792064839626816356,
+      "sha256": "d403037ad42c5a12d5770816a8a8ca06e3820f7bba899b85096dede9e22f6232"
+    },
+    {
+      "path": "tools/sunny_accuracy.py",
+      "bytes": 121070,
+      "mtime_ns": 1791909204323226081,
+      "sha256": "702d87a5426f6b15957b166258f81862ea441b9d65198e187b9eb8537c5c34fd"
+    },
+    {
+      "path": "tools/sunny_accuracy.py.orig",
+      "bytes": 115399,
+      "mtime_ns": 1791150851648367104,
+      "sha256": "e9ca3d327ffa15ae9cb5a49108019207aef46c31bdad23d824eaa35785e6d982"
+    },
+    {
+      "path": "tools/sunny_aft_envelope.py",
+      "bytes": 36534,
+      "mtime_ns": 1792120201944220140,
+      "sha256": "5eba3ccbc23ee2f9d15a8c145c40cf89c2c3de48cab403df493be5e29c7e0546"
+    },
+    {
+      "path": "tools/sunny_details.py",
+      "bytes": 8944,
+      "mtime_ns": 1791994138861389189,
+      "sha256": "8718ad8b88303c1ee919e55a66d1e22126f97c8dc03e4e3baa12d49b3343f19b"
+    },
+    {
+      "path": "tools/sunny_exterior.py",
+      "bytes": 69951,
+      "mtime_ns": 1792673130307539286,
+      "sha256": "8d47fd438c2d60f3cb07dad7c27e32000037c84b85bc52bb937ff057d31918bc"
+    },
+    {
+      "path": "tools/sunny_interiors.py",
+      "bytes": 84521,
+      "mtime_ns": 1791994257097205567,
+      "sha256": "1f87df4afedbc83e7c72a60e5c5be7def49bd0e67f3057e760c94259cfa60f45"
+    },
+    {
+      "path": "tools/sunny_room_accuracy.py",
+      "bytes": 26813,
+      "mtime_ns": 1792064396697934860,
+      "sha256": "e79a49b54309be182147af39d9f28656248df00fa78314d1d4a82a059ca57344"
+    },
+    {
+      "path": "tools/sunny_room_details.py",
+      "bytes": 5382,
+      "mtime_ns": 1791994138829697063,
+      "sha256": "f6c7281f68fecd4c20f619f8d640dc19d174670c50e63523660c8fee33d2312a"
+    },
+    {
+      "path": "tools/sunny_surfaces.py",
+      "bytes": 7050,
+      "mtime_ns": 1791150635089688974,
+      "sha256": "346060626240e1fba99486d0cc9829f0ea4af0dbdb7cdd61fd38c7a1cca7eb25"
+    },
+    {
+      "path": "tools/sunny_uv.py",
+      "bytes": 8975,
+      "mtime_ns": 1790955402141205365,
+      "sha256": "5382d2beec8e6f927ca5a76d203ffb01651a6241800ef6f0ecfc93fae9c99684"
+    },
+    {
+      "path": "vite.config.js",
+      "bytes": 231,
+      "mtime_ns": 1790825753530718586,
+      "sha256": "5c8e76f1d69e66b0b04b54da032d1dac1248420b116c0c42b11232ed9567e079"
+    }
+  ]
+}

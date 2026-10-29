@@ -4,13 +4,13 @@ Use the current whole-ship audit; these earlier instructions are history only.
 
 # Current status — model trial finished, October28,2026
 
-General ship work remains STOPPED. The bounded Sol/C01 versus Terra/C02 experiment is complete as an assessment: both outputs partial/unmerged, original findings not closed. Read [the compact result/recommendation](model-comparison-20261026.md). Sol leaves visible upper storage trim and strict-test failures; Terra clears both sampled/visible linings but full containment/travel proof remains unverified. Original runtime/model inputs are preserved; no automatic repair, merge or texture resumption. Earlier active queues below are historical.
+General ship work remains STOPPED. The bounded Sol/C01 versus Terra/C02 experiment is complete as an assessment: both outputs partial/unmerged, original findings not closed. Read [the compact result/recommendation](../model-comparison-20261026.md). Sol leaves visible upper storage trim and strict-test failures; Terra clears both sampled/visible linings but full containment/travel proof remains unverified. Original runtime/model inputs are preserved; no automatic repair, merge or texture resumption. Earlier active queues below are historical.
 
 ---
 
 # Current authority — October26,2026
 
-Sukhjot authorized section-by-section whole-ship blueprint repairs after the interior texture verification gate. Start at [the sole live checkpoint](whole-ship-blueprint-audit.md): IF03/IF04 current, C01 next, then structural dependencies and remaining59 findings. Preserve completed materials/controls and unresolved U09/U11 choices. Older “construction paused” and active-run records below are historical, not the current queue.
+Sukhjot authorized section-by-section whole-ship blueprint repairs after the interior texture verification gate. Start at [the sole live checkpoint](../whole-ship-blueprint-audit.md): IF03/IF04 current, C01 next, then structural dependencies and remaining59 findings. Preserve completed materials/controls and unresolved U09/U11 choices. Older “construction paused” and active-run records below are historical, not the current queue.
 
 ---
 
@@ -20,13 +20,13 @@ Sukhjot’s latest instruction authorizes interior texture/material work now. Se
 
 # Current phase — exterior and water verification
 
-Sukhjot's latest instruction supersedes the earlier construction-first order: UI01/M01 cannon verification is finished. Construction is paused while realistic EXTERIOR materials and WATER are completed. The exterior/water material pass is ready for review: full19/19 suites/build PASS, all79 inputs unchanged, terminal2026-10-23T12:16:33Z. See `docs/exterior-material-review.md` for current views and scope. C01 was never applied to production; its completed plan/private studies are retained for later. Interior textures wait for a later stage after exterior review. **Use [the current checkpoint and EX01–EX07 in the whole-ship report](whole-ship-blueprint-audit.md) as the sole active queue.** All older records below are historical.
+Sukhjot's latest instruction supersedes the earlier construction-first order: UI01/M01 cannon verification is finished. Construction is paused while realistic EXTERIOR materials and WATER are completed. The exterior/water material pass is ready for review: full19/19 suites/build PASS, all79 inputs unchanged, terminal2026-10-23T12:16:33Z. See `docs/exterior-material-review.md` for current views and scope. C01 was never applied to production; its completed plan/private studies are retained for later. Interior textures wait for a later stage after exterior review. **Use [the current checkpoint and EX01–EX07 in the whole-ship report](../whole-ship-blueprint-audit.md) as the sole active queue.** All older records below are historical.
 
 ---
 
 # Section progress — current authority
 
-Sukhjot authorized sequential whole-ship audit repairs and an early universal cannon panel. **Start/resume from [the live progress section in the whole-ship report](whole-ship-blueprint-audit.md).** It lists every finding status, active task, exact next task, decisions and evidence. The records below are historical checkpoints, not an instruction to restart the old garden repair or a competing queue.
+Sukhjot authorized sequential whole-ship audit repairs and an early universal cannon panel. **Start/resume from [the live progress section in the whole-ship report](../whole-ship-blueprint-audit.md).** It lists every finding status, active task, exact next task, decisions and evidence. The records below are historical checkpoints, not an instruction to restart the old garden repair or a competing queue.
 
 ---
 

@@ -1,0 +1,57 @@
+{
+  "time": "2026-10-22T17:00:00.795876+00:00",
+  "browserLog": "docs/review/cannon-ui-focused-20261022/cannon-ui-browser.log",
+  "logicLog": "docs/review/cannon-ui-focused-20261022/cannon-ui-logic.log",
+  "buildLog": "docs/review/cannon-ui-focused-20261022/cannon-ui-build.log",
+  "images": [
+    {
+      "path": "docs/review/cannon-ui-focused-20261022/cannon-ui-empty.png",
+      "sha256": "af01096dc64dfcd82a02efe37398e4fd09f6dc62804995f1e0a09a0e5ab1b3b5",
+      "inspected": true,
+      "notice": "Personally inspected current rendered UI; ordinary control actions proven separately in cannon-ui-results.json."
+    },
+    {
+      "path": "docs/review/cannon-ui-focused-20261022/cannon-ui-fly-narrow.png",
+      "sha256": "c543f6b6909bdca91bed7e821db9b96b396ceb1fb57cab36fad8923ca68fcc63",
+      "inspected": true,
+      "notice": "Personally inspected current rendered UI; ordinary control actions proven separately in cannon-ui-results.json."
+    },
+    {
+      "path": "docs/review/cannon-ui-focused-20261022/cannon-ui-inspect-fired.png",
+      "sha256": "7ef35d332306938900c40de39c5470f87e6a229ff253080b9cbd11b288584a77",
+      "inspected": true,
+      "notice": "Personally inspected current rendered UI; ordinary control actions proven separately in cannon-ui-results.json."
+    },
+    {
+      "path": "docs/review/cannon-ui-focused-20261022/cannon-ui-inspect-open.png",
+      "sha256": "d03a320ead5c0bd27cfc6936e0b20b01b42a48869024f35db74abf6c88cdc8c2",
+      "inspected": true,
+      "notice": "Personally inspected current rendered UI; ordinary control actions proven separately in cannon-ui-results.json."
+    },
+    {
+      "path": "docs/review/cannon-ui-focused-20261022/cannon-ui-spawn-fired.png",
+      "sha256": "2749f342ef2a3268aed0d3b01c87128c20c5c47c493bfa2535dd9e263d5a8ade",
+      "inspected": true,
+      "notice": "Personally inspected current rendered UI; ordinary control actions proven separately in cannon-ui-results.json."
+    },
+    {
+      "path": "docs/review/cannon-ui-focused-20261022/cannon-ui-spawn-open.png",
+      "sha256": "c5734dbaed1078902ebd708ef81750e208e88d57220e74b41fce231998cdd03f",
+      "inspected": true,
+      "notice": "Personally inspected current rendered UI; ordinary control actions proven separately in cannon-ui-results.json."
+    }
+  ],
+  "sourceReview": "React checklist: focused native buttons, pressed/expanded/described state, live feedback, cleaned-up Escape listener, pointer-lock and movement arbitration, stable hook order, no render-time mechanism mutation; derived availability from store. No extra libraries.",
+  "preservedFocusedDirectory": "docs/review/cannon-ui-focused-20261022",
+  "notice": "Focused evidence preserved before the full runner repeats and overwrites its conventional output paths. Current full-run evidence remains separate.",
+  "aggregate": {
+    "status": "docs/review/cannon-ui-full-20261022T165959Z/status.json",
+    "testExit": 0,
+    "buildExit": 0,
+    "suitesPassed": 18,
+    "suitesTotal": 18,
+    "changedInputs": [],
+    "finished": "2026-10-22T18:04:30.017Z",
+    "preservedCoreEvidence": "docs/review/cannon-ui-full-20261022T165959Z/cannon-evidence"
+  }
+}

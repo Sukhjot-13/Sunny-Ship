@@ -1,0 +1,58 @@
+{
+  "notice": "Candidate computed solely in memory from existing exported triangles. It is NOT an implemented repair, master edit, publication or route proof. Reject if exterior guard changes first hits.",
+  "beforeTriangles": 44171,
+  "candidateTriangles": 44240,
+  "maskCount": 251,
+  "remainingIntrusiveSamples": [
+    {
+      "level": "F1",
+      "triangles": 0
+    },
+    {
+      "level": "F2F",
+      "triangles": 0
+    },
+    {
+      "level": "B1-forward-store",
+      "triangles": 0
+    }
+  ],
+  "exactIntersections": [
+    {
+      "level": "F1",
+      "before": {
+        "triangles": 27,
+        "areaM2": 1.1972695693975095
+      },
+      "candidate": {
+        "triangles": 0,
+        "areaM2": 0
+      }
+    },
+    {
+      "level": "F2F",
+      "before": {
+        "triangles": 836,
+        "areaM2": 48.66736261700153
+      },
+      "candidate": {
+        "triangles": 0,
+        "areaM2": 0
+      }
+    },
+    {
+      "level": "B1-forward-store",
+      "before": {
+        "triangles": 82,
+        "areaM2": 6.1657364217107045
+      },
+      "candidate": {
+        "triangles": 0,
+        "areaM2": 0
+      }
+    }
+  ],
+  "exteriorRays": 688,
+  "exteriorDifferences": 0,
+  "samples": []
+}

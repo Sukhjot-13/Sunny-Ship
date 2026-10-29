@@ -654,6 +654,57 @@ def helm_controls(objects, bounds):
             'log':[x+1.45,y+.55,z], 'targets':{'helm':list(centre),'selector':list(knob),'lever':[x+.38,y,z+.70],'log':[x+1.55,y,z+1.16]}}
 
 
+def dock_outlet_shell(side, centre, radius, outline, direction):
+    """Closed local aperture reveal from the actual lining to the retained rim.
+
+    This finishes the mouth's shell thickness only. The carousel chamber,
+    water-bearing channels and launch operation remain separate construction.
+    """
+    rows = {}
+    for x, y in outline:
+        rows.setdefault(x, []).append(y)
+    stations = sorted(rows)
+
+    def lining_y(x):
+        """Interpolate the existing fitted B1 perimeter at this actual station."""
+        for a, b in zip(stations, stations[1:]):
+            if a <= x <= b:
+                select = min if direction < 0 else max
+                t = (x-a)/(b-a)
+                return select(rows[a])*(1-t)+select(rows[b])*t-direction*.12
+        raise RuntimeError('Dock mouth extends beyond the actual B1 lining')
+
+    count, inner, outer = 96, radius-.16, radius+.08
+    vertices, faces = [], []
+    x, y, z = centre
+    for end in range(2):
+        for r in (inner, outer):
+            for i in range(count):
+                angle = i*math.tau/count
+                xx, zz = x+r*math.cos(angle), z+r*math.sin(angle)
+                yy = lining_y(xx) if end == 0 else y-direction*.10
+                vertices.append((xx, yy, zz))
+    def index(end, radial, i):
+        return (end*2+radial)*count+i%count
+    for i in range(count):
+        j = i+1
+        faces.extend((
+            (index(0,0,i),index(0,0,j),index(1,0,j),index(1,0,i)),
+            (index(0,1,j),index(0,1,i),index(1,1,i),index(1,1,j)),
+            (index(0,0,j),index(0,0,i),index(0,1,i),index(0,1,j)),
+            (index(1,0,i),index(1,0,j),index(1,1,j),index(1,1,i))))
+    obj = _mesh('DockOutlet_'+side, vertices, faces)
+    bm = bmesh.new(); bm.from_mesh(obj.data)
+    bmesh.ops.recalc_face_normals(bm, faces=list(bm.faces)); bm.to_mesh(obj.data); bm.free()
+    obj = finish(obj, 'DockOutlet_'+side, 'timber', obstacle=True)
+    # Reuse the retained mouth's metric UV/PBR timber finish dispatch.
+    obj['sunny_feature'] = 'Dock1'
+    obj['sunny_rail'] = True
+    obj['sunny_aperture_shell'] = True
+    obj['sunny_dock_outlet'] = side
+    return obj
+
+
 def rolling_dock(objects,bounds,cy):
     """D's timber shutter slats and changing numbers through a real hull aperture."""
     originals=[o for o in objects if o.name.startswith('Sunny_Dock1_shutter')]
@@ -661,6 +712,8 @@ def rolling_dock(objects,bounds,cy):
     discard(objects,lambda o:o.name.startswith(('Sunny_Dock1_','Sunny_DockNumber','Sunny_Paddle')))
     result=[]
     radius=7.8
+    floor = next(o for o in objects if o.name == 'Sunny_InteriorFloor_lower')
+    outline = [tuple((floor.matrix_world @ v.co)[:2]) for v in floor.data.vertices]
     for p in stations:
         direction=-1 if p.y<cy else 1
         side='port' if direction<0 else 'starboard'
@@ -674,6 +727,27 @@ def rolling_dock(objects,bounds,cy):
                 lo, hi = bounds(obj)
                 depth = (y-3.0, y+3.0) if obj.name == 'Line002' else (lo.y-.01, hi.y+.01)
                 circular_cut(obj,p,radius,1,*depth,32)
+        # Cut the independently authored B1 lining through the same aperture.
+        for obj in list(objects):
+            if not obj.name.startswith('Sunny_InteriorWall_B1_'):
+                continue
+            obj_bounds = bounds(obj)
+            if obj_bounds is None:
+                continue
+            lo, hi = obj_bounds
+            if (hi.x < x-radius or lo.x > x+radius or
+                hi.z < z-radius or lo.z > z+radius or
+                (direction < 0 and lo.y > cy) or
+                (direction > 0 and hi.y < cy)):
+                continue
+            circular_cut(obj, p, radius, 1, min(cy, y)-1, max(cy, y)+1, 32)
+            if not obj.data.polygons:
+                objects.remove(obj)
+                bpy.data.objects.remove(obj, do_unlink=True)
+                continue
+            # Build collision from the retained faces, not the original bounds.
+            obj['sunny_rail'] = True
+        dock_outlet_shell(side, p, radius, outline, direction)
         ring('Dock1_rim',(x,y+direction*.09,z),radius+.28,.59,'black','Y',64,10)
         ring('Dock1_reveal',(x,y-direction*.18,z),radius-.08,.16,'darkwood','Y',64,8)
         count=32
@@ -715,7 +789,8 @@ def rolling_dock(objects,bounds,cy):
             ob['sunny_paddle']=side;ob['sunny_pivot']=list(pivot);ob['sunny_dynamic']=True
             ob=box('Paddle_blade_'+side,tip,(1.3,.92,.25),'deck');ob.rotation_euler.y=t
             ob['sunny_paddle']=side;ob['sunny_pivot']=list(pivot);ob['sunny_dynamic']=True
-        result.append({'side':side,'centre':list(p),'radius':radius,'rollRadius':.43,'slats':count})
+        result.append({'side':side,'centre':list(p),'radius':radius,'rollRadius':.43,'slats':count,
+                       'outletShell':'Sunny_DockOutlet_'+side,'clearRadius':radius-.16})
     return result
 
 

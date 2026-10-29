@@ -1,0 +1,78 @@
+{
+  "notice": "Both actual normal-full-body closed-mouth stops PASS on final product assets. Later test approach to selected bay stopped at existing stair rail; this is preserved separately and open phase is retried from clear circulation floor.",
+  "hashes": {
+    "sunny.glb": "716d89824bb63d1dfe2f8b145ade81c35d9cdd4dfc1978350682e180ea8cff10",
+    "sunny-collision.glb": "aac7150f403ded4ec81bfaecc8877555dc5e748e063be5be875975d4e100b7cd",
+    "ship-metadata.json": "87318580d39d8e36510a261b9dbff88cdb498b127674186926041ece5b48e757"
+  },
+  "trace": [
+    {
+      "phase": "closed shutter stop",
+      "side": "port",
+      "position": [
+        0.4950000026280035,
+        -43.766884613577716,
+        16.671844527304174
+      ],
+      "collision": true,
+      "state": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "phase": "closed shutter stop",
+      "side": "starboard",
+      "position": [
+        0.49500000000000144,
+        -43.74852611770839,
+        -19.245845839560033
+      ],
+      "collision": true,
+      "state": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    }
+  ]
+}

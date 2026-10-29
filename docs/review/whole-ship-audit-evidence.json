@@ -1,0 +1,1677 @@
+{
+  "timeUTC": "2026-10-22T13:53:28.570203+00:00",
+  "timeToronto": "2026-10-22T09:53:28.570203-04:00",
+  "scope": "Documentation/evidence only. No implementation, source/test, original/master/public asset, material/physics/control changes; no regeneration/server/full-suite launch.",
+  "implementationPreservation": {
+    "unchangedCount": 133,
+    "unexpectedInputChanges": [],
+    "changedPreexistingTestOutputs": [],
+    "notice": "tests/screenshots outputs may change because the preserved original full suite is running; not authored by this survey."
+  },
+  "servedAssets": [
+    {
+      "path": "public/models/sunny.glb",
+      "servedBytes": 45989016,
+      "sha256": "986080f794d8c99b074c48a01942a01e98d882a45a54b6a5a68e09ad4999397c",
+      "matchesDisk": true
+    },
+    {
+      "path": "public/models/sunny-collision.glb",
+      "servedBytes": 46018572,
+      "sha256": "59fe62724ce2d727237c4ebf1f32c0f65fd56464b8c201c1c2a9ae96bd2d4907",
+      "matchesDisk": true
+    },
+    {
+      "path": "public/models/ship-metadata.json",
+      "servedBytes": 1274177,
+      "sha256": "f8b75353c28b19b1e67db702b9ad3863520e28aa4af73da305ca589dbcc62394",
+      "matchesDisk": true
+    }
+  ],
+  "referenceImages": [
+    {
+      "path": "stuff/images/Sunnyworkroom.webp",
+      "sha256": "60915cf8f7a82918663be5ba96b08af03f0ea2848f98c20cafb520f7a863172c",
+      "inspection": "Personally opened and inspected original reference; matched to R01\u2013R25 register."
+    },
+    {
+      "path": "stuff/images/Thousand_Sunny%27s_Aquarium_Bar.webp",
+      "sha256": "914f76a94c67badbce16628746e9fd3d908fd1d6dfb676080d5a8096ea4374f7",
+      "inspection": "Personally opened and inspected original reference; matched to R01\u2013R25 register."
+    },
+    {
+      "path": "stuff/images/Thousand_Sunny%27s_Crow%27s_Nest_and_Survey_Room.webp",
+      "sha256": "19077e36506a7301aa79ea51ea14919769c686e7e551afcc9a3e55fa3b9f006a",
+      "inspection": "Personally opened and inspected original reference; matched to R01\u2013R25 register."
+    },
+    {
+      "path": "stuff/images/Thousand_Sunny%27s_Figurehead%2C_Helm%2C_and_Anchors.webp",
+      "sha256": "d647e8d47dc9a1452a2a69847404fca11a21bcbfb4142f00519a135986e989ca",
+      "inspection": "Personally opened and inspected original reference; matched to R01\u2013R25 register."
+    },
+    {
+      "path": "stuff/images/Thousand_Sunny%27s_Kitchen%2C_Dining_Room%2C_and_Sick_Bay.webp",
+      "sha256": "630186543a6ba648a24d31ffc1ee33d3f0b88c2a44ef875542d51cdc110f6492",
+      "inspection": "Personally opened and inspected original reference; matched to R01\u2013R25 register."
+    },
+    {
+      "path": "stuff/images/Thousand_Sunny%27s_Library%2C_Workrooms%2C_and_Bathhouse.webp",
+      "sha256": "09ab64fce33988dc35bb5c542ea48c03193aebeaecf43006e2475d031c43b180",
+      "inspection": "Personally opened and inspected original reference; matched to R01\u2013R25 register."
+    },
+    {
+      "path": "stuff/images/Thousand_Sunny%27s_Men_and_Woman_Quarters.webp",
+      "sha256": "2cbccc4e1c6e28a78189d7e82aa84f53e1ea152b180173969e26ed494cd83218",
+      "inspection": "Personally opened and inspected original reference; matched to R01\u2013R25 register."
+    },
+    {
+      "path": "stuff/images/Thousand_Sunny_Digitally_Colored_Manga.webp",
+      "sha256": "ff2a75471798d35efcd8cec3282447075c69f1aa1c19a1747611492d28486091",
+      "inspection": "Personally opened and inspected original reference; matched to R01\u2013R25 register."
+    },
+    {
+      "path": "stuff/images/Thousand_Sunny_Infobox.webp",
+      "sha256": "05350db9df7b30f66f5f4153816a3b89c9d43dd0e09766c4163d9f11e6f85adf",
+      "inspection": "Personally opened and inspected original reference; matched to R01\u2013R25 register."
+    },
+    {
+      "path": "stuff/images/Thousand_Sunny_pg.126.webp",
+      "sha256": "c1a64ed24c5380888c5346dbae75b0d692e0402f87218682c1218710327e9944",
+      "inspection": "Personally opened and inspected original reference; matched to R01\u2013R25 register."
+    },
+    {
+      "path": "stuff/images/Thousand_Sunny_pg.192-193.webp",
+      "sha256": "fe7ce8bcf670613099dd9c5f3d47e08a8f1d2dc76166c35fa6517582fdd54e87",
+      "inspection": "Personally opened and inspected original reference; matched to R01\u2013R25 register."
+    },
+    {
+      "path": "stuff/images/Thousand_Sunny_pg.26.webp",
+      "sha256": "ee5b506135ee307d75cd5a1317d76c132979b95c52d57a377920711fe1cca5c3",
+      "inspection": "Personally opened and inspected original reference; matched to R01\u2013R25 register."
+    },
+    {
+      "path": "stuff/images/Thousand_Sunny_pg.46.webp",
+      "sha256": "dc10b0b4b194269cd7a4b0b3df26763cfc5563ee9b19feb2e5ddf2127291b292",
+      "inspection": "Personally opened and inspected original reference; matched to R01\u2013R25 register."
+    },
+    {
+      "path": "stuff/images/Thousand_Sunny_pg.66.webp",
+      "sha256": "eebdc31ddcb7e52c9412a4d303440b0c529700e7b5881ecb2b9de5bbfbf3d6a7",
+      "inspection": "Personally opened and inspected original reference; matched to R01\u2013R25 register."
+    },
+    {
+      "path": "stuff/images/Thousand_Sunny_pg.86.webp",
+      "sha256": "940e6e5f375eb7c98badbf5b5ec247a5a79c69599f1a608f77714e79b02e1e18",
+      "inspection": "Personally opened and inspected original reference; matched to R01\u2013R25 register."
+    },
+    {
+      "path": "stuff/images/Thousand_sunny_aquarium_bar.webp",
+      "sha256": "72e87d56de790f671f888c1058b6684dbe19b397a3896a7d5d1fa3d497d5200f",
+      "inspection": "Personally opened and inspected original reference; matched to R01\u2013R25 register."
+    },
+    {
+      "path": "stuff/images/Thousand_sunny_bathroom.webp",
+      "sha256": "7d65be2b7f6ad258196f4db932543787ad24320e785c1c1cbb49904b1dc08d5a",
+      "inspection": "Personally opened and inspected original reference; matched to R01\u2013R25 register."
+    },
+    {
+      "path": "stuff/images/Thousand_sunny_boys_room.webp",
+      "sha256": "4a1988e10fe43e64e4a4ba7e64a765dec2fded42ecc90a7cb53dc586198e16d2",
+      "inspection": "Personally opened and inspected original reference; matched to R01\u2013R25 register."
+    },
+    {
+      "path": "stuff/images/Thousand_sunny_crows_nest.webp",
+      "sha256": "b80428592ed24a182286975fab8ec751871bfd8eb1410ccb71159fcf3faf5a7b",
+      "inspection": "Personally opened and inspected original reference; matched to R01\u2013R25 register."
+    },
+    {
+      "path": "stuff/images/Thousand_sunny_girls_room.webp",
+      "sha256": "bbcda06c4e71d3166876c457138194c9d8d0e69c0727d6be3adbf23eb314d84a",
+      "inspection": "Personally opened and inspected original reference; matched to R01\u2013R25 register."
+    },
+    {
+      "path": "stuff/images/Thousand_sunny_kitchen.webp",
+      "sha256": "142a8e2acdaf804b9f5f90c885efc22004dd3121c3092a9d212e589b977654eb",
+      "inspection": "Personally opened and inspected original reference; matched to R01\u2013R25 register."
+    },
+    {
+      "path": "stuff/images/Thousand_sunny_library.webp",
+      "sha256": "fe8e85e7f1b4b4ad7bb150e2f36c11f07f66444dcfcb9f0c25a81cd790f306a3",
+      "inspection": "Personally opened and inspected original reference; matched to R01\u2013R25 register."
+    },
+    {
+      "path": "stuff/images/Thousand_sunny_sick_bay.webp",
+      "sha256": "d2609e52cd287012ee909d8b4a372567344196d5b58f4959a9ae0913c5dd4975",
+      "inspection": "Personally opened and inspected original reference; matched to R01\u2013R25 register."
+    },
+    {
+      "path": "stuff/images/Thousand_sunny_usopp_factory.webp",
+      "sha256": "9311ea5b5d69a98cbafcd34db50f4fe45078316f14be6f911bf1fdc7046dbb7a",
+      "inspection": "Personally opened and inspected original reference; matched to R01\u2013R25 register."
+    },
+    {
+      "path": "stuff/images/Usopp%27s_Garden_of_Pop_Greens.webp",
+      "sha256": "dcb5955f3cd665e5c4dda9937fa3b30518c019f51fb6c4dc57dd73cde19dcaf1",
+      "inspection": "Personally opened and inspected original reference; matched to R01\u2013R25 register."
+    }
+  ],
+  "images": [
+    {
+      "path": "docs/review/whole-ship-audit-anchor-port.png",
+      "sha256": "74d9a06ede3920a13c47d06e9fde98061b57e72ee7b90c0999469f9eb5242e57",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-anchor-starboard.png",
+      "sha256": "5b23de176a6bf9ebadb3aec170b71f70bc79afd2e7be00c8dcf58b0c219456e5",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-aquarium-entrance.png",
+      "sha256": "d6e5968e7b4eaf0a08c11a898eb3fa412ba818f864083f1e00334c70e0fe5453",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-aquarium-lift.png",
+      "sha256": "29508652eabb0bff28ad33d4e0423b7c33a680daf3920c41ef14476270960b39",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-aquarium-overhead.png",
+      "sha256": "e548a03801972b2c490366cffd58b5dfffa4d38e6f01012ba60874936be3fd17",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-aquarium-reverse.png",
+      "sha256": "97c367ca116fed27ef91635d69fdb4f216fee5a83d8ab47a71a990e045408ff2",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-bath-reverse.png",
+      "sha256": "543c73187aae233b309aedbfb3f9155e6bb1a32855bd4b241eb8526865267c46",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-bath-wc-wide.png",
+      "sha256": "2cd536bdeb2ee85e9b25f53bb1d9c7a3c046fc58c0219932215985ff211b893f",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-cannon-men-port.png",
+      "sha256": "70057a93b543119f075b302fb4819398993dd7347cf63baf1d4a8680171fc4b0",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-cannon-men-starboard.png",
+      "sha256": "83eef5aa0c44adbde83b9a28202928e3b8f55c670b303f12df21e0b45577d1a1",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-cannon-women-port.png",
+      "sha256": "108bef9f2ce876be5b7e5082da71a211b1f54c87d1219f20047b610e0044c9bd",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-cannon-women-starboard.png",
+      "sha256": "aca630de1699ccdaf7030c925b366232fdccca503bb9a277e60d307264661a49",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-dining-reverse.png",
+      "sha256": "24648c91dcdffad140d5b1a7bd99400c2ff3d5878fe5251007d8ae443fd26388",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-dining-stair-enclosure.png",
+      "sha256": "b0c1e7cedc0083d46c60ee41f13c4bc8aa5fa2651ae0310b43d2c33af438e343",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-dock-centre.png",
+      "sha256": "f4c104270abacf96aa2972a187bb63578dafd9ef97dc5fc691ee581b70fc9d42",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-dock-hatch-closed.png",
+      "sha256": "044d847915411c69a3dfbc16107c684e404c8da31081c1a0a97ed84bc12615bb",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-dock-waiting.png",
+      "sha256": "458b85fca5776c12d3548026c7f0149062d4e74718bd73c0e394e5db22cf5327",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-energy-front.png",
+      "sha256": "c27a2254d089ea1dbf650a83fa0e9ea2e4e05375f908c6d815f865208c86ad1d",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-exterior-bow-quarter.png",
+      "sha256": "470c43e643cd4a054c75042e1687462759e7cc54ea1841ec451d167920d58de6",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-exterior-front.png",
+      "sha256": "a6c619cd0812cc894aaa6923041e6759f5f8f5802dbc060b3857d5cacb2f7089",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-exterior-garden.png",
+      "sha256": "61e2124f5d75a196ba7b35807a6c12188dd79354965ab04a11842dfd4012dbc1",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-exterior-lookout.png",
+      "sha256": "a5f02392d894d10fd5d4afe9d6a85e89b21a596bbb9e7ef4063089ba1129051d",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-exterior-port.png",
+      "sha256": "c720f497f0a49dc12f38fe84dfd5e8c67bfc86c9e66561de53746c799868cd64",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-exterior-starboard.png",
+      "sha256": "ca33d3846815b5aea79f6ca7631efbb5547f497e6d98dbc3c3fb8047ebbdbabb",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-exterior-stern-quarter.png",
+      "sha256": "b8c5fbcfacb5777a02bd029d5e0fd33eaabb258344973b851245ff0c44360af5",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-exterior-stern.png",
+      "sha256": "3c942f4fa4f04a33197ef85dda827dc2eaf3a2deaec984d84ca0709519c2c099",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-exterior-top.png",
+      "sha256": "5d38e2a1a990d3f2b852b783757cc69e8f617c23c84a065c8f596349b80e3405",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-extra-aquarium-hatch.png",
+      "sha256": "3c88e03534621253ffa01e1fc0da5f21b8765ea0d9a28dfcda601a705e17f390",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-extra-bow-side.png",
+      "sha256": "193f32ff105739ce16c5cbec8450e82b35c3ed8675c8c56663564b3cc230e9a0",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-extra-curtains-directed.png",
+      "sha256": "b513f9a57a2e25424546c4dde0891c0a9c3f10f6118548e1b331db7fa68618df",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-extra-curtains.png",
+      "sha256": "3efd25100534aac54463d410d9d765d836a89d0ca526e29a2c17ad0e8e5fe4e9",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Camera against mast; replaced by extra-curtains-directed."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-extra-kotatsu.png",
+      "sha256": "18971b036f7de711da1ecc1b315f3f38f5a571ed6a439549ccd04d53e47fe116",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-extra-lockers.png",
+      "sha256": "e8f6499b791196dcb55d10770313eb4997aed770c1243b9731014ce99fcb8ad7",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-extra-lookout-ladder.png",
+      "sha256": "577fd97b35db39ecf29469ac811e4ff9c797b6e711d6d5c53b439e2d3418e642",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-extra-office.png",
+      "sha256": "769d19361706d1dae41cfdb360fe061b8bc29b589aacdf4d095c739246dc5b57",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-extra-popgreens.png",
+      "sha256": "9c5ccfe54d2e84488bb83b0891609e1ca416fe47ee5d7102468596853145d2bf",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-extra-robin.png",
+      "sha256": "b864904749b59bab05d2a6bc831d7b117d6670dbcf3cb513254d2b008b77fc5d",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-extra-swing.png",
+      "sha256": "0ef5ae8c2ba5dc884217ecf9fe80021de27955bf5c9c31f238dfb463e61cabcf",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-extra-toilet-port.png",
+      "sha256": "27c17937ddeca309f918ce5e25514621fd4e3ab2679ee69b609684d90e338470",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-extra-toilet-starboard.png",
+      "sha256": "36ec4930024605618c36e64410a913298a134a456bc90f62423e60bd78e4f0b7",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-extra-women-furniture.png",
+      "sha256": "eb94dd2a9d6e4a6de5757b51e39237eeceb48bdcffdab207e39f831a0e6dfe1a",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-factory-reverse.png",
+      "sha256": "b1449eb6d603d17c85b82af1e60b9f71c2e6681858cf99c9087bc18c3250b7d8",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-figurehead-close.png",
+      "sha256": "e84039377740de788f0e5f152eb14168df120d63845da8cd82133a910b6aa004",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-fore-toilet-port.png",
+      "sha256": "288f398ed28479a7f856ae9797c86d06ebe66610970c5d9b3aa51a7686bf2935",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Stair-obscured exterior approach; interior replaced by extra-toilet-port."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-fore-toilet-starboard.png",
+      "sha256": "f34d9d9ae50ff9998426ebad913ababc33f6e6d80050e06e51cd5ecdcba51cc1",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Stair-obscured exterior approach; interior replaced by extra-toilet-starboard."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-gallery-slide.png",
+      "sha256": "07002bd068bf8aab6a1da28b983dea98cf75b5e470b5f1415b539bc54cbefc30",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-garden-library.png",
+      "sha256": "9a71e6c241d26a3c4b7280ce69af3db0dc4f7078fd28ac511d7e0ca2bbb7592e",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-garden-office.png",
+      "sha256": "c270f21d095dfb10822add44c881f05a2945f3e42e5035bcd37c975f07357637",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-garden-plants.png",
+      "sha256": "fb5eef9ffb47e2ed0b179089502d64c09f70dd4183f6b1b98e4fe49f9cbd52ff",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-helm-inspect.png",
+      "sha256": "0e7849ba8e13898970d57e5cdb46cad679c6dc3b9cbfa4b022fd094c50f0ef81",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-infirmary-reverse.png",
+      "sha256": "96c03ee103868c9a64db477235faa41b8e88455ab25d9d218ccc485a4d67841f",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-kitchen-reverse.png",
+      "sha256": "e74fa265281f04a8b453d1e4a8496d44dd9b786b1b3d4e7d84547ca2c3698dad",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-kitchen-stair-enclosure.png",
+      "sha256": "55d75eded2d5fe12f85b8ca2972da96e372e7199180a7b27159dbd95c331d86e",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-lawn-aft.png",
+      "sha256": "be30f3807302c952e261d010e38fc3d033098740c72f8658845a18783ece6657",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-lawn-fore.png",
+      "sha256": "18ab40b4c1902263b66d99f4bfd23e82f5a3d28967b00107916f383e7595bdd0",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-lawn-swing.png",
+      "sha256": "1f62976ffdac1cbdb644f2705a67e10448e725948ccd46b60cba0d7adb9712e4",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-library-reverse.png",
+      "sha256": "17b45866ad27e6c1557c723e364999b55a64c08994d430a40ef9dbeb982c4b5d",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-lookout-reverse.png",
+      "sha256": "970afe0b4ba5e8889098e0095c736adacce8ee9e9ec021a7447929c489dea282",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-mens-reverse.png",
+      "sha256": "5b8ae8842ff48e72c95d963525ecb17150406a35adacf621438d0b17601506d2",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Bunk occludes composition; not used for full-room acceptance."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-mens-wash-wide.png",
+      "sha256": "7365c78b020cebce5d0ea7c5961e30ab4b5aa9524985356ea54e8196461c672b",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-pantry-reverse.png",
+      "sha256": "ed493d08df67fda587d0c6e55154caff1a978a990cefbd7beb91fb054e2eff3a",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-rejected-chicken-close.png",
+      "sha256": "841fd9e0cc388080b3042f319d2a82fafb19f487c8316a085820a1fc0e252166",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "rejected control recording; audit helper render callback error; not application evidence"
+    },
+    {
+      "path": "docs/review/whole-ship-audit-rejected-control-helm-prompt.png",
+      "sha256": "4181152706f6e739b5ed7373796142e967bfcaa23f781015e4135b88c6208a2d",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "rejected control recording; audit helper render callback error; not application evidence"
+    },
+    {
+      "path": "docs/review/whole-ship-audit-rejected-control-help.png",
+      "sha256": "f1f4d414dc8984fb0f28de0ac6dbeb32bb8f8e43c5b6769e1b5deb34524155b6",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "rejected control recording; audit helper render callback error; not application evidence"
+    },
+    {
+      "path": "docs/review/whole-ship-audit-rejected-control-lever.png",
+      "sha256": "daa82b74c4bc6fb576c60b929cdee60085fd4b1c1de3c68443172ec7418e3042",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "rejected control recording; audit helper render callback error; not application evidence"
+    },
+    {
+      "path": "docs/review/whole-ship-audit-rejected-control-log.png",
+      "sha256": "363e765f5e6e830410226e9b89e2c28e2f4eb0f1b078d9e8629654098efea01c",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "rejected control recording; audit helper render callback error; not application evidence"
+    },
+    {
+      "path": "docs/review/whole-ship-audit-rejected-control-mouth-from-helm.png",
+      "sha256": "29d84bb8f68aeb999dca33cd943f0d0fc8915f4d81b25e36d7c8f7322b03c195",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "rejected control recording; audit helper render callback error; not application evidence"
+    },
+    {
+      "path": "docs/review/whole-ship-audit-rejected-control-selector.png",
+      "sha256": "232335459b61819b44ba885e3d7df5edaefda7876af6738e65902cd2c535765b",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "rejected control recording; audit helper render callback error; not application evidence"
+    },
+    {
+      "path": "docs/review/whole-ship-audit-rejected-dock-open-port.png",
+      "sha256": "fadbe4b7be576b3b9c3950a2859e8560decaf6fa595aa70fd1fa1a310775f9d4",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "rejected control recording; audit helper render callback error; not application evidence"
+    },
+    {
+      "path": "docs/review/whole-ship-audit-rejected-gaon-fire-close.png",
+      "sha256": "71af291204f0ae0a1b950063fbbdee57d735b9e2f7d66c6309d62f2721706b91",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "rejected control recording; audit helper render callback error; not application evidence"
+    },
+    {
+      "path": "docs/review/whole-ship-audit-rejected-mouth-open-close.png",
+      "sha256": "e5126b7c7bb2fabbb0826d99e5ef5c7b80ff7e5ff90904f7ca25eb69ee7f504a",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "rejected control recording; audit helper render callback error; not application evidence"
+    },
+    {
+      "path": "docs/review/whole-ship-audit-rigging-near.png",
+      "sha256": "9aca81e06718d81353d2dd0dad5f57e1bcd0b466018f78768dd12e609c1c41ac",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-room-aquarium-service.png",
+      "sha256": "218e92630bea24ab51b1168914d88fa8d0d521aefcf289e3c4c8b9d1062769d8",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-room-aquarium.png",
+      "sha256": "c069f2c90bb9353421ba793ffe6b1b74d9f727ffb4926e2fea486143f227de64",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-room-bath-toilet.png",
+      "sha256": "b83fbc5d32313b0b85faaea3fa55509848c31e01e6b6210514023208f10292f4",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-room-bath-washroom.png",
+      "sha256": "bda2a1ee2876a8b087e5b59f48f3280d93e6d16ae8e61ad7a23a62c8c3cc9604",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-room-bath.png",
+      "sha256": "a66a22e2089d04d4b7d0fcd8ed3b9c9e8a38ecc6094549362e3bdbb5666fa259",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-room-dining.png",
+      "sha256": "573a0b454d855f4128a25b4b1753df37e5c0540d6955d15bb46a9b201fb4e658",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-room-energy.png",
+      "sha256": "446640ffa97af9d3e3f282e90244be4b4a93b2071d4e7ab922a9a3905aa4dcf7",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-room-factory.png",
+      "sha256": "c5076cbf2e1fd98d64be38b8c5562ada3b69ad39b64f03d6fe68dc4d23b63939",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-room-infirmary.png",
+      "sha256": "b37c49a5632edb7824cee619a2187901da8e66cafbebac06df70a8f8d691ee6d",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-room-kitchen.png",
+      "sha256": "7b70ff6e93210fd4fce550a8d62de2d835f15d7c9b8e34b22017dc4325d1b607",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-room-library.png",
+      "sha256": "94422def8a18a7aec0bb1fbf3ebed1ece622425b3a49bd38ecb15eae516f7905",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-room-lookout.png",
+      "sha256": "b639c6d9cc91986a10adf82002e53a3490d46a8e8e187474140f11914c53f3cb",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-room-mens-port-cannon.png",
+      "sha256": "7410354eb4919dc0629157149dbcce1e4240706a22355cae451281a1696a2110",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Base utility does not frame cannon; replaced by directed cannon pose."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-room-mens-starboard-cannon.png",
+      "sha256": "052f39e5842e215a3f2e9a26e3c289c0031e66aace60d3ef10cf62ceb1b450e8",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Base utility does not frame cannon; replaced by directed cannon pose."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-room-mens-washroom.png",
+      "sha256": "b7516c32d4bb78d2623220da6e9e57baeebd7bcfda69af0afca9715947c5c424",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-room-mens.png",
+      "sha256": "eb79ac8e0a1d1a998d96f04a0e94e47ef76a40f88c3cb6aa9f46c55b739d7122",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-room-pantry.png",
+      "sha256": "9ee27a3f0f5a4e971aab750b9acd32979e20b6a866e90021fe36be5e66593a30",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-room-soldier-dock.png",
+      "sha256": "f4e8b3c4425b2b4374876abd1bd71401a5b920593c98796d3555a476de0244d8",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-room-storage.png",
+      "sha256": "799657f013699996d61125215c620bad0863bc277ecb11e2267f3985b39ec420",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-room-weapons.png",
+      "sha256": "38a07508c4636a5524100b3e2700ebb4dc94ac1effe87867b6eedc4877c2d87c",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-room-womens-port-cannon.png",
+      "sha256": "474d17504b12f03479e5234f4b2662f4bd54bb7cd04649a0f87ad2eab80573f8",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Base utility does not frame cannon; replaced by directed cannon pose."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-room-womens-starboard-cannon.png",
+      "sha256": "544b74231c20026ffa0bf6613b9ffb36248683c197cab32f29b45f8eb041636f",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Base utility does not frame cannon; replaced by directed cannon pose."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-room-womens-washroom.png",
+      "sha256": "2bf7da001916fc680c21f9885a90cf31c71e8ca359d45321fb1af2f4be1370ba",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-room-womens.png",
+      "sha256": "0d2720eebfa671e11adc06b0c60dc7559eac64883fc06d97ef33d14e80fda3b1",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-stern-barrel.png",
+      "sha256": "bcec4ee3c9c7187dc738cbb85da92e6b88f59900f5d85bb9c40607f2306c6368",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-title.png",
+      "sha256": "1ad517480c2d592ab9859040b519764c9bad25f21a4c30f6d99ae49cb91f24b9",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-vehicle-1.png",
+      "sha256": "dc6a5e535f90a4b782d1022f2b43c53a12d358e98095a2bbb28f336b7fd0c61d",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-vehicle-2.png",
+      "sha256": "73288b7d50df31c0b4b9880f44215f187ebfad99cc3fa62b8fcc75fcc1c8f15b",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-vehicle-3.png",
+      "sha256": "b4e20b31ff4f64cdb068a5b97d42bf6eb483d69c30f8ad09e7d9466a5415f7e6",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-vehicle-4.png",
+      "sha256": "3aadcb1e0b0d75972bb384ca163c4007cab9526bfe636faa0331d67a98c9a2d4",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-vehicle-5.png",
+      "sha256": "a2317c5e10f13fe966194519a312432ff24ed431cfca799f8073e908f6a6704d",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-vehicle-6.png",
+      "sha256": "418acd127d56fadc0326b8d56f1ca7d60a604bd3fdacc37aa2b9e3a0f9e35002",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-verified-chicken-close.png",
+      "sha256": "0b518503b3d32f0900e32de7a91b669f92e2fef774078fbd74d6b2e697949e9b",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-verified-control-helm-prompt.png",
+      "sha256": "7e68554573012f060d3487409d39d51c7d43c7cbb9c67e0defc40ba74fd47099",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-verified-control-help.png",
+      "sha256": "ab6c7388ba4c8676237db3a926b6946ec2ddc3e1f7a3fd86948d2895760f9989",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-verified-control-lever.png",
+      "sha256": "da6f155bdb049c586865aed411562a500083fb9433f1df651da16a77deb983f8",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-verified-control-log.png",
+      "sha256": "04a5d7593c334290b6c30c82d035161035982ce1b44061392e2ca06b24fe3f88",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-verified-control-mouth-from-helm.png",
+      "sha256": "27f4ac6fb62ca5412d4c44ff1a7999e3c9aeed796faee587b7e8dee60e8b7a68",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-verified-control-selector.png",
+      "sha256": "27177f1063fce0ba83fb5c548ef3554436088a93b7bea12593b1fe496d526c06",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-verified-dock-open-port.png",
+      "sha256": "95a09ac416a29139f55d2f7cd86b12edfa371309d5a0660afb642207c407812d",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-verified-gaon-fire-close.png",
+      "sha256": "b5f87cb315968b3e62d60492212ece6c576998862ae1e53b00e6cc1b51d358b0",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-verified-mouth-open-close.png",
+      "sha256": "452ac759410cefff958d85dd390f483b388440f415ad3ade90200a4abd493203",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-weapons-reverse.png",
+      "sha256": "ff6a9b8f48f8b8551b8156e00ac0441a341eb5ba569b774abf4ca4f41d040f13",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-womens-reverse.png",
+      "sha256": "3d026ece0f1a29d5199edd80169f443adaa90ae6149a34f3af978e03913d7fab",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-womens-wash-wide.png",
+      "sha256": "f915b3991c5c7b84b54c648cd9882b86ef7f326ece8fa23e5631687fb4f1024c",
+      "size": [
+        1440,
+        900
+      ],
+      "inspection": "Personally inspected; appearance only unless the functional trace explicitly supplies normal-input proof."
+    }
+  ],
+  "inspectionSheets": [
+    {
+      "path": "docs/review/whole-ship-audit-contact-detail-01.jpg",
+      "sha256": "c3f4fbaa40707e2d726b8ccf76628f713d35fe93491f525cca439742ce0fc5f9",
+      "inspection": "Personally inspected labeled sheet; originals retained."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-contact-detail-02.jpg",
+      "sha256": "457b5d93d48d2d0fca1e4a1314c3fe6d59387661104125deccb27377e62e75c0",
+      "inspection": "Personally inspected labeled sheet; originals retained."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-contact-detail-03.jpg",
+      "sha256": "d86c116fdd8307f72edc965f348c279469674032edbcb18846965753421fdc73",
+      "inspection": "Personally inspected labeled sheet; originals retained."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-contact-detail-04.jpg",
+      "sha256": "3e321cec096d7b782f1bf499db6cf22304d14e431f76656009f0dd7483f1d2da",
+      "inspection": "Personally inspected labeled sheet; originals retained."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-contact-detail-05.jpg",
+      "sha256": "141ce27d65463807c84b47849e032090308d2edda7811d252574c1eb121f8c43",
+      "inspection": "Personally inspected labeled sheet; originals retained."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-contact-detail-06.jpg",
+      "sha256": "7e74d02121b2a23a970ddff07e77a3b90353ad8fc3f9a4b8a3b90154f55d987a",
+      "inspection": "Personally inspected labeled sheet; originals retained."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-contact-detail-07.jpg",
+      "sha256": "080f573fe4b951b00cae2533bab8886d77748b79b4c825c9e6e935b770682a6e",
+      "inspection": "Personally inspected labeled sheet; originals retained."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-contact-detail-08.jpg",
+      "sha256": "eeb2bb7fac8225514a28257ad83080192fa83f8300c553e9532dbc60ee2be669",
+      "inspection": "Personally inspected labeled sheet; originals retained."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-contact-detail-09.jpg",
+      "sha256": "1139a82d53d459230f5ba8f24f67a5359c6252460f218221f82355343399d8f6",
+      "inspection": "Personally inspected labeled sheet; originals retained."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-contact-detail-10.jpg",
+      "sha256": "51a06dc7f18eb711be99feabb694ec1995583168f2600a770cd0d736ee4efe0e",
+      "inspection": "Personally inspected labeled sheet; originals retained."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-contact-detail-11.jpg",
+      "sha256": "dd02a1f7f39d391356a35896de0b85755114e24981f405c37393fe8d33a03ccd",
+      "inspection": "Personally inspected labeled sheet; originals retained."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-contact-detail-12.jpg",
+      "sha256": "d3496c0f57cb8c70d2ea90d00bf7709bedea9a1789e99ff85e3a397bb373350e",
+      "inspection": "Personally inspected labeled sheet; originals retained."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-contact-detail-13.jpg",
+      "sha256": "c932c17f326d1987b8b541e16dbfede651bf8fb8b56438c4f67d8776991e80a6",
+      "inspection": "Personally inspected labeled sheet; originals retained."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-contact-exterior-1.jpg",
+      "sha256": "5de7c40230dc88c3dfde1e8b60e198f5ddfca2302cfd92872b4e7a841338e316",
+      "inspection": "Personally inspected labeled sheet; originals retained."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-contact-exterior-2.jpg",
+      "sha256": "20f37c3898c0c9d9011ec67ec18ca61d248ed2ec066feb3f591d71f451485864",
+      "inspection": "Personally inspected labeled sheet; originals retained."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-contact-exterior-3.jpg",
+      "sha256": "439f6ea3d254a4388ff1de0303799bd7d3307ce9bbd6f8b611d9746a0ef609a1",
+      "inspection": "Personally inspected labeled sheet; originals retained."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-contact-final-01.jpg",
+      "sha256": "4cdb7855c1ef04a6429c4f395105bcfd664213a9aa693a65df8d54c3e1733579",
+      "inspection": "Personally inspected labeled sheet; originals retained."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-contact-final-02.jpg",
+      "sha256": "991a92d4d7a53c99a86255850d51b20ae87e9919f22a5da1fce3dbb0ad2326ef",
+      "inspection": "Personally inspected labeled sheet; originals retained."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-contact-final-03.jpg",
+      "sha256": "78a99f90801d2466124e18401b7e8c4efea0458d7d20a6b09c83788c861db1f8",
+      "inspection": "Personally inspected labeled sheet; originals retained."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-contact-final-04.jpg",
+      "sha256": "c25a983bba35170a6b57d6d07dd9ccb069e807dc2526aa7e98b22d7408763ad0",
+      "inspection": "Personally inspected labeled sheet; originals retained."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-contact-final-05.jpg",
+      "sha256": "882e7a556f031ed65e2e7fd3ab31cbea63ea587aa03bc5ee79c2f5e907e84419",
+      "inspection": "Personally inspected labeled sheet; originals retained."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-contact-final-06.jpg",
+      "sha256": "284a9639f6082255f2f93cfa370414df71e8459d9e4a3a313cdf2beb60ae9560",
+      "inspection": "Personally inspected labeled sheet; originals retained."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-contact-room-1.jpg",
+      "sha256": "d2dbf2744270372a75c0fd294f95439118eb0d6a66d51c506adff6607cd1058c",
+      "inspection": "Personally inspected labeled sheet; originals retained."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-contact-room-2.jpg",
+      "sha256": "ef10977b5fcd83e5f98784406937138d392f2f7bb53ed675ba2f832ee8feca0d",
+      "inspection": "Personally inspected labeled sheet; originals retained."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-contact-room-3.jpg",
+      "sha256": "19d13205b7afcbbe6a431e34c6e751feb2b1ba7837387f13e94f8af11794b360",
+      "inspection": "Personally inspected labeled sheet; originals retained."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-contact-room-4.jpg",
+      "sha256": "a6120132e88e0969433f06beb54fe5c976cd01d2d11468d18be35219a5ed0bb0",
+      "inspection": "Personally inspected labeled sheet; originals retained."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-contact-room-5.jpg",
+      "sha256": "bdc3b131aabff6edc1756661ef13f091d07042b00501f789dc3ff68891305293",
+      "inspection": "Personally inspected labeled sheet; originals retained."
+    },
+    {
+      "path": "docs/review/whole-ship-audit-contact-room-6.jpg",
+      "sha256": "505823002a1c47396af47e298341b03db9e89f44462a6cfc532788b0e6c37930",
+      "inspection": "Personally inspected labeled sheet; originals retained."
+    }
+  ],
+  "functional": {
+    "recording": "docs/review/whole-ship-audit-verified-functional.json",
+    "walkCheckpoints": 9,
+    "allWalkCheckpointsPass": true,
+    "actions": 14,
+    "errors": [],
+    "maximumRecoveryCount": 0
+  },
+  "preexistingRunner": {
+    "pid": 7019,
+    "stateAtProcessCheck": "active, suite 13; preserved with Vite 6782",
+    "sourceLog": "docs/review/oct22-enclosure-full-20261022T125944Z/test.log",
+    "snapshotLog": "docs/review/whole-ship-audit-inherited-test-snapshot.log",
+    "roomResults": [
+      {
+        "room": "Storage Room",
+        "passLogged": true
+      },
+      {
+        "room": "Soldier Dock System",
+        "passLogged": true
+      },
+      {
+        "room": "Usopp's Main Factory",
+        "passLogged": true
+      },
+      {
+        "room": "Franky's Weapon Development Room",
+        "passLogged": true
+      },
+      {
+        "room": "Energy Room",
+        "passLogged": true
+      },
+      {
+        "room": "Men's Quarters",
+        "passLogged": true
+      },
+      {
+        "room": "Men's Washroom",
+        "passLogged": true
+      },
+      {
+        "room": "Aquarium Service Passage",
+        "passLogged": true
+      },
+      {
+        "room": "Aquarium Bar",
+        "passLogged": true
+      },
+      {
+        "room": "Women's Quarters",
+        "passLogged": true
+      },
+      {
+        "room": "Women's Washroom",
+        "passLogged": true
+      },
+      {
+        "room": "Dining Room",
+        "passLogged": true
+      },
+      {
+        "room": "Kitchen",
+        "passLogged": true
+      },
+      {
+        "room": "Pantry",
+        "passLogged": true
+      },
+      {
+        "room": "Sick Bay",
+        "passLogged": true
+      },
+      {
+        "room": "Library",
+        "passLogged": true
+      },
+      {
+        "room": "Bath",
+        "passLogged": true
+      },
+      {
+        "room": "Bath Washroom",
+        "passLogged": true
+      },
+      {
+        "room": "Observation Deck",
+        "passLogged": true
+      },
+      {
+        "room": "Men Starboard Cannon Closet",
+        "passLogged": true
+      },
+      {
+        "room": "Men Port Cannon Closet",
+        "passLogged": true
+      },
+      {
+        "room": "Women Starboard Cannon Closet",
+        "passLogged": true
+      },
+      {
+        "room": "Women Port Cannon Closet",
+        "passLogged": true
+      },
+      {
+        "room": "Fore Port Toilet",
+        "passLogged": true
+      },
+      {
+        "room": "Fore Starboard Toilet",
+        "passLogged": true
+      },
+      {
+        "room": "Stern Ladder Access",
+        "passLogged": true
+      },
+      {
+        "room": "Bath Toilet",
+        "passLogged": true
+      }
+    ],
+    "all27RoomEntriesPassLogged": true,
+    "wholeSuiteSummaryPresent": false,
+    "lastLines": [
+      "PASS lawn to Stair: BathStair {",
+      "  pos: [ 30.954442686828383, -26.104700088500977, -4.199999999988935 ],",
+      "  grounded: true,",
+      "  blocker: null",
+      "}",
+      "PASS Stair: BathStair return to lawn [ -4.177049853765192, -40.55070114135742, -0.9770498537651905 ]",
+      "PASS lawn to Stair: EnergyStair {",
+      "  pos: [ 22.400000000000013, -40.55070114135742, 6.823020599412861 ],",
+      "  grounded: true,",
+      "  blocker: null",
+      "}",
+      "PASS Stair: EnergyStair return to lawn [ -4.324231253656778, -40.55070114135742, -1.0146209547599807 ]",
+      "PASS lawn to Stair: SoldierDockStair_over {",
+      "  pos: [ -5.948840874557936, -40.55070114135742, -8.800000000000006 ],",
+      "  grounded: true,",
+      "  blocker: null",
+      "}",
+      "PASS Stair: SoldierDockStair_over return to lawn [ -4.275994745553973, -40.55070114135742, -0.9874502932061087 ]"
+    ]
+  },
+  "documentation": [
+    "docs/whole-ship-blueprint-audit.md",
+    "docs/architecture.md",
+    "docs/suggestions.md"
+  ],
+  "evidenceInventory": [
+    "docs/review/whole-ship-audit-anchor-port.png",
+    "docs/review/whole-ship-audit-anchor-starboard.png",
+    "docs/review/whole-ship-audit-aquarium-entrance.png",
+    "docs/review/whole-ship-audit-aquarium-lift.png",
+    "docs/review/whole-ship-audit-aquarium-overhead.png",
+    "docs/review/whole-ship-audit-aquarium-reverse.png",
+    "docs/review/whole-ship-audit-baseline.json",
+    "docs/review/whole-ship-audit-bath-reverse.png",
+    "docs/review/whole-ship-audit-bath-wc-wide.png",
+    "docs/review/whole-ship-audit-cannon-men-port.png",
+    "docs/review/whole-ship-audit-cannon-men-starboard.png",
+    "docs/review/whole-ship-audit-cannon-women-port.png",
+    "docs/review/whole-ship-audit-cannon-women-starboard.png",
+    "docs/review/whole-ship-audit-capture.log",
+    "docs/review/whole-ship-audit-capture.mjs",
+    "docs/review/whole-ship-audit-contact-detail-01.jpg",
+    "docs/review/whole-ship-audit-contact-detail-02.jpg",
+    "docs/review/whole-ship-audit-contact-detail-03.jpg",
+    "docs/review/whole-ship-audit-contact-detail-04.jpg",
+    "docs/review/whole-ship-audit-contact-detail-05.jpg",
+    "docs/review/whole-ship-audit-contact-detail-06.jpg",
+    "docs/review/whole-ship-audit-contact-detail-07.jpg",
+    "docs/review/whole-ship-audit-contact-detail-08.jpg",
+    "docs/review/whole-ship-audit-contact-detail-09.jpg",
+    "docs/review/whole-ship-audit-contact-detail-10.jpg",
+    "docs/review/whole-ship-audit-contact-detail-11.jpg",
+    "docs/review/whole-ship-audit-contact-detail-12.jpg",
+    "docs/review/whole-ship-audit-contact-detail-13.jpg",
+    "docs/review/whole-ship-audit-contact-exterior-1.jpg",
+    "docs/review/whole-ship-audit-contact-exterior-2.jpg",
+    "docs/review/whole-ship-audit-contact-exterior-3.jpg",
+    "docs/review/whole-ship-audit-contact-final-01.jpg",
+    "docs/review/whole-ship-audit-contact-final-02.jpg",
+    "docs/review/whole-ship-audit-contact-final-03.jpg",
+    "docs/review/whole-ship-audit-contact-final-04.jpg",
+    "docs/review/whole-ship-audit-contact-final-05.jpg",
+    "docs/review/whole-ship-audit-contact-final-06.jpg",
+    "docs/review/whole-ship-audit-contact-room-1.jpg",
+    "docs/review/whole-ship-audit-contact-room-2.jpg",
+    "docs/review/whole-ship-audit-contact-room-3.jpg",
+    "docs/review/whole-ship-audit-contact-room-4.jpg",
+    "docs/review/whole-ship-audit-contact-room-5.jpg",
+    "docs/review/whole-ship-audit-contact-room-6.jpg",
+    "docs/review/whole-ship-audit-curtain-capture.log",
+    "docs/review/whole-ship-audit-curtain-views.json",
+    "docs/review/whole-ship-audit-dining-reverse.png",
+    "docs/review/whole-ship-audit-dining-stair-enclosure.png",
+    "docs/review/whole-ship-audit-dock-centre.png",
+    "docs/review/whole-ship-audit-dock-hatch-closed.png",
+    "docs/review/whole-ship-audit-dock-waiting.png",
+    "docs/review/whole-ship-audit-energy-front.png",
+    "docs/review/whole-ship-audit-exterior-appearance-context.json",
+    "docs/review/whole-ship-audit-exterior-bow-quarter.png",
+    "docs/review/whole-ship-audit-exterior-exterior-inventory.csv",
+    "docs/review/whole-ship-audit-exterior-exterior-inventory.json",
+    "docs/review/whole-ship-audit-exterior-front.png",
+    "docs/review/whole-ship-audit-exterior-garden.png",
+    "docs/review/whole-ship-audit-exterior-lookout.png",
+    "docs/review/whole-ship-audit-exterior-port.png",
+    "docs/review/whole-ship-audit-exterior-starboard.png",
+    "docs/review/whole-ship-audit-exterior-stern-quarter.png",
+    "docs/review/whole-ship-audit-exterior-stern.png",
+    "docs/review/whole-ship-audit-exterior-top.png",
+    "docs/review/whole-ship-audit-extra-aquarium-hatch.png",
+    "docs/review/whole-ship-audit-extra-bow-side.png",
+    "docs/review/whole-ship-audit-extra-capture.log",
+    "docs/review/whole-ship-audit-extra-curtains-directed.png",
+    "docs/review/whole-ship-audit-extra-curtains.png",
+    "docs/review/whole-ship-audit-extra-kotatsu.png",
+    "docs/review/whole-ship-audit-extra-lockers.png",
+    "docs/review/whole-ship-audit-extra-lookout-ladder.png",
+    "docs/review/whole-ship-audit-extra-office.png",
+    "docs/review/whole-ship-audit-extra-popgreens.png",
+    "docs/review/whole-ship-audit-extra-robin.png",
+    "docs/review/whole-ship-audit-extra-swing.png",
+    "docs/review/whole-ship-audit-extra-toilet-port.png",
+    "docs/review/whole-ship-audit-extra-toilet-starboard.png",
+    "docs/review/whole-ship-audit-extra-views.json",
+    "docs/review/whole-ship-audit-extra-women-furniture.png",
+    "docs/review/whole-ship-audit-factory-reverse.png",
+    "docs/review/whole-ship-audit-figurehead-close.png",
+    "docs/review/whole-ship-audit-fore-toilet-port.png",
+    "docs/review/whole-ship-audit-fore-toilet-starboard.png",
+    "docs/review/whole-ship-audit-gallery-slide.png",
+    "docs/review/whole-ship-audit-garden-library.png",
+    "docs/review/whole-ship-audit-garden-office.png",
+    "docs/review/whole-ship-audit-garden-plants.png",
+    "docs/review/whole-ship-audit-helm-inspect.png",
+    "docs/review/whole-ship-audit-infirmary-reverse.png",
+    "docs/review/whole-ship-audit-inherited-test-snapshot.log",
+    "docs/review/whole-ship-audit-inherited-test-status.json",
+    "docs/review/whole-ship-audit-kitchen-reverse.png",
+    "docs/review/whole-ship-audit-kitchen-stair-enclosure.png",
+    "docs/review/whole-ship-audit-lawn-aft.png",
+    "docs/review/whole-ship-audit-lawn-fore.png",
+    "docs/review/whole-ship-audit-lawn-swing.png",
+    "docs/review/whole-ship-audit-library-reverse.png",
+    "docs/review/whole-ship-audit-lookout-reverse.png",
+    "docs/review/whole-ship-audit-mens-reverse.png",
+    "docs/review/whole-ship-audit-mens-wash-wide.png",
+    "docs/review/whole-ship-audit-meshes.json",
+    "docs/review/whole-ship-audit-orientation.json",
+    "docs/review/whole-ship-audit-pantry-reverse.png",
+    "docs/review/whole-ship-audit-rejected-capture.log",
+    "docs/review/whole-ship-audit-rejected-chicken-close.png",
+    "docs/review/whole-ship-audit-rejected-control-helm-prompt.png",
+    "docs/review/whole-ship-audit-rejected-control-help.png",
+    "docs/review/whole-ship-audit-rejected-control-lever.png",
+    "docs/review/whole-ship-audit-rejected-control-log.png",
+    "docs/review/whole-ship-audit-rejected-control-mouth-from-helm.png",
+    "docs/review/whole-ship-audit-rejected-control-selector.png",
+    "docs/review/whole-ship-audit-rejected-dock-open-port.png",
+    "docs/review/whole-ship-audit-rejected-functional.json",
+    "docs/review/whole-ship-audit-rejected-gaon-fire-close.png",
+    "docs/review/whole-ship-audit-rejected-mouth-open-close.png",
+    "docs/review/whole-ship-audit-rigging-near.png",
+    "docs/review/whole-ship-audit-room-aquarium-service.png",
+    "docs/review/whole-ship-audit-room-aquarium.png",
+    "docs/review/whole-ship-audit-room-bath-toilet.png",
+    "docs/review/whole-ship-audit-room-bath-washroom.png",
+    "docs/review/whole-ship-audit-room-bath.png",
+    "docs/review/whole-ship-audit-room-dining.png",
+    "docs/review/whole-ship-audit-room-energy.png",
+    "docs/review/whole-ship-audit-room-factory.png",
+    "docs/review/whole-ship-audit-room-infirmary.png",
+    "docs/review/whole-ship-audit-room-kitchen.png",
+    "docs/review/whole-ship-audit-room-library.png",
+    "docs/review/whole-ship-audit-room-lookout.png",
+    "docs/review/whole-ship-audit-room-mens-port-cannon.png",
+    "docs/review/whole-ship-audit-room-mens-starboard-cannon.png",
+    "docs/review/whole-ship-audit-room-mens-washroom.png",
+    "docs/review/whole-ship-audit-room-mens.png",
+    "docs/review/whole-ship-audit-room-pantry.png",
+    "docs/review/whole-ship-audit-room-soldier-dock.png",
+    "docs/review/whole-ship-audit-room-storage.png",
+    "docs/review/whole-ship-audit-room-views.json",
+    "docs/review/whole-ship-audit-room-weapons.png",
+    "docs/review/whole-ship-audit-room-womens-port-cannon.png",
+    "docs/review/whole-ship-audit-room-womens-starboard-cannon.png",
+    "docs/review/whole-ship-audit-room-womens-washroom.png",
+    "docs/review/whole-ship-audit-room-womens.png",
+    "docs/review/whole-ship-audit-static.json",
+    "docs/review/whole-ship-audit-static.log",
+    "docs/review/whole-ship-audit-static.mjs",
+    "docs/review/whole-ship-audit-stern-barrel.png",
+    "docs/review/whole-ship-audit-supplemental-views.json",
+    "docs/review/whole-ship-audit-title.png",
+    "docs/review/whole-ship-audit-vehicle-1.png",
+    "docs/review/whole-ship-audit-vehicle-2.png",
+    "docs/review/whole-ship-audit-vehicle-3.png",
+    "docs/review/whole-ship-audit-vehicle-4.png",
+    "docs/review/whole-ship-audit-vehicle-5.png",
+    "docs/review/whole-ship-audit-vehicle-6.png",
+    "docs/review/whole-ship-audit-verified-chicken-close.png",
+    "docs/review/whole-ship-audit-verified-control-helm-prompt.png",
+    "docs/review/whole-ship-audit-verified-control-help.png",
+    "docs/review/whole-ship-audit-verified-control-lever.png",
+    "docs/review/whole-ship-audit-verified-control-log.png",
+    "docs/review/whole-ship-audit-verified-control-mouth-from-helm.png",
+    "docs/review/whole-ship-audit-verified-control-selector.png",
+    "docs/review/whole-ship-audit-verified-dock-open-port.png",
+    "docs/review/whole-ship-audit-verified-functional.json",
+    "docs/review/whole-ship-audit-verified-gaon-fire-close.png",
+    "docs/review/whole-ship-audit-verified-mouth-open-close.png",
+    "docs/review/whole-ship-audit-verified-views.json",
+    "docs/review/whole-ship-audit-weapons-reverse.png",
+    "docs/review/whole-ship-audit-womens-reverse.png",
+    "docs/review/whole-ship-audit-womens-wash-wide.png",
+    "docs/review/whole-ship-audit-evidence.json"
+  ]
+}

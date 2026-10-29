@@ -1,0 +1,33 @@
+{
+  "phase": "C01 and C02 applied and confirmed in actual original ship",
+  "checkedAt": "2026-10-29T13:59:26.043Z",
+  "integrationCommit": "e90c690",
+  "beforeMain": "d4f1994",
+  "originalProject": "/Users/sukhjot/codes/test",
+  "url": "http://127.0.0.1:8181/",
+  "hashes": {
+    "sunny.glb": {
+      "local": "716d89824bb63d1dfe2f8b145ade81c35d9cdd4dfc1978350682e180ea8cff10",
+      "served": "716d89824bb63d1dfe2f8b145ade81c35d9cdd4dfc1978350682e180ea8cff10"
+    },
+    "sunny-collision.glb": {
+      "local": "aac7150f403ded4ec81bfaecc8877555dc5e748e063be5be875975d4e100b7cd",
+      "served": "aac7150f403ded4ec81bfaecc8877555dc5e748e063be5be875975d4e100b7cd"
+    },
+    "ship-metadata.json": {
+      "local": "87318580d39d8e36510a261b9dbff88cdb498b127674186926041ece5b48e757",
+      "served": "87318580d39d8e36510a261b9dbff88cdb498b127674186926041ece5b48e757"
+    }
+  },
+  "allFinalSourceAssetMasterAndRuntimeInputsMatch": true,
+  "targetedCurrentShipTests": {
+    "c01Trim": "PASS",
+    "c01Storage": "PASS",
+    "c01Exterior": "PASS",
+    "c02Lining": "PASS",
+    "c02ShellBodyClearance": "PASS"
+  },
+  "actualControlsEvidence": "body-access.json and closed-controls-proof.json on exact same final product hashes",
+  "wholeShipAggregateRun": false,
+  "remaining": "C03 water-bearing channels/native floor/radial chamber/alignment and M10 vehicle launch remain pending; next requested batch C03 then C04 in fresh Terra High chat."
+}

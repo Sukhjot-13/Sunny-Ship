@@ -1,0 +1,17 @@
+00:00.578  blend            | Read blend: "/Users/sukhjot/.codex/worktrees/c01-c02-completion/test/assets/sunny-master.blend"
+INFO Draco is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_draco_bridge.dylib
+INFO MeshOptimizer is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_meshopt_bridge.dylib
+06:40:57 | INFO: Starting glTF 2.0 export
+06:40:57 | INFO: Extracting primitive: DockOutlet_port
+06:40:57 | INFO: Primitives created: 1
+06:40:57 | INFO: Finished glTF 2.0 export in 0.07538890838623047 s
+
+06:40:57 | INFO: Starting glTF 2.0 export
+06:40:57 | INFO: Extracting primitive: DockOutlet_starboard
+06:40:57 | INFO: Primitives created: 1
+06:40:57 | INFO: Finished glTF 2.0 export in 0.06961226463317871 s
+
+PASS C02 closed local aperture reveal fixture [{'side': 'port', 'vertices': 384, 'faces': 384, 'closed': True, 'volume': 36.23748553987539}, {'side': 'starboard', 'vertices': 384, 'faces': 384, 'closed': True, 'volume': 37.32188142728735}]
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:49:19)
+
+Blender quit

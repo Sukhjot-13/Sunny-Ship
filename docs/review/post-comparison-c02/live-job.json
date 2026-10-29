@@ -1,0 +1,7 @@
+{
+  "phase": "C01/C02 finished; no repair/build/test job active",
+  "currentShip": "/Users/sukhjot/codes/test",
+  "confirmation": "current-ship-confirmation.json",
+  "nextBatch": "Coordinator creates fresh gpt-6.1-terra High chat for C03 then C04; notify after C04; this chat stops.",
+  "note": "Temporary confirmation preview stopped after final hash receipt."
+}

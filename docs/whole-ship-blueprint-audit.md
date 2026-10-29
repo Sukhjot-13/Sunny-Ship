@@ -1,76 +1,77 @@
-# Thousand Sunny — sole active repair queue
+# Thousand Sunny — sole repair queue and handoff
 
 ## Current checkpoint — October29,2026
 
-C01 is verified, applied and confirmed in the actual current ship. Its finding, evidence and former plan are in [completed repairs](completed-repairs.md#c01--verified-and-applied-october292026); do not repeat it. C02 is the sole active repair. All other findings and general texture work remain paused in this chat. Finish and confirm C02 while preserving C01, then the coordinating chat will create the requested fresh `gpt-6.1-terra` chat at High for the remaining findings one at a time. Do not start that remaining queue here.
+**C01 and C02 are verified, applied and confirmed in the actual current ship.** Their original findings, completed receipts and former directions are in [completed repairs](completed-repairs.md). Do not repeat them unless a new regression is demonstrated. No repair/build/test job is active in this chat; this two-repair scope is finished.
 
-The Sol/Terra comparison is finished and frozen at12e2dde: [comparison report](model-comparison-20261026.md). Current C01 completion is separate post-comparison work. Exact checkpoint/receipts: [post-comparison progress](post-comparison-repairs.md), [C01 current-ship confirmation](review/post-comparison-c01/current-ship-confirmation.json).
+**Next requested batch:** the coordinating chat will create a fresh chat using exact `gpt-6.1-terra` with reasoning High. Complete **C03 first, then C04**, one repair at a time. Verify and confirm each in the actual ship before removing its pending audit instructions and archiving its receipt. After C04 is finished, notify Sukhjot and stop that batch. All other remaining IDs stay pending for later. See [the concrete handoff](next-repair-handoff.md).
 
-Preserve original FBX, useful exterior hull, existing realistic exterior/interior/water runtime, source palette, controls, normal body/speeds and2.2 enlargement. Use targeted verification for C01/C02 only; no whole-ship aggregate or tour in this scope. Interior IF01 baseline/IF02 implementation are retained; IF03/IF04 verification and the remaining mixed graphics findings are unaccepted and paused. Original U09/U11 decisions remain open for sections that need them.
+The model comparison is finished/frozen at12e2dde; [its report](model-comparison-20261026.md) is unchanged. Post-comparison checkpoint/receipts: [repair summary](post-comparison-repairs.md), [C01 confirmation](review/post-comparison-c01/current-ship-confirmation.json), [combined C01/C02 confirmation](review/post-comparison-c02/current-ship-confirmation.json).
+
+Preserve the original FBX, useful source hull, realistic exterior/interior/water runtime, source palette, controls, normal body/speeds and2.2 enlargement. Use focused current-repair verification and affected preservation checks; do not restart the experiment or whole-ship tour here. C03/M10 still require real water-bearing channels/support, radial chamber/alignment and vehicle operation; C02 flight proof does not accept those. Interior IF03/IF04 and unresolved U09/U11 remain separately pending. Earlier phase/repair instructions are historical.
 
 ## Remaining finding ledger
 
 | ID | Status | Current work, dependency or evidence |
 |---|---|---|
 | UI01 (new user request) | verified done | Actual controls/focused six inspected images + full18/18 suites/build PASS; all76 inputs unchanged. [Receipt](review/cannon-ui-verification.json). |
-| C02 | in progress | Actual paired Dock aperture repair is the sole active scope, reusing frozen Terra source while preserving verified C01. All-layer visual/physical path, rim containment and real-control checks required before acceptance. |
-| C03 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| C04 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| C05 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| C06 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| C07 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| C08 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| C09 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| E01 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| E02 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| E03 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| E04 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| E05 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| INT01 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| INT02 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| INT03 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| INT04 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| INT05 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| INT06 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| INT07 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| INT08 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| INT09 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| INT10 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| INT11 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| INT12 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| INT13 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| INT14 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| INT15 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| INT16 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| INT17 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| INT18 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| INT19 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| INT20 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| INT21 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| INT22 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| INT23 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| INT24 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| INT25 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| INT26 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| INT27 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| INT28 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| INT29 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| C03 | queued next | Fresh Terra High chat: rebuild/verify the actual water-bearing Dock channels, native dry floor/radial chamber/portals and selected-bay alignment. Preserve completed C01/C02; archive only after actual confirmation. |
+| C04 | queued after C03 | Same fresh Terra High chat, only after C03 is verified: integrate Aquarium/Kitchen service lift and wine cupboard into the retained mainmast from R10/R11. Verify/apply/archive, then notify Sukhjot and stop the batch. |
+| C05 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| C06 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| C07 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| C08 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| C09 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| E01 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| E02 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| E03 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| E04 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| E05 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| INT01 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| INT02 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| INT03 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| INT04 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| INT05 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| INT06 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| INT07 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| INT08 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| INT09 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| INT10 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| INT11 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| INT12 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| INT13 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| INT14 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| INT15 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| INT16 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| INT17 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| INT18 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| INT19 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| INT20 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| INT21 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| INT22 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| INT23 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| INT24 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| INT25 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| INT26 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| INT27 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| INT28 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| INT29 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
 | M01 | verified done | Universal Cannon/X panel, start/help guidance, real feedback and legacy helm J/K verified in focused and full18/18 + build tests. |
-| M02 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| M03 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| M04 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| M05 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| M06 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| M07 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| M08 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| M09 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| M10 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| G01 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| G02 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| G03 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| G04 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| G05 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
-| G06 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| M02 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| M03 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| M04 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| M05 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| M06 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| M07 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| M08 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| M09 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| M10 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| G01 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| G02 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| G03 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| G04 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| G05 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
+| G06 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
 
 ## Uncertainty ledger
 
@@ -88,7 +89,7 @@ Preserve original FBX, useful exterior hull, existing realistic exterior/interio
 
 ## Retained original audit evidence
 
-The observations below are the original audit baseline for remaining findings, not current completion claims. Completed C01 is archived separately. The exact original ledger and obsolete phase instructions are preserved in the historical snapshot.
+The observations below are the original audit baseline for remaining findings, not current completion claims. Completed C01/C02 are archived separately. The exact original ledger and obsolete phase instructions are preserved in the historical snapshot.
 
 ## 1. Baseline, evidence and meaning of the conclusions
 
@@ -169,7 +170,7 @@ Evidence shorthand used below: **B(name)** = `review/whole-ship-audit-room-name.
 
 | Area | Current review result and remaining limit |
 |---|---|
-| Overall hull/keel, red panels, white scrolls, black bands and small ports | X(port/starboard/bow-quarter/stern-quarter/top), D(extra-bow-side). Recognizable broad arrangement; no missing whole hull/major scroll observed. Concealed underwater topology and every small port's use are not certified. completed C01 / pending C02 and E04 remain. |
+| Overall hull/keel, red panels, white scrolls, black bands and small ports | X(port/starboard/bow-quarter/stern-quarter/top), D(extra-bow-side). Recognizable broad arrangement; no missing whole hull/major scroll observed. Concealed underwater topology and every small port's use are not certified. Completed C01/C02 are archived; E04 remains pending. |
 | Lion, face, eyes/nose/muzzle, mane, bones, gold collar, Gaon | X(front), D(figurehead-close/extra-bow-side), verified J/K/T close-ups. Closed/open states and rotation reviewed. Working trigger confirmed; E04/U01 and M01 remain. |
 | Both anchors, rings, flukes, short rope/hawse connection | D(anchor-port/anchor-starboard), mesh inventory. Both stowed anchors present; no missing anchor observed. Deployment/internal rope routing not implemented/proved: M02. |
 | Helm, pedestal, wheel, channel dial, knob/lever and Log Pose | D(helm-inspect), verified control views and F trace. User E prompts work at physical stations. Exact dial mechanism/Log Pose representation remains simplified; M01/M09 and U02. |
@@ -207,7 +208,7 @@ This table covers all **27 metadata spaces**, plus the crow's nest, which has a 
 | Group 15 | `Franky's Weapon Development Room` | Metal floor/one main lining, furnace, drawing desk/tool/scrap families exist. | C07; INT23. B(weapons), D(weapons-reverse). Metal enclosure coverage incomplete. |
 | Group 16 | `Energy Room` | Stern B1 chamber, actual arched cavity, grille, three barrels, gauges and connected feed-pipe shapes. | INT24/M03. B(energy), D(energy-front). No barrel-loading function or full piping circuit. |
 | Group 17 | `Storage Room` | Forward B1; crates/sacks/barrels, shelf and cradled lumber exist. | completed C01 / INT25. B(storage). Actual timber stock supported in viewed inventory; ammunition/weapon organization incomplete. |
-| Group 18 | `Soldier Dock System`, waiting area and six contents | Carousel/low bay dividers, central spokes, six vehicle proxies, channel labels, exterior shutters. | C02/C03; INT26–INT29; M02/M10; U11. B(soldier-dock), D(dock-centre/dock-waiting/vehicle-1…6), verified open aperture. |
+| Group 18 | `Soldier Dock System`, waiting area and six contents | Carousel/low bay dividers, central spokes, six vehicle proxies, channel labels, exterior shutters. | completed C02; C03; INT26–INT29; M02/M10; U11. B(soldier-dock), D(dock-centre/dock-waiting/vehicle-1…6), verified open aperture. |
 | Group 19 | Crow's nest / gym | Circular floor, pane ring, roof/dormers, hatch, external access and speaker. | C08. B(lookout), D(lookout-reverse). Both opposite views show empty floor/walls. |
 | Supplemental spaces | `Observation Deck`; `Fore Port Toilet`; `Fore Starboard Toilet`; `Stern Ladder Access` | Included in exterior coverage above; stern ladder links lower stern structure with Library tier. | A3, E01/E03/E05, U04/U07. These four rows complete the 27 metadata-space inventory; they are not extra accepted rooms. |
 
@@ -217,8 +218,7 @@ This table covers all **27 metadata spaces**, plus the crow's nest, which has a 
 
 | ID / priority | Location and exact reference expectation | Current observation and evidence | Required improvement / impact |
 |---|---|---|---|
-| **C02 / P1** | Both external Dock mouths. R14 p193 shows an open rolling shutter exposing a water-bearing internal launch channel. | After real channel-2 selection and full shutter opening (`shutter=1`), the [port aperture](review/whole-ship-audit-verified-dock-open-port.png) exposes timber lining. Exact center rays hit `Sunny_InteriorWall_B1_73_seg0` on port and `Sunny_InteriorWall_B1_199_seg0` on starboard. See `dockApertures` in [static evidence](review/whole-ship-audit-static.json). Port opening seen live; starboard obstruction confirmed statically, not with a second live open photo. A/S/F. | Cut/rebuild both actual launch paths through all lining layers and connect them to the selected bay. An animated shutter currently suggests access that the underlying construction does not provide. |
-| **C03 / P1** | Dock chamber/launch bays. R07/R14 show tall enclosed radial channels with water/rails, inner numbered rolling gates and circulation/waiting space. | Current dock is a flat gold platter with red parking pads, low white rectangular dividers and open shared upper volume. B(soldier-dock), D(dock-centre/dock-waiting); `Sunny_Dock_bay*`, `Sunny_Dock_sector*`. No enclosed water-bearing tunnels between carousel and hull mouths are visible or authored in `build_interiors`. A/S/source. | Reconstruct channel cross-sections, outer tunnels, water containment and inner portals around the rotating assembly. Distinct from C02's solid lining obstruction. |
+| **C03 / P1** | Dock chamber/launch bays. R07/R14 show tall enclosed radial channels with water/rails, inner numbered rolling gates and circulation/waiting space. | Current dock is a flat gold platter with red parking pads, low white rectangular dividers and open shared upper volume. B(soldier-dock), D(dock-centre/dock-waiting); `Sunny_Dock_bay*`, `Sunny_Dock_sector*`. No enclosed water-bearing tunnels between carousel and hull mouths are visible or authored in `build_interiors`. A/S/source. | Reconstruct channel cross-sections, outer tunnels, water containment and inner portals around the rotating assembly. The former local mouth obstruction C02 is completed; full C03 channel construction remains pending. |
 | **C04 / P1** | Mainmast food lift/wine cupboard in Aquarium and Kitchen. R10 pp188–189 and R11 pp190–191 put them **in the mast**, with service opening/table at its base. | The [lift/cupboard](review/whole-ship-audit-aquarium-lift.png) stands as exposed vertical boards beside the mast. `Sunny_InteriorMainMast` spans X17.4229–20.1664; lift guides/hatch span about X15.55–16.55. There is at least **0.873 m** between that hatch's maximum X and the mast's minimum X; the center offset is about **2.745 m**. A/S. | Integrate the service cavity, guide/car and wine cupboard with the actual retained mast, preserving structure and human clearances. Labels calling it a mast lift do not establish the relationship. |
 | **C05 / P1** | Food transfer between F1 Aquarium and F2 Kitchen. R10 explicitly connects the upper lift to the Aquarium below. | The lift is modeled twice at separate levels. A vertical exact-triangle ray at its center `(X16.05, Three Z−1.287)` hits `Sunny_Aquarium_ceiling` at Y−35.8027 and `Sunny_InteriorFloor_F2_aft` at Y−35.6227. The shaft is not clear. [Static lift probes](review/whole-ship-audit-static.json); `dumbwaiter`/`build_interiors`. S/source. | Create one continuous contained shaft/opening and coherent car path. Even adding a button alone would leave a physical floor obstruction. |
 | **C06 / P1** | All four fore cannon closets. R09's outboard cannons and R01/R02/R08's hull openings imply a usable outboard bore/port relationship. | Cannons exist, point outboard and have bores. Independent rays just beyond each muzzle hit opaque `Sunny_ForeF1_shell`/`Sunny_ForeF2_shell`, then trim/hull surfaces. First obstruction distances: men's starboard **3.909 m**, men's port **0.628 m**, women's starboard **3.173 m**, women's port **0.150 m**. [Four fixture views](review/whole-ship-audit-contact-detail-02.jpg), [ray data](review/whole-ship-audit-static.json). A/S. | Align each cannon station/elevation with a real matching gunport through every shell layer. Do not equate outboard direction or the presence of unrelated external portholes with a clear firing line. |
@@ -283,7 +283,7 @@ A debug property or test-only hook is not a user control. An automatic proximity
 | Chicken Voyage | While helm engaged, **T**. | F on/off and increasing mane angle; [rotated mane](review/whole-ship-audit-verified-chicken-close.png). Working trigger; all transport behavior not separately certified. |
 | Coup de Burst | While helm engaged, **G**, three cola. | Source/HUD confirmed. Not fired in this focused fresh check because Gaon used the available cola; no false fresh Burst proof. Existing prior/full-run results are separate. |
 | Dock channel selector | Aim/stand at knob: **E select dock channel**, cycles0–6 and closes first. | F physical approach/E changes1→2. Rotation state advances toward the selected bay. |
-| Dock shutters | Aim/stand at lever: **E toggle dock shutters**. | F `shutter=1`; actual opening visually reveals C02. This is an operational trigger with broken downstream construction. |
+| Dock shutters | Aim/stand at lever: **E toggle dock shutters**. | Real selector/lever and paired closed/open full-body passage verified under completed C02; C03 water-bearing channels and M10 vehicle operation remain pending. |
 | Dock rolling digits/slats | Driven automatically by selector/lever. | Visual/source review; no independent user action necessary. Number font/final artwork not reference-accepted. |
 | Channel-0 paddles | Select0, open shutters, use helm throttle; deployment/spin automatic. | Source only in this audit; no independent left/right paddle control despite R14 describing that capability. M09. |
 | Log Pose | Aim/approach globe: **E Log Pose (simulation)**. | F needle index0→1; [current view](review/whole-ship-audit-verified-control-log.png). Three crossed rods are a simplified instrument; illustrative bearings are explicitly labeled. |
@@ -304,7 +304,7 @@ A debug property or test-only hook is not a user control. An automatic proximity
 | Den Den Mushi | No call/play/respond trigger. | M08; recognizable static phone cue only. |
 | Bath showers/taps, sinks and toilets | No flow/flush/fill/drain trigger. | M08. Static taps/water/fixtures; no implied plumbing simulation. |
 | Telescope/gym/locker/weights | Not present to operate. | C08; add defining fixtures before judging triggers. |
-| Six vehicles/pool | Rotate with bay selection; no enter/launch/pilot/return or inflate/use trigger. | M10; vehicle proxies cannot be launched through C02/C03. |
+| Six vehicles/pool | Rotate with bay selection; no enter/launch/pilot/return or inflate/use trigger. | M10/C03 remain pending; completed C02 confirms local mouths, not actual vehicle launch/pilot/return. |
 | Gardens, beds, wardrobes/books/maps/chests/toolboxes | Static decor; no tending/open/read/sit interactions. | User's request for relevant usable features is logged under M08. Not every leaf/book needs a button, but clearly operable furnishing affordances should not promise nonexistent actions. |
 | Voyage/player reset | **R**, listed in in-play help. | Source resets state, including cola. This is a reset affordance, not an in-world Energy refill mechanism. |
 
@@ -358,7 +358,7 @@ These are **not confirmed defects** unless another finding independently proves 
 ## 8. Practical repair order for a later authorized task
 
 1. **Freeze the target version and preserve this publication.** Decide the women's bed period, later Dock allocation/vehicles, and which walking-stair adaptations remain. Keep the intentional 2.2 scale and ordinary human dimensions.
-2. **Resolve structural ownership/connectivity first:** C02/C03 real Dock channels, C04/C05 one mast/lift shaft, C06 four actual gunports, E01 hatch/rails. Use current visual-triangle/surface checks plus matched images; avoid accepting only labels/bounds/collider reachability.
+2. **Resolve structural ownership/connectivity first:** C03 real Dock channels, C04/C05 one mast/lift shaft, C06 four actual gunports, E01 hatch/rails. Use current visual-triangle/surface checks plus matched images; avoid accepting only labels/bounds/collider reachability.
 3. **Correct plan relationships:** C07 workshop sides and INT12 open Kitchen/Dining/mast/bar/ceiling composition. Reconcile shell windows, partitions and doors before moving furniture.
 4. **Build defining missing layouts:** C08 gym; INT09 Aquarium lounge; INT26 waiting/capstan; INT28 correct Mini Merry type. Confirm full routes and reverse descents with ordinary input after each structural change.
 5. **Complete the 19 room groups against their own sheets:** furniture silhouettes, supports, placement, door/window clearances, cabinet/board relationships, floor regions and source-specific fittings. Give each room a matched overview and detail views, not a single doorway/floor photo.

@@ -1,0 +1,9 @@
+/** Freeze actual C01-current B1 lining outside the C02 aperture before application. */
+import fs from 'node:fs'
+import * as THREE from 'three'
+import {readGLB,readAccessor,nodeMatrix} from '../../../tests/glb.mjs'
+const base='/Users/sukhjot/codes/test',gltf=readGLB(base+'/public/models/sunny.glb'),meta=JSON.parse(fs.readFileSync(base+'/public/models/ship-metadata.json')),meshes=[],rays=[]
+function visit(i,parent){const n=gltf.json.nodes[i],m=parent.clone().multiply(nodeMatrix(n));if(n.mesh!==undefined&&n.name.startsWith('Sunny_InteriorWall_B1_'))for(const p of gltf.json.meshes[n.mesh].primitives){const a=readAccessor(gltf,p.attributes.POSITION),g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.BufferAttribute(a.data,3));if(p.indices!==undefined)g.setIndex(Array.from(readAccessor(gltf,p.indices).data));const mesh=new THREE.Mesh(g,new THREE.MeshBasicMaterial({side:THREE.DoubleSide}));mesh.matrixAutoUpdate=false;mesh.matrixWorld.copy(m);meshes.push(mesh)}for(const c of n.children??[])visit(c,m)}
+for(const i of gltf.json.scenes[gltf.json.scene??0].nodes)visit(i,new THREE.Matrix4())
+for(const o of meta.exterior.mechanisms.dockOpenings){const side=o.side==='port'?1:-1;for(let i=0;i<240;i++){const a=i*Math.PI*2/240,origin=[o.centre[0]+8.4*Math.cos(a),o.centre[2]+8.4*Math.sin(a),side*25],direction=[0,0,-side],ray=new THREE.Raycaster(new THREE.Vector3(...origin),new THREE.Vector3(...direction),0,15),hit=ray.intersectObjects(meshes,false)[0];if(hit)rays.push({side:o.side,origin,direction,distance:hit.distance})}}
+fs.writeFileSync('tests/fixtures/dock-outside-rays.json',JSON.stringify({notice:'Original C01 main d4f1994 actual B1 lining outside radius8.4 around both C02 mouths; source faces outside the intended cut must remain.',rays},null,2));console.log('Frozen retained outside-mouth guard',rays.length)

@@ -1,0 +1,23 @@
+/** Exact paired C02 closure: real controls/body returns, actual exports, images and frozen inputs. */
+import fs from 'node:fs'
+import crypto from 'node:crypto'
+import assert from 'node:assert/strict'
+import {rotatePoint} from '../../../src/systems/navigation.js'
+const out='docs/review/post-comparison-c02',inputs=JSON.parse(fs.readFileSync(`${out}/final-source-inputs.json`)),body=JSON.parse(fs.readFileSync(`${out}/body-access.json`)),views=JSON.parse(fs.readFileSync(`${out}/views.json`)),meta=JSON.parse(fs.readFileSync('public/models/ship-metadata.json'))
+for(const [file,want]of Object.entries(inputs))assert.equal(crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex'),want,'frozen source/product/harness '+file)
+for(const phase of ['closed shutter stop','open mouth actual body crossing','open mouth actual body return'])assert.deepEqual(body.trace.filter(r=>r.phase===phase).map(r=>r.side).sort(),['port','starboard'],`exact paired ${phase}`)
+const closed=body.trace.filter(r=>r.phase==='closed shutter stop'),crossed=body.trace.filter(r=>r.phase==='open mouth actual body crossing')
+assert(closed.every(r=>r.collision&&r.state.shutter===0))
+assert(crossed.every(r=>r.collision&&r.recoveries===0&&r.state.channel===2&&r.state.dockOpen&&r.state.shutter>.98&&Math.abs(r.state.dockAngle+Math.PI/3)<.021),'live aligned open state on both actual crossings')
+assert(body.trace.some(r=>r.phase==='normal helm walking and stair return'&&r.records.every(x=>x.ok)),'real continuous helm walking return after opening')
+const selected=body.trace.find(r=>r.phase==='actual selected bay2 outer region');assert(selected,'actual selected-bay region required')
+const centre=meta.interiors.dockCentre,b=meta.interiors.dockSolids.find(b=>b.name==='DockVehicle2'),original=[(b.min[0]+b.max[0])/2,meta.interiors.levels.B1,-(b.min[1]+b.max[1])/2]
+for(const crossing of crossed){const actualBay=rotatePoint(original,crossing.state.dockAngle,[centre[0],centre[2],-centre[1]]);assert(Math.hypot(actualBay[0]-selected.vehicleCentre[0],actualBay[2]-selected.vehicleCentre[2])<.001,'selected bay corresponds to actual live open angle, not discarded pre-reset claim')}
+assert(body.end.grounded&&body.end.recoveries===0);assert.deepEqual(body.errors,[]);assert.deepEqual(views.errors,[])
+assert(views.state.channel===2&&views.state.dockOpen&&views.state.shutter>.98);assert.equal(views.records.length,4)
+assert.deepEqual(views.records.map(r=>r.side+':'+r.inside).sort(),['port:false','port:true','starboard:false','starboard:true'])
+for(const n of ['sunny.glb','sunny-collision.glb','ship-metadata.json']){assert.equal(body.hashes[n],inputs['public/models/'+n]);assert.equal(views.hashes[n],body.hashes[n])}
+for(const name of ['final-lining.log','final-shell.log','final-c01-trim.log','final-c01-storage.log','final-c01-exterior.log']){const log=fs.readFileSync(`${out}/${name}`,'utf8');assert(log.includes('PASS')&&!log.includes('AssertionError'),name)}
+assert(fs.readFileSync(`${out}/final-assets-build.log`,'utf8').includes('published completed asset generation and editable master'));assert(fs.readFileSync(`${out}/final-frontend-build.log`,'utf8').includes('built in'))
+const result={phase:'C02 scoped local mouths verified in integration; current original-ship application/confirmation next',checkedAt:new Date().toISOString(),productHashes:body.hashes,closedStops:closed.map(r=>({side:r.side,position:r.position})),liveOpenCrossings:crossed.map(r=>({side:r.side,position:r.position,state:r.state,collision:r.collision})),openReturns:body.trace.filter(r=>r.phase==='open mouth actual body return'),lawnReturn:body.end,actualSelectedBay: selected,geometry:{liningRaysPerSide:149,closedReveals:2,radialGeometryAndPhysicalSamplesPerSide:96,normalBody:{radius:.34,height:1.75},allStaticVisualBodyRaysPerSide:9,outsideLiningPreservationRays:112},appearance:{records:views.records,personallyReviewed:false},retainedC01:'all three quick target regressions PASS; 1888 exterior guard hits unchanged',runtime:'original body, collision, navigation and realistic material/control runtime files unchanged',scope:'C02 local mouth shell/lining/actual full-body collision clearance only. C03 water-bearing channels, radial chamber support/alignment and M10 vehicle launch remain pending; no ordinary walking across unsupported water-channel gaps or vehicle operation is claimed.',comparisonFrozenAt:'12e2dde',wholeShipAggregateRun:false}
+fs.writeFileSync(`${out}/verified-receipt.json`,JSON.stringify(result,null,2));console.log('PASS exact paired C02 scoped receipt; personal image review and actual current-ship confirmation next')

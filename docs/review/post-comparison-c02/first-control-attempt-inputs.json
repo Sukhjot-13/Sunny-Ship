@@ -1,0 +1,22 @@
+{
+  "tools/sunny_accuracy.py": "522655708a2851de1d601f1be5b96b2bb9e7bc558df43a2c3178c751d1a87e20",
+  "tools/build_assets.py": "7a419b09075c9466e8d6f96a283f360872ae255eda4420bc84ca077a7712181d",
+  "tools/sunny_fore_trim.py": "dfe835a91b71eb9e88e8f8e45348db959759cb08a8d6f0a37de7703b3646372b",
+  "tools/sunny_interiors.py": "91947b55a7f00936ff944e3d58ba3a4c839eaafddcb1d59a3277c9c711fe0768",
+  "tools/sunny_exterior.py": "d03986a00aed0d9de472be595dca58fc22954445c4d5aa97eabf69e4a8428891",
+  "tools/sunny_surfaces.py": "f36046b6b77b24065eb740e68fcbbf6e9dc225c4414da980316a5ea59ec7ceb0",
+  "tests/dockApertures.test.mjs": "5ecdd3659cf406523bebeb942da4e0b7d564053971ac8d1c8383761ea76f790d",
+  "tests/dockOutletShell.test.mjs": "c2bee7d81e9691f70301e95af13b4f27d0e90e524362025c929b785d408d9fea",
+  "docs/review/post-comparison-c02/body-access.mjs": "a97acce8358eb133db8f4dab1d7f94045fccb2ab59853beb3e84d61104404d11",
+  "docs/review/post-comparison-c02/views.mjs": "abc9b0c3f8c616ff93a661d80ae75aabc9df027096fbb8d11f6c4fb0f1f985b9",
+  "stuff/1.FBX": "8a770f19926e304cce1839fde4797fc1d98db5a49814f7b049e5a83be69cec10",
+  "public/models/sunny.glb": "716d89824bb63d1dfe2f8b145ade81c35d9cdd4dfc1978350682e180ea8cff10",
+  "public/models/sunny-collision.glb": "aac7150f403ded4ec81bfaecc8877555dc5e748e063be5be875975d4e100b7cd",
+  "public/models/ship-metadata.json": "87318580d39d8e36510a261b9dbff88cdb498b127674186926041ece5b48e757",
+  "assets/sunny-master.blend": "27cabea3191997e3954c37d73e1c50722bb1cfad2bb5eaf3d7beb3e86847cfc2",
+  "tests/foreTrim.test.mjs": "45f84b4b7e9ef6515e70ce49c982fa3db2cd94ff8711c3063ac0c18bf26d5c85",
+  "tests/foreStorage.test.mjs": "871c6e1d41572af7d7761242925a90f0f55db7caee8448a68024ce7fe60b0a19",
+  "tests/foreExterior.test.mjs": "b46d88acac31cde13bad62c432f4bb965ce7f716c58a75961eb7a3e316586cd3",
+  "tests/run-all.mjs": "5530a4fc699a160afef6a047403703f7173904d5261c25eda71ba70c06cab591",
+  "tests/fixtures/dock-outside-rays.json": "0ee523f014d3f51f84a12a9c9e7719c39a48d0de9ac914c340a2d20bdb4ea7ab"
+}

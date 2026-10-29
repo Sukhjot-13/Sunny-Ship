@@ -1,0 +1,7 @@
+{
+  "ownedConfirmationPreviewStopped": [
+    4033
+  ],
+  "repairBuildTestJobsActive": false,
+  "note": "Old usage-interrupted jobs/previews were absent on recovery; only this final confirmation preview was started and then stopped."
+}
