@@ -1,0 +1,25 @@
+{
+  "phase": "C01 applied and confirmed in actual original ship",
+  "checkedAt": "2026-10-29T10:31:10.573Z",
+  "integrationCommit": "afcba8d",
+  "originalProject": "/Users/sukhjot/codes/test",
+  "url": "http://127.0.0.1:8181/",
+  "hashes": {
+    "sunny.glb": {
+      "local": "d34a215a64d44b50605901b8f164bd71a65ce78503a929df202e9266f15778e4",
+      "served": "d34a215a64d44b50605901b8f164bd71a65ce78503a929df202e9266f15778e4"
+    },
+    "sunny-collision.glb": {
+      "local": "ae9bfb25eb66fea0cacb07730b7ca7bf30b6cef72e1669c855bdf2ce516140e8",
+      "served": "ae9bfb25eb66fea0cacb07730b7ca7bf30b6cef72e1669c855bdf2ce516140e8"
+    },
+    "ship-metadata.json": {
+      "local": "8c33e92ce3e4efb7e1d569baf9f51b6e5d7553851b459955f9937701bf9dd0f3",
+      "served": "8c33e92ce3e4efb7e1d569baf9f51b6e5d7553851b459955f9937701bf9dd0f3"
+    }
+  },
+  "allFinalInputsMatch": true,
+  "actualOriginalShipTargetTests": "foreTrim, foreStorage, foreExterior and exact-seven receipt pass",
+  "accessEvidence": "Seven actual-input round trips in the byte-identical integration publication; no duplicate broad tour",
+  "wholeShipAggregateRun": false
+}

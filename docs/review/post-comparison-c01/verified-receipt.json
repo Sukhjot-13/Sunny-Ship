@@ -1,0 +1,107 @@
+{
+  "phase": "C01 verified in isolated integration workspace; actual original-ship application/confirmation is next",
+  "checkedAt": "2026-10-29T10:30:16.158Z",
+  "requiredSpaces": [
+    "Men Port Cannon Closet",
+    "Men Starboard Cannon Closet",
+    "Men's Quarters",
+    "Storage Room",
+    "Women Port Cannon Closet",
+    "Women Starboard Cannon Closet",
+    "Women's Quarters"
+  ],
+  "actualRoundTrips": [
+    {
+      "name": "Storage Room",
+      "returned": true,
+      "position": [
+        -4.204190625402699,
+        -40.55070114135742,
+        -1.0041895498459874
+      ]
+    },
+    {
+      "name": "Men's Quarters",
+      "returned": true,
+      "position": [
+        -4.236054395734635,
+        -40.55070114135742,
+        -0.9751491122254102
+      ]
+    },
+    {
+      "name": "Women's Quarters",
+      "returned": true,
+      "position": [
+        -4.213095158524861,
+        -40.55070114135742,
+        -1.026986282210278
+      ]
+    },
+    {
+      "name": "Men Starboard Cannon Closet",
+      "returned": true,
+      "position": [
+        -4.248346848441735,
+        -40.55070114135742,
+        -0.9864110762120338
+      ]
+    },
+    {
+      "name": "Men Port Cannon Closet",
+      "returned": true,
+      "position": [
+        -4.301247634446792,
+        -40.55070114135742,
+        -1.005177888991164
+      ]
+    },
+    {
+      "name": "Women Starboard Cannon Closet",
+      "returned": true,
+      "position": [
+        -4.237077292459149,
+        -40.55070114135742,
+        -1.0151381053841195
+      ]
+    },
+    {
+      "name": "Women Port Cannon Closet",
+      "returned": true,
+      "position": [
+        -4.23032600574653,
+        -40.55070114135742,
+        -1.016190055519575
+      ]
+    }
+  ],
+  "geometry": "zero exported shield and white/black band intersections; unchanged 20 micrometre independent test",
+  "physical": "113 matched fore perimeter walls to real ceiling underside; 13 formerly defective ray checks",
+  "exterior": {
+    "shield": 688,
+    "hullAndBands": 1200,
+    "differences": 0
+  },
+  "appearance": {
+    "captures": 14,
+    "personallyReviewed": true,
+    "independentCoordinatorReviewed": true,
+    "servedHashes": {
+      "sunny.glb": {
+        "local": "d34a215a64d44b50605901b8f164bd71a65ce78503a929df202e9266f15778e4",
+        "served": "d34a215a64d44b50605901b8f164bd71a65ce78503a929df202e9266f15778e4"
+      },
+      "sunny-collision.glb": {
+        "local": "ae9bfb25eb66fea0cacb07730b7ca7bf30b6cef72e1669c855bdf2ce516140e8",
+        "served": "ae9bfb25eb66fea0cacb07730b7ca7bf30b6cef72e1669c855bdf2ce516140e8"
+      },
+      "ship-metadata.json": {
+        "local": "8c33e92ce3e4efb7e1d569baf9f51b6e5d7553851b459955f9937701bf9dd0f3",
+        "served": "8c33e92ce3e4efb7e1d569baf9f51b6e5d7553851b459955f9937701bf9dd0f3"
+      }
+    }
+  },
+  "runtime": "all original runtime sources and source FBX preserved; no body/control/material runtime change",
+  "scope": "C01 targeted tests/access/build only; no whole-ship aggregate claim",
+  "comparisonFrozenAt": "12e2dde"
+}

@@ -1,0 +1,80 @@
+{
+  "notice": "Offline fixed-camera triangle attribution only; no geometry/material changes or walking claims.",
+  "meshes": 588,
+  "eye": [
+    -19,
+    -45.451,
+    8
+  ],
+  "hits": [
+    {
+      "name": "Sunny_Lawn",
+      "material": "Sunny_grass",
+      "pixels": 1,
+      "samples": [
+        {
+          "pixel": [
+            100,
+            100
+          ],
+          "point": [
+            -15.032862145603211,
+            -40.77071762084961,
+            10.464638070861504
+          ],
+          "distance": 6.611933660035732
+        }
+      ],
+      "tags": {
+        "sunny_authored": true,
+        "sunny_feature": "Lawn",
+        "sunny_walkable": true,
+        "sunny_obstacle": false,
+        "sunny_uv_space": "metres",
+        "sunny_uv_kind": "planar",
+        "sunny_wood_kind": "grain",
+        "sunny_part": "deck",
+        "sunny_deck_z": -39.6015
+      }
+    },
+    {
+      "name": "Sunny_InteriorWall_B1_38_seg0",
+      "material": "Sunny_timber",
+      "pixels": 2,
+      "samples": [
+        {
+          "pixel": [
+            600,
+            700
+          ],
+          "point": [
+            -18.04839979732358,
+            -43.441454257952664,
+            13.929886013269424
+          ],
+          "distance": 6.333037593878844
+        },
+        {
+          "pixel": [
+            600,
+            600
+          ],
+          "point": [
+            -17.964733619977782,
+            -42.577408838816766,
+            13.929886013269424
+          ],
+          "distance": 6.670296153065699
+        }
+      ],
+      "tags": {
+        "sunny_authored": true,
+        "sunny_feature": "InteriorWall",
+        "sunny_walkable": false,
+        "sunny_obstacle": true,
+        "sunny_part": "detail",
+        "sunny_deck_z": -39.6015
+      }
+    }
+  ]
+}

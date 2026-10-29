@@ -3,7 +3,7 @@
  *
  *   npm test
  *
- * Twenty serial suites: pure navigation/climbing, physical interior/exterior materials, exported geometry/collision,
+ * Twenty-three serial suites: pure navigation/climbing, physical interior/exterior materials, exported geometry/collision,
  * all room routes, real exterior/interior/controls journeys, interaction,
  * motion comparisons and visual capture. The suites array is authoritative.
  */
@@ -60,6 +60,9 @@ if (!serverUp) {
 }
 
 const suites=[
+ ['foreTrim.test.mjs','C01 actual exported fore trim clearance'],
+ ['foreStorage.test.mjs','C01 real storage enclosure and physical join'],
+ ['foreExterior.test.mjs','C01 original bow exterior preservation'],
  ['interiorMaterials.test.mjs','physical interior materials and metric projection'],
  ['exteriorMaterials.test.mjs','physical exterior materials and reflection guards'],
  ['navigation.test.mjs','navigation logic'],['climbing.test.mjs','climbing and interaction logic'],['assets.test.mjs','asset structure'],['exterior.test.mjs','exterior coplanar geometry'],['doors.test.mjs','door and hatch collision'],

@@ -1,0 +1,10 @@
+{
+  "notice": "Compared every actual runtime source file against unchanged original ship; no app/control/player/material edits in C01. Original source FBX remains read-only.",
+  "differences": [],
+  "runtimeFiles": 32,
+  "sourceFBX": {
+    "file": "stuff/1.FBX",
+    "local": "8a770f19926e304cce1839fde4797fc1d98db5a49814f7b049e5a83be69cec10",
+    "original": "8a770f19926e304cce1839fde4797fc1d98db5a49814f7b049e5a83be69cec10"
+  }
+}

@@ -1,0 +1,43 @@
+PASS lawn to Storage Room {
+  pos: [ -19.48252425319002, -47.150699615478516, -0.4 ],
+  grounded: true,
+  blocker: null
+}
+PASS Storage Room return to lawn [ -4.204190625402699, -40.55070114135742, -1.0041895498459874 ]
+PASS lawn to Men's Quarters {
+  pos: [ -24.715394261133035, -40.55070114135742, 0.39990751017833265 ],
+  grounded: true,
+  blocker: null
+}
+PASS Men's Quarters return to lawn [ -4.236054395734635, -40.55070114135742, -0.9751491122254102 ]
+PASS lawn to Women's Quarters {
+  pos: [ -25.94937330463994, -36.41469955444336, 0.3999607933902909 ],
+  grounded: true,
+  blocker: null
+}
+PASS Women's Quarters return to lawn [ -4.213095158524861, -40.55070114135742, -1.026986282210278 ]
+PASS lawn to Men Starboard Cannon Closet {
+  pos: [ -24.794330109933153, -40.55070114135742, -8.657168969527072 ],
+  grounded: true,
+  blocker: null
+}
+PASS Men Starboard Cannon Closet return to lawn [ -4.248346848441735, -40.55070114135742, -0.9864110762120338 ]
+PASS lawn to Men Port Cannon Closet {
+  pos: [ -24.735281735814063, -40.55070114135742, 9.31874674886703 ],
+  grounded: true,
+  blocker: null
+}
+PASS Men Port Cannon Closet return to lawn [ -4.301247634446792, -40.55070114135742, -1.005177888991164 ]
+PASS lawn to Women Starboard Cannon Closet {
+  pos: [ -26.00000000000001, -36.41469955444336, -8.601625550741922 ],
+  grounded: true,
+  blocker: null
+}
+PASS Women Starboard Cannon Closet return to lawn [ -4.237077292459149, -40.55070114135742, -1.0151381053841195 ]
+PASS lawn to Women Port Cannon Closet {
+  pos: [ -26.002521717578023, -36.41469955444336, 9.344388579883619 ],
+  grounded: true,
+  blocker: null
+}
+PASS Women Port Cannon Closet return to lawn [ -4.23032600574653, -40.55070114135742, -1.016190055519575 ]
+C01 journey failures: []

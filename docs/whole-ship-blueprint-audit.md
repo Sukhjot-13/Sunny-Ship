@@ -1,131 +1,79 @@
-# Current status — model trial finished, October28,2026
+# Thousand Sunny — sole active repair queue
 
-General ship work remains STOPPED. The bounded Sol/C01 versus Terra/C02 experiment is complete as an assessment: both outputs partial/unmerged, original findings not closed. Read [the compact result/recommendation](model-comparison-20261026.md). Sol leaves visible upper storage trim and strict-test failures; Terra clears both sampled/visible linings but full containment/travel proof remains unverified. Original runtime/model inputs are preserved; no automatic repair, merge or texture resumption. Earlier active queues below are historical.
+## Current checkpoint — October29,2026
 
----
+C01 is verified, applied and confirmed in the actual current ship. Its finding, evidence and former plan are in [completed repairs](completed-repairs.md#c01--verified-and-applied-october292026); do not repeat it. C02 is the sole active repair. All other findings and general texture work remain paused in this chat. Finish and confirm C02 while preserving C01, then the coordinating chat will create the requested fresh `gpt-6.1-terra` chat at High for the remaining findings one at a time. Do not start that remaining queue here.
 
-# STOPPED — current authorization, October26,2026
+The Sol/Terra comparison is finished and frozen at12e2dde: [comparison report](model-comparison-20261026.md). Current C01 completion is separate post-comparison work. Exact checkpoint/receipts: [post-comparison progress](post-comparison-repairs.md), [C01 current-ship confirmation](review/post-comparison-c01/current-ship-confirmation.json).
 
-Sukhjot said “stop all things.” General texture/repair work is stopped and must not resume automatically. Only a bounded isolated Sol/C01 versus Terra/C02 experiment and a local Git baseline checkpoint are now authorized. Neither candidate may be merged or close C01/C02 in this original ship. Earlier resumption instructions below are superseded. Earlier capture/server sessions ended; their orphaned project-owned Chrome browser was identified by working directory and terminated. Existing files and partial interior materials are preserved. See `model-comparison-20261026.md` for the isolated trial, exact baseline, processes and results.
+Preserve original FBX, useful exterior hull, existing realistic exterior/interior/water runtime, source palette, controls, normal body/speeds and2.2 enlargement. Use targeted verification for C01/C02 only; no whole-ship aggregate or tour in this scope. Interior IF01 baseline/IF02 implementation are retained; IF03/IF04 verification and the remaining mixed graphics findings are unaccepted and paused. Original U09/U11 decisions remain open for sections that need them.
 
----
-
-# Thousand Sunny — START HERE: current repair queue
-
-This is the sole active checkpoint. All earlier phase instructions and dates below are historical where they conflict with this section.
-
-## Current checkpoint — October26,2026
-
-- **Latest authorization:** Sukhjot requested that verified textures be followed immediately by section-by-section blueprint repairs to complete the whole ship against `stuff/images`. This supersedes the construction pause once the texture gate passes. No new parallel writer or asset build is active.
-- **Single active section:** IF03–IF04, finishing verification of the already-implemented interior texture pass. IF01 matched baseline and IF02 implementation exist; neither the old exterior19/19 receipt nor incomplete interior captures verify the current interior/light runtime.
-- **Texture evidence:** exterior/water EX01–EX07 verified with terminal19/19 suites/build PASS (`review/exterior-realism-full-20261023T111223Z/status.json`). Interior v1 rejected shader compile; fixed in source. V2 capture incomplete. V3 has44 view records and zero errors/40.63fps but overlapped source changes and was never personally accepted. Current verification pending; no live jobs on resumption.
-- **Current source:** `realisticInterior.js`, `interiorLighting.js`, Ship/App integration and `interiorMaterials.test.mjs` exist. Twenty-suite runner retains all19 earlier suites. Inspect/fix necessary defects; fresh room/pattern/close/motion/stop/performance evidence, all20 suites and production build are required. Avoid an open-ended texture polish project.
-- **Exact next task:** finish IF03/IF04; preserve a dated receipt/review page and a rollback manifest. Then start C01 without another approval gate: reconcile saved candidate with current source/publication, attribute the separate storage protrusion, integrate the smallest repair, coherently publish visual/collision/metadata/master, personally inspect matched before/after/reference views and prove actual access/returns/full tests before acceptance. Continue structural dependencies and remaining ledger in order.
-- **Construction ledger:** C01 and remaining unverified findings are authorized but deferred only behind the texture verification gate, not paused by the user. Their original59 IDs, U ambiguities, diagnoses and evidence remain below. No construction is accepted at source-edit/build-start or merely from collider reachability.
-- **Invariants:** preserve finished exterior/water/interior materials, UI01/M01 controls, original FBX and useful source geometry, intentional2.2 enlargement and normal human dimensions/speeds. No hidden geometry, weakened checks or renamed findings as substitutes for accuracy. Before each rebuild preserve a rollback and publish all four assets coherently.
-- **Reference limits:** U09 bed-era and U11 later Dock allocation remain unresolved. Follow supplied images on unambiguous work; ask a targeted question only when a particular section truly needs the choice. Do not invent hidden dimensions or silently alter disclosed access adaptations.
-- **Live job:** none at this checkpoint. Log new process handle/PID, exact log/receipt and frozen input manifest here when verification/build starts. Do not restart existing live jobs. No Git repository; work locally, no push/deploy/messages to another chat.
-
-### Interior finish gate
-
-| ID | Status | Evidence still required |
-|---|---|---|
-| IF01 | verified baseline |79 input hashes/source rollback in `review/interior-realism-baseline/`;46 before images, seven reviewed contacts. Physical mapping logic passes focused tests. |
-| IF02 | implemented | Existing wood/paint/fabric/ceramic/metal/glass/paper/lamp finishes and two-lamp shadow rig need final current verification. |
-| IF03 | in progress | Fresh current shader/appearance/physical pattern/motion/stop/performance checks and image inspection. |
-| IF04 | pending | Full unfiltered20-suite runner/build, unchanged frozen inputs, immutable evidence and `interior-material-review.md`. |
-
-### Exterior and water texture stage — verified historical milestone
-
-| ID | Status | Scope and acceptance evidence |
-|---|---|---|
-| EX01 | verified done | All76 frozen hashes/runtime-source backups and original model/master rollback copies preserved in `review/exterior-realism-baseline/inputs.json`. Cannon gate terminal18/18 + build PASS. Original22 baseline images/four contact sheets inspected; corrected26-image `exterior-realism-baseline-v2` capture PASS, close deck/helm/glass/canvas framing inspected. Baseline59.81fps at1440×900, no planar ship reflection. Existing geometry is the preserved material-stage baseline, not accepted construction. |
-| EX02 | verified done | Physical-scale timber/paint maps, joints, grain/pores/roughness; source palette/UVs/geometry retained. Current images reviewed, full19/19/build PASS. |
-| EX03 | verified done | Exterior metal/iron/roof/glass physical finishes reviewed; structural shapes/openings retained. Full19/19/build PASS. |
-| EX04 | verified done | Canvas weave/panels/hems, original artwork/wind, rope/plant finishes reviewed; geometry/interior materials retained. Full19/19/build PASS. |
-| EX05 | verified done | Live planar ship reflection, dielectric/GGX/deep-water shading, filtered advected ripples and restrained foam. Original waves/hull cutout/navigation correspondence retained; current images and full19/19 PASS. |
-| EX06 | verified done | Final v5 appearance reviewed; actual grounded motion and5s deck/plants/glass stops PASS with0% visible change.57.66fps appearance/43.95fps window contexts. Evidence preserved in terminal run. |
-| EX07 | verified done | Full19/19 suites/build PASS, no during-run changes across79 inputs. Exact original models/master/body/collision/control sources preserved. Exterior review page prepared; interiors/construction remain paused pending later direction. |
-
-### Status definitions
-
-`paused`: Sukhjot explicitly paused this scope; retain its original defect and resume evidence. `open`: not repaired/accepted. `in progress`: named work started, still requires listed evidence. `verified done`: implementation plus appropriate current evidence complete, with any aggregate limitations recorded. `blocked`: needs a specific external decision/change. `deferred`: explicit dependency/phase, reason recorded. Never mark all findings done because one test suite passes.
-
-### Saved C01 plan — authorized next after the interior verification gate
-
-1. Construction was reauthorized October26,2026. After the interior gate, first inspect the then-current publication/source and reconcile these older baseline/private studies; never apply the saved candidate blindly. Preserve the finished material runtime through the rebuild.
-2. Capture `node docs/review/c01-fore-review.mjs before`, inspect framing; preserve current master/publication for rollback. The candidate has not been published.
-3. Move the validated unpublished helper into `tools/sunny_fore_trim.py`. In `build_interiors`, retain the original B1 `outline` immediately after `fit_floor` as `storage_outline`, return it as `storageEnclosure`; do not reuse the subsequently overwritten `outline` variable. Pass interiors into `prepare_exterior_surfaces`; call `trim_fore_decorations` after its existing overlap removal/topology/cleanup, then clean new cut slivers before the existing normal/UV preparation. This matches the triangulated master used by the private fixture. Serialize `storageEnclosure` and `foreTrim` in `build_assets.py` (authoring return keys are not automatically published).
-4. Promote `review/c01-export-check.mjs` to a strict publication-only test (remove private-data/flag mode), move the original ray baseline under `tests/fixtures`, and add it to the single runner without changing existing18 suites/assertions. This independently checks actual-export triangle/prism-area clearance and original first-hit preservation. The688-ray baseline is `review/c01-bow-exterior-baseline.json`; the original published triangles overlap the three .26m-inboard room volumes by approximately1.197/48.667/6.166m². This is current-model measurement, not canonical tolerance. Preserve all existing assertions.
-5. Build/publish visual, collision, metadata and master together using existing staging. Inspect fresh matched before/after room, all four closet and exterior views; verify actual fore-room/storage walking and complete return. Classify `c01-all-source-probe.json` candidates in the storage side/bow wall views before closing C01: the broad footprint survey also includes legitimate stairs/native bulkheads, so it is not a deletion list. The private candidate/checker currently repairs/verifies the confirmed shield only. The unchanged audit storage capture also visibly contains a dark triangular protrusion near the floor; the imported Box118/119 candidates need exact attribution and fresh sidewall views before C01 acceptance. Run the entire unfiltered suite and build. Mark C01 done only after appropriate current evidence; keep other findings open.
-
-### Finding ledger — preserve every original ID
+## Remaining finding ledger
 
 | ID | Status | Current work, dependency or evidence |
 |---|---|---|
 | UI01 (new user request) | verified done | Actual controls/focused six inspected images + full18/18 suites/build PASS; all76 inputs unchanged. [Receipt](review/cannon-ui-verification.json). |
-| C01 | deferred | Authorized next after interior gate October26; no production repair applied. Read-only reproduction: 21 F1 / 831 F2F / 79 forward-store shield triangles sampled >26cm inboard; existing shield has3849 unmatched/non-two-incidence exported edges at1µm weld. No source/asset repair yet. [In-memory fitted-cut study](review/c01-fore-trim-fit-study.json) clears all sampled intrusions and preserves688 exterior first-hit positions/materials; the exact unpublished candidate clears all sampled intrusions and preserves688 master exterior BVH hits. It uses the original B1 floor-fitting method, not the saved cut floor vertex array. Independent JavaScript validation of the actual private Blender triangles also PASS: zero sampled/exact-area intersections and688 unchanged exterior first hits. Rejected fixtures are retained and no geometry has been published. [Diagnosis](review/c01-fore-trim-baseline.json). |
-| C02 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| C03 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| C04 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| C05 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| C06 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| C07 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| C08 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| C09 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| E01 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| E02 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| E03 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| E04 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| E05 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| INT01 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| INT02 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| INT03 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| INT04 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| INT05 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| INT06 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| INT07 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| INT08 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| INT09 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| INT10 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| INT11 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| INT12 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| INT13 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| INT14 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| INT15 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| INT16 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| INT17 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| INT18 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| INT19 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| INT20 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| INT21 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| INT22 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| INT23 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| INT24 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| INT25 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| INT26 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| INT27 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| INT28 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| INT29 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| C02 | in progress | Actual paired Dock aperture repair is the sole active scope, reusing frozen Terra source while preserving verified C01. All-layer visual/physical path, rim containment and real-control checks required before acceptance. |
+| C03 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| C04 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| C05 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| C06 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| C07 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| C08 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| C09 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| E01 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| E02 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| E03 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| E04 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| E05 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| INT01 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| INT02 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| INT03 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| INT04 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| INT05 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| INT06 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| INT07 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| INT08 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| INT09 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| INT10 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| INT11 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| INT12 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| INT13 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| INT14 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| INT15 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| INT16 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| INT17 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| INT18 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| INT19 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| INT20 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| INT21 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| INT22 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| INT23 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| INT24 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| INT25 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| INT26 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| INT27 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| INT28 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| INT29 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
 | M01 | verified done | Universal Cannon/X panel, start/help guidance, real feedback and legacy helm J/K verified in focused and full18/18 + build tests. |
-| M02 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| M03 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| M04 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| M05 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| M06 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| M07 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| M08 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| M09 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| M10 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
-| G01 | in progress | Exterior material/UV scope verified EX01–EX04; interior runtime implemented and current IF03–IF04 verification active. Original mixed-scope finding remains. |
-| G02 | in progress | Existing pendant positions now drive two nearby warm shadowed lights; final current appearance/performance/regression gate pending. |
-| G03 | in progress | Existing floor patterns retained with physical glaze/grout; final IF03–IF04 proof pending; canonical construction/artwork sub-scope remains unaccepted. |
-| G04 | open | Exterior plant materials completed/verified in EX04; foliage geometry/density and interior tank life remain paused. |
-| G05 | deferred | Preserve existing sourced exterior artwork while improving cloth response; broader artwork/portraits remain paused. |
-| G06 | in progress | Interior glass/water and approximate environment-reflection mirror finishes implemented; IF03–IF04 proof pending. Tank/bath construction and exact mirrors remain separate. |
+| M02 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| M03 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| M04 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| M05 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| M06 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| M07 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| M08 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| M09 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| M10 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| G01 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| G02 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| G03 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| G04 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| G05 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
+| G06 | paused | Original finding/evidence below; resume only in the requested fresh chat after C02 is confirmed. Preserved partial materials remain subject to their own verification. |
 
+## Uncertainty ledger
 
-### Uncertainty ledger
 
 | IDs | Status | Required decision/evidence |
 |---|---|---|
@@ -137,49 +85,10 @@ This is the sole active checkpoint. All earlier phase instructions and dates bel
 | U11 | deferred | Obtain selected later Dock allocation/vehicle4–6 references before exact later-layout changes. |
 | U12 | open | Hidden ports/underwater construction/all return routes remain independent verification scope. |
 
-### Implementation journal
 
-- 2026-10-26 — User reauthorized section-by-section whole-ship blueprint repairs once the actual interior texture milestone is verified. Resumed saved work; no live app/build/test processes found, no current interior full receipt. Current gate IF03/IF04; C01 next. Original findings and uncertainties retained.
+## Retained original audit evidence
 
-
-- 2026-10-22 14:05 EDT — UI01/M01 complete: full18/18 suites PASS, build exit0, all76 frozen hashes match; prior baseline failures did not repeat. Core cannon/motion/climb evidence copied under the immutable run directory. Starting authorized EX01 exterior/water baseline; C01 and all other construction stay paused.
-
-- 2026-10-22 13:56 EDT — Sukhjot changed priority to realistic exterior/water after the current cannon milestone, then clarified: keep the completed C01 plan for future use; stop C01 work because no production repair began. Construction queue explicitly paused. Added EX01–EX07, with interior textures reserved for later review. No C01 source/master/publication change.
-
-- 2026-10-22 13:24 EDT — UI01 aggregate suites1–13 PASS, including prior Aquarium endpoint failure and complete lookout return; suite14 underway. Coordinator reports an era-choice question is pending with Sukhjot: retain later bed/Dock choices or follow early drawings. No reply yet; U09/U11 remain pending and do not block unambiguous geometry/access work.
-
-- C01 exact candidate verification — the unpublished helper itself now passes the unsaved master fixture and separate JavaScript actual-triangle sample/area/ray checks. Candidate1,221 source triangles altered; after the existing cleanup of54 microscopic new cut faces,44,080 final triangles remain; all three room areas are zero and688 exterior first-hit positions/materials match. Original/master/publication remain unchanged. `review/c01-fore-trim-master-check.json` is provisional candidate evidence, not published-room acceptance.
-
-- C01 private fixture — first tessellation API mismatch and subsequent float-precision seam artifacts were rejected and preserved. Double-precision clipping/explicit triangle fragments clear all sampled F1/F2F/storage intrusions without changing contours or clearance tolerances; independent master exterior-ray check PASS (688 rays, zero differences). No save/export/publication.
-
-- C01 in-memory study — triangulated exact-contour masks clear all sampled F1/F2F/forward-storage shield intrusions with zero differences across688 exterior first-hit rays. No exported model, master or application source changed. An isolated Blender fixture now checks the corresponding operation on the existing master without saving/exporting; production remains frozen for UI01 full verification.
-
-- C01 preparation (no publication change) — exact published shield samples independently reproduce intrusive red/white triangles in all three fore levels. Imported shield is already open; a closed-Boolean helper would be an unsafe assumption. Plan a lining-fitted operation with independent exterior preservation and current room/route proof after UI01 aggregate.
-
-- UI01 focused verification — shared non-helm cannon controls pass browser use from Inspect and ordinary spawn; actual jaw quaternion/dynamic collision, open/close, blast/cola cost, recoil, disabled state, Escape/body-focus recovery, pointer-lock handoff/re-capture guard, no jump/placement/helm and narrow fly controls verified. Browser zero page errors; logic and build PASS. Current code remains frozen for complete18-suite run. Initial stale-server and Escape-focus failures were corrected and not accepted.
-
-- 2026-10-22 12:42 EDT — implementation authorized by Sukhjot. Initialized all59 finding statuses and U ledger, reconciled prior terminal15/17 baseline, selected UI01 then C01. No source/asset fix accepted yet.
-
----
-
-# Original survey — preserved historical findings and evidence
-
-# Whole-ship blueprint audit — current Thousand Sunny
-
-**Survey date:** October 22, 2026, America/Toronto. **Owner:** Sukhjot. **Scope:** survey and report only. No application, model, physics, material, control, source asset, test, or build changes were made. The small scripts under `docs/review/whole-ship-audit-*` create audit evidence only.
-
-The current ship is recognizable, has extensive modeled spaces, and supports several working mechanisms. It is **not yet a faithful reconstruction of the supplied room drawings**. The most consequential confirmed construction problems are:
-
-1. Both open Soldier Dock apertures still face solid interior hull lining; rolling the shutters does not expose a usable launch tunnel.
-2. The Aquarium/Kitchen food lift is separated from the real mast and obstructed by the floor between levels.
-3. All four bedroom cannons face solid shell surfaces rather than aligned open gunports.
-4. Usopp's and Franky's B1 workshops occupy the opposite sides from the supplied B1 plan.
-5. Exterior bow trim intrudes into the fore cabins, cannon closets and storage.
-6. The crow's nest lacks the telescope and gym furnishings shown in both manga and anime references.
-7. The Dock stair rails emerge through the closed lawn hatch.
-8. Room furnishing silhouettes, placement, open-plan relationships and several door/window treatments differ substantially from the references.
-
-**The mouth cannon is not missing its trigger.** A fresh continuous lawn-to-helm walk followed by real E/J/K input successfully opened and fired it. Its control discovery and visual presentation still need improvement. Missing controls elsewhere are listed separately below.
+The observations below are the original audit baseline for remaining findings, not current completion claims. Completed C01 is archived separately. The exact original ledger and obsolete phase instructions are preserved in the historical snapshot.
 
 ## 1. Baseline, evidence and meaning of the conclusions
 
@@ -260,7 +169,7 @@ Evidence shorthand used below: **B(name)** = `review/whole-ship-audit-room-name.
 
 | Area | Current review result and remaining limit |
 |---|---|
-| Overall hull/keel, red panels, white scrolls, black bands and small ports | X(port/starboard/bow-quarter/stern-quarter/top), D(extra-bow-side). Recognizable broad arrangement; no missing whole hull/major scroll observed. Concealed underwater topology and every small port's use are not certified. C01/C02 and E04 remain. |
+| Overall hull/keel, red panels, white scrolls, black bands and small ports | X(port/starboard/bow-quarter/stern-quarter/top), D(extra-bow-side). Recognizable broad arrangement; no missing whole hull/major scroll observed. Concealed underwater topology and every small port's use are not certified. completed C01 / pending C02 and E04 remain. |
 | Lion, face, eyes/nose/muzzle, mane, bones, gold collar, Gaon | X(front), D(figurehead-close/extra-bow-side), verified J/K/T close-ups. Closed/open states and rotation reviewed. Working trigger confirmed; E04/U01 and M01 remain. |
 | Both anchors, rings, flukes, short rope/hawse connection | D(anchor-port/anchor-starboard), mesh inventory. Both stowed anchors present; no missing anchor observed. Deployment/internal rope routing not implemented/proved: M02. |
 | Helm, pedestal, wheel, channel dial, knob/lever and Log Pose | D(helm-inspect), verified control views and F trace. User E prompts work at physical stations. Exact dial mechanism/Log Pose representation remains simplified; M01/M09 and U02. |
@@ -281,11 +190,11 @@ This table covers all **27 metadata spaces**, plus the crow's nest, which has a 
 
 | Group | Exact area(s) | Reviewed / no mismatch observed at this limited level | Open findings / evidence limits |
 |---|---|---|---|
-| Group 01 | `Men's Quarters` | Fore F1 placement; three suspended double-bunk units, six-door bank, five poster cues, laundry and actual sunken well exist. | C01; INT01–INT03; E03; G. B(mens), D(extra-kotatsu/extra-lockers/mens-reverse). Well is confirmed by triangle rays, despite weak visual depth cues. |
+| Group 01 | `Men's Quarters` | Fore F1 placement; three suspended double-bunk units, six-door bank, five poster cues, laundry and actual sunken well exist. | completed C01; INT01–INT03; E03; G. B(mens), D(extra-kotatsu/extra-lockers/mens-reverse). Well is confirmed by triangle rays, despite weak visual depth cues. |
 | Group 02 | `Men's Washroom` | Sink/tap/toothbrush cues at fore cabin entrance. | INT04/INT05; E03. B(mens-washroom), D(mens-wash-wide). Alarm operation absent. |
-| Group 03 | `Women's Quarters` | Fore F2; bed/canopy, four-door wardrobe, bookcase, chest and vanity base exist. | C01; INT06/INT07; bed-version U09. B(womens), D(womens-reverse/extra-women-furniture). |
+| Group 03 | `Women's Quarters` | Fore F2; bed/canopy, four-door wardrobe, bookcase, chest and vanity base exist. | completed C01; INT06/INT07; bed-version U09. B(womens), D(womens-reverse/extra-women-furniture). |
 | Group 04 | `Women's Washroom` | Sink, stocked shelf and physical tea-set parts exist. | INT04/INT08. B(womens-washroom), D(womens-wash-wide). Cabinet doors/closed storage and mirror not reproduced. |
-| Group 05 | `Men Starboard Cannon Closet`, `Men Port Cannon Closet`, `Women Starboard Cannon Closet`, `Women Port Cannon Closet` | Four hollow-bore/carriage models present and oriented outboard. | C01/C06/M04. D(cannon-men-starboard/cannon-men-port/cannon-women-starboard/cannon-women-port). Original B closet views miss the fixtures and cannot accept them. |
+| Group 05 | `Men Starboard Cannon Closet`, `Men Port Cannon Closet`, `Women Starboard Cannon Closet`, `Women Port Cannon Closet` | Four hollow-bore/carriage models present and oriented outboard. | completed C01 / C06/M04. D(cannon-men-starboard/cannon-men-port/cannon-women-starboard/cannon-women-port). Original B closet views miss the fixtures and cannot accept them. |
 | Group 06 | `Aquarium Bar` | Aft F1, curved glass tank/fish/coral, checker floor, mast extension and furniture families exist. | C04/C05; INT09/INT10; E02/E03. B(aquarium), D(aquarium-reverse/aquarium-lift/extra-curtains-directed). |
 | Group 07 | `Aquarium Service Passage` | Rear route and overhead tank structure exist; fish visible overhead; balcony access metadata exists. | INT11/U10; not every tank seal/door connection proved. B(aquarium-service), D(aquarium-overhead). |
 | Group 08 | `Dining Room` | Correct port F2 side; long covered table, chairs, green seating and Den Den Mushi exist. | INT12/INT13/INT14; E03/G. B(dining), D(dining-reverse). |
@@ -297,7 +206,7 @@ This table covers all **27 metadata spaces**, plus the crow's nest, which has a 
 | Group 14 | `Usopp's Main Factory` | Timber workshop, workbenches, drawing/tool board families, crates/barrels/sign exist. | C07; INT22. B(factory), D(factory-reverse). Reference clutter/composition not reproduced. |
 | Group 15 | `Franky's Weapon Development Room` | Metal floor/one main lining, furnace, drawing desk/tool/scrap families exist. | C07; INT23. B(weapons), D(weapons-reverse). Metal enclosure coverage incomplete. |
 | Group 16 | `Energy Room` | Stern B1 chamber, actual arched cavity, grille, three barrels, gauges and connected feed-pipe shapes. | INT24/M03. B(energy), D(energy-front). No barrel-loading function or full piping circuit. |
-| Group 17 | `Storage Room` | Forward B1; crates/sacks/barrels, shelf and cradled lumber exist. | C01/INT25. B(storage). Actual timber stock supported in viewed inventory; ammunition/weapon organization incomplete. |
+| Group 17 | `Storage Room` | Forward B1; crates/sacks/barrels, shelf and cradled lumber exist. | completed C01 / INT25. B(storage). Actual timber stock supported in viewed inventory; ammunition/weapon organization incomplete. |
 | Group 18 | `Soldier Dock System`, waiting area and six contents | Carousel/low bay dividers, central spokes, six vehicle proxies, channel labels, exterior shutters. | C02/C03; INT26–INT29; M02/M10; U11. B(soldier-dock), D(dock-centre/dock-waiting/vehicle-1…6), verified open aperture. |
 | Group 19 | Crow's nest / gym | Circular floor, pane ring, roof/dormers, hatch, external access and speaker. | C08. B(lookout), D(lookout-reverse). Both opposite views show empty floor/walls. |
 | Supplemental spaces | `Observation Deck`; `Fore Port Toilet`; `Fore Starboard Toilet`; `Stern Ladder Access` | Included in exterior coverage above; stern ladder links lower stern structure with Library tier. | A3, E01/E03/E05, U04/U07. These four rows complete the 27 metadata-space inventory; they are not extra accepted rooms. |
@@ -308,7 +217,6 @@ This table covers all **27 metadata spaces**, plus the crow's nest, which has a 
 
 | ID / priority | Location and exact reference expectation | Current observation and evidence | Required improvement / impact |
 |---|---|---|---|
-| **C01 / P1** | Fore F1/F2 cabins, closets and B1 storage. R06/R07/R09/R16/R17 show continuous usable room interiors, without exterior red hull ornament inside. | Large red/white exterior fragments cross cream/timber room walls and ceiling/floor edges. [Women's room](review/whole-ship-audit-room-womens.png), [storage](review/whole-ship-audit-room-storage.png), [women's cannon](review/whole-ship-audit-cannon-women-starboard.png), B(mens). Exterior source trim family including `Circle038.001` is present at these stations; the mesh inventory preserves bounds. A/S. | Reconcile exterior ornament and interior shell ownership/cuts. Do not hide it with paint or shrink the player. Breaks enclosure and reference room silhouette. |
 | **C02 / P1** | Both external Dock mouths. R14 p193 shows an open rolling shutter exposing a water-bearing internal launch channel. | After real channel-2 selection and full shutter opening (`shutter=1`), the [port aperture](review/whole-ship-audit-verified-dock-open-port.png) exposes timber lining. Exact center rays hit `Sunny_InteriorWall_B1_73_seg0` on port and `Sunny_InteriorWall_B1_199_seg0` on starboard. See `dockApertures` in [static evidence](review/whole-ship-audit-static.json). Port opening seen live; starboard obstruction confirmed statically, not with a second live open photo. A/S/F. | Cut/rebuild both actual launch paths through all lining layers and connect them to the selected bay. An animated shutter currently suggests access that the underlying construction does not provide. |
 | **C03 / P1** | Dock chamber/launch bays. R07/R14 show tall enclosed radial channels with water/rails, inner numbered rolling gates and circulation/waiting space. | Current dock is a flat gold platter with red parking pads, low white rectangular dividers and open shared upper volume. B(soldier-dock), D(dock-centre/dock-waiting); `Sunny_Dock_bay*`, `Sunny_Dock_sector*`. No enclosed water-bearing tunnels between carousel and hull mouths are visible or authored in `build_interiors`. A/S/source. | Reconstruct channel cross-sections, outer tunnels, water containment and inner portals around the rotating assembly. Distinct from C02's solid lining obstruction. |
 | **C04 / P1** | Mainmast food lift/wine cupboard in Aquarium and Kitchen. R10 pp188–189 and R11 pp190–191 put them **in the mast**, with service opening/table at its base. | The [lift/cupboard](review/whole-ship-audit-aquarium-lift.png) stands as exposed vertical boards beside the mast. `Sunny_InteriorMainMast` spans X17.4229–20.1664; lift guides/hatch span about X15.55–16.55. There is at least **0.873 m** between that hatch's maximum X and the mast's minimum X; the center offset is about **2.745 m**. A/S. | Integrate the service cavity, guide/car and wine cupboard with the actual retained mast, preserving structure and human clearances. Labels calling it a mast lift do not establish the relationship. |
@@ -356,7 +264,7 @@ This table covers all **27 metadata spaces**, plus the crow's nest, which has a 
 | **INT22 / P2** | Usopp Factory, R12/R23: busy timber workspace, cloth sign, patterned padded bench, drafting board, varied tools/junk/toolboxes. | B(factory), D(factory-reverse) show repeated bare tables, blank white boards, sparse generic tools, small crates and rigid text on the wall. No equivalent central padded cloth work station or clutter composition. A. | Build the distinctive workstations/sign/tool containers, then drawings/artwork. Location must be corrected with C07 first. |
 | **INT23 / P2** | Franky room, R12/R24: metal floor/walls with rivets, large drawers, inclined drawing desk, tool bucket, furnace and varied scrap bin. | Metal floor/one wall and furnace exist, but large surrounding faces remain cream/timber; repeated generic tables/tool boards, simple crate/ring scraps and flat desk replace the reference metal workshop composition. B(weapons), D(weapons-reverse). A/source. | Complete metal enclosure and rivet/panel construction, then reference furniture/tools/scrap. Correct C07 before fitting. |
 | **INT24 / P2** | Energy, R14 p192: integrated three-barrel pressure chamber, curved casing/top plumbing and loading/controls accessible from the route. | D(energy-front) confirms three barrels and an arched cavity, but sparse pipe/gauge assembly, straight skinny grille and plain surroundings omit much of the source machine/room construction. B(energy) shows large adjacent stair adaptation. A/source. | Refine casing/pipe/gauge/door/route integration. Meter-exact hidden plumbing is unavailable; do not invent it as fact. Loading remains M03. |
-| **INT25 / P2** | Fore stores, R07 p126: lumber/Adam wood, ammunition and weapon storage organization. | B(storage) and mesh/source inventory contain supported lumber plus crates/sacks/barrels and an empty shelf, but no identifiable organized ammunition/weapon reserve matching the plan labels. Exterior intrusion C01 is also visible. A/source. | Add recognizable, supported storage contents and functional access organization after shell repair. No invented quantity is required by the reference. |
+| **INT25 / P2** | Fore stores, R07 p126: lumber/Adam wood, ammunition and weapon storage organization. | B(storage) and mesh/source inventory contain supported lumber plus crates/sacks/barrels and an empty shelf, but no identifiable organized ammunition/weapon reserve matching the plan labels. Historical C01 intrusion is completed; see the completed-repair archive. A/source. | Add recognizable, supported storage contents and functional access organization after shell repair. No invented quantity is required by the reference. |
 | **INT26 / P1** | Dock waiting room/capstan, R14 p192: distinct crew waiting area, numbered portals, lawn ladder and anchor-controlling capstan. | D(dock-waiting/dock-centre) shows the common open carousel/parking area with a small desk/stool and central hub spokes. No equivalent waiting-room envelope/numbered portal arrangement; no anchor-linked capstan function. A/source. | Reconstruct the waiting/circulation zone and separate its anchor mechanism from carousel decoration. Respect A3 if the lawn stair adaptation is retained. |
 | **INT27 / P2** | Shiro Mokuba I, R14 p193: shaped one-seat waver, seahorse head/mane, light and curved craft/steering details. | [Vehicle 1](review/whole-ship-audit-vehicle-1.png) is a small white ellipsoid/neck/head with block saddle bags; mane/light/hull sculpt and many waver details are not reproduced. `dock_vehicle(1)`. A/source. | Remodel from the supplied side drawing with supported hull/cradle and recognizable fittings; independent operation M10. |
 | **INT28 / P1** | Mini Merry II, R14 p193: four-seat shopping **steam craft**, sheep bow, superstructure/funnel and mechanical details. | [Vehicle 2](review/whole-ship-audit-vehicle-2.png) is a small sailboat with a mast, rectangular sail and bench. `dock_vehicle(2)` explicitly authors `mast`, `sail`, `boom`; the reference steam-craft superstructure/funnel is absent. A/source. | Rebuild its actual propulsion/superstructure and seating arrangement. A channel name and sheep head do not make the wrong boat type accurate. |
@@ -450,7 +358,7 @@ These are **not confirmed defects** unless another finding independently proves 
 ## 8. Practical repair order for a later authorized task
 
 1. **Freeze the target version and preserve this publication.** Decide the women's bed period, later Dock allocation/vehicles, and which walking-stair adaptations remain. Keep the intentional 2.2 scale and ordinary human dimensions.
-2. **Resolve structural ownership/connectivity first:** C01 fore trim, C02/C03 real Dock channels, C04/C05 one mast/lift shaft, C06 four actual gunports, E01 hatch/rails. Use current visual-triangle/surface checks plus matched images; avoid accepting only labels/bounds/collider reachability.
+2. **Resolve structural ownership/connectivity first:** C02/C03 real Dock channels, C04/C05 one mast/lift shaft, C06 four actual gunports, E01 hatch/rails. Use current visual-triangle/surface checks plus matched images; avoid accepting only labels/bounds/collider reachability.
 3. **Correct plan relationships:** C07 workshop sides and INT12 open Kitchen/Dining/mast/bar/ceiling composition. Reconcile shell windows, partitions and doors before moving furniture.
 4. **Build defining missing layouts:** C08 gym; INT09 Aquarium lounge; INT26 waiting/capstan; INT28 correct Mini Merry type. Confirm full routes and reverse descents with ordinary input after each structural change.
 5. **Complete the 19 room groups against their own sheets:** furniture silhouettes, supports, placement, door/window clearances, cabinet/board relationships, floor regions and source-specific fittings. Give each room a matched overview and detail views, not a single doorway/floor photo.

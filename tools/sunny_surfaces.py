@@ -128,7 +128,7 @@ def prepare_exterior_surfaces(objects, vertex_bbox):
         if obj.name in floors:
             floor_soffit(obj)
         elif obj.name in {'Sunny_Library_ceiling', 'Sunny_InteriorFloor_F3_bath',
-                          'Sunny_ForeF1_ceiling', 'Sunny_ForeF2_ceiling', 'Sunny_ForedeckSupport'}:
+                          'Sunny_B1_ceiling', 'Sunny_ForeF1_ceiling', 'Sunny_ForeF2_ceiling', 'Sunny_ForedeckSupport'}:
             # Match the physical slab while preserving the real Bath stair slot.
             # Ownership below partitions both floor tops and opaque undersides.
             floor_soffit(obj, .18)
