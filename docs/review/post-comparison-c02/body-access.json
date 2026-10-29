@@ -1,0 +1,564 @@
+{
+  "notice": "Actual normal walking, selector/lever E, full-size native F flight with B collision ON. Closed mouth stops and open crossings/returns on both sides. No teleport/body/collision bypass. Not a C03 water-support or vehicle-launch acceptance.",
+  "url": "http://127.0.0.1:8180/",
+  "hashes": {
+    "sunny.glb": "716d89824bb63d1dfe2f8b145ade81c35d9cdd4dfc1978350682e180ea8cff10",
+    "sunny-collision.glb": "aac7150f403ded4ec81bfaecc8877555dc5e748e063be5be875975d4e100b7cd",
+    "ship-metadata.json": "87318580d39d8e36510a261b9dbff88cdb498b127674186926041ece5b48e757"
+  },
+  "closedProof": "closed-controls-proof.json",
+  "trace": [
+    {
+      "phase": "closed shutter stop",
+      "side": "port",
+      "position": [
+        0.4950000026280035,
+        -43.766884613577716,
+        16.671844527304174
+      ],
+      "collision": true,
+      "state": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "phase": "closed shutter stop",
+      "side": "starboard",
+      "position": [
+        0.49500000000000144,
+        -43.74852611770839,
+        -19.245845839560033
+      ],
+      "collision": true,
+      "state": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "phase": "real selector2 and lever fully open",
+      "state": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 2,
+        "dockOpen": true,
+        "shutter": 1,
+        "dockAngle": -1.0273484646966222,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "phase": "normal helm walking and stair return",
+      "records": [
+        {
+          "label": "lawn approach",
+          "ok": true,
+          "pos": [
+            -4.289999999999999,
+            -40.55070114135742,
+            2.4750126064206697
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "lower entrance",
+          "ok": true,
+          "pos": [
+            -12.49685265732798,
+            -40.55070114135742,
+            2.3900598299753577
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "fore lower port",
+          "ok": true,
+          "recoveries": 0,
+          "pos": [
+            -17.430935867910346,
+            -36.41469955444336,
+            3.90781707555572
+          ],
+          "grounded": true,
+          "blocker": null
+        },
+        {
+          "label": "cross landing",
+          "ok": true,
+          "pos": [
+            -17.433927878801953,
+            -36.41469955444336,
+            3.907526664632957
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "upper entrance",
+          "ok": true,
+          "pos": [
+            -17.40313282509296,
+            -36.41469955444336,
+            -3.1440760696831282
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "fore upper",
+          "ok": true,
+          "recoveries": 0,
+          "pos": [
+            -21.0507818891563,
+            -33.16210174560547,
+            -3.0783332405307435
+          ],
+          "grounded": true,
+          "blocker": null
+        },
+        {
+          "label": "mast bypass",
+          "ok": true,
+          "pos": [
+            -22.096033406040373,
+            -33.16210174560547,
+            -4.485462810802887
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "forward helm approach",
+          "ok": true,
+          "pos": [
+            -27.077599112602304,
+            -33.16210174560547,
+            -4.499939730230187
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "helm deck",
+          "ok": true,
+          "pos": [
+            -27.098305140579463,
+            -33.16210174560547,
+            -0.3394109243190857
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "return mast bypass",
+          "ok": true,
+          "pos": [
+            -27.09987343430101,
+            -33.16210174560547,
+            -4.510475499654472
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "return upper exit",
+          "ok": true,
+          "pos": [
+            -22.11396822992921,
+            -33.16210174560547,
+            -4.50001891537624
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "return upper stairs",
+          "ok": true,
+          "pos": [
+            -20.76002351669074,
+            -33.16210174560547,
+            -3.1060301920133306
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "fore upper descent",
+          "ok": true,
+          "recoveries": 0,
+          "pos": [
+            -17.12672924830659,
+            -36.41469955444336,
+            -3.1065441385199266
+          ],
+          "grounded": true,
+          "blocker": null
+        },
+        {
+          "label": "return lower landing",
+          "ok": true,
+          "pos": [
+            -17.4015321701498,
+            -36.41469955444336,
+            3.8626980662858736
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "fore lower port descent",
+          "ok": true,
+          "recoveries": 0,
+          "pos": [
+            -12.531466758507243,
+            -40.55070114135742,
+            2.3056600895396233
+          ],
+          "grounded": true,
+          "blocker": null
+        },
+        {
+          "label": "return lawn approach",
+          "ok": true,
+          "pos": [
+            -4.258307965910812,
+            -40.55070114135742,
+            2.389674361595674
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "back to lawn",
+          "ok": true,
+          "pos": [
+            -4.289385682432873,
+            -40.55070114135742,
+            -0.92844825762796
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        }
+      ]
+    },
+    {
+      "phase": "normal Dock walk",
+      "position": [
+        -7.400000006043241,
+        -47.150699615478516,
+        -4.988444861102821
+      ],
+      "grounded": true,
+      "recoveries": 0
+    },
+    {
+      "phase": "normal full-body flight",
+      "target": [
+        7.793561997456373,
+        -43.651,
+        -1.431888816979243
+      ],
+      "position": [
+        7.725912271616772,
+        -43.550699615478514,
+        -1.4477231268984323
+      ]
+    },
+    {
+      "phase": "actual selected bay2 outer region",
+      "vehicleCentre": [
+        5.793955970755998,
+        -47.151,
+        -1.39219325068356
+      ],
+      "position": [
+        7.7382965628888245,
+        -43.550699615478514,
+        -1.4448244203080147
+      ]
+    },
+    {
+      "phase": "normal full-body flight",
+      "target": [
+        0.4950000000000012,
+        -43.651,
+        6.013
+      ],
+      "position": [
+        0.539936341044924,
+        -43.55069961548341,
+        5.967132985157865
+      ]
+    },
+    {
+      "phase": "normal full-body flight",
+      "target": [
+        0.4950000000000012,
+        -43.651,
+        10.513000000000002
+      ],
+      "position": [
+        0.4940806480379991,
+        -43.55069972063533,
+        10.771138538267056
+      ]
+    },
+    {
+      "phase": "normal full-body flight",
+      "target": [
+        0.4950000000000012,
+        -43.651,
+        17.99884452819824
+      ],
+      "position": [
+        0.4949961191742086,
+        -43.55069961619767,
+        17.97113765515274
+      ]
+    },
+    {
+      "phase": "open mouth actual body crossing",
+      "side": "port",
+      "position": [
+        0.49499680221320036,
+        -43.55069961605753,
+        17.976014281380976
+      ],
+      "collision": true,
+      "recoveries": 0,
+      "state": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 2,
+        "dockOpen": true,
+        "shutter": 1,
+        "dockAngle": -1.0273484646966222,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "phase": "normal full-body flight",
+      "target": [
+        0.4950000000000012,
+        -43.651,
+        10.513000000000002
+      ],
+      "position": [
+        0.4950000046594371,
+        -43.55069961567439,
+        10.418965732003283
+      ]
+    },
+    {
+      "phase": "open mouth actual body return",
+      "side": "port",
+      "position": [
+        0.4950000048795901,
+        -43.55069961563621,
+        10.414522428915236
+      ]
+    },
+    {
+      "phase": "normal full-body flight",
+      "target": [
+        0.4950000000000012,
+        -43.651,
+        -13.087
+      ],
+      "position": [
+        0.49499999997686955,
+        -43.550699615478486,
+        -13.180808295113899
+      ]
+    },
+    {
+      "phase": "normal full-body flight",
+      "target": [
+        0.4950000000000012,
+        -43.651,
+        -20.5728458404541
+      ],
+      "position": [
+        0.495000000000816,
+        -43.55069961558072,
+        -20.781036982759346
+      ]
+    },
+    {
+      "phase": "open mouth actual body crossing",
+      "side": "starboard",
+      "position": [
+        0.4950000000008334,
+        -43.550699615560795,
+        -20.78547975684022
+      ],
+      "collision": true,
+      "recoveries": 0,
+      "state": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 2,
+        "dockOpen": true,
+        "shutter": 1,
+        "dockAngle": -1.0273484646966222,
+        "logNeedle": 0,
+        "cola": 3,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0,
+        "gaon": 0,
+        "paddleAngle": 0
+      }
+    },
+    {
+      "phase": "normal full-body flight",
+      "target": [
+        0.4950000000000012,
+        -43.651,
+        -13.087
+      ],
+      "position": [
+        0.49499999999997096,
+        -43.550699615636205,
+        -12.828680411608772
+      ]
+    },
+    {
+      "phase": "open mouth actual body return",
+      "side": "starboard",
+      "position": [
+        0.4949999999999704,
+        -43.55069961560547,
+        -12.82383923746297
+      ]
+    },
+    {
+      "phase": "normal full-body flight",
+      "target": [
+        -7.4,
+        -43.651,
+        -5
+      ],
+      "position": [
+        -7.503355935636746,
+        -43.55069961547848,
+        -4.839435490766065
+      ]
+    },
+    {
+      "phase": "normal Dock walk",
+      "position": [
+        -4.207453696767984,
+        -40.55070114135742,
+        -0.9585003565227093
+      ],
+      "grounded": true,
+      "recoveries": 0
+    }
+  ],
+  "end": {
+    "position": [
+      -4.207481861955665,
+      -40.55070114135742,
+      -0.9585110830082332
+    ],
+    "grounded": true,
+    "recoveries": 0
+  },
+  "errors": []
+}

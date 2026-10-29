@@ -1,0 +1,34 @@
+{
+  "notice": "Independent live read during current corrected physical run; no setters/reset/body changes.",
+  "position": [
+    -6.000001349785617,
+    -40.55070114135742,
+    -5.612412877682619
+  ],
+  "collision": true,
+  "recoveries": 0,
+  "state": {
+    "heading": 270,
+    "throttle": 0,
+    "speed": 0,
+    "east": 0,
+    "south": 0,
+    "helm": false,
+    "channel": 2,
+    "dockOpen": true,
+    "shutter": 1,
+    "dockAngle": -1.0273484646966222,
+    "logNeedle": 0,
+    "cola": 3,
+    "burst": 0,
+    "lift": 0,
+    "pitch": 0,
+    "wheel": 0,
+    "chicken": false,
+    "maneAngle": 0,
+    "jawOpen": false,
+    "jaw": 0,
+    "gaon": 0,
+    "paddleAngle": 0
+  }
+}
