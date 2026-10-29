@@ -401,6 +401,47 @@ def open_plan_slot(obj,xlo,xhi,ylo,yhi):
     assign_world_mesh(obj, mesh)
 
 
+def open_convex_plan_slot(obj, outline):
+    """Remove a convex XY opening while retaining the actual surrounding faces.
+
+    Each face is partitioned by the successive edges; the portions outside an
+    edge are retained and only the intersection of all half-planes is removed.
+    The input must be a strictly convex, counterclockwise world-space outline.
+    """
+    if len(outline) < 3:
+        raise ValueError('plan opening needs at least three vertices')
+    def cross(a, b, p):
+        return (b[0]-a[0])*(p[1]-a[1])-(b[1]-a[1])*(p[0]-a[0])
+    edges=list(zip(outline,outline[1:]+outline[:1]))
+    if any(cross(a,b,outline[(i+2)%len(outline)]) <= 1e-9 or
+           any(cross(a,b,p) < -1e-9 for p in outline) for i,(a,b) in enumerate(edges)):
+        raise ValueError('plan opening must be strictly convex and counterclockwise')
+    def clip(points,a,b,inside):
+        out=[]
+        for p,q in zip(points,points[1:]+points[:1]):
+            dp,dq=cross(a,b,p),cross(a,b,q)
+            pin=dp >= 0 if inside else dp <= 0
+            qin=dq >= 0 if inside else dq <= 0
+            if pin: out.append(p)
+            if pin != qin: out.append(p.lerp(q,dp/(dp-dq)))
+        return out
+    verts=[];faces=[];materials=[]
+    for face in obj.data.polygons:
+        remaining=[obj.matrix_world@obj.data.vertices[i].co for i in face.vertices]
+        for a,b in edges:
+            outside=clip(remaining,a,b,False)
+            if len(outside)>=3:
+                faces.append(tuple(range(len(verts),len(verts)+len(outside))))
+                verts.extend(outside);materials.append(face.material_index)
+            remaining=clip(remaining,a,b,True)
+            if len(remaining)<3: break
+    old=obj.data
+    mesh=bpy.data.meshes.new(old.name+'_convex_access');mesh.from_pydata(verts,[],faces);mesh.update()
+    for mat in old.materials: mesh.materials.append(mat)
+    for face,index in zip(mesh.polygons,materials): face.material_index=index
+    assign_world_mesh(obj,mesh)
+
+
 def open_volume_slot(obj, xlo, xhi, ylo, yhi, zlo, zhi):
     """Cut an axis-aligned doorway/headroom volume while retaining other faces."""
     if obj is None:

@@ -2,6 +2,12 @@ Final closure maintenance: the owned temporary main confirmation preview was sto
 
 # Current authority — C01/C02 complete; next C03 then C04
 
+Current continuation: C03 is active and incomplete at alignment checkpoint `fee93b2`; C04 follows only after C03 acceptance. The coordinator will personally review both completed repairs before the final verified commit and notification. The current audit and handoff supersede the older creation instructions below.
+
+`tools/sunny_exterior.py:open_convex_plan_slot` partitions actual world-space faces against a strictly convex counterclockwise opening and retains the outside pieces/materials. It is being developed for C03's nonrectangular floor opening; no production caller or published geometry uses it yet. No environment variables changed.
+
+`tests/dockPlanCut.py` is a Blender fixture: its `hit` helper raycasts a cut floor, checks removed/retained regions and actual remaining area, and rejects clockwise and concave negative controls. `tests/dockPlanCut.test.mjs` runs it from the aggregate test entry point. It is a primitive check, not ship acceptance. The runner now requires the same local Blender executable used by the asset build.
+
 Both repairs are verified/applied/confirmed in actual original main. Their original findings, receipts and obsolete directions live in `docs/completed-repairs.md` and archive snapshots; the sole audit has no actionable C01/C02 entries. `docs/post-comparison-repairs.md` is the terminal summary; its implementation chronology moved to `docs/archive/post-comparison-repairs-history-20261029.md`. `docs/next-repair-handoff.md`, current to-do/section docs and sole audit agree: coordinator creates fresh exact gpt-6.1-terra High for C03 then C04, sequential verification/audit updates, notify Sukhjot after C04 and stop that batch. Every other remaining finding ID is preserved. No further repair starts here.
 
 `current-ship-confirmation.json` proves exact combined input/model/master/runtime and served hashes plus five actual-main C01/C02 quick-test passes; `verified-receipt.json` now links actual confirmation and reviewed final images. `live-job.json` is terminal. New/changed files here are documentation/data, no new functions or environment variables. The existing complete source/function inventory and separate Environment Variables section remain below. Every earlier pending C01/C02/phase heading is historical and superseded by this authority.

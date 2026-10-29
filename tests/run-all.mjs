@@ -3,7 +3,7 @@
  *
  *   npm test
  *
- * Twenty-six serial suites: pure navigation/climbing, physical interior/exterior materials, exported geometry/collision,
+ * Twenty-seven serial suites: pure navigation/climbing, physical interior/exterior materials, exported geometry/collision,
  * all room routes, real exterior/interior/controls journeys, interaction,
  * motion comparisons and visual capture. The suites array is authoritative.
  */
@@ -60,6 +60,7 @@ if (!serverUp) {
 }
 
 const suites=[
+ ['dockPlanCut.test.mjs','C03 convex floor-cut authoring fixture'],
  ['dockAlignment.test.mjs','C03 selected bay alignment'],
  ['dockOutletShell.test.mjs','C02 complete local mouth shell and body clearance'],
  ['dockApertures.test.mjs','C02 actual paired dock lining apertures'],
