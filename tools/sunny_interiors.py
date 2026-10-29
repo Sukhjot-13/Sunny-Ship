@@ -1186,7 +1186,9 @@ def build_interiors(objects, vertex_bbox, shift, aft_snapshot=None):
     pole('Dock_turntable_hub',(dcentre[0],cy,B1+.10),(dcentre[0],cy,B1+1.05),.26,'darkwood')
     for i in range(6):
         before=set(bpy.data.objects)
-        a=i*math.tau/6
+        # The selected sector must face the transverse hull apertures.  The
+        # navigation system rotates sector i back to this initial direction.
+        a=math.pi/2+i*math.tau/6
         rpole('Dock_capstan_spoke%d'%i,(dcentre[0],cy,B1),a,(0,0,1.0),(1.1,0,1.0),.035,'timber')
         contents=('Shiro Mokuba I','Mini Merry II','Shark Submerge III','Kurosai FR-U IV','Brachio Tank V','Inflatable Pool')[i]
         label=text('Dock_channel%d_label'%(i+1),str(i+1)+'  '+contents,

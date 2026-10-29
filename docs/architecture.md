@@ -250,6 +250,12 @@ The authoritative [whole-ship report](whole-ship-blueprint-audit.md) now contain
 
 # Architecture
 
+October 29 C03 in progress: `tools/sunny_interiors.py:build_interiors` now authors the six initial Dock sector axes relative to the retained transverse mouth axis. `tests/dockAlignment.test.mjs` reads the actual six exported bay centres and applies the runtime selector rotation, asserting transverse alignment with a misaligned negative control; `tests/run-all.mjs` includes it. The coherent publication, C01/C02 static preservation guards, frontend build and real helm/selector/lever opening pass. Personally reviewed mouth views show the still-dry floor; water-channel/chamber reconstruction and its access/visual verification remain pending. `docs/review/c03-20261029/alignment-assets-build.log` records this partial build. No environment variables changed.
+
+`docs/review/c03-20261029/views.mjs` is a scoped copy of the earlier C02 survey harness: its top-level flow checks served hashes, walks to the real helm, operates selector and lever, and captures local mouth survey images under this new evidence directory. `SUNNY_BASE_URL` selects its local preview URL. Its output is partial alignment/regression evidence, not C03 completion.
+
+`docs/review/c03-20261029/floor-probe.mjs:visit` loads bounded actual static GLB triangles; its top-level probes record sampled downward hits and the input hash in `floor-probe.json` for C03 construction planning. These sparse rays are not a complete hull or collision survey. No environment variables added.
+
 ## Current implementation authority — whole-ship audit follow-through
 
 ### UI01 universal cannon control — verified done

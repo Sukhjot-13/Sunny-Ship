@@ -15,7 +15,7 @@ Preserve the original FBX, useful source hull, realistic exterior/interior/water
 | ID | Status | Current work, dependency or evidence |
 |---|---|---|
 | UI01 (new user request) | verified done | Actual controls/focused six inspected images + full18/18 suites/build PASS; all76 inputs unchanged. [Receipt](review/cannon-ui-verification.json). |
-| C03 | queued next | Fresh Terra High chat: rebuild/verify the actual water-bearing Dock channels, native dry floor/radial chamber/portals and selected-bay alignment. Preserve completed C01/C02; archive only after actual confirmation. |
+| C03 | in progress; incomplete | The coherently rebuilt six selected bay centres now pass an exported-geometry transverse-axis check; C01/C02 static guards, production build and real helm/selector/lever opening pass. Four personally inspected views still show the dry floor. This is only an alignment checkpoint: water-bearing channels, native dry floor/radial chamber/portals, their access and visual acceptance remain pending. Preserve C01/C02; archive only after actual confirmation. |
 | C04 | queued after C03 | Same fresh Terra High chat, only after C03 is verified: integrate Aquarium/Kitchen service lift and wine cupboard into the retained mainmast from R10/R11. Verify/apply/archive, then notify Sukhjot and stop the batch. |
 | C05 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
 | C06 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |

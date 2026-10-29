@@ -1,0 +1,681 @@
+{
+  "notice": "Downward static triangle samples only; not a complete hull or collision survey.",
+  "source": "public/models/sunny.glb",
+  "sha256": "7a816f65d39c88670c4f44b8195922b68be05640ebd7286d375e890ec2e2057e",
+  "samples": [
+    {
+      "x": -2,
+      "z": -17,
+      "hits": [
+        {
+          "name": "Sunny_DockOutlet_starboard",
+          "height": -53.1605
+        },
+        {
+          "name": "Sunny_DockOutlet_starboard",
+          "height": -53.414
+        }
+      ]
+    },
+    {
+      "x": -2,
+      "z": -15,
+      "hits": [
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        },
+        {
+          "name": "Line002",
+          "height": -53.1459
+        }
+      ]
+    },
+    {
+      "x": -2,
+      "z": -13,
+      "hits": [
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        },
+        {
+          "name": "Box119",
+          "height": -55.7073
+        },
+        {
+          "name": "Box119",
+          "height": -57.0015
+        },
+        {
+          "name": "Line002",
+          "height": -57.3982
+        }
+      ]
+    },
+    {
+      "x": -2,
+      "z": -11,
+      "hits": [
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        }
+      ]
+    },
+    {
+      "x": -2,
+      "z": -8,
+      "hits": [
+        {
+          "name": "Sunny_Dock_turntable_deck",
+          "height": -47.0507
+        },
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        },
+        {
+          "name": "Sunny_Dock_turntable_deck",
+          "height": -47.2107
+        }
+      ]
+    },
+    {
+      "x": -2,
+      "z": -5,
+      "hits": [
+        {
+          "name": "Sunny_Dock_turntable_deck",
+          "height": -47.0507
+        },
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        },
+        {
+          "name": "Sunny_Dock_turntable_deck",
+          "height": -47.2107
+        }
+      ]
+    },
+    {
+      "x": -2,
+      "z": -1.287,
+      "hits": [
+        {
+          "name": "Sunny_Dock_turntable_deck",
+          "height": -47.0507
+        },
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        },
+        {
+          "name": "Sunny_Dock_turntable_deck",
+          "height": -47.2107
+        }
+      ]
+    },
+    {
+      "x": -2,
+      "z": 3,
+      "hits": [
+        {
+          "name": "Sunny_Dock_turntable_deck",
+          "height": -47.0507
+        },
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        },
+        {
+          "name": "Sunny_Dock_turntable_deck",
+          "height": -47.2107
+        }
+      ]
+    },
+    {
+      "x": -2,
+      "z": 6,
+      "hits": [
+        {
+          "name": "Sunny_Dock_turntable_rim",
+          "height": -46.9758
+        },
+        {
+          "name": "Sunny_Dock_turntable_deck",
+          "height": -47.0507
+        },
+        {
+          "name": "Sunny_Dock_turntable_rim",
+          "height": -47.1256
+        },
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        },
+        {
+          "name": "Sunny_Dock_turntable_deck",
+          "height": -47.2107
+        }
+      ]
+    },
+    {
+      "x": -2,
+      "z": 9,
+      "hits": [
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        }
+      ]
+    },
+    {
+      "x": -2,
+      "z": 12,
+      "hits": [
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        },
+        {
+          "name": "Line002",
+          "height": -54.4179
+        },
+        {
+          "name": "Box118",
+          "height": -55.745
+        },
+        {
+          "name": "Box118",
+          "height": -56.3824
+        }
+      ]
+    },
+    {
+      "x": -2,
+      "z": 14,
+      "hits": [
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        },
+        {
+          "name": "Line002",
+          "height": -48.1184
+        },
+        {
+          "name": "Sunny_DockOutlet_port",
+          "height": -53.1605
+        },
+        {
+          "name": "Sunny_DockOutlet_port",
+          "height": -53.414
+        }
+      ]
+    },
+    {
+      "x": -2,
+      "z": 16,
+      "hits": [
+        {
+          "name": "Sunny_DockOutlet_port",
+          "height": -53.1605
+        },
+        {
+          "name": "Sunny_DockOutlet_port",
+          "height": -53.414
+        }
+      ]
+    },
+    {
+      "x": 0.495,
+      "z": -17,
+      "hits": [
+        {
+          "name": "Sunny_DockOutlet_starboard",
+          "height": -53.5807
+        },
+        {
+          "name": "Sunny_DockOutlet_starboard",
+          "height": -53.8207
+        }
+      ]
+    },
+    {
+      "x": 0.495,
+      "z": -15,
+      "hits": [
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        },
+        {
+          "name": "Line002",
+          "height": -53.1459
+        }
+      ]
+    },
+    {
+      "x": 0.495,
+      "z": -13,
+      "hits": [
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        },
+        {
+          "name": "Box119",
+          "height": -55.7242
+        },
+        {
+          "name": "Box119",
+          "height": -56.91
+        },
+        {
+          "name": "Line002",
+          "height": -57.3982
+        }
+      ]
+    },
+    {
+      "x": 0.495,
+      "z": -11,
+      "hits": [
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        }
+      ]
+    },
+    {
+      "x": 0.495,
+      "z": -8,
+      "hits": [
+        {
+          "name": "Sunny_Dock_turntable_deck",
+          "height": -47.0507
+        },
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        },
+        {
+          "name": "Sunny_Dock_turntable_deck",
+          "height": -47.2107
+        }
+      ]
+    },
+    {
+      "x": 0.495,
+      "z": -5,
+      "hits": [
+        {
+          "name": "Sunny_Dock_turntable_deck",
+          "height": -47.0507
+        },
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        },
+        {
+          "name": "Sunny_Dock_turntable_deck",
+          "height": -47.2107
+        }
+      ]
+    },
+    {
+      "x": 0.495,
+      "z": -1.287,
+      "hits": [
+        {
+          "name": "Sunny_Dock_turntable_deck",
+          "height": -47.0507
+        },
+        {
+          "name": "Sunny_Dock_turntable_hub",
+          "height": -47.0507
+        },
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        },
+        {
+          "name": "Sunny_Dock_turntable_deck",
+          "height": -47.2107
+        }
+      ]
+    },
+    {
+      "x": 0.495,
+      "z": 3,
+      "hits": [
+        {
+          "name": "Sunny_Dock_turntable_deck",
+          "height": -47.0507
+        },
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        },
+        {
+          "name": "Sunny_Dock_turntable_deck",
+          "height": -47.2107
+        }
+      ]
+    },
+    {
+      "x": 0.495,
+      "z": 6,
+      "hits": [
+        {
+          "name": "Sunny_Dock_turntable_deck",
+          "height": -47.0507
+        },
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        },
+        {
+          "name": "Sunny_Dock_turntable_deck",
+          "height": -47.2107
+        }
+      ]
+    },
+    {
+      "x": 0.495,
+      "z": 9,
+      "hits": [
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        }
+      ]
+    },
+    {
+      "x": 0.495,
+      "z": 12,
+      "hits": [
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        },
+        {
+          "name": "Line002",
+          "height": -54.4179
+        },
+        {
+          "name": "Box118",
+          "height": -55.6516
+        },
+        {
+          "name": "Box118",
+          "height": -56.4033
+        }
+      ]
+    },
+    {
+      "x": 0.495,
+      "z": 14,
+      "hits": [
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        },
+        {
+          "name": "Line002",
+          "height": -48.1184
+        },
+        {
+          "name": "Sunny_DockOutlet_port",
+          "height": -53.5807
+        },
+        {
+          "name": "Sunny_DockOutlet_port",
+          "height": -53.8207
+        }
+      ]
+    },
+    {
+      "x": 0.495,
+      "z": 16,
+      "hits": [
+        {
+          "name": "Sunny_DockOutlet_port",
+          "height": -53.5807
+        },
+        {
+          "name": "Sunny_DockOutlet_port",
+          "height": -53.8207
+        }
+      ]
+    },
+    {
+      "x": 3,
+      "z": -17,
+      "hits": [
+        {
+          "name": "Sunny_DockOutlet_starboard",
+          "height": -53.1567
+        },
+        {
+          "name": "Sunny_DockOutlet_starboard",
+          "height": -53.411
+        }
+      ]
+    },
+    {
+      "x": 3,
+      "z": -15,
+      "hits": [
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        },
+        {
+          "name": "Line002",
+          "height": -53.1459
+        }
+      ]
+    },
+    {
+      "x": 3,
+      "z": -13,
+      "hits": [
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        },
+        {
+          "name": "Box119",
+          "height": -55.6752
+        },
+        {
+          "name": "Box119",
+          "height": -56.6648
+        },
+        {
+          "name": "Line002",
+          "height": -57.3982
+        }
+      ]
+    },
+    {
+      "x": 3,
+      "z": -11,
+      "hits": [
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        }
+      ]
+    },
+    {
+      "x": 3,
+      "z": -8,
+      "hits": [
+        {
+          "name": "Sunny_Dock_turntable_deck",
+          "height": -47.0507
+        },
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        },
+        {
+          "name": "Sunny_Dock_turntable_deck",
+          "height": -47.2107
+        }
+      ]
+    },
+    {
+      "x": 3,
+      "z": -5,
+      "hits": [
+        {
+          "name": "Sunny_Dock_turntable_deck",
+          "height": -47.0507
+        },
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        },
+        {
+          "name": "Sunny_Dock_turntable_deck",
+          "height": -47.2107
+        }
+      ]
+    },
+    {
+      "x": 3,
+      "z": -1.287,
+      "hits": [
+        {
+          "name": "Sunny_Dock_turntable_deck",
+          "height": -47.0507
+        },
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        },
+        {
+          "name": "Sunny_Dock_turntable_deck",
+          "height": -47.2107
+        }
+      ]
+    },
+    {
+      "x": 3,
+      "z": 3,
+      "hits": [
+        {
+          "name": "Sunny_Dock_turntable_deck",
+          "height": -47.0507
+        },
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        },
+        {
+          "name": "Sunny_Dock_turntable_deck",
+          "height": -47.2107
+        }
+      ]
+    },
+    {
+      "x": 3,
+      "z": 6,
+      "hits": [
+        {
+          "name": "Sunny_Dock_turntable_rim",
+          "height": -46.9721
+        },
+        {
+          "name": "Sunny_Dock_turntable_deck",
+          "height": -47.0507
+        },
+        {
+          "name": "Sunny_Dock_turntable_rim",
+          "height": -47.1293
+        },
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        },
+        {
+          "name": "Sunny_Dock_turntable_deck",
+          "height": -47.2107
+        }
+      ]
+    },
+    {
+      "x": 3,
+      "z": 9,
+      "hits": [
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        }
+      ]
+    },
+    {
+      "x": 3,
+      "z": 12,
+      "hits": [
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        },
+        {
+          "name": "Line002",
+          "height": -54.4179
+        },
+        {
+          "name": "Box118",
+          "height": -55.3896
+        },
+        {
+          "name": "Box118",
+          "height": -56.3611
+        }
+      ]
+    },
+    {
+      "x": 3,
+      "z": 14,
+      "hits": [
+        {
+          "name": "Sunny_InteriorFloor_lower",
+          "height": -47.1507
+        },
+        {
+          "name": "Line002",
+          "height": -48.1184
+        },
+        {
+          "name": "Sunny_DockOutlet_port",
+          "height": -53.1567
+        },
+        {
+          "name": "Sunny_DockOutlet_port",
+          "height": -53.411
+        }
+      ]
+    },
+    {
+      "x": 3,
+      "z": 16,
+      "hits": [
+        {
+          "name": "Sunny_DockOutlet_port",
+          "height": -53.1567
+        },
+        {
+          "name": "Sunny_DockOutlet_port",
+          "height": -53.411
+        }
+      ]
+    }
+  ]
+}
