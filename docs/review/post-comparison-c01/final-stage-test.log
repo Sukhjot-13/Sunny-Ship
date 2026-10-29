@@ -1,0 +1,23 @@
+C01 exported shield / construction overlap: {"source":"docs/review/post-comparison-c01/final-stage-fixture.glb","results":[{"level":"B1","hits":0,"areaM2":0},{"level":"F1","hits":1,"areaM2":2.298893688611549e-7},{"level":"F2F","hits":1,"areaM2":2.89606752599109e-7}]}
+node:internal/modules/esm/module_job:702
+    return this.module.evaluateSync();
+                       ^
+
+AssertionError [ERR_ASSERTION]: no shield triangle may enter any fore floor/wall/ceiling construction volume
+    at file:///Users/sukhjot/.codex/worktrees/c01-c02-completion/test/tests/foreTrim.test.mjs:109:1
+    at #evaluateSync (node:internal/modules/esm/module_job:702:24)
+    at ModuleJobSync.runSync (node:internal/modules/esm/module_job:717:43)
+    at node:internal/modules/esm/loader:383:11
+    at TracingChannel.traceSync (node:diagnostics_channel:557:14)
+    at ModuleLoader.importForEntryPoint (node:internal/modules/esm/loader:372:21)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:184:34)
+    at node:internal/main/run_main_module:33:47 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v26.12.0

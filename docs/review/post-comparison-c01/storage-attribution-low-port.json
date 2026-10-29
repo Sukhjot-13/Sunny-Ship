@@ -1,0 +1,80 @@
+{
+  "notice": "Offline fixed-camera triangle attribution only; no geometry/material changes or walking claims.",
+  "meshes": 588,
+  "eye": [
+    -25,
+    -45.451,
+    5
+  ],
+  "hits": [
+    {
+      "name": "Line004",
+      "material": "Sunny_white",
+      "pixels": 2,
+      "samples": [
+        {
+          "pixel": [
+            100,
+            300
+          ],
+          "point": [
+            -18.154585754355832,
+            -45.56274557346064,
+            13.432363725341839
+          ],
+          "distance": 10.861719074995314
+        },
+        {
+          "pixel": [
+            200,
+            200
+          ],
+          "point": [
+            -19.239199363655807,
+            -44.47983044676902,
+            13.69292340832493
+          ],
+          "distance": 10.473629344970636
+        }
+      ],
+      "tags": {
+        "MaxHandle": 252,
+        "sunny_authored": true,
+        "sunny_cleaned_cut_faces": 7840,
+        "sunny_smooth_paint_normals": 40,
+        "sunny_uv_space": "metres",
+        "sunny_uv_kind": "planar",
+        "sunny_wood_kind": "grain",
+        "sunny_part": "hull",
+        "sunny_deck_z": -39.6015
+      }
+    },
+    {
+      "name": "Sunny_InteriorWall_B1_28_seg0",
+      "material": "Sunny_timber",
+      "pixels": 1,
+      "samples": [
+        {
+          "pixel": [
+            400,
+            300
+          ],
+          "point": [
+            -21.258423690298017,
+            -45.56933873229306,
+            13.929886013269424
+          ],
+          "distance": 9.682781705009607
+        }
+      ],
+      "tags": {
+        "sunny_authored": true,
+        "sunny_feature": "InteriorWall",
+        "sunny_walkable": false,
+        "sunny_obstacle": true,
+        "sunny_part": "detail",
+        "sunny_deck_z": -39.6015
+      }
+    }
+  ]
+}

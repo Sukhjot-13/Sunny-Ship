@@ -1,0 +1,78 @@
+{
+  "notice": "Offline fixed-camera triangle attribution only; no geometry/material changes or walking claims.",
+  "meshes": 586,
+  "eye": [
+    -15,
+    -45.451,
+    -1.287
+  ],
+  "hits": [
+    {
+      "name": "Box118",
+      "material": "Sunny_black",
+      "pixels": 4,
+      "samples": [
+        {
+          "pixel": [
+            514,
+            444
+          ],
+          "point": [
+            -25.418254320084383,
+            -46.68159541677096,
+            10.649863745429244
+          ],
+          "distance": 15.891604835090686
+        },
+        {
+          "pixel": [
+            500,
+            460
+          ],
+          "point": [
+            -25.115871341297815,
+            -46.98935454421449,
+            10.729914501359897
+          ],
+          "distance": 15.783016879874063
+        },
+        {
+          "pixel": [
+            530,
+            460
+          ],
+          "point": [
+            -25.63916775211551,
+            -47.01715852893351,
+            10.431935277642722
+          ],
+          "distance": 15.905288021189207
+        },
+        {
+          "pixel": [
+            520,
+            452
+          ],
+          "point": [
+            -25.489911361190572,
+            -46.846759492605706,
+            10.557591264946112
+          ],
+          "distance": 15.883347479686757
+        }
+      ],
+      "tags": {
+        "MaxHandle": 619,
+        "sunny_authored": true,
+        "sunny_hull_dark_band": true,
+        "sunny_cleaned_cut_faces": 4535,
+        "sunny_smooth_paint_normals": 40,
+        "sunny_uv_space": "metres",
+        "sunny_uv_kind": "planar",
+        "sunny_wood_kind": "boards",
+        "sunny_part": "hull",
+        "sunny_deck_z": -39.6015
+      }
+    }
+  ]
+}

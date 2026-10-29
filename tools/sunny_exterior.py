@@ -1338,6 +1338,16 @@ def restore_exterior(objects, vertex_bbox):
     bpy.context.view_layer.update()
     from sunny_surfaces import prepare_exterior_surfaces
     log(f'[pipeline]   exterior coplanar faces trimmed: {prepare_exterior_surfaces(objects,vertex_bbox)}')
+    # Final construction ownership follows all overlap/topology cleanup so a
+    # later n-gon tessellation cannot bridge a repaired room boundary.
+    from sunny_fore_trim import reconcile_fore_trim
+    log(f'[pipeline]   fore trim final construction cuts: {reconcile_fore_trim(objects,interiors)}')
+    from sunny_surfaces import smooth_painted_normals
+    from sunny_uv import prepare_exterior_uvs
+    repaired = [o for o in objects if o.get('sunny_fore_trim_terminated')]
+    for obj in repaired:
+        smooth_painted_normals(obj)
+    prepare_exterior_uvs(repaired)
     bpy.context.view_layer.update()
     levels=dict(interiors['levels'])
     levels['foredeck']=vertex_bbox(next(o for o in objects if o.name=='Sunny_ForeUpperLanding'))[1].z

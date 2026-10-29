@@ -1,0 +1,16 @@
+00:00.613  blend            | Read blend: "/Users/sukhjot/.codex/worktrees/c01-c02-completion/test/assets/sunny-master.blend"
+INFO Draco is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_draco_bridge.dylib
+INFO MeshOptimizer is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_meshopt_bridge.dylib
+05:59:04 | INFO: Starting glTF 2.0 export
+05:59:04 | INFO: Extracting primitive: Box118_room_terminated
+05:59:04 | INFO: Primitives created: 1
+05:59:04 | INFO: Extracting primitive: Box119_room_terminated
+05:59:04 | INFO: Primitives created: 1
+05:59:04 | INFO: Extracting primitive: Circle038.002_room_terminated
+05:59:04 | INFO: Primitives created: 2
+05:59:04 | INFO: Finished glTF 2.0 export in 0.2657437324523926 s
+
+Final stage fixture exported; production untouched
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:49:19)
+
+Blender quit

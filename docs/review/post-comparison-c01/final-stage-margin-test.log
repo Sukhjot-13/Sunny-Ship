@@ -1,0 +1,3 @@
+C01 exported shield / construction overlap: {"source":"docs/review/post-comparison-c01/final-stage-fixture.glb","results":[{"level":"B1","hits":0,"areaM2":0},{"level":"F1","hits":0,"areaM2":0},{"level":"F2F","hits":0,"areaM2":0}]}
+C01 exported dark/white bands / fore storage overlap: {"bandHits":0,"bandArea":0}
+PASS C01: B1/F1/F2 envelopes clear; seven rooms and physical linings retained

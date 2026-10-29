@@ -1,0 +1,389 @@
+{
+  "notice": "Offline fixed-camera triangle attribution only; no geometry/material changes or walking claims.",
+  "meshes": 586,
+  "eye": [
+    -15,
+    -45.451,
+    -1.287
+  ],
+  "hits": [
+    {
+      "name": "Line004",
+      "material": "Sunny_white",
+      "pixels": 82,
+      "samples": [
+        {
+          "pixel": [
+            112,
+            105
+          ],
+          "point": [
+            -20.247505899368797,
+            -40.79169194075192,
+            14.416200034789522
+          ],
+          "distance": 17.199882589352118
+        },
+        {
+          "pixel": [
+            124,
+            105
+          ],
+          "point": [
+            -20.360636083342172,
+            -40.78990733690186,
+            14.254073499871534
+          ],
+          "distance": 17.087632064169295
+        },
+        {
+          "pixel": [
+            136,
+            105
+          ],
+          "point": [
+            -20.537754041518323,
+            -40.73368749997542,
+            14.271353186778864
+          ],
+          "distance": 17.175043258512996
+        },
+        {
+          "pixel": [
+            148,
+            105
+          ],
+          "point": [
+            -20.71914304169256,
+            -40.67613978247742,
+            14.288908433453038
+          ],
+          "distance": 17.26605950283775
+        },
+        {
+          "pixel": [
+            100,
+            117
+          ],
+          "point": [
+            -20.18609086167719,
+            -40.936216316172604,
+            14.77423418492273
+          ],
+          "distance": 17.471177798885115
+        }
+      ],
+      "tags": {
+        "MaxHandle": 252,
+        "sunny_authored": true,
+        "sunny_cleaned_cut_faces": 7840,
+        "sunny_smooth_paint_normals": 40,
+        "sunny_uv_space": "metres",
+        "sunny_uv_kind": "planar",
+        "sunny_wood_kind": "grain",
+        "sunny_part": "hull",
+        "sunny_deck_z": -39.6015
+      }
+    },
+    {
+      "name": "Circle038.001",
+      "material": "Sunny_white",
+      "pixels": 4,
+      "samples": [
+        {
+          "pixel": [
+            676,
+            165
+          ],
+          "point": [
+            -28.60448503674491,
+            -40.66582711267081,
+            8.86281021271801
+          ],
+          "distance": 17.635150694871914
+        },
+        {
+          "pixel": [
+            664,
+            177
+          ],
+          "point": [
+            -28.425212212526638,
+            -40.93335732695562,
+            9.058822443362192
+          ],
+          "distance": 17.540851185226526
+        },
+        {
+          "pixel": [
+            676,
+            177
+          ],
+          "point": [
+            -28.58237516673409,
+            -40.92938529200152,
+            8.847969250981006
+          ],
+          "distance": 17.539769566782613
+        },
+        {
+          "pixel": [
+            688,
+            177
+          ],
+          "point": [
+            -28.73952574024335,
+            -40.92550145251318,
+            8.636536231627808
+          ],
+          "distance": 17.542271118944228
+        }
+      ],
+      "tags": {
+        "MaxHandle": 489,
+        "sunny_authored": true,
+        "sunny_bow_white_divisions": 3,
+        "sunny_fore_trim_terminated": true,
+        "sunny_cleaned_cut_faces": 3,
+        "sunny_smooth_paint_normals": 40,
+        "sunny_uv_space": "metres",
+        "sunny_uv_kind": "planar",
+        "sunny_wood_kind": "grain",
+        "sunny_part": "deck",
+        "sunny_deck_z": -39.6015
+      }
+    },
+    {
+      "name": "Circle038.001",
+      "material": "Sunny_red",
+      "pixels": 9,
+      "samples": [
+        {
+          "pixel": [
+            688,
+            165
+          ],
+          "point": [
+            -28.76174426702091,
+            -40.661695695660796,
+            8.651390396032802
+          ],
+          "distance": 17.637875287414918
+        },
+        {
+          "pixel": [
+            700,
+            165
+          ],
+          "point": [
+            -28.91483834301929,
+            -40.65908510647521,
+            8.436504719926432
+          ],
+          "distance": 17.638926228588183
+        },
+        {
+          "pixel": [
+            712,
+            165
+          ],
+          "point": [
+            -29.06529080453988,
+            -40.65742886621912,
+            8.219486365812795
+          ],
+          "distance": 17.64040851721626
+        },
+        {
+          "pixel": [
+            700,
+            177
+          ],
+          "point": [
+            -28.89678702139942,
+            -40.921662918408146,
+            8.424628219093822
+          ],
+          "distance": 17.548541437473308
+        },
+        {
+          "pixel": [
+            712,
+            177
+          ],
+          "point": [
+            -29.046015243212686,
+            -40.920495030801064,
+            8.206750377836844
+          ],
+          "distance": 17.548427728009614
+        }
+      ],
+      "tags": {
+        "MaxHandle": 489,
+        "sunny_authored": true,
+        "sunny_bow_white_divisions": 3,
+        "sunny_fore_trim_terminated": true,
+        "sunny_cleaned_cut_faces": 3,
+        "sunny_smooth_paint_normals": 40,
+        "sunny_uv_space": "metres",
+        "sunny_uv_kind": "planar",
+        "sunny_wood_kind": "grain",
+        "sunny_part": "deck",
+        "sunny_deck_z": -39.6015
+      }
+    },
+    {
+      "name": "Sunny_StorageStair_up_rail0",
+      "material": "Sunny_white",
+      "pixels": 18,
+      "samples": [
+        {
+          "pixel": [
+            40,
+            225
+          ],
+          "point": [
+            -16.35710403525708,
+            -44.63889686823953,
+            3.7994463436269488
+          ],
+          "distance": 5.326648032836615
+        },
+        {
+          "pixel": [
+            52,
+            237
+          ],
+          "point": [
+            -16.403332250523263,
+            -44.6912610773465,
+            3.8058230533720003
+          ],
+          "distance": 5.336983351005574
+        },
+        {
+          "pixel": [
+            64,
+            237
+          ],
+          "point": [
+            -16.45168255261903,
+            -44.683899441134365,
+            3.802585436870163
+          ],
+          "distance": 5.347869241126911
+        },
+        {
+          "pixel": [
+            64,
+            249
+          ],
+          "point": [
+            -16.456417592588274,
+            -44.74212015630442,
+            3.832482088158768
+          ],
+          "distance": 5.3696144822302605
+        },
+        {
+          "pixel": [
+            76,
+            249
+          ],
+          "point": [
+            -16.49724320650466,
+            -44.73934055203957,
+            3.799422366652484
+          ],
+          "distance": 5.349755964647205
+        }
+      ],
+      "tags": {
+        "sunny_authored": true,
+        "sunny_feature": "StorageStair",
+        "sunny_walkable": false,
+        "sunny_obstacle": true,
+        "sunny_rail": true,
+        "sunny_part": "detail",
+        "sunny_deck_z": -39.6015
+      }
+    },
+    {
+      "name": "Sunny_StorageStair_up_rail1",
+      "material": "Sunny_white",
+      "pixels": 7,
+      "samples": [
+        {
+          "pixel": [
+            40,
+            297
+          ],
+          "point": [
+            -16.68704435273928,
+            -44.888420243149966,
+            5.142833039915706
+          ],
+          "distance": 6.671234334972696
+        },
+        {
+          "pixel": [
+            52,
+            297
+          ],
+          "point": [
+            -16.752001547781653,
+            -44.88132704645201,
+            5.157798732211473
+          ],
+          "distance": 6.702944680970298
+        },
+        {
+          "pixel": [
+            64,
+            309
+          ],
+          "point": [
+            -16.804102412667685,
+            -44.956345336382356,
+            5.138595356169133
+          ],
+          "distance": 6.692364636871961
+        },
+        {
+          "pixel": [
+            76,
+            321
+          ],
+          "point": [
+            -16.866905110030924,
+            -45.03034492101995,
+            5.153115957173198
+          ],
+          "distance": 6.718435750021588
+        },
+        {
+          "pixel": [
+            88,
+            321
+          ],
+          "point": [
+            -16.928578398996756,
+            -45.02659289429537,
+            5.1424344634963814
+          ],
+          "distance": 6.7258578302581205
+        }
+      ],
+      "tags": {
+        "sunny_authored": true,
+        "sunny_feature": "StorageStair",
+        "sunny_walkable": false,
+        "sunny_obstacle": true,
+        "sunny_rail": true,
+        "sunny_part": "detail",
+        "sunny_deck_z": -39.6015
+      }
+    }
+  ]
+}

@@ -1052,13 +1052,20 @@ def fore_partition_span(outline, y, thickness):
     return max(p[0] for p in spans), min(p[1] for p in spans)
 
 
-def perimeter_lining(name, outline, z, height, key='cream'):
+def perimeter_lining(name, outline, z, height, key='cream', fore_ceiling=None, fore_limit=-9.0):
     """Closed, chord-aligned walls on an actual floor outline; no sampled gaps."""
     for i, (a, b) in enumerate(zip(outline, outline[1:] + outline[:1])):
-        dx, dy = b[0]-a[0], b[1]-a[1]
-        length = math.hypot(dx, dy)
-        wall_run(name+'_%d'%i, ((a[0]+b[0])/2,(a[1]+b[1])/2,z),
-                 math.atan2(dy,dx),length+.035,height,key=key,thickness=.18)
+        points = [a, b]
+        if fore_ceiling is not None and (a[0] < fore_limit) != (b[0] < fore_limit):
+            t = (fore_limit-a[0])/(b[0]-a[0])
+            points.insert(1, (fore_limit, a[1]+t*(b[1]-a[1])))
+        for j, (p, q) in enumerate(zip(points, points[1:])):
+            dx, dy = q[0]-p[0], q[1]-p[1]
+            length = math.hypot(dx, dy)
+            actual_height = fore_ceiling-z if fore_ceiling is not None and (p[0]+q[0])/2 < fore_limit else height
+            suffix = '' if len(points) == 2 else '_part%d'%j
+            wall_run(name+'_%d'%i+suffix, ((p[0]+q[0])/2,(p[1]+q[1])/2,z),
+                     math.atan2(dy,dx),length+.035,actual_height,key=key,thickness=.18)
 
 
 def circular_lining(name, p, rx, ry, height, entrance=False, windows=True, wide_windows=False):
@@ -1137,7 +1144,10 @@ def build_interiors(objects, vertex_bbox, shift, aft_snapshot=None):
     B1 = level_of['B1']
     b1_floor = fit_floor(objects, 'InteriorFloor_lower', f, -12.8, 11.8, LEVEL_B1, centre)
     outline=[tuple((b1_floor.matrix_world @ v.co)[:2]) for v in b1_floor.data.vertices]
-    perimeter_lining('InteriorWall_B1',outline,B1,5.82,'timber')
+    b1_trim_outline = list(outline)
+    # Join the existing storage perimeter to its actual ceiling. The former
+    # 5.82m wall stopped 0.60m short, exposing preserved outboard hull trim.
+    perimeter_lining('InteriorWall_B1',outline,B1,5.82,'timber',fore_ceiling=level_of['F1']-.36)
     b1_ceiling=plan_floor('B1_ceiling',outline,level_of['F1']-.18)
     b1_ceiling['sunny_walkable']=True;b1_ceiling['sunny_obstacle']=False
 
@@ -1596,6 +1606,11 @@ def build_interiors(objects, vertex_bbox, shift, aft_snapshot=None):
         'dockCentre':[dcentre[0],cy,B1], 'dockSolids':dock_solids,
         'levels': level_of,
         'aftEnclosures': [aft_enclosure],
+        'foreTrimVolumes': [dict(level=level, outline=outline, bottom=bottom, top=top)
+            for level,outline,bottom,top in (
+                ('B1',b1_trim_outline,B1-.12,F1),
+                ('F1',fore_outline,F1-.12,F2F),
+                ('F2F',women_outline,F2F-.12,F2F+2.80))],
         'foreEnclosures': [dict(level=level, outline=outline,
             reference='F1/F2 rounded plans; retained hull sections and existing aft door transfer in reconstructed metres')
             for level, outline in (('F1', fore_outline), ('F2F', women_outline))],

@@ -1,0 +1,69 @@
+{
+  "notice": "Seven C01 routes only, normal WASD/E controls from lawn spawn with actual return; no teleport/body change.",
+  "records": [
+    {
+      "name": "Storage Room",
+      "returned": true,
+      "position": [
+        -4.204190625402699,
+        -40.55070114135742,
+        -1.0041895498459874
+      ]
+    },
+    {
+      "name": "Men's Quarters",
+      "returned": true,
+      "position": [
+        -4.236054395734635,
+        -40.55070114135742,
+        -0.9751491122254102
+      ]
+    },
+    {
+      "name": "Women's Quarters",
+      "returned": true,
+      "position": [
+        -4.213095158524861,
+        -40.55070114135742,
+        -1.026986282210278
+      ]
+    },
+    {
+      "name": "Men Starboard Cannon Closet",
+      "returned": true,
+      "position": [
+        -4.248346848441735,
+        -40.55070114135742,
+        -0.9864110762120338
+      ]
+    },
+    {
+      "name": "Men Port Cannon Closet",
+      "returned": true,
+      "position": [
+        -4.301247634446792,
+        -40.55070114135742,
+        -1.005177888991164
+      ]
+    },
+    {
+      "name": "Women Starboard Cannon Closet",
+      "returned": true,
+      "position": [
+        -4.237077292459149,
+        -40.55070114135742,
+        -1.0151381053841195
+      ]
+    },
+    {
+      "name": "Women Port Cannon Closet",
+      "returned": true,
+      "position": [
+        -4.23032600574653,
+        -40.55070114135742,
+        -1.016190055519575
+      ]
+    }
+  ],
+  "failures": []
+}

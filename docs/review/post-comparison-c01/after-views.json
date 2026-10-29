@@ -1,0 +1,227 @@
+{
+  "notice": "Appearance only; all real geometry/finishes retained. No player placement or access claim.",
+  "url": "http://127.0.0.1:8180/",
+  "hashes": {
+    "sunny.glb": {
+      "local": "ddc54df14d5977c35e577d5ff418f0a54684f14e53a11a77d89d73120569a3c6",
+      "served": "ddc54df14d5977c35e577d5ff418f0a54684f14e53a11a77d89d73120569a3c6"
+    },
+    "sunny-collision.glb": {
+      "local": "0606e32b3ebbda07d8e1ab45739212f68c9cfc1a66ffc504a0e39a579120a234",
+      "served": "0606e32b3ebbda07d8e1ab45739212f68c9cfc1a66ffc504a0e39a579120a234"
+    },
+    "ship-metadata.json": {
+      "local": "dc9cbf8195fb8a47e45c9635bf4292dbe78b8c2d3e0e4476496a5cd74822b09b",
+      "served": "dc9cbf8195fb8a47e45c9635bf4292dbe78b8c2d3e0e4476496a5cd74822b09b"
+    }
+  },
+  "records": [
+    {
+      "phase": "before",
+      "name": "mens",
+      "eye": [
+        -21.700000000000003,
+        -38.851,
+        -4.287
+      ],
+      "target": [
+        -27.700000000000003,
+        -39.501000000000005,
+        0.7130000000000001
+      ],
+      "path": "docs/review/post-comparison-c01/after-mens.png"
+    },
+    {
+      "phase": "before",
+      "name": "womens",
+      "eye": [
+        -23.424999999999997,
+        -34.714999999999996,
+        1.713
+      ],
+      "target": [
+        -27.525,
+        -35.365,
+        -3.787
+      ],
+      "path": "docs/review/post-comparison-c01/after-womens.png"
+    },
+    {
+      "phase": "before",
+      "name": "storage",
+      "eye": [
+        -15,
+        -45.451,
+        -1.287
+      ],
+      "target": [
+        -23,
+        -46.301,
+        4
+      ],
+      "path": "docs/review/post-comparison-c01/after-storage.png"
+    },
+    {
+      "phase": "before",
+      "name": "cannon-men-starboard",
+      "eye": [
+        -23.8,
+        -39.051,
+        -9
+      ],
+      "target": [
+        -25.8,
+        -40.051,
+        -9.35
+      ],
+      "path": "docs/review/post-comparison-c01/after-cannon-men-starboard.png"
+    },
+    {
+      "phase": "before",
+      "name": "cannon-men-port",
+      "eye": [
+        -23.8,
+        -39.051,
+        9.7
+      ],
+      "target": [
+        -25.8,
+        -40.051,
+        10.1
+      ],
+      "path": "docs/review/post-comparison-c01/after-cannon-men-port.png"
+    },
+    {
+      "phase": "before",
+      "name": "cannon-women-starboard",
+      "eye": [
+        -24.5,
+        -34.915,
+        -9
+      ],
+      "target": [
+        -26.92,
+        -35.915,
+        -9.25
+      ],
+      "path": "docs/review/post-comparison-c01/after-cannon-women-starboard.png"
+    },
+    {
+      "phase": "before",
+      "name": "cannon-women-port",
+      "eye": [
+        -24.5,
+        -34.915,
+        9.7
+      ],
+      "target": [
+        -26.92,
+        -35.915,
+        10
+      ],
+      "path": "docs/review/post-comparison-c01/after-cannon-women-port.png"
+    },
+    {
+      "phase": "before",
+      "name": "exterior-bow-port",
+      "eye": [
+        -92,
+        -8,
+        88
+      ],
+      "target": [
+        -18,
+        -22,
+        0
+      ],
+      "path": "docs/review/post-comparison-c01/after-exterior-bow-port.png"
+    },
+    {
+      "phase": "before",
+      "name": "exterior-bow-starboard",
+      "eye": [
+        -92,
+        -8,
+        -88
+      ],
+      "target": [
+        -18,
+        -22,
+        0
+      ],
+      "path": "docs/review/post-comparison-c01/after-exterior-bow-starboard.png"
+    },
+    {
+      "phase": "before",
+      "name": "exterior-profile",
+      "eye": [
+        0,
+        -5,
+        125
+      ],
+      "target": [
+        0,
+        -20,
+        0
+      ],
+      "path": "docs/review/post-comparison-c01/after-exterior-profile.png"
+    },
+    {
+      "name": "storage-upper-port",
+      "eye": [
+        -19,
+        -45.451,
+        8
+      ],
+      "target": [
+        -19,
+        -40.9,
+        14
+      ],
+      "path": "docs/review/post-comparison-c01/after-storage-upper-port.png"
+    },
+    {
+      "name": "storage-upper-starboard",
+      "eye": [
+        -19,
+        -45.451,
+        -9
+      ],
+      "target": [
+        -19,
+        -40.9,
+        -16
+      ],
+      "path": "docs/review/post-comparison-c01/after-storage-upper-starboard.png"
+    },
+    {
+      "name": "storage-low-port",
+      "eye": [
+        -25,
+        -45.451,
+        5
+      ],
+      "target": [
+        -25,
+        -46.65,
+        10.6
+      ],
+      "path": "docs/review/post-comparison-c01/after-storage-low-port.png"
+    },
+    {
+      "name": "storage-low-starboard",
+      "eye": [
+        -25,
+        -45.451,
+        -6
+      ],
+      "target": [
+        -25,
+        -46.65,
+        -13
+      ],
+      "path": "docs/review/post-comparison-c01/after-storage-low-starboard.png"
+    }
+  ],
+  "errors": []
+}

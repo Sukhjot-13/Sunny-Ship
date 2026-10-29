@@ -1,0 +1,23 @@
+{
+  "phase": "Final C01 coherent publication and scoped proof",
+  "comparisonFrozenAt": "12e2dde",
+  "files": {
+    "public/models/sunny.glb": "d34a215a64d44b50605901b8f164bd71a65ce78503a929df202e9266f15778e4",
+    "public/models/sunny-collision.glb": "ae9bfb25eb66fea0cacb07730b7ca7bf30b6cef72e1669c855bdf2ce516140e8",
+    "public/models/ship-metadata.json": "8c33e92ce3e4efb7e1d569baf9f51b6e5d7553851b459955f9937701bf9dd0f3",
+    "assets/sunny-master.blend": "10008ab1d0730232ea36041a4e356d5aa80d30a41a5dc7da86d128bca4805dbf",
+    "stuff/1.FBX": "8a770f19926e304cce1839fde4797fc1d98db5a49814f7b049e5a83be69cec10",
+    "tools/sunny_fore_trim.py": "dfe835a91b71eb9e88e8f8e45348db959759cb08a8d6f0a37de7703b3646372b",
+    "tools/sunny_interiors.py": "91947b55a7f00936ff944e3d58ba3a4c839eaafddcb1d59a3277c9c711fe0768",
+    "tools/sunny_exterior.py": "d03986a00aed0d9de472be595dca58fc22954445c4d5aa97eabf69e4a8428891",
+    "tools/sunny_surfaces.py": "f36046b6b77b24065eb740e68fcbbf6e9dc225c4414da980316a5ea59ec7ceb0",
+    "tools/build_assets.py": "105f4091f2c8a7b1bfbbb189fd8a9bc1cd83a0b49a629ef6f8511a2cd1046dfc",
+    "tests/foreTrim.test.mjs": "45f84b4b7e9ef6515e70ce49c982fa3db2cd94ff8711c3063ac0c18bf26d5c85",
+    "tests/foreStorage.test.mjs": "871c6e1d41572af7d7761242925a90f0f55db7caee8448a68024ce7fe60b0a19",
+    "tests/foreExterior.test.mjs": "b46d88acac31cde13bad62c432f4bb965ce7f716c58a75961eb7a3e316586cd3",
+    "tests/run-all.mjs": "166405c27a127226f6c9c0eb2e497fc51499fda2ccf8a324048c139e79be31e9",
+    "docs/review/post-comparison-c01/capture.mjs": "c9e4090c89d6d376787de7cd10383fec2aeded0a4b2905f4ab224bfb3dfdb99f",
+    "docs/review/post-comparison-c01/access.mjs": "c72fc5cb5812dd497475e37a9de25fda027115a6fa9964034568398026e5c234",
+    "docs/review/post-comparison-c01/verify-receipt.mjs": "b5f5dda28daea23ea0e48f67f464a3493c1f77596c7fb7dcf83468d9fcc79ac5"
+  }
+}

@@ -1108,6 +1108,8 @@ meta = {
     "interiors": {"finishedRooms":False,"dockCentre":interiors['dockCentre'],"dockSolids":interiors['dockSolids'],"levels":{k:round(v,3) for k,v in interiors['levels'].items()},
         "lights":interiors.get('lights', []),
         "foreEnclosures":interiors['foreEnclosures'],
+        "foreTrimVolumes":interiors['foreTrimVolumes'],
+        "foreTrimRepair":interiors['foreTrimRepair'],
         "aftEnclosures":interiors.get('aftEnclosures', []),
         "aquariumWindows":interiors.get('aquariumWindows', []),
         "aquariumSidePaintBounds":interiors.get('aquariumSidePaintBounds'),
