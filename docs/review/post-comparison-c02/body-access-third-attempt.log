@@ -1,0 +1,18 @@
+PASS normal Dock walk {
+  position: [ -7.399999998849182, -47.150699615478516, -5.064719202037794 ],
+  grounded: true,
+  recoveries: 0
+}
+PASS flight [ 7.74812784869718, -43.550699615478514, -1.442833222938722 ]
+PASS flight [ 0.5336453793593604, -43.55069961548341, 5.973438990621328 ]
+PASS flight [ 0.49442325784760327, -43.55069970014416, 10.777505481741493 ]
+STALL flight {"position":[0.49499999999780675,-43.55069961546302,16.671844527304174],"collision":true,"nearby":["COLL_Floor_1851","COLL_Wall_921","COLL_Wall_925","COLL_Wall_929","COLL_Wall_934","COLL_Wall_936","COLL_Wall_941","Sunny_DockSlat_port_18","Sunny_DockSlat_port_19","Sunny_DockSlat_port_20","Sunny_DockSlat_port_21","Sunny_DockSlat_port_22","Sunny_DockSlat_port_23","Sunny_DockSlat_port_24","Sunny_DockSlat_port_25","Sunny_DockSlat_port_26"]}
+file:///Users/sukhjot/.codex/worktrees/c01-c02-completion/test/docs/review/post-comparison-c02/body-access.mjs:59
+  if(!ok){const state=await page.evaluate(()=>({position:window.__sunny.position,velocity:window.__sunny.vel,collision:window.__sunny.flyCollision,nearby:window.__sunny.nearbyColliders,text:document.body.innerText}));fs.writeFileSync(`${out}/flight-stall.json`,JSON.stringify({target:p,state,trace},null,2));console.log('STALL flight',JSON.stringify({position:state.position,collision:state.collision,nearby:state.nearby.map(b=>b.name)}));throw Error('collision-enabled flight stalled at '+JSON.stringify(p))}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                             ^
+
+Error: collision-enabled flight stalled at [0.4950000000000012,-43.651,17.99884452819824]
+    at flyTo (file:///Users/sukhjot/.codex/worktrees/c01-c02-completion/test/docs/review/post-comparison-c02/body-access.mjs:59:446)
+    at async file:///Users/sukhjot/.codex/worktrees/c01-c02-completion/test/docs/review/post-comparison-c02/body-access.mjs:89:23
+
+Node.js v26.12.0

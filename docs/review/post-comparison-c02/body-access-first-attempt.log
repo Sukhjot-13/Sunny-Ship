@@ -1,0 +1,21 @@
+PASS normal Dock walk {
+  position: [ -5.189260213547394, -47.05070114135742, 0.7999734672613443 ],
+  grounded: true,
+  recoveries: 0
+}
+node:internal/modules/run_main:111
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: collision-enabled flight stalled at [0.4950000000000012,-44.401,10.513000000000002]
+    at flyTo (file:///Users/sukhjot/.codex/worktrees/c01-c02-completion/test/docs/review/post-comparison-c02/body-access.mjs:37:47)
+    at async file:///Users/sukhjot/.codex/worktrees/c01-c02-completion/test/docs/review/post-comparison-c02/body-access.mjs:41:54 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v26.12.0

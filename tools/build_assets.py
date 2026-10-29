@@ -904,16 +904,16 @@ for o in ship_objects:
         for face in o.data.polygons:
             points=[o.matrix_world@o.data.vertices[i].co for i in face.vertices]
             normal=o.matrix_world.to_3x3()@face.normal
-            if abs(normal.z)>0.65 and o.name != 'Cylinder002' and not o.get('sunny_aft_native_envelope'):
+            if abs(normal.z)>0.65 and o.name != 'Cylinder002' and not o.get('sunny_aft_native_envelope') and not o.get('sunny_aperture_shell'):
                 continue
             for piece,poly in enumerate(face_sections(points)):
                 lo=Vector(tuple(min(p[k] for p in poly) for k in range(3)))
                 hi=Vector(tuple(max(p[k] for p in poly) for k in range(3)))
-                if hi.z-lo.z<0.12:
+                if hi.z-lo.z<0.12 and not o.get('sunny_aperture_shell'):
                     continue
                 dims=hi-lo
                 colliders.append(add_box(f'COLL_Rail_{o.name}_{face.index}_{piece}',(lo+hi)/2,
-                    (max(dims.x,0.045),max(dims.y,0.045),dims.z)))
+                    (max(dims.x,0.045),max(dims.y,0.045),max(dims.z,0.045))))
         continue
     if o.get('sunny_obstacle'):
         # Authored partitions remain solid on lower levels even when a higher

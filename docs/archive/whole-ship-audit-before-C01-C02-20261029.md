@@ -1,0 +1,487 @@
+# Historical audit snapshot — superseded instructions
+
+Preserves the exact original findings, preparation, stopped phases and prior queues. Do not execute these obsolete instructions; use `../whole-ship-blueprint-audit.md`.
+
+# Current authorization — post-comparison C01/C02 only, October28,2026
+
+The comparison is finished/frozen at12e2dde; see model-comparison-20261026.md. User now separately authorized completing actual C01 then C02, applying each only after scoped verification. All remaining findings stay paused until the requested fresh chat after BOTH are confirmed. Current safe integration branch/worktree: codex/c01-c02-completion at /Users/sukhjot/.codex/worktrees/c01-c02-completion/test. C01 remains pending/active; C02 pending. Neither may be removed/closed on partial evidence. Preserve historical records in a separate completed-repair archive only after actual current-ship confirmation. No comparison score is changed by this later work.
+
+---
+
+# Current status — model trial finished, October28,2026
+
+General ship work remains STOPPED. The bounded Sol/C01 versus Terra/C02 experiment is complete as an assessment: both outputs partial/unmerged, original findings not closed. Read [the compact result/recommendation](model-comparison-20261026.md). Sol leaves visible upper storage trim and strict-test failures; Terra clears both sampled/visible linings but full containment/travel proof remains unverified. Original runtime/model inputs are preserved; no automatic repair, merge or texture resumption. Earlier active queues below are historical.
+
+---
+
+# STOPPED — current authorization, October26,2026
+
+Sukhjot said “stop all things.” General texture/repair work is stopped and must not resume automatically. Only a bounded isolated Sol/C01 versus Terra/C02 experiment and a local Git baseline checkpoint are now authorized. Neither candidate may be merged or close C01/C02 in this original ship. Earlier resumption instructions below are superseded. Earlier capture/server sessions ended; their orphaned project-owned Chrome browser was identified by working directory and terminated. Existing files and partial interior materials are preserved. See `model-comparison-20261026.md` for the isolated trial, exact baseline, processes and results.
+
+---
+
+# Thousand Sunny — START HERE: current repair queue
+
+This is the sole active checkpoint. All earlier phase instructions and dates below are historical where they conflict with this section.
+
+## Current checkpoint — October26,2026
+
+- **Latest authorization:** Sukhjot requested that verified textures be followed immediately by section-by-section blueprint repairs to complete the whole ship against `stuff/images`. This supersedes the construction pause once the texture gate passes. No new parallel writer or asset build is active.
+- **Single active section:** IF03–IF04, finishing verification of the already-implemented interior texture pass. IF01 matched baseline and IF02 implementation exist; neither the old exterior19/19 receipt nor incomplete interior captures verify the current interior/light runtime.
+- **Texture evidence:** exterior/water EX01–EX07 verified with terminal19/19 suites/build PASS (`review/exterior-realism-full-20261023T111223Z/status.json`). Interior v1 rejected shader compile; fixed in source. V2 capture incomplete. V3 has44 view records and zero errors/40.63fps but overlapped source changes and was never personally accepted. Current verification pending; no live jobs on resumption.
+- **Current source:** `realisticInterior.js`, `interiorLighting.js`, Ship/App integration and `interiorMaterials.test.mjs` exist. Twenty-suite runner retains all19 earlier suites. Inspect/fix necessary defects; fresh room/pattern/close/motion/stop/performance evidence, all20 suites and production build are required. Avoid an open-ended texture polish project.
+- **Exact next task:** finish IF03/IF04; preserve a dated receipt/review page and a rollback manifest. Then start C01 without another approval gate: reconcile saved candidate with current source/publication, attribute the separate storage protrusion, integrate the smallest repair, coherently publish visual/collision/metadata/master, personally inspect matched before/after/reference views and prove actual access/returns/full tests before acceptance. Continue structural dependencies and remaining ledger in order.
+- **Construction ledger:** C01 and remaining unverified findings are authorized but deferred only behind the texture verification gate, not paused by the user. Their original59 IDs, U ambiguities, diagnoses and evidence remain below. No construction is accepted at source-edit/build-start or merely from collider reachability.
+- **Invariants:** preserve finished exterior/water/interior materials, UI01/M01 controls, original FBX and useful source geometry, intentional2.2 enlargement and normal human dimensions/speeds. No hidden geometry, weakened checks or renamed findings as substitutes for accuracy. Before each rebuild preserve a rollback and publish all four assets coherently.
+- **Reference limits:** U09 bed-era and U11 later Dock allocation remain unresolved. Follow supplied images on unambiguous work; ask a targeted question only when a particular section truly needs the choice. Do not invent hidden dimensions or silently alter disclosed access adaptations.
+- **Live job:** none at this checkpoint. Log new process handle/PID, exact log/receipt and frozen input manifest here when verification/build starts. Do not restart existing live jobs. No Git repository; work locally, no push/deploy/messages to another chat.
+
+### Interior finish gate
+
+| ID | Status | Evidence still required |
+|---|---|---|
+| IF01 | verified baseline |79 input hashes/source rollback in `review/interior-realism-baseline/`;46 before images, seven reviewed contacts. Physical mapping logic passes focused tests. |
+| IF02 | implemented | Existing wood/paint/fabric/ceramic/metal/glass/paper/lamp finishes and two-lamp shadow rig need final current verification. |
+| IF03 | in progress | Fresh current shader/appearance/physical pattern/motion/stop/performance checks and image inspection. |
+| IF04 | pending | Full unfiltered20-suite runner/build, unchanged frozen inputs, immutable evidence and `interior-material-review.md`. |
+
+### Exterior and water texture stage — verified historical milestone
+
+| ID | Status | Scope and acceptance evidence |
+|---|---|---|
+| EX01 | verified done | All76 frozen hashes/runtime-source backups and original model/master rollback copies preserved in `review/exterior-realism-baseline/inputs.json`. Cannon gate terminal18/18 + build PASS. Original22 baseline images/four contact sheets inspected; corrected26-image `exterior-realism-baseline-v2` capture PASS, close deck/helm/glass/canvas framing inspected. Baseline59.81fps at1440×900, no planar ship reflection. Existing geometry is the preserved material-stage baseline, not accepted construction. |
+| EX02 | verified done | Physical-scale timber/paint maps, joints, grain/pores/roughness; source palette/UVs/geometry retained. Current images reviewed, full19/19/build PASS. |
+| EX03 | verified done | Exterior metal/iron/roof/glass physical finishes reviewed; structural shapes/openings retained. Full19/19/build PASS. |
+| EX04 | verified done | Canvas weave/panels/hems, original artwork/wind, rope/plant finishes reviewed; geometry/interior materials retained. Full19/19/build PASS. |
+| EX05 | verified done | Live planar ship reflection, dielectric/GGX/deep-water shading, filtered advected ripples and restrained foam. Original waves/hull cutout/navigation correspondence retained; current images and full19/19 PASS. |
+| EX06 | verified done | Final v5 appearance reviewed; actual grounded motion and5s deck/plants/glass stops PASS with0% visible change.57.66fps appearance/43.95fps window contexts. Evidence preserved in terminal run. |
+| EX07 | verified done | Full19/19 suites/build PASS, no during-run changes across79 inputs. Exact original models/master/body/collision/control sources preserved. Exterior review page prepared; interiors/construction remain paused pending later direction. |
+
+### Status definitions
+
+`paused`: Sukhjot explicitly paused this scope; retain its original defect and resume evidence. `open`: not repaired/accepted. `in progress`: named work started, still requires listed evidence. `verified done`: implementation plus appropriate current evidence complete, with any aggregate limitations recorded. `blocked`: needs a specific external decision/change. `deferred`: explicit dependency/phase, reason recorded. Never mark all findings done because one test suite passes.
+
+### Saved C01 plan — authorized next after the interior verification gate
+
+1. Construction was reauthorized October26,2026. After the interior gate, first inspect the then-current publication/source and reconcile these older baseline/private studies; never apply the saved candidate blindly. Preserve the finished material runtime through the rebuild.
+2. Capture `node docs/review/c01-fore-review.mjs before`, inspect framing; preserve current master/publication for rollback. The candidate has not been published.
+3. Move the validated unpublished helper into `tools/sunny_fore_trim.py`. In `build_interiors`, retain the original B1 `outline` immediately after `fit_floor` as `storage_outline`, return it as `storageEnclosure`; do not reuse the subsequently overwritten `outline` variable. Pass interiors into `prepare_exterior_surfaces`; call `trim_fore_decorations` after its existing overlap removal/topology/cleanup, then clean new cut slivers before the existing normal/UV preparation. This matches the triangulated master used by the private fixture. Serialize `storageEnclosure` and `foreTrim` in `build_assets.py` (authoring return keys are not automatically published).
+4. Promote `review/c01-export-check.mjs` to a strict publication-only test (remove private-data/flag mode), move the original ray baseline under `tests/fixtures`, and add it to the single runner without changing existing18 suites/assertions. This independently checks actual-export triangle/prism-area clearance and original first-hit preservation. The688-ray baseline is `review/c01-bow-exterior-baseline.json`; the original published triangles overlap the three .26m-inboard room volumes by approximately1.197/48.667/6.166m². This is current-model measurement, not canonical tolerance. Preserve all existing assertions.
+5. Build/publish visual, collision, metadata and master together using existing staging. Inspect fresh matched before/after room, all four closet and exterior views; verify actual fore-room/storage walking and complete return. Classify `c01-all-source-probe.json` candidates in the storage side/bow wall views before closing C01: the broad footprint survey also includes legitimate stairs/native bulkheads, so it is not a deletion list. The private candidate/checker currently repairs/verifies the confirmed shield only. The unchanged audit storage capture also visibly contains a dark triangular protrusion near the floor; the imported Box118/119 candidates need exact attribution and fresh sidewall views before C01 acceptance. Run the entire unfiltered suite and build. Mark C01 done only after appropriate current evidence; keep other findings open.
+
+### Finding ledger — preserve every original ID
+
+| ID | Status | Current work, dependency or evidence |
+|---|---|---|
+| UI01 (new user request) | verified done | Actual controls/focused six inspected images + full18/18 suites/build PASS; all76 inputs unchanged. [Receipt](review/cannon-ui-verification.json). |
+| C01 | deferred | Authorized next after interior gate October26; no production repair applied. Read-only reproduction: 21 F1 / 831 F2F / 79 forward-store shield triangles sampled >26cm inboard; existing shield has3849 unmatched/non-two-incidence exported edges at1µm weld. No source/asset repair yet. [In-memory fitted-cut study](review/c01-fore-trim-fit-study.json) clears all sampled intrusions and preserves688 exterior first-hit positions/materials; the exact unpublished candidate clears all sampled intrusions and preserves688 master exterior BVH hits. It uses the original B1 floor-fitting method, not the saved cut floor vertex array. Independent JavaScript validation of the actual private Blender triangles also PASS: zero sampled/exact-area intersections and688 unchanged exterior first hits. Rejected fixtures are retained and no geometry has been published. [Diagnosis](review/c01-fore-trim-baseline.json). |
+| C02 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| C03 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| C04 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| C05 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| C06 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| C07 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| C08 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| C09 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| E01 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| E02 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| E03 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| E04 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| E05 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| INT01 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| INT02 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| INT03 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| INT04 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| INT05 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| INT06 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| INT07 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| INT08 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| INT09 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| INT10 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| INT11 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| INT12 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| INT13 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| INT14 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| INT15 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| INT16 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| INT17 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| INT18 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| INT19 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| INT20 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| INT21 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| INT22 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| INT23 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| INT24 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| INT25 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| INT26 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| INT27 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| INT28 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| INT29 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| M01 | verified done | Universal Cannon/X panel, start/help guidance, real feedback and legacy helm J/K verified in focused and full18/18 + build tests. |
+| M02 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| M03 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| M04 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| M05 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| M06 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| M07 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| M08 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| M09 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| M10 | deferred | Authorized October26; awaits completion of the current interior verification gate and earlier structural dependencies. Original defect remains below. |
+| G01 | in progress | Exterior material/UV scope verified EX01–EX04; interior runtime implemented and current IF03–IF04 verification active. Original mixed-scope finding remains. |
+| G02 | in progress | Existing pendant positions now drive two nearby warm shadowed lights; final current appearance/performance/regression gate pending. |
+| G03 | in progress | Existing floor patterns retained with physical glaze/grout; final IF03–IF04 proof pending; canonical construction/artwork sub-scope remains unaccepted. |
+| G04 | open | Exterior plant materials completed/verified in EX04; foliage geometry/density and interior tank life remain paused. |
+| G05 | deferred | Preserve existing sourced exterior artwork while improving cloth response; broader artwork/portraits remain paused. |
+| G06 | in progress | Interior glass/water and approximate environment-reflection mirror finishes implemented; IF03–IF04 proof pending. Tank/bath construction and exact mirrors remain separate. |
+
+
+### Uncertainty ledger
+
+| IDs | Status | Required decision/evidence |
+|---|---|---|
+| U01, U02, U03 | open | Match figurehead/helm/rigging views; do not invent hidden measurements/paths. |
+| U04, U05, U06 | open | Current garden enclosure/slide/garden plan and real access checks. |
+| U07, U08 | open | Stern/hidden routing and lookout hatch variants need selected-reference proof. |
+| U09 | deferred | Women's bed period requires an authoritative later reference/target decision before bed-count changes. |
+| U10 | open | Tank containment and complete rear/energy connections require actual geometry/routes. |
+| U11 | deferred | Obtain selected later Dock allocation/vehicle4–6 references before exact later-layout changes. |
+| U12 | open | Hidden ports/underwater construction/all return routes remain independent verification scope. |
+
+### Implementation journal
+
+- 2026-10-26 — User reauthorized section-by-section whole-ship blueprint repairs once the actual interior texture milestone is verified. Resumed saved work; no live app/build/test processes found, no current interior full receipt. Current gate IF03/IF04; C01 next. Original findings and uncertainties retained.
+
+
+- 2026-10-22 14:05 EDT — UI01/M01 complete: full18/18 suites PASS, build exit0, all76 frozen hashes match; prior baseline failures did not repeat. Core cannon/motion/climb evidence copied under the immutable run directory. Starting authorized EX01 exterior/water baseline; C01 and all other construction stay paused.
+
+- 2026-10-22 13:56 EDT — Sukhjot changed priority to realistic exterior/water after the current cannon milestone, then clarified: keep the completed C01 plan for future use; stop C01 work because no production repair began. Construction queue explicitly paused. Added EX01–EX07, with interior textures reserved for later review. No C01 source/master/publication change.
+
+- 2026-10-22 13:24 EDT — UI01 aggregate suites1–13 PASS, including prior Aquarium endpoint failure and complete lookout return; suite14 underway. Coordinator reports an era-choice question is pending with Sukhjot: retain later bed/Dock choices or follow early drawings. No reply yet; U09/U11 remain pending and do not block unambiguous geometry/access work.
+
+- C01 exact candidate verification — the unpublished helper itself now passes the unsaved master fixture and separate JavaScript actual-triangle sample/area/ray checks. Candidate1,221 source triangles altered; after the existing cleanup of54 microscopic new cut faces,44,080 final triangles remain; all three room areas are zero and688 exterior first-hit positions/materials match. Original/master/publication remain unchanged. `review/c01-fore-trim-master-check.json` is provisional candidate evidence, not published-room acceptance.
+
+- C01 private fixture — first tessellation API mismatch and subsequent float-precision seam artifacts were rejected and preserved. Double-precision clipping/explicit triangle fragments clear all sampled F1/F2F/storage intrusions without changing contours or clearance tolerances; independent master exterior-ray check PASS (688 rays, zero differences). No save/export/publication.
+
+- C01 in-memory study — triangulated exact-contour masks clear all sampled F1/F2F/forward-storage shield intrusions with zero differences across688 exterior first-hit rays. No exported model, master or application source changed. An isolated Blender fixture now checks the corresponding operation on the existing master without saving/exporting; production remains frozen for UI01 full verification.
+
+- C01 preparation (no publication change) — exact published shield samples independently reproduce intrusive red/white triangles in all three fore levels. Imported shield is already open; a closed-Boolean helper would be an unsafe assumption. Plan a lining-fitted operation with independent exterior preservation and current room/route proof after UI01 aggregate.
+
+- UI01 focused verification — shared non-helm cannon controls pass browser use from Inspect and ordinary spawn; actual jaw quaternion/dynamic collision, open/close, blast/cola cost, recoil, disabled state, Escape/body-focus recovery, pointer-lock handoff/re-capture guard, no jump/placement/helm and narrow fly controls verified. Browser zero page errors; logic and build PASS. Current code remains frozen for complete18-suite run. Initial stale-server and Escape-focus failures were corrected and not accepted.
+
+- 2026-10-22 12:42 EDT — implementation authorized by Sukhjot. Initialized all59 finding statuses and U ledger, reconciled prior terminal15/17 baseline, selected UI01 then C01. No source/asset fix accepted yet.
+
+---
+
+# Original survey — preserved historical findings and evidence
+
+# Whole-ship blueprint audit — current Thousand Sunny
+
+**Survey date:** October 22, 2026, America/Toronto. **Owner:** Sukhjot. **Scope:** survey and report only. No application, model, physics, material, control, source asset, test, or build changes were made. The small scripts under `docs/review/whole-ship-audit-*` create audit evidence only.
+
+The current ship is recognizable, has extensive modeled spaces, and supports several working mechanisms. It is **not yet a faithful reconstruction of the supplied room drawings**. The most consequential confirmed construction problems are:
+
+1. Both open Soldier Dock apertures still face solid interior hull lining; rolling the shutters does not expose a usable launch tunnel.
+2. The Aquarium/Kitchen food lift is separated from the real mast and obstructed by the floor between levels.
+3. All four bedroom cannons face solid shell surfaces rather than aligned open gunports.
+4. Usopp's and Franky's B1 workshops occupy the opposite sides from the supplied B1 plan.
+5. Exterior bow trim intrudes into the fore cabins, cannon closets and storage.
+6. The crow's nest lacks the telescope and gym furnishings shown in both manga and anime references.
+7. The Dock stair rails emerge through the closed lawn hatch.
+8. Room furnishing silhouettes, placement, open-plan relationships and several door/window treatments differ substantially from the references.
+
+**The mouth cannon is not missing its trigger.** A fresh continuous lawn-to-helm walk followed by real E/J/K input successfully opened and fired it. Its control discovery and visual presentation still need improvement. Missing controls elsewhere are listed separately below.
+
+## 1. Baseline, evidence and meaning of the conclusions
+
+The inspected preview was the already-running **http://localhost:5173/**, using the existing `public/models` publication. No server was started, no assets regenerated and no production bundle rebuilt. This is an audit of the current development preview/publication, not a certification of the older `dist/` directory or a remote deployment.
+
+The [baseline manifest](review/whole-ship-audit-baseline.json) was recorded at **09:27:42 EDT**. Final receipt time: **09:53:28 EDT**. All inspected implementation/original/master/public-asset inputs remained unchanged; HTTP-fetched model hashes matched the files on disk. It covers implementation, tools, tests, original FBX, master, public models and references. The current visual GLB has **7,549 meshes**. Its measured envelope is **85.8178 × 45.7258 × 123.2000 m**; this is the current enlarged experience envelope, not a canonical dimension claim.
+
+| Asset | Bytes | SHA-256 |
+|---|---:|---|
+| `public/models/sunny.glb` | 45,989,016 | `986080f794d8c99b074c48a01942a01e98d882a45a54b6a5a68e09ad4999397c` |
+| `public/models/sunny-collision.glb` | 46,018,572 | `59fe62724ce2d727237c4ebf1f32c0f65fd56464b8c201c1c2a9ae96bd2d4907` |
+| `public/models/ship-metadata.json` | 1,274,177 | `f8b75353c28b19b1e67db702b9ad3863520e28aa4af73da305ca589dbcc62394` |
+| `assets/sunny-master.blend` | 19,848,179 | `feb806bbc036615e72e73978287d04c6d185c8225df5a750e2d40158420cfd8b` |
+
+**Evidence classes:**
+
+- **A — appearance:** personally inspected fresh screenshots of the current renderer. Camera placement is for inspection; it does not prove access, collision or walking. The exterior plan view hides sails/flags/rigging and is explicitly labeled. Other appearance views retain the actual meshes.
+- **S — static geometry:** current exported mesh bounds, material identities and, where stated, exact visual-triangle ray intersections. A bounding-box candidate alone is not called a confirmed surface intersection.
+- **F — function:** actual keyboard operation after continuous movement with the ordinary player controller. The audit driver sets look orientation for aiming; it does not place, fly, respawn or recover the player. Remote close-ups after a control action are mechanism appearance views, not the player's normal view.
+- **L — existing live runner:** read-only observations of the full suite that was already running when this survey started. These are distinct from this audit's focused verification and from old status-document claims. Its final state is recorded in the evidence receipt; no complete pass is inferred from partial progress.
+
+**Priority:** P1 = fundamental wrong construction, missing defining feature, blocked mechanism or important connectivity issue; P2 = significant reference/detail/interaction discrepancy; P3 = finish, presentation or lower-impact refinement. No P0 safety emergency was identified. Priorities indicate repair order, not an accuracy score.
+
+**Axes:** bow = negative X; stern = positive X. Starboard = positive Blender Y; port = negative Blender Y. The exported Three.js frame is `[X, Z, -Y]`. Port/starboard findings use this mapping, checked against the slide/swing convention in R04/R13, not the apparent left/right of an arbitrary camera.
+
+### Intentional choices and adaptations, not defects by themselves
+
+- **A1:** retain the user-authorized **2.2 ship enlargement**, normal human body, 1.7 m eye height and ordinary walking speed. The report does not recommend shrinking the ship or player.
+- **A2:** the earlier central lawn stretch is a disclosed experience reconstruction. It prevents certifying exact overall plan proportions, but is not independently filed as a new defect.
+- **A3:** several canonical ladders are represented by walking stairs, particularly storage/Energy/bath/Dock access. The existing reference contract discloses this accessibility choice. Their shape/connectivity can still be audited; changing the adaptation needs an explicit design decision in a later repair task.
+- **A4:** construction precedes final graphics. The visible finish differences are recorded under G findings and do not authorize beginning that work now.
+
+## 2. Reference register — all 25 images personally inspected
+
+All filenames below are exact local names in `stuff/images/`. These images are the authority for comparisons in this report. No remembered wiki assertion is substituted for a supplied image. The local `Mini_Merry_II.html` is supplementary saved context, not a 26th image.
+
+| ID | Exact filename | What it establishes |
+|---|---|---|
+| R01 | `Thousand_Sunny_Infobox.webp` | Anime exterior colors, hull ornaments, lion profile, roofs, furled sails and rigging. |
+| R02 | `Thousand_Sunny_Digitally_Colored_Manga.webp` | Colored exterior profile/ornament, spherical lion impression, timber hull, stern barrel and roof details. |
+| R03 | `Thousand_Sunny_pg.26.webp` | SBS p26 introduction and deployed-sail overall view. |
+| R04 | `Thousand_Sunny_pg.46.webp` | F3 plan: helm/lawn/foremast, port swing, starboard slide, garden/branch-office/observation relationships. |
+| R05 | `Thousand_Sunny_pg.66.webp` | F2 plan: fore women's cabin; port dining, starboard Kitchen; infirmary/pantry behind; stern ladder structure. |
+| R06 | `Thousand_Sunny_pg.86.webp` | F1 plan: fore men's cabin, aft surrounding Aquarium, rear passage/Energy connection. |
+| R07 | `Thousand_Sunny_pg.126.webp` | B1 plan: fore stores, radial Dock, Franky on port/Usopp on starboard, stern access. |
+| R08 | `Thousand_Sunny%27s_Figurehead%2C_Helm%2C_and_Anchors.webp` | SBS p146: face/Gaon/mane, anchor rope storage, integrated channel dial/knob/lever. |
+| R09 | `Thousand_Sunny%27s_Men_and_Woman_Quarters.webp` | SBS pp186–187: suspended wooden bunks, low sunken-table seating, six lockers, weapon display/posters; women's beds/vanity/wardrobe/seating; entrance wash fittings; fore toilets. |
+| R10 | `Thousand_Sunny%27s_Kitchen%2C_Dining_Room%2C_and_Sick_Bay.webp` | SBS pp188–189: open Kitchen/bar/Dining relationship, mast food lift, giant oven, locked fridge, pantry and clinic. |
+| R11 | `Thousand_Sunny%27s_Aquarium_Bar.webp` | SBS pp190–191: curved surrounding tank, drapery, seating/table at mast, wine storage, overhead rear tank, balcony doors and Energy route. |
+| R12 | `Thousand_Sunny%27s_Library%2C_Workrooms%2C_and_Bathhouse.webp` | SBS pp194–195: alternating Library windows/books, curved rotating bench, survey desk, bath/entry/WC; detailed workshops and gym fixtures. |
+| R13 | `Thousand_Sunny%27s_Crow%27s_Nest_and_Survey_Room.webp` | SBS pp196–197: rope-to-ladder access, rear loudspeaker, hatch types, stern observation/garden connections, gaff movement. |
+| R14 | `Thousand_Sunny_pg.192-193.webp` | Dock rotation, enclosed launch channels/water/rolling shutters, waiting room/capstan, three-barrel Energy chamber; channels 0–3 vehicles. |
+| R15 | `Usopp%27s_Garden_of_Pop_Greens.webp` | Later garden arrangement, flower bed, mikan trees and Usopp's planting/branch-office relationship. |
+| R16 | `Thousand_sunny_boys_room.webp` | Anime bunks, blue low cushions/rug, lockers, crossed axe/sword, timber interior and warm lamps. |
+| R17 | `Thousand_sunny_girls_room.webp` | Anime paired beds, ornate vanity, four-door wardrobe, two rounded red seats/small table, clock/pictures/rug. |
+| R18 | `Thousand_sunny_kitchen.webp` | Anime open bar/arched ceiling, mast location, table/chairs, long green wall bench, oven/rack/hood. |
+| R19 | `Thousand_sunny_sick_bay.webp` | Anime clinic bed/desk/swivel chair/board/cabinet composition, arched porthole door, gray floor tiles. |
+| R20 | `Thousand_sunny_aquarium_bar.webp` | Anime wraparound burgundy seating, central circular mast table/chairs, rich drapery, tank life and light. |
+| R21 | `Thousand_sunny_library.webp` | Anime alternating full-height books/windows, curved green seating, octagonal table/shell chairs, sloped aft survey desk, ladder. |
+| R22 | `Thousand_sunny_bathroom.webp` | Anime bath/wood entrance/lattice partition, curved striped wall, oval floor motifs, bath fixtures/WC entry. |
+| R23 | `Thousand_sunny_usopp_factory.webp` | Anime timber workshop, cloth sign, patterned padded work surface, drafting board, varied junk/tool containers. |
+| R24 | `Sunnyworkroom.webp` | Anime Franky metal walls/floor/rivets, angled drawing desk, drawers, furnace, tools and large varied scrap bin. |
+| R25 | `Thousand_sunny_crows_nest.webp` | Anime telescope, low perimeter bench, weights/locker, bars, towel and circular hatch. |
+
+### Reference conflicts and version rules
+
+- R01/R02 show furled forward sails; R03 shows them deployed. The current deployed state is not wrong solely for differing from the furled views. Hoisting/furling is a separate missing-control finding.
+- R07 explicitly has an empty early bay and paired channel-0 paddle spaces. The current six later contents are a project version choice documented in `docs/interior-reference.md`. R14 only supplies detailed vehicle drawings for 1–3. **Later vehicles 4–6 cannot be canonically accepted or rejected from those early drawings.** The present carousel's geometry and operation can still be assessed.
+- R09/R17 show the earlier paired-bed women's room. The project chooses a later king-bed version. The bed count alone is therefore **ambiguous**, not a confirmed error; the missing seating/vanity composition is independently visible.
+- R12 calls the stern Library an observation/survey room; the metadata also names the open garden tier `Observation Deck`. An extra enclosed room is not inferred from these names alone.
+- Drawings do not supply hidden metric offsets, hinge angles, pipe routing or exact concealed construction. Measurements below describe the current model, not invented canonical tolerances.
+
+## 3. Full coverage inventory
+
+Evidence shorthand used below: **B(name)** = `review/whole-ship-audit-room-name.png`; **D(name)** = `review/whole-ship-audit-name.png`; **X(name)** = `review/whole-ship-audit-exterior-name.png`. Every listed original has been inspected directly or in a labeled inspection sheet. Camera metadata is retained in the corresponding JSON files.
+
+### Exterior and deck coverage
+
+| Area | Current review result and remaining limit |
+|---|---|
+| Overall hull/keel, red panels, white scrolls, black bands and small ports | X(port/starboard/bow-quarter/stern-quarter/top), D(extra-bow-side). Recognizable broad arrangement; no missing whole hull/major scroll observed. Concealed underwater topology and every small port's use are not certified. C01/C02 and E04 remain. |
+| Lion, face, eyes/nose/muzzle, mane, bones, gold collar, Gaon | X(front), D(figurehead-close/extra-bow-side), verified J/K/T close-ups. Closed/open states and rotation reviewed. Working trigger confirmed; E04/U01 and M01 remain. |
+| Both anchors, rings, flukes, short rope/hawse connection | D(anchor-port/anchor-starboard), mesh inventory. Both stowed anchors present; no missing anchor observed. Deployment/internal rope routing not implemented/proved: M02. |
+| Helm, pedestal, wheel, channel dial, knob/lever and Log Pose | D(helm-inspect), verified control views and F trace. User E prompts work at physical stations. Exact dial mechanism/Log Pose representation remains simplified; M01/M09 and U02. |
+| Fore/main masts, yards, platforms, shrouds, sails and flags | X(port/starboard/bow-quarter/lookout), D(rigging-near). Main assemblies/artwork/ties visible; deployed/furled variant acknowledged. No complete rope-by-rope or sail-silhouette acceptance. M06/U03/G findings. |
+| Lawn, two shade trees, fore stairs/cross landing and helm guard | D(lawn-fore/lawn-aft), X(top); F lawn-to-helm walk. Major placement/support retained. Overall lawn stretch A2; E01/E03/G findings. |
+| Both fore toilets | D(extra-toilet-port/extra-toilet-starboard); metadata/source. Both contain sink and toilet under fore stairs. Exterior entry framing was obscured in D(fore-toilet-*); no complete new walking return was done by this audit. A3/E03/G03. |
+| Aft lower/upper garden flights and enclosures, both sides | X(garden), D(dining-stair-enclosure/kitchen-stair-enclosure). Sampled room-side cheeks now look opaque; **old open-gap lead is not re-filed as a confirmed current defect**. U04/full continuous returns remain separate. |
+| Slide/entry, port swing | D(gallery-slide/extra-swing), X(top). Slide and supported two-rope swing exist on correct general sides; broad type reviewed. Full current slide-entry clearance not newly proved; M07/U05. |
+| Mikan trees, Robin's flowers, Pop Greens and branch office | D(garden-plants/garden-office/extra-popgreens/extra-robin/extra-office), X(top/garden). Three mikan pots and distinct garden families exist. E05/U06/G04. |
+| Gallery, side passages, balconies, doors/windows and railings | Exterior nine-view set plus D(garden-library/aquarium-entrance/extra-aquarium-hatch). Tier connections and glazing visible; E02/E03. No every-post/threshold continuous walk by this audit. |
+| Lawn Dock hatch and both source ladder hatches | D(dock-hatch-closed/extra-aquarium-hatch), B(library), D(extra-lookout-ladder). Grille-type Aquarium hatch exists; closed Dock hatch is defective E01. Lid operation coverage is described separately. |
+| Stern Library/bath exterior, lanterns, soffits, barrel/rudder | X(stern/stern-quarter/garden), D(stern-barrel/garden-library). Both lanterns, hollow barrel and rudder exist. Barrel hollow mouth is visible; hidden plumbing and every roof seam remain unverified. U07/G01. |
+| Crow's nest exterior, rope/ladder, hatch and loudspeaker | X(lookout), D(extra-lookout-ladder), B(lookout), D(lookout-reverse). Structural access, glazing and rear speaker are modeled. Furnishings missing C08; hatch shape/roof details U08. |
+
+### All 19 accuracy groups, with the exact modeled spaces
+
+This table covers all **27 metadata spaces**, plus the crow's nest, which has a real model/access definition but is not a room row in `interiors.rooms`. A named room is not an accuracy pass.
+
+| Group | Exact area(s) | Reviewed / no mismatch observed at this limited level | Open findings / evidence limits |
+|---|---|---|---|
+| Group 01 | `Men's Quarters` | Fore F1 placement; three suspended double-bunk units, six-door bank, five poster cues, laundry and actual sunken well exist. | C01; INT01–INT03; E03; G. B(mens), D(extra-kotatsu/extra-lockers/mens-reverse). Well is confirmed by triangle rays, despite weak visual depth cues. |
+| Group 02 | `Men's Washroom` | Sink/tap/toothbrush cues at fore cabin entrance. | INT04/INT05; E03. B(mens-washroom), D(mens-wash-wide). Alarm operation absent. |
+| Group 03 | `Women's Quarters` | Fore F2; bed/canopy, four-door wardrobe, bookcase, chest and vanity base exist. | C01; INT06/INT07; bed-version U09. B(womens), D(womens-reverse/extra-women-furniture). |
+| Group 04 | `Women's Washroom` | Sink, stocked shelf and physical tea-set parts exist. | INT04/INT08. B(womens-washroom), D(womens-wash-wide). Cabinet doors/closed storage and mirror not reproduced. |
+| Group 05 | `Men Starboard Cannon Closet`, `Men Port Cannon Closet`, `Women Starboard Cannon Closet`, `Women Port Cannon Closet` | Four hollow-bore/carriage models present and oriented outboard. | C01/C06/M04. D(cannon-men-starboard/cannon-men-port/cannon-women-starboard/cannon-women-port). Original B closet views miss the fixtures and cannot accept them. |
+| Group 06 | `Aquarium Bar` | Aft F1, curved glass tank/fish/coral, checker floor, mast extension and furniture families exist. | C04/C05; INT09/INT10; E02/E03. B(aquarium), D(aquarium-reverse/aquarium-lift/extra-curtains-directed). |
+| Group 07 | `Aquarium Service Passage` | Rear route and overhead tank structure exist; fish visible overhead; balcony access metadata exists. | INT11/U10; not every tank seal/door connection proved. B(aquarium-service), D(aquarium-overhead). |
+| Group 08 | `Dining Room` | Correct port F2 side; long covered table, chairs, green seating and Den Den Mushi exist. | INT12/INT13/INT14; E03/G. B(dining), D(dining-reverse). |
+| Group 09 | `Kitchen` | Correct starboard F2; oven/stove, hood/transfer duct, counter, sink, rack, locked-fridge cue exist. | C04/C05; INT12/INT15; M03/M08. B(kitchen), D(kitchen-reverse/kitchen-stair-enclosure). No detached hood flue is asserted from old notes. |
+| Group 10 | `Pantry` | Rear starboard F2; shelves hold produce/jars, with crates/sacks and inner/outside door definitions. | INT16; E03/G. B(pantry), D(pantry-reverse). Both-threshold full new round trip not performed. |
+| Group 11 | `Sick Bay` | Rear port F2; bed, desk, swivel chair, board, shelf/cabinet and outside door exist. | C09; INT17/G03. B(infirmary), D(infirmary-reverse). |
+| Group 12 | `Library` | Circular stern tier; continuous curved green bench, octagonal table, aft desk/books/globe and checker floor. | INT18/INT19; M05; E03. B(library), D(library-reverse). Bench/floor support not re-filed as broken from historical notes. |
+| Group 13 | `Bath`, `Bath Washroom`, `Bath Toilet` | Bath above Library; contained water/tub, showers/taps, entry sink/mirror/towel and separate WC/books exist. | INT20/INT21; M08/G03. B(bath/bath-washroom/bath-toilet), D(bath-reverse/bath-wc-wide). Walking stairs differ intentionally from ladder A3. |
+| Group 14 | `Usopp's Main Factory` | Timber workshop, workbenches, drawing/tool board families, crates/barrels/sign exist. | C07; INT22. B(factory), D(factory-reverse). Reference clutter/composition not reproduced. |
+| Group 15 | `Franky's Weapon Development Room` | Metal floor/one main lining, furnace, drawing desk/tool/scrap families exist. | C07; INT23. B(weapons), D(weapons-reverse). Metal enclosure coverage incomplete. |
+| Group 16 | `Energy Room` | Stern B1 chamber, actual arched cavity, grille, three barrels, gauges and connected feed-pipe shapes. | INT24/M03. B(energy), D(energy-front). No barrel-loading function or full piping circuit. |
+| Group 17 | `Storage Room` | Forward B1; crates/sacks/barrels, shelf and cradled lumber exist. | C01/INT25. B(storage). Actual timber stock supported in viewed inventory; ammunition/weapon organization incomplete. |
+| Group 18 | `Soldier Dock System`, waiting area and six contents | Carousel/low bay dividers, central spokes, six vehicle proxies, channel labels, exterior shutters. | C02/C03; INT26–INT29; M02/M10; U11. B(soldier-dock), D(dock-centre/dock-waiting/vehicle-1…6), verified open aperture. |
+| Group 19 | Crow's nest / gym | Circular floor, pane ring, roof/dormers, hatch, external access and speaker. | C08. B(lookout), D(lookout-reverse). Both opposite views show empty floor/walls. |
+| Supplemental spaces | `Observation Deck`; `Fore Port Toilet`; `Fore Starboard Toilet`; `Stern Ladder Access` | Included in exterior coverage above; stern ladder links lower stern structure with Library tier. | A3, E01/E03/E05, U04/U07. These four rows complete the 27 metadata-space inventory; they are not extra accepted rooms. |
+
+## 4. Confirmed construction discrepancies
+
+### C findings — repair before detail/graphics
+
+| ID / priority | Location and exact reference expectation | Current observation and evidence | Required improvement / impact |
+|---|---|---|---|
+| **C01 / P1** | Fore F1/F2 cabins, closets and B1 storage. R06/R07/R09/R16/R17 show continuous usable room interiors, without exterior red hull ornament inside. | Large red/white exterior fragments cross cream/timber room walls and ceiling/floor edges. [Women's room](review/whole-ship-audit-room-womens.png), [storage](review/whole-ship-audit-room-storage.png), [women's cannon](review/whole-ship-audit-cannon-women-starboard.png), B(mens). Exterior source trim family including `Circle038.001` is present at these stations; the mesh inventory preserves bounds. A/S. | Reconcile exterior ornament and interior shell ownership/cuts. Do not hide it with paint or shrink the player. Breaks enclosure and reference room silhouette. |
+| **C02 / P1** | Both external Dock mouths. R14 p193 shows an open rolling shutter exposing a water-bearing internal launch channel. | After real channel-2 selection and full shutter opening (`shutter=1`), the [port aperture](review/whole-ship-audit-verified-dock-open-port.png) exposes timber lining. Exact center rays hit `Sunny_InteriorWall_B1_73_seg0` on port and `Sunny_InteriorWall_B1_199_seg0` on starboard. See `dockApertures` in [static evidence](review/whole-ship-audit-static.json). Port opening seen live; starboard obstruction confirmed statically, not with a second live open photo. A/S/F. | Cut/rebuild both actual launch paths through all lining layers and connect them to the selected bay. An animated shutter currently suggests access that the underlying construction does not provide. |
+| **C03 / P1** | Dock chamber/launch bays. R07/R14 show tall enclosed radial channels with water/rails, inner numbered rolling gates and circulation/waiting space. | Current dock is a flat gold platter with red parking pads, low white rectangular dividers and open shared upper volume. B(soldier-dock), D(dock-centre/dock-waiting); `Sunny_Dock_bay*`, `Sunny_Dock_sector*`. No enclosed water-bearing tunnels between carousel and hull mouths are visible or authored in `build_interiors`. A/S/source. | Reconstruct channel cross-sections, outer tunnels, water containment and inner portals around the rotating assembly. Distinct from C02's solid lining obstruction. |
+| **C04 / P1** | Mainmast food lift/wine cupboard in Aquarium and Kitchen. R10 pp188–189 and R11 pp190–191 put them **in the mast**, with service opening/table at its base. | The [lift/cupboard](review/whole-ship-audit-aquarium-lift.png) stands as exposed vertical boards beside the mast. `Sunny_InteriorMainMast` spans X17.4229–20.1664; lift guides/hatch span about X15.55–16.55. There is at least **0.873 m** between that hatch's maximum X and the mast's minimum X; the center offset is about **2.745 m**. A/S. | Integrate the service cavity, guide/car and wine cupboard with the actual retained mast, preserving structure and human clearances. Labels calling it a mast lift do not establish the relationship. |
+| **C05 / P1** | Food transfer between F1 Aquarium and F2 Kitchen. R10 explicitly connects the upper lift to the Aquarium below. | The lift is modeled twice at separate levels. A vertical exact-triangle ray at its center `(X16.05, Three Z−1.287)` hits `Sunny_Aquarium_ceiling` at Y−35.8027 and `Sunny_InteriorFloor_F2_aft` at Y−35.6227. The shaft is not clear. [Static lift probes](review/whole-ship-audit-static.json); `dumbwaiter`/`build_interiors`. S/source. | Create one continuous contained shaft/opening and coherent car path. Even adding a button alone would leave a physical floor obstruction. |
+| **C06 / P1** | All four fore cannon closets. R09's outboard cannons and R01/R02/R08's hull openings imply a usable outboard bore/port relationship. | Cannons exist, point outboard and have bores. Independent rays just beyond each muzzle hit opaque `Sunny_ForeF1_shell`/`Sunny_ForeF2_shell`, then trim/hull surfaces. First obstruction distances: men's starboard **3.909 m**, men's port **0.628 m**, women's starboard **3.173 m**, women's port **0.150 m**. [Four fixture views](review/whole-ship-audit-contact-detail-02.jpg), [ray data](review/whole-ship-audit-static.json). A/S. | Align each cannon station/elevation with a real matching gunport through every shell layer. Do not equate outboard direction or the presence of unrelated external portholes with a clear firing line. |
+| **C07 / P1** | B1 workshop placement. R07 p126 puts Franky's room on the page's port side and Usopp's on starboard; cross-check R04's port swing/starboard slide orientation. | With the bow at the top of R07, page right is starboard; R04 independently places the slide on that same right side and swing on port. In the model, bow is −X and up is +Z, so forward × up = +Y starboard. Physical `Sunny_Factory_bench0_top` is centered at Blender Y−9.0 (port), while the actual `Sunny_Weapons_furnace` is at Y+10.0 (starboard). The current Factory sign/wooden workstations and Weapons furnace/metal lining are visible in the corresponding room images. Metadata agrees, but is not the sole basis. [Physical fixture coordinates and slide/swing cross-check](review/whole-ship-audit-orientation.json). A/S/source. | Resolve the actual mirrored assignment and associated doors/stairs/fittings against the B1 plan. Changing only labels would leave the rooms wrong. |
+| **C08 / P1** | Crow's nest gym. R12 p194 and R25 show telescope/tripod, low perimeter bench, weights/dumbbells, training locker, bars, towel and cushion; R12 also labels binoculars/mic. | [Opposite interior view](review/whole-ship-audit-lookout-reverse.png) and B(lookout) show empty floor and windows. The current spatial mesh inventory is structural/hatch/window/ladder material, with no telescope, gym bars, weights, locker or bench. The exterior loudspeaker **does** exist and is not filed as missing. A/S. | Build the defining gym/observation fixtures and preserve hatch/ladder clearance. Missing fixture controls are secondary to missing objects. |
+| **C09 / P2** | Infirmary board/cabinet/window relationship. R10/R19 place board and medicine storage on usable wall areas around the bed/desk, without blocking glazing. | The [bulletin board covers a window](review/whole-ship-audit-room-infirmary.png); a tall open shelf stands in front of another. Reverse view confirms board against the actual pane region, not just a camera artifact. `Sick_bulletin_board`, `Sick_cabinet`, `Sick_poster`; positions in `infirmary_details`/`build_interiors`. A/source. | Recompose the room against its real wall/window/door stations, with proper supports. Do not merely remove windows or move the camera. |
+
+### E findings — exterior construction and appearance
+
+| ID / priority | Reference and expected feature | Actual current mismatch / evidence | Improvement and impact |
+|---|---|---|---|
+| **E01 / P1** | R09 fore/lawn arrangement and R14 lawn-to-Dock access: a shut hatch must cover its opening coherently. | [Closed lawn hatch](review/whole-ship-audit-dock-hatch-closed.png) has two white stair rails emerging through/above its lid. `Sunny_SoldierDockStair_over_rail0/1` bounds reach **1.005 m above** the closed lid plane. Those bounds are candidates; the image directly confirms the visible protrusions. A/S. | Reconcile stair/rail termination with hatch sweep/closed pose while retaining body headroom. This is real construction interference, not a missing texture. |
+| **E02 / P2** | R11/R13 Aquarium facade and R09 fore entrances show arched, framed nautical doorways. R12/R13 show the stern Library entry treatment. | [Aquarium entrance](review/whole-ship-audit-aquarium-entrance.png), D(garden-library), D(lawn-fore), and B(library) show plain rectangular red leaves/rectangular frames. `AquariumDoor`, `LibraryDoor`, `ForeDoor`/`WomensDoor` are not the matched arch constructions. Dining/Kitchen **do** have later arched silhouettes; those are not incorrectly called rectangular here. A/source. | Match each actual doorway and shell opening to its own reference, keeping deliberate access dimensions. |
+| **E03 / P2** | R09–R13/R16–R22 repeatedly show arched timber doors with circular upper portholes, trim and readable nautical fittings. | Many current doors, including the new arched Dining/Kitchen leaves, are blank red/white slabs with a small gold handle and no corresponding upper porthole. B rooms and D(kitchen-reverse/garden-library/aquarium-entrance). `door` constructs generic leaves, not room-specific porthole panels. A/source. | Add per-door reference shape/porthole/panel/trim treatment through both visual and physical leaf, without assuming one design suits every room. |
+| **E04 / P2** | R01/R02/R08 show a rounded projecting lion head and muzzle. | The current [side profile](review/whole-ship-audit-extra-bow-side.png) reads as a shallow yellow disk with a separate muzzle compared with the supplied profiles. `Sphere001` depth is **4.747 m** versus **9.490 m** diameter. This measures the current body only; the reference has no official depth ratio. Closed front expression is recognizable. A/S. | Match normalized front/side silhouettes, face-to-mane relation and muzzle projection before final surfacing. The qualitative profile difference is supported; a numeric canonical target is not asserted. |
+| **E05 / P2** | R04/R13/R15 place gardens as readable inboard planting/work areas next to the mast/trees and rail. | [Pop Greens](review/whole-ship-audit-extra-popgreens.png) and [Robin bed](review/whole-ship-audit-extra-robin.png) sit behind/under the broad perimeter guard from the normal standing approach, which visually cuts across the plants. The branch office is a largely blank drafting surface. A. | Reconcile bed/guard/approach arrangement and add source-specific planting/work details. Exact rail/plant solid intersections and precise canonical offsets are **not** claimed from this perspective alone; see U06. |
+
+### I findings — room construction, furnishing and details
+
+| ID / priority | Reference expectation | Current mismatch and evidence | Improvement / impact |
+|---|---|---|---|
+| **INT01 / P2** | Men's room, R09/R16: low floor seating/cylindrical cushions around a sunken table. | D(extra-kotatsu) shows two conventional high-backed red sofas with white square cushions around the small table. The well itself exists: three actual rays reach its lower construction around Y−40.93/−40.97, so **a missing well is not alleged**. `Quarters_kotatsu_sofa*`. A/S. | Rebuild low seating, upholstery forms and relation to the well, retaining the proven floor opening. |
+| **INT02 / P2** | Men's room, R09/R16: prominent crossed axe/sword wall display. | Missing from fresh views and authored men's furnishing inventory; no corresponding weapon-display family in the current source/GLB. Poster cues alone occupy the wall. A/source/inventory. | Add reference display at the intended station, with real supports; do not confuse a workshop cannon with this feature. |
+| **INT03 / P2** | Men's room, R09/R16: readable pale metal locker bank and wooden hammock-style double bunks arranged with the shared living area. | [Locker/bunk view](review/whole-ship-audit-extra-lockers.png) shows simple timber-faced cupboard doors partly screened by a bunk row, thin flat bunk platforms/mattress blocks and a very different composition. Six doors and suspension beams/ropes exist. A; `locker_bank`, `bunk`. | Refine locker silhouette/vents/material, suspended wooden bunk sides and placement as a room ensemble. Count/support existence is not visual acceptance. |
+| **INT04 / P2** | Both fore wash areas, R09: mirror above/alongside the sink, with appropriate mounting/storage. | D(mens-wash-wide/womens-wash-wide) shows bare wall over the sinks. Current `sink` does not author a mirror; named wash mirrors exist only for the bath. A/S/source. | Add the two missing entrance-wash mirrors and reference framing at their actual usable positions. |
+| **INT05 / P2** | Men's entrance, R09 p186: emergency alarm bell with recognizable bell hardware. | `Wash_bell` is a small rectangular gold block above the doorway, rather than bell/bracket/clapper/actuator. Fresh wider views do not show a recognizable bell assembly. No ring action exists. A/source. | Model the actual bell and provide its user trigger; see M08 for operation. |
+| **INT06 / P2** | Women's room, R09/R17: two rounded lounge chairs/sofas and a small table forming a conversation area. | B(womens), D(womens-reverse/extra-women-furniture) show one small lilac straight sofa and no corresponding paired-seat/round-table arrangement. Source builds `Womens_sofa` only. A/source. | Restore the furniture grouping, curved silhouettes and placement. Independent of the unresolved king-bed version. |
+| **INT07 / P2** | Women's room, R09/R17: ornate mirror/vanity, seat, arched draped surround, wall clock/pictures, treasure box. | The current vanity is a generic desk with rectangular gold-framed pane; bed canopy is present but does not reproduce the vanity surround. Generic chest and sparse wall furnishings replace the specific composition. B(womens), D(extra-women-furniture), `Womens_vanity`/`Womens_mirror`. A/source. | Rebuild the vanity ensemble and add the clearly shown clock/wall details. Choose bed-period target separately. |
+| **INT08 / P2** | Women's entrance wash, R09 p187: wine/tea storage cupboard with upper/lower doors around the sink. | D(womens-wash-wide) shows an open bookcase-style rack, rectangular bottle blocks and tea set behind the basin. Tea set is present; enclosed cabinet/paneled doors and sink integration are missing. A/source. | Reconstruct the cabinet/sink composition and retain supported tea/wine contents. |
+| **INT09 / P1** | Aquarium, R11/R20: wrapping curved lounge seating and circular mast table with companion seats. | B(aquarium), D(aquarium-reverse), D(extra-curtains-directed) show a few isolated straight teal seats and a separate side bar/stools. There is no encircling burgundy lounge or circular mast table in the current authored furnishing set. A/source. | Rebuild the defining room furniture layout around the corrected mast/lift (C04/C05), maintaining the rear passage. |
+| **INT10 / P2** | Aquarium, R11/R20: deep swag curtains/tied side drapes; varied fish/coral with convincing surrounding-tank presentation. | Directed fresh view shows very shallow pale cyan valance strips/short panels, exposed gold framing and sparse lozenge fish/simple coral stems; the dense heavy blue drapery and full aquatic scene are not reproduced. `Aquarium_valance*`, `Aquarium_curtain*`, fish/coral families. A/source. | Correct cloth silhouette/coverage and tank population before final water/lighting finish. This is not a claim that all curtain meshes are absent. |
+| **INT11 / P2** | Rear Aquarium hall, R11: continuous overhead tank experience with balcony doors and legible Energy access. | B(aquarium-service) and D(aquarium-overhead) show a long mostly open/simple corridor, narrow rectangular overhead tank strip and isolated fish silhouettes against very plain construction. The visual relationship to the surrounding curved tank and service route is weak. A. | Match tank/hall cross-section and ceiling presentation; verify all seals and the actual rear connection before accepting it. Hidden containment details remain U10. |
+| **INT12 / P1** | Kitchen/Dining, R10/R18: broad open restaurant/bar relationship, mast by the cooking area, arched ceiling. | Current rooms are divided by `RoomPartition_bar` at full height except a small doorway and a short serving opening. B(dining/kitchen), D(dining-reverse/kitchen-reverse) show tall blank partitions obscuring the shared composition. Ceiling reads as a flat slab with local projections. A/source. | Reconstruct the open bar and barrel-ceiling relationship with the correct mast/lift; do not merely decorate the existing full divider. |
+| **INT13 / P2** | Dining, R10/R18: broad rounded table and a limited set of rounded shell chairs, with a long wall bench. | A very long narrow rectangular table has **16 straight box-back chairs** (`Dining_chair0…15`), plus two short opposing sofas. D(dining-reverse), B(dining); source table dimensions 6.4 ×1.3 m. The specific count in every anime shot is not universal, but this furniture form/grouping clearly differs. A/source. | Match table outline, chair design and continuous wall seating to the selected reference layout, keeping human dimensions. |
+| **INT14 / P2** | Dining, R10: Den Den Mushi on a usable service/counter station and bar details. | A snail cue exists on a simple isolated station beside short sofas; much of the reference restaurant/bar fittings and continuous service presentation is absent. B(dining), source `Dining_dendenmushi`. A/source. | Place and detail the phone/service station in the corrected restaurant layout; phone use remains M08. |
+| **INT15 / P2** | Kitchen, R10/R18: giant oven by entry, dense coherent stove/counter/hood/rack arrangement, mast lift and locked fridge. | Components exist but are scattered freestanding blocks: the fridge stands ahead of a window, giant oven is a simple blank black panel, rack holds sparse plates, and the mast lift is separate. D(kitchen-reverse), B(kitchen). Hood is connected by an exposed long transfer duct, a disclosed reconstructed route. A/source. | Refine component silhouettes and compose the full kitchen against real doors/windows and corrected open bar. Do not call the hood connection absent; source-supported route exactness remains U07. |
+| **INT16 / P2** | Pantry, R10 p189: compact densely stocked raw-food store behind the mast with bins/barrels/sacks and clear inner/exterior doors. | B(pantry) shows three repeated shelves with identical rows of generic white jars/colored ovals and a few crate/sack stacks; D(pantry-reverse) exposes substantial blank high partition area. A. | Vary recognizable produce/storage types and arrange them to the supplied composition while preserving both door approaches. |
+| **INT17 / P2** | Clinic, R10/R19: green bed/pillow, green swivel chair, equipped desk and medicine cabinet; gray tile grid. | Current bed is a simple white/gold form; board/cabinet placement C09, minimal medicines/desk equipment, and a dark checker floor instead of the supplied gray tile pattern. B(infirmary), D(infirmary-reverse), `Sick_*`. A/source. | Match furniture profiles and floor pattern, then medical props/finish. Chair exists and is green; it is not listed as missing. |
+| **INT18 / P2** | Library, R12/R21: tall alternating bookshelf/window bays and curved green seating. | Short, sparsely filled freestanding bookcases overlap portions of window bays and stop well short of ceiling; they do not form the alternating built-in wall composition. B(library), D(library-reverse), `Library_books0…6`. The continuous curved bench now exists and is supported. A/source. | Align full shelf bays with real window solids; keep the bench/entrance/ladder gaps. |
+| **INT19 / P2** | Library, R12/R21: sloped aft survey desk, meaningful chart/log materials, rounded yellow shell chairs around octagonal table. | Current aft desk is generic/flat with small placeholder map/globe; center seating is four square timber stools with teal square pads. B(library), source `library_details`/`Library_mapdesk`/`Library_table_stool*`. The table is octagonal, which matches its broad type. A/source. | Rebuild the survey-desk incline and seating silhouettes; chart/book artwork is a later finish task. |
+| **INT20 / P2** | Bath, R12/R22: curved striped enclosure and lattice partition separating timber entrance from bath, arched nautical door. | B(bath), D(bath-reverse) show a flat tan ceiling, largely plain cream/timber walls and plain rectangular partition/door, with no equivalent lattice treatment. A. | Match the actual roof/partition cross-section, doorway and surface regions around the preserved access route. |
+| **INT21 / P2** | Bath/entry/WC, R12/R22: communal bath fixtures, small stools/bowls, towels, basket, timber entry and oval-patterned bath floor. | Tub/water/showers/stools/bowls/towel exist, but current pale green checker floor continues into the entry/WC; fixtures and WC are angular block forms and the reference entry basket/complete ensemble is not reproduced. B(bath-washroom/bath-toilet), D(bath-wc-wide). A/source. | Correct floor-region/pattern ownership and reference fixture silhouettes without losing the separate WC and actual water containment. |
+| **INT22 / P2** | Usopp Factory, R12/R23: busy timber workspace, cloth sign, patterned padded bench, drafting board, varied tools/junk/toolboxes. | B(factory), D(factory-reverse) show repeated bare tables, blank white boards, sparse generic tools, small crates and rigid text on the wall. No equivalent central padded cloth work station or clutter composition. A. | Build the distinctive workstations/sign/tool containers, then drawings/artwork. Location must be corrected with C07 first. |
+| **INT23 / P2** | Franky room, R12/R24: metal floor/walls with rivets, large drawers, inclined drawing desk, tool bucket, furnace and varied scrap bin. | Metal floor/one wall and furnace exist, but large surrounding faces remain cream/timber; repeated generic tables/tool boards, simple crate/ring scraps and flat desk replace the reference metal workshop composition. B(weapons), D(weapons-reverse). A/source. | Complete metal enclosure and rivet/panel construction, then reference furniture/tools/scrap. Correct C07 before fitting. |
+| **INT24 / P2** | Energy, R14 p192: integrated three-barrel pressure chamber, curved casing/top plumbing and loading/controls accessible from the route. | D(energy-front) confirms three barrels and an arched cavity, but sparse pipe/gauge assembly, straight skinny grille and plain surroundings omit much of the source machine/room construction. B(energy) shows large adjacent stair adaptation. A/source. | Refine casing/pipe/gauge/door/route integration. Meter-exact hidden plumbing is unavailable; do not invent it as fact. Loading remains M03. |
+| **INT25 / P2** | Fore stores, R07 p126: lumber/Adam wood, ammunition and weapon storage organization. | B(storage) and mesh/source inventory contain supported lumber plus crates/sacks/barrels and an empty shelf, but no identifiable organized ammunition/weapon reserve matching the plan labels. Exterior intrusion C01 is also visible. A/source. | Add recognizable, supported storage contents and functional access organization after shell repair. No invented quantity is required by the reference. |
+| **INT26 / P1** | Dock waiting room/capstan, R14 p192: distinct crew waiting area, numbered portals, lawn ladder and anchor-controlling capstan. | D(dock-waiting/dock-centre) shows the common open carousel/parking area with a small desk/stool and central hub spokes. No equivalent waiting-room envelope/numbered portal arrangement; no anchor-linked capstan function. A/source. | Reconstruct the waiting/circulation zone and separate its anchor mechanism from carousel decoration. Respect A3 if the lawn stair adaptation is retained. |
+| **INT27 / P2** | Shiro Mokuba I, R14 p193: shaped one-seat waver, seahorse head/mane, light and curved craft/steering details. | [Vehicle 1](review/whole-ship-audit-vehicle-1.png) is a small white ellipsoid/neck/head with block saddle bags; mane/light/hull sculpt and many waver details are not reproduced. `dock_vehicle(1)`. A/source. | Remodel from the supplied side drawing with supported hull/cradle and recognizable fittings; independent operation M10. |
+| **INT28 / P1** | Mini Merry II, R14 p193: four-seat shopping **steam craft**, sheep bow, superstructure/funnel and mechanical details. | [Vehicle 2](review/whole-ship-audit-vehicle-2.png) is a small sailboat with a mast, rectangular sail and bench. `dock_vehicle(2)` explicitly authors `mast`, `sail`, `boom`; the reference steam-craft superstructure/funnel is absent. A/source. | Rebuild its actual propulsion/superstructure and seating arrangement. A channel name and sheep head do not make the wrong boat type accurate. |
+| **INT29 / P2** | Shark Submerge III, R14 p193: shark-body profile/fins/teeth, numbered conning structure, periscope and three-seat interior. | [Vehicle 3](review/whole-ship-audit-vehicle-3.png) is an ellipsoid with flat box fins, small pipe periscope and round side windows; no numbered conning tower or three-seat interior. Source provides a small mouth/teeth cue, so teeth are not claimed entirely absent. A/source. | Rebuild exterior silhouette/tower and actual cabin/seat access; no metric dimensions are inferred. |
+
+## 5. Mechanism and user-control inventory
+
+A debug property or test-only hook is not a user control. An automatic proximity door is a user-usable trigger, even without an E button. A static recognizable model is not evidence that its mechanism works.
+
+| Implemented/expected feature | How a user discovers/triggers it now | Current evidence and result |
+|---|---|---|
+| Ordinary movement, jump/run, first/third person, fly, Inspect | Start card lists WASD/mouse/Shift/Space/C/F/V/H/Esc. Fly collision gets B/HUD button. | UI/source reviewed. These exploration controls are not missing; flight was not used for walking proof. |
+| Helm steering/throttle and rudder | Approach wheel: **E take helm**; W/S speed, A/D steering; E release. | F fresh physical approach/E takeover passes, zero recoveries. Steering/rudder behavior reviewed in source and existing runner coverage; not freshly driven through a full voyage here. |
+| Gaon mouth opening | While helm engaged, **J**; contextual helm prompt/help lists it. | F J reaches jaw≈0.994; [open image](review/whole-ship-audit-verified-mouth-open-close.png). Working user trigger. |
+| Gaon firing | While helm engaged, **K**, requires three cola barrels. | F K sets blast/recoil and cola3→0; [fire image](review/whole-ship-audit-verified-gaon-fire-close.png). Actual user key, not `fireGaon()` invoked by a test. No projectile/damage simulation. |
+| Chicken Voyage | While helm engaged, **T**. | F on/off and increasing mane angle; [rotated mane](review/whole-ship-audit-verified-chicken-close.png). Working trigger; all transport behavior not separately certified. |
+| Coup de Burst | While helm engaged, **G**, three cola. | Source/HUD confirmed. Not fired in this focused fresh check because Gaon used the available cola; no false fresh Burst proof. Existing prior/full-run results are separate. |
+| Dock channel selector | Aim/stand at knob: **E select dock channel**, cycles0–6 and closes first. | F physical approach/E changes1→2. Rotation state advances toward the selected bay. |
+| Dock shutters | Aim/stand at lever: **E toggle dock shutters**. | F `shutter=1`; actual opening visually reveals C02. This is an operational trigger with broken downstream construction. |
+| Dock rolling digits/slats | Driven automatically by selector/lever. | Visual/source review; no independent user action necessary. Number font/final artwork not reference-accepted. |
+| Channel-0 paddles | Select0, open shutters, use helm throttle; deployment/spin automatic. | Source only in this audit; no independent left/right paddle control despite R14 describing that capability. M09. |
+| Log Pose | Aim/approach globe: **E Log Pose (simulation)**. | F needle index0→1; [current view](review/whole-ship-audit-verified-control-log.png). Three crossed rods are a simplified instrument; illustrative bearings are explicitly labeled. |
+| Stowed anchors and anchor capstan | No drop/raise/haul trigger, wheel action or proximity prompt found. | M02 confirmed source/control inventory gap. Short hawse ropes and spokes are static. |
+| Food lift, upper/lower cars/hatches/rope | No pull-rope, button, E prompt or car/food transfer action. | M03; C04/C05 also make current construction wrong. No lift entry in door/mechanism registrations. |
+| Energy chamber grille/cola barrels | No load/unload/refill/valve trigger. | M03. Cola is a numeric navigation state; chamber props do not refill it. R resets voyage/player, not a local loading operation. |
+| Four closet cannons | Closet doors work by proximity. Cannons themselves have no aim/deploy/fire/recoil control. | M04/C06. Four static artillery props, not usable guns. |
+| Workshop prototype cannons | No user gun control. | Static `Factory_cannon`/`Weapons_prototype`. M04 applies if intended usable rather than displayed prototypes. |
+| Library rotating bench | No rotate/select/seat control. | M05. Current curved seat meshes are static; R12 explicitly labels bench rotation. |
+| Sails/gaffs/hoisting/furling | Sail shader billows automatically. No hoist/reef/furl/gaff-height/trim prompt or key. | M06. R13 shows movable gaffs; R01/R02/R03 supply different sail states. Automatic flutter is not user sail operation. |
+| Swing | No sit/push/swing trigger or swinging state. | M07. Four static supported meshes. |
+| Slide | Walk onto/down the fixed chute with ordinary movement. | Usable movement affordance in existing journey code; no separate button required merely to descend. No new full slide ride proof in this audit. |
+| Lookout rope/ladder and two reference ladders | Near prompt; **E** grab, W/S climb; E reachable hatch. | User-facing system exists in `climbing.js`/UI; existing current runner completed the lookout round trip before this survey snapshot. Not silently counted as this audit's own fresh whole climb. |
+| Five hatches: SoldierDock, Storage, Aquarium, CrowNest, Kitchen/stern Library | Reachable **E open/close** HUD prompt; visible lid motion/dynamic collision. | Metadata/system reviewed. E01 interference remains. No claim every lid was separately cycled by this audit. |
+| Room/closet/toilet/service doors | Ordinary **proximity auto-open/close** rather than E. | `createDoorSystem`/DoorSystem reviewed; live runner visits rooms. E is for hatches/climbs/helm, not every door. Door appearance E02/E03 independent. |
+| Alarm bell | No ring trigger or sound operation. | INT05/M08. Model is a rectangular cue. |
+| Fridge lock/doors; oven/cooker | No keypad/unlock/open/heat trigger. | M08. Lock digits/handles are decorative; R10 specifies a locked fridge. |
+| Den Den Mushi | No call/play/respond trigger. | M08; recognizable static phone cue only. |
+| Bath showers/taps, sinks and toilets | No flow/flush/fill/drain trigger. | M08. Static taps/water/fixtures; no implied plumbing simulation. |
+| Telescope/gym/locker/weights | Not present to operate. | C08; add defining fixtures before judging triggers. |
+| Six vehicles/pool | Rotate with bay selection; no enter/launch/pilot/return or inflate/use trigger. | M10; vehicle proxies cannot be launched through C02/C03. |
+| Gardens, beds, wardrobes/books/maps/chests/toolboxes | Static decor; no tending/open/read/sit interactions. | User's request for relevant usable features is logged under M08. Not every leaf/book needs a button, but clearly operable furnishing affordances should not promise nonexistent actions. |
+| Voyage/player reset | **R**, listed in in-play help. | Source resets state, including cola. This is a reset affordance, not an in-world Energy refill mechanism. |
+
+### M findings — missing operation and discoverability
+
+| ID / priority | Gap, reference and observed evidence | Practical recommendation |
+|---|---|---|
+| **M01 / P2** | Gaon exists but is hard to discover from the [start card](review/whole-ship-audit-title.png), which omits E/mechanism use; help/context appears only after entering/approaching the helm. Normal helm view mainly shows the wheel, so mouth change is not directly visible. R08; UI/verified prompt/help images. | Add a clear mechanism guide/context label and legible feedback. Keep the existing E→J/K control; do not file a false “no cannon trigger” bug. Visual blast/ship recoil feedback needs a purposefully framed check. |
+| **M02 / P1** | Anchors/capstan are modeled, R08/R14 explicitly show rope/capstan operation, but no deploy/retrieve control/state exists. | Add in-world capstan/anchor operation with visible rope/anchor travel and safe limits, once the proper waiting/capstan zone is built. Concealed routing remains a reference uncertainty. |
+| **M03 / P1** | R10/R11 food lift and R14 cola chamber are static props; no food-transfer/load/refill actions. Numeric cola can be exhausted and only whole-voyage reset replenishes it. | Repair C04/C05, then provide reachable lift and Energy loading controls with clear empty/loaded states. |
+| **M04 / P2** | Four cannon closets and prototype guns have no gun trigger or operation; source/registrations contain no such control. R09. | Decide which guns are operable/display-only; provide explicit appropriate triggers for usable ones after C06. |
+| **M05 / P2** | Library bench rotation in R12 is absent; only static curved meshes. | Implement a discoverable rotation mechanism with visible motion/clearance, preserving access gaps. |
+| **M06 / P2** | R13 gaff movement and supplied furled/deployed variants have no user controls. | Add coherent hoist/furl/trim operations and relevant rig movement, with state feedback. |
+| **M07 / P2** | Swing is a static seat/ropes with no sit/push action. R04/R13. | Provide a usable swing affordance and movement; retain actual branch/rope support. |
+| **M08 / P2–P3** | Bell, locked fridge, phone, taps/showers/WC, doors on furniture/containers and other relevant props lack actions. R09–R12/R14 and runtime source. These are functional incompleteness findings, not a claim that every artwork surface must be interactive. | Prioritize explicit reference mechanisms and strong action affordances: bell ring, fridge unlock/open, phone, water controls, then useful furniture/container actions. Surface prompt should say what really works. |
+| **M09 / P2** | R14 says paddles can rotate independently/reverse; current navigation couples them to one throttle. Current Log Pose is three illustrative fixed bearing rods, not a full navigation instrument. | Add independent paddle controls if canon operation is the target; decide/document intended Log Pose fidelity and improve its instrument construction. No false claim of real magnetic/world navigation. |
+| **M10 / P1** | Vehicles only move with the carousel; there are no enter/launch/pilot/return interactions, usable vehicle cabins or pool deployment. | Build correct Dock paths first, then the accessible vehicle/pool flows with prompts, deployment state and return behavior. Do not count carousel rotation as vehicle operation. |
+
+## 6. Deferred graphics and surface finish
+
+These remain work items, not permission to change rendering during this survey.
+
+| ID / priority | References and actual visible difference | Required later pass |
+|---|---|---|
+| **G01 / P3** | R01/R02/R16–R25: timber planking/joints/grain, roof/metal panels and fittings have richer material structure. Current rooms are predominantly flat cream/tan, while selected exterior areas already use maps. | Material/UV review per actual surface and view distance. No claim that all current materials are texture-free. |
+| **G02 / P3** | R16–R25 lamps create warm local pools and room-specific contrast. Current lamps are small pale geometry under mostly broad scene lighting. `pendant` records lights, but current `Lighting` uses global hemisphere/ambient/directional lights rather than room lamp lights. | Room light placement, intensity/occlusion and exposure after geometry is stable. Avoid “fixing” construction through darkness. |
+| **G03 / P2–P3** | Timber cabin walls/ceilings, gray clinic tiles, patterned bath floor/wood entry, upholstery colors and metal workshop coverage differ. Some are material-region/pattern errors already listed under I findings, beyond mere realism. | Separate wrong surface assignment/pattern from later grain/roughness. Correct silhouettes/regions before texture polish. |
+| **G04 / P3** | Vegetation uses sparse flat leaves/primitive fruit/flowers compared with R01/R02/R13/R15; tanks use simple fish/coral. | Improve recognizable species/foliage density and presentation; maintain stable filtering. Exact hidden species/counts are not canonically certified. |
+| **G05 / P3** | Poster portraits, charts/logs, workshop plans/sign cloth, books, vehicle numerals and sail/dock artwork are simplified. | Source-led artwork and readable labels at human viewpoints. The SBS five-poster roster and anime/time-period variants need deliberate selection, not arbitrary extra portraits. |
+| **G06 / P3** | Mirrors use a glass material/pane rather than a recognizable reflective view. Tank glazing layers reveal adjacent construction, and the water/cloth/light presentation is far from R20/R22. | Appropriate mirror/reflection/water/cloth materials and lighting. Sealing errors must be fixed structurally, not obscured by opacity. |
+
+## 7. Suspected, ambiguous or not fully verifiable
+
+These are **not confirmed defects** unless another finding independently proves the issue.
+
+| ID | Area | What is unresolved and how to resolve it |
+|---|---|---|
+| **U01** | Lion/mane/open chin/cannon proportions | Current open pose has a visibly separated lower muzzle and dark connecting region, but R08 provides no measured hinge/angle or full side sequence. Closed-head profile E04 is separately observed. Trace matched front/side silhouettes and obtain an open-pose sequence before asserting exact chin travel, petal count or a new mandatory angle. The old quarter-turn-tray finding is not automatically current. |
+| **U02** | Helm dial/knob placement, anchor storage internals | Broad integrated wheel/dial/knob/lever arrangement exists. Exact hidden gears, markings/clearances and rope storage are not specified by these images; do not invent a concealed route. |
+| **U03** | Complete rigging/sail geometry | The nine exterior views show main rig families, not every rope end, knot, canvas seam and dynamic loaded state. Need matched deployed/furled viewpoints and operation states. Automatic wind billow does not validate a sail plan. |
+| **U04** | Both garden-stair enclosures | Fresh room-side samples look closed, contradicting blindly reusing old-gap claims. No new dense independent opacity sweep or complete both-side descent was performed by this audit. Existing current full runner is separate. Preserve its actual final receipts before acceptance. |
+| **U05** | Slide entry/guard fit | The gallery view is partially obscured by the guard. Earlier slide-ceiling intrusion is not assumed current. Need exact current normal route and close surface rays at entry/exit before filing a new collision/interference defect. |
+| **U06** | Garden bed/guard/office arrangement | E05 is a confirmed presentation/layout concern; exact solid intersection, full reachability of each bed and metre-exact canonical garden placement are not proved. Use a matched plan plus surface/approach checks. The later Pop Greens panel does not specify every species/count. |
+| **U07** | Stern observation interpretation, hood/barrel hidden paths | Open observation deck/Library relationship is a reconstruction; no missing extra enclosed room is inferred solely from names. Hood duct reaches the chimney in current source, but its precise hidden route is not sourced. Barrel throat/plumbing/whole propulsion circuit not verified. |
+| **U08** | Crow's nest hatch/dormers/roof and ladder geometry | Structure/access exist. The current rectangular hatch differs from the circular opening shown in R25, but R12/R13 are less specific and access has been reconstructed. Record variant/target choice before declaring a mandatory hatch replacement. Missing gym C08 is unambiguous. |
+| **U09** | Women's bed/time period | Paired beds in supplied earlier images versus chosen later king bed. Seek a selected later reference before treating count/canopy as incorrect. Other room layout defects remain confirmed. |
+| **U10** | Aquarium tank containment and every rear connection | Overhead tank and passage visually exist, but a full watertight-volume audit, both balcony doors, and exact continuous tank-to-Energy connection were not freshly walked/probed here. Narrow overhead presentation INT11 is observed; leakage is not alleged without proof. |
+| **U11** | Post-timeskip Dock 4–6 / paddle allocation | Kurosai/Brachio/pool are visibly simplified current models. Their exact forms are not supplied in the 25 image set. Early R07 has empty4 and paired0 sectors, while current uses six later contents plus external0 paddles. Obtain authoritative later arrangement/vehicle sheets before asserting the exact required sector allocation. |
+| **U12** | Every hidden small hull port/cannon association, underwater surfaces, full return routes | Inspection cameras and source names cannot establish all port use, underwater construction or continuously walkable returns. C06 proves four specific blocked centerlines only. No whole-ship functional/canonical completion is claimed. |
+
+## 8. Practical repair order for a later authorized task
+
+1. **Freeze the target version and preserve this publication.** Decide the women's bed period, later Dock allocation/vehicles, and which walking-stair adaptations remain. Keep the intentional 2.2 scale and ordinary human dimensions.
+2. **Resolve structural ownership/connectivity first:** C01 fore trim, C02/C03 real Dock channels, C04/C05 one mast/lift shaft, C06 four actual gunports, E01 hatch/rails. Use current visual-triangle/surface checks plus matched images; avoid accepting only labels/bounds/collider reachability.
+3. **Correct plan relationships:** C07 workshop sides and INT12 open Kitchen/Dining/mast/bar/ceiling composition. Reconcile shell windows, partitions and doors before moving furniture.
+4. **Build defining missing layouts:** C08 gym; INT09 Aquarium lounge; INT26 waiting/capstan; INT28 correct Mini Merry type. Confirm full routes and reverse descents with ordinary input after each structural change.
+5. **Complete the 19 room groups against their own sheets:** furniture silhouettes, supports, placement, door/window clearances, cabinet/board relationships, floor regions and source-specific fittings. Give each room a matched overview and detail views, not a single doorway/floor photo.
+6. **Provide relevant user mechanisms:** anchors, lift, Energy loading, usable guns/bench/gaffs/swing/vehicles; retain working helm/J/K/T/G/selector/lever/climbs/hatches and make discovery clear. A debug hook never closes a control finding.
+7. **Only then finish graphics:** per-room materials, lamps, upholstery, artwork, foliage, fish, glass/water/mirrors; verify appearance while moving and stopped. Finish with complete unfiltered verification/build on the same frozen publication, with visual accuracy reviewed independently.
+
+## 9. Audit limitations, rejected evidence and reproducibility
+
+- Read `/Users/sukhjot/AGENTS.md`, architecture/reference/acceptance/section notes and relevant current source. Historical repair sequences are context, not authorization to repair or evidence of current accuracy.
+- Before browser activity, process inspection found existing Vite PID6782 and full runner PID7019. They were preserved. The audit used independent browser sessions and distinct filenames. Concurrent GPU activity means these captures are **not performance benchmarks**.
+- The evidence set contains **107 fresh non-rejected-control PNG captures** (including disclosed poor framings), **28 inspected contact sheets**, and all **25 inspected reference originals**. Existing utilities produced 24 base room views and nine exterior views. Supplementary cameras provide four actual cannon views, opposite room views, six vehicle views, small fixtures and current control states. All accepted appearance originals were personally inspected, including labeled sheets; framing failures are retained and explicitly scoped.
+- The original four closet captures face walls/doors; the first two outside toilet approaches face stairs; one curtain camera landed against the mast; the first men's reverse camera is blocked by a bunk. They are not accepted as fixture coverage. Focused replacement views supply that coverage.
+- The first control recording used `scene.onBeforeRender=null` in the **audit helper**, causing render callback errors. Those files are preserved as `whole-ship-audit-rejected-*` and excluded from accepted functional-image evidence. The corrected recording has **zero browser page errors**, nine successful continuous helm-route checkpoints, fourteen recorded control observations/actions, and zero recoveries. No application defect is inferred from the helper error.
+- Fresh F proof covers lawn→helm and reachable helm instruments, J/K/T, channel1→2/open shutters and simulated Log Pose. It does **not** establish a new complete room tour, both garden-stair returns, all five hatches, all climb returns, channel0 paddles, Burst landing, every vehicle or every furnishing action.
+- The pre-existing full runner was already in progress. At the receipt cutoff, its [preserved log snapshot](review/whole-ship-audit-inherited-test-snapshot.log) records successful entry checks for **all 27 metadata spaces**, plus portions of the forced return checks. This is useful current L evidence, not visual reference acceptance. PID7019 was still active, suite 13 had not produced a whole-run summary, and no aggregate 17-suite/build result is claimed. The original job was left running. No long suite was started by this survey.
+- Static evidence includes exact visual-triangle rays at the four cannon bores, lift center, Dock mouth centerlines and sunken-table samples. It is not a generalized manifold, water containment or walking proof.
+- Blender master contents were hashed, not opened/rebuilt. The current published GLB, metadata, runtime source and renderer are the inspected representation. No camera screenshot proves concealed master construction.
+- [Evidence receipt](review/whole-ship-audit-evidence.json) inventories exact files/hashes, personally inspected images and final implementation-preservation results. [Static probe script](review/whole-ship-audit-static.mjs) and [capture script](review/whole-ship-audit-capture.mjs) are retained solely for reproducing this survey. They do not implement any recommendation.
+
+This report intentionally makes no completion-percentage claim and does not declare any whole room reference-accepted simply because it exists or has a connected collider route.
+
+### Final documentation wrap-up
+
+The master-file digest in the asset table was corrected from the preserved baseline; the master itself was not changed. The evidence receipt remains its original dated snapshot. A later independent coordinator rehash found only eight changed `tests/screenshots` outputs (`v0-title`, `v1-inspect-a`, `v12-flying`, `v2-inspect-b`, `v3-inspect-c`, `v4-inspect-top`, `v5-inspect-close`, `v7-deck-back`), consistent with the preserved pre-existing runner finishing those captures. No baseline file was missing and no source, reference, original FBX, master or public asset changed. This later preservation check does not retroactively turn the earlier partial runner snapshot into a complete test result. No survey, tests, asset build or implementation work was repeated during wrap-up.

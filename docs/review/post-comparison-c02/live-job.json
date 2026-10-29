@@ -1,0 +1,12 @@
+{
+  "phase": "C02 open-only real-control/crossing proof with continuous helm stair return; completed closed negatives preserved",
+  "session": 15977,
+  "worktree": "/Users/sukhjot/.codex/worktrees/c01-c02-completion/test",
+  "preview": "http://127.0.0.1:8180/",
+  "log": "docs/review/post-comparison-c02/body-access.log",
+  "inputs": "docs/review/post-comparison-c02/final-source-inputs.json",
+  "closedProof": "docs/review/post-comparison-c02/closed-controls-proof.json",
+  "originalMainC01Commit": "d4f1994",
+  "noBuildActive": true,
+  "note": "No R after opening: native R resets voyage. Inspect actual process/log before any duplicate job. Product source/assets frozen."
+}

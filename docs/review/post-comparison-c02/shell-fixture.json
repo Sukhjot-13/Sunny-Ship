@@ -1,0 +1,16 @@
+[
+  {
+    "side": "port",
+    "vertices": 384,
+    "faces": 384,
+    "closed": true,
+    "volume": 36.23748553987539
+  },
+  {
+    "side": "starboard",
+    "vertices": 384,
+    "faces": 384,
+    "closed": true,
+    "volume": 37.32188142728735
+  }
+]
