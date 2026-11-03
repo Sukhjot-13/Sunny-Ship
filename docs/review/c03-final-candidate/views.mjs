@@ -15,9 +15,14 @@ try{
  const trace=await walkJourney(page,meshes,'helm','port',{returnToLawn:false});assert(trace.length>5&&trace.every(p=>p.ok),'helm walking failed')
  const aim=async id=>{await page.evaluate(t=>{const p=window.__sunny.position,dx=t[0]-p[0],dy=t[1]-p[1]-1.7,dz=t[2]-p[2];window.__sunny.look(Math.atan2(-dx,-dz),Math.atan2(dy,Math.hypot(dx,dz)))},three(controls.targets[id]));await sleep(300)}
  const use=async id=>{assert(await driveTo(page,three(controls[id]),.12),id+' approach failed');await aim(id);await page.keyboard.press('e');await sleep(350)}
- await use('selector');assert.equal((await page.evaluate(()=>window.__sunnyNavigation.state)).channel,2);await use('lever');await sleep(4800)
+ const digitCentres=()=>page.evaluate(async()=>{const THREE=await import('/node_modules/.vite/deps/three.js');const out=[];window.__ship.updateWorldMatrix(true,true);window.__ship.traverse(o=>{if(o.userData.sunny_inner_digit)out.push({name:o.name,channel:o.userData.sunny_dock_channel,centre:new THREE.Box3().setFromObject(o).getCenter(new THREE.Vector3()).toArray()})});return out})
+ await use('selector');assert.equal((await page.evaluate(()=>window.__sunnyNavigation.state)).channel,2);await sleep(2200);const closedDigits=await digitCentres();await use('lever');await sleep(4800)
  const state=await page.evaluate(()=>window.__sunnyNavigation.state);assert(state.shutter>.98&&state.dockOpen)
  const gates=await page.evaluate(()=>window.__sunnyNavigation.innerGates);assert.equal(gates.length,84,'six actual fourteen-slat gates');const avg=c=>gates.filter(g=>g.channel===c).reduce((v,g)=>v+g.position[1],0)/14;assert(avg(2)>avg(1)+1,'real selected gate slats must roll above closed gate');fs.writeFileSync('docs/review/c03-final-candidate/gates.json',JSON.stringify({state,gates},null,2))
+ const digits=await digitCentres()
+ const digitMean=(values,c)=>{const selected=values.filter(d=>d.channel===c);return selected.reduce((sum,d)=>sum+d.centre[1],0)/selected.length}
+ assert(digits.length>=18&&digitMean(digits,2)>digitMean(closedDigits,2)+1,'selected shutter number rolls with its gate')
+ assert(Math.abs(digitMean(digits,1)-digitMean(closedDigits,1))<.05,'unselected shutter number remains closed')
  await page.evaluate(async()=>{const {_roots}=await import('/node_modules/.vite/deps/@react-three_fiber.js');const s=window.__trialState=_roots.get(document.querySelector('canvas')).store.getState();if(s.controls)s.controls.enabled=false;s.scene.onBeforeRender=function(_r,_s,c){if(c!==s.camera||!window.__trialPose)return;window.__ship.updateWorldMatrix(true,false);const m=window.__ship.matrixWorld,p=window.__trialPose;c.position.fromArray(p.eye).applyMatrix4(m);c.up.set(0,1,0).transformDirection(m);c.lookAt(c.position.clone().fromArray(p.target).applyMatrix4(m));c.updateMatrixWorld(true)}})
  for(const o of meta.exterior.mechanisms.dockOpenings){
   const side=o.side,sgn=side==='port'?1:-1,outer=-o.centre[1]

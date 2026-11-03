@@ -1,0 +1,29 @@
+{
+  "status": "C03 verified for construction; independent review pending",
+  "hashes": {
+    "assets/sunny-master.blend": "2fa1dff81d52a36422a3dac941c6df2df02cd3c90979ba6a85374241c9b267fe",
+    "public/models/sunny.glb": "6c3031915e50d26a0ca5621762d63845ee7a11988d880a80091d4ad35d2d1ea0",
+    "public/models/sunny-collision.glb": "674a4dbf3e4f1d0b29e256af1539ac833c5c820f5bb39de3e4b9f8bae9f89513",
+    "public/models/ship-metadata.json": "8d28c1d265ade15b33b6d4d1f98b9b4aa627b83a55d53a0104bd6f2e84c5811b",
+    "tools/sunny_interiors.py": "712a90315c5b8fbc4c5db778c4e32596e404f6b446ff4b2fb8f87acd3cb744b1",
+    "tools/sunny_accuracy.py": "2ac454f3f630cda02d17e26450f080f36de5611efc89814d48c0cbd6e7bb4ef8",
+    "tools/build_assets.py": "007c6d35f2b08ee86a5f8dfe8a958d46681ebd7bd64b7b8ad1b483b5c755c15d",
+    "src/components/NavigationSystem.jsx": "291d109c401791ecd0694bd202054b4e476ac9c06abafb3502da497c637613fd",
+    "src/systems/navigation.js": "4d82f1d7b3e7e51ba3e44a2c2ba9696a18279cd9e65f251e9db05373b002dfea"
+  },
+  "tests": [
+    "dockWaterConstruction",
+    "dockRotatingClearance",
+    "dockAlignment",
+    "dockApertures",
+    "dockOutletShell",
+    "navigation",
+    "production build"
+  ],
+  "live": [
+    "actual selector and lever, selected shutter and number motion",
+    "central ladder descent, closed-hatch stop, ascent and lawn return, zero recoveries",
+    "retained stair to supported B1 landing and return, zero recoveries"
+  ],
+  "limits": "Retained stair landing does not cross the flooded outlet; vehicle launch M10 and channel allocation U11 remain separate. Draft raised 3 m under selected waterline option. No claim of independent final review."
+}

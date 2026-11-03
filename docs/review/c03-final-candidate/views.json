@@ -1,9 +1,9 @@
 {
   "url": "http://127.0.0.1:8187/",
   "hashes": {
-    "sunny.glb": "91169e5d2579733a38ef28b677eb22f2fbd9cf788b2cf0b0fb44467004296a28",
-    "sunny-collision.glb": "740d0387e77d343b23c8bb9e6ef2a1022ce306c48fef42d3a1a9076410ddf5bd",
-    "ship-metadata.json": "5f3604e2697545a424a145fee5511f318f90978d9e668d2cc3a64d73fa17d0d2"
+    "sunny.glb": "6c3031915e50d26a0ca5621762d63845ee7a11988d880a80091d4ad35d2d1ea0",
+    "sunny-collision.glb": "674a4dbf3e4f1d0b29e256af1539ac833c5c820f5bb39de3e4b9f8bae9f89513",
+    "ship-metadata.json": "8d28c1d265ade15b33b6d4d1f98b9b4aa627b83a55d53a0104bd6f2e84c5811b"
   },
   "state": {
     "heading": 270,
@@ -15,7 +15,7 @@
     "channel": 2,
     "dockOpen": true,
     "shutter": 1,
-    "dockAngle": -1.0273664035885643,
+    "dockAngle": -1.0463948176089795,
     "logNeedle": 0,
     "cola": 3,
     "burst": 0,
@@ -36,7 +36,7 @@
       "pos": [
         -4.289999999999999,
         -40.55070114135742,
-        2.478730222055345
+        2.545933089939917
       ],
       "grounded": true,
       "blocker": null,
@@ -46,9 +46,9 @@
       "label": "lower entrance",
       "ok": true,
       "pos": [
-        -12.594452056786034,
+        -12.561715904472859,
         -40.55070114135742,
-        2.3890146650746997
+        2.3893898124371336
       ],
       "grounded": true,
       "blocker": null,
@@ -59,9 +59,9 @@
       "ok": true,
       "recoveries": 0,
       "pos": [
-        -17.44147197616671,
+        -17.368986235959692,
         -36.41469955444336,
-        3.909039582596549
+        3.915711759773438
       ],
       "grounded": true,
       "blocker": null
@@ -70,9 +70,9 @@
       "label": "cross landing",
       "ok": true,
       "pos": [
-        -17.445375006434197,
+        -17.373793687836383,
         -36.41469955444336,
-        3.9081110269672013
+        3.9155570400413473
       ],
       "grounded": true,
       "blocker": null,
@@ -82,9 +82,9 @@
       "label": "upper entrance",
       "ok": true,
       "pos": [
-        -17.402374442302335,
+        -17.403348345955887,
         -36.41469955444336,
-        -3.259086482220352
+        -3.1108679634716583
       ],
       "grounded": true,
       "blocker": null,
@@ -95,9 +95,9 @@
       "ok": true,
       "recoveries": 0,
       "pos": [
-        -20.9380857726581,
+        -20.98325249456543,
         -33.16210174560547,
-        -3.0847327112779253
+        -3.102222556255718
       ],
       "grounded": true,
       "blocker": null
@@ -106,9 +106,9 @@
       "label": "mast bypass",
       "ok": true,
       "pos": [
-        -22.205468883429777,
+        -22.134754731240676,
         -33.16210174560547,
-        -4.620159714114767
+        -4.534933449446498
       ],
       "grounded": true,
       "blocker": null,
@@ -118,9 +118,9 @@
       "label": "forward helm approach",
       "ok": true,
       "pos": [
-        -27.10635189555683,
+        -27.1269576840706,
         -33.16210174560547,
-        -4.499806186537381
+        -4.499776527608775
       ],
       "grounded": true,
       "blocker": null,
@@ -130,9 +130,9 @@
       "label": "helm deck",
       "ok": true,
       "pos": [
-        -27.098423276506352,
+        -27.098146681231306,
         -33.16210174560547,
-        -0.18469611266829564
+        -0.22426233799182985
       ],
       "grounded": true,
       "blocker": null,

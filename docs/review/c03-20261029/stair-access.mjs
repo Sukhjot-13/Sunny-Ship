@@ -5,7 +5,12 @@ import assert from 'node:assert/strict'
 import puppeteer from 'puppeteer'
 import {driveTo} from '../../../tests/stairFlights.mjs'
 const out='docs/review/c03-20261029',url='http://127.0.0.1:8187/',sleep=ms=>new Promise(r=>setTimeout(r,ms)),sha=b=>crypto.createHash('sha256').update(b).digest('hex')
-const path=JSON.parse(fs.readFileSync(`${out}/outer-approach-baseline.json`)).path,hashes={},trace=[]
+const baseline=JSON.parse(fs.readFileSync(`${out}/outer-approach-baseline.json`)).path
+// The old route continued across a former dry floor now occupied by the wet
+// outlet. End on the supported B1 stair landing on this side of its wall.
+const landing=baseline.findIndex((p,i)=>i>40&&p[0]>-3.1&&p[0]<-2.9&&p[1]<-47&&p[2]<-9)
+assert(landing>0,'supported retained B1 landing must exist in the old route')
+const path=baseline.slice(0,landing+1),hashes={},trace=[]
 for(const n of ['sunny.glb','sunny-collision.glb','ship-metadata.json']){const local=sha(fs.readFileSync('public/models/'+n)),served=sha(Buffer.from(await(await fetch(new URL('/models/'+n,url))).arrayBuffer()));assert.equal(local,served,n);hashes[n]=local}
 const browser=await puppeteer.launch({headless:true,args:['--use-gl=angle','--use-angle=metal','--enable-unsafe-swiftshader','--enable-webgl']})
 try{

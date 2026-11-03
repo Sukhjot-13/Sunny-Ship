@@ -1320,6 +1320,26 @@ def build_interiors(objects, vertex_bbox, shift, aft_snapshot=None):
             slat['sunny_inner_gate']=True;slat['sunny_inner_angle']=a
             slat['sunny_roll_top']=waiting_floor+.10+portal_height
             slat['sunny_roll_radius']=.22;slat['sunny_roll_travel']=portal_height+.30
+        # Numerals are cut into the same horizontal bands as the shutter, so
+        # they follow its real rolling motion rather than floating over it.
+        number=text('Dock_inner_number_temp',str(i+1),L(portal,a,-.075,0,.55),1.55,'red',
+                    (math.pi/2,0,a-math.pi/2))
+        bpy.context.view_layer.update()
+        for j in range(14):
+            low=waiting_floor+.10+j*gate_step;high=low+gate_step
+            verts,faces=[],[]
+            for face in number.data.polygons:
+                poly=[number.matrix_world@number.data.vertices[k].co for k in face.vertices]
+                poly=clip_face(clip_face(poly,2,low,True),2,high,False)
+                if len(poly)<3: continue
+                offset=len(verts);verts+=poly;faces.append(tuple(range(offset,len(verts))))
+            if faces:
+                digit=finish(_mesh('Dock_inner_digit',verts,faces),'Dock_inner_digit%d_%02d'%(i,j),'red')
+                digit['sunny_inner_digit']=True;digit['sunny_inner_angle']=a
+                digit['sunny_inner_centre']=[portal[0],portal[1],waiting_floor+.10+(j+.5)*gate_step]
+                digit['sunny_roll_top']=waiting_floor+.10+portal_height
+                digit['sunny_roll_radius']=.22;digit['sunny_roll_travel']=portal_height+.30
+        bpy.data.objects.remove(number,do_unlink=True)
         bx=dcentre[0]+math.cos(a)*5.3
         by=cy+math.sin(a)*5.3
         vehicle_z=dock_water-.55

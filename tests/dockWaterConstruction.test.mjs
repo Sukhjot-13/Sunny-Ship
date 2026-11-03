@@ -73,6 +73,12 @@ assert(guides.every(g=>meta.interiors.dockSolids.some(b=>b.name===g.name&&!b.isF
 assert(outletGuides.every(g=>boxes.some(b=>b.name.includes(g.name))),'every fixed guide has physical collision')
 const waiting=actual.find(o=>o.name==='Sunny_Dock_turntable_deck')
 assert.equal(gates.length,84,'six actual fourteen-slat inner shutters')
+const numbers=glb.json.nodes.filter(n=>n.extras?.sunny_inner_digit)
+for(let channel=1;channel<=6;channel++){
+ const pieces=numbers.filter(n=>n.extras.sunny_dock_channel===channel)
+ assert(pieces.length>=3,`inner shutter ${channel} has a visible segmented number`)
+ assert(pieces.every(n=>n.extras.sunny_dynamic&&n.extras.sunny_inner_centre?.length===3),'number pieces share the physical shutter-band pivots')
+}
 assert(waiting&&Math.abs(waiting.max.y-(water+.45))<.02,'waiting floor stands just above water')
 assert(gates.every(g=>g.min.y>=waiting.max.y+.08&&g.max.y<=waiting.max.y+2.97),'inner shutters stand at the water-level waiting room')
 assert(!actual.some(o=>/^Sunny_Dock_(?:walk\d|waiting_stair|portal\d_upper_frame)/.test(o.name)),'reference waiting room has no spiral, second portal tier or radial catwalks')

@@ -24,11 +24,12 @@ function movingBounds(n,pivot,q,translation){
 function innerGateBounds(n,centre,angle,progress){
  const tags=n.o.userData,radial=new THREE.Vector3(Math.cos(tags.sunny_inner_angle),0,-Math.sin(tags.sunny_inner_angle))
  const tangent=new THREE.Vector3(radial.z,0,-radial.x)
- const rolled=shutterPose([0,n.centre.y,0],tags.sunny_roll_top,tags.sunny_roll_radius,tags.sunny_roll_travel,progress,'port')
+ const pivot=tags.sunny_inner_centre?new THREE.Vector3(...toThree(...tags.sunny_inner_centre)):n.centre
+ const rolled=shutterPose([0,pivot.y,0],tags.sunny_roll_top,tags.sunny_roll_radius,tags.sunny_roll_travel,progress,'port')
  const tilt=new THREE.Quaternion().setFromAxisAngle(tangent,rolled.angle)
  const yaw=new THREE.Quaternion().setFromAxisAngle(axisY,angle)
- const shift=radial.multiplyScalar(rolled.centre[2]);shift.y=rolled.centre[1]-n.centre.y
- const transform=p=>p.clone().sub(n.centre).applyQuaternion(tilt).add(n.centre).add(shift).sub(centre).applyQuaternion(yaw).add(centre)
+ const shift=radial.multiplyScalar(rolled.centre[2]);shift.y=rolled.centre[1]-pivot.y
+ const transform=p=>p.clone().sub(pivot).applyQuaternion(tilt).add(pivot).add(shift).sub(centre).applyQuaternion(yaw).add(centre)
  n.o.position.copy(transform(new THREE.Vector3(...n.p)))
  n.o.quaternion.copy(n.q).premultiply(tilt).premultiply(yaw)
  const box=new THREE.Box3();for(const p of n.corners)box.expandByPoint(transform(p))
@@ -123,7 +124,10 @@ export function NavigationSystem({meta,keys}){
   const wheelPivot=wheel?.centre??new THREE.Vector3(),shutterBoxes=[],innerBoxes=[],rudderBoxes=[],jawBoxes=[]
   for(const n of nodes.current){
    const tags=n.o.userData
-   if(tags.sunny_inner_gate)innerBoxes.push(innerGateBounds(n,new THREE.Vector3(...layout.centre),voyage.dockAngle,tags.sunny_dock_channel===voyage.channel?voyage.shutter:0))
+   if(tags.sunny_inner_gate||tags.sunny_inner_digit){
+    const box=innerGateBounds(n,new THREE.Vector3(...layout.centre),voyage.dockAngle,tags.sunny_dock_channel===voyage.channel?voyage.shutter:0)
+    if(tags.sunny_inner_gate)innerBoxes.push(box)
+   }
    else if(tags.sunny_dock_channel){n.o.position.fromArray(rotatePoint(n.p,voyage.dockAngle,layout.centre));n.o.quaternion.copy(n.q).premultiply(q.setFromAxisAngle(axisY,voyage.dockAngle))}
    else if(tags.sunny_dock_shutter){
     const centre=tags.sunny_roll_centre?new THREE.Vector3(...toThree(...tags.sunny_roll_centre)):n.centre
