@@ -26,6 +26,19 @@ const result=dockBounds(solid,[0,0,0],Math.PI/2)[0]
 assert(Math.abs(result.min[0])<1e-10 && Math.abs(result.max[0]-1)<1e-10)
 assert(Math.abs(result.min[2]+2)<1e-10 && Math.abs(result.max[2]+1)<1e-10)
 assert.equal(result.min[1],0);assert.equal(result.max[1],3)
+const movingFloor=dockBounds([{...solid[0],isFloor:true}],[0,0,0],Math.PI/2)[0]
+assert.equal(movingFloor.isFloor,true,'rotating catwalk retains its authored floor role')
+assert.equal(result.isFloor,false,'ordinary moving obstacles remain non-floor')
+const footprint=[]
+for(const x of [-.125,.125])for(const z of [-.525,.525]){
+ const p=rotatePoint([x,0,z],Math.PI/3);footprint.push([p[0],p[2]])
+}
+const xs=footprint.map(p=>p[0]),zs=footprint.map(p=>p[1])
+const floorBox={name:'oriented-floor',isFloor:true,min:[Math.min(...xs),0,Math.min(...zs)],max:[Math.max(...xs),.16,Math.max(...zs)],footprint}
+const alignedFloor=dockBounds([floorBox],[0,0,0],-Math.PI/3)[0]
+assert(Math.abs(alignedFloor.max[0]-alignedFloor.min[0]-.25)<1e-10&&Math.abs(alignedFloor.max[2]-alignedFloor.min[2]-1.05)<1e-10,'selected physical floor matches actual oriented mesh footprint')
+const enlarged=dockBounds([{...floorBox,footprint:undefined}],[0,0,0],-Math.PI/3)[0]
+assert(enlarged.max[0]-enlarged.min[0]>.5,'negative control detects rotating an already expanded AABB')
 resetVoyage();assert.equal(voyage.speed,0);assert.equal(voyage.cola,3)
 assert.equal(channelName(0),'Paddles')
 voyage.dockOpen=true

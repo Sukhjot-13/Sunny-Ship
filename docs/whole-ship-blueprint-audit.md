@@ -2,7 +2,11 @@
 
 ## Current checkpoint — October29,2026
 
-**C01 and C02 are verified, applied and confirmed in the actual current ship.** Their original findings, completed receipts and former directions are in [completed repairs](completed-repairs.md). Do not repeat them unless a new regression is demonstrated. No repair/build/test job is active in this chat; this two-repair scope is finished.
+**November 3 update:** A matching C03 export now passes focused water, rotating-part, stair and ladder-shaft geometry checks, C01/C02 preservation checks, and 116 asset checks. The actual helm/control and ladder round trip passed against the same asset hashes. The corrected retained-stair wall still needs a real walking recheck and current visual review; C03 remains incomplete and C04 remains queued. See [handoff](next-repair-handoff.md).
+
+**C03 is actively in progress and incomplete; C04 follows it.** The current source now cuts the native radial floor, and that change is rebuilt but not yet accepted. C01 and C02 were verified and applied in the prior ship; their original findings and receipts are in [completed repairs](completed-repairs.md). Preserve them and check affected regressions after the C03 rebuild.
+
+The interim water-channel export matched sampled water/bed and wet-path geometry and passed scoped C01/C02 static guards, but the high two-tier portals and spiral were rejected against R14. Current source has one water-level portal tier and a central ladder to the lawn, with real inner gate motion and supported guide rails. The sea is raised 3.0 m under the explicitly selected waterline option. The matching export and actual ladder/control test pass; retained-stair walking and final visual review remain pending.
 
 **Current batch:** this exact `gpt-6.1-terra` High chat is completing **C03 first, then C04**, one repair at a time. Verify and confirm each in the actual ship before removing its pending audit instructions and archiving its receipt. After C04, provide the coordinator a stable package for independent review and final verified commit; the coordinator will notify Sukhjot. All other remaining IDs stay pending for later. See [the concrete handoff](next-repair-handoff.md).
 
@@ -15,7 +19,7 @@ Preserve the original FBX, useful source hull, realistic exterior/interior/water
 | ID | Status | Current work, dependency or evidence |
 |---|---|---|
 | UI01 (new user request) | verified done | Actual controls/focused six inspected images + full18/18 suites/build PASS; all76 inputs unchanged. [Receipt](review/cannon-ui-verification.json). |
-| C03 | in progress; incomplete | The coherently rebuilt six selected bay centres now pass an exported-geometry transverse-axis check; C01/C02 static guards, production build and real helm/selector/lever opening pass. Four personally inspected views still show the dry floor. A tested convex-cut primitive is authored but not used in ship geometry. This is only an alignment checkpoint: water-bearing channels, native dry floor/radial chamber/portals, their access and visual acceptance remain pending. Preserve C01/C02; archive only after actual confirmation. |
+| C03 | in progress; incomplete | The published alignment checkpoint passes its scoped checks and control opening. Source now contains the radial floor cut, proposed chamber/outlet water and structural work, and user-selected raised waterline; the matching local export, focused geometry, controls and affected C01/C02 guards pass. Actual walking on the corrected retained stair and refreshed visual acceptance remain pending. Preserve C01/C02; archive only after actual confirmation. |
 | C04 | queued after C03 | Same fresh Terra High chat, only after C03 is verified: integrate Aquarium/Kitchen service lift and wine cupboard into the retained mainmast from R10/R11. Verify/apply/archive, then notify Sukhjot and stop the batch. |
 | C05 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |
 | C06 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |

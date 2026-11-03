@@ -46,10 +46,10 @@ try{
     // Grid-cell arrival is not arrival at the physical grab endpoint. Finish
     // with the same real-input approach used by exterior access, retaining
     // ladderJourney's strict 0.20 m check and all full return coverage.
-    const endpoint=pointAt(route.climb,0)
+    const endpoint=pointAt(route.climb,route.descendingFirst?route.climb.length:0)
     if(!await driveTo(page,endpoint,.10))throw Error('normal walking approach did not reach the ladder endpoint')
     console.log('Physical ladder endpoint approach',route.name,{endpoint,feet:await page.evaluate(()=>window.__sunny.position)})
-    await ladderJourney(page,route.climb,{closedStop:true});result={ok:true,last:await page.evaluate(()=>({pos:window.__sunny.position,grounded:window.__sunny.grounded}))}
+    await ladderJourney(page,route.climb,{descending:!!route.descendingFirst,closedStop:!route.descendingFirst});result={ok:true,last:await page.evaluate(()=>({pos:window.__sunny.position,grounded:window.__sunny.grounded}))}
    }
    catch(e){console.log('FAIL',route.name,e.message);result.ok=false}
   }
@@ -61,7 +61,7 @@ try{
   else tour=false
   if(ok&&(isStair||process.env.ROOM_FILTER)){
    if(isLadder){
-    try{await ladderJourney(page,route.climb,{descending:true})}catch(e){console.log('FAIL',route.name,'return descent',e.message);failures.push(`${route.name} descent`);tour=false;continue}
+    try{await ladderJourney(page,route.climb,{descending:!route.descendingFirst,closedStop:!!route.descendingFirst})}catch(e){console.log('FAIL',route.name,'return climb',e.message);failures.push(`${route.name} return climb`);tour=false;continue}
    }
    const back=await walk([...route.path].reverse()),p=await page.evaluate(()=>window.__sunny.position)
    ok=back.ok&&Math.hypot(p[0]-plan.spawn[0],p[2]-plan.spawn[2])<.6&&Math.abs(p[1]-plan.spawn[1])<.35

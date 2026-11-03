@@ -42,8 +42,9 @@ export function rotatePoint(point,angle,centre=[0,0,0]){
 export function dockBounds(solids,centre,angle){
  return solids.map(b=>{
   const points=[]
-  for(const x of [b.min[0],b.max[0]])for(const z of [b.min[2],b.max[2]])points.push(rotatePoint([x,b.min[1],z],angle,centre))
-  return {name:b.name,min:[Math.min(...points.map(p=>p[0])),b.min[1],Math.min(...points.map(p=>p[2]))],max:[Math.max(...points.map(p=>p[0])),b.max[1],Math.max(...points.map(p=>p[2]))],isFloor:false}
+  if(b.footprint)for(const [x,z] of b.footprint)points.push(rotatePoint([x,b.min[1],z],angle,centre))
+  else for(const x of [b.min[0],b.max[0]])for(const z of [b.min[2],b.max[2]])points.push(rotatePoint([x,b.min[1],z],angle,centre))
+  return {name:b.name,min:[Math.min(...points.map(p=>p[0])),b.min[1],Math.min(...points.map(p=>p[2]))],max:[Math.max(...points.map(p=>p[0])),b.max[1],Math.max(...points.map(p=>p[2]))],isFloor:b.isFloor===true}
  })
 }
 /** Slats travel vertically then wrap around an X-axis roller; digits share it. */

@@ -35,10 +35,8 @@ JUNK_PREFIXES = ("Arch41_032",)  # 100 stray props, 400k triangles, off-hull
 # Overall hull length in metres once exported.
 SHIP_LENGTH_M = 39.0
 
-# Sea height in Blender units. The hull bottom sits at z = -19.19 m after
-# centring, so the waterline is set partway up the hull - the ship reads as
-# floating rather than beached or sunk.
-WATER_LEVEL = -14.0
+# The final waterline is derived from the authored Dock after the experience
+# transform, so its wet outlets and the outside sea share one world elevation.
 
 # Collision tuning
 GRID = 0.40          # floor-cell size, metres
@@ -376,7 +374,9 @@ for obj in list(ship_objects):
         ship_objects.remove(obj)
         bpy.data.objects.remove(obj,do_unlink=True)
 experience_scale = EXTERIOR_CONFIG['experienceScale']
-WATER_LEVEL = (WATER_LEVEL + exterior_offset) * experience_scale
+# The selected C03 draft connects the sea to the retained Dock clear throat.
+# The value comes from the authored chamber so water and its bed share a level.
+WATER_LEVEL = interiors['dockWaterLevel']
 mn, mx = world_bbox(ship_objects)
 SHIP = {"min": list(mn), "max": list(mx), "size": list(mx - mn),
         "center": list((mn + mx) / 2)}
@@ -1091,8 +1091,18 @@ def waterline_profile(objects,height):
         x=left+(right-left)*(i+0.001)/31.002
         values=[a.y+(b.y-a.y)*(x-a.x)/(b.x-a.x) for a,b in segments
                 if min(a.x,b.x)<=x<=max(a.x,b.x) and abs(b.x-a.x)>0.0001]
-        if values:
-            profile.append([x,min(values)-0.35,max(values)+0.35])
+        profile.append([x,min(values)-0.35,max(values)+0.35] if values else [x,None,None])
+    # Open Dock mouths interrupt the hull section at the raised waterline.
+    # Interpolate those stations across the retained adjacent hull silhouette.
+    for i,p in enumerate(profile):
+        if p[1] is not None:
+            continue
+        a=next((profile[j] for j in range(i-1,-1,-1) if profile[j][1] is not None),None)
+        b=next((profile[j] for j in range(i+1,len(profile)) if profile[j][1] is not None),None)
+        if not a or not b:
+            raise RuntimeError('waterline hull profile has an unsupported end station')
+        t=(p[0]-a[0])/(b[0]-a[0])
+        p[1:]=[a[k]+t*(b[k]-a[k]) for k in (1,2)]
     return profile
 
 ocean_profile=waterline_profile(ship_objects,WATER_LEVEL+0.7)
@@ -1105,7 +1115,7 @@ meta = {
     "hull": SHIP,
     "waterLevel": WATER_LEVEL,
     "oceanHullProfile": ocean_profile,
-    "interiors": {"finishedRooms":False,"dockCentre":interiors['dockCentre'],"dockSolids":interiors['dockSolids'],"levels":{k:round(v,3) for k,v in interiors['levels'].items()},
+    "interiors": {"finishedRooms":False,"dockCentre":interiors['dockCentre'],"dockSolids":interiors['dockSolids'],"dockWaterLevel":interiors['dockWaterLevel'],"levels":{k:round(v,3) for k,v in interiors['levels'].items()},
         "lights":interiors.get('lights', []),
         "foreEnclosures":interiors['foreEnclosures'],
         "foreTrimVolumes":interiors['foreTrimVolumes'],

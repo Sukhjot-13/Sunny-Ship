@@ -705,15 +705,13 @@ def dock_outlet_shell(side, centre, radius, outline, direction):
     return obj
 
 
-def rolling_dock(objects,bounds,cy):
+def rolling_dock(objects,bounds,cy,outline,b1,roof):
     """D's timber shutter slats and changing numbers through a real hull aperture."""
     originals=[o for o in objects if o.name.startswith('Sunny_Dock1_shutter')]
     stations=[(bounds(o)[0]+bounds(o)[1])/2 for o in originals]
     discard(objects,lambda o:o.name.startswith(('Sunny_Dock1_','Sunny_DockNumber','Sunny_Paddle')))
     result=[]
     radius=7.8
-    floor = next(o for o in objects if o.name == 'Sunny_InteriorFloor_lower')
-    outline = [tuple((floor.matrix_world @ v.co)[:2]) for v in floor.data.vertices]
     for p in stations:
         direction=-1 if p.y<cy else 1
         side='port' if direction<0 else 'starboard'
@@ -727,6 +725,12 @@ def rolling_dock(objects,bounds,cy):
                 lo, hi = bounds(obj)
                 depth = (y-3.0, y+3.0) if obj.name == 'Line002' else (lo.y-.01, hi.y+.01)
                 circular_cut(obj,p,radius,1,*depth,32)
+                if obj.name == 'Line002':
+                    # Continue the real wet tunnel through the retained native
+                    # hull between the turntable edge and its mouth, while
+                    # leaving the remainder of the outer hull untouched.
+                    start=cy+direction*(7.8-.12)
+                    open_volume_slot(obj,x-2.4,x+2.4,min(start,y),max(start,y),b1-6.0,roof)
         # Cut the independently authored B1 lining through the same aperture.
         for obj in list(objects):
             if not obj.name.startswith('Sunny_InteriorWall_B1_'):
@@ -792,6 +796,67 @@ def rolling_dock(objects,bounds,cy):
         result.append({'side':side,'centre':list(p),'radius':radius,'rollRadius':.43,'slats':count,
                        'outletShell':'Sunny_DockOutlet_'+side,'clearRadius':radius-.16})
     return result
+
+
+def dock_stair_clearance(objects, bounds, b1):
+    """Cut real standing headroom through the new outlet wall at the existing stair."""
+    treads=[o for o in objects if o.name.startswith(('Sunny_SoldierDockStair_up_tread','Sunny_SoldierDockStair_over_tread'))]
+    for wall in objects:
+        if not (wall.name.startswith('Sunny_Dock_outer_wall') or
+                (wall.name.startswith('Sunny_Dock_outlet') and '_upper_' in wall.name)):
+            continue
+        lo,hi=bounds(wall)
+        crossing=[]
+        for tread in treads:
+            a,b=bounds(tread)
+            # Include the full sweep from a tread edge as well as the body
+            # radius: the switchback approaches this wall diagonally.
+            if b.x+.72<lo.x or a.x-.72>hi.x or b.y+.34<lo.y or a.y-.34>hi.y:
+                continue
+            crossing.append((a,b))
+        if not crossing:
+            continue
+        ymin=min(a.y for a,b in crossing)-.34
+        ymax=max(b.y for a,b in crossing)+.34
+        zmin=max(b1,min(b.z for a,b in crossing)-.20)
+        zmax=max(b.z for a,b in crossing)+1.82
+        open_volume_slot(wall,lo.x-.01,hi.x+.01,ymin,ymax,zmin,zmax)
+        wall['sunny_rail']=True
+
+
+def dock_ladder_access(objects, bounds, interiors):
+    """R14 central waiting-room ladder and real lawn hatch, with body clearance."""
+    from sunny_interiors import hatch
+    cx,cy,b1=interiors['dockCentre']
+    lower=interiors['dockWaterLevel']+.45
+    upper=interiors['levels']['F1']
+    hx,hy=cx+1.10,cy
+    xlo,xhi,ylo,yhi=hx-.78,hx+.78,hy-.78,hy+.78
+    for obj in list(bpy.data.objects):
+        if obj.type!='MESH' or obj.get('sunny_stair') or not obj.data.vertices or not obj.data.polygons:
+            continue
+        if not (obj.get('sunny_walkable') or 'ceiling' in obj.name or obj.name in ('Line002','Line006','对象001','对象002','对象003')):
+            continue
+        lo,hi=bounds(obj)
+        if hi.x<=xlo or lo.x>=xhi or hi.y<=ylo or lo.y>=yhi or hi.z<=lower+.02 or lo.z>=upper+.20:
+            continue
+        open_volume_slot(obj,xlo,xhi,ylo,yhi,lower+.02,upper+.20)
+        if obj.get('sunny_walkable'):
+            obj['sunny_access_slot']=[xlo,xhi,ylo,yhi]
+        if obj.name in ('Line002','Line006','对象001','对象002','对象003'):
+            obj['sunny_obstacle']=True;obj['sunny_rail']=True
+    hatch('DockLadderHatch',(hx,hy,upper),0,(1.40,1.40),rooms=('Soldier Dock Waiting Room','Lawn'))
+    for side in (-1,1):
+        rail=pole('DockLadder_rail%d'%side,(hx-.48,hy+side*.30,lower+.02),
+                  (hx-.48,hy+side*.30,upper-.08),.035,'darkwood',sides=10)
+        rail['sunny_obstacle']=True;rail['sunny_rail']=True
+    count=math.ceil((upper-lower)/.30)
+    for i in range(count+1):
+        z=lower+(upper-lower)*i/count
+        pole('DockLadder_rung%d'%i,(hx-.48,hy-.30,z),(hx-.48,hy+.30,z),.025,'darkwood',sides=10)
+    return [dict(id='dock-waiting-ladder',label='Dock waiting-room ladder',hatch='DockLadderHatch',
+                 points=[[hx,hy,lower],[hx,hy,upper],[hx+1.60,hy,upper]],
+                 reference='R14: central waiting-room ladder to lawn; offsets reconstructed for body clearance')]
 
 
 def lookout_wall_piece(name, outer, inner, low, high, sector, kind):
@@ -2381,7 +2446,9 @@ def apply_exterior_accuracy(objects, bounds, frame, interiors):
     plants(objects, bounds, frame, interiors['levels'])
     bpy.context.view_layer.update()
     controls=helm_controls(objects,bounds)
-    docks=rolling_dock(objects,bounds,frame.y(.585))
+    original_b1_outline=next(v['outline'] for v in interiors['foreTrimVolumes'] if v['level']=='B1')
+    docks=rolling_dock(objects,bounds,frame.y(.585),original_b1_outline,interiors['levels']['B1'],interiors['levels']['F1']-.18)
+    dock_stair_clearance(objects,bounds,interiors['levels']['B1'])
     lookout(objects,bounds)
     swept_mane(objects,bounds)
     lion_face(objects,bounds)
@@ -2400,7 +2467,7 @@ def apply_exterior_accuracy(objects, bounds, frame, interiors):
     anchors=anchor_ropes(objects,bounds)
     for name,throat in (('Cylinder005',.28),('Cylinder001',.17)):
         scalloped_soffit(next(o for o in objects if o.name==name),bounds,throat)
-    climbs=lookout_access(objects,bounds,interiors)+interiors.get('exteriorClimbs',[])+stern_ladder_access(objects,bounds,interiors)
+    climbs=lookout_access(objects,bounds,interiors)+interiors.get('exteriorClimbs',[])+stern_ladder_access(objects,bounds,interiors)+dock_ladder_access(objects,bounds,interiors)
     from sunny_aft_envelope import add_lower_aquarium_windows
     add_lower_aquarium_windows(objects,interiors)
     branch_office(objects,bounds,interiors['levels'])

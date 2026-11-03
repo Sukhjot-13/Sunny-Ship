@@ -206,7 +206,7 @@ for(const t of rimFaces)for(const o of [-1,0,1].flatMap(d=>planes.get(`${t.axis}
  if(area>.0001){const key=[t.name,o.name].sort().join(' <> ');rimOverlaps.set(key,(rimOverlaps.get(key)||0)+area)}
 }
 assert.equal(rimOverlaps.size,0,'visible hatch coaming faces overlap: '+JSON.stringify([...rimOverlaps]))
-console.log('PASS all five hatch coaming tops and inner walls have one visible surface owner')
+console.log(`PASS all ${hatches.length} hatch coaming tops and inner walls have one visible surface owner`)
 
 // The shared Library ceiling / Bath floor is visible from below and above.
 // Check both faces against the entire export; embedded, opposite-facing solid

@@ -25,6 +25,7 @@ from mathutils import Vector
 from sunny_exterior import (
     EXTERIOR_CONFIG,
     PALETTE,
+    _mesh,
     box,
     clip_face,
     finish,
@@ -32,6 +33,7 @@ from sunny_exterior import (
     layout_x,
     material,
     open_plan_slot,
+    open_convex_plan_slot,
     open_volume_slot,
     plan_floor,
     pole,
@@ -130,6 +132,25 @@ def rbox(name, p, rot, dims, key, off=(0, 0, 0), **kw):
     obj = box(name, L(p, rot, *off), dims, key, **kw)
     obj.rotation_euler.z = rot
     return obj
+
+
+def dock_water_annulus(name, centre, inner, outer, bottom, top, count=64):
+    """Closed annular water volume over the Dock bed, in world metres."""
+    vertices=[]
+    for z in (bottom,top):
+        for radius in (inner,outer):
+            for i in range(count):
+                a=i*math.tau/count
+                vertices.append((centre[0]+radius*math.cos(a),centre[1]+radius*math.sin(a),z))
+    def idx(z,r,i): return (z*2+r)*count+i%count
+    faces=[]
+    for i in range(count):
+        j=i+1
+        faces.extend(((idx(0,0,i),idx(0,0,j),idx(0,1,j),idx(0,1,i)),
+                      (idx(1,0,j),idx(1,0,i),idx(1,1,i),idx(1,1,j)),
+                      (idx(0,0,j),idx(0,0,i),idx(1,0,i),idx(1,0,j)),
+                      (idx(0,1,i),idx(0,1,j),idx(1,1,j),idx(1,1,i))))
+    return finish(_mesh(name,vertices,faces),name,'tankwater')
 
 
 def rpole(name, p, rot, offset_a, offset_b, radius, key, **kw):
@@ -1180,42 +1201,164 @@ def build_interiors(objects, vertex_bbox, shift, aft_snapshot=None):
     # Six radial channels beneath the lawn, concentric with exterior dock plates.
     dcentre=(f.x(-.35),cy)
     turn_r=7.8
-    ring('Dock_turntable_rim',(dcentre[0],cy,B1+.10),turn_r,.12,'black','Z')
-    platform=pole('Dock_turntable_deck',(dcentre[0],cy,B1-.06),(dcentre[0],cy,B1+.10),turn_r,'gold')
-    platform['sunny_walkable']=True
-    pole('Dock_turntable_hub',(dcentre[0],cy,B1+.10),(dcentre[0],cy,B1+1.05),.26,'darkwood')
+    # Cut the native floor for the rotating chamber using its actual convex
+    # boundary. The original fitted perimeter is retained separately for the
+    # external mouth reveals and the fore trim ownership calculation.
+    chamber_opening=[(dcentre[0]+turn_r*math.cos(i*math.tau/64),
+                      cy+turn_r*math.sin(i*math.tau/64)) for i in range(64)]
+    open_convex_plan_slot(b1_floor,chamber_opening)
+    bpy.context.view_layer.update()
+    original_shutters=[o for o in objects if o.name.startswith('Sunny_Dock1_shutter')]
+    if len(original_shutters)!=2:
+        raise RuntimeError('expected the two retained Dock mouth stations')
+    mouth_y=sorted(sum((o.matrix_world@Vector(v)).y for v in o.bound_box)/8 for o in original_shutters)
+    dock_bed=B1-6.0
+    dock_water=B1-4.7
+    waiting_floor=dock_water+.45
+    dock_roof=level_of['F1']-.18
+    portal_height=2.85
+    # Two actual transverse floor slots continue the chamber to the retained
+    # mouths.  The replacement dock_bed and side walls below carry the water.
+    for end in mouth_y:
+        open_plan_slot(b1_floor,dcentre[0]-2.4,dcentre[0]+2.4,min(cy,end),max(cy,end))
+    bed_disk=pole('Dock_water_bed',(dcentre[0],cy,dock_bed-.18),(dcentre[0],cy,dock_bed),turn_r,'timber',sides=64)
+    bed_disk['sunny_walkable']=True
+    centre_wall=dock_water_annulus('Dock_centre_wall',dcentre,2.12,2.30,dock_bed,waiting_floor-.06)
+    finish(centre_wall,'Dock_centre_wall','timber',obstacle=True)
+    centre_wall['sunny_rail']=True
+    dock_water_annulus('Dock_water_chamber',dcentre,2.30,turn_r-.12,dock_bed+.02,dock_water)
+    # Fixed perimeter is interrupted only at the two transverse outlets.
+    # Small physical sections follow the actual circular chamber edge.
+    for j in range(96):
+        a=(j+.5)*math.tau/96
+        if abs(math.cos(a))*turn_r < 2.55:
+            continue
+        point=(dcentre[0]+turn_r*math.cos(a),cy+turn_r*math.sin(a),dock_bed)
+        rbox('Dock_outer_wall%d'%j,point,a+math.pi/2,(turn_r*math.tau/96+.03,.18,dock_roof-dock_bed),'timber',
+             (0,0,(dock_roof-dock_bed)/2))
+    for side,end in enumerate(mouth_y):
+        direction=-1 if end<cy else 1
+        start=cy+direction*(turn_r-.12)
+        length=abs(end-start)
+        mid=(start+end)/2
+        rbox('Dock_outlet%d_bed'%side,(dcentre[0],mid,dock_bed),0,(4.8,length,.18),'timber',(0,0,-.09),walkable=True)
+        rbox('Dock_outlet%d_water'%side,(dcentre[0],mid,dock_bed),0,(4.77,length+.04,dock_water-dock_bed-.02),'tankwater',
+             (0,0,(dock_water-dock_bed+.02)/2),obstacle=False)
+        for sign in (-1,1):
+            rail=pole('Dock_outlet%d_guide%d'%(side,sign),
+                      (dcentre[0]+sign*1.70,start+direction*.22,dock_water+.10),
+                      (dcentre[0]+sign*1.70,end,dock_water+.10),.045,'darkwood')
+            # This straight axial rail is thinner than the sectioned-wall
+            # export's minimum face height. Its exact axis-aligned solid box
+            # preserves collision rather than silently dropping every face.
+            rail['sunny_obstacle']=True
+            for j in range(5):
+                yy=start+(end-start)*(j+.5)/5
+                post=pole('Dock_outlet%d_guide_post%d_%d'%(side,sign,j),
+                          (dcentre[0]+sign*1.70,yy,dock_bed),(dcentre[0]+sign*1.70,yy,dock_water+.10),.035,'darkwood')
+                post['sunny_rail']=True;post['sunny_obstacle']=True
+            wall_x=dcentre[0]+sign*2.48
+            rbox('Dock_outlet%d_wall%d_base'%(side,sign),(wall_x,mid,dock_bed),0,(.16,length,B1-dock_bed),'timber',
+                 (0,0,(B1-dock_bed)/2))
+            wall_run('Dock_outlet%d_wall%d_upper'%(side,sign),(wall_x,mid,B1),math.pi/2,length,dock_roof-B1,
+                     key='timber',thickness=.16)
+    waiting=pole('Dock_turntable_deck',(dcentre[0],cy,waiting_floor-.16),(dcentre[0],cy,waiting_floor),2.30,'deck',sides=64)
+    waiting['sunny_walkable']=True
+    pole('Dock_centre_support',(dcentre[0],cy,dock_bed),(dcentre[0],cy,waiting_floor-.16),.38,'darkwood',sides=24)['sunny_obstacle']=True
+    pole('Dock_turntable_hub',(dcentre[0],cy,waiting_floor+.10),(dcentre[0],cy,waiting_floor+1.05),.26,'darkwood')
     for i in range(6):
         before=set(bpy.data.objects)
         # The selected sector must face the transverse hull apertures.  The
         # navigation system rotates sector i back to this initial direction.
         a=math.pi/2+i*math.tau/6
-        rpole('Dock_capstan_spoke%d'%i,(dcentre[0],cy,B1),a,(0,0,1.0),(1.1,0,1.0),.035,'timber')
+        rpole('Dock_capstan_spoke%d'%i,(dcentre[0],cy,waiting_floor),a,(0,0,1.0),(1.1,0,1.0),.035,'timber')
         contents=('Shiro Mokuba I','Mini Merry II','Shark Submerge III','Kurosai FR-U IV','Brachio Tank V','Inflatable Pool')[i]
         label=text('Dock_channel%d_label'%(i+1),str(i+1)+'  '+contents,
-                   L((dcentre[0],cy,B1),a,6.9,0,.12),.18,'white',(0,0,a+math.pi/2))
+                   L((dcentre[0],cy,waiting_floor),a,2.44,0,portal_height+.20),.18,'white',(math.pi/2,0,a+math.pi/2))
         label['sunny_channel']=i+1
-        # Walls follow radial sectors, with an open outer circulation ring.
-        rpole('Dock_sector%d'%i,(dcentre[0],cy,B1),a,(1.5,0,.15),(6.5,0,.15),.07,'black')
+        # Physical radial partitions separate the tall water-bearing bays.
+        # Segmenting them keeps rotated dynamic collision close to the mesh.
+        edge=a+math.pi/6
+        for j in range(16):
+            start=2.30+j*(5.30/16)
+            rbox('Dock_sector%d_wall%02d'%(i,j),(dcentre[0],cy,dock_bed),edge,(5.30/16+.01,.14,dock_roof-dock_bed),'timber',
+                 (start+5.30/32,0,(dock_roof-dock_bed)/2))
+        # Segmented moving guide rails have physical collision and are
+        # supported from the wet bed; future vehicle deployment remains M10.
+        for side in (-1,1):
+            for j in range(10):
+                start=3.35+j*.405
+                rail=rpole('Dock_bay%d_guide%d_%02d'%(i,side,j),(dcentre[0],cy,dock_water),a,
+                           (start,side*1.70,.10),(start+.405,side*1.70,.10),.045,'darkwood')
+                rail['sunny_obstacle']=True
+            for j in range(4):
+                radius=3.50+j*1.15
+                post=rpole('Dock_bay%d_guide_post%d_%d'%(i,side,j),(dcentre[0],cy,dock_bed),a,
+                           (radius,side*1.70,0),(radius,side*1.70,dock_water-dock_bed+.10),.035,'darkwood')
+                post['sunny_obstacle']=True
+        portal=L((dcentre[0],cy,waiting_floor),a,2.30,0,0)
+        portal_top=dock_roof
+        for side in (-1,1):
+            for j in range(3):
+                rbox('Dock_portal%d_pier%d_%d'%(i,side,j),portal,a,(.18,.20,portal_top-waiting_floor),'timber',
+                     (0,side*.725+side*(j+.5)*.20,(portal_top-waiting_floor)/2))
+        upper_height=dock_roof-(waiting_floor+portal_height)
+        for j in range(6):
+            tangent=-.725+(j+.5)*1.45/6
+            rbox('Dock_portal%d_upper%d'%(i,j),portal,a,(.18,1.45/6,upper_height),'timber',
+                 (0,tangent,portal_height+upper_height/2))
+        door_frame('Dock_portal%d_frame'%i,portal,a+math.pi/2,1.45,portal_height,.18,trim='darkwood',arched=True)
+        # The numbered inner shutter shares the actual selector/lever state;
+        # individual physical slats roll above the arched opening.
+        gate_step=portal_height/14
+        for j in range(14):
+            z=(j+.5)*gate_step
+            crown=max(0,z-(portal_height-1.45/2))
+            width=1.45 if crown==0 else 2*math.sqrt(max(0,(1.45/2)**2-crown*crown))
+            slat=rbox('Dock_inner_gate%d_%02d'%(i,j),portal,a,(.12,width,gate_step-.01),'timber',
+                      (0,0,.10+z),obstacle=False)
+            slat['sunny_inner_gate']=True;slat['sunny_inner_angle']=a
+            slat['sunny_roll_top']=waiting_floor+.10+portal_height
+            slat['sunny_roll_radius']=.22;slat['sunny_roll_travel']=portal_height+.30
         bx=dcentre[0]+math.cos(a)*5.3
         by=cy+math.sin(a)*5.3
-        rbox('Dock_bay%d'%i,(bx,by,B1),a,(4.3,3.2,.08),'red',(0,0,.10),obstacle=False)
-        for j in (-1,1):
-            rbox('Dock_bay%d_side'%i,(bx,by,B1),a,(4.3,.10,.9),'white',(0,j*1.65,.45))
-        w,d,h=dock_vehicle(i+1,(bx,by,B1),a)
+        vehicle_z=dock_water-.55
+        rbox('Dock_bay%d'%i,(bx,by,vehicle_z),a,(4.3,3.2,.08),'timber',(0,0,.10),obstacle=False)
+        for dx in (-1.25,1.25):
+            rbox('Dock_bay%d_support'%i,(bx,by,dock_bed),a,(.18,2.4,vehicle_z+.10-dock_bed),'darkwood',
+                 (dx,0,(vehicle_z+.10-dock_bed)/2))
+        w,d,h=dock_vehicle(i+1,(bx,by,vehicle_z),a)
         hx=(abs(math.cos(a))*w+abs(math.sin(a))*d)/2
         hy=(abs(math.sin(a))*w+abs(math.cos(a))*d)/2
-        dock_solids.append(dict(name='DockVehicle%d'%(i+1),min=[bx-hx,by-hy,B1+.14],max=[bx+hx,by+hy,B1+h],channel=i+1))
+        dock_solids.append(dict(name='DockVehicle%d'%(i+1),min=[bx-hx,by-hy,vehicle_z+.14],max=[bx+hx,by+hy,vehicle_z+h],channel=i+1))
         for obj in set(bpy.data.objects)-before:
             obj['sunny_dock_channel']=i+1
             obj['sunny_dynamic']=True
-            if obj.get('sunny_obstacle'):
-                v=[obj.matrix_world@Vector(corner) for corner in obj.bound_box]
-                # Flush transforms before measuring each rotating rail.
+            if obj.get('sunny_obstacle') and not obj.get('sunny_inner_gate'):
                 bpy.context.view_layer.update()
                 v=[obj.matrix_world@Vector(corner) for corner in obj.bound_box]
-                dock_solids.append(dict(name=obj.name,min=[min(q[k] for q in v) for k in range(3)],max=[max(q[k] for q in v) for k in range(3)],channel=i+1))
-    desk('Dock_control',(dcentre[0]-1.7,cy+2,B1),0,1.3,.7)
-    stool_small('Dock_control_stool',(dcentre[0]-1.7,cy+1,B1))
+                if obj.name.startswith('Sunny_Dock_portal') and obj.name.endswith('_frame_head'):
+                    # Preserve each curved crown segment rather than placing
+                    # one filled AABB across the real arched opening.
+                    count=33
+                    if len(obj.data.vertices)!=count*4:
+                        raise RuntimeError('unexpected Dock arch crown topology')
+                    for segment in range(count-1):
+                        points=[obj.matrix_world@obj.data.vertices[(depth*2+radial)*count+index].co
+                                for depth in range(2) for radial in range(2) for index in (segment,segment+1)]
+                        lo=[min(q[k] for q in points) for k in range(3)]
+                        hi=[max(q[k] for q in points) for k in range(3)]
+                        if hi[2]-lo[2]<.045:
+                            mid=(hi[2]+lo[2])/2;lo[2]=mid-.0225;hi[2]=mid+.0225
+                        dock_solids.append(dict(name='%s_section%02d'%(obj.name,segment),min=lo,max=hi,channel=i+1,
+                                                isFloor=False,footprint=[[q.x,q.y] for q in points]))
+                    continue
+                entry=dict(name=obj.name,min=[min(q[k] for q in v) for k in range(3)],max=[max(q[k] for q in v) for k in range(3)],channel=i+1,isFloor=False)
+                # Rotate actual local bounding corners, not a pre-expanded
+                # world AABB. This keeps rotating walls and supports close to
+                # their actual geometry around the waiting room.
+                entry['footprint']=[[q.x,q.y] for q in v]
+                dock_solids.append(entry)
     rooms.append(dict(level='B1',name='Soldier Dock System',x=dock,y=(cy-11.4,cy+11.4)))
 
     # Franky's port workshop and Usopp's starboard workshop share the aft bay.
@@ -1605,7 +1748,7 @@ def build_interiors(objects, vertex_bbox, shift, aft_snapshot=None):
         ('F2F', 'Women Port Cannon Closet', w[0], w[1], wy_[0]-3.0, wy_[0]-1.55)):
         rooms.append(dict(level=level, name=name, x=(x0,x1), y=(y0,y1)))
     return {
-        'dockCentre':[dcentre[0],cy,B1], 'dockSolids':dock_solids,
+        'dockCentre':[dcentre[0],cy,B1], 'dockSolids':dock_solids, 'dockWaterLevel':dock_water,
         'levels': level_of,
         'aftEnclosures': [aft_enclosure],
         'foreTrimVolumes': [dict(level=level, outline=outline, bottom=bottom, top=top)

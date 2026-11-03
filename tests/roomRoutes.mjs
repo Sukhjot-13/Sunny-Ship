@@ -16,7 +16,10 @@ export function roomRoutes(){
  const floors=boxes.filter(b=>b.name.startsWith('COLL_Floor'))
  const solids=boxes.filter(b=>!b.name.startsWith('COLL_Floor')&&b.name!=='COLL_Hull'&&!b.name.startsWith('COLL_Wall'))
  const centre=meta.interiors.dockCentre,raw=meta.interiors.dockSolids??[]
- for(const b of dockBounds(raw.map(v=>({...v,min:[v.min[0],v.min[2],-v.max[1]],max:[v.max[0],v.max[2],-v.min[1]]})),[centre[0],centre[2],-centre[1]],0))solids.push({name:b.name,min:{x:b.min[0],y:b.min[1],z:b.min[2]},max:{x:b.max[0],y:b.max[1],z:b.max[2]}})
+ for(const b of dockBounds(raw.map(v=>({...v,min:[v.min[0],v.min[2],-v.max[1]],max:[v.max[0],v.max[2],-v.min[1]],...(v.footprint?{footprint:v.footprint.map(([x,y])=>[x,-y])}:{})})),[centre[0],centre[2],-centre[1]],0)){
+  const box={name:b.name,min:{x:b.min[0],y:b.min[1],z:b.min[2]},max:{x:b.max[0],y:b.max[1],z:b.max[2]}}
+  ;(b.isFloor?floors:solids).push(box)
+ }
  const doors=createDoorSystem(meta.interiors.doors)
  for(const d of doors.doors)d.state.openness=1
  for(const b of doors.update(0,null).colliders)solids.push({name:b.name,min:{x:b.min[0],y:b.min[1],z:b.min[2]},max:{x:b.max[0],y:b.max[1],z:b.max[2]}})
@@ -114,6 +117,11 @@ export function roomRoutes(){
   return nodes.filter(n=>n.seen&&!blocked(n)&&Math.abs(n.y-point[1])<.2&&Math.hypot(n.x-point[0],n.z-point[2])<.6)
    .sort((a,b)=>Math.hypot(a.x-point[0],a.z-point[2])-Math.hypot(b.x-point[0],b.z-point[2]))[0]
  }
+ /** Supported endpoint even when its only connection is the ladder itself. */
+ function atAny(point){
+  return nodes.filter(n=>!blocked(n)&&Math.abs(n.y-point[1])<.2&&Math.hypot(n.x-point[0],n.z-point[2])<.6)
+   .sort((a,b)=>Math.hypot(a.x-point[0],a.z-point[2])-Math.hypot(b.x-point[0],b.z-point[2]))[0]
+ }
  const stairs=[...groups].map(([name,treads])=>{
   treads.sort((a,b)=>a[1]-b[1])
   const first=treads[0],last=treads.at(-1),length=Math.hypot(last[0]-first[0],last[2]-first[2]),dx=(last[0]-first[0])/length,dz=(last[2]-first[2])/length
@@ -131,11 +139,13 @@ export function roomRoutes(){
  // Keep forced connection coverage when a reference ladder replaces an
  // invented stair: both real floor endpoints and the full body shaft matter.
  const ladders=normalizeClimbs(meta.exterior.mechanisms.climbs).filter(p=>p.id!=='fore-lookout').map(p=>{
-  const lower=at(p.points[0]),upper=at(p.points.at(-1))
+  const descendingFirst=p.id==='dock-waiting-ladder'
+  const lower=descendingFirst?atAny(p.points[0]):at(p.points[0]),upper=at(p.points.at(-1))
   const obstacles=[...solids,...floors]
   const clear=Array.from({length:Math.ceil(p.length/.10)+1},(_,i)=>pointAt(p,i*.10)).every(v=>
    !obstacles.some(b=>v[0]+R>b.min.x+.02&&v[0]-R<b.max.x-.02&&v[2]+R>b.min.z+.02&&v[2]-R<b.max.z-.02&&v[1]+H>b.min.y+.02&&v[1]<b.max.y-.02))
-  return {name:'Ladder: '+p.label,ok:!!(lower&&upper&&clear),path:lower?fromSpawn(lower):[],target:p.points.at(-1),climb:p}
+  const entry=descendingFirst?upper:lower
+  return {name:'Ladder: '+p.label,ok:!!(lower&&upper&&clear),path:entry?fromSpawn(entry):[],target:descendingFirst?p.points[0]:p.points.at(-1),climb:p,descendingFirst}
  })
 
  // Explicitly reproduce the reported doorway after each first fore flight.
