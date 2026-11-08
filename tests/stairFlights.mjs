@@ -71,7 +71,7 @@ export async function driveTo(page,target,tolerance=0.3) {
 }
 
 /** Whole routes begin at spawn; no teleport/jump is used between landings. */
-export async function walkJourney(page,meshes,kind,side,{returnToLawn=true,onCheckpoint}={}) {
+export async function walkJourney(page,meshes,kind,side,{returnToLawn=true,onCheckpoint,approachPath=null,firstFlightOnly=false}={}) {
   await page.evaluate(()=>window.__sunny.respawn())
   await sleep(400)
   const flights=stairFlights(meshes),trace=[]
@@ -97,7 +97,7 @@ export async function walkJourney(page,meshes,kind,side,{returnToLawn=true,onChe
     if(ok&&onCheckpoint)await onCheckpoint({label,recoveries:recovery,...result.result})
     return ok
   }
-  if(kind==='garden'&&side==='starboard') {
+  if(!approachPath&&kind==='garden'&&side==='starboard') {
     // Walk around the lawn dock hatch and its real rail, whose position does
     // not enlarge with the hull. The new spawn aligns with that obstruction.
     const hatch=meshes.find(m=>m.name.startsWith('Sunny_SoldierDockHatch_leaf'))
@@ -106,9 +106,19 @@ export async function walkJourney(page,meshes,kind,side,{returnToLawn=true,onChe
     if(!await waypoint('clear hatch side',[x,spawn[1],tread[2]]))return trace
   }
   const approachX=kind==='garden'&&side==='starboard'?(meshes.find(m=>m.name.startsWith('Sunny_SoldierDockHatch_leaf'))?.min.x??-7.1)-.8:spawn[0]
-  if(!await waypoint('lawn approach',[approachX,spawn[1],tread[2]]))return trace
+  if(approachPath){
+    for(const [i,p] of approachPath({spawn,tread}).entries())if(!await waypoint('lawn approach '+i,p))return trace
+  }else if(!await waypoint('lawn approach',[approachX,spawn[1],tread[2]]))return trace
   if(!await waypoint('lower entrance',[tread[0]-dir*0.65,tread[1],tread[2]]))return trace
   if(!await climb(first))return trace
+  if(firstFlightOnly){
+    if(!await climb(first,true))return trace
+    if(approachPath){
+      for(const [i,p] of [...approachPath({spawn,tread})].reverse().entries())if(!await waypoint('return lawn approach '+i,p))return trace
+    }else if(!await waypoint('return lawn approach',[approachX,spawn[1],tread[2]]))return trace
+    await waypoint('back to lawn',spawn)
+    return trace
+  }
   const second=flights.find(f=>f.name===(kind==='garden'?`garden ${side}`:'fore upper'))
   const t=second.treads[0],end=second.treads.at(-1)
   if(kind==='helm') {
@@ -151,8 +161,12 @@ export async function walkJourney(page,meshes,kind,side,{returnToLawn=true,onChe
     if(!await waypoint('return lower landing',[t[0]+0.55,last[1],last[2]]))return trace
   }
   if(!await climb(first,true))return trace
-  if(!await waypoint('return lawn approach',[approachX,spawn[1],tread[2]]))return trace
-  if(kind==='garden'&&side==='starboard'&&!await waypoint('return around hatch',[approachX,spawn[1],spawn[2]]))return trace
+  if(approachPath){
+    for(const [i,p] of [...approachPath({spawn,tread})].reverse().entries())if(!await waypoint('return lawn approach '+i,p))return trace
+  }else{
+    if(!await waypoint('return lawn approach',[approachX,spawn[1],tread[2]]))return trace
+    if(kind==='garden'&&side==='starboard'&&!await waypoint('return around hatch',[approachX,spawn[1],spawn[2]]))return trace
+  }
   await waypoint('back to lawn',spawn)
   return trace
 }

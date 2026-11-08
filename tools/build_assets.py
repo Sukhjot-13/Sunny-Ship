@@ -646,6 +646,10 @@ def classify(o, a, b):
         return 'sail' if o.name not in ('Plane009','Plane010') else 'flag'
     if o.name.startswith('Sunny_'):
         return 'deck' if o.get('sunny_walkable') else 'detail'
+    # These retained outboard hull/band pieces can be exposed to downward
+    # sampling by a Dock opening, but must keep their original hull finish.
+    if o.name in ('Box050','Box118','Box119'):
+        return 'hull'
     # 1. the surfaces the player walks on are deck
     if o.name in WALK_NAMES:
         return "deck"
@@ -904,12 +908,12 @@ for o in ship_objects:
         for face in o.data.polygons:
             points=[o.matrix_world@o.data.vertices[i].co for i in face.vertices]
             normal=o.matrix_world.to_3x3()@face.normal
-            if abs(normal.z)>0.65 and o.name != 'Cylinder002' and not o.get('sunny_aft_native_envelope') and not o.get('sunny_aperture_shell'):
+            if abs(normal.z)>0.65 and o.name != 'Cylinder002' and not o.get('sunny_aft_native_envelope') and not o.get('sunny_aperture_shell') and not o.get('sunny_dock_transition'):
                 continue
             for piece,poly in enumerate(face_sections(points)):
                 lo=Vector(tuple(min(p[k] for p in poly) for k in range(3)))
                 hi=Vector(tuple(max(p[k] for p in poly) for k in range(3)))
-                if hi.z-lo.z<0.12 and not o.get('sunny_aperture_shell'):
+                if hi.z-lo.z<0.12 and not o.get('sunny_aperture_shell') and not o.get('sunny_dock_transition'):
                     continue
                 dims=hi-lo
                 colliders.append(add_box(f'COLL_Rail_{o.name}_{face.index}_{piece}',(lo+hi)/2,
@@ -1115,7 +1119,7 @@ meta = {
     "hull": SHIP,
     "waterLevel": WATER_LEVEL,
     "oceanHullProfile": ocean_profile,
-    "interiors": {"finishedRooms":False,"dockCentre":interiors['dockCentre'],"dockSolids":interiors['dockSolids'],"dockWaterLevel":interiors['dockWaterLevel'],"levels":{k:round(v,3) for k,v in interiors['levels'].items()},
+    "interiors": {"finishedRooms":False,"dockCentre":interiors['dockCentre'],"dockSolids":interiors['dockSolids'],"dockWaterLevel":interiors['dockWaterLevel'],"foodLift":interiors['foodLift'],"levels":{k:round(v,3) for k,v in interiors['levels'].items()},
         "lights":interiors.get('lights', []),
         "foreEnclosures":interiors['foreEnclosures'],
         "foreTrimVolumes":interiors['foreTrimVolumes'],

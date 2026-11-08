@@ -54,16 +54,16 @@ for(const x of [cx-1,cx,cx+1]){
  assert(low-port>.1&&starboard-high>.1,'channel water overlaps the non-discarded ocean on both sides')
 }
 const boxes=loadColliders('public/models/sunny-collision.glb')
-assert(boxes.some(b=>b.name.includes('Dock_outlet0_wall'))&&boxes.some(b=>b.name.includes('Dock_outlet1_wall')),'both outlet walls have real physical collision')
+assert(boxes.some(b=>b.name.includes('Dock_outlet0_round_shell'))&&boxes.some(b=>b.name.includes('Dock_outlet1_round_shell')),'both rounded outlet shells have real physical collision')
 const actual=loadColliders('public/models/sunny.glb')
 const roof=actual.find(o=>o.name==='Sunny_B1_ceiling')
 const dividers=actual.filter(o=>/^Sunny_Dock_sector\d_wall\d\d$/.test(o.name))
 assert(roof&&dividers.length===96,'actual ceiling and six segmented bay partitions')
 assert(dividers.every(o=>Math.abs(o.max.y-roof.max.y)<.02),'radial partitions meet the real ceiling plane')
 const perimeter=actual.filter(o=>o.name.startsWith('Sunny_Dock_outer_wall'))
-const stairPassage=new Set([29,30,31,32,33].map(i=>`Sunny_Dock_outer_wall${i}`))
+const stairPassage=new Set([30,31,32,33].map(i=>`Sunny_Dock_outer_wall${i}`))
 assert(perimeter.filter(o=>!stairPassage.has(o.name)).every(o=>Math.abs(o.max.y-roof.max.y)<.02),'outer walls outside the retained stair passage meet the real ceiling plane')
-assert([...stairPassage].every(n=>perimeter.some(o=>o.name===n)),'water-bearing bases remain under all five actual stair-passage wall sections')
+assert([...stairPassage].every(n=>perimeter.some(o=>o.name===n)),'water-bearing bases remain under the retained stair-passage wall sections')
 const gates=actual.filter(o=>/^Sunny_Dock_inner_gate\d_\d\d$/.test(o.name))
 const guides=actual.filter(o=>/^Sunny_Dock_bay\d_guide-?1_\d\d$/.test(o.name))
 const outletGuides=actual.filter(o=>/^Sunny_Dock_outlet\d_guide-?1$/.test(o.name))
@@ -94,7 +94,7 @@ for(const [a,b] of [[bottom,top],[top,exit]]){
  const moved=sweepFlight(staticBodies,start,delta,1,.34,1.75)
  assert(moved.position.distanceTo(start.clone().add(delta))<.03,'actual ladder shaft and exit clear the full normal body')
 }
-const stairWall=boxes.filter(b=>b.name.includes('Dock_outlet1_wall-1_upper_')||b.name.includes('Dock_outer_wall')).map(b=>({name:b.name,box:new THREE.Box3(b.min,b.max)}))
+const stairWall=boxes.filter(b=>b.name.includes('Dock_outlet1_round_shell')||b.name.includes('Dock_outer_wall')).map(b=>({name:b.name,box:new THREE.Box3(b.min,b.max)}))
 const dockStair=actual.filter(o=>/^Sunny_SoldierDockStair_(?:up|over)_tread\d+$/.test(o.name))
 assert(stairWall.length>0&&dockStair.length>0,'retained Dock stair and cut wall have physical sections')
 const wallX=cx-2.48,crossing=dockStair.filter(t=>t.min.x<wallX+1&&t.max.x>wallX-1.5)
@@ -105,9 +105,11 @@ for(const tread of crossing){
  const moved=sweepFlight(stairWall,start,new THREE.Vector3(end-start.x,0,0),1,.34,1.75)
  assert(moved.position.x>end-.02,`normal full body clears stair opening at ${tread.name}: ${JSON.stringify({start:start.toArray(),end,actual:moved.position.toArray()})}`)
 }
-const testTread=crossing.find(t=>t.name.includes('_up_')),negativeStart=new THREE.Vector3(wallX-.8,testTread.max.y,testTread.min.z-1.5)
-const blocked=sweepFlight(stairWall,negativeStart,new THREE.Vector3(1.6,0,0),1,.34,1.75)
-assert(blocked.position.x<wallX,'negative control: retained wall still blocks outside the stair cut')
+const farMouth=meta.exterior.mechanisms.dockOpenings.find(o=>o.centre[1]>-cz)
+const midAxis=-((-cz+7.68+farMouth.centre[1]-.10)/2)
+const negativeStart=new THREE.Vector3(cx,water-.5,midAxis)
+const blocked=sweepFlight(stairWall,negativeStart,new THREE.Vector3(10,0,0),1,.025,.05)
+assert(blocked.position.x<cx+7,'negative control: the rounded wet shell still blocks beyond its interior')
 const outerWalls=meshes.filter(m=>m.name.startsWith('Sunny_Dock_outer_wall'))
 const centreWalls=meshes.filter(m=>m.name==='Sunny_Dock_centre_wall')
 const centreCollision=boxes.filter(b=>b.name.includes('Dock_centre_wall'))
@@ -121,7 +123,7 @@ for(let i=0;i<96;i++){
  const centrePhysical=new THREE.Ray(origin,dir)
  const distances=centreCollision.map(b=>centrePhysical.intersectBox(new THREE.Box3(b.min,b.max),new THREE.Vector3())).filter(Boolean).map(p=>p.distanceTo(origin))
  assert(distances.some(d=>d>2&&d<2.45),'retaining shell has physical containment at each sampled angle')
- if(Math.abs(Math.cos(angle))*7.8<2.55)continue // real outlet gaps, not omitted wall failures
+ if(Math.abs(Math.cos(angle))*7.8<2.95)continue // real widened outlet gaps, not omitted wall failures
  const outsideRay=new THREE.Raycaster(origin.clone().addScaledVector(dir,3),dir,0,6)
  const wall=outsideRay.intersectObjects(outerWalls)[0]
  assert(wall&&wall.distance>4.5&&wall.distance<5.1,`perimeter contains water at angular sample ${i}`)

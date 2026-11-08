@@ -80,4 +80,12 @@ resetVoyage();voyage.gaon=1
 assert(!operateCannon('fire').ok);assert.equal(voyage.cola,3,'cooldown guard preserves cola')
 assert(!operateCannon('invalid').ok)
 resetVoyage()
+assert.equal(voyage.foodLift,0);assert.equal(voyage.foodLiftTarget,0)
+voyage.foodLiftTarget=1
+for(let i=0;i<40;i++)advanceVoyage(.1)
+assert(Math.abs(voyage.foodLift-1)<.01,'food lift travels F1->F2')
+voyage.foodLiftTarget=0
+for(let i=0;i<40;i++)advanceVoyage(.1)
+assert(Math.abs(voyage.foodLift-0)<.01,'food lift returns F2->F1')
+resetVoyage()
 console.log('PASS navigation: steering, air arc/landing, three-barrel costs, seven selector states, occupied roller/carousel, Chicken reverse, Gaon jaw/recoil and cola-powered paddles')

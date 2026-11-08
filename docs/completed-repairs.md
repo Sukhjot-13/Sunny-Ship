@@ -32,7 +32,9 @@ Final external/inside local views personally reviewed; coordinating root indepen
 Integration source/assets checkpoint `ff0c381`, reviewed verification checkpoint `e90c690`; all combined files applied byte-identically to original main after C01 `d4f1994`. Actual original-ship C01/C02 targeted tests and local/served hashes PASS. Trial results remain frozen at12e2dde. Old actionable C02 directions now exist only as historical material in the completed/archive records.
 
 
-## C03 — verified locally, November 3, 2026
+## C03 — historical local receipt, reopened after independent review
+
+Independent review found the outlet is a narrow rectangular trench rather than the required rounded transition to the full mouth. This receipt is not acceptance; see the active audit.
 
 Original finding (retained verbatim):
 

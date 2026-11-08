@@ -944,6 +944,49 @@ def dumbwaiter(name, p, rot=0.0, h=2.6):
     rpole(name + '_rope', p, rot, (0, 0, 1.10), (0, 0, h), 0.014, 'rope')
 
 
+def mast_food_lift(mast, floor, mx, my, lower, upper):
+    """Recess the two service openings and shared food car into the mast."""
+    bpy.context.view_layer.update()
+    # The shaft opens through the forward side, while the remaining cylindrical
+    # wall and the three inner liners carry the rest of the mast envelope.
+    open_volume_slot(mast,mx-1.50,mx+.52,my-.60,my+.60,lower+.68,upper+1.82)
+    mast['sunny_rail']=True
+    open_plan_slot(floor,mx-1.07,mx+.50,my-.56,my+.56)
+    bottom=lower+.90;top=upper+.90;span=top-bottom
+    # Enclosed shaft backing and side walls; collision follows their faces.
+    for name,pos,size in (
+        ('back',(mx+.50,my,(bottom+top+1.0)/2),(.07,1.2,span+1.0)),
+        ('sideL',(mx-.30,my-.59,(bottom+top+1.0)/2),(1.60,.07,span+1.0)),
+        ('sideR',(mx-.30,my+.59,(bottom+top+1.0)/2),(1.60,.07,span+1.0)),
+        ('between',(mx-1.25,my,(lower+1.90+upper+.65)/2),(.08,1.20,upper+.65-(lower+1.90)))):
+        obj=box('FoodLift_shaft_'+name,pos,size,'darkwood');obj['sunny_obstacle']=True;obj['sunny_rail']=True
+    for side in (-1,1):
+        pole('FoodLift_guide%d'%side,(mx+.33,my+side*.48,bottom-.05),
+             (mx+.33,my+side*.48,top+1.15),.035,'gold')
+    for z in (lower,upper):
+        for side in (-1,1):
+            box('FoodLift_frame_side',(mx-1.27,my+side*.62,z+1.31),(.12,.12,1.32),'timber')
+        box('FoodLift_frame_top',(mx-1.27,my,z+1.97),(.12,1.36,.12),'timber')
+        box('FoodLift_call',(mx-1.31,my+.78,z+1.05),(.09,.20,.20),'gold')
+        text('FoodLift_call_label','E  LIFT',(mx-1.37,my+.78,z+1.32),.15,'white',(math.pi/2,0,-math.pi/2))
+    # The platform and its low back/side lips travel together in one shaft.
+    for name,pos,size in (
+        ('car',(mx-.25,my,bottom),(1.45,1.04,.08)),
+        ('car_back',(mx+.43,my,bottom+.23),(.08,1.04,.42)),
+        ('car_left',(mx-.25,my-.48,bottom+.16),(1.45,.06,.28)),
+        ('car_right',(mx-.25,my+.48,bottom+.16),(1.45,.06,.28))):
+        part=box('FoodLift_'+name,pos,size,'timber')
+        part['sunny_dynamic']=True;part['sunny_food_lift']=True
+    # Small wine cupboard belongs to the lower mast, below the service sill.
+    box('FoodLift_wine_back',(mx-1.20,my,lower+.36),(.08,1.10,.62),'darkwood')
+    for z in (lower+.10,lower+.65):box('FoodLift_wine_shelf',(mx-1.32,my,z),(.35,1.10,.06),'timber')
+    for i in range(5):
+        pole('FoodLift_wine%d'%i,(mx-1.30,my-.42+i*.21,lower+.15),(mx-1.30,my-.42+i*.21,lower+.43),.045,'red')
+    return dict(centre=[mx,my],bottom=bottom,top=top,travel=span,
+                calls=[[mx-1.48,my,lower],[mx-1.48,my,upper]],
+                opening=[mx-1.50,mx+.52,my-.60,my+.60],reference='R10/R11 mast service lift; reconstructed dimensions')
+
+
 # --------------------------------------------------------------------------
 # hull fitting in final metre space
 # --------------------------------------------------------------------------
@@ -1211,7 +1254,8 @@ def build_interiors(objects, vertex_bbox, shift, aft_snapshot=None):
     original_shutters=[o for o in objects if o.name.startswith('Sunny_Dock1_shutter')]
     if len(original_shutters)!=2:
         raise RuntimeError('expected the two retained Dock mouth stations')
-    mouth_y=sorted(sum((o.matrix_world@Vector(v)).y for v in o.bound_box)/8 for o in original_shutters)
+    mouth_stations=sorted(((sum((o.matrix_world@Vector(v)).y for v in o.bound_box)/8,
+                            sum((o.matrix_world@Vector(v)).z for v in o.bound_box)/8) for o in original_shutters))
     dock_bed=B1-6.0
     dock_water=B1-4.7
     waiting_floor=dock_water+.45
@@ -1219,8 +1263,16 @@ def build_interiors(objects, vertex_bbox, shift, aft_snapshot=None):
     portal_height=2.85
     # Two actual transverse floor slots continue the chamber to the retained
     # mouths.  The replacement dock_bed and side walls below carry the water.
-    for end in mouth_y:
-        open_plan_slot(b1_floor,dcentre[0]-2.4,dcentre[0]+2.4,min(cy,end),max(cy,end))
+    from sunny_dock_transition import rings,subtract_frustum,make_shell,make_water
+    outlet_sections=[]
+    for end,mouth_z in mouth_stations:
+        direction=-1 if end<cy else 1
+        start=cy+direction*(turn_r-.12)
+        sections=rings(dcentre[0],start,end-direction*.10,dock_bed,dock_roof,mouth_z,7.64)
+        outlet_sections.append(sections)
+        for a,b in zip(sections,sections[1:]):
+            subtract_frustum(b1_floor,a,b)
+            subtract_frustum(b1_ceiling,a,b)
     bed_disk=pole('Dock_water_bed',(dcentre[0],cy,dock_bed-.18),(dcentre[0],cy,dock_bed),turn_r,'timber',sides=64)
     bed_disk['sunny_walkable']=True
     centre_wall=dock_water_annulus('Dock_centre_wall',dcentre,2.12,2.30,dock_bed,waiting_floor-.06)
@@ -1231,19 +1283,19 @@ def build_interiors(objects, vertex_bbox, shift, aft_snapshot=None):
     # Small physical sections follow the actual circular chamber edge.
     for j in range(96):
         a=(j+.5)*math.tau/96
-        if abs(math.cos(a))*turn_r < 2.55:
+        if abs(math.cos(a))*turn_r < 2.95:
             continue
         point=(dcentre[0]+turn_r*math.cos(a),cy+turn_r*math.sin(a),dock_bed)
         rbox('Dock_outer_wall%d'%j,point,a+math.pi/2,(turn_r*math.tau/96+.03,.18,dock_roof-dock_bed),'timber',
              (0,0,(dock_roof-dock_bed)/2))
-    for side,end in enumerate(mouth_y):
+    for side,(end,mouth_z) in enumerate(mouth_stations):
         direction=-1 if end<cy else 1
         start=cy+direction*(turn_r-.12)
         length=abs(end-start)
         mid=(start+end)/2
         rbox('Dock_outlet%d_bed'%side,(dcentre[0],mid,dock_bed),0,(4.8,length,.18),'timber',(0,0,-.09),walkable=True)
-        rbox('Dock_outlet%d_water'%side,(dcentre[0],mid,dock_bed),0,(4.77,length+.04,dock_water-dock_bed-.02),'tankwater',
-             (0,0,(dock_water-dock_bed+.02)/2),obstacle=False)
+        make_water('Dock_outlet%d_water'%side,outlet_sections[side],dock_water)
+        make_shell('Dock_outlet%d_round_shell'%side,outlet_sections[side])
         for sign in (-1,1):
             rail=pole('Dock_outlet%d_guide%d'%(side,sign),
                       (dcentre[0]+sign*1.70,start+direction*.22,dock_water+.10),
@@ -1257,11 +1309,6 @@ def build_interiors(objects, vertex_bbox, shift, aft_snapshot=None):
                 post=pole('Dock_outlet%d_guide_post%d_%d'%(side,sign,j),
                           (dcentre[0]+sign*1.70,yy,dock_bed),(dcentre[0]+sign*1.70,yy,dock_water+.10),.035,'darkwood')
                 post['sunny_rail']=True;post['sunny_obstacle']=True
-            wall_x=dcentre[0]+sign*2.48
-            rbox('Dock_outlet%d_wall%d_base'%(side,sign),(wall_x,mid,dock_bed),0,(.16,length,B1-dock_bed),'timber',
-                 (0,0,(B1-dock_bed)/2))
-            wall_run('Dock_outlet%d_wall%d_upper'%(side,sign),(wall_x,mid,B1),math.pi/2,length,dock_roof-B1,
-                     key='timber',thickness=.16)
     waiting=pole('Dock_turntable_deck',(dcentre[0],cy,waiting_floor-.16),(dcentre[0],cy,waiting_floor),2.30,'deck',sides=64)
     waiting['sunny_walkable']=True
     pole('Dock_centre_support',(dcentre[0],cy,dock_bed),(dcentre[0],cy,waiting_floor-.16),.38,'darkwood',sides=24)['sunny_obstacle']=True
@@ -1510,18 +1557,10 @@ def build_interiors(objects, vertex_bbox, shift, aft_snapshot=None):
     armchair('Aquarium_armchair', (aq[0] + 1.4, f.y(-1.2), F1), math.pi / 2)
     # The main mast continues through the lounge to the kitchen above.
     # Exterior-visible structural extension must join the actual enlarged mast.
-    # A volume cut on the newly created pole used its unevaluated identity
-    # matrix, baking a free-standing cylinder at the origin into the export.
     ma, mb = vertex_bbox(next(o for o in objects if o.name == 'Cylinder007'))
     mx, my = (ma.x+mb.x)/2, (ma.y+mb.y)/2
     mast=pole('InteriorMainMast',(mx,my,F1),(mx,my,ma.z+.025),(mb.y-ma.y)/2,'darkwood',sides=20)
     mast['sunny_obstacle']=True
-    bpy.context.view_layer.update()
-    open_volume_slot(mast,15.5,16.65,cy-.62,cy+.62,F1+.55,F1+2.3)
-    dumbwaiter('Aquarium_dumbwaiter',(16.05,cy,F1),math.pi/2,4.2)
-    shelf_unit('Aquarium_mast_cupboard',(15.95,cy,F1),math.pi/2,1.05,.35,.72,2)
-    for i in range(5):
-        pole('Aquarium_wine%d'%i,(15.8,cy-.4+i*.2,F1+.15),(15.8,cy-.4+i*.2,F1+.42),.045,'red')
     # "the aquarium surrounds the whole room and functions as a ceiling for a
     # passageway behind it" - a service passage under the tank, and the ladder
     # down to the Energy Room at the back of the room.
@@ -1540,6 +1579,7 @@ def build_interiors(objects, vertex_bbox, shift, aft_snapshot=None):
     plan_floor('InteriorFloor_F2_fore', women_outline, F2F)
     F2A = level_of['F2A']
     dining_floor = rect_floor('InteriorFloor_F2_aft', f, 3.2, 10.6, -6.0, 7.2, LEVEL_F2A)
+    food_lift=mast_food_lift(mast,dining_floor,mx,my,F1,F2A)
 
     curved_fore_lining('ForeF2_shell',women_outline,F2F,2.80)
     wc=plan_floor('ForeF2_ceiling',women_outline,F2F+2.80)
@@ -1640,7 +1680,6 @@ def build_interiors(objects, vertex_bbox, shift, aft_snapshot=None):
     stove('Kitchen_stove',(18.7,cy+10.0,F2A))
     fridge('Kitchen_fridge',(13.5,cy+1.9,F2A),math.pi/2)
     sink('Kitchen_sink',(13.0,cy+10.0,F2A))
-    dumbwaiter('Kitchen_dumbwaiter',(16.05,cy,F2A),math.pi/2,3.0)
     rooms.append(dict(level='F2A',name='Kitchen',x=(aft[0],rear),y=(cy,13.5)))
     wall_run('RoomPartition_pantry_sickbay',(rear,cy,F2A),math.pi/2,25.0,3.1,
              openings=((-5.0,1.15,2.25),(5.0,1.15,2.25)),thickness=.18)
@@ -1768,7 +1807,7 @@ def build_interiors(objects, vertex_bbox, shift, aft_snapshot=None):
         ('F2F', 'Women Port Cannon Closet', w[0], w[1], wy_[0]-3.0, wy_[0]-1.55)):
         rooms.append(dict(level=level, name=name, x=(x0,x1), y=(y0,y1)))
     return {
-        'dockCentre':[dcentre[0],cy,B1], 'dockSolids':dock_solids, 'dockWaterLevel':dock_water,
+        'dockCentre':[dcentre[0],cy,B1], 'dockSolids':dock_solids, 'dockWaterLevel':dock_water, 'foodLift':food_lift,
         'levels': level_of,
         'aftEnclosures': [aft_enclosure],
         'foreTrimVolumes': [dict(level=level, outline=outline, bottom=bottom, top=top)

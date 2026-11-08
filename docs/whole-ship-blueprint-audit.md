@@ -2,7 +2,7 @@
 
 ## Current checkpoint — November 3, 2026
 
-**C03 is verified and applied locally; C04 is next.** The original C03 finding and scoped receipt are in [completed repairs](completed-repairs.md). Independent final review remains pending. C01 and C02 remain archived there.
+**C03 is reopened after independent review; C04 is in progress but must follow its correction.** The prior C03 receipt is historical: the current straight narrow rectangular outlet fails the required arched transition to the full round mouth. Independent final review remains pending. C01 and C02 remain archived there.
 
 **Current batch:** this exact `gpt-6.1-terra` High chat is completing **C04 after C03**, one repair at a time. Verify and confirm each in the actual ship before removing its pending audit instructions and archiving its receipt. After C04, provide the coordinator a stable package for independent review and final verified commit; the coordinator will notify Sukhjot. All other remaining IDs stay pending for later. See [the concrete handoff](next-repair-handoff.md).
 
@@ -14,6 +14,7 @@ Preserve the original FBX, useful source hull, realistic exterior/interior/water
 
 | ID | Status | Current work, dependency or evidence |
 |---|---|---|
+| C03 | reopened | Replace the narrow rectangular trench with a reference-derived rounded channel and physical transition into each full retained circular mouth; verify exported cross-sections, collision, water and fresh framed views before acceptance. |
 | UI01 (new user request) | verified done | Actual controls/focused six inspected images + full18/18 suites/build PASS; all76 inputs unchanged. [Receipt](review/cannon-ui-verification.json). |
 | C04 | queued after C03 | Same fresh Terra High chat, only after C03 is verified: integrate Aquarium/Kitchen service lift and wine cupboard into the retained mainmast from R10/R11. Verify/apply/archive, then notify Sukhjot and stop the batch. |
 | C05 | paused | Original finding/evidence below; outside the requested C03/C04 batch; retain for later continuation. Preserved partial materials remain subject to their own verification. |

@@ -718,6 +718,16 @@ def rolling_dock(objects,bounds,cy,outline,b1,roof):
         x,y,z=p
         # One aperture axis across both outer panels and their hull lining.
         for obj in objects:
+            if obj.name in ('Box006','Box007','Box050') or obj.name.startswith(('Sunny_Lawn','Sunny_Lawn_edging')):
+                # Original outboard blocks and lawn edging overlap the new
+                # crown; retain their outside surfaces and clear the actual
+                # volume occupied by the rounded shell.
+                lo,hi=bounds(obj)
+                if (direction<0 and lo.y<cy) or (direction>0 and hi.y>cy):
+                    from sunny_dock_transition import rings,subtract_frustum
+                    start=cy+direction*(7.8-.12)
+                    sections=rings(x,start,y-direction*.10,b1-6.0,roof,z,radius-.16)
+                    for a,b in zip(sections,sections[1:]):subtract_frustum(obj,a,b)
             if obj.name in ('Tube005','Tube009','Line004','Line007','Line002','Box118','Box119','Box121'):
                 # The imported red/white scroll has inner skins almost six
                 # metres behind its outer face. A shallow cut left their old
@@ -726,11 +736,12 @@ def rolling_dock(objects,bounds,cy,outline,b1,roof):
                 depth = (y-3.0, y+3.0) if obj.name == 'Line002' else (lo.y-.01, hi.y+.01)
                 circular_cut(obj,p,radius,1,*depth,32)
                 if obj.name == 'Line002':
-                    # Continue the real wet tunnel through the retained native
-                    # hull between the turntable edge and its mouth, while
-                    # leaving the remainder of the outer hull untouched.
+                    # Cut the same rounded, expanding channel from the native
+                    # hull that the authored timber shell actually occupies.
+                    from sunny_dock_transition import rings,subtract_frustum
                     start=cy+direction*(7.8-.12)
-                    open_volume_slot(obj,x-2.4,x+2.4,min(start,y),max(start,y),b1-6.0,roof)
+                    sections=rings(x,start,y-direction*.10,b1-6.0,roof,z,radius-.16)
+                    for a,b in zip(sections,sections[1:]):subtract_frustum(obj,a,b)
         # Cut the independently authored B1 lining through the same aperture.
         for obj in list(objects):
             if not obj.name.startswith('Sunny_InteriorWall_B1_'):
@@ -798,10 +809,64 @@ def rolling_dock(objects,bounds,cy,outline,b1,roof):
     return result
 
 
-def dock_stair_clearance(objects, bounds, b1):
+def dock_stair_clearance(objects, bounds, b1, f1, cy):
     """Cut real standing headroom through the new outlet wall at the existing stair."""
     treads=[o for o in objects if o.name.startswith(('Sunny_SoldierDockStair_up_tread','Sunny_SoldierDockStair_over_tread'))]
     for wall in objects:
+        if wall.name.startswith('Sunny_Dock_outlet') and wall.name.endswith('_round_shell'):
+            lo,hi=bounds(wall)
+            # Fit stepped body-height openings only where each existing flight
+            # intersects the new shell. The wet retaining portion stays intact.
+            for flight in ('up','over'):
+                group=[o for o in treads if o.name.startswith('Sunny_SoldierDockStair_'+flight+'_tread')]
+                group.sort(key=lambda o:int(o.name.rsplit('tread',1)[1]))
+                for index in range(0,len(group),4):
+                    parts=[bounds(o) for o in group[index:index+4]]
+                    xlo=min(a.x for a,b in parts)-.72;xhi=max(b.x for a,b in parts)+.72
+                    ylo=min(a.y for a,b in parts)-.36;yhi=max(b.y for a,b in parts)+.36
+                    zlo=min(b.z for a,b in parts)-.20;zhi=max(b.z for a,b in parts)+1.82
+                    if xhi<lo.x or xlo>hi.x or yhi<lo.y or ylo>hi.y or zhi<lo.z or zlo>hi.z:continue
+                    open_volume_slot(wall,xlo,xhi,ylo,yhi,zlo,zhi)
+            # The retained exterior aft flights cross the new crown close to
+            # the lawn. Keep their actual treads and fit the same body-height
+            # clearance around them rather than deleting source stairs.
+            for low,high in ((8,28),(29,49)):
+                aft=[o for o in objects if o.get('sunny_stair') and o.name.startswith('Box')
+                     and o.name[3:].split('.')[0].isdigit() and low<=int(o.name[3:].split('.')[0])<=high]
+                aft.sort(key=lambda o:bounds(o)[1].z)
+                if not aft:continue
+                firstlo,firsthi=bounds(aft[0])
+                firstx=(firstlo.x+firsthi.x)/2;firsty=(firstlo.y+firsthi.y)/2
+                inward=firsty-math.copysign(3.5 if firsty>cy else 2.5,firsty-cy)
+                # The crown crosses the former lawn approach. A small, real
+                # supported landing connects the preserved first tread to the
+                # remaining lawn outside the channel shell.
+                xlo=firstx-1.15;xhi=firstx+4.5
+                ylo=min(firstlo.y,inward)-.55;yhi=max(firsthi.y,inward)+.55
+                if not (xhi<lo.x or xlo>hi.x or yhi<lo.y or ylo>hi.y):
+                    open_volume_slot(wall,xlo,xhi,ylo,yhi,f1-.22,f1+2.05)
+                    landing=box('Dock_aft_stair_landing',((xlo+xhi)/2,(ylo+yhi)/2,f1-.07),
+                                (xhi-xlo,yhi-ylo,.14),'timber',walkable=True)
+                    landing['sunny_stair_access']=True
+                for index in range(0,len(aft),4):
+                    parts=[bounds(o) for o in aft[index:index+4]]
+                    xlo=min(a.x for a,b in parts)-.72;xhi=max(b.x for a,b in parts)+.72
+                    ylo=min(a.y for a,b in parts)-.36;yhi=max(b.y for a,b in parts)+.36
+                    zlo=min(b.z for a,b in parts)-.20;zhi=max(b.z for a,b in parts)+1.82
+                    if xhi<lo.x or xlo>hi.x or yhi<lo.y or ylo>hi.y or zhi<lo.z or zlo>hi.z:continue
+                    open_volume_slot(wall,xlo,xhi,ylo,yhi,zlo,zhi)
+            if lo.y>cy:
+                # Close the channel-facing side of the retained lower Dock
+                # stairwell without crossing its body-width stair passage.
+                extents=[bounds(o) for o in treads]
+                if extents:
+                    xlo=min(a.x for a,b in extents)-.10;xhi=max(b.x for a,b in extents)+.10
+                    edge=max(b.y for a,b in extents)+.42
+                    screen=box('Dock_stairwell_screen',((xlo+xhi)/2,edge,(b1+f1-.10)/2),
+                               (xhi-xlo,.12,f1-.10-b1),'timber',obstacle=True)
+                    screen['sunny_rail']=True
+            wall['sunny_rail']=True
+            continue
         if not (wall.name.startswith('Sunny_Dock_outer_wall') or
                 (wall.name.startswith('Sunny_Dock_outlet') and '_upper_' in wall.name)):
             continue
@@ -2448,7 +2513,7 @@ def apply_exterior_accuracy(objects, bounds, frame, interiors):
     controls=helm_controls(objects,bounds)
     original_b1_outline=next(v['outline'] for v in interiors['foreTrimVolumes'] if v['level']=='B1')
     docks=rolling_dock(objects,bounds,frame.y(.585),original_b1_outline,interiors['levels']['B1'],interiors['levels']['F1']-.18)
-    dock_stair_clearance(objects,bounds,interiors['levels']['B1'])
+    dock_stair_clearance(objects,bounds,interiors['levels']['B1'],interiors['levels']['F1'],interiors['dockCentre'][1])
     lookout(objects,bounds)
     swept_mane(objects,bounds)
     lion_face(objects,bounds)

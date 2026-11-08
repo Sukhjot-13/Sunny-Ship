@@ -2,7 +2,7 @@
 export const CHANNELS=['Shiro Mokuba I','Mini Merry II','Shark Submerge III','Kurosai FR-U IV','Brachio Tank V','Inflatable Pool']
 export const LOG_BEARINGS=[35,145,285]
 export const BURST={seconds:6,height:32,range:240,cost:3}
-const initial=()=>({heading:270,throttle:0,speed:0,east:0,south:0,helm:false,channel:1,dockOpen:false,shutter:0,dockAngle:0,logNeedle:0,cola:3,burst:0,lift:0,pitch:0,wheel:0,chicken:false,maneAngle:0,jawOpen:false,jaw:0,gaon:0,paddleAngle:0})
+const initial=()=>({heading:270,throttle:0,speed:0,east:0,south:0,helm:false,channel:1,dockOpen:false,shutter:0,dockAngle:0,logNeedle:0,cola:3,burst:0,lift:0,pitch:0,wheel:0,chicken:false,maneAngle:0,jawOpen:false,jaw:0,gaon:0,paddleAngle:0,foodLift:0,foodLiftTarget:0})
 export const voyage=initial()
 const RAD=Math.PI/180
 export function resetVoyage(){Object.assign(voyage,initial())}
@@ -69,6 +69,8 @@ export function advanceVoyage(dt,keys={},dockOccupied=false,shutterOccupied=fals
  if(opening||!shutterOccupied)voyage.shutter=Math.max(0,Math.min(1,voyage.shutter+(opening?1:-1)*dt*.45))
  if(!dockOccupied&&voyage.shutter<.001)voyage.dockAngle+=(target-voyage.dockAngle)*Math.min(1,dt*1.8)
  advanceCannon(dt)
+ voyage.foodLift+=(((voyage.foodLiftTarget>0)?1:0)-voyage.foodLift)*Math.min(1,dt*2.2)
+ if(Math.abs(voyage.foodLift-voyage.foodLiftTarget)<.001)voyage.foodLift=voyage.foodLiftTarget>0?1:0
  if(voyage.chicken)voyage.maneAngle=(voyage.maneAngle+dt*2.4)%(Math.PI*2)
  let distance
  if(voyage.burst>0){

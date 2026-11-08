@@ -1,3 +1,3 @@
 # Current repair handoff
 
-C01–C03 are verified locally and archived in [completed repairs](completed-repairs.md). C04 is next; follow [the handoff](next-repair-handoff.md) and [sole audit](whole-ship-blueprint-audit.md). Independent final review remains pending. Do not begin C05.
+C03 is reopened for the rounded channel and full-mouth transition; C04 is incomplete in the working tree. Follow the [current handoff](next-repair-handoff.md) and [sole audit](whole-ship-blueprint-audit.md). Do not begin C05.
