@@ -9,6 +9,7 @@ import {EYE_HEIGHT_M} from '../src/config/shipConfig.js'
 import {normalizeClimbs,pointAt} from '../src/systems/climbing.js'
 import {ladderJourney} from './ladderJourney.mjs'
 
+const selected=name=>!process.env.ACCESS_FILTER||name.includes(process.env.ACCESS_FILTER)
 const plan=roomRoutes(),meshes=loadColliders('public/models/sunny.glb')
 const meta=JSON.parse(fs.readFileSync('public/models/ship-metadata.json'))
 const trace=[],errors=[],sleep=ms=>new Promise(r=>setTimeout(r,ms))
@@ -57,7 +58,7 @@ try{
   assert(result.climbed,name+' '+(descending?'descent':'ascent')+' failed')
   assert((await read()).r===0,name+' used recovery');trace.push({label:name+(descending?' descent':' ascent'),...result})
  }
- for(const name of ['Fore Port Toilet','Fore Starboard Toilet']){
+ for(const name of ['Fore Port Toilet','Fore Starboard Toilet'].filter(selected)){
   const route=plan.routes.find(r=>r.name===name);assert(route?.ok,name+' is disconnected')
   const outward=await to(name+' outside → inside',route.target)
   assert(Math.abs((await read()).p[1]-meta.interiors.levels.F1)<.15,'toilet remains on lawn level')
@@ -71,15 +72,15 @@ try{
  // The sourced Aquarium connection is now a real small gallery ladder hatch.
  // Preserve its entire descent/ascent/closure and outside return coverage.
  const ladders=normalizeClimbs(meta.exterior.mechanisms.climbs).filter(p=>p.id!=='fore-lookout')
- assert.equal(ladders.length,2,'both small reference ladder connections are required')
- for(const ladder of ladders){
- const stern=ladder.id==='stern-library-ladder',id=ladder.hatch
- await flight('aft port')
+ assert.equal(ladders.length,3,'R13 gallery/stern and R14 central Dock ladder connections are required')
+ for(const ladder of ladders.filter(p=>selected(p.id))){
+ const stern=ladder.id==='stern-library-ladder',dock=ladder.id==='dock-waiting-ladder',id=ladder.hatch
+ if(!dock)await flight('aft port')
  if(stern)await flight('garden port')
  const upper=pointAt(ladder,ladder.length),ladderApproach=await to(ladder.label+' upper landing',upper,id)
  await ladderJourney(page,ladder,{descending:true,trace})
  assert(Math.abs((await read()).p[1]-ladder.points[0][1])<.15,'ladder reaches its real lower walking floor')
- const lowerExcursion=await to(ladder.label+' lower floor excursion',[ladder.points[0][0]+.4,ladder.points[0][1],ladder.points[0][2]-1.0],id)
+ const lowerExcursion=await to(ladder.label+' lower floor excursion',dock?[ladder.points[0][0]+.2,ladder.points[0][1],ladder.points[0][2]-.45]:[ladder.points[0][0]+.4,ladder.points[0][1],ladder.points[0][2]-1.0],id)
  await walk(ladder.label+' walking return to ladder',lowerExcursion.toReversed(),id)
  assert(await driveTo(page,pointAt(ladder,0),.10),'actual lower endpoint after floor excursion')
  await ladderJourney(page,ladder,{trace,closedStop:true})
@@ -93,40 +94,14 @@ try{
  assert.equal(await page.evaluate(()=>window.__sunny.climbing),null,'standing at completed upper endpoint releases to walking')
  await walk(ladder.label+' return along upper walking approach',ladderApproach.toReversed(),id)
  if(stern)await flight('garden port',true)
- await flight('aft port',true);await to(ladder.label+' continuous return to spawn',plan.spawn,id)
- }
- for(const [id,stem] of [['SoldierDockHatch','SoldierDockStair_over']]){
-  const h=meta.interiors.doors.find(d=>d.id===id),exit=meshes.find(m=>m.name==='Sunny_'+stem.replace(/_over$/,'')+'_exit')
-  assert(h&&exit,id+' actual hatch and adjacent landing are required')
-  if(id!=='SoldierDockHatch')await flight('aft port')
-  if(id==='KitchenHatch')await flight('garden port')
-  const landing=[(exit.min.x+exit.max.x)/2,exit.max.y,(exit.min.z+exit.max.z)/2]
-  const approach=await to(id+' adjacent exit landing',landing,id);await sleep(180)
-  if((await read()).doors[id].latched)await toggle(id,false)
-  assert((await read()).doors[id].openness<.05,id+' stays shut until actual E')
-  await toggle(id,true)
-  const treads=meshes.filter(m=>m.name.startsWith('Sunny_'+stem+'_tread')).sort((a,b)=>b.max.y-a.max.y)
-  const tread=treads[7];assert(tread,id+' needs upper-flight treads')
-  const target=[(tread.min.x+tread.max.x)/2,tread.max.y,(tread.min.z+tread.max.z)/2]
-  const down=await to(id+' through opening to real upper treads',target)
-  assert((await read()).p[1]<h.pos[2]-.45,id+' descended below the lid')
-  const next=treads[9]
-  await view([(next.min.x+next.max.x)/2,next.max.y,(next.min.z+next.max.z)/2])
-  await page.screenshot({path:'docs/review/walk-'+id+'-descent.png'})
-  await walk(id+' upper treads → exit landing',down.toReversed())
-  await toggle(id,false)
-  await view([h.pos[0],h.pos[2],-h.pos[1]])
-  await page.screenshot({path:'docs/review/walk-'+id+'-return.png'})
-  if(id!=='SoldierDockHatch')await walk(id+' return to outside stair landing',approach.toReversed(),id)
-  if(id==='KitchenHatch')await flight('garden port',true)
-  if(id!=='SoldierDockHatch')await flight('aft port',true)
-  await to(id+' continuous return to original spawn',plan.spawn,id)
+ if(!dock)await flight('aft port',true)
+ await to(ladder.label+' continuous return to spawn',plan.spawn,id)
  }
  assert.deepEqual(errors,[])
- console.log('PASS both outdoor toilet thresholds, both reference ladder full descents/ascents/closures and Soldier Dock stair-hatch descent/return; real W/E, no placement/flight/recovery')
+ console.log('PASS',process.env.ACCESS_FILTER??'both outdoor toilet thresholds and all three sourced ladders','full descents/ascents/closures and lawn returns; real W/E, no placement/flight/recovery')
 }catch(e){
  const page=(await browser.pages()).at(-1)
  trace.push({failure:e.message});await page?.screenshot({path:'docs/review/stall-Exterior-access.png'});throw e
 }finally{
- fs.writeFileSync('docs/review/exterior-access-journeys.json',JSON.stringify({trace,errors},null,2));await browser.close()
+ fs.writeFileSync('docs/review/exterior-access-journeys.json',JSON.stringify({filter:process.env.ACCESS_FILTER??null,trace,errors},null,2));await browser.close()
 }

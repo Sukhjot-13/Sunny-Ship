@@ -31,6 +31,12 @@ const views=[
  ['slide',[0,lawn+5,-22],[6,lawn+3,-12.5],'R04/R13'],
  ['swing',[-2,lawn+4,18],[6,lawn+2,10],'R04/R13'],
 ]
+const dockHatch=meta.interiors.doors.find(d=>d.id==='DockLadderHatch')
+if(dockHatch){
+ const [hx,hy,hz]=dockHatch.pos
+ views.push(['lawn-hatch',[hx+2.4,hz+2.1,-hy+1.3],[hx,hz,-hy],'R04/R14'])
+ views.push(['restored-lawn',[-4.5,lawn+2.2,-5],[-3.5,lawn,-8.8],'R04/R14'])
+}
 for(const id of ['ForeDoor','WomensDoor','AquariumDoor','DiningEntrance','KitchenEntrance','LibraryDoor']){
  const spec=meta.interiors.doors.find(d=>d.id===id),[x,y,z]=spec.pos,normal=[-Math.sin(spec.rot),0,-Math.cos(spec.rot)]
  const target=[x,z+1.2,-y],fore=['ForeDoor','WomensDoor'].includes(id),close=['DiningEntrance','KitchenEntrance'].includes(id)

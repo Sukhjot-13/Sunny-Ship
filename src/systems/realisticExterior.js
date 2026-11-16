@@ -127,7 +127,7 @@ export function usesRealisticExterior(tags,name){
  if(!tags.sunny_uv_space)return false
  if(!name.startsWith('Sunny_'))return true
  if(name.startsWith('Sunny_Library_lining_glass'))return true
- return outdoorFeatures.test(tags.sunny_feature??'')||/Sunny_(?:Door|Hatch)_(?:WomensDoor|ForeDoor|ForeToiletDoor|AquariumDoor|DiningEntrance|KitchenEntrance|PantryOutsideDoor|SickOutsideDoor|LibraryDoor|SternAccessDoor|CrowNestHatch|KitchenHatch|SoldierDockHatch)/.test(name)
+ return outdoorFeatures.test(tags.sunny_feature??'')||/Sunny_(?:Door|Hatch)_(?:WomensDoor|ForeDoor|ForeToiletDoor|AquariumDoor|DiningEntrance|KitchenEntrance|PantryOutsideDoor|SickOutsideDoor|LibraryDoor|SternAccessDoor|CrowNestHatch|KitchenHatch|DockLadderHatch)/.test(name)
 }
 
 /** Surface identity comes from material and fitting context, never random colour. */

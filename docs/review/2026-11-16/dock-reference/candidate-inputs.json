@@ -1,0 +1,23 @@
+{
+  "tools/collision_glb.py": "a4a52aeb2bd32ce6c0196579e8f9f69ca987103a91b0452505473d4d32f40e4a",
+  "tools/dock_channel_profile.py": "02f8efc6afc5e456e16770439008e7bed5bdcb0a4d089a6c81eda058aaeca72d",
+  "tools/sunny_interiors.py": "669d2097109609a1ff3789067d916f80a59241ea4e2effe821bdbd2b490db54d",
+  "tools/sunny_fore_trim.py": "dfe835a91b71eb9e88e8f8e45348db959759cb08a8d6f0a37de7703b3646372b",
+  "tools/sunny_room_details.py": "f6c7281f68fecd4c20f619f8d640dc19d174670c50e63523660c8fee33d2312a",
+  "tools/sunny_exterior.py": "f98a1fe07b01c18f5910f51943a5049166f23204621c3b36faf08cdba7fb83b9",
+  "tools/sunny_uv.py": "3a6859aff0a4b72874871fdedc005256993f43d78346e2acc6b2a8a1ec8ee644",
+  "tools/sunny_room_accuracy.py": "e79a49b54309be182147af39d9f28656248df00fa78314d1d4a82a059ca57344",
+  "tools/build_assets.py": "ee823609c19c7e749f56f6fb58918617bbd28b66d35b8b14b29be3546da507e8",
+  "tools/sunny_aft_envelope.py": "5eba3ccbc23ee2f9d15a8c145c40cf89c2c3de48cab403df493be5e29c7e0546",
+  "tools/sunny_details.py": "8718ad8b88303c1ee919e55a66d1e22126f97c8dc03e4e3baa12d49b3343f19b",
+  "tools/sunny_accuracy.py": "433b7fadc95cb280869949c9450cb9e0378b72ca1fabae47fbc39e189686ca28",
+  "tools/exterior_plates.py": "8098db6764f900e28da2a47936524b13d1ab6a9c2d12c3123e5bb3576eef6ff7",
+  "tools/sunny_dock_transition.py": "2b868d5411cae70a77d3d219b4eb4e1b99c98addb25f87a38763e7d870d7784a",
+  "tools/export_reference_scale.py": "4cf5d2989f2757a7a066728d5a11f86e52ba86e99a4bb5923974bd73e52160ae",
+  "tools/sunny_reference_exterior.py": "659d06d70538292f43889a0aa4e42cc4b9d025a214c156ff7d41a74181c79636",
+  "tools/sunny_surfaces.py": "f36046b6b77b24065eb740e68fcbbf6e9dc225c4414da980316a5ea59ec7ceb0",
+  "/private/tmp/sunny-reference-dock-candidate/sunny-master.blend": "fc9fed8071c083f651ab3d5374987ca76bb6eab0cc49aa92c80b7b70e878db5a",
+  "/private/tmp/sunny-reference-dock-candidate/sunny.glb": "97dceb0684417b5f4223541c5d5b71afa9cba2c25ac91563a61d899fb8a6c1d7",
+  "/private/tmp/sunny-reference-dock-candidate/sunny-collision.glb": "6459052aa913dc8ab0af69ea2582915055578f5c3be9d3a051662c992b52ddb8",
+  "/private/tmp/sunny-reference-dock-candidate/ship-metadata.json": "cfbad50770e09fabed8be3f87af335e131c4e4115c7f0a1a56b91a59d76d3aa2"
+}

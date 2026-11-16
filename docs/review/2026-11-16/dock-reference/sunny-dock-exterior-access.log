@@ -1,0 +1,23 @@
+PASS Fore Port Toilet outside → inside [ -15.597526111925145, -40.55070114135742, 3.86361632733044 ]
+PASS Fore Port Toilet inside → lawn [ -4.225319243371092, -40.55070114135742, -1.0219854367310242 ]
+PASS Fore Port Toilet return to original spawn [ -4.225282840983778, -40.55070114135742, -1.021953972471287 ]
+PASS Fore Starboard Toilet outside → inside [ -15.60016761611607, -40.55070114135742, -3.895494382735057 ]
+PASS Fore Starboard Toilet inside → lawn [ -4.298204470294942, -40.55070114135742, -1.0051988126140035 ]
+PASS Fore Starboard Toilet return to original spawn [ -4.298040264447094, -40.55070114135742, -1.005190057915372 ]
+PASS aft port lower exterior entrance [ 2.7996350183318186, -40.55070114135742, 12.974130940390475 ]
+node:internal/modules/run_main:111
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Aquarium gallery ladder upper landing stalled at {"target":[10.200000000000001,-35.62269973754883,12.200000000000001],"p":[9.47907081604004,-35.903602600097656,12.200000653461053],"g":true,"r":0,"near":null,"doors":{"B1_door0_0":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"B1_door1_0":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"B1_door1_1":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"B1_door2_0":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"B1_door2_1":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"WorkshopDoor":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"ForeDoor":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"ForeDoorStarboard":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"QuartersCannonDoor-1":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"QuartersCannonDoor1":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"MensWashDoor":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"AquariumDoor":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"AquariumPassageDoor":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"WomensDoor":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"WomensCannonDoor-1":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"WomensCannonDoor1":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"WomensWashDoor":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"DiningDoor":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"DiningEntrance":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"KitchenEntrance":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"PantryInDoor":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"SickDoor":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"PantryOutsideDoor":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"SickOutsideDoor":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"LibraryDoor":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"BathDoor":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"ForeToiletDoor-1":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"ForeToiletDoor1":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"AquariumHatch":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"StorageHatch":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"CrowNestHatch":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"SternAccessDoor":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"KitchenHatch":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"DockLadderHatch":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false},"BathWCDoor":{"openness":0,"target":0,"blocked":false,"holdOpen":false,"latched":false}},"blocker":null}
+    at walk (file:///Users/sukhjot/codes/Sunny-Ship/tests/exteriorAccess.mjs:38:4)
+    at async file:///Users/sukhjot/codes/Sunny-Ship/tests/exteriorAccess.mjs:79:59 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v26.12.0

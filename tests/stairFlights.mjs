@@ -97,15 +97,7 @@ export async function walkJourney(page,meshes,kind,side,{returnToLawn=true,onChe
     if(ok&&onCheckpoint)await onCheckpoint({label,recoveries:recovery,...result.result})
     return ok
   }
-  if(!approachPath&&kind==='garden'&&side==='starboard') {
-    // Walk around the lawn dock hatch and its real rail, whose position does
-    // not enlarge with the hull. The new spawn aligns with that obstruction.
-    const hatch=meshes.find(m=>m.name.startsWith('Sunny_SoldierDockHatch_leaf'))
-    const x=(hatch?.min.x??-7.1)-.8
-    if(!await waypoint('around dock hatch',[x,spawn[1],spawn[2]]))return trace
-    if(!await waypoint('clear hatch side',[x,spawn[1],tread[2]]))return trace
-  }
-  const approachX=kind==='garden'&&side==='starboard'?(meshes.find(m=>m.name.startsWith('Sunny_SoldierDockHatch_leaf'))?.min.x??-7.1)-.8:spawn[0]
+  const approachX=spawn[0]
   if(approachPath){
     for(const [i,p] of approachPath({spawn,tread}).entries())if(!await waypoint('lawn approach '+i,p))return trace
   }else if(!await waypoint('lawn approach',[approachX,spawn[1],tread[2]]))return trace

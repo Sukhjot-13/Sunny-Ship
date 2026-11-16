@@ -54,7 +54,7 @@ export function interiorTextureSet(role){
 /** Upgrade authored rooms/furniture only after the exterior classifier has declined. */
 export function usesRealisticInterior(tags,name){
  return !!tags.sunny_authored&&name.startsWith('Sunny_')&&(tags.sunny_fabric||
-  /^(?:Aquarium|B1$|Bath|Dining|AftRearWindow|AftSideWindow|Dock$|Energy|Factory|ForeF1|ForeF2|ForeToilet|Interior|Kitchen$|Kotatsu|Library$|Pantry|Quarters|RoomLamp|RoomPartition|Sick|SoldierDockStair|StorageStair|Store|Vehicle|Wash|Weapons|Womens|WWash)/.test(tags.sunny_feature??'')||
+  /^(?:Aquarium|B1$|Bath|Dining|AftRearWindow|AftSideWindow|Dock$|Energy|Factory|ForeF1|ForeF2|ForeToilet|Interior|Kitchen$|Kotatsu|Library$|Pantry|Quarters|RoomLamp|RoomPartition|Sick|StorageStair|Store|Vehicle|Wash|Weapons|Womens|WWash)/.test(tags.sunny_feature??'')||
   /^Sunny_(?:Door|Hatch)_/.test(name))
 }
 /** Retain the authored surface identity and existing patterned colour regions. */

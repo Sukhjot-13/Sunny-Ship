@@ -690,7 +690,7 @@ def door(id_, p, rot, width=1.20, height=2.25, kind='slide', sign=1,
 
 
 def hatch(id_, p, rot, size=(1.35, 1.10), lid_key='deck', rooms=(), slide_sign=1,
-          mode='slide', grille=False):
+          mode='slide', grille=False, shape='rectangle'):
     """Sliding or edge-hinged hatch with a real aperture through floor layers.
 
     Upper stair treads remain in the opening; the adjacent exit landing must be
@@ -715,20 +715,30 @@ def hatch(id_, p, rot, size=(1.35, 1.10), lid_key='deck', rooms=(), slide_sign=1
                 max(v.y for v in points) <= ylo or min(v.y for v in points) >= yhi or
                 max(v.z for v in points) <= p[2]-.25 or min(v.z for v in points) >= p[2]+.20):
             continue
-        open_volume_slot(obj, xlo, xhi, ylo, yhi, p[2]-.25, p[2]+.20)
-    for side in (-1, 1):
+        if shape=='round':
+            from sunny_accuracy import circular_cut
+            circular_cut(obj,p,w/2+.08,2,p[2]-.25,p[2]+.20,64)
+        else:
+            open_volume_slot(obj, xlo, xhi, ylo, yhi, p[2]-.25, p[2]+.20)
+    for side in (() if shape=='round' else (-1, 1)):
         rbox('Hatch_%s_frame_x%d' % (id_, side), p, rot, (0.08, d + 0.16, 0.08), 'darkwood', (side * (w / 2 + 0.04), 0, -0.04), walkable=True)
         rbox('Hatch_%s_frame_y%d' % (id_, side), p, rot, (w, 0.08, 0.08), 'darkwood', (0, side * (d / 2 + 0.04), -0.04), walkable=True)
-    lid = rbox('Hatch_%s_lid' % id_, p, rot, (w, d, 0.09), lid_key, (0, 0, -0.045))
+    if shape=='round':
+        if abs(w-d)>1e-6:raise ValueError('round hatch needs one diameter')
+        frame=ring('Hatch_%s_frame_round'%id_,L(p,rot,0,0,-.04),w/2+.04,.04,'darkwood','Z',64,12)
+        frame['sunny_walkable']=True
+        lid=pole('Hatch_%s_lid'%id_,L(p,rot,0,0,-.09),p,w/2,lid_key,sides=64)
+    else:
+        lid = rbox('Hatch_%s_lid' % id_, p, rot, (w, d, 0.09), lid_key, (0, 0, -0.045))
     lid['sunny_hatch'] = id_
     lid['sunny_access_slot'] = [xlo, xhi, ylo, yhi]
     lid['sunny_walkable'] = False
     lid['sunny_obstacle'] = False
     lid['sunny_hatch_mode'] = mode
-    for dy in (-d / 2 + 0.14, d / 2 - 0.14):
+    for dy in ((-.14,.14) if shape=='round' else (-d / 2 + 0.14, d / 2 - 0.14)):
         rbox('%s_hinge%d' % (id_, dy > 0 and 1 or 0), p, rot, (0.16, 0.24, 0.04), 'black',
-             (w / 2 if mode=='lift' else w / 2 - 0.14, dy, .015 if mode=='lift' else 0.17))
-    ring('%s_ring' % id_, L(p, rot, -w / 2 + 0.22, 0, .045 if mode=='lift' else 0.17), 0.085, 0.02, 'gold', 'Z')
+             (w / 2 if mode=='lift' else w / 2 - 0.14, dy, .015 if mode=='lift' or shape=='round' else 0.17))
+    ring('%s_ring' % id_, L(p, rot, -w / 2 + 0.22, 0, .045 if mode=='lift' or shape=='round' else 0.17), 0.085, 0.02, 'gold', 'Z')
     if grille:
         # N shows an airtight solid panel with a framed grid. Keep the seal
         # below its perimeter; no invented open grating admits rainwater.
@@ -742,7 +752,7 @@ def hatch(id_, p, rot, size=(1.35, 1.10), lid_key='deck', rooms=(), slide_sign=1
             rbox(id_+'_grille_y',p,rot,(w-.10,.025,.025),'black',(0,-d/2+d*i/4,.0125),obstacle=False)
         lid['sunny_airtight_grille'] = True
     spec = {
-        'id': id_, 'kind': 'hatch', 'mode': mode, 'rooms': list(rooms),
+        'id': id_, 'kind': 'hatch', 'mode': mode, 'shape':shape, 'rooms': list(rooms),
         'pos': [p[0], p[1], p[2]], 'rot': rot,
         'width': w, 'depth': d, 'height': 0.09, 'thickness': 0.09, 'baseOffset': -0.045,
         'slide': [-math.sin(rot) * slide_sign * (d + 0.18), math.cos(rot) * slide_sign * (d + 0.18), 0.0],

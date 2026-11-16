@@ -2,9 +2,11 @@
 
 All coordinates are final metres in Blender's X/Z cross-section. The inner
 section is a rounded, tall bay; the outer section is the actual circular C02
-clearance. Linear interpolation gives a continuous loft between stations.
+clearance. The wet bed/side width interpolate continuously; the crown stays below the lawn until the outboard mouth flare.
 """
 import math
+
+CROWN_TRANSITION_START = .75
 
 
 def section_profile(cx, bed, roof, mouth_z, mouth_radius, t, count=64):
@@ -13,16 +15,24 @@ def section_profile(cx, bed, roof, mouth_z, mouth_radius, t, count=64):
     # The bay has vertical sides, a flat wet bed and a semicircular crown.
     # Its lower half follows the bed from one side to the other. At the mouth
     # that flat bed transitions to the retained round reveal.
-    spring=roof-2.80
+    # R04/R14 combine an uninterrupted lawn with round outboard mouths.
+    # A linear rise from the bay exposed the channel roof through that lawn.
+    # Keep its arch below the deck, then flare in the last outboard quarter.
+    # This normalized transition is reconstructed; the endpoint is retained.
+    u=max(0.,min(1.,(t-CROWN_TRANSITION_START)/(1-CROWN_TRANSITION_START)))
+    crown=roof+(mouth_z+mouth_radius-roof)*(u*u*(3-2*u))
+    arch_radius=2.80+(mouth_radius-2.80)*t
+    spring=crown-arch_radius
     points=[]
     for i in range(count):
         a=math.tau*i/count
         c,s=math.cos(a),math.sin(a)
         ix=2.80*c
-        iz=spring+2.80*s if s>=0 else bed
+        iz=roof-2.80+2.80*s if s>=0 else bed
         ox=mouth_radius*c
         oz=mouth_z+mouth_radius*s
-        points.append((cx+(1-t)*ix+t*ox,(1-t)*iz+t*oz))
+        height=spring+arch_radius*s if s>=0 else (1-t)*iz+t*oz
+        points.append((cx+(1-t)*ix+t*ox,height))
     return points
 
 

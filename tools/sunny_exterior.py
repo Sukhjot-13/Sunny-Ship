@@ -1101,17 +1101,10 @@ def add_fittings(objects, vertex_bbox, frame, interiors):
                      rooms=rooms, slide_sign=slide_sign)
 
     b1 = levels['B1']
-    # The exported floor proxy has a 0.60 m underside; include it, a standing
-    # body and tread/radius overlap when locating the lower headroom boundary.
-    hatch_headroom = 2.70
-    hx, hy = -5.6, 8.8
-    run, width, gap = 4.6, 1.40, 1.50
-    sep = width + gap
-    dock_headroom_end = hx + hatch_headroom*run/((levels['F1']-b1)/2) + .45
-    shaft(hx-1.5, dock_headroom_end, hy-width/2-0.12, hy+width/2+0.12, levels['F1']-2.2, levels['F1']+0.2)
-    switchback('SoldierDockStair', (hx, hy+sep, b1), 0.0, levels['F1']-b1, run,width,gap)
-    stair_hatch('SoldierDockHatch',hx-.15,dock_headroom_end,hy,levels['F1'],1.40,
-                ('F1','Soldier Dock System'))
+    # R14 shows one central waiting-room ladder to the lawn. It is authored
+    # by dock_ladder_access after the chamber exists. The previous additional
+    # switchback, long slot and stair hatch were unsourced and pierced the lid.
+    # Do not cut that duplicate shaft into the lawn or channel enclosure.
 
     # The reference places these outside under the foremast stairwells, reached
     # from the lawn. The preceding F2 side boxes floated beside the landing.
@@ -1190,7 +1183,7 @@ def add_fittings(objects, vertex_bbox, frame, interiors):
                 if obj.get('sunny_aft_native_envelope'):
                     continue  # fixed door apertures were closed-cut in build_interiors
                 open_volume_slot(obj,x-dx,x+dx,y-dy,y+dy,z-0.15,z+spec['height']+0.12)
-    report['hatches'] = ['SoldierDockHatch', 'AquariumHatch', 'KitchenHatch', 'StorageHatch']
+    report['hatches'] = ['DockLadderHatch', 'AquariumHatch', 'KitchenHatch', 'StorageHatch']
     return report
 
 

@@ -810,82 +810,40 @@ def rolling_dock(objects,bounds,cy,outline,b1,roof):
 
 
 def dock_stair_clearance(objects, bounds, b1, f1, cy):
-    """Cut real standing headroom through the new outlet wall at the existing stair."""
-    treads=[o for o in objects if o.name.startswith(('Sunny_SoldierDockStair_up_tread','Sunny_SoldierDockStair_over_tread'))]
+    """Fit the sourced exterior aft flights through the channel crown only.
+
+    R14's central ladder provides Dock access. No secondary switchback holes,
+    exposed stairwell screen or low perimeter cuts remain in the wet channel.
+    """
     for wall in objects:
-        if wall.name.startswith('Sunny_Dock_outlet') and wall.name.endswith('_round_shell'):
-            lo,hi=bounds(wall)
-            # Fit stepped body-height openings only where each existing flight
-            # intersects the new shell. The wet retaining portion stays intact.
-            for flight in ('up','over'):
-                group=[o for o in treads if o.name.startswith('Sunny_SoldierDockStair_'+flight+'_tread')]
-                group.sort(key=lambda o:int(o.name.rsplit('tread',1)[1]))
-                for index in range(0,len(group),4):
-                    parts=[bounds(o) for o in group[index:index+4]]
-                    xlo=min(a.x for a,b in parts)-.72;xhi=max(b.x for a,b in parts)+.72
-                    ylo=min(a.y for a,b in parts)-.36;yhi=max(b.y for a,b in parts)+.36
-                    zlo=min(b.z for a,b in parts)-.20;zhi=max(b.z for a,b in parts)+1.82
-                    if xhi<lo.x or xlo>hi.x or yhi<lo.y or ylo>hi.y or zhi<lo.z or zlo>hi.z:continue
-                    open_volume_slot(wall,xlo,xhi,ylo,yhi,zlo,zhi)
-            # The retained exterior aft flights cross the new crown close to
-            # the lawn. Keep their actual treads and fit the same body-height
-            # clearance around them rather than deleting source stairs.
-            for low,high in ((8,28),(29,49)):
-                aft=[o for o in objects if o.get('sunny_stair') and o.name.startswith('Box')
-                     and o.name[3:].split('.')[0].isdigit() and low<=int(o.name[3:].split('.')[0])<=high]
-                aft.sort(key=lambda o:bounds(o)[1].z)
-                if not aft:continue
-                firstlo,firsthi=bounds(aft[0])
-                firstx=(firstlo.x+firsthi.x)/2;firsty=(firstlo.y+firsthi.y)/2
-                inward=firsty-math.copysign(3.5 if firsty>cy else 2.5,firsty-cy)
-                # The crown crosses the former lawn approach. A small, real
-                # supported landing connects the preserved first tread to the
-                # remaining lawn outside the channel shell.
-                xlo=firstx-1.15;xhi=firstx+4.5
-                ylo=min(firstlo.y,inward)-.55;yhi=max(firsthi.y,inward)+.55
-                if not (xhi<lo.x or xlo>hi.x or yhi<lo.y or ylo>hi.y):
-                    open_volume_slot(wall,xlo,xhi,ylo,yhi,f1-.22,f1+2.05)
-                    landing=box('Dock_aft_stair_landing',((xlo+xhi)/2,(ylo+yhi)/2,f1-.07),
-                                (xhi-xlo,yhi-ylo,.14),'timber',walkable=True)
-                    landing['sunny_stair_access']=True
-                for index in range(0,len(aft),4):
-                    parts=[bounds(o) for o in aft[index:index+4]]
-                    xlo=min(a.x for a,b in parts)-.72;xhi=max(b.x for a,b in parts)+.72
-                    ylo=min(a.y for a,b in parts)-.36;yhi=max(b.y for a,b in parts)+.36
-                    zlo=min(b.z for a,b in parts)-.20;zhi=max(b.z for a,b in parts)+1.82
-                    if xhi<lo.x or xlo>hi.x or yhi<lo.y or ylo>hi.y or zhi<lo.z or zlo>hi.z:continue
-                    open_volume_slot(wall,xlo,xhi,ylo,yhi,zlo,zhi)
-            if lo.y>cy:
-                # Close the channel-facing side of the retained lower Dock
-                # stairwell without crossing its body-width stair passage.
-                extents=[bounds(o) for o in treads]
-                if extents:
-                    xlo=min(a.x for a,b in extents)-.10;xhi=max(b.x for a,b in extents)+.10
-                    edge=max(b.y for a,b in extents)+.42
-                    screen=box('Dock_stairwell_screen',((xlo+xhi)/2,edge,(b1+f1-.10)/2),
-                               (xhi-xlo,.12,f1-.10-b1),'timber',obstacle=True)
-                    screen['sunny_rail']=True
-            wall['sunny_rail']=True
-            continue
-        if not (wall.name.startswith('Sunny_Dock_outer_wall') or
-                (wall.name.startswith('Sunny_Dock_outlet') and '_upper_' in wall.name)):
+        if not (wall.name.startswith('Sunny_Dock_outlet') and wall.name.endswith('_round_shell')):
             continue
         lo,hi=bounds(wall)
-        crossing=[]
-        for tread in treads:
-            a,b=bounds(tread)
-            # Include the full sweep from a tread edge as well as the body
-            # radius: the switchback approaches this wall diagonally.
-            if b.x+.72<lo.x or a.x-.72>hi.x or b.y+.34<lo.y or a.y-.34>hi.y:
-                continue
-            crossing.append((a,b))
-        if not crossing:
-            continue
-        ymin=min(a.y for a,b in crossing)-.34
-        ymax=max(b.y for a,b in crossing)+.34
-        zmin=max(b1,min(b.z for a,b in crossing)-.20)
-        zmax=max(b.z for a,b in crossing)+1.82
-        open_volume_slot(wall,lo.x-.01,hi.x+.01,ymin,ymax,zmin,zmax)
+        for low,high in ((8,28),(29,49)):
+            aft=[o for o in objects if o.get('sunny_stair') and o.name.startswith('Box')
+                 and o.name[3:].split('.')[0].isdigit() and low<=int(o.name[3:].split('.')[0])<=high]
+            aft.sort(key=lambda o:bounds(o)[1].z)
+            if not aft:continue
+            firstlo,firsthi=bounds(aft[0])
+            firstx=(firstlo.x+firsthi.x)/2;firsty=(firstlo.y+firsthi.y)/2
+            inward=firsty-math.copysign(3.5 if firsty>cy else 2.5,firsty-cy)
+            # The crown crosses the former lawn approach. A small, real
+            # supported landing connects the preserved first tread to the
+            # remaining lawn outside the channel shell.
+            xlo=firstx-1.15;xhi=firstx+4.5
+            ylo=min(firstlo.y,inward)-.55;yhi=max(firsthi.y,inward)+.55
+            if not (xhi<lo.x or xlo>hi.x or yhi<lo.y or ylo>hi.y):
+                open_volume_slot(wall,xlo,xhi,ylo,yhi,f1-.22,f1+2.05)
+                landing=box('Dock_aft_stair_landing',((xlo+xhi)/2,(ylo+yhi)/2,f1-.07),
+                            (xhi-xlo,yhi-ylo,.14),'timber',walkable=True)
+                landing['sunny_stair_access']=True
+            for index in range(0,len(aft),4):
+                parts=[bounds(o) for o in aft[index:index+4]]
+                xlo=min(a.x for a,b in parts)-.72;xhi=max(b.x for a,b in parts)+.72
+                ylo=min(a.y for a,b in parts)-.36;yhi=max(b.y for a,b in parts)+.36
+                zlo=min(b.z for a,b in parts)-.20;zhi=max(b.z for a,b in parts)+1.82
+                if xhi<lo.x or xlo>hi.x or yhi<lo.y or ylo>hi.y or zhi<lo.z or zlo>hi.z:continue
+                open_volume_slot(wall,xlo,xhi,ylo,yhi,zlo,zhi)
         wall['sunny_rail']=True
 
 
@@ -905,12 +863,12 @@ def dock_ladder_access(objects, bounds, interiors):
         lo,hi=bounds(obj)
         if hi.x<=xlo or lo.x>=xhi or hi.y<=ylo or lo.y>=yhi or hi.z<=lower+.02 or lo.z>=upper+.20:
             continue
-        open_volume_slot(obj,xlo,xhi,ylo,yhi,lower+.02,upper+.20)
+        circular_cut(obj,(hx,hy,upper),.78,2,lower+.02,upper+.20,64)
         if obj.get('sunny_walkable'):
             obj['sunny_access_slot']=[xlo,xhi,ylo,yhi]
         if obj.name in ('Line002','Line006','对象001','对象002','对象003'):
             obj['sunny_obstacle']=True;obj['sunny_rail']=True
-    hatch('DockLadderHatch',(hx,hy,upper),0,(1.40,1.40),rooms=('Soldier Dock Waiting Room','Lawn'))
+    hatch('DockLadderHatch',(hx,hy,upper),0,(1.40,1.40),rooms=('Soldier Dock Waiting Room','Lawn'),shape='round')
     for side in (-1,1):
         rail=pole('DockLadder_rail%d'%side,(hx-.48,hy+side*.30,lower+.02),
                   (hx-.48,hy+side*.30,upper-.08),.035,'darkwood',sides=10)

@@ -108,7 +108,7 @@ export function roomRoutes(){
  })
  const groups=new Map()
  for(const m of loadColliders('public/models/sunny.glb')){
-  const match=m.name.match(/^Sunny_((?:SoldierDockStair|AquariumStair|KitchenStair|StorageStair|EnergyStair|BathStair)(?:_(?:up|over))?)_tread\d+$/)
+  const match=m.name.match(/^Sunny_((?:AquariumStair|KitchenStair|StorageStair|EnergyStair|BathStair)(?:_(?:up|over))?)_tread\d+$/)
   if(!match)continue
   const list=groups.get(match[1])||[];list.push([(m.min.x+m.max.x)/2,m.max.y,(m.min.z+m.max.z)/2]);groups.set(match[1],list)
  }
@@ -139,13 +139,14 @@ export function roomRoutes(){
  // Keep forced connection coverage when a reference ladder replaces an
  // invented stair: both real floor endpoints and the full body shaft matter.
  const ladders=normalizeClimbs(meta.exterior.mechanisms.climbs).filter(p=>p.id!=='fore-lookout').map(p=>{
-  const descendingFirst=p.id==='dock-waiting-ladder'
-  const lower=descendingFirst?atAny(p.points[0]):at(p.points[0]),upper=at(p.points.at(-1))
+  const lowerWalk=at(p.points[0]),upperWalk=at(p.points.at(-1))
+  const descendingFirst=!lowerWalk&&!!upperWalk
+  const lower=atAny(p.points[0]),upper=atAny(p.points.at(-1))
   const obstacles=[...solids,...floors]
   const clear=Array.from({length:Math.ceil(p.length/.10)+1},(_,i)=>pointAt(p,i*.10)).every(v=>
    !obstacles.some(b=>v[0]+R>b.min.x+.02&&v[0]-R<b.max.x-.02&&v[2]+R>b.min.z+.02&&v[2]-R<b.max.z-.02&&v[1]+H>b.min.y+.02&&v[1]<b.max.y-.02))
-  const entry=descendingFirst?upper:lower
-  return {name:'Ladder: '+p.label,ok:!!(lower&&upper&&clear),path:entry?fromSpawn(entry):[],target:descendingFirst?p.points[0]:p.points.at(-1),climb:p,descendingFirst}
+  const entry=descendingFirst?upperWalk:lowerWalk
+  return {name:'Ladder: '+p.label,ok:!!(entry&&lower&&upper&&clear),diagnostic:{lowerSupported:!!lower,upperSupported:!!upper,lowerWalkConnected:!!lowerWalk,upperWalkConnected:!!upperWalk,shaftClear:clear,lowerCandidates:nodes.filter(n=>Math.abs(n.y-p.points[0][1])<.2&&Math.hypot(n.x-p.points[0][0],n.z-p.points[0][2])<.6).map(n=>({position:[n.x,n.y,n.z],seen:n.seen,blocker:blocked(n)}))},path:entry?fromSpawn(entry):[],target:descendingFirst?p.points[0]:p.points.at(-1),climb:p,descendingFirst}
  })
 
  // Explicitly reproduce the reported doorway after each first fore flight.
@@ -165,7 +166,7 @@ export function roomRoutes(){
 
  /** Plan a connection between real supported poses using the same body checks. */
  function pathBetween(a,b){
-  const from=at(a),to=at(b)
+  const from=atAny(a),to=atAny(b)
   return from&&to?compress(between(from,to)):[]
  }
  return {spawn,routes,stairs,ladders,approaches,pathBetween,visited:queue.length,total:nodes.length}

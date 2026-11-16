@@ -22,6 +22,7 @@ const hullPortParts=new Map(),hullPortWallFaces=[]
 const riggingFaces=new Map(),riggingPoints=new Map(),riggingTags=new Map()
 const anchorParts=new Map()
 const gaffTieParts=new Map()
+const roundHatchFaces=new Map()
 const helmGuardPoints=[];let spareHelmPole=false,oldHelmGuard=false
 const hatches=JSON.parse((await import('node:fs')).readFileSync('public/models/ship-metadata.json')).interiors.doors.filter(d=>d.kind==='hatch')
 function visit(i,parent,inherited){
@@ -105,6 +106,7 @@ function visit(i,parent,inherited){
     if(!balconyRailPoints.has(name))balconyRailPoints.set(name,[])
     balconyRailPoints.get(name).push(...v)
    }
+   if(/^Sunny_Hatch_.*_frame_round$/.test(name)){if(!roundHatchFaces.has(name))roundHatchFaces.set(name,[]);roundHatchFaces.get(name).push(v)}
    if(name==='Sphere001')lionPoints.push(...v)
    if(name==='Sphere005'||name.startsWith('Sunny_LionEye_')){
     if(!lionFeatures.has(name))lionFeatures.set(name,[])
@@ -194,7 +196,16 @@ const rimFaces=planeFaces.filter(t=>{
  const centre=axis===0?d.pos[0]:-d.pos[1],half=(xFrame?d.width:d.depth)/2
  return t.axis===axis&&Math.abs(Math.abs(t.height-centre)-half)<.003
 })
-assert(rimFaces.filter(t=>t.axis!==1).length>=hatches.length*8,'every hatch needs four exported inner coaming walls')
+assert(rimFaces.filter(t=>t.axis!==1).length>=hatches.filter(d=>d.shape!=='round').length*8,'every rectangular hatch needs four exported inner coaming walls')
+for(const d of hatches.filter(d=>d.shape==='round')){
+ const name=`Sunny_Hatch_${d.id}_frame_round`,faces=roundHatchFaces.get(name)
+ assert(faces?.length,'round hatch needs its actual annular coaming');bowClosedBody(name,faces)
+ for(let i=0;i<32;i++){
+  const direction=new THREE.Vector3(Math.cos(i*Math.PI/16),0,Math.sin(i*Math.PI/16)),origin=new THREE.Vector3(d.pos[0],d.pos[2]-.04,-d.pos[1]),ray=new THREE.Ray(origin,direction)
+  const hits=faces.flatMap(v=>{const hit=ray.intersectTriangle(...v,false,new THREE.Vector3());return hit?[hit.distanceTo(origin)]:[]}).sort((a,b)=>a-b)
+  assert(hits.length>=2&&Math.abs(hits[0]-d.width/2)<.003&&Math.abs(hits.at(-1)-(d.width/2+.08))<.003,'actual coaming must have supported circular inner/outer walls')
+ }
+}
 const planes=new Map(),rimOverlaps=new Map()
 for(const t of planeFaces){const k=`${t.axis}:${Math.round(t.height/.01)}`;if(!planes.has(k))planes.set(k,[]);planes.get(k).push(t)}
 for(const t of rimFaces)for(const o of [-1,0,1].flatMap(d=>planes.get(`${t.axis}:${Math.round(t.height/.01)+d}`)||[])){
@@ -1094,7 +1105,9 @@ for(const [name,part]of shieldBosses){
  for(const [dimension,original]of [[size.y,base.size[0]],[size.z,base.size[1]]])assert(dimension/original>=.845&&dimension/original<1.005,name+' loses its retained supported footprint')
  const projection=(fraction,angle)=>{
   const y=centre.y+size.y/2*fraction*Math.sin(angle),z=centre.z+size.z/2*fraction*Math.cos(angle),head=featureHits(faces,y,z),skin=featureHits(shieldFaces,y,z)
-  assert(head.length>=2&&skin.length>=2,name+' requires real boss and red shield surfaces')
+  // The retained painted shield is an open polygon skin (fore-trim contract);
+  // require its actual outward support hit, not an invented second paint layer.
+  assert(head.length>=2&&skin.length>=1,name+' requires closed boss and actual red shield support')
   assert(head.at(-1)>skin[0]+.003,name+' must embed in its actual source shield')
   const amount=skin[0]-head[0];assert(amount>.003&&amount<radius*1.05,name+' dome leaves its supported bow envelope')
   const ray=new THREE.Ray(new THREE.Vector3(lionBounds.min.x-lionRadius*3,y,z),new THREE.Vector3(1,0,0)),hits=[]

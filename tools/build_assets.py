@@ -13,6 +13,8 @@ import bpy
 import json
 import os
 import math
+import argparse
+import sys
 from mathutils import Vector, Matrix
 
 # --------------------------------------------------------------------------
@@ -22,7 +24,15 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 SRC_FBX = os.path.join(ROOT, "stuff", "1.FBX")
 PUBLISH_DIR = os.path.join(ROOT, "public", "models")
-OUT_DIR = os.path.join(ROOT, "public", ".models-staging")
+_args = sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else []
+_parser = argparse.ArgumentParser(description='Build coherent Sunny model assets')
+_parser.add_argument('--stage-only',action='store_true',help='Build without replacing the live model/master')
+_parser.add_argument('--stage-dir',help='Optional isolated output directory')
+_options = _parser.parse_args(_args)
+OUT_DIR = os.path.abspath(_options.stage_dir or os.path.join(ROOT, 'public', '.models-staging'))
+if _options.stage_only and OUT_DIR in (ROOT,PUBLISH_DIR,os.path.join(ROOT,'assets')):
+    raise ValueError('stage-only output must be separate from live model/master directories')
+os.makedirs(OUT_DIR,exist_ok=True)
 
 # Scene dressing / stray props shipped inside the FBX that are NOT part of the
 # ship. They inflate the bounding box and wreck any scale calculation.
@@ -1069,6 +1079,17 @@ from collision_glb import write_box_glb
 collision_boxes=[]
 for name,low,high in colliders:
     collision_boxes.append((name,(low[0],low[2],-high[1]),(high[0],high[2],-low[1])))
+# Actual rectangular gallery top faces preserve its front edge where a 40cm
+# cell inset otherwise strands the last aft tread behind the native fascia.
+from floor_collision import rectangular_floor_boxes
+for floor in ship_objects:
+    if floor.name!='Sunny_AftEntryDeck':continue
+    faces=[[tuple(floor.matrix_world@floor.data.vertices[i].co) for i in face.vertices]
+           for face in floor.data.polygons]
+    collision_boxes.extend(rectangular_floor_boxes(floor.name,faces))
+from round_access_collision import access_slots,clip_round_access
+collision_boxes=clip_round_access(collision_boxes,access_slots(interiors['doors'],interiors['exteriorMechanisms']['climbs']))
+actual_floor_boxes=sum(name.startswith('COLL_Floor') for name,_,_ in collision_boxes)
 collision_path=os.path.join(OUT_DIR,"sunny-collision.glb")
 write_box_glb(collision_path,collision_boxes)
 log(f"wrote sunny-collision.glb ({os.path.getsize(collision_path)/1e6:.2f} MB)")
@@ -1162,7 +1183,7 @@ meta = {
               "note": "feet at deck height; eye height added at runtime"},
     "parts": {k: sorted(v) for k, v in groups.items()},
     "collision": {"floorRegions": len(regions), "obstacles": count,
-                  "boundaryWall": BOUNDARY_WALL, "detailFloorCells": len(detail_samples), "floorColliderBoxes":len(floor_rectangles)+len(stair_objects),
+                  "boundaryWall": BOUNDARY_WALL, "detailFloorCells": len(detail_samples), "floorColliderBoxes":actual_floor_boxes,
                   "floorSlabDepth": CELL_T},
     "counts": {"shipObjects": len(ship_objects),
                "removedJunkObjects": len(removed),
@@ -1174,10 +1195,15 @@ log("wrote ship-metadata.json")
 log("DONE")
 
 # Publish the completed generation only after all exports and metadata succeed.
-os.makedirs(PUBLISH_DIR, exist_ok=True)
-for name in ('sunny.glb','sunny-collision.glb','ship-metadata.json'):
-    os.replace(os.path.join(OUT_DIR,name), os.path.join(PUBLISH_DIR,name))
-master_dir=os.path.join(ROOT,'assets')
-os.makedirs(master_dir,exist_ok=True)
-os.replace(master_staging,os.path.join(master_dir,'sunny-master.blend'))
-log('published completed asset generation and editable master')
+# An isolated candidate can be built while native browser verification keeps
+# reading one frozen live generation. It is explicitly applied after review.
+if _options.stage_only:
+    log('staged completed generation without changing live assets:',OUT_DIR)
+else:
+    os.makedirs(PUBLISH_DIR, exist_ok=True)
+    for name in ('sunny.glb','sunny-collision.glb','ship-metadata.json'):
+        os.replace(os.path.join(OUT_DIR,name), os.path.join(PUBLISH_DIR,name))
+    master_dir=os.path.join(ROOT,'assets')
+    os.makedirs(master_dir,exist_ok=True)
+    os.replace(master_staging,os.path.join(master_dir,'sunny-master.blend'))
+    log('published completed asset generation and editable master')

@@ -78,8 +78,9 @@ console.log('\n=== VISUAL SHIP ===')
     return !new THREE.Box3(leaf.min.clone(),leaf.max.clone()).expandByScalar(.25)
       .containsBox(new THREE.Box3(fitting.min,fitting.max))
   })
-  check('every moving door handle and all six hatch hinges/rings stay attached after geometry baking',
-    attachedHardware.filter(h=>h.parent.startsWith('Sunny_Hatch_')).length===18 &&
+  check('every moving door handle and every actual hatch hinge/ring stay attached after geometry baking',
+    attachedHardware.filter(h=>h.parent.startsWith('Sunny_Hatch_')).length===meta.interiors.doors.filter(d=>d.kind==='hatch').length*3 &&
+    meta.interiors.doors.filter(d=>d.kind==='hatch').every(d=>['hinge0','hinge1','ring'].every(part=>attachedHardware.some(h=>h.parent===d.node&&h.child==='Sunny_'+d.id+'_'+part))) &&
     attachedHardware.filter(h=>h.child.endsWith('_handle')).length===meta.interiors.doors.filter(d=>d.kind==='door').length &&
     detachedHardware.length===0, detachedHardware.map(h=>h.child).join(', '))
 
@@ -392,7 +393,7 @@ console.log('\n=== METADATA ===')
      "Men's Quarters", "Women's Quarters",'Aquarium Bar','Dining Room','Kitchen','Pantry','Sick Bay','Library','Bath']
       .every(n=>meta.interiors.rooms.some(r=>r.name===n)))
   check('doors and six access hatches have moving nodes and no static leaf colliders',
-    meta.interiors.doors.filter(d=>d.kind==='hatch').length===6 && meta.interiors.doors.some(d=>d.id==='DockLadderHatch') && meta.interiors.doors.every(d=>
+    meta.interiors.doors.filter(d=>d.kind==='hatch').length===5 && meta.interiors.doors.some(d=>d.id==='DockLadderHatch') && meta.interiors.doors.every(d=>
       ship.some(o=>o.name===d.node) && !coll.some(o=>o.name==='COLL_Solid_'+d.node)))
   check('all six access hatches expose an actual hole instead of a static exit plate',
     meta.interiors.doors.filter(d=>d.kind==='hatch').every(d=>{

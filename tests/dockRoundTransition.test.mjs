@@ -53,15 +53,23 @@ for(const [side,o] of sorted.entries()){
   const hit=ray.intersectObjects(meshes,false)[0]
   assert(!hit,`widened mouth obstructed by ${hit?.object.name} at x ${dx}`)
  }
- for(const dz of [4,5,5.4])for(const dx of [-2,0,2]){
+ for(const dz of [2.8,3.5,4])for(const dx of [-2,0,2]){
   const ray=new THREE.Raycaster(new THREE.Vector3(cx+dx,o.centre[2]+dz,a),new THREE.Vector3(0,0,dir),0,Math.abs(b-a))
   const hit=ray.intersectObjects(meshes,false)[0]
   assert(!hit,`crown transition obstructed by ${hit?.object.name} at x ${dx}, height ${dz}`)
  }
- const crownStart=-(start+(end-start)*.30),crownEnd=-(start+(end-start)*.80)
- const crownRay=new THREE.Raycaster(new THREE.Vector3(cx,meta.interiors.levels.F1,crownStart),new THREE.Vector3(0,0,Math.sign(crownEnd-crownStart)),0,Math.abs(crownEnd-crownStart))
- const crownHit=crownRay.intersectObjects(meshes,false)[0]
- assert(!crownHit,`lawn-height channel crown obstructed by ${crownHit?.object.name}`)
+ // The last mouth segment still exposes the complete high circular crown.
+ const highStart=-(start+(end-start)*.95),highEnd=-(start+(end-start)*.99)
+ for(const dx of [-2,0,2]){
+  const ray=new THREE.Raycaster(new THREE.Vector3(cx+dx,o.centre[2]+5.4,highStart),new THREE.Vector3(0,0,Math.sign(highEnd-highStart)),0,Math.abs(highEnd-highStart))
+  assert(!ray.intersectObjects(meshes,false)[0],'full outboard circular crown remains clear')
+ }
+ // R04 lawn stays above the channel crown until the outboard flare. A ray
+ // through lawn height is not an interior corridor/clearance requirement.
+ for(const t of [.1,.3,.5,.7]){
+  const down=new THREE.Raycaster(new THREE.Vector3(cx,meta.interiors.levels.F1+.05,-(start+(end-start)*t)),new THREE.Vector3(0,-1,0),0,.055)
+  assert(!down.intersectObjects(shell)[0],'rounded timber crown must stay below the lawn')
+ }
  results.push({side:o.side,measured,physical:physical.length})
 }
 console.log('PASS actual rounded channels, circular mouth transitions and wide static rays',JSON.stringify(results))

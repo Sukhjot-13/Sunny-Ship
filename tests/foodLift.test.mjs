@@ -1,7 +1,7 @@
 /**
  * C04 — mast-integrated food lift + wine cupboard.
  * Asserts exported geometry inside the mainmast, continuous shaft, and
- * metadata contract. Skips gracefully against the pre-C04 publication.
+ * metadata contract. This is not reference-fidelity or service-access acceptance.
  */
 import fs from 'node:fs'
 import { readGLB, loadColliders } from './glb.mjs'
@@ -15,7 +15,7 @@ const check = (name, cond, detail = '') => {
 const meta = JSON.parse(fs.readFileSync('public/models/ship-metadata.json', 'utf8'))
 const lift = meta.interiors?.foodLift
 const ship = loadColliders('public/models/sunny.glb')
-const names = ship.map(o => o.name)
+const names = ship.map(o => o.name.replace(/^Sunny_/,''))
 const liftParts = names.filter(n => n.startsWith('FoodLift_'))
 const mast = ship.find(o => o.name === 'Sunny_InteriorMainMast')
 
@@ -41,7 +41,8 @@ check('shaft backing/side walls present', ['FoodLift_shaft_back','FoodLift_shaft
 check('guides present (2)', liftParts.filter(n => n.startsWith('FoodLift_guide')).length === 2)
 check('wine cupboard present', liftParts.some(n => n.startsWith('FoodLift_wine')))
 check('old offset dumbwaiter removed', !names.some(n => n.includes('dumbwaiter')))
-check('mast exists and lift sits against it', !!mast && liftParts.every(n => true))
+const cars=ship.filter(o=>/^Sunny_FoodLift_car(?:_|$)/.test(o.name))
+check('car fits the retained mast at both service levels', !!mast&&cars.length===4&&cars.every(o=>o.min.x>=mast.min.x-.01&&o.max.x<=mast.max.x+.01&&o.min.z>=mast.min.z-.01&&o.max.z<=mast.max.z+.01&&o.min.y>=mast.min.y&&o.max.y+lift.travel<=mast.max.y))
 check('two call stations at both levels', Array.isArray(lift.calls) && lift.calls.length === 2)
 
 console.log(`\n  ${pass} pass, ${fail} fail`)

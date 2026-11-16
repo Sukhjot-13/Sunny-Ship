@@ -8,7 +8,7 @@ import bmesh
 import bpy
 from mathutils import Vector
 from sunny_exterior import assign_world_mesh
-from dock_channel_profile import section_profile,half_width_at
+from dock_channel_profile import section_profile,half_width_at,CROWN_TRANSITION_START
 
 
 def _clip(points, normal, distance, inside):
@@ -69,8 +69,9 @@ def subtract_frustum(obj, first, second):
 
 def rings(cx,start,end,bed,roof,mouth_z,radius,steps=6,count=64):
     """Return cross-section rings from the bay to the retained mouth."""
+    stations=sorted(set([i/steps for i in range(steps+1)]+[CROWN_TRANSITION_START,(CROWN_TRANSITION_START+1)/2]))
     return [[(x,start+(end-start)*t,z) for x,z in section_profile(cx,bed,roof,mouth_z,radius,t,count)]
-            for t in (i/steps for i in range(steps+1))]
+            for t in stations]
 
 
 def shell_geometry(sections, thickness=.16):

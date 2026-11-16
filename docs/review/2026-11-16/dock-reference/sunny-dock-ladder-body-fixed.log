@@ -1,0 +1,12 @@
+Physical ladder endpoint approach Ladder: Dock waiting-room ladder {
+  endpoint: [ 3.195000000000001, -40.55071716308594, -1.287 ],
+  feet: [ 3.1585550705262433, -40.55070114135742, -1.2023216865547945 ]
+}
+PASS Dock waiting-room ladder complete descent [ 1.5950000000000013, -51.400699615478516, -1.287 ]
+PASS lawn to Ladder: Dock waiting-room ladder {
+  pos: [ 1.5950000000000013, -51.400699615478516, -1.287 ],
+  grounded: true
+}
+PASS Dock waiting-room ladder complete ascent [ 3.195000000000001, -40.55070114135742, -1.287 ]
+PASS Ladder: Dock waiting-room ladder return to lawn [ -4.155289624673522, -40.55070114135742, -0.9619686699063545 ]
+Interior journey failures: []

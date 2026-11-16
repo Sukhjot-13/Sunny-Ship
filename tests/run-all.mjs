@@ -60,6 +60,12 @@ if (!serverUp) {
 }
 
 const suites=[
+ ['floorCollision.test.mjs','actual rectangular gallery floor support'],
+ ['roundAccessCollision.test.mjs','circular shaft physical floor clearance'],
+ ['roundHatchFixture.test.mjs','R14 round lawn hatch authoring fixture'],
+ ['referenceDockAccess.test.mjs','R04/R14 continuous lawn and single round Dock access'],
+ ['dockChannelProfile.test.mjs','below-deck crown and rounded mouth design'],
+ ['dockRoundTransition.test.mjs','actual rounded outlets and outboard mouth flare'],
  ['referenceScale.test.mjs','matching reversible reference-scale artifacts'],
  ['spatialBoxes.test.mjs','conservative reachability broad phase'],
  ['referenceExterior.test.mjs','reference exterior profile and moving glazed doors'],

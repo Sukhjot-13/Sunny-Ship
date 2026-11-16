@@ -29,6 +29,10 @@ the reasoning is not lost.
 
 ## 🟢 Improvements
 
+- **2026-11-16 — Verify facade morphology before tuning proportions (active).** Full-resolution R13 shows a single central upper aft entrance and tall paired ornaments/openings; the existing two-door/four-sash front is unsourced. Lower facade ports are circular. Rebuild these actual features rather than scaling the generic layout.
+- **2026-11-16 — Exact collision at visible transfer edges (implemented).** Coarse gallery floor starts ~9cm inside its actual front edge, stranding the last tread against the fascia. Supplement only actual upward rectangular faces, preserving the cut geometry, and retain a real-input approach/return regression.
+
+
 - **2026-10-28 — Isolated verification scaffolding (implemented for the model trial).** Create existing browser tests’ generated output directories before dispatch, route preview/cache paths symmetrically, and tolerate incomplete exclusive-lock JSON writes. Preserve failed setup runs separately from repair failures; hash frozen inputs across focused retries. The Sol/Terra experiment retains all original assertions and discloses these common harness corrections.
 
 
@@ -343,3 +347,5 @@ Sukhjot requested inspection and a written report without fixes. [The whole-ship
 - 2026-11-16: Implemented conservative spatial broad phase in the exterior reachability test; brute-force comparison retains all 1,141 sampled exact contacts. The prior full scan spent minutes checking every distant collider at every cell.
 - 2026-11-16: Before calling 1× proportions blueprint-accurate, resolve the existing 8 m → 12 m lawn redistribution against R04/F3. Uniform scale reversal does not undo that earlier shape change. Current reference-scale export explicitly records this limit.
 - 2026-11-16: Current visual survey exposes overly broad blank aft facade, coarse/low tree canopy, and timber channel crowns intruding into lawn appearance. Verify each directly against R04/R09/R13/R15; previous geometry tests are not visual acceptance.
+
+- 2026-11-16: Investigate mixed scale as a likely cause of undersized exterior detail: the hull is enlarged 2.2× before human fittings are authored at 1×, so the uniform 1× reference copy reduces a 2.24m authored door to 1.018m. The upper-aft door occupies only 2.24/6.248≈36% of its storey height in the current model. Validate fixture/storey proportions directly in R09/R10/R13 before treating the current mixed-scale setup as design authority.

@@ -5,10 +5,10 @@ import bpy
 from mathutils import Vector, Matrix
 
 FEATURES = re.compile(r'^(?:AftEntryDeck|AftF2|Anchor|AquariumDoorApproach|AquariumLadder|AquariumWindow|CoupDeBurst|DiningWindow|Dock1|DockNumber|DockSlat|ForedeckSupport|ForeF[12]|ForeLanding|ForeUpperLanding|ForeStair|AftStair|ForePortRail|ForeStarRail|ForeUpperRail|ForeDoorApproach|ForeStarboardDoorApproach|WomensDoorApproach|Gaon|GardenDeck|GardenStair|Helm|HullPort\d+|InteriorMainMast|KitchenChimney|Lantern|Lawn|LawnSidewalk-?1|LibraryRoof|LionEye|LionSmile|LogPose|Lookout|MastPlatform|Mikan\d+|Paddle|PopGreens|RobinGarden|SailTie|ShadeTree|Slide|SoldierDock|SternAccess|SternBalcony|Swing|Usopp)$')
-OPENINGS = {'WomensDoor', 'ForeDoor', 'ForeDoorStarboard', 'ForeToiletDoor1', 'ForeToiletDoor-1',
+OPENINGS = {'DockLadderHatch', 'WomensDoor', 'ForeDoor', 'ForeDoorStarboard', 'ForeToiletDoor1', 'ForeToiletDoor-1',
             'AquariumDoor', 'AquariumPassageDoor', 'DiningEntrance', 'KitchenEntrance',
             'PantryOutsideDoor', 'SickOutsideDoor', 'LibraryDoor', 'SternAccessDoor',
-            'AquariumHatch', 'CrowNestHatch', 'KitchenHatch', 'SoldierDockHatch'}
+            'AquariumHatch', 'CrowNestHatch', 'KitchenHatch'}
 MASTS = {'Cylinder003', 'Cylinder004', 'Cylinder007', 'Cylinder010',
          'Cylinder011', 'Cylinder013', 'Cylinder014', 'Sunny_InteriorMainMast'}
 

@@ -40,3 +40,22 @@ def write_box_glb(path, boxes):
         out.write(struct.pack('<4sII', b'glTF', 2, 12+8+len(encoded)+8+len(binary)))
         out.write(struct.pack('<II', len(encoded), 0x4e4f534a)); out.write(encoded)
         out.write(struct.pack('<II', len(binary), 0x004e4942)); out.write(binary)
+
+
+def read_box_glb(path):
+    """Recover exact writer input bounds from this format's flat accessor contract."""
+    with open(path,'rb') as source:
+        header=source.read(20)
+        if header[:4]!=b'glTF' or struct.unpack_from('<I',header,16)[0]!=0x4e4f534a:
+            raise ValueError('expected collision GLB')
+        gltf=json.loads(source.read(struct.unpack_from('<I',header,12)[0]))
+    if gltf['asset'].get('generator')!='Sunny axis-aligned collision proxy':
+        raise ValueError('only the deterministic collision-box format is supported')
+    boxes=[]
+    for node in gltf['nodes']:
+        if any(k in node for k in ('matrix','translation','rotation','scale')):
+            raise ValueError('collision format must have flat world-space boxes')
+        primitive=gltf['meshes'][node['mesh']]['primitives'][0]
+        accessor=gltf['accessors'][primitive['attributes']['POSITION']]
+        boxes.append((node['name'],tuple(accessor['min']),tuple(accessor['max'])))
+    return boxes
