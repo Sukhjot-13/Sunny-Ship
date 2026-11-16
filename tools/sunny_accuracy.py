@@ -1371,10 +1371,15 @@ def muzzle_seam(jaw, bounds, level):
     low, high = bounds(jaw)
     centre = (low.y+high.y)/2
     width = (high.y-low.y)*.47
+    head=next(o for o in bpy.data.objects if o.name=='Sphere001')
+    ha,hb=bounds(head);radius=(hb.y-ha.y)/2
+    from sunny_reference_exterior import smile_height
     inverse = jaw.matrix_world.inverted()
     points = []
     for i in range(25):
-        origin = Vector((-100, centre-width+2*width*i/24, level-.025))
+        y=centre-width+2*width*i/24
+        z=smile_height(y,centre,(high.y-low.y)/2,level,radius)-.025
+        origin = Vector((-100,y,z))
         hit, point, _, _ = jaw.ray_cast(inverse@origin,
                                       inverse.to_3x3()@Vector((1, 0, 0)))
         if not hit:
@@ -1411,14 +1416,24 @@ def lion_mechanisms(objects,bounds):
                min(bounds(petal)[0].x for petal in petals)-.12)
     discard(objects, lambda o: o.name.startswith('Sunny_LionSmile'))
     # Split/cap the original muzzle instead of exporting two open surface cuts.
-    lower = closed_face_mesh(muzzle, 'Gaon_lower_muzzle', split, False)
-    upper = closed_face_mesh(muzzle, 'Gaon_upper_muzzle', split, True)
+    from sunny_reference_exterior import curved_muzzle_halves
+    lower,upper = curved_muzzle_halves(muzzle,split,radius)
     assign_world_mesh(muzzle, upper)
     muzzle['sunny_authored'] = True
     jaw = bpy.data.objects.new('Gaon_jaw', lower)
     bpy.context.scene.collection.objects.link(jaw)
     finish(jaw, 'Gaon_jaw', 'cream')
     seam = muzzle_seam(jaw, bounds, split)
+    # R08's short vertical muzzle line joins the nose and upward-ended smile.
+    bpy.context.view_layer.update()
+    na,nb=bounds(next(o for o in objects if o.name=='Sphere005'))
+    inv=muzzle.matrix_world.inverted();philtrum=[]
+    for i in range(9):
+        z=split+.04+(na.z-split-.02)*i/8
+        hit,point,_,_=muzzle.ray_cast(inv@Vector((-100,cy,z)),inv.to_3x3()@Vector((1,0,0)))
+        if hit:
+            point=muzzle.matrix_world@point;point.x-=.018;philtrum.append(point)
+    for left,right in zip(philtrum,philtrum[1:]):pole('Lion_philtrum',left,right,.022,'black')
     # Keep the original face silhouette; detach its thin curved lower panel.
     # Black cut walls/back make a real cavity rather than a painted front disk.
     cutter = mouth_prism(head, bounds, cy, split, bottom, half_width, back)
@@ -1431,12 +1446,12 @@ def lion_mechanisms(objects,bounds):
     chin['sunny_authored'] = True
     chin['sunny_feature'] = 'Gaon'
     # H shows a compact angled fold, rather than a quarter-turn hanging tray.
-    # Retain the real bottom edge; 65 degrees clears the entire existing mouth
+    # Retain the real bottom edge; 70 degrees clears the curved lip and the entire mouth
     # footprint while halving the excess descent. H does not dimension the
     # hinge/angle/depth: these remain disclosed reconstruction choices.
     pivot = [bounds(chin)[1].x, cy, bottom]
     jaw_axis = [0, -1, 0]  # Blender -Y becomes Three +Z.
-    jaw_angle = math.radians(65)
+    jaw_angle = math.radians(70)
     for component in (jaw, chin, *seam):
         component['sunny_jaw'] = True
         component['sunny_pivot'] = pivot
@@ -2515,6 +2530,8 @@ def apply_exterior_accuracy(objects, bounds, frame, interiors):
     docks=rolling_dock(objects,bounds,frame.y(.585),original_b1_outline,interiors['levels']['B1'],interiors['levels']['F1']-.18)
     dock_stair_clearance(objects,bounds,interiors['levels']['B1'],interiors['levels']['F1'],interiors['dockCentre'][1])
     lookout(objects,bounds)
+    from sunny_reference_exterior import round_figurehead
+    round_figurehead(objects,bounds)
     swept_mane(objects,bounds)
     lion_face(objects,bounds)
     lion=lion_mechanisms(objects,bounds)
@@ -2536,6 +2553,8 @@ def apply_exterior_accuracy(objects, bounds, frame, interiors):
     from sunny_aft_envelope import add_lower_aquarium_windows
     add_lower_aquarium_windows(objects,interiors)
     branch_office(objects,bounds,interiors['levels'])
+    from sunny_reference_exterior import branch_office_details
+    branch_office_details(objects,bounds)
     rudder=rudder_mechanism(objects,bounds)
     objects += [o for o in bpy.data.objects if o.type == 'MESH' and o not in before and o not in objects]
     bpy.context.view_layer.update()

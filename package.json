@@ -12,7 +12,8 @@
     "test:physics": "node tests/physics.test.mjs",
     "test:gameplay": "node tests/gameplay.mjs",
     "visual": "node tests/visual.mjs",
-    "test:interaction": "node tests/interaction.mjs"
+    "test:interaction": "node tests/interaction.mjs",
+    "assets:reference": "blender -b --factory-startup --python-exit-code 1 --python tools/export_reference_scale.py"
   },
   "dependencies": {
     "@react-three/drei": "^9.114.0",

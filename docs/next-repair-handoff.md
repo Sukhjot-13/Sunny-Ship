@@ -1,3 +1,9 @@
+# Current authority — November 16, 2026
+
+Sukhjot now requests the ENTIRE ship: complete exterior first, then every interior room without another permission question. Supplied blueprint/reference pictures are the ONLY design source of truth. Previous sessions' geometry/plans/assumptions are unverified implementation. Old C03/C04-only limits below are historical and superseded. Track active work, section evidence and scale limits in [reference-completion.md](reference-completion.md). Do not delete old finding IDs until the actual matching construction has been verified. Persistent goal remains active.
+
+---
+
 # Current repair handoff — C03 and C04 in progress
 
 Candidate progress: the rounded loft and full-mouth static section rays passed, and stepped stair openings passed a normal-body return on the prior candidate. The candidate has full lower-shell collision and bounded lawn/crown cuts, but an aft stair approach is blocked and a wide wet-path collision remains; the next export fits actual exterior-stair clearance and widens the inlet. A prior enlarged-inlet export passed geometry, C01/C02 and wet checks, but the real aft-stair approach remained blocked. The last candidate passed the port aft-flight round trip, but its starboard approach was blocked by the retained slide/wall and the stairwell showed through the channel. A new candidate is building with a wider starboard landing and stairwell screen; normal-body routes and coherent enclosure must be checked on matching assets. C04 remains unverified.

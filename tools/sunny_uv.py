@@ -5,7 +5,7 @@ import bpy
 from mathutils import Vector, Matrix
 
 FEATURES = re.compile(r'^(?:AftEntryDeck|AftF2|Anchor|AquariumDoorApproach|AquariumLadder|AquariumWindow|CoupDeBurst|DiningWindow|Dock1|DockNumber|DockSlat|ForedeckSupport|ForeF[12]|ForeLanding|ForeUpperLanding|ForeStair|AftStair|ForePortRail|ForeStarRail|ForeUpperRail|ForeDoorApproach|ForeStarboardDoorApproach|WomensDoorApproach|Gaon|GardenDeck|GardenStair|Helm|HullPort\d+|InteriorMainMast|KitchenChimney|Lantern|Lawn|LawnSidewalk-?1|LibraryRoof|LionEye|LionSmile|LogPose|Lookout|MastPlatform|Mikan\d+|Paddle|PopGreens|RobinGarden|SailTie|ShadeTree|Slide|SoldierDock|SternAccess|SternBalcony|Swing|Usopp)$')
-OPENINGS = {'ForeDoor', 'ForeDoorStarboard', 'ForeToiletDoor1', 'ForeToiletDoor-1',
+OPENINGS = {'WomensDoor', 'ForeDoor', 'ForeDoorStarboard', 'ForeToiletDoor1', 'ForeToiletDoor-1',
             'AquariumDoor', 'AquariumPassageDoor', 'DiningEntrance', 'KitchenEntrance',
             'PantryOutsideDoor', 'SickOutsideDoor', 'LibraryDoor', 'SternAccessDoor',
             'AquariumHatch', 'CrowNestHatch', 'KitchenHatch', 'SoldierDockHatch'}
@@ -104,6 +104,9 @@ def metric_uv(obj):
         return
     points = [obj.matrix_world@v.co for v in mesh.vertices]
     name = obj.name
+    door_leaf=bool(obj.get('sunny_door'))
+    door_rotation=obj.get('sunny_door_rotation',0.0)
+    door_across=Vector((math.cos(door_rotation),math.sin(door_rotation),0))
     used = {mesh.materials[f.material_index].name for f in mesh.polygons}
     leaf = bool(re.search(r'_lea(?:f|ves)', name)) and used <= {'Sunny_leaf', 'Sunny_leaflight'}
     cylinder = name in MASTS or bool(re.search(r'_(?:branch|twig|trunk|rung|rope|ladder_rail)', name))
@@ -134,7 +137,11 @@ def metric_uv(obj):
         coords = []
         for index in face.vertices:
             p, delta = points[index], points[index]-centre
-            if leaf and len(group) == 5:
+            if door_leaf:
+                # Straight vertical joinery grain must not follow a covariance
+                # axis tilted by the arched crown or off-centre porthole cut.
+                pair=(p.z,p.dot(door_across))
+            elif leaf and len(group) == 5:
                 base, tip = points[group[0]], points[group[2]]
                 along = (tip-base).normalized()
                 across = (points[group[1]]-points[group[3]]).normalized()

@@ -1,0 +1,15 @@
+{
+  "tools/build_assets.py": "8ac2c4f6f9e88840faaf5d625c351aa3c25a9dff81369dd511debebba7570bf9",
+  "tools/sunny_reference_exterior.py": "659d06d70538292f43889a0aa4e42cc4b9d025a214c156ff7d41a74181c79636",
+  "tools/sunny_accuracy.py": "82b9ad249cfa9567271a30a6cefa9c47fadb7d3b95cceef1b6f9af9bee7b60ff",
+  "tools/sunny_interiors.py": "b62eaba2fcba0758ed432cdf6fb663dd7308fa5dca894d7cedd38545a2256ce5",
+  "tools/sunny_uv.py": "e790c2348e2607e00f15606301b55371db060ccb584965589c24bf26469de6f8",
+  "src/systems/realisticExterior.js": "1ca0c42bf7e4f47504938f2e43b5278aefec125a9cca31d1408db3bc77f1b590",
+  "public/models/sunny.glb": "976b38876157181794bc6970c909dff62742a653fe56c72dc9a36815df77bbbd",
+  "public/models/sunny-collision.glb": "e66daff4cb5df9a8b0a07a63d58f557b9c71638f3b11a134a20003c20547e25c",
+  "public/models/ship-metadata.json": "96b490368fc86283632b2597650c0a7991b7a7701ca938b4ed3d1e27c265bfeb",
+  "assets/sunny-master.blend": "1c9be33eb2f45b53b2d844173ec7d8a87091ea8d3f2720a59267815887d99fd1",
+  "assets/reference/sunny-reference.blend": "19cabeb9daf1062135cee6a6f82f9ea3d0f361d0ac0e18e270397b079b294b71",
+  "assets/reference/sunny-reference.glb": "81cde9c9c2b3e5b64fbb392c194a02e581dbf0dd6a2b392026fd5c547c3d027f",
+  "assets/reference/dimensions.json": "ad2162deb67fcbd9c64651b7a4aca81ff07a2930540e11db551ffcac92b1e5fa"
+}

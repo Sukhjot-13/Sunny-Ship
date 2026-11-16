@@ -1,0 +1,53 @@
+{
+  "source": "assets/sunny-master.blend",
+  "sourceSha256": "1c9be33eb2f45b53b2d844173ec7d8a87091ea8d3f2720a59267815887d99fd1",
+  "workingVisualSha256": "976b38876157181794bc6970c909dff62742a653fe56c72dc9a36815df77bbbd",
+  "workingScale": 2.2,
+  "referenceScale": 1,
+  "rootMultiplier": 0.45454545454545453,
+  "workingBoundsBlender": {
+    "min": [
+      -42.91780471801758,
+      -22.86289405822754,
+      -61.600006103515625
+    ],
+    "max": [
+      42.89999771118164,
+      22.86289405822754,
+      61.60000991821289
+    ],
+    "size": [
+      85.81780242919922,
+      45.72578811645508,
+      123.20001220703125
+    ]
+  },
+  "referenceBoundsBlender": {
+    "min": [
+      -19.508092880249023,
+      -10.39222526550293,
+      -28.000003814697266
+    ],
+    "max": [
+      19.5,
+      10.39222526550293,
+      28.0000057220459
+    ],
+    "size": [
+      39.008094787597656,
+      20.78445053100586,
+      56.00000762939453
+    ]
+  },
+  "configuredTargetsM": {
+    "length": 39,
+    "height": 56
+  },
+  "dimensionAuthority": "configured project targets; supplied perspective/plan images do not establish exact metre dimensions",
+  "limitations": [
+    "Static inspection copy; runtime mechanism metadata remains in working coordinates",
+    "Earlier central lawn redistribution and upper-rig height correction are shape changes retained in both copies",
+    "Uniform scale reversal does not prove exact match to all perspective reference proportions"
+  ],
+  "restoreWorkingScale": "Use assets/sunny-master.blend; or multiply ThousandSunny root scale in this copy by 2.2"
+}

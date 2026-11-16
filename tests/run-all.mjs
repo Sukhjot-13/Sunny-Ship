@@ -60,6 +60,9 @@ if (!serverUp) {
 }
 
 const suites=[
+ ['referenceScale.test.mjs','matching reversible reference-scale artifacts'],
+ ['spatialBoxes.test.mjs','conservative reachability broad phase'],
+ ['referenceExterior.test.mjs','reference exterior profile and moving glazed doors'],
  ['dockPlanCut.test.mjs','C03 convex floor-cut authoring fixture'],
  ['dockWaterConstruction.test.mjs','C03 water, bed and retained-mouth geometry'],
  ['dockRotatingClearance.test.mjs','C03 actual rotating chamber clearance'],

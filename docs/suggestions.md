@@ -337,3 +337,9 @@ Sukhjot requested inspection and a written report without fixes. [The whole-ship
 - **2026-10-23 — Exterior/water pass verified:**19/19 full suites and build PASS with79 inputs unchanged. Retain scoped reflection budgeting for level views inside the hull; final window context43.95fps and appearance57.66fps, deck/plants/glass stopped changes0%. First browser-frame failure run is preserved. Use current review page for outside appearance feedback; do not resume C01 or interior textures automatically.
 
 - 2026-10-29 — C03/M02 follow-up, outside current local-mouth C02 acceptance: verify the carousel’s selected-bay radial alignment against the transverse mouths when rebuilding the water-bearing channels. Existing source starts bay1 on +X and current selector rotation keeps the selected bay on +X, while external mouths lie on ±Y. Current C02 operator collision/flight proof must not be described as straight vehicle launching or completed channel water/support. Preserve U11 later-allocation uncertainty; use supplied R14 before changing the full radial layout.
+
+## 🟢 Improvements
+
+- 2026-11-16: Implemented conservative spatial broad phase in the exterior reachability test; brute-force comparison retains all 1,141 sampled exact contacts. The prior full scan spent minutes checking every distant collider at every cell.
+- 2026-11-16: Before calling 1× proportions blueprint-accurate, resolve the existing 8 m → 12 m lawn redistribution against R04/F3. Uniform scale reversal does not undo that earlier shape change. Current reference-scale export explicitly records this limit.
+- 2026-11-16: Current visual survey exposes overly broad blank aft facade, coarse/low tree canopy, and timber channel crowns intruding into lawn appearance. Verify each directly against R04/R09/R13/R15; previous geometry tests are not visual acceptance.

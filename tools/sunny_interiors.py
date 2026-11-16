@@ -622,10 +622,15 @@ def door(id_, p, rot, width=1.20, height=2.25, kind='slide', sign=1,
     about that hinge. Either way the pipeline emits NO static collider for the
     leaf - collision follows the live door state instead.
     """
+    from sunny_reference_exterior import EXTERIOR_DOORS, door_porthole, door_arch_corners
+    exterior = id_ in EXTERIOR_DOORS
+    arched = arched or exterior
     door_frame(id_ + '_frame', p, rot, width, height, arched=arched)
+    if exterior and id_ not in ('DiningEntrance','KitchenEntrance'):
+        door_arch_corners(id_,p,rot,width,height)
     leaf_w, leaf_h = width - 0.05, height - 0.06
     thickness = 0.075
-    leaf = rbox('Door_%s_leaf' % id_, p, rot, (leaf_w, thickness, leaf_h), key, (0, 0, leaf_h / 2 + 0.03))
+    leaf = rbox('Door_%s_leaf' % id_, p, rot, (leaf_w, thickness, leaf_h), 'timber' if exterior else key, (0, 0, leaf_h / 2 + 0.03))
     if arched:
         from sunny_aft_envelope import arch_outline
         outline=arch_outline(leaf_w/2,leaf_h-leaf_w/2,sections=32)
@@ -642,6 +647,8 @@ def door(id_, p, rot, width=1.20, height=2.25, kind='slide', sign=1,
         leaf['sunny_door_arch']=True
         leaf['sunny_door_arch_radius']=leaf_w/2
         leaf['sunny_door_arch_straight']=leaf_h-leaf_w/2
+    if exterior:
+        door_porthole(leaf,id_,p,rot,leaf_w,leaf_h,thickness)
     leaf['sunny_door'] = id_
     leaf['sunny_walkable'] = False
     leaf['sunny_obstacle'] = False

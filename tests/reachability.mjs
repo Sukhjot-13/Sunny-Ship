@@ -1,6 +1,7 @@
 /** Layered outdoor navigation audit: stairs can lie beneath another deck. */
 import fs from 'node:fs'
 import { loadColliders } from './glb.mjs'
+import {spatialBoxes} from './spatialBoxes.mjs'
 
 const STEP_HEIGHT = 0.8
 const RADIUS = 0.34
@@ -10,6 +11,7 @@ const meta = JSON.parse(fs.readFileSync('public/models/ship-metadata.json','utf8
 const boxes = loadColliders('public/models/sunny-collision.glb')
 const floors = boxes.filter(b => b.name.startsWith('COLL_Floor'))
 const solids = boxes.filter(b => !b.name.startsWith('COLL_Floor') && b.name !== 'COLL_Hull')
+const querySolids=spatialBoxes(solids,{radius:RADIUS,height:HEIGHT,step:STEP_HEIGHT})
 const toThree = (x,y,z) => [x,z,-y]
 const spawn = toThree(...meta.spawn.position)
 const origin = [floors[0].min.x+CELL/2,floors[0].min.z+CELL/2]
@@ -37,7 +39,7 @@ function blocker(node) {
          f.y<=node.y+STEP_HEIGHT && f.y>supportY) supportY=f.y
     }
   }
-  for (const b of solids) {
+  for (const b of querySolids(node)) {
     if (node.x+RADIUS<b.min.x || node.x-RADIUS>b.max.x) continue
     if (supportY+HEIGHT<b.min.y || supportY+0.04>b.max.y) continue
     if (node.z+RADIUS<b.min.z || node.z-RADIUS>b.max.z) continue
