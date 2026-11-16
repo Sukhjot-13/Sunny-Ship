@@ -911,7 +911,7 @@ for o in ship_objects:
     # They are decorative overhead fittings, not solid deck obstructions.
     if o.name.startswith('NGon'):
         continue
-    shell = o.name.startswith(('Sunny_ForeF1_shell','Sunny_ForeF2_shell','Sunny_AftF2_shell','Sunny_Aquarium_shell','Sunny_Library_lining','Sunny_Bath_lining','Sunny_RoomPartition_aqua_fwd','Sunny_RoomPartition_DiningEntrance','Sunny_RoomPartition_KitchenEntrance','Sunny_RoomPartition_bar','Sunny_RoomPartition_womens'))
+    shell = o.name.startswith(('Sunny_ForeF1_shell','Sunny_ForeF2_shell','Sunny_AftF2_shell','Sunny_Aquarium_shell','Sunny_Library_lining','Sunny_Bath_lining','Sunny_RoomPartition_aqua_fwd','Sunny_RoomPartition_AftEntrance','Sunny_RoomPartition_bar','Sunny_RoomPartition_womens'))
     if o.name in ('Box080','Box081','Box070','Box084','Cylinder002','Cylinder003','Cylinder007','Cylinder015','Tube008.001','Line006','对象001','对象002','对象003') or o.get('sunny_rail') or shell:
         # Curved stair railings and the round cabin need their individual faces;
         # a single axis-aligned box fills the open stair passage beside them.
@@ -1146,6 +1146,7 @@ meta = {
         "foreTrimVolumes":interiors['foreTrimVolumes'],
         "foreTrimRepair":interiors['foreTrimRepair'],
         "aftEnclosures":interiors.get('aftEnclosures', []),
+        "aftFacade":interiors.get('aftFacade'),
         "aquariumWindows":interiors.get('aquariumWindows', []),
         "aquariumSidePaintBounds":interiors.get('aquariumSidePaintBounds'),
         "rooms":[{k:(round(v,2) if isinstance(v,float) else ([round(q,2) for q in v] if isinstance(v,(list,tuple)) else v))

@@ -6,7 +6,8 @@ import puppeteer from 'puppeteer'
 import {loadColliders} from '../tests/glb.mjs'
 const phase=process.argv[2]??'candidate',out=path.join('docs/review/2026-11-16',phase)
 fs.mkdirSync(out,{recursive:true})
-const meta=JSON.parse(fs.readFileSync('public/models/ship-metadata.json')),bounds=loadColliders('public/models/sunny.glb')
+const modelDir=process.env.REFERENCE_MODELS??'public/models',previewURL=process.env.REFERENCE_URL??'http://localhost:5173'
+const meta=JSON.parse(fs.readFileSync(path.join(modelDir,'ship-metadata.json'))),bounds=loadColliders(path.join(modelDir,'sunny.glb'))
 const cy=-meta.interiors.dockCentre[1],lawn=meta.interiors.levels.F1,garden=meta.interiors.levels.F3G
 const centre=name=>{const o=bounds.find(o=>o.name===name);if(!o)throw Error('Missing view target '+name);return o.min.clone().add(o.max).multiplyScalar(.5).toArray()}
 const offset=(p,d)=>p.map((v,i)=>v+d[i])
@@ -37,9 +38,10 @@ if(dockHatch){
  views.push(['lawn-hatch',[hx+2.4,hz+2.1,-hy+1.3],[hx,hz,-hy],'R04/R14'])
  views.push(['restored-lawn',[-4.5,lawn+2.2,-5],[-3.5,lawn,-8.8],'R04/R14'])
 }
-for(const id of ['ForeDoor','WomensDoor','AquariumDoor','DiningEntrance','KitchenEntrance','LibraryDoor']){
- const spec=meta.interiors.doors.find(d=>d.id===id),[x,y,z]=spec.pos,normal=[-Math.sin(spec.rot),0,-Math.cos(spec.rot)]
- const target=[x,z+1.2,-y],fore=['ForeDoor','WomensDoor'].includes(id),close=['DiningEntrance','KitchenEntrance'].includes(id)
+for(const id of ['ForeDoor','WomensDoor','AquariumDoor','AftEntrance','DiningEntrance','KitchenEntrance','LibraryDoor']){
+ const spec=meta.interiors.doors.find(d=>d.id===id);if(!spec)continue
+ const [x,y,z]=spec.pos,normal=[-Math.sin(spec.rot),0,-Math.cos(spec.rot)]
+ const target=[x,z+1.2,-y],fore=['ForeDoor','WomensDoor'].includes(id),close=['DiningEntrance','KitchenEntrance','AftEntrance'].includes(id)
  const distance=close?1.25:3.6
  views.push(['door-'+id,offset(target,normal.map(v=>v*distance*(fore?-1:1))),target,'R09/R10/R11/R12/R13',close?92:62])
 }
@@ -47,10 +49,10 @@ const browser=await puppeteer.launch({headless:true,args:['--use-gl=angle','--us
 try{
  const page=await browser.newPage();await page.setViewport({width:1440,height:900})
  const errors=[];page.on('pageerror',e=>errors.push(e.message))
- await page.goto('http://localhost:5173',{waitUntil:'domcontentloaded',timeout:120000})
+ await page.goto(previewURL,{waitUntil:'domcontentloaded',timeout:120000})
  await page.waitForFunction(()=>window.__ship&&!document.body.innerText.includes('Loading the ship'),{timeout:120000})
  await page.mouse.click(720,450)
- await page.evaluate(async()=>{const {_roots}=await import('/node_modules/.vite/deps/@react-three_fiber.js');window.__review=_roots.get(document.querySelector('canvas')).store.getState();window.__review.controls.enabled=false})
+ await page.evaluate(async()=>{const moduleURL=performance.getEntriesByType('resource').map(e=>e.name).find(url=>url.includes('/deps/@react-three_fiber.js'));if(!moduleURL)throw Error('actual renderer module URL not found');const {_roots}=await import(moduleURL);window.__review=_roots.get(document.querySelector('canvas')).store.getState();window.__review.controls.enabled=false})
  const shots=[]
  for(const [name,p,t,reference,fov=62] of views){
   await page.evaluate(({p,t,fov})=>{const s=window.__review;s.camera.fov=fov;s.camera.updateProjectionMatrix();s.controls.enabled=false;s.camera.up.set(0,1,0);s.camera.position.set(...p);s.camera.lookAt(...t);s.camera.updateMatrixWorld()}, {p,t,fov})
@@ -59,8 +61,8 @@ try{
  }
  const sha=file=>crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')
  const context=await page.evaluate(()=>({drawCalls:window.__review.gl.info.render.calls,triangles:window.__review.gl.info.render.triangles}))
- fs.writeFileSync(path.join(out,'receipt.json'),JSON.stringify({phase,shots,context,errors,
-  assets:Object.fromEntries(['sunny.glb','sunny-collision.glb','ship-metadata.json'].map(f=>[f,sha('public/models/'+f)])),
+ fs.writeFileSync(path.join(out,'receipt.json'),JSON.stringify({phase,modelDir,previewURL,shots,context,errors,
+  assets:Object.fromEntries(['sunny.glb','sunny-collision.glb','ship-metadata.json'].map(f=>[f,sha(path.join(modelDir,f))])),
   note:'Appearance survey only. Main camera moves; no mesh hiding, player placement or movement-proof claim.'},null,2))
  if(errors.length)throw Error(errors.join('\n'))
  console.log('PASS',shots.length,'framed actual exterior views',out)

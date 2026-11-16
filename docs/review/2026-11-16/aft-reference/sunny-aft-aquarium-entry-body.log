@@ -1,0 +1,7 @@
+PASS lawn to Aquarium Bar {
+  pos: [ 9.337643840071152, -40.55070114135742, -1.4000000004389133 ],
+  grounded: true,
+  blocker: null
+}
+PASS Aquarium Bar return to lawn [ -4.1857346259739945, -40.55070114135742, -0.9873137126129635 ]
+Interior journey failures: []

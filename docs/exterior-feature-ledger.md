@@ -1,3 +1,7 @@
+# Active authority — November 16, 2026
+
+Complete the entire exterior first, then all interiors automatically. Only supplied reference images establish design; historical metre/count/station preservation and review pauses below are superseded wherever they conflict. R14 lawn/Dock checkpoint is local commit `6da9830`; new R13 facade remains staged under review. Current state is in `reference-completion.md`. No remote publication.
+
 # Exterior feature ledger — current repair and reference boundaries
 
 The October 1 baseline below starts from measured generation-10 assets. Sukhjot's latest order is exterior structures, then accurate rooms, then realistic graphics, then additional mechanics. Further graphics wait for Sukhjot's October 2 review. Current results and screenshots are in [construction-review.md](/Users/sukhjot/codes/test/docs/construction-review.md); the prior pre-graphics report is historical. The

@@ -1,0 +1,29 @@
+file:///Users/sukhjot/codes/Sunny-Ship/node_modules/puppeteer-core/lib/puppeteer/common/CallbackRegistry.js:88
+            this._reject(callback, new TargetCloseError('Target closed'));
+                                   ^
+
+TargetCloseError: Protocol error (Runtime.callFunctionOn): Target closed
+    at CallbackRegistry.clear (file:///Users/sukhjot/codes/Sunny-Ship/node_modules/puppeteer-core/lib/puppeteer/common/CallbackRegistry.js:88:36)
+    at CdpCDPSession.onClosed (file:///Users/sukhjot/codes/Sunny-Ship/node_modules/puppeteer-core/lib/puppeteer/cdp/CdpSession.js:121:25)
+    at #onClose (file:///Users/sukhjot/codes/Sunny-Ship/node_modules/puppeteer-core/lib/puppeteer/cdp/Connection.js:217:21)
+    at WebSocket.<anonymous> (file:///Users/sukhjot/codes/Sunny-Ship/node_modules/puppeteer-core/lib/puppeteer/node/NodeWebSocketTransport.js:54:30)
+    at callListener (/Users/sukhjot/codes/Sunny-Ship/node_modules/ws/lib/event-target.js:290:14)
+    at WebSocket.onClose (/Users/sukhjot/codes/Sunny-Ship/node_modules/ws/lib/event-target.js:220:9)
+    at WebSocket.emit (node:events:514:20)
+    at WebSocket.emitClose (/Users/sukhjot/codes/Sunny-Ship/node_modules/ws/lib/websocket.js:292:10)
+    at Socket.socketOnClose (/Users/sukhjot/codes/Sunny-Ship/node_modules/ws/lib/websocket.js:1374:15)
+    at Socket.emit (node:events:514:20) {
+  cause: ProtocolError
+      at <instance_members_initializer> (file:///Users/sukhjot/codes/Sunny-Ship/node_modules/puppeteer-core/lib/puppeteer/common/CallbackRegistry.js:108:14)
+      at new Callback (file:///Users/sukhjot/codes/Sunny-Ship/node_modules/puppeteer-core/lib/puppeteer/common/CallbackRegistry.js:112:16)
+      at CallbackRegistry.create (file:///Users/sukhjot/codes/Sunny-Ship/node_modules/puppeteer-core/lib/puppeteer/common/CallbackRegistry.js:27:26)
+      at Connection._rawSend (file:///Users/sukhjot/codes/Sunny-Ship/node_modules/puppeteer-core/lib/puppeteer/cdp/Connection.js:125:26)
+      at CdpCDPSession.send (file:///Users/sukhjot/codes/Sunny-Ship/node_modules/puppeteer-core/lib/puppeteer/cdp/CdpSession.js:72:14)
+      at #evaluate (file:///Users/sukhjot/codes/Sunny-Ship/node_modules/puppeteer-core/lib/puppeteer/cdp/ExecutionContext.js:374:50)
+      at ExecutionContext.evaluate (file:///Users/sukhjot/codes/Sunny-Ship/node_modules/puppeteer-core/lib/puppeteer/cdp/ExecutionContext.js:288:36)
+      at IsolatedWorld.evaluate (file:///Users/sukhjot/codes/Sunny-Ship/node_modules/puppeteer-core/lib/puppeteer/cdp/IsolatedWorld.js:104:30)
+      at CdpFrame.evaluate (file:///Users/sukhjot/codes/Sunny-Ship/node_modules/puppeteer-core/lib/puppeteer/api/Frame.js:364:43)
+      at CdpFrame.<anonymous> (file:///Users/sukhjot/codes/Sunny-Ship/node_modules/puppeteer-core/lib/puppeteer/util/decorators.js:101:27)
+}
+
+Node.js v26.12.0

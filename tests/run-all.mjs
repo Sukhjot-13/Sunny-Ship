@@ -60,6 +60,8 @@ if (!serverUp) {
 }
 
 const suites=[
+ ['aftFacadeFixture.test.mjs','R13 source facade authoring fixture'],
+ ['aftFacadeReference.test.mjs','R13 actual central entry and front aperture topology'],
  ['floorCollision.test.mjs','actual rectangular gallery floor support'],
  ['roundAccessCollision.test.mjs','circular shaft physical floor clearance'],
  ['roundHatchFixture.test.mjs','R14 round lawn hatch authoring fixture'],

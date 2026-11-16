@@ -40,6 +40,8 @@ assert.notEqual(realisticExteriorMaterial(new THREE.MeshStandardMaterial({name:'
 const uv={sunny_uv_space:'metres'}
 assert(usesRealisticExterior(uv,'NativeHull'))
 assert(usesRealisticExterior({...uv,sunny_feature:'Helm'},'Sunny_Helm_wheel'))
+for(const feature of ['AftFacade','AftFrontOrnament0','AquariumFrontPort3','AftEntrance'])assert(usesRealisticExterior({...uv,sunny_feature:feature},'Sunny_'+feature+'_fixture'),feature+' must receive exterior finishes')
+assert(usesRealisticExterior(uv,'Sunny_Door_AftEntrance_leaf'),'actual shared entrance leaf needs exterior material scope')
 assert(usesRealisticExterior(uv,'Sunny_Library_lining_glass0'))
 for(const name of ['Sunny_InteriorMainMast','Sunny_ForeF1_lining','Sunny_Dining_table_top','Sunny_Womens_bed_frame'])assert(!usesRealisticExterior(uv,name),`${name}: room scope changed`)
 assert(!usesRealisticExterior({},'NativeHull'),'unmapped meshes must retain original path')

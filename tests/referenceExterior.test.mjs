@@ -28,7 +28,7 @@ function visit(index,parent){
  for(const child of node.children??[]){parents.set(child,index);visit(child,matrix)}
 }
 for(const index of glb.json.scenes[glb.json.scene??0].nodes)visit(index,new THREE.Matrix4())
-const ids=['ForeDoor','ForeDoorStarboard','WomensDoor','AquariumDoor','DiningEntrance','KitchenEntrance','LibraryDoor','PantryOutsideDoor','SickOutsideDoor']
+const ids=['ForeDoor','ForeDoorStarboard','WomensDoor','AquariumDoor','AftEntrance','LibraryDoor','PantryOutsideDoor','SickOutsideDoor']
 const results=[]
 for(const id of ids){
  const spec=meta.interiors.doors.find(d=>d.id===id);assert(spec,id+' metadata')
@@ -60,4 +60,4 @@ const depth=(head.max.x-head.min.x)/(head.max.z-head.min.z)
 assert(depth>.64&&depth<.72,'rounded profile retains reference reconstruction envelope, not flat source disk')
 assert.equal(actual.filter(o=>/^Rectangle00[2-8](?:\.\d+)?$/.test(o.name)).length,7,'seven retained mane blades')
 assert(actual.some(o=>o.name.startsWith('Sunny_Usopp_office_sketch')),'actual branch-office drawing details')
-console.log('PASS exported rounded lion, nine arched glazed doors and attached moving fittings',JSON.stringify({depth,doors:results}))
+console.log('PASS exported rounded lion, eight arched glazed doors and attached moving fittings',JSON.stringify({depth,doors:results}))

@@ -511,15 +511,11 @@ def add_fitted_arch(obj,id_,position,outward,radius=.55,straight=1.15,legacy=Fal
 
 
 def add_aft_windows(objects,frame,interiors):
-    """Keep four bow windows and add reviewed side/rear curved-skin stations."""
+    """Fit only the side/rear curved-skin sashes; front follows R13 separately."""
     obj=next(obj for obj in objects if obj.get('sunny_aft_native_envelope'))
     level=interiors['levels']['F2A'];cy=frame.y(.585);records=[]
-    for i,y in enumerate((cy-8.8,cy-1.7,cy+1.7,cy+8.8)):
-        records.append(add_fitted_arch(obj,'DiningWindow'+str(i),(12.3,y,level+.95),(-1,0,0),legacy=True))
-        # Retain the existing thin front room-return openings behind this sash.
-        for other in list(bpy.data.objects):
-            if other.type=='MESH' and other.name.startswith(('Sunny_RoomPartition_DiningEntrance','Sunny_RoomPartition_KitchenEntrance')):
-                open_volume_slot(other,11.5,13.1,y-.55,y+.55,level+.95,level+2.65)
+    # R13's front pair is authored separately as tall lobed motifs, rather
+    # than retaining the previous four generic front sashes.
     # Explicit reconstruction, not a claim of a hidden canonical window count.
     # Front half side stations remain reserved for the unchanged garden flights.
     for side in (-1,1):

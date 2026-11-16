@@ -52,7 +52,7 @@ function visit(i,parent,inherited){
     if(!aftParts.has(name))aftParts.set(name,{tags:node.extras??{},faces:[]})
     aftParts.get(name).faces.push({v,material:glb.json.materials[p.material]?.name})
    }
-   if(/^Sunny_(?:Door_(?:DiningEntrance|KitchenEntrance)_leaf|(?:DiningEntrance|KitchenEntrance)_frame_|(?:DiningEntrance|KitchenEntrance)_handle)/.test(name)){
+   if(/^Sunny_(?:Door_AftEntrance_leaf|AftEntrance_frame_|AftEntrance_handle)/.test(name)){
     if(!aftDoorArchParts.has(name))aftDoorArchParts.set(name,{tags:node.extras??{},faces:[]})
     aftDoorArchParts.get(name).faces.push(v)
    }
@@ -62,7 +62,7 @@ function visit(i,parent,inherited){
    }
    if(normal.length()<1e-7)continue
    normal.normalize()
-   if(/^Sunny_RoomPartition_(?:aqua_fwd|DiningEntrance|KitchenEntrance)_lintel0$/.test(name)){
+   if(/^Sunny_RoomPartition_aqua_fwd_lintel0$/.test(name)){
     if(!exteriorLintelFaces.has(name))exteriorLintelFaces.set(name,[])
     exteriorLintelFaces.get(name).push({normal:normal.clone(),material:glb.json.materials[p.material]?.name})
    }
@@ -1194,7 +1194,7 @@ assert(supportedAftFeet>65,'aft support guard must measure actual recovered wall
 console.log('PASS aft native red/cream envelope is closed, curved through height and supported on retained floors')
 
 const aftWindows=[...aftParts].filter(([name,part])=>part.tags.sunny_aft_window_id)
-assert.equal(aftWindows.length,10,'four retained bow + six disclosed reconstructed side/rear upper sash stations')
+assert.equal(aftWindows.length,6,'six disclosed reconstructed side/rear upper sash stations; R13 front motifs checked separately')
 for(const [name,part]of aftWindows){
  const tags=part.tags,id=tags.sunny_aft_window_id,centre=aftWorld(tags.sunny_aft_window_position)
  const normal=aftWorld(tags.sunny_aft_window_outward).normalize(),lateral=new THREE.Vector3(-tags.sunny_aft_window_outward[1],0,-tags.sunny_aft_window_outward[0])
@@ -1229,7 +1229,7 @@ for(const [name,part]of aftWindows){
 }
 console.log('PASS retained/new aft arches have real crown corners, closed curved glazing, skin openings and attached sash frames')
 
-for(const [id,x,off,width]of [['DiningEntrance',12.3,-4.2,1.30],['KitchenEntrance',12.3,4.2,1.30],['PantryOutsideDoor',24.65,5,1.05],['SickOutsideDoor',24.65,-5,1.05]]){
+for(const [id,x,off,width]of [['AftEntrance',12.3,0,(aftEnvelope.top-aftFloor)*.66*.60-.05],['PantryOutsideDoor',24.65,5,1.05],['SickOutsideDoor',24.65,-5,1.05]]){
  const door=metadata.interiors.doors.find(d=>d.id===id),cy=.585*2.2
  assert(door&&Math.abs(door.pos[0]-x)<.001&&Math.abs(door.pos[1]-(cy+off))<.001&&Math.abs(door.width-width)<.001,id+' must retain its exact station and human width')
  for(const across of [-.34,0,.34])for(const height of [.10,.90,1.75]){
@@ -1250,17 +1250,17 @@ for(const [name,faces]of aftTreads){
 }
 console.log('PASS all fixed aft door stations and both real garden flights retain human body/headroom through the recovered envelope')
 
-// N explicitly shows two arch-headed upper aft entrances. Read actual leaf,
+// R13 shows one central arch-headed upper aft entrance. Read actual leaf,
 // fixed crown and source-wall corners; a decorated square hole cannot pass.
 const aftDoorArchCollision=loadColliders('public/models/sunny-collision.glb')
-for(const id of ['DiningEntrance','KitchenEntrance']){
+for(const id of ['AftEntrance']){
  const spec=metadata.interiors.doors.find(d=>d.id===id),leaf=aftDoorArchParts.get(spec.node)
  const crown=aftDoorArchParts.get('Sunny_'+id+'_frame_head')
  assert(leaf?.tags.sunny_door_arch&&crown?.tags.sunny_door_arch_frame,id+' requires physical arch leaf and fixed crown')
  assert(crown.tags.sunny_rail,id+' crown must use individual surface collision rather than a full blocking rectangle')
  aftClosedBody(spec.node,leaf.faces);aftClosedBody('Sunny_'+id+'_frame_head',crown.faces)
- assert(Math.abs(spec.height-2.24)<1e-9&&Math.abs(spec.baseOffset-1.15)<1e-9&&Math.abs(spec.thickness-.075)<1e-9,id+' original door dimensions/root must stay fixed')
- assert(Math.abs(spec.slide[0])<1e-12&&Math.abs(spec.slide[1]-1.36)<1e-9&&spec.slide[2]===0,id+' original slide must stay fixed')
+ assert(Math.abs(spec.height-((aftEnvelope.top-aftFloor)*.66-.06))<1e-9&&Math.abs(spec.baseOffset-(spec.height/2+.03))<1e-9&&Math.abs(spec.thickness-.075)<1e-9,id+' reference-proportioned leaf/root must match the actual storey')
+ assert(Math.abs(spec.slide[0])<1e-12&&Math.abs(spec.slide[1]-(spec.width+.06))<1e-9&&spec.slide[2]===0,id+' original slide must stay fixed')
  const centre=aftWorld(spec.pos),lateral=new THREE.Vector3(Math.cos(spec.rot),0,-Math.sin(spec.rot)),normal=new THREE.Vector3(-Math.sin(spec.rot),0,-Math.cos(spec.rot))
  const radius=spec.width/2,spring=spec.height-radius,wallRadius=(spec.width+.10)/2,wallSpring=spec.height+.12-wallRadius
  const ray=(across,height)=>centre.clone().addScaledVector(lateral,across).add(new THREE.Vector3(0,height,0)).addScaledVector(normal,1.5)
@@ -1280,7 +1280,7 @@ for(const id of ['DiningEntrance','KitchenEntrance']){
   assert(!crownProxies.some(b=>b.max.x>feet.x-.34&&b.min.x<feet.x+.34&&b.max.z>feet.z-.34&&b.min.z<feet.z+.34&&b.max.y>feet.y+.02&&b.min.y<feet.y+1.75),id+' fixed arch crown blocks normal body clearance')
  }
 }
-console.log('PASS both N upper-aft entrances retain exact dynamic roots/slide, real closed arch leaves and surface-collision crowns, true wall corners and normal-human headroom')
+console.log('PASS R13 central upper-aft entrance has matching dynamic root/slide, closed arch leaf and surface-collision crown, true wall corners and normal-human headroom')
 
 // A/C/N show the lower exposed sash tier. Measure real outside owners, joined
 // deep reveals and closed panes; an inner-box window behind intact hull fails.
@@ -1398,7 +1398,7 @@ for(const side of ['port','starboard']){
 console.log('PASS '+gardenTerrainSamples+' actual garden body positions remain free of unsupported coarse terrain floors')
 
 // Match reference facade paint on the real outside face; preserve interior wood.
-for(const id of ['aqua_fwd','DiningEntrance','KitchenEntrance']){
+for(const id of ['aqua_fwd']){
  const name=`Sunny_RoomPartition_${id}_lintel0`,faces=exteriorLintelFaces.get(name);
  assert.ok(faces?.length,`${name}: physical lintel is present`);
  const outside=faces.filter(f=>f.normal.x<-.99),inside=faces.filter(f=>f.normal.x>.99);
@@ -1406,7 +1406,7 @@ for(const id of ['aqua_fwd','DiningEntrance','KitchenEntrance']){
  assert.ok(inside.length&&inside.every(f=>f.material==='Sunny_darkwood'),`${name}: retained interior timber`);
  assert.ok(faces.filter(f=>f.normal.x>=-.99).every(f=>f.material==='Sunny_darkwood'),`${name}: paint is bounded to the outside face`);
 }
-console.log('PASS all three aft entrance lintels have reference cream outside faces and retained timber inside');
+console.log('PASS retained Aquarium entry lintel has cream outside faces and timber inside');
 
 // Independent actual exported room/stair enclosure check. Preserve every
 // preceding geometry/body/headroom/terrain guard and all original tolerances.
@@ -1421,8 +1421,9 @@ for(const side of ['port','starboard']){
  assert.equal(spec.treadCount,treads.length,side+' enclosure must include its complete actual flight')
  const last=Math.max(...treads.map(b=>b.max.x))
  // Start inside the real room. The metadata front station is the source
- // outline; a ray there can begin embedded in the 18 cm closed front wall.
- const roomFront=fittingHits(aftSkin,new THREE.Vector3((aftEnvelope.frontStation+last)/2,aftFloor+1.7,-.585*2.2),new THREE.Vector3(-1,0,0))[0]
+ // outline; probe an opaque station beside the central door, rather than
+ // misclassifying that real aperture as a missing room-facing front wall.
+ const roomFront=fittingHits(aftSkin,new THREE.Vector3((aftEnvelope.frontStation+last)/2,aftFloor+1.7,-(.585*2.2+3.5)),new THREE.Vector3(-1,0,0))[0]
  assert(roomFront&&roomFront.x>aftEnvelope.frontStation&&roomFront.x<aftEnvelope.frontStation+1,side+' enclosure probes need the actual room-facing front wall')
  const first=Math.max(roomFront.x+.1,Math.min(...treads.map(b=>b.min.x)))
  for(let x=first;x<=last;x+=.2){

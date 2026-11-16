@@ -10,11 +10,21 @@ import json
 import os
 import math
 import hashlib
+import argparse
+import sys
 from mathutils import Vector
 
 ROOT=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONFIG=json.load(open(os.path.join(ROOT,'src/config/exteriorConfig.json')))
-OUT=os.path.join(ROOT,'assets','reference')
+_parser=argparse.ArgumentParser(description='Create a uniformly reversed reference inspection copy')
+_parser.add_argument('--source-master')
+_parser.add_argument('--working-visual')
+_parser.add_argument('--out-dir')
+_args=sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else []
+_options=_parser.parse_args(_args)
+OUT=os.path.abspath(_options.out_dir or os.path.join(ROOT,'assets','reference'))
+SOURCE=os.path.abspath(_options.source_master or os.path.join(ROOT,'assets','sunny-master.blend'))
+WORKING_VISUAL=os.path.abspath(_options.working_visual or os.path.join(ROOT,'public','models','sunny.glb'))
 
 
 def measure(objects):
@@ -28,7 +38,7 @@ def measure(objects):
 
 def export_reference():
     """Create a linked-transform Blender copy, static GLB and dimension receipt."""
-    source=os.path.join(ROOT,'assets/sunny-master.blend')
+    source=SOURCE
     bpy.ops.wm.open_mainfile(filepath=source)
     root=bpy.data.objects.get('ThousandSunny')
     if root is None:raise RuntimeError('working master has no authoritative ship root')
@@ -55,9 +65,10 @@ def export_reference():
     for obj in objects+[root]:obj.select_set(True)
     bpy.ops.export_scene.gltf(filepath=os.path.join(OUT,'sunny-reference.glb'),export_format='GLB',
                               use_selection=True,export_yup=True,export_extras=True)
-    receipt={'source':'assets/sunny-master.blend',
+    receipt={'source':os.path.relpath(source,ROOT) if source.startswith(ROOT+os.sep) else source,
+             'workingVisualSource':os.path.relpath(WORKING_VISUAL,ROOT) if WORKING_VISUAL.startswith(ROOT+os.sep) else WORKING_VISUAL,
              'sourceSha256':hashlib.sha256(open(source,'rb').read()).hexdigest(),
-             'workingVisualSha256':hashlib.sha256(open(os.path.join(ROOT,'public/models/sunny.glb'),'rb').read()).hexdigest(),
+             'workingVisualSha256':hashlib.sha256(open(WORKING_VISUAL,'rb').read()).hexdigest(),
              'workingScale':CONFIG['experienceScale'],
              'referenceScale':1,'rootMultiplier':factor,'workingBoundsBlender':working,
              'referenceBoundsBlender':reference,

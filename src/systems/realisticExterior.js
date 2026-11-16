@@ -121,13 +121,13 @@ export function realisticTextureSet(role){
  textures.set(role,result);return result
 }
 
-const outdoorFeatures=/^(?:AftEntryDeck|AftF2|Anchor|AquariumDoorApproach|AquariumLadder|AquariumWindow|CoupDeBurst|DiningWindow|Dock1|DockNumber|DockSlat|ForedeckSupport|ForeLanding|ForeUpperLanding|ForeStair|AftStair|ForePortRail|ForeStarRail|ForeUpperRail|ForeDoorApproach|ForeStarboardDoorApproach|WomensDoorApproach|Gaon|GardenDeck|GardenStair|Helm|HullPort\d+|KitchenChimney|Lantern|Lawn|LawnSidewalk-?1|LibraryRoof|LionEye|LionSmile|LogPose|Lookout|MastPlatform|Mikan\d+|Paddle|PopGreens|RobinGarden|SailTie|ShadeTree|Slide|SoldierDock|SternAccess|SternBalcony|Swing|Usopp)$/
+const outdoorFeatures=/^(?:AftEntryDeck|AftF2|AftFacade|AftFrontOrnament\d+|AquariumFrontPort\d+|AftEntrance|Anchor|AquariumDoorApproach|AquariumLadder|AquariumWindow|CoupDeBurst|DiningWindow|Dock1|DockNumber|DockSlat|ForedeckSupport|ForeLanding|ForeUpperLanding|ForeStair|AftStair|ForePortRail|ForeStarRail|ForeUpperRail|ForeDoorApproach|ForeStarboardDoorApproach|WomensDoorApproach|Gaon|GardenDeck|GardenStair|Helm|HullPort\d+|KitchenChimney|Lantern|Lawn|LawnSidewalk-?1|LibraryRoof|LionEye|LionSmile|LogPose|Lookout|MastPlatform|Mikan\d+|Paddle|PopGreens|RobinGarden|SailTie|ShadeTree|Slide|SoldierDock|SternAccess|SternBalcony|Swing|Usopp)$/
 /** Protect authored room finishes/furniture while upgrading actual exterior. */
 export function usesRealisticExterior(tags,name){
  if(!tags.sunny_uv_space)return false
  if(!name.startsWith('Sunny_'))return true
  if(name.startsWith('Sunny_Library_lining_glass'))return true
- return outdoorFeatures.test(tags.sunny_feature??'')||/Sunny_(?:Door|Hatch)_(?:WomensDoor|ForeDoor|ForeToiletDoor|AquariumDoor|DiningEntrance|KitchenEntrance|PantryOutsideDoor|SickOutsideDoor|LibraryDoor|SternAccessDoor|CrowNestHatch|KitchenHatch|DockLadderHatch)/.test(name)
+ return outdoorFeatures.test(tags.sunny_feature??'')||/Sunny_(?:Door|Hatch)_(?:WomensDoor|ForeDoor|ForeToiletDoor|AquariumDoor|AftEntrance|PantryOutsideDoor|SickOutsideDoor|LibraryDoor|SternAccessDoor|CrowNestHatch|KitchenHatch|DockLadderHatch)/.test(name)
 }
 
 /** Surface identity comes from material and fitting context, never random colour. */

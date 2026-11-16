@@ -1,7 +1,8 @@
 {
   "source": "assets/sunny-master.blend",
-  "sourceSha256": "fc9fed8071c083f651ab3d5374987ca76bb6eab0cc49aa92c80b7b70e878db5a",
-  "workingVisualSha256": "97dceb0684417b5f4223541c5d5b71afa9cba2c25ac91563a61d899fb8a6c1d7",
+  "workingVisualSource": "public/models/sunny.glb",
+  "sourceSha256": "389b2ede6691bd09c6c7d099ca15c4e92271a983fe9436e4969b16c2c6528403",
+  "workingVisualSha256": "93e124a48d667f41c3d6346ce633e81df27bbb2fd60881d827d64198bc436ae2",
   "workingScale": 2.2,
   "referenceScale": 1,
   "rootMultiplier": 0.45454545454545453,

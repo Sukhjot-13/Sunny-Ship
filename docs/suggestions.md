@@ -29,6 +29,9 @@ the reasoning is not lost.
 
 ## 🟢 Improvements
 
+- **2026-11-16 — Fore facade handedness and missing ports (next exterior section).** Full-resolution R09 shows the upper fore entry on the right when viewed from the lawn toward the bow, with two circular ports on the opposite side. Current matched view places WomensDoor on the left (Blender Y−6.263) and lacks the pair. Rebuild the actual entry/cuts/landing on the source side and verify normal access; do not relabel the existing mirrored arrangement or assume inherited stations are canonical.
+
+
 - **2026-11-16 — Verify facade morphology before tuning proportions (active).** Full-resolution R13 shows a single central upper aft entrance and tall paired ornaments/openings; the existing two-door/four-sash front is unsourced. Lower facade ports are circular. Rebuild these actual features rather than scaling the generic layout.
 - **2026-11-16 — Exact collision at visible transfer edges (implemented).** Coarse gallery floor starts ~9cm inside its actual front edge, stranding the last tread against the fascia. Supplement only actual upward rectangular faces, preserving the cut geometry, and retain a real-input approach/return regression.
 

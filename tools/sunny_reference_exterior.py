@@ -5,7 +5,7 @@ from mathutils import Vector
 from sunny_exterior import _mesh, finish, pole, ring, box, material, sphere, assign_world_mesh
 
 EXTERIOR_DOORS = {'ForeDoor', 'ForeDoorStarboard', 'WomensDoor', 'AquariumDoor',
-                  'DiningEntrance', 'KitchenEntrance', 'LibraryDoor',
+                  'AftEntrance', 'LibraryDoor',
                   'PantryOutsideDoor', 'SickOutsideDoor'}
 
 
@@ -39,7 +39,7 @@ def round_figurehead(objects, bounds):
 def door_porthole(leaf, id_, p, rot, width, height, thickness):
     """Cut a real glazed porthole; both rims, bolts and straps move with the leaf."""
     from sunny_accuracy import face_boolean
-    radius, z, count = min(.22, width*.19), height*.73, 48
+    radius, z, count = min(height*.10, width*.19), height*.73, 48
     vertices = [local_point(p, rot, radius*math.cos(i*math.tau/count), depth,
                             z+radius*math.sin(i*math.tau/count))
                 for depth in (-.25,.25) for i in range(count)]

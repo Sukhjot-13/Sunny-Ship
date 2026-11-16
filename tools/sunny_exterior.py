@@ -1051,36 +1051,14 @@ def add_fittings(objects, vertex_bbox, frame, interiors):
     stool('Usopp_office_stool', (f.x(5.0), f.y(0.2), garden))
     workbench('Garden_workbench', (f.x(7.8), f.y(4.8), garden), math.pi / 2, 2.4, 0.8, 0.88)
 
-    # N/A show arched sash windows on these facades; round hull ports belong
-    # lower/on the painted side panels and are built separately.
-    for feature,x,level,ys,radius,trim in (
-        ('AquariumWindow',8.65,levels['F1'],(cy-8.0,cy-3.2,cy+3.2,cy+8.0),.60,'white'),
-        ('DiningWindow',12.3,levels['F2A'],(cy-8.8,cy-1.7,cy+1.7,cy+8.8),.55,'gold')):
-        if feature == 'DiningWindow':
-            continue  # source-shaped F2 arches are cut with closed reveals below
-        for y in ys:
-            bottom=level+.95;spring=bottom+1.15;top=spring+radius
-            for obj in list(bpy.data.objects):
-                if obj.type=='MESH' and (obj.name.startswith(('Sunny_RoomPartition_aqua_fwd','Sunny_RoomPartition_DiningEntrance','Sunny_RoomPartition_KitchenEntrance','Sunny_AftF2_shell','Sunny_Aquarium_shell')) or obj.name in ('Tube008.001','对象001','对象002','对象003','Line002')):
-                    open_volume_slot(obj,x-.8,x+.8,y-radius,y+radius,bottom,top)
-            arch=[Vector((x-.10,y+radius*math.cos(i*math.pi/24),spring+radius*math.sin(i*math.pi/24))) for i in range(25)]
-            for p,q in zip(arch,arch[1:]):pole(feature+'_frame',p,q,.055,trim)
-            for direction in (-1,1):pole(feature+'_jamb',(x-.10,y+direction*radius,bottom),(x-.10,y+direction*radius,spring),.055,trim)
-            pole(feature+'_sill',(x-.10,y-radius,bottom),(x-.10,y+radius,bottom),.055,trim)
-            glass=[Vector((x+.01,y-radius,bottom)),Vector((x+.01,y+radius,bottom))]+[Vector((x+.01,p.y,p.z)) for p in arch]
-            ob=finish(_mesh(feature+'_glass',glass,[tuple(range(len(glass)))]),feature+'_glass','glass',obstacle=True)
-            ob['sunny_window_arch']=True
-            pole(feature+'_mullion',(x-.08,y,bottom),(x-.08,y,top),.028,'black')
-            for h in (.50,1.05):pole(feature+'_crossbar',(x-.08,y-radius,bottom+h),(x-.08,y+radius,bottom+h),.026,'black')
-            # Retain solid cream corners above the arch instead of a square
-            # hole leaking daylight around the curved frame.
-            verts=[];faces=[]
-            for p,q in zip(arch,arch[1:]):
-                k=len(verts);verts.extend([(x-.03,p.y,p.z),(x-.03,q.y,q.z),(x-.03,q.y,top),(x-.03,p.y,top)]);faces.append(tuple(range(k,k+4)))
-            ob=_mesh(feature+'_wall_corners',verts,faces);finish(ob,feature+'_wall_corners','cream')
-
+    # R13 shows circular ports on the lower front, a single central upper
+    # entrance and paired tall lobed motifs. Generic front sashes are removed.
     from sunny_aft_envelope import add_aft_windows
     add_aft_windows(objects,frame,interiors)
+    from sunny_aft_facade import facade_layout,add_front_ornaments,add_front_ports
+    front_layout=facade_layout(levels,cy)
+    add_front_ornaments(objects,interiors,front_layout)
+    add_front_ports(objects,interiors,front_layout)
 
     # ---- hatches, with a real opening beneath each one ------------------
     def shaft(x0, x1, y0, y1, z0, z1):

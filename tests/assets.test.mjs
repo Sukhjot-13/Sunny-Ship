@@ -305,7 +305,7 @@ console.log('\n=== METADATA ===')
   check('lion disk has a broad gold collar rather than a thin painted rim',collarGold>.35&&collarGold<.65,`projected gold ${(collarGold*100).toFixed(1)}%`)
   check('both retained foremast collars match the dark anime bands',['Tube010','Tube011'].every(name=>materialNames(nodes.find(n=>n.name===name)).every(m=>m==='Sunny_black')))
   check('mainmast platforms have timber decks, dark rims and mounted supports',['Cylinder008','Cylinder012','Cylinder056'].every(name=>materialNames(nodes.find(n=>n.name===name)).includes('Sunny_darkwood')&&nodes.filter(n=>n.name.startsWith('Sunny_MastPlatform_brace_'+name)).length===8))
-  check('all eight exposed facade sashes are arched and physically glazed',nodes.filter(n=>n.extras?.sunny_window_arch).length===8&&nodes.filter(n=>n.extras?.sunny_window_arch).every(n=>coll.some(c=>c.name==='COLL_Solid_'+n.name)))
+  check('reference front has two tall motifs and four round physically glazed ports',nodes.filter(n=>n.extras?.sunny_aft_front_ornament).length===2&&nodes.filter(n=>n.extras?.sunny_window_round_front).length===4&&nodes.filter(n=>n.extras?.sunny_aft_front_ornament||n.extras?.sunny_window_round_front).every(n=>coll.some(c=>c.name==='COLL_Solid_'+n.name)))
   check('reference dark hull mouldings and rudder straps retain their authored geometry',
     ['Box118','Box119','Box121'].every(name=>materialNames(nodes.find(n=>n.name===name)).every(m=>m==='Sunny_black'))&&
     nodes.find(n=>n.name==='Line012')?.extras?.sunny_rudder_straps===2&&materialNames(nodes.find(n=>n.name==='Line012')).includes('Sunny_black'))
@@ -401,8 +401,14 @@ console.log('\n=== METADATA ===')
       return !coll.some(b=>b.name.startsWith('COLL_Floor')&&
         x>b.min.x+.01&&x<b.max.x-.01&&-z>b.min.z+.01&&-z<b.max.z-.01&&Math.abs(b.max.y-y)<.04)
     }))
-  check('door leaves keep realistic independent height and width',meta.interiors.doors.filter(d=>d.kind==='door')
-    .every(d=>d.height>=2&&d.height<=2.5&&d.width>=0.85&&d.width<=2.6))
+  check('door leaves match their section proportions and ordinary body clearance',meta.interiors.doors.filter(d=>d.kind==='door')
+    .every(d=>{
+      if(['AftEntrance','AquariumDoor'].includes(d.id)){
+        const story=d.id==='AftEntrance'?meta.interiors.levels.F3G-meta.interiors.levels.F2A:meta.interiors.levels.F2A-meta.interiors.levels.F1
+        return d.height>story*.60&&d.height<story*.80&&d.width>d.height*.50&&d.width<d.height*.70
+      }
+      return d.height>=2&&d.height<=2.5&&d.width>=0.85&&d.width<=2.6
+    }))
   const chairs=ship.filter(o=>/^Sunny_Dining_chair\d+_seat$/.test(o.name))
   check('sixteen human-sized dining chairs have 0.45 m seats',chairs.length===16&&chairs.every(o=>
     Math.abs((o.min.y+o.max.y)/2-meta.interiors.levels.F2A-0.45)<0.01&&o.max.x-o.min.x<0.5&&o.max.z-o.min.z<0.5))
@@ -430,9 +436,9 @@ console.log('\n=== METADATA ===')
     dining.y[1]<=centreline+.01&&kitchen.y[0]>=centreline-.01&&
     meta.interiors.rooms.find(r=>r.name==='Sick Bay').y[1]<=centreline+.01&&
     meta.interiors.rooms.find(r=>r.name==='Pantry').y[0]>=centreline-.01)
-  check('both F2 entrances are on the same side as their actual named rooms',
-    meta.interiors.doors.find(d=>d.id==='DiningEntrance').pos[1]<centreline&&
-    meta.interiors.doors.find(d=>d.id==='KitchenEntrance').pos[1]>centreline)
+  check('R13 shared F2 entrance is centred between dining and kitchen',
+    Math.abs(meta.interiors.doors.find(d=>d.id==='AftEntrance').pos[1]-centreline)<.001&&
+    !meta.interiors.doors.some(d=>['DiningEntrance','KitchenEntrance','DiningDoor'].includes(d.id)))
   check('room build retains an editable Blender master',fs.existsSync('assets/sunny-master.blend')&&fs.statSync('assets/sunny-master.blend').size>1000000)
   check('three-barrel cola chamber replaces the provisional five tanks',
     [0,1,2].every(i=>ship.some(o=>o.name==='Sunny_Energy_cola_barrel'+i))&&

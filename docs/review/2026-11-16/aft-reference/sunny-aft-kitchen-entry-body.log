@@ -1,0 +1,7 @@
+PASS lawn to Kitchen {
+  pos: [ 16.400000967722313, -35.62269973754883, -7.43771778599392 ],
+  grounded: true,
+  blocker: null
+}
+PASS Kitchen return to lawn [ -4.182547189204975, -40.55070114135742, -1.000402771786019 ]
+Interior journey failures: []

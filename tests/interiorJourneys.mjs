@@ -6,9 +6,11 @@ import {driveTo} from './stairFlights.mjs'
 import {ladderJourney} from './ladderJourney.mjs'
 import {pointAt} from '../src/systems/climbing.js'
 const plan=roomRoutes(),failures=[]
-const browser=await puppeteer.launch({headless:true,args:['--use-gl=angle','--use-angle=metal','--enable-unsafe-swiftshader','--enable-webgl']})
+const browser=await puppeteer.launch({headless:true,dumpio:process.env.BROWSER_DIAGNOSTICS==='1',args:['--use-gl=angle','--use-angle=metal','--enable-unsafe-swiftshader','--enable-webgl']})
+if(process.env.BROWSER_DIAGNOSTICS==='1')browser.process()?.once('exit',(code,signal)=>console.log('BROWSER EXIT',{code,signal}))
 try{
- const page=await browser.newPage();await page.setViewport({width:1440,height:900})
+ const page=await browser.newPage();
+ if(process.env.BROWSER_DIAGNOSTICS==='1')page.on('error',error=>console.log('BROWSER PAGE ERROR',error.message));await page.setViewport({width:1440,height:900})
  const errors=[];page.on('pageerror',e=>errors.push(e.message))
  await page.goto(process.env.URL||'http://localhost:5173/',{waitUntil:'domcontentloaded',timeout:120000});await page.waitForFunction(()=>window.__ship,{timeout:120000})
  await page.mouse.click(720,450);await page.keyboard.press('v');await page.waitForFunction(()=>window.__sunny&&window.__sunnyDoors)

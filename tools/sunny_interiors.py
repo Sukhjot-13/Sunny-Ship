@@ -626,7 +626,7 @@ def door(id_, p, rot, width=1.20, height=2.25, kind='slide', sign=1,
     exterior = id_ in EXTERIOR_DOORS
     arched = arched or exterior
     door_frame(id_ + '_frame', p, rot, width, height, arched=arched)
-    if exterior and id_ not in ('DiningEntrance','KitchenEntrance'):
+    if exterior:
         door_arch_corners(id_,p,rot,width,height)
     leaf_w, leaf_h = width - 0.05, height - 0.06
     thickness = 0.075
@@ -1552,9 +1552,11 @@ def build_interiors(objects, vertex_bbox, shift, aft_snapshot=None):
     aq = (8.65, f.x(10.6))
     aqua_floor = plan_floor('AquariumFloor_entry', [(aq[0], f.y(-5.8)), (aq[1], f.y(-5.8)),
                       (aq[1], f.y(7.0)), (aq[0], f.y(7.0))], F1)
-    wall_run('RoomPartition_aqua_fwd', (aq[0], cy, F1), math.pi / 2, 25.6, 3.4,
-             openings=((0, 1.55, 2.45),), key='cream', thickness=0.22, front_lintel_key='cream')
-    door('AquariumDoor', (aq[0], cy, F1), math.pi / 2, 1.55, 2.45, 'slide', 1,
+    aquarium_entry_height=(level_of['F2A']-F1)*.72
+    aquarium_entry_width=aquarium_entry_height*.60
+    wall_run('RoomPartition_aqua_fwd', (aq[0], cy, F1), math.pi / 2, 25.6, level_of['F2A']-F1-.18,
+             openings=((0, aquarium_entry_width, aquarium_entry_height),), key='cream', thickness=0.22, front_lintel_key='cream')
+    door('AquariumDoor', (aq[0], cy, F1), math.pi / 2, aquarium_entry_width, aquarium_entry_height, 'slide', 1,
          rooms=('F1', 'Aquarium Bar'), key='red')
     tank_x0, tank_x1 = aq[1] - 3.6, aq[1] - 1.8
     for side in (-1, 1):
@@ -1661,27 +1663,20 @@ def build_interiors(objects, vertex_bbox, shift, aft_snapshot=None):
     # Oda F2: port dining and starboard kitchen, infirmary/pantry behind them.
     aft=(12.3,24.8)
     rear=20.6
-    wall_run('RoomPartition_bar', ((aft[0]+rear)/2,cy,F2A),0,rear-aft[0],3.1,
-             openings=((-2.45,1.35,2.35),),key='cream',thickness=.18)
-    door('DiningDoor', ((aft[0]+rear)/2-2.45,cy,F2A),0,1.35,2.35,
-         rooms=('Dining Room','Kitchen'),key='white')
+    # R10 shows a common open kitchen/dining room. R13 has one central
+    # exterior entrance, not two independent doors feeding an invented wall.
+    # Retain the serving counter; remove only that unsourced dividing wall.
     # Serving bar opens above its counter and gives the two rooms visual contact.
     serving=(19.2,cy,F2A)
     for obj in list(bpy.data.objects):
         if obj.name.startswith('Sunny_RoomPartition_bar'):
             open_volume_slot(obj,18.1,20.3,cy-.3,cy+.3,F2A+1.05,F2A+2.35)
     counter('Kitchen_serving_bar',serving,0,2.2,.55,1.0,4,'timber')
-    for id_, yv in (('DiningEntrance',cy-4.2),('KitchenEntrance',cy+4.2)):
-        wall_run('RoomPartition_'+id_,(aft[0],yv,F2A),math.pi/2,7.4,3.1,
-                 openings=((0,1.35,2.3),),key='cream',thickness=.16,front_lintel_key='cream')
-        entrance=door(id_,(aft[0],yv,F2A),math.pi/2,1.35,2.3,
-                      rooms=('Aft Deck',id_),key='red',arched=True)
-        # Keep the existing jamb walls and beam geometry. Fill only the old
-        # square void's upper corners, with a matching physical arch cut.
-        corners=rbox('RoomPartition_'+id_+'_arch_corners',(aft[0],yv,F2A),math.pi/2,
-                     (1.35,.16,2.3),'cream',(0,0,1.15))
-        from sunny_aft_envelope import closed_door_arch_cut
-        closed_door_arch_cut(corners,entrance)
+    from sunny_aft_facade import facade_layout
+    aft_facade=facade_layout(level_of,cy)
+    door('AftEntrance',(aft[0],cy,F2A),math.pi/2,
+         aft_facade['doorWidth'],aft_facade['doorHeight'],
+         rooms=('Aft Gallery','Dining Room','Kitchen'),key='timber',arched=True)
     table('Dining_table',(16.3,cy-5.6,F2A),0,6.4,1.3,.76)
     for i in range(8):
         x=13.6+i*.78
@@ -1810,7 +1805,7 @@ def build_interiors(objects, vertex_bbox, shift, aft_snapshot=None):
         for obj in list(bpy.data.objects):
             if obj.type=='MESH' and (obj.name.startswith(('Sunny_ForeF1_shell','Sunny_ForeF2_shell','Sunny_AftF2_shell','Sunny_Aquarium_shell')) or obj.name in ('Line002', 'Line006', 'Tube008.001', 'Cylinder002', '对象001', '对象002', '对象003')):
                 if obj.get('sunny_aft_native_envelope'):
-                    if spec['kind'] == 'door' and spec['id'] in ('DiningEntrance','KitchenEntrance'):
+                    if spec['kind'] == 'door' and spec['id']=='AftEntrance':
                         from sunny_aft_envelope import closed_door_arch_cut
                         closed_door_arch_cut(obj,spec)
                     elif spec['kind'] == 'door' and spec['id'] in ('PantryOutsideDoor','SickOutsideDoor'):
