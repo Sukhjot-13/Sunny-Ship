@@ -552,7 +552,7 @@ def remove_exterior_overlaps(objects, vertex_bbox):
     """
     patterns=('ForeUpperLanding','ForeLanding','Lawn','GardenDeck','AftEntryDeck',
               'ForedeckSupport','LawnSidewalk','ForeDoorApproach',
-              'ForeStarboardDoorApproach','AquariumDoorApproach','WomensDoorApproach',
+              'ForeStarboardDoorApproach','AquariumDoorApproach','ForePortGallery','WomensDoorApproach',
               'GardenStair_lowerLanding','GardenStair_upperLanding','SternBalcony_floor',
               'SternBalcony_access','InteriorFloor_F3_library','SternAccess_floor','SternAccess_neck',
               'InteriorFloor_F3_bath','Library_ceiling',
@@ -929,7 +929,12 @@ def add_fittings(objects, vertex_bbox, frame, interiors):
     exterior_floor('ForeDoorApproach',[(-16.0,7.0),(-12.5,7.0),(-12.5,9.4),(-16.0,9.4)],levels['F1'])
     exterior_floor('ForeStarboardDoorApproach',[(-16,-7.4),(-12.5,-7.4),(-12.5,-5.1),(-16,-5.1)],levels['F1'])
     plan_floor('AquariumDoorApproach',[(7.0,-0.05),(9.5,-0.05),(9.5,2.4),(7.0,2.4)],levels['F1'])
-    exterior_floor('WomensDoorApproach',[(-19,-7.3),(-14.7,-7.3),(-14.7,-5.4),(-19,-5.4)],levels['F2F'])
+    fore_port_gallery=[(-19,-7.3),(-14.7,-7.3),(-14.7,-5.4),(-19,-5.4)]
+    exterior_floor('ForePortGallery',fore_port_gallery,levels['F2F'])
+    # R09 retains the port gallery beneath its two windows, while the upper
+    # entry is on starboard. Mirror the physical bridge, not just its label.
+    plan_floor('WomensDoorApproach',list(reversed([(x*extent,2*cy-y*extent)
+               for x,y in fore_port_gallery])),levels['F2F'])
     exterior_floor('AftEntryDeck',[(8.9,-14.9),(12.4,-14.9),(12.4,15),(8.9,15)],levels['F2A'])
     bpy.context.view_layer.update()
     # Body clearance over the last exterior treads: the aquarium's corner wall
@@ -1059,6 +1064,11 @@ def add_fittings(objects, vertex_bbox, frame, interiors):
     front_layout=facade_layout(levels,cy)
     add_front_ornaments(objects,interiors,front_layout)
     add_front_ports(objects,interiors,front_layout)
+    from sunny_fore_facade import fore_front_ports,fore_front_finish,fore_entry_surrounds,fore_upper_entry_depth
+    fore_front_ports(objects,interiors,cy)
+    fore_front_finish(interiors)
+    fore_entry_surrounds(interiors)
+    fore_upper_entry_depth(interiors)
 
     # ---- hatches, with a real opening beneath each one ------------------
     def shaft(x0, x1, y0, y1, z0, z1):
@@ -1124,11 +1134,23 @@ def add_fittings(objects, vertex_bbox, frame, interiors):
     # Library support in sunny_accuracy.stern_ladder_access(). No invented
     # central-garden stairwell/cut remains in the regenerated decks.
 
-    # Canon hatch in the men's cabin connects directly to fore storage.
-    sp=(-18.5,-4.5,b1)
-    shaft(sp[0]-1.5,sp[0]+6.1,-8.25,-6.55,levels['F1']-2.2,levels['F1']+.2)
-    switchback('StorageStair',sp,0,levels['F1']-b1,4.6,1.4,1.5)
-    hatch('StorageHatch',(-17.7,-7.4,levels['F1']),0,(1.5,1.4),rooms=("Men's Quarters",'Storage Room'),slide_sign=-1)
+    # R09 explicitly shows a ladder to storage inside the men's cabin. The
+    # inherited switchback/long shaft crossed the lawn-side doorway. Keep a
+    # compact interior hatch; exact station/depth are reconstruction.
+    sx,sy=-23.,-5.5
+    shaft(sx-.83,sx+.83,sy-.78,sy+.78,levels['F1']-2.2,levels['F1']+.2)
+    hatch('StorageHatch',(sx,sy,levels['F1']),0,(1.5,1.4),
+          rooms=("Men's Quarters",'Storage Room'),slide_sign=-1)
+    for side in (-1,1):
+        pole('StorageLadder_rail%d'%side,(sx-.48,sy+side*.30,b1+.02),
+             (sx-.48,sy+side*.30,levels['F1']-.08),.035,'black',sides=10)
+    count=math.ceil((levels['F1']-b1)/.30)
+    for i in range(count+1):
+        z=b1+(levels['F1']-b1)*i/count
+        pole('StorageLadder_rung%d'%i,(sx-.48,sy-.30,z),(sx-.48,sy+.30,z),.025,'darkwood',sides=10)
+    interiors['exteriorClimbs'].append(dict(id='storage-ladder',label='Men’s cabin storage ladder',hatch='StorageHatch',
+        points=[[sx,sy,b1],[sx,sy,levels['F1']],[sx,sy+1.60,levels['F1']]],
+        reference='R09 ladder to storage; interior station and metre clearances reconstructed'))
 
     # Energy room descent at the back of the aquarium service passage.
     ep=(22.4,f.y(CENTRE_Y)+3.0,b1)

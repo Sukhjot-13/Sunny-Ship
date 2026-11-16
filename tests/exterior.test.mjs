@@ -150,7 +150,7 @@ function intersectionArea(subject,mask){
  }
  return Math.abs(polygon.reduce((s,p,i)=>{const q=polygon[(i+1)%polygon.length];return s+p[0]*q[1]-q[0]*p[1]},0))/2
 }
-const exterior=/^Sunny_(?:Lawn(?:\.\d+)?$|GardenDeck(?:\.\d+)?$|ForedeckSupport|ForeLanding|ForeUpperLanding|AftEntryDeck|LawnSidewalk|ForeDoorApproach|ForeStarboardDoorApproach|AquariumDoorApproach|WomensDoorApproach|SternAccess_(?:floor|neck)(?:\.\d+)?$|SternBalcony_(?:floor|access)(?:\.\d+)?$|InteriorFloor_F3_library(?:\.\d+)?$)/
+const exterior=/^Sunny_(?:Lawn(?:\.\d+)?$|GardenDeck(?:\.\d+)?$|ForedeckSupport|ForeLanding|ForeUpperLanding|AftEntryDeck|LawnSidewalk|ForeDoorApproach|ForeStarboardDoorApproach|AquariumDoorApproach|ForePortGallery|WomensDoorApproach|SternAccess_(?:floor|neck)(?:\.\d+)?$|SternBalcony_(?:floor|access)(?:\.\d+)?$|InteriorFloor_F3_library(?:\.\d+)?$)/
 const buckets=new Map()
 for(const t of triangles){const k=Math.round(t.height/.01);if(!buckets.has(k))buckets.set(k,[]);buckets.get(k).push(t)}
 const overlaps=new Map()
@@ -1293,8 +1293,12 @@ const aquariumPaint=metadata.interiors.aquariumSidePaintBounds
 assert(aquariumPaint?.length===6,'limited lower side paint bounds must be disclosed')
 const aquariumHull=aquariumLowerParts.get('Line002')
 assert(aquariumHull,'retain the actual supporting source hull')
-let aquariumCreamFaces=0
+let aquariumCreamFaces=0,foreCreamFaces=0
+const forePaint=metadata.interiors.foreFacade?.lowerFront
 for(const f of aquariumHull.faces.filter(f=>f.material==='Sunny_cream')){
+ if(forePaint&&f.v.every(point=>Math.abs(point.x-forePaint.x)<.00002&&point.y>=forePaint.low-.00002&&point.y<=forePaint.high+.00002)){
+  foreCreamFaces++;continue
+ }
  aquariumCreamFaces++
  for(const point of f.v){
   const p=[point.x,-point.z,point.y],eps=.00002
@@ -1303,6 +1307,7 @@ for(const f of aquariumHull.faces.filter(f=>f.material==='Sunny_cream')){
  }
 }
 assert(aquariumCreamFaces>40,'lower side sash walls require actual bounded cream faces')
+if(forePaint)assert(foreCreamFaces>4,'R09 cream belongs only on the actual transverse F1 front, not an overlay or unrelated hull')
 function aquariumOwner(faces,origin,direction){
  const ray=new THREE.Ray(origin,direction),hits=[]
  for(const f of faces){const point=ray.intersectTriangle(...f.v,false,new THREE.Vector3());if(point)hits.push({point,material:f.material,distance:point.distanceTo(origin)})}

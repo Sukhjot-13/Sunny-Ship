@@ -349,7 +349,7 @@ console.log('\n=== METADATA ===')
       !physical.some(b=>p[0]+.34>b.min.x+.02&&p[0]-.34<b.max.x-.02&&p[2]+.34>b.min.z+.02&&p[2]-.34<b.max.z-.02&&p[1]+1.75>b.min.y+.02&&p[1]<b.max.y-.02)))
   const aquariumPath=climbPaths.find(p=>p.id==='aquarium-ladder'),aquariumHatch=meta.interiors.doors.find(d=>d.id==='AquariumHatch')
   check('Aquarium uses the small sealed hinged gallery hatch and actual ladder from N',
-    climbPaths.length===4&&climbPaths.some(p=>p.id==='dock-waiting-ladder'&&p.hatch==='DockLadderHatch')&&aquariumPath?.hatch==='AquariumHatch'&&aquariumHatch?.mode==='lift'&&
+    climbPaths.length===(meta.interiors.foreFacade?5:4)&&(!meta.interiors.foreFacade||climbPaths.some(p=>p.id==='storage-ladder'&&p.hatch==='StorageHatch'))&&climbPaths.some(p=>p.id==='dock-waiting-ladder'&&p.hatch==='DockLadderHatch')&&aquariumPath?.hatch==='AquariumHatch'&&aquariumHatch?.mode==='lift'&&
     aquariumHatch.width<=1.5&&aquariumHatch.depth<=1.5&&aquariumHatch.pos[0]+aquariumHatch.width/2<meta.interiors.rooms.find(r=>r.name==='Kitchen').x[0]&&
     nodes.find(n=>n.name===aquariumHatch.node)?.extras?.sunny_airtight_grille===true&&
     ship.some(o=>o.name==='Sunny_AquariumLadder_rung0')&&!ship.some(o=>o.name.startsWith('Sunny_AquariumStair')))
@@ -403,8 +403,8 @@ console.log('\n=== METADATA ===')
     }))
   check('door leaves match their section proportions and ordinary body clearance',meta.interiors.doors.filter(d=>d.kind==='door')
     .every(d=>{
-      if(['AftEntrance','AquariumDoor'].includes(d.id)){
-        const story=d.id==='AftEntrance'?meta.interiors.levels.F3G-meta.interiors.levels.F2A:meta.interiors.levels.F2A-meta.interiors.levels.F1
+      if(['AftEntrance','AquariumDoor'].includes(d.id)||(meta.interiors.foreFacade&&['ForeDoor','ForeDoorStarboard'].includes(d.id))){
+        const story=d.id==='AftEntrance'?meta.interiors.levels.F3G-meta.interiors.levels.F2A:d.id==='AquariumDoor'?meta.interiors.levels.F2A-meta.interiors.levels.F1:meta.interiors.levels.F2F-meta.interiors.levels.F1
         return d.height>story*.60&&d.height<story*.80&&d.width>d.height*.50&&d.width<d.height*.70
       }
       return d.height>=2&&d.height<=2.5&&d.width>=0.85&&d.width<=2.6

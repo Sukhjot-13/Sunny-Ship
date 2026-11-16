@@ -32,6 +32,18 @@ const views=[
  ['slide',[0,lawn+5,-22],[6,lawn+3,-12.5],'R04/R13'],
  ['swing',[-2,lawn+4,18],[6,lawn+2,10],'R04/R13'],
 ]
+if(meta.interiors.foreFacade){
+ const upper=meta.interiors.doors.find(d=>d.id==='WomensDoor')
+ const ports=meta.interiors.foreFacade.ports
+ const target=[upper.pos[0],upper.pos[2]+1.25,-upper.pos[1]]
+ views.push(['fore-upper-entry',[-12.8,upper.pos[2]+2.2,-upper.pos[1]],target,'R09',70])
+ const midpoint=ports.reduce((p,r)=>p.map((v,i)=>v+r.position[i]/ports.length),[0,0,0])
+ views.push(['fore-upper-ports',[-12.8,midpoint[2]+.65,-midpoint[1]],[midpoint[0],midpoint[2],-midpoint[1]],'R09',70])
+ for(const id of ['ForeDoor','ForeDoorStarboard']){
+  const d=meta.interiors.doors.find(d=>d.id===id),t=[d.pos[0],d.pos[2]+d.height*.55,-d.pos[1]]
+  views.push(['fore-ground-'+id,[-12.8,d.pos[2]+2.2,-d.pos[1]],t,'R09',70])
+ }
+}
 const dockHatch=meta.interiors.doors.find(d=>d.id==='DockLadderHatch')
 if(dockHatch){
  const [hx,hy,hz]=dockHatch.pos

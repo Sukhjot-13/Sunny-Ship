@@ -17,7 +17,7 @@ const browser=await puppeteer.launch({headless:true,args:['--use-gl=angle','--us
 try{
  const page=await browser.newPage();await page.setViewport({width:1440,height:900})
  page.on('pageerror',e=>errors.push(e.message))
- await page.goto('http://localhost:5173',{waitUntil:'domcontentloaded',timeout:120000})
+ await page.goto(process.env.URL??'http://localhost:5173',{waitUntil:'domcontentloaded',timeout:120000})
  await page.waitForFunction(()=>window.__ship&&!document.body.innerText.includes('Loading the ship'),{timeout:120000})
  await page.mouse.click(720,450);await page.keyboard.press('v');await page.waitForFunction(()=>window.__sunny&&window.__sunnyDoors);await page.mouse.click(720,450)
  const read=()=>page.evaluate(()=>{
@@ -71,13 +71,18 @@ try{
  }
  // The sourced Aquarium connection is now a real small gallery ladder hatch.
  // Preserve its entire descent/ascent/closure and outside return coverage.
- const ladders=normalizeClimbs(meta.exterior.mechanisms.climbs).filter(p=>p.id!=='fore-lookout')
+ // Storage is an interior connection covered by interiorJourneys; its upper
+ // endpoint is inside the men's cabin, rather than beyond the aft flights.
+ const ladders=normalizeClimbs(meta.exterior.mechanisms.climbs).filter(p=>!['fore-lookout','storage-ladder'].includes(p.id))
  assert.equal(ladders.length,3,'R13 gallery/stern and R14 central Dock ladder connections are required')
  for(const ladder of ladders.filter(p=>selected(p.id))){
  const stern=ladder.id==='stern-library-ladder',dock=ladder.id==='dock-waiting-ladder',id=ladder.hatch
  if(!dock)await flight('aft port')
  if(stern)await flight('garden port')
  const upper=pointAt(ladder,ladder.length),ladderApproach=await to(ladder.label+' upper landing',upper,id)
+ // Grid-node arrival plus walking tolerance can still be more than20cm from
+ // the actual grab point. Finish with ordinary W at the registered endpoint.
+ assert(await driveTo(page,upper,.10),'upper walking route must reach the actual ladder endpoint')
  await ladderJourney(page,ladder,{descending:true,trace})
  assert(Math.abs((await read()).p[1]-ladder.points[0][1])<.15,'ladder reaches its real lower walking floor')
  const lowerExcursion=await to(ladder.label+' lower floor excursion',dock?[ladder.points[0][0]+.2,ladder.points[0][1],ladder.points[0][2]-.45]:[ladder.points[0][0]+.4,ladder.points[0][1],ladder.points[0][2]-1.0],id)

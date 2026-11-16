@@ -29,6 +29,8 @@ the reasoning is not lost.
 
 ## 🟢 Improvements
 
+- **2026-11-16 — R09 fore boundary reconstruction (active).** Staged corrections restore the upper starboard entry, opposite pair of real round ports, three broad arch bands and actual cream lower frontage. The first export revealed a native timber cap behind the upper doorway and an unsourced storage switchback crossing a lower entrance. Join the measured arch passage and replace the switchback with R09's compact interior ladder/hatch; station and depth remain reconstructed. Require real walking and complete storage climb/return before applying. Fore gallery guard rhythm and shroud placement still need the subsequent whole-exterior audit.
+
 - **2026-11-16 — Runtime collision query cost (under verification).** The isolated R13 full run still measures25fps. The runtime repeatedly scans roughly200k static proxies for walking/ground/ceiling queries. Draft a conservative immutable-box index with exact original-order resolution, requery after every push-out, and brute-force differential/contact tests. Wire only after the frozen run ends, then measure actual browser behavior; do not lower the FPS requirement or omit solids.
 
 

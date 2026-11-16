@@ -1,8 +1,8 @@
 {
-  "source": "assets/sunny-master.blend",
-  "workingVisualSource": "public/models/sunny.glb",
-  "sourceSha256": "389b2ede6691bd09c6c7d099ca15c4e92271a983fe9436e4969b16c2c6528403",
-  "workingVisualSha256": "93e124a48d667f41c3d6346ce633e81df27bbb2fd60881d827d64198bc436ae2",
+  "source": "/private/tmp/sunny-fore-reference-finish/sunny-master.blend",
+  "workingVisualSource": "/private/tmp/sunny-fore-reference-finish/sunny.glb",
+  "sourceSha256": "f31205af46853f083d0df6829b652d63bc2216f3d76a7acf8d6a0d26c589ece1",
+  "workingVisualSha256": "5c8b6b633edf471c32ac86c8ea87cc57bf6ed5cef469ec8fe86cee5c87459501",
   "workingScale": 2.2,
   "referenceScale": 1,
   "rootMultiplier": 0.45454545454545453,

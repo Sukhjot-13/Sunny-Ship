@@ -45,21 +45,23 @@ def entrance_surround(layout):
     """Build R13's broad alternating arch blocks around the one clear entry."""
     x,y,z=layout['x'],layout['centre'],layout['floor']
     width,height,band=layout['doorWidth'],layout['doorHeight'],layout['band']
+    outward=layout.get('outward',-1);prefix=layout.get('prefix','AftFacade')
     radius=width/2+.10;spring=height-width/2
     # Fixed jamb blocks and a closed segmented annulus remain outside the
     # opening; their individual surface colliders cannot fill the arch centre.
     for side in (-1,1):
         for i in range(4):
-            block=box('AftFacade_jamb', (x-.09,y+side*(radius+band/2),z+spring*(i+.5)/4),
+            block=box(prefix+'_jamb', (x+outward*.09,y+side*(radius+band/2),z+spring*(i+.5)/4),
                       (.22,band,spring/4-.015),'cream' if i%2 else 'darkwood',obstacle=True)
             block['sunny_rail']=True
     steps=12
     for i in range(steps):
         a,b=i*math.pi/steps,(i+1)*math.pi/steps
-        vertices=[(x+depth,y+r*math.cos(t),z+spring+r*math.sin(t))
-                  for depth in (-.20,.02) for r,t in ((radius,a),(radius,b),(radius+band,b),(radius+band,a))]
+        vertices=[(x+outward*depth,y+r*math.cos(t),z+spring+r*math.sin(t))
+                  for depth in (.20,-.02) for r,t in ((radius,a),(radius,b),(radius+band,b),(radius+band,a))]
         faces=[(0,3,2,1),(4,5,6,7),(0,1,5,4),(1,2,6,5),(2,3,7,6),(3,0,4,7)]
-        ob=finish(_mesh('AftFacade_archBlock',vertices,faces),'AftFacade_archBlock',
+        if outward>0:faces=[tuple(reversed(face))for face in faces]
+        ob=finish(_mesh(prefix+'_archBlock',vertices,faces),prefix+'_archBlock',
                   'cream' if i%2 else 'darkwood',obstacle=True)
         ob['sunny_rail']=True
         for face in ob.data.polygons:face.use_smooth=False

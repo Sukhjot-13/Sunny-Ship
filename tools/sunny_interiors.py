@@ -1498,9 +1498,11 @@ def build_interiors(objects, vertex_bbox, shift, aft_snapshot=None):
 
     # The wall ring owns the aft bulkhead; the common door cuts below retain
     # both entrances without layering a second wall over this same boundary.
-    door('ForeDoor', (f.x(-5.7), f.y(4.1), F1), math.pi / 2, 1.45, 2.40, 'slide', 1,
+    fore_entry_height=(level_of['F2F']-F1)*.72
+    fore_entry_width=fore_entry_height*.60
+    door('ForeDoor', (f.x(-5.7), f.y(4.1), F1), math.pi / 2, fore_entry_width, fore_entry_height, 'slide', 1,
          rooms=('F1', "Men's Quarters"), key='red')
-    door('ForeDoorStarboard',(f.x(-5.7),f.y(-3.1),F1),math.pi/2,1.45,2.4,
+    door('ForeDoorStarboard',(f.x(-5.7),f.y(-3.1),F1),math.pi/2,fore_entry_width,fore_entry_height,
          'slide',-1,rooms=('F1',"Men's Quarters"),key='red')
 
     # --- men's quarters: kotatsu, hung bunks, six lockers, posters -------
@@ -1606,8 +1608,8 @@ def build_interiors(objects, vertex_bbox, shift, aft_snapshot=None):
     # women's quarters
     w = (f.x(-12.5), f.x(-8.6))
     wy_ = (-7.2, 6.4)
-    door('WomensDoor', (-18.35, cy - 7.55, F2F), math.pi / 2, 1.15, 2.30,
-         'slide', -1, rooms=("Women's Quarters",), key='red')
+    door('WomensDoor', (-18.35, cy + 7.55, F2F), math.pi / 2, 1.15, 2.30,
+         'slide', 1, rooms=("Women's Quarters",), key='red')
     bed('Womens_bed', (w[1] - 1.1, f.y(2.2), F2F), math.pi / 2, 1.85, 2.10)
     bookcase('Womens_books', (w[0] + 0.6, f.y(-0.2), F2F), math.pi / 2, w=2.2, d=0.36, h=2.1, seed=11)
     wardrobe('Womens_closet', (w[0] + 0.6, -4.0, F2F), math.pi / 2, 1.9, 2.1, 0.62, 4)
@@ -1633,13 +1635,9 @@ def build_interiors(objects, vertex_bbox, shift, aft_snapshot=None):
 
     # women's washroom, with the wine and tea cupboard
     ww = (w[1]-.5, w[1]+1.7)
-    wall_run('RoomPartition_wwash', ((ww[0] + ww[1]) / 2, wy_[1] - 1.0, F2F), 0.0,
-             ww[1] - ww[0], 2.8, openings=((0.0, 0.95, 2.15),), key='cream', thickness=0.20)
-    for x in ww:
-        wall_run('RoomPartition_wwash_side',(x,7.4,F2F),math.pi/2,4.0,2.8)
-    wall_run('RoomPartition_wwash_back',((ww[0]+ww[1])/2,9.4,F2F),0,ww[1]-ww[0],2.8)
-    door('WomensWashDoor', ((ww[0] + ww[1]) / 2, wy_[1] - 1.0, F2F), 0.0, 0.95, 2.15,
-         'slide', -1, rooms=("Women's Washroom",), key='white')
+    # R09 places this sink/tea/wine cupboard next to the entry in the common
+    # cabin. The previous enclosed box and extra door blocked that entry.
+    # Keep its fixtures for the later room audit; remove the unsourced shell.
     sink('WWash_sink', (ww[1] - 0.9, wy_[1] + 1.6, F2F), math.pi)
     shelf_unit('WWash_cupboard', ((ww[0] + ww[1]) / 2, wy_[1] + 1.9, F2F), 0.0, 1.3, 0.3, 1.8, 4)
     for i in range(6):

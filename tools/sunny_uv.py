@@ -4,7 +4,7 @@ import re
 import bpy
 from mathutils import Vector, Matrix
 
-FEATURES = re.compile(r'^(?:AftEntryDeck|AftF2|AftFacade|AftFrontOrnament\d+|AquariumFrontPort\d+|Anchor|AquariumDoorApproach|AquariumLadder|AquariumWindow|CoupDeBurst|DiningWindow|Dock1|DockNumber|DockSlat|ForedeckSupport|ForeF[12]|ForeLanding|ForeUpperLanding|ForeStair|AftStair|ForePortRail|ForeStarRail|ForeUpperRail|ForeDoorApproach|ForeStarboardDoorApproach|WomensDoorApproach|Gaon|GardenDeck|GardenStair|Helm|HullPort\d+|InteriorMainMast|KitchenChimney|Lantern|Lawn|LawnSidewalk-?1|LibraryRoof|LionEye|LionSmile|LogPose|Lookout|MastPlatform|Mikan\d+|Paddle|PopGreens|RobinGarden|SailTie|ShadeTree|Slide|SoldierDock|SternAccess|SternBalcony|Swing|Usopp)$')
+FEATURES = re.compile(r'^(?:AftEntryDeck|AftF2|AftFacade|AftFrontOrnament\d+|AquariumFrontPort\d+|Anchor|AquariumDoorApproach|AquariumLadder|AquariumWindow|CoupDeBurst|DiningWindow|Dock1|DockNumber|DockSlat|ForedeckSupport|ForeF[12]|ForeEntryTunnel|ForePortGallery|ForeFrontPort\d+|ForeFacade\w*|ForeLanding|ForeUpperLanding|ForeStair|AftStair|ForePortRail|ForeStarRail|ForeUpperRail|ForeDoorApproach|ForeStarboardDoorApproach|WomensDoorApproach|Gaon|GardenDeck|GardenStair|Helm|HullPort\d+|InteriorMainMast|KitchenChimney|Lantern|Lawn|LawnSidewalk-?1|LibraryRoof|LionEye|LionSmile|LogPose|Lookout|MastPlatform|Mikan\d+|Paddle|PopGreens|RobinGarden|SailTie|ShadeTree|Slide|SoldierDock|SternAccess|SternBalcony|Swing|Usopp)$')
 OPENINGS = {'DockLadderHatch', 'WomensDoor', 'ForeDoor', 'ForeDoorStarboard', 'ForeToiletDoor1', 'ForeToiletDoor-1',
             'AquariumDoor', 'AquariumPassageDoor', 'AftEntrance',
             'PantryOutsideDoor', 'SickOutsideDoor', 'LibraryDoor', 'SternAccessDoor',

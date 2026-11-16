@@ -1083,7 +1083,7 @@ for name,low,high in colliders:
 # cell inset otherwise strands the last aft tread behind the native fascia.
 from floor_collision import rectangular_floor_boxes
 for floor in ship_objects:
-    if floor.name!='Sunny_AftEntryDeck':continue
+    if floor.name not in ('Sunny_AftEntryDeck','Sunny_WomensDoorApproach','Sunny_ForePortGallery'):continue
     faces=[[tuple(floor.matrix_world@floor.data.vertices[i].co) for i in face.vertices]
            for face in floor.data.polygons]
     collision_boxes.extend(rectangular_floor_boxes(floor.name,faces))
@@ -1143,6 +1143,7 @@ meta = {
     "interiors": {"finishedRooms":False,"dockCentre":interiors['dockCentre'],"dockSolids":interiors['dockSolids'],"dockWaterLevel":interiors['dockWaterLevel'],"foodLift":interiors['foodLift'],"levels":{k:round(v,3) for k,v in interiors['levels'].items()},
         "lights":interiors.get('lights', []),
         "foreEnclosures":interiors['foreEnclosures'],
+        "foreFacade":interiors.get('foreFacade'),
         "foreTrimVolumes":interiors['foreTrimVolumes'],
         "foreTrimRepair":interiors['foreTrimRepair'],
         "aftEnclosures":interiors.get('aftEnclosures', []),

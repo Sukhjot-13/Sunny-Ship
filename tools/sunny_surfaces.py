@@ -121,6 +121,7 @@ def clean_cut_geometry(objects, epsilon=.00001):
 def prepare_exterior_surfaces(objects, vertex_bbox):
     """Cap access floors, remove surface overlaps, then restore curve shading."""
     floors = {'Sunny_InteriorFloor_F3_library', 'Sunny_AftEntryDeck',
+              'Sunny_WomensDoorApproach','Sunny_ForePortGallery',
               'Sunny_SternAccess_floor', 'Sunny_SternAccess_neck'}
     curved = ('Sunny_Lion', 'Sunny_Gaon', 'Sunny_Anchor', 'Sunny_Lookout',
               'Sunny_CoupDeBurst', 'Sunny_MastPlatform')
