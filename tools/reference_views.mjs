@@ -44,6 +44,11 @@ if(meta.interiors.foreFacade){
   views.push(['fore-ground-'+id,[-12.8,d.pos[2]+2.2,-d.pos[1]],t,'R09',70])
  }
 }
+if(meta.exterior.mechanisms.vegetation){
+ const beds=['Sunny_RobinGarden_planter','Sunny_PopGreens_planter'].map(centre)
+ const target=beds[0].map((v,i)=>(v+beds[1][i])/2);target[1]=garden+.80
+ views.push(['garden-beds-eye',[15.8,garden+1.70,-8.5],target,'R13/R15',70])
+}
 const dockHatch=meta.interiors.doors.find(d=>d.id==='DockLadderHatch')
 if(dockHatch){
  const [hx,hy,hz]=dockHatch.pos

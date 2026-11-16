@@ -12,7 +12,7 @@ const browser=await puppeteer.launch({headless:true,args:['--use-gl=angle','--us
 try{
  const page=await browser.newPage();await page.setViewport({width:1440,height:900})
  const errors=[],trace=[];page.on('pageerror',e=>errors.push(e.message))
- await page.goto('http://localhost:5173',{waitUntil:'domcontentloaded',timeout:120000});await page.waitForFunction(()=>window.__ship&&!document.body.innerText.includes('Loading the ship'),{timeout:120000})
+ await page.goto(process.env.URL??'http://localhost:5173',{waitUntil:'domcontentloaded',timeout:120000});await page.waitForFunction(()=>window.__ship&&!document.body.innerText.includes('Loading the ship'),{timeout:120000})
  await page.mouse.click(720,450);await page.keyboard.press('v');await page.waitForFunction(()=>window.__sunny);await page.mouse.click(720,450)
  const initialRecovery=await page.evaluate(()=>window.__sunny.recoveries)
  const view=async target=>{
@@ -101,6 +101,17 @@ try{
   fs.writeFileSync('docs/review/exterior-additional-journeys.json',JSON.stringify({trace,errors,failed:true},null,2));await page.screenshot({path:'docs/review/stall-Exterior-Mikan-container.png'});throw error
  }
  await step('mikan return side approach',[approachX,garden,potCentre.z]);await step('mikan return clear approach',[clearX,garden,potCentre.z]);await step('mikan return open garden',[clearX,garden,9.0]);await step('mikan return passage',[passageX,garden,9.0]);await step('garden aft entry',[passageX,garden,-1.287])
+ if(meta.exterior.mechanisms.vegetation){
+  await step('planting clear aft lane',[passageX,garden,-8.5])
+  await step('planting normal-eye approach',[15.8,garden,-8.5])
+  await view([17.95,garden+.8,-5.437]);await page.screenshot({path:'docs/review/walk-Garden-inboard-beds.png'})
+  await step('planting mast-channel entrance',[15.8,garden,-3.0])
+  await step('planting complete mast-channel crossing',[19.2,garden,-3.0])
+  await step('planting reverse mast-channel crossing',[15.8,garden,-3.0])
+  await step('planting return to eye approach',[15.8,garden,-8.5])
+  await step('planting return aft lane',[passageX,garden,-8.5])
+  await step('planting return to Library passage',[passageX,garden,-1.287])
+ }
  const front=[centre.x-size.x*.45,centre.y,centre.z]
  await step('balcony fore entrance',front)
  for(let i=1;i<=24;i++){

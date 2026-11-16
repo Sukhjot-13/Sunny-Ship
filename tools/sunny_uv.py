@@ -141,12 +141,13 @@ def metric_uv(obj):
                 # Straight vertical joinery grain must not follow a covariance
                 # axis tilted by the arched crown or off-centre porthole cut.
                 pair=(p.z,p.dot(door_across))
-            elif leaf and len(group) == 5:
-                base, tip = points[group[0]], points[group[2]]
+            elif leaf and len(group) in (5,11):
+                base, tip = points[group[0]], points[group[2 if len(group)==5 else 10]]
                 along = (tip-base).normalized()
-                across = (points[group[1]]-points[group[3]]).normalized()
+                left,right=(1,3)if len(group)==5 else(6,4)
+                across = (points[group[left]]-points[group[right]]).normalized()
                 length = (tip-base).length
-                width = (points[group[1]]-points[group[3]]).length
+                width = (points[group[left]]-points[group[right]]).length
                 pair = ((p-base).dot(along)/length, .5+(p-base).dot(across)/width)
             elif cylinder and abs(normal.dot(axis)) < .85:
                 pair = (delta.dot(axis), radius*math.atan2(delta.dot(second), delta.dot(radial)))

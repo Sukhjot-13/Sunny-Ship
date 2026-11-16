@@ -478,15 +478,25 @@ def burst_barrel(objects, bounds):
 
 
 def leaf_mesh(name, centre, direction, length, width, key='leaf'):
-    """Folded pointed blade attached at its base; no alpha-card or sphere leaves."""
+    """Curved lanceolate blade with tapered ends and a raised attached midrib."""
     p, d = Vector(centre), Vector(direction).normalized()
     lateral = d.cross(Vector((0, 0, 1)))
     if lateral.length < .01:
         lateral = Vector((1, 0, 0))
     lateral.normalize()
-    mid = p+d*length*.52
-    verts = [p, mid+lateral*width/2, p+d*length, mid-lateral*width/2, mid+Vector((0, 0, width*.16))]
-    return finish(_mesh(name, verts, [(0,1,4),(1,2,4),(2,3,4),(3,0,4)]), name, key)
+    up=lateral.cross(d).normalized()
+    verts=[p]
+    for t,shape in ((.22,.70),(.54,1.),(.82,.62)):
+        spine=p+d*length*t+up*(width*.18*math.sin(math.pi*t))
+        verts.extend((spine-lateral*width*.5*shape-up*width*.10,spine,
+                      spine+lateral*width*.5*shape-up*width*.10))
+    verts.append(p+d*length-up*width*.06)
+    faces=[(0,1,2),(0,2,3)]
+    for i in (1,4):faces.extend(((i,i+3,i+4,i+1),(i+1,i+4,i+5,i+2)))
+    faces.extend(((7,10,8),(8,10,9)))
+    leaf=finish(_mesh(name,verts,faces),name,key)
+    for face in leaf.data.polygons:face.use_smooth=True
+    return leaf
 
 
 def citrus_fruit(name, p, radius, branch):
@@ -544,8 +554,25 @@ def mikan_pot(name, p):
     return obj
 
 
+def leafy_shoot(name, start, end, length, width, rng, pairs=7):
+    """A real tapered shoot with alternating attached leaves and a terminal blade."""
+    start,end=Vector(start),Vector(end)
+    axis=(end-start).normalized();angle=math.atan2(axis.y,axis.x)
+    pole(name+'_twig_shoot',start,end,.009 if length<.35 else .014,'darkwood',radius2=.004)
+    for i in range(pairs):
+        base=start.lerp(end,.14+.74*i/max(1,pairs-1))
+        for side in (-1,1):
+            theta=angle+side*rng.uniform(.72,1.35)
+            slope=rng.uniform(-.30,.70)
+            direction=Vector((math.cos(theta),math.sin(theta),slope))
+            size=length*rng.uniform(.78,1.15)
+            leaf_mesh(name+'_leaves',base,direction,size,width*rng.uniform(.8,1.15),
+                      'leaflight' if rng.random()<.24 else 'leaf')
+    leaf_mesh(name+'_leaves',end,axis,length*.85,width*.85,'leaf')
+
+
 def reference_tree(name, p, citrus=False, seed=0):
-    """Branch-connected vegetation with varied leaf blades, in human metres."""
+    """Layered attached shoots form R04/R13/R15's rounded living crowns."""
     rng = random.Random(seed)
     x, y, floor = p
     z = floor
@@ -567,18 +594,40 @@ def reference_tree(name, p, citrus=False, seed=0):
             start = root.lerp(end,.38+.62*j/(4 if citrus else 11))
             tip = start+Vector((math.cos(angle)*spread*.36, math.sin(angle)*spread*.36, (.12+.14*(j%2))))
             pole(name+'_twig', start, tip, .015 if citrus else .022, 'darkwood', radius2=.008)
-            for k in range(7 if citrus else 11):
-                v = k/(6 if citrus else 10)
-                base = start.lerp(tip,v)
-                theta = angle+(1 if k%2 else -1)*(1.0+rng.random()*.4)
-                leaf_mesh(name+'_leaves', base, (math.cos(theta), math.sin(theta), rng.uniform(-.12,.48)),
-                          rng.uniform(.19,.29) if citrus else rng.uniform(.45,.67), .10 if citrus else .27,
-                          'leaflight' if k%3==0 else 'leaf')
+            for shoot in range(3):
+                base=start.lerp(tip,.20+.34*shoot)
+                theta=angle+(shoot-1)*.95+rng.uniform(-.25,.25)
+                extent=rng.uniform(.18,.32) if citrus else rng.uniform(.38,.68)
+                rise=rng.uniform(.18,.53) if citrus else rng.uniform(.32,.88)
+                shoot_end=base+Vector((math.cos(theta)*extent,math.sin(theta)*extent,rise))
+                leafy_shoot(name,base,shoot_end,.25 if citrus else .52,.12 if citrus else .25,rng,
+                            pairs=7 if citrus else 5)
             if citrus and j in (2,4):
                 fruit = tip+Vector((.04*math.cos(angle), .04*math.sin(angle), -.13))
                 citrus_fruit(name+'_fruit%d_%d'%(i,j), fruit, rng.uniform(.065,.085), tip)
     merge_details(name, ('_leaves','_branch','_twig'))
     return trunk
+
+
+def garden_planter(name,p,rotation=0):
+    """Closed eight-centimetre wall/base shell with inset soil and real freeboard."""
+    width,depth,height,wall=2.35,1.05,.50,.08
+    vertices=[]
+    for w,d,z in ((width,depth,0),(width,depth,height),
+                  (width-2*wall,depth-2*wall,height),(width-2*wall,depth-2*wall,wall)):
+        vertices.extend((x*w/2,y*d/2,z)for x,y in ((-1,-1),(1,-1),(1,1),(-1,1)))
+    faces=[]
+    for ring_index in range(3):
+        for i in range(4):
+            a=ring_index*4+i;b=ring_index*4+(i+1)%4
+            faces.append((a,b,b+4,a+4))
+    faces.extend(((3,2,1,0),(12,13,14,15)))
+    planter=finish(_mesh(name+'_planter',vertices,faces,p),name+'_planter','white',obstacle=True)
+    planter.rotation_euler.z=rotation
+    planter['sunny_planter_wall']=wall;planter['sunny_soil_height']=.46
+    soil=box(name+'_soil',(p[0],p[1],p[2]+.27),(width-2*wall,depth-2*wall,.38),'soil')
+    soil.rotation_euler.z=rotation
+    return planter
 
 
 def plants(objects, bounds, frame, levels):
@@ -593,16 +642,23 @@ def plants(objects, bounds, frame, levels):
     garden, cy = levels['F3G'], frame.y(.585)
     for i, (x,y) in enumerate(((21.2,cy-4.0),(22.3,cy-5.2),(20.9,cy-6.4))):
         reference_tree('Mikan%d'%i, (x,y,garden), citrus=True, seed=11+i)
-    for name, y, flowers in (('RobinGarden', frame.y(4.4), True), ('PopGreens', frame.y(-4.4), False)):
-        x = frame.x(5.15)
-        box(name+'_planter', (x,y,garden+.25), (2.35,1.05,.50), 'white', obstacle=True)
-        box(name+'_soil', (x,y,garden+.48), (2.19,.90,.04), 'soil')
+    # R15 places the two beds together beside the mast, inside the rail.
+    # Reconstruct an L, rather than keeping tiny beds on opposite outer edges.
+    beds=[]
+    for name,x,y,rot,flowers in (('RobinGarden',18.8,cy+5.,0,True),
+                                ('PopGreens',17.1,cy+3.3,math.pi/2,False)):
+        planter=garden_planter(name,(x,y,garden),rot)
+        planter['sunny_reference_layout']='R15 inboard mast-side L-shaped beds; exact metre stations reconstructed'
+        beds.append(dict(id=name,position=[x,y,garden],rotation=rot,size=[2.35,1.05,.50],wall=.08,soilHeight=.46))
+        def at(dx,dy,height):
+            return (x+dx*math.cos(rot)-dy*math.sin(rot),y+dx*math.sin(rot)+dy*math.cos(rot),garden+height)
         for i in range(7):
-            px, py = x-.91+i*.30, y+(.14 if i%2 else -.14)
-            h = .30+.09*(i%3)
-            pole(name+'_stem', (px,py,garden+.50), (px,py,garden+.50+h), .015, 'leaf')
-            leaf_mesh(name+'_leaf', (px,py,garden+.62), (.8,1 if i%2 else -1,.3), .24, .12)
-            head = (px,py,garden+.50+h)
+            dx,dy=-.91+i*.30,(.14 if i%2 else -.14)
+            h=(.30 if flowers else .48)+.09*(i%3)
+            base,head=at(dx,dy,.46),at(dx,dy,.50+h)
+            pole(name+'_stem',base,head,.015,'leaf')
+            leaf_mesh(name+'_leaf',at(dx,dy,.62),(.8*math.cos(rot)-(1 if i%2 else -1)*math.sin(rot),
+                       .8*math.sin(rot)+(1 if i%2 else -1)*math.cos(rot),.3),.24,.12)
             if flowers:
                 sphere(name+'_flower_centre',head,(.034,.034,.025),'gold')
                 for k in range(5+i%3):
@@ -620,6 +676,8 @@ def plants(objects, bounds, frame, levels):
                 for k in range(4):
                     a = k*math.tau/4
                     leaf_mesh(name+'_pod_blade',head,(math.cos(a),math.sin(a),.9),.22,.08)
+    return dict(reference='R04/R13/R15; canopy density, hidden shoots and metre stations reconstructed',
+                beds=beds,mikanCount=3,shadeCount=2,layout='inboard mast-side L-shaped beds')
 
 
 def helm_controls(objects, bounds):
@@ -2481,7 +2539,7 @@ def apply_exterior_accuracy(objects, bounds, frame, interiors):
     fit_scroll_paint(objects,bounds)
     port_count = hull_ports(objects, bounds, frame.y(.585))
     burst = burst_barrel(objects, bounds)
-    plants(objects, bounds, frame, interiors['levels'])
+    vegetation=plants(objects, bounds, frame, interiors['levels'])
     bpy.context.view_layer.update()
     controls=helm_controls(objects,bounds)
     original_b1_outline=next(v['outline'] for v in interiors['foreTrimVolumes'] if v['level']=='B1')
@@ -2516,4 +2574,4 @@ def apply_exterior_accuracy(objects, bounds, frame, interiors):
     rudder=rudder_mechanism(objects,bounds)
     objects += [o for o in bpy.data.objects if o.type == 'MESH' and o not in before and o not in objects]
     bpy.context.view_layer.update()
-    return objects, {'burst':burst, 'controls':controls,'dockOpenings':docks,'lion':lion,'rudder':rudder,'anchors':anchors,'climbs':climbs,'smallHullPorts':port_count, 'reference':'docs/exterior-feature-ledger.md'}
+    return objects, {'burst':burst, 'controls':controls,'dockOpenings':docks,'lion':lion,'rudder':rudder,'anchors':anchors,'climbs':climbs,'smallHullPorts':port_count,'vegetation':vegetation, 'reference':'docs/exterior-feature-ledger.md'}

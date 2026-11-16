@@ -1,0 +1,10 @@
+{
+  "reason": "Removed duplicate unenriched bed records from the already-loaded build module; current source emits exactly the two enriched records. Geometry is unchanged.",
+  "beforeSha256": "9842b63ce67ce1bc5377f29132235e53e7081682bea25054c069ef9b3e095e22",
+  "afterSha256": "4333583e727d17b6fa254822243b70fd573a745b16b711c9eb63a893ce3b83b6",
+  "unchangedGeometry": {
+    "sunny-master.blend": "c8df399a991d60af7d6822976a7a4b13f430950ea80493087ff6b1e3344c52c7",
+    "sunny.glb": "16981470d4bab223a9d88e1d99038712c5b0cc512cfe6e37a805213474bc39c0",
+    "sunny-collision.glb": "a9a86d38d657f1bb4c4e628a70b93e42ad4c3e565a0c3b906b3833b92808df62"
+  }
+}

@@ -1,8 +1,8 @@
 {
-  "source": "/private/tmp/sunny-fore-reference-finish/sunny-master.blend",
-  "workingVisualSource": "/private/tmp/sunny-fore-reference-finish/sunny.glb",
-  "sourceSha256": "f31205af46853f083d0df6829b652d63bc2216f3d76a7acf8d6a0d26c589ece1",
-  "workingVisualSha256": "5c8b6b633edf471c32ac86c8ea87cc57bf6ed5cef469ec8fe86cee5c87459501",
+  "source": "/private/tmp/sunny-garden-planter-candidate/sunny-master.blend",
+  "workingVisualSource": "/private/tmp/sunny-garden-planter-candidate/sunny.glb",
+  "sourceSha256": "0f464badbbdfbf00c84343678254a5045f570c2204f4c13c26305f7428257ffc",
+  "workingVisualSha256": "43431b1ce4f7e699d3df0e0e7dcd135627fff415a5438c83462596ebecfa5a65",
   "workingScale": 2.2,
   "referenceScale": 1,
   "rootMultiplier": 0.45454545454545453,

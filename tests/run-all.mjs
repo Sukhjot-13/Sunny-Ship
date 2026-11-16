@@ -66,6 +66,8 @@ const suites=[
  ['aftFacadeReference.test.mjs','R13 actual central entry and front aperture topology'],
  ['foreFacadeFixture.test.mjs','R09 fore entry, round ports and native frontage authoring'],
  ['foreFacadeReference.test.mjs','R09 actual fore topology and full body passages'],
+ ['gardenPlanterFixture.test.mjs','R15 open planting shells and curved blade UV authoring'],
+ ['gardenReference.test.mjs','actual inboard planting, soil, approaches and mikan crowns'],
  ['floorCollision.test.mjs','actual rectangular gallery floor support'],
  ['roundAccessCollision.test.mjs','circular shaft physical floor clearance'],
  ['roundHatchFixture.test.mjs','R14 round lawn hatch authoring fixture'],

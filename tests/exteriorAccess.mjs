@@ -13,9 +13,15 @@ const selected=name=>!process.env.ACCESS_FILTER||name.includes(process.env.ACCES
 const plan=roomRoutes(),meshes=loadColliders('public/models/sunny.glb')
 const meta=JSON.parse(fs.readFileSync('public/models/ship-metadata.json'))
 const trace=[],errors=[],sleep=ms=>new Promise(r=>setTimeout(r,ms))
-const browser=await puppeteer.launch({headless:true,args:['--use-gl=angle','--use-angle=metal','--enable-unsafe-swiftshader','--enable-webgl']})
+const diagnostics=process.env.BROWSER_DIAGNOSTICS==='1'
+const browser=await puppeteer.launch({headless:true,dumpio:diagnostics,args:['--use-gl=angle','--use-angle=metal','--enable-unsafe-swiftshader','--enable-webgl']})
+if(diagnostics)browser.process()?.once('exit',(code,signal)=>console.log('BROWSER EXIT',{code,signal}))
 try{
  const page=await browser.newPage();await page.setViewport({width:1440,height:900})
+ if(diagnostics){
+  page.on('error',error=>console.log('BROWSER PAGE ERROR',error.message))
+  page.on('framenavigated',frame=>{if(frame===page.mainFrame())console.log('MAIN FRAME NAVIGATION',frame.url())})
+ }
  page.on('pageerror',e=>errors.push(e.message))
  await page.goto(process.env.URL??'http://localhost:5173',{waitUntil:'domcontentloaded',timeout:120000})
  await page.waitForFunction(()=>window.__ship&&!document.body.innerText.includes('Loading the ship'),{timeout:120000})

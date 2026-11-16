@@ -1316,8 +1316,9 @@ def restore_exterior(objects, vertex_bbox):
             vertex.co = inv @ p
         obj.data.update()
     bpy.context.view_layer.update()
-    # Explicitly user-authorized uniform enlargement for an anime-scale feel.
-    # Human eye height, body capsule and walk speed are deliberately unchanged.
+    # Retain the reversible working enlargement and current runtime controller.
+    # Later fixed-metre fittings remain under the supplied-image relative-scale
+    # audit; this transform alone cannot certify reference proportions.
     scale = EXTERIOR_CONFIG['experienceScale']
     for obj in objects:
         inv=obj.matrix_world.inverted()
@@ -1327,12 +1328,10 @@ def restore_exterior(objects, vertex_bbox):
     # ------------------------------------------------------------------
     # Human-scale authoring pass.
     #
-    # Everything above is ship structure and enlarges with the hull. Everything
-    # below is written in real metres on the ALREADY enlarged ship, so a door,
-    # chair, counter or instrument is the size a person actually uses no matter
-    # what experienceScale is. This replaces the old approach of enlarging
-    # everything and then dividing selected clusters back down, which silently
-    # scaled every unlisted object.
+    # Historical mixed-scale authoring: preceding structure is enlarged while
+    # later fittings use final working metres. These choices require direct
+    # source-relative reconciliation before reference fidelity is accepted.
+    # Keep runtime human size separate from the visual geometry's authority.
     log('[pipeline]   retreading stair flights ...')
     before=set(objects)
     retread_flights(objects,vertex_bbox)

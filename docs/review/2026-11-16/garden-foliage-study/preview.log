@@ -1,0 +1,8 @@
+/Users/sukhjot/codes/Sunny-Ship/tools/vegetation_preview.py:29: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  scene.world=bpy.data.worlds.new('Vegetation study sky');scene.world.use_nodes=True
+00:09.415  render           | Saved: '/private/tmp/sunny-vegetation-preview-curved/mikan.png'
+Info: Saved as "vegetation.blend"
+VEGETATION_PREVIEW /private/tmp/sunny-vegetation-preview-curved
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:49:19)
+
+Blender quit

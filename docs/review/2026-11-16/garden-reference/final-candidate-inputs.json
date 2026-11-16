@@ -1,0 +1,13 @@
+{
+  "artifacts": {
+    "sunny-master.blend": "0f464badbbdfbf00c84343678254a5045f570c2204f4c13c26305f7428257ffc",
+    "sunny.glb": "43431b1ce4f7e699d3df0e0e7dcd135627fff415a5438c83462596ebecfa5a65",
+    "sunny-collision.glb": "a9a86d38d657f1bb4c4e628a70b93e42ad4c3e565a0c3b906b3833b92808df62",
+    "ship-metadata.json": "4333583e727d17b6fa254822243b70fd573a745b16b711c9eb63a893ce3b83b6"
+  },
+  "sources": {
+    "tools/sunny_accuracy.py": "4fc333699e553cc1fc453d197fb5b1b252880b371328772c694a48d898152d19",
+    "tools/sunny_uv.py": "0cb178bfd907937373bd8417528d2f096360dd0c3e9eb36a5d4581a158bb6c33",
+    "tools/reference_views.mjs": "ffa7dcb99fc8dd1fee1e0342b31958790958e7f292f7baea3b6c4fec94ca82ee"
+  }
+}
