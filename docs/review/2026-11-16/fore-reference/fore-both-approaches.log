@@ -1,0 +1,13 @@
+PASS lawn to Fore cabin approach: fore lower starboard {
+  pos: [ -26.000000000000014, -36.41469955444336, 0.3936906065331365 ],
+  grounded: true,
+  blocker: null
+}
+PASS Fore cabin approach: fore lower starboard return to lawn [ -4.261609732783494, -40.55070114135742, -0.9821492232481106 ]
+PASS lawn to Fore cabin approach: fore lower port {
+  pos: [ -25.999999999999947, -36.41469955444336, 0.5023080516278285 ],
+  grounded: true,
+  blocker: null
+}
+PASS Fore cabin approach: fore lower port return to lawn [ -4.195113133928841, -40.55070114135742, -1.04204811005562 ]
+Interior journey failures: []

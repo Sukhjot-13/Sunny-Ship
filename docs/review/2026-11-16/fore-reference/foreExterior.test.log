@@ -1,0 +1,22 @@
+node:fs:782
+  return binding.open(
+                 ^
+
+Error: ENOENT: no such file or directory, open 'tests/fixtures/fore-exterior-rays.json'
+    at Object.openSync (node:fs:782:18)
+    at Object.readFileSync (node:fs:628:35)
+    at file:///Users/sukhjot/codes/Sunny-Ship/tests/foreExterior.test.mjs:6:30
+    at #evaluateSync (node:internal/modules/esm/module_job:702:24)
+    at ModuleJobSync.runSync (node:internal/modules/esm/module_job:717:43)
+    at node:internal/modules/esm/loader:383:11
+    at TracingChannel.traceSync (node:diagnostics_channel:557:14)
+    at ModuleLoader.importForEntryPoint (node:internal/modules/esm/loader:372:21)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:184:34)
+    at node:internal/main/run_main_module:33:47 {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'tests/fixtures/fore-exterior-rays.json'
+}
+
+Node.js v26.12.0

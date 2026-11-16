@@ -1,0 +1,18 @@
+{
+  "candidate": "/private/tmp/sunny-fore-reference-finish",
+  "artifacts": {
+    "sunny-master.blend": "f31205af46853f083d0df6829b652d63bc2216f3d76a7acf8d6a0d26c589ece1",
+    "sunny.glb": "5c8b6b633edf471c32ac86c8ea87cc57bf6ed5cef469ec8fe86cee5c87459501",
+    "sunny-collision.glb": "2d8d75bc88e2d189ba4fb754406231d315babdad3aad44b04a0f272b3130b9da",
+    "ship-metadata.json": "8b10e78f271d9dbcd8f45b7f76359c4c5fd232ddd811bc934120c672796e03ec"
+  },
+  "sources": {
+    "tools/build_assets.py": "3a4c2c7ddc5b69247046bfb381b240229e5444d36c5007e51d73954b3a304da5",
+    "tools/sunny_fore_facade.py": "c0cc2e468f67c502f6e92e8b77e43aa8e076a1a8a4f246c7335e6b44ed34b612",
+    "tools/sunny_aft_facade.py": "80c143ba19872a2b21d34dd87a5925c77858b4a2a5b6383c3b279e132e546314",
+    "tools/sunny_exterior.py": "cf7f45f968ba29aaadfdd4fa374d225717ebbf1515601216dde5bf4a3e0c6eb6",
+    "tools/sunny_interiors.py": "cb0b9bd5c8cedd607f9aaff19a70fbe1a07c138601db28475eb4156820c19992",
+    "tools/sunny_surfaces.py": "243967c29210415d8a7ab7193799018cc06054b4bf8035ebc56c31c6a0ce0128",
+    "tools/sunny_uv.py": "b5d528ce192f7770eff3fee3615657ade0153a3e4f616d5ec77e63001a3fe1f5"
+  }
+}

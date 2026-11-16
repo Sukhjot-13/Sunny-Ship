@@ -1,0 +1,9 @@
+Physical ladder endpoint approach Ladder: Men’s cabin storage ladder {
+  endpoint: [ -23, -40.55071716308594, 3.9 ],
+  feet: [ -22.998721336940502, -40.55070114135742, 3.8888245868182287 ]
+}
+PASS Men’s cabin storage ladder complete descent [ -23, -47.150699615478516, 5.5 ]
+PASS lawn to Ladder: Men’s cabin storage ladder { pos: [ -23, -47.150699615478516, 5.5 ], grounded: true }
+PASS Men’s cabin storage ladder complete ascent [ -23, -40.55071716308594, 3.9 ]
+PASS Ladder: Men’s cabin storage ladder return to lawn [ -4.216509529617616, -40.55070114135742, -1.027373496089463 ]
+Interior journey failures: []

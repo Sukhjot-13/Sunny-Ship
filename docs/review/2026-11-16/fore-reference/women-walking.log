@@ -1,0 +1,7 @@
+PASS lawn to Women's Quarters {
+  pos: [ -25.99999999999996, -36.41469955444336, 0.4953796341853901 ],
+  grounded: true,
+  blocker: null
+}
+PASS Women's Quarters return to lawn [ -4.221253942556979, -40.55070114135742, -1.0212539423452833 ]
+Interior journey failures: []

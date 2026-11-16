@@ -1,0 +1,36 @@
+FAIL Storage Room 8397 isolated walkable cells
+FAIL Soldier Dock System 2433 isolated walkable cells
+FAIL Usopp's Main Factory 2608 isolated walkable cells
+FAIL Franky's Weapon Development Room 2348 isolated walkable cells
+FAIL Energy Room 1536 isolated walkable cells
+PASS Men's Quarters 33 waypoints, -24.8,-40.55070114135742,0.4
+PASS Men's Washroom 32 waypoints, -20.400000000000002,-40.55070114135742,-6.800000000000001
+FAIL Aquarium Service Passage 94 isolated walkable cells
+PASS Aquarium Bar 18 waypoints, 9.4,-40.55070114135742,-1.4000000000000001
+PASS Women's Quarters 49 waypoints, -26,-36.41469955444336,0.4
+PASS Women's Washroom 47 waypoints, -21.8,-36.41469955444336,-7.4
+PASS Dining Room 75 waypoints, 16.400000000000002,-35.62269973754883,6
+PASS Kitchen 65 waypoints, 16.400000000000002,-35.62269973754883,-7.4
+PASS Pantry 71 waypoints, 22.8,-35.62269973754883,-7.4
+PASS Sick Bay 73 waypoints, 22.8,-35.62269973754883,5.2
+PASS Library 91 waypoints, 30.400000000000002,-29.154699325561523,-1.2000000000000002
+PASS Bath 98 waypoints, 29.6,-26.104700088500977,-0.6000000000000001
+PASS Bath Washroom 96 waypoints, 29.400000000000002,-26.104700088500977,-4.800000000000001
+PASS Observation Deck 76 waypoints, 20.6,-29.37470054626465,-1.4000000000000001
+PASS Men Starboard Cannon Closet 32 waypoints, -24.8,-40.55070114135742,-8.6
+PASS Men Port Cannon Closet 32 waypoints, -24.8,-40.55070114135742,9.4
+PASS Women Starboard Cannon Closet 43 waypoints, -26,-36.41469955444336,-8.6
+PASS Women Port Cannon Closet 64 waypoints, -26,-36.41469955444336,9.4
+PASS Fore Port Toilet 21 waypoints, -15.600000000000001,-40.55070114135742,3.8000000000000003
+PASS Fore Starboard Toilet 23 waypoints, -15.600000000000001,-40.55070114135742,-3.8000000000000003
+PASS Stern Ladder Access 82 waypoints, 29.6,-35.62269973754883,-1.2000000000000002
+PASS Bath Toilet 98 waypoints, 29,-26.104700088500977,-5.4
+PASS Stair: BathStair 103 waypoints, 31,-26.104700088500977,-4.2
+FAIL Stair: EnergyStair 0 isolated walkable cells
+PASS Ladder: Aquarium gallery ladder 48 waypoints, 11.55,-40.55071716308594,7.513000000000001
+PASS Ladder: Men’s cabin storage ladder 29 waypoints, -23,-47.15071716308594,5.5
+PASS Ladder: Stern Library ladder 81 waypoints, 27.608023262023927,-29.15471716308594,-1.5494378089904786
+PASS Ladder: Dock waiting-room ladder 11 waypoints, 1.5950000000000013,-51.40071716308594,-1.287
+PASS Fore cabin approach: fore lower starboard 64 waypoints, -26,-36.41469955444336,0.4
+PASS Fore cabin approach: fore lower port 71 waypoints, -26,-36.41469955444336,0.4
+Reachable 102686/218533 grid nodes

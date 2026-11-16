@@ -6,7 +6,7 @@ All116 assets, full actual fore geometry/body corridors, original bow/hull prese
 
 The exact current master/visual hashes match the reference copy and every one of7,969 mesh bounds passes uniform1/2.2 reversal. Production build passes. This is section evidence, not whole-exterior acceptance. Single runner now46 suites; no complete46-suite result yet.
 
-Next: recheck all three outside ladder journeys with the precise endpoint finish; garden/vegetation silhouette and planting/guard arrangement; fore/gallery guard rhythm; rigging/source proportions and full exterior matched acceptance. Then every room automatically. Garden guard measured Tube006 is1.30m tall with its top1.39m above deck, not2.2m; do not blindly scale all plant fittings by2.2. See `garden-vegetation-reference-audit.md`. B1 walking-only room plans, Energy stair/rear Aquarium passage and FPS26<30 remain tracked. No remote push/deploy/publication.
+Next: recheck all three outside ladder journeys with the precise endpoint finish; garden/vegetation silhouette and planting/guard arrangement; fore/gallery guard rhythm; rigging/source proportions and full exterior matched acceptance. Then every room automatically. Garden guard measured Tube006 is1.30m tall with its top1.39m above deck, not2.2m; do not blindly scale all plant fittings by2.2. See `garden-reference-audit.md`. B1 walking-only room plans, Energy stair/rear Aquarium passage and FPS26<30 remain tracked. No remote push/deploy/publication.
 
 ## Current isolated R09 fore candidate — November 16, 2026
 
