@@ -1,0 +1,15 @@
+{
+  "note": "Same R13 model and every205604 collider preserved. Exact decode, differential contacts and all63 native movement/gameplay checks pass. FPS remains26 below30; not a full gameplay aggregate pass.",
+  "hashes": {
+    "src/systems/collision.js": "53fcba96f95e8afe821d23f5701c0ef69f3c862d82dd3bebdc934bdb13c61653",
+    "src/systems/collisionData.js": "67840a9d5ba1e708c5f099456f583082883988ac82f59dc4d553eef81d5a3199",
+    "src/systems/collisionWorld.js": "da17cd8ab3cacc86b6624e23864ef971fae03a671fd71ba9d0b6df1b45e74d22",
+    "src/systems/collisionIndex.js": "82fc1ba121ed6749e1f3acbae17565c7393c8d2339c9730eba605e2726ffd337",
+    "src/systems/bodyCollision.js": "4e36dd9e7c3f35f5e9ce1deec228dc4ff803906e7461098133cca02700887173",
+    "tests/collisionData.test.mjs": "8c020afecccffebdd805ae9da497260346fc475a717bb499bc93d478a51b70bf",
+    "tests/collisionIndex.test.mjs": "5ac4d68ff987e95edc67b39904336c9efe192101067638b143ba9d728ad39ec8",
+    "public/models/sunny.glb": "93e124a48d667f41c3d6346ce633e81df27bbb2fd60881d827d64198bc436ae2",
+    "public/models/sunny-collision.glb": "792d7c92057be88b15fa00ea2f2395c25aae517cc91f9b6cfbd0c41c19fa39e5",
+    "public/models/ship-metadata.json": "140bea8b7bafde6d09fda95b12987056064c8c4be6c3fe2b2c6acd75850d2627"
+  }
+}

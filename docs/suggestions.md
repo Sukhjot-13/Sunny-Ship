@@ -29,6 +29,12 @@ the reasoning is not lost.
 
 ## 🟢 Improvements
 
+- **2026-11-16 — Runtime collision query cost (under verification).** The isolated R13 full run still measures25fps. The runtime repeatedly scans roughly200k static proxies for walking/ground/ceiling queries. Draft a conservative immutable-box index with exact original-order resolution, requery after every push-out, and brute-force differential/contact tests. Wire only after the frozen run ends, then measure actual browser behavior; do not lower the FPS requirement or omit solids.
+
+
+- **2026-11-16 — Resolve R09 lower connection annotation during room mapping (pending).** The same fore plate includes a “to Soldier’s Dock” arrow near the right lower facade. Cross-check its precise target against F1/B1/R14 before accepting the inherited assignment of both lower doors to the men’s cabin; do not infer a new corridor or discard the central waiting ladder from the label alone.
+
+
 - **2026-11-16 — Fore facade handedness and missing ports (next exterior section).** Full-resolution R09 shows the upper fore entry on the right when viewed from the lawn toward the bow, with two circular ports on the opposite side. Current matched view places WomensDoor on the left (Blender Y−6.263) and lacks the pair. Rebuild the actual entry/cuts/landing on the source side and verify normal access; do not relabel the existing mirrored arrangement or assume inherited stations are canonical.
 
 

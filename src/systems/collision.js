@@ -1,10 +1,10 @@
-import { useEffect, useMemo, useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
 import * as THREE from 'three'
-import { useFrame } from '@react-three/fiber'
 import { sweepFlight } from './flightCollision.js'
 import { stepSupport } from './stepSupport.js'
 import { CONTACT_GAP } from './doors.js'
+import {readCollisionWorld,preloadCollisionWorld} from './collisionWorld.js'
+import {resolveList} from './bodyCollision.js'
+export {resolveList} from './bodyCollision.js'
 
 /**
  * Static collision world for the ship.
@@ -106,80 +106,6 @@ export function clearDynamic() {
   return setDynamic(null)
 }
 
-/**
- * One built world per collision GLB scene. Cached so repeated `useCollision()`
- * calls share the same box arrays instead of re-traversing the proxy.
- */
-const worldCache = new WeakMap()
-
-function buildWorld(scene) {
-  const cached = worldCache.get(scene)
-  if (cached) return cached
-
-  const boxes = []
-  const floors = []
-
-  scene.traverse((child) => {
-    if (!child.isMesh) return
-    child.geometry.computeBoundingBox()
-    const bb = child.geometry.boundingBox.clone()
-    bb.applyMatrix4(child.matrixWorld)
-
-    const box = new THREE.Box3(bb.min, bb.max)
-    const isFloor = child.name.startsWith('COLL_Floor')
-
-    if (isFloor) floors.push(box)
-    boxes.push({ box, isFloor, name: child.name })
-  })
-
-  const world = { boxes, floors, dynamic: dynamicEntries }
-  worldCache.set(scene, world)
-  return world
-}
-
-/**
- * Axis-separated capsule-vs-one-list resolution. Shared by `resolve` for the
- * static boxes and the dynamic layer; keeps the push-out maths in one place.
- */
-export function resolveList(list, p, v, playerMin, playerMax, radius, height) {
-  let blocker = null
-  for (let i = 0; i < list.length; i++) {
-    const item = list[i]
-    const box = item.box
-    // Keep walking contact outside the moving door's existing safety band.
-    // Body dimensions and the physical published leaf bounds stay unchanged.
-    const gap = item.name?.startsWith('DOOR_') ? CONTACT_GAP + .001 : 0
-    const minX=box.min.x-gap,maxX=box.max.x+gap,minZ=box.min.z-gap,maxZ=box.max.z+gap
-    // broad phase. The vertical test is inset by EPS so that resting exactly
-    // on a floor's top face is not treated as a side collision.
-    if (
-      playerMax.x < minX || playerMin.x > maxX ||
-      playerMax.y < box.min.y - EPS || playerMin.y > box.max.y - EPS ||
-      playerMax.z < minZ || playerMin.z > maxZ
-    ) continue
-
-    // --- horizontal resolution: push out on the shallower axis
-    const overlapX = Math.min(playerMax.x - minX, maxX - playerMin.x)
-    const overlapZ = Math.min(playerMax.z - minZ, maxZ - playerMin.z)
-
-    if (overlapX < overlapZ) {
-      if (p.x < (box.min.x + box.max.x) / 2) p.x -= overlapX
-      else p.x += overlapX
-      v.x = 0
-    } else {
-      if (p.z < (box.min.z + box.max.z) / 2) p.z -= overlapZ
-      else p.z += overlapZ
-      v.z = 0
-    }
-    blocker = item.name
-
-    // refresh the broad-phase bounds after the push
-    playerMin.set(p.x - radius, p.y, p.z - radius)
-    playerMax.set(p.x + radius, p.y + height, p.z + radius)
-  }
-  return blocker
-}
-
 /** Solid test for `hasCeiling`, over one list. */
 function ceilingIn(list, position, radius, fromY, height) {
   for (let i = 0; i < list.length; i++) {
@@ -208,9 +134,8 @@ function blockedIn(list, min, max) {
 }
 
 export function useCollision() {
-  const { scene } = useGLTF('/models/sunny-collision.glb')
-
-  const world = useMemo(() => buildWorld(scene), [scene])
+  const world=readCollisionWorld('/models/sunny-collision.glb')
+  world.dynamic=dynamicEntries
 
   // ---- queries -------------------------------------------------------
   // Static floors and moving hatch lids share ground queries. An open lid
@@ -218,7 +143,9 @@ export function useCollision() {
   const raycastDown = (origin, maxDist = 200, radius = 0) => {
     // sample the box tops in the vertical column below `origin`
     let bestY = -Infinity
-    for (const { box, isFloor } of flightBoxes(world)) {
+    const low=new THREE.Vector3(origin.x-radius,origin.y-maxDist,origin.z-radius)
+    const high=new THREE.Vector3(origin.x+radius,origin.y+.6,origin.z+radius)
+    for (const { box, isFloor } of [...world.floorIndex.query(low,high),...dynamicEntries]) {
       if (!isFloor) continue
       if (
         origin.x + radius >= box.min.x && origin.x - radius <= box.max.x &&
@@ -246,7 +173,7 @@ export function useCollision() {
     const playerMin = new THREE.Vector3(p.x - radius, p.y, p.z - radius)
     const playerMax = new THREE.Vector3(p.x + radius, p.y + height, p.z + radius)
 
-    let blocker = resolveList(world.boxes, p, v, playerMin, playerMax, radius, height)
+    let blocker = resolveList(world.boxes, p, v, playerMin, playerMax, radius, height, world.index)
     if (dynamicEntries.length) {
       // a leaf that has moved under the player resolves last, so it can never
       // be overridden into a position that re-overlaps the capsule
@@ -261,48 +188,36 @@ export function useCollision() {
    * Ceiling check: is there solid ground above `y` within `height`?
    * Stops the player jumping through a deck above them.
    */
-  const hasCeiling = (position, radius, fromY, height) =>
-    ceilingIn(world.boxes, position, radius, fromY, height) ||
-    ceilingIn(dynamicEntries, position, radius, fromY, height)
+  const hasCeiling = (position, radius, fromY, height) => {
+    const low=new THREE.Vector3(position.x-radius,fromY,position.z-radius)
+    const high=new THREE.Vector3(position.x+radius,fromY+height,position.z+radius)
+    return ceilingIn(world.index.query(low,high), position, radius, fromY, height) ||
+      ceilingIn(dynamicEntries, position, radius, fromY, height)
+  }
 
   /** True if the player's box overlaps any solid (static or dynamic). */
   const isBlocked = (position, radius, height) => {
     const min = new THREE.Vector3(position.x - radius, position.y + EPS, position.z - radius)
     const max = new THREE.Vector3(position.x + radius, position.y + height, position.z + radius)
-    return blockedIn(world.boxes, min, max) || blockedIn(dynamicEntries, min, max)
+    return blockedIn(world.index.query(min,max), min, max) || blockedIn(dynamicEntries, min, max)
   }
 
-  const stepHeightAt = (position, radius, maxRise) =>
-    stepSupport(flightBoxes(world), position, radius, maxRise)
+  const stepHeightAt = (position, radius, maxRise) => {
+    const low=new THREE.Vector3(position.x-radius,position.y+.01,position.z-radius)
+    const high=new THREE.Vector3(position.x+radius,position.y+maxRise,position.z+radius)
+    return stepSupport([...world.floorIndex.query(low,high),...dynamicEntries],position,radius,maxRise)
+  }
 
-  const moveFlight = (position, velocity, dt, radius, height) =>
-    sweepFlight(flightBoxes(world), position, velocity, dt, radius, height)
+  const moveFlight = (position, velocity, dt, radius, height) => {
+    // Every axis-clamped pose stays inside this complete swept envelope.
+    // One sweep still integrates dt once against statics followed by dynamics.
+    const end=position.clone().addScaledVector(velocity,dt)
+    const low=new THREE.Vector3(Math.min(position.x,end.x)-radius,Math.min(position.y,end.y),Math.min(position.z,end.z)-radius)
+    const high=new THREE.Vector3(Math.max(position.x,end.x)+radius,Math.max(position.y,end.y)+height,Math.max(position.z,end.z)+radius)
+    return sweepFlight([...world.index.query(low,high),...dynamicEntries],position,velocity,dt,radius,height)
+  }
 
   return { world, setDynamic, clearDynamic, moveFlight, raycastDown, stepHeightAt, resolve, hasCeiling, isBlocked }
 }
 
-/**
- * The box list flight collision sweeps, statics followed by dynamics.
- *
- * sweepFlight() integrates the whole step, so it must be called ONCE per frame
- * with every solid in a single list - running it twice (once per layer) would
- * integrate the same dt twice and silently double the flight speed.
- *
- * The list holds references to the same pooled Box3 objects that setDynamic
- * mutates, so it only has to be rebuilt when the static world identity or the
- * dynamic count changes: per-frame geometry edits are picked up for free.
- */
-const flightList = []
-const flightKey = { world: null, count: -1 }
-
-function flightBoxes(world) {
-  if (flightKey.world === world && flightKey.count === dynamicEntries.length) return flightList
-  flightKey.world = world
-  flightKey.count = dynamicEntries.length
-  flightList.length = 0
-  for (let i = 0; i < world.boxes.length; i++) flightList.push(world.boxes[i])
-  for (let i = 0; i < dynamicEntries.length; i++) flightList.push(dynamicEntries[i])
-  return flightList
-}
-
-useGLTF.preload('/models/sunny-collision.glb')
+if(typeof window!=='undefined')preloadCollisionWorld('/models/sunny-collision.glb')

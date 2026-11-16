@@ -1,0 +1,97 @@
+=== LOADING ===
+  PASS  player controller is alive
+  PASS  collision world loaded  205604 colliders, 15271 floors
+  PASS  player is grounded at spawn  grounded=true
+  PASS  player is above the sea  y=-40.55 (water=-51.85)
+  PASS  player is near deck height  y=-40.55 spawn=-40.55
+
+=== WALKING ===
+  PASS  player moves under WASD  moved 4.71 m
+  PASS  walking speed is sensible  peak 3.40 m/s (expect ~3.4)
+  PASS  still grounded while walking
+  PASS  still above water while walking  y=-40.55
+
+=== RUNNING ===
+  PASS  running is faster than walking  walk=3.40 run=6.60 m/s
+  PASS  running speed is sensible  peak 6.60 m/s (expect ~6.6)
+
+=== JUMPING ===
+  PASS  jump leaves the ground  ground=-40.55 peak>-39.73 airborne=true
+  PASS  player lands back at deck height  landed=-40.55 ground=-40.55
+  PASS  grounded again after landing
+
+=== TRAVERSING THE SHIP ===
+  port       reached 8.55 m
+  starboard  reached 7.83 m
+  bow        reached 4.71 m
+  stern      reached 5.98 m
+  PASS  can leave spawn in every direction  min 4.71 m before the nearest fixture
+  PASS  walks a good distance in the open directions  max 8.55 m
+  PASS  lawn is traversable around the fixtures  combined 27.1 m across 4 directions
+
+=== CANNOT WALK OFF THE SHIP ===
+  PASS  never fell into the sea while running  lowest y=-40.55
+  PASS  still grounded after sprinting
+  PASS  going over the edge never drops near the water  lowest y=-42.15 vs deck -40.55
+  PASS  going over the edge puts you back on the deck  y=-40.55
+
+=== MODES ===
+  PASS  V switches to Inspect
+  PASS  V returns to Explore
+  PASS  player position preserved across Inspect  moved 0.011 m
+  PASS  C switches to 3rd person
+  PASS  C switches back to 1st person
+  PASS  F enables fly mode
+  PASS  fly mode lifts the player up  y -40.6 -> -31.9
+  PASS  flight collision starts off
+  PASS  flight collision button enables it
+  PASS  flying with collision stops at a real partition wall
+  PASS  B disables flight collision
+  PASS  flying without collision passes the same wall
+  PASS  F returns to walking
+  PASS  walking always collides with the same partition wall
+
+=== ACTUAL STAIR CLIMBS ===
+  PASS  aft port approach stays on its landing
+  PASS  aft port can be climbed with walking controls  feet=10.44,-35.62,13.08, blocker=null
+  PASS  aft starboard approach stays on its landing
+  PASS  aft starboard can be climbed with walking controls  feet=10.44,-35.62,-15.22, blocker=null
+  PASS  fore upper approach stays on its landing
+  PASS  fore upper can be climbed with walking controls  feet=-20.89,-33.16,-3.10, blocker=null
+  PASS  fore lower starboard approach stays on its landing
+  PASS  fore lower starboard can be climbed with walking controls  feet=-17.35,-36.41,-3.31, blocker=null
+  PASS  fore lower port approach stays on its landing
+  PASS  fore lower port can be climbed with walking controls  feet=-17.50,-36.41,3.90, blocker=null
+  PASS  garden port approach stays on its landing
+  PASS  garden port can be climbed with walking controls  feet=18.83,-29.37,13.20, blocker=null
+  PASS  garden starboard approach stays on its landing
+  PASS  garden starboard can be climbed with walking controls  feet=18.83,-29.37,-15.77, blocker=null
+
+=== COMPLETE DECK JOURNEYS ===
+{"route":"port to helm","trace":[{"label":"lawn approach","ok":true,"pos":[-4.289999999999999,-40.55070114135742,2.407142115822063],"grounded":true,"blocker":null,"recoveries":0},{"label":"lower entrance","ok":true,"pos":[-12.672083173164793,-40.29780578613281,2.3890825733295897],"grounded":true,"blocker":null,"recoveries":0},{"label":"fore lower port","ok":true,"recoveries":0,"pos":[-17.45945255835188,-36.41469955444336,3.868103596605873],"grounded":true,"blocker":null},{"label":"cross landing","ok":true,"pos":[-17.470138276539593,-36.41469955444336,3.8656562978162947],"grounded":true,"blocker":null,"recoveries":0},{"label":"upper entrance","ok":true,"pos":[-17.401718827427086,-36.41469955444336,-3.2687147470232754],"grounded":true,"blocker":null,"recoveries":0},{"label":"fore upper","ok":true,"recoveries":0,"pos":[-20.8871536904329,-33.16210174560547,-2.998260831025557],"grounded":true,"blocker":null},{"label":"mast bypass","ok":true,"pos":[-22.14237487926344,-33.16210174560547,-4.544063611785616],"grounded":true,"blocker":null,"recoveries":0},{"label":"forward helm approach","ok":true,"pos":[-27.07396141297495,-33.16210174560547,-4.5002279867190556],"grounded":true,"blocker":null,"recoveries":0},{"label":"helm deck","ok":true,"pos":[-27.098998616446274,-33.16210174560547,-0.21851609919000367],"grounded":true,"blocker":null,"recoveries":0},{"label":"return mast bypass","ok":true,"pos":[-27.098574947258857,-33.16210174560547,-4.463975476703787],"grounded":true,"blocker":null,"recoveries":0},{"label":"return upper exit","ok":true,"pos":[-22.11489438907491,-33.16210174560547,-4.4999416105630115],"grounded":true,"blocker":null,"recoveries":0},{"label":"return upper stairs","ok":true,"pos":[-20.77260434510404,-33.16210174560547,-3.1190330436334692],"grounded":true,"blocker":null,"recoveries":0},{"label":"fore upper descent","ok":true,"recoveries":0,"pos":[-17.336772653375068,-36.41469955444336,-3.149279510877746],"grounded":true,"blocker":null},{"label":"return lower landing","ok":true,"pos":[-17.404005727772148,-36.41469955444336,3.9785664943574752],"grounded":true,"blocker":null,"recoveries":0},{"label":"fore lower port descent","ok":true,"recoveries":0,"pos":[-12.533470850481129,-40.55070114135742,2.3010130801188655],"grounded":true,"blocker":null},{"label":"return lawn approach","ok":true,"pos":[-4.155266148133961,-40.55070114135742,2.3907910131313663],"grounded":true,"blocker":null,"recoveries":0},{"label":"back to lawn","ok":true,"pos":[-4.2977447683990455,-40.55070114135742,-1.167491349489492],"grounded":true,"blocker":null,"recoveries":0}]}
+  PASS  spawn to helm via port: approaches, transfers and exit
+{"route":"starboard to helm","trace":[{"label":"lawn approach","ok":true,"pos":[-4.289999999999999,-40.55070114135742,-5.279812329753321],"grounded":true,"blocker":null,"recoveries":0},{"label":"lower entrance","ok":true,"pos":[-12.655892401726863,-40.55070114135742,-5.107241529382114],"grounded":true,"blocker":null,"recoveries":0},{"label":"fore lower starboard","ok":true,"recoveries":0,"pos":[-17.42507723266505,-36.20362854003906,-3.3050829116513767],"grounded":true,"blocker":null},{"label":"cross landing","ok":true,"pos":[-17.43114641583021,-36.20362854003906,-3.3040187473731297],"grounded":true,"blocker":null,"recoveries":0},{"label":"upper entrance","ok":true,"pos":[-17.431203165597008,-36.20362854003906,-3.3040087969279086],"grounded":true,"blocker":null,"recoveries":0},{"label":"fore upper","ok":true,"recoveries":0,"pos":[-21.03271193746834,-33.16210174560547,-3.0707677470495987],"grounded":true,"blocker":null},{"label":"mast bypass","ok":true,"pos":[-22.154253284001303,-33.16210174560547,-4.563519105237423],"grounded":true,"blocker":null,"recoveries":0},{"label":"forward helm approach","ok":true,"pos":[-27.139614154811213,-33.16210174560547,-4.499458788786397],"grounded":true,"blocker":null,"recoveries":0},{"label":"helm deck","ok":true,"pos":[-27.096895543907905,-33.16210174560547,-0.11632154668554096],"grounded":true,"blocker":null,"recoveries":0},{"label":"return mast bypass","ok":true,"pos":[-27.09856681534399,-33.16210174560547,-4.488544303146409],"grounded":true,"blocker":null,"recoveries":0},{"label":"return upper exit","ok":true,"pos":[-22.1147707605367,-33.16210174560547,-4.49998196084606],"grounded":true,"blocker":null,"recoveries":0},{"label":"return upper stairs","ok":true,"pos":[-20.772556716618045,-33.16210174560547,-3.118985550515277],"grounded":true,"blocker":null,"recoveries":0},{"label":"fore upper descent","ok":true,"recoveries":0,"pos":[-17.336736098489553,-36.41469955444336,-3.1492577457428053],"grounded":true,"blocker":null},{"label":"return lower landing","ok":true,"pos":[-17.334457149755867,-36.41469955444336,-3.1506254850046593],"grounded":true,"blocker":null,"recoveries":0},{"label":"fore lower starboard descent","ok":true,"recoveries":0,"pos":[-12.580677922559184,-40.55070114135742,-5.079927955953696],"grounded":true,"blocker":null},{"label":"return lawn approach","ok":true,"pos":[-4.30827473816155,-40.55070114135742,-5.1089673988103765],"grounded":true,"blocker":null,"recoveries":0},{"label":"back to lawn","ok":true,"pos":[-4.289732454981101,-40.55070114135742,-0.9174640600331927],"grounded":true,"blocker":null,"recoveries":0}]}
+  PASS  spawn to helm via starboard: approaches, transfers and exit
+{"route":"port to garden","trace":[{"label":"lawn approach","ok":true,"pos":[-4.289999999999999,-40.55070114135742,13.18671861227819],"grounded":true,"blocker":null,"recoveries":0},{"label":"lower entrance","ok":true,"pos":[2.9580108698814422,-40.29328918457031,13.083064320209527],"grounded":true,"blocker":"COLL_FloorStair_20","recoveries":0},{"label":"aft port","ok":true,"recoveries":0,"pos":[10.43094070589427,-35.62269973754883,13.084339941371704],"grounded":true,"blocker":null},{"label":"garden entrance","ok":true,"pos":[11.228332038468837,-35.62269973754883,13.19255347893284],"grounded":true,"blocker":null,"recoveries":0},{"label":"garden port","ok":true,"recoveries":0,"pos":[18.762873788789097,-29.37470054626465,13.199867723211705],"grounded":true,"blocker":null},{"label":"inward landing","ok":true,"pos":[18.99506842776772,-29.37470054626465,13.19995026284902],"grounded":true,"blocker":null,"recoveries":0},{"label":"garden exit","ok":true,"pos":[19.13083613596862,-29.37470054626465,11.058174292598846],"grounded":true,"blocker":null,"recoveries":0},{"label":"garden deck","ok":true,"pos":[19.119510489022662,-29.37470054626465,9.475872355380906],"grounded":true,"blocker":null,"recoveries":0},{"label":"return upper landing","ok":true,"pos":[19.120611332506066,-29.37470054626465,13.270133200223414],"grounded":true,"blocker":null,"recoveries":0},{"label":"garden port descent","ok":true,"recoveries":0,"pos":[11.184907641636151,-35.62269973754883,13.200923392943716],"grounded":true,"blocker":null},{"label":"return dining deck","ok":true,"pos":[10.29406042730131,-35.62269973754883,13.085691073808295],"grounded":true,"blocker":null,"recoveries":0},{"label":"aft port descent","ok":true,"recoveries":0,"pos":[2.695010471930663,-40.55070114135742,13.084471057374522],"grounded":true,"blocker":null},{"label":"return lawn approach","ok":true,"pos":[-4.330044555066095,-40.55070114135742,13.084323990341446],"grounded":true,"blocker":null,"recoveries":0},{"label":"back to lawn","ok":true,"pos":[-4.289725080765897,-40.55070114135742,-1.0765809379272935],"grounded":true,"blocker":null,"recoveries":0}]}
+  PASS  spawn to garden via port: approaches, transfers and exit
+{"route":"starboard to garden","trace":[{"label":"lawn approach","ok":true,"pos":[-4.289999999999999,-40.55070114135742,-15.2079618733804],"grounded":true,"blocker":null,"recoveries":0},{"label":"lower entrance","ok":true,"pos":[2.958756502909951,-40.29328536987305,-15.225011083268903],"grounded":true,"blocker":"COLL_FloorStair_41","recoveries":0},{"label":"aft starboard","ok":true,"recoveries":0,"pos":[10.431723607959071,-35.62269973754883,-15.224806182591212],"grounded":true,"blocker":null},{"label":"garden entrance","ok":true,"pos":[11.389774200502739,-35.27560806274414,-15.845222597484025],"grounded":true,"blocker":null,"recoveries":0},{"label":"garden starboard","ok":true,"recoveries":0,"pos":[18.760037698283966,-29.37470054626465,-15.773001140014266],"grounded":true,"blocker":null},{"label":"inward landing","ok":true,"pos":[18.977865788310616,-29.37470054626465,-15.773587420786127],"grounded":true,"blocker":null,"recoveries":0},{"label":"garden exit","ok":true,"pos":[19.132376391453448,-29.37470054626465,-13.630365691250377],"grounded":true,"blocker":null,"recoveries":0},{"label":"garden deck","ok":true,"pos":[19.119377298669203,-29.37470054626465,-12.05078298845006],"grounded":true,"blocker":null,"recoveries":0},{"label":"return upper landing","ok":true,"pos":[19.120612499661366,-29.37470054626465,-15.839700687704244],"grounded":true,"blocker":null,"recoveries":0},{"label":"garden starboard descent","ok":true,"recoveries":0,"pos":[11.118972972105126,-35.62269973754883,-15.7743938411576],"grounded":true,"blocker":null},{"label":"return dining deck","ok":true,"pos":[10.169612143288672,-35.62269973754883,-15.1483312528159],"grounded":true,"blocker":null,"recoveries":0},{"label":"aft starboard descent","ok":true,"recoveries":0,"pos":[2.7498059807518156,-40.55070114135742,-15.22535995236269],"grounded":true,"blocker":null},{"label":"return lawn approach","ok":true,"pos":[-4.27910165644495,-40.55070114135742,-15.224809559795114],"grounded":true,"blocker":null,"recoveries":0},{"label":"return around hatch","ok":true,"pos":[-4.290110107742212,-40.55070114135742,-0.8360372450469601],"grounded":true,"blocker":null,"recoveries":0},{"label":"back to lawn","ok":true,"pos":[-4.290113318118928,-40.55070114135742,-0.8315482015550273],"grounded":true,"blocker":null,"recoveries":0}]}
+  PASS  spawn to garden via starboard: approaches, transfers and exit
+
+=== DRY STRUCTURAL DECK ===
+  PASS  lower interior floor supports the player
+  PASS  open partition doorway connects the lower compartments
+  PASS  lower-compartment walk crosses the actual door station
+  PASS  full-window preview restored
+  PASS  ocean is a bounded mesh with reduced tessellation
+  PASS  sea extends to the horizon with only eight extra triangles
+  PASS  ocean shader excludes the measured hull interior
+  PASS  structural floor stays above every wave crest
+
+=== RENDERING ===
+  PASS  canvas is rendering  1440x900
+  FAIL  renders at an interactive frame rate  26 fps (headless software/ANGLE)
+
+=== ERRORS ===
+  PASS  no runtime errors
+
+=== RESULT: 63 passed, 1 failed ===

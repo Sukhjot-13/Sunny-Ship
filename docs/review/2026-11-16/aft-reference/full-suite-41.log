@@ -1,0 +1,744 @@
+
+> thousand-sunny@0.1.0 test
+> node tests/run-all.mjs
+
+
+============================================================
+  1/41  R13 source facade authoring fixture
+============================================================
+PASS two real lobed apertures, retained wall/crown corners, closed reveals and finite circular ports
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:49:19)
+
+Blender quit
+
+============================================================
+  2/41  R13 actual central entry and front aperture topology
+============================================================
+PASS R13 single central upper entrance, two tall lobed motifs and four real circular lower ports public/models
+
+============================================================
+  3/41  actual rectangular gallery floor support
+============================================================
+PASS 6400 independent floor/aperture samples, winding and invalid-outline rejection
+
+============================================================
+  4/41  circular shaft physical floor clearance
+============================================================
+PASS 10,201 independent floor/bore points, full-body centre clearance, retained solids/lower layer and idempotence
+
+============================================================
+  5/41  R14 round lawn hatch authoring fixture
+============================================================
+PASS R14 round opening, preserved surrounding lawn, solid disc and attached hardware
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:49:19)
+
+Blender quit
+
+============================================================
+  6/41  R04/R14 continuous lawn and single round Dock access
+============================================================
+PASS R14 single circular hatch/ladder, 15 restored lawn samples, real disc/shaft and below-deck channel crowns
+
+============================================================
+  7/41  below-deck crown and rounded mouth design
+============================================================
+PASS candidate continuous rounded cross-section profile; not yet applied to ship
+
+============================================================
+  8/41  actual rounded outlets and outboard mouth flare
+============================================================
+PASS actual rounded channels, circular mouth transitions and wide static rays [{"side":"port","measured":[{"t":0.1,"left":3.279676459630828,"right":3.280714426215856},{"t":0.5,"left":5.219508882189024,"right":5.21950912082613},{"t":0.9,"left":7.132026176447707,"right":7.132026368591335},{"t":0.99,"left":7.589202764915351,"right":7.589202956649306}],"physical":17609},{"side":"starboard","measured":[{"t":0.1,"left":3.279676442881204,"right":3.2796765075793486},{"t":0.5,"left":5.21950901130429,"right":5.219509249941456},{"t":0.9,"left":7.1320264790109915,"right":7.132026737559295},{"t":0.99,"left":7.5892027951715635,"right":7.589203112335422}],"physical":17769}]
+
+============================================================
+  9/41  matching reversible reference-scale artifacts
+============================================================
+PASS exact working/reference asset hashes and uniform 1/2.2 transform across 7962 real exported meshes
+
+============================================================
+  10/41  conservative reachability broad phase
+============================================================
+PASS conservative spatial broad phase retains 1141 exact overlaps, including step/head clearances
+
+============================================================
+  11/41  reference exterior profile and moving glazed doors
+============================================================
+PASS exported rounded lion, eight arched glazed doors and attached moving fittings {"depth":0.6800000602948115,"doors":[{"id":"ForeDoor","hardware":23,"openingRadius":0.23399999999999999},{"id":"ForeDoorStarboard","hardware":23,"openingRadius":0.23399999999999999},{"id":"WomensDoor","hardware":23,"openingRadius":0.20899999999999996},{"id":"AquariumDoor","hardware":23,"openingRadius":0.3488160000000003},{"id":"AftEntrance","hardware":23,"openingRadius":0.4063679999999999},{"id":"LibraryDoor","hardware":23,"openingRadius":0.23399999999999999},{"id":"PantryOutsideDoor","hardware":23,"openingRadius":0.1995},{"id":"SickOutsideDoor","hardware":23,"openingRadius":0.1995}]}
+
+============================================================
+  12/41  C03 convex floor-cut authoring fixture
+============================================================
+PASS convex opening, retained area and clockwise negative control
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:49:19)
+
+Blender quit
+
+============================================================
+  13/41  C03 water, bed and retained-mouth geometry
+============================================================
+PASS sampled actual water surfaces, wet mouth depth and supporting outlet beds [{"z":-4.287,"water":-51.85071563720703,"bed":-53.150718688964844},{"z":-6.287,"water":-51.85071563720703,"bed":-53.150718688964844},{"z":-8.286999999999999,"water":-51.85071563720703,"bed":-53.150718688964844},{"z":-8.786999999999999,"water":-51.85071563720703,"bed":-53.150718688964844},{"z":-9.286999999999999,"water":-51.85071563720703,"bed":-53.150718688964844},{"z":-11.286999999999999,"water":-51.85071563720703,"bed":-53.150718688964844},{"z":-13.286999999999999,"water":-51.85071563720703,"bed":-53.150718688964844},{"z":-15.286999999999999,"water":-51.85071563720703,"bed":-53.150718688964844},{"z":-17.287,"water":-51.85071563720703,"bed":-53.150718688964844},{"z":-19.287,"water":-51.85071563720703,"bed":-53.150718688964844},{"z":1.713,"water":-51.85071563720703,"bed":-53.150718688964844},{"z":3.713,"water":-51.85071563720703,"bed":-53.150718688964844},{"z":5.713,"water":-51.85071563720703,"bed":-53.150718688964844},{"z":6.213,"water":-51.85071563720703,"bed":-53.150718688964844},{"z":6.713,"water":-51.85071563720703,"bed":-53.150718688964844},{"z":8.713000000000001,"water":-51.85071563720703,"bed":-53.150718688964844},{"z":10.713000000000001,"water":-51.85071563720703,"bed":-53.150718688964844},{"z":12.713000000000001,"water":-51.85071563720703,"bed":-53.150718688964844},{"z":14.713000000000001,"water":-51.85071563720703,"bed":-53.150718688964844},{"z":16.713,"water":-51.85071563720703,"bed":-53.150718688964844}]
+
+============================================================
+  14/41  C03 actual rotating chamber clearance
+============================================================
+PASS actual rotating guides and partitions clear their fixed and radial boundaries
+
+============================================================
+  15/41  C03 selected bay alignment
+============================================================
+PASS all six exported selected bay centres align with the transverse mouth axis
+
+============================================================
+  16/41  C02 complete local mouth shell and body clearance
+============================================================
+PASS C02 exported closed reveals, all-angle physical containment and all-static full-body mouth clearance [{"side":"port","closedEdges":1152,"physicalSections":4728,"radialSamples":96,"fullBody":{"radius":0.34,"height":1.75,"start":[0.4949997663497925,-44.651,13.8],"end":[0.4949997663497925,-44.651,17.79884452819824]},"visualBodyRays":9},{"side":"starboard","closedEdges":1152,"physicalSections":4920,"radialSamples":96,"fullBody":{"radius":0.34,"height":1.75,"start":[0.49499964714050293,-44.651,-16.3],"end":[0.49499964714050293,-44.651,-20.3728458404541]},"visualBodyRays":9}]
+PASS C02 retained original lining outside both mouth cuts 112
+
+============================================================
+  17/41  C02 actual paired dock lining apertures
+============================================================
+PASS 149 visual/collision lining rays on side -1
+PASS 149 visual/collision lining rays on side 1
+
+============================================================
+  18/41  C01 actual exported fore trim clearance
+============================================================
+C01 exported shield / construction overlap: {"source":"public/models/sunny.glb","results":[{"level":"B1","hits":0,"areaM2":0},{"level":"F1","hits":0,"areaM2":0},{"level":"F2F","hits":0,"areaM2":0}]}
+C01 exported dark/white bands / fore storage overlap: {"bandHits":0,"bandArea":0}
+PASS C01: B1/F1/F2 envelopes clear; seven rooms and physical linings retained
+
+============================================================
+  19/41  C01 real storage enclosure and physical join
+============================================================
+PASS C01 storage wall/ceiling visual and physical join, and attributed fragment pixels {"source":"public/models/sunny.glb","ceiling":-40.911,"walls":113,"physical":113,"results":[{"pixel":[112,105],"name":"Sunny_InteriorWall_B1_31_seg0","point":[-20.08499471056384,-40.93598709853497,13.92988410592079]},{"pixel":[100,117],"name":"Sunny_InteriorWall_B1_32_seg0","point":[-19.913455129785824,-41.173561049769006,13.929886013269419]},{"pixel":[676,165],"name":"Sunny_InteriorWall_B1_7_seg0","point":[-27.88681777347768,-40.918255772854174,8.327384836574117]},{"pixel":[688,165],"name":"Sunny_B1_ceiling","point":[-28.046198243202248,-40.91071701049805,8.134640804334548]},{"pixel":[700,177],"name":"Sunny_InteriorWall_B1_6_seg0","point":[-28.212888843452987,-41.14456374955969,7.9466929356571585]},{"pixel":[514,444],"name":"Sunny_InteriorWall_B1_14_seg0","point":[-25.50453141331133,-46.69178639428365,10.748716957739138]},{"pixel":[500,460],"name":"Sunny_InteriorWall_B1_15_seg0","point":[-25.297037451790757,-47.01690508335557,10.945126576215946]},{"pixel":[530,460],"name":"Sunny_InteriorWall_B1_13_seg0","point":[-25.72309532555947,-47.02951324389096,10.524380647817829]},{"pixel":[520,452],"name":"Sunny_InteriorWall_B1_14_seg0","point":[-25.58554011312152,-46.859483598051206,10.665569630138942]},{"eye":[-19,-45.451,8],"pixel":[100,100],"name":"Sunny_B1_ceiling","point":[-15.151529532156836,-40.91071701049805,10.390914351292356]},{"eye":[-25,-45.451,5],"pixel":[100,300],"name":"Sunny_InteriorWall_B1_39_seg0","point":[-17.750695899952415,-45.56933873229306,13.929886013269424]},{"eye":[-25,-45.451,5],"pixel":[200,200],"name":"Sunny_InteriorWall_B1_34_seg0","point":[-19.08216550135449,-44.453357302579455,13.929884105920792]},{"eye":[-19,-45.451,-9],"pixel":[1340,100],"name":"Sunny_B1_ceiling","point":[-14.988091695167096,-40.91071701049805,-11.828496607666352]}]}
+
+============================================================
+  20/41  C01 original bow exterior preservation
+============================================================
+PASS C01 original exterior shield: 688 unchanged first-hit positions/materials
+PASS C01 original fore hull/bands: 1200 unchanged first-hit positions/materials
+
+============================================================
+  21/41  physical interior materials and metric projection
+============================================================
+PASS: six interior map sets, physical projection/source invariants, palette/cache isolation, patterned floor grids and fixture finishes
+
+============================================================
+  22/41  physical exterior materials and reflection guards
+============================================================
+PASS: 15 physical exterior finishes, source/room isolation, canvas metre UVs, mirrored camera and render-state restoration
+
+============================================================
+  23/41  navigation logic
+============================================================
+PASS navigation: steering, air arc/landing, three-barrel costs, seven selector states, occupied roller/carousel, Chicken reverse, Gaon jaw/recoil and cola-powered paddles
+
+============================================================
+  24/41  C04 mast-integrated food lift
+============================================================
+  PASS  metadata bottom matches F1 level
+  PASS  travel matches F1->F2 span to within 0.1m
+  PASS  car parts present
+  PASS  shaft backing/side walls present
+  PASS  guides present (2)
+  PASS  wine cupboard present
+  PASS  old offset dumbwaiter removed
+  PASS  car fits the retained mast at both service levels
+  PASS  two call stations at both levels
+
+  9 pass, 0 fail
+
+============================================================
+  25/41  climbing and interaction logic
+============================================================
+PASS climbing path validation, physical endpoint reach, continuous corners, return descent and bounded uncommitted collision proposals
+
+============================================================
+  26/41  asset structure
+============================================================
+=== SOURCE ASSET ===
+  PASS  source FBX still present and untouched in size  23.8 MB
+  PASS  source FBX checksum stays unchanged
+
+=== VISUAL SHIP ===
+  PASS  GLB contains every ship object the pipeline kept  7962 meshes (pipeline kept 7962)
+  PASS  GLB has a single named root node  ThousandSunny
+  PASS  every moving door handle and every actual hatch hinge/ring stay attached after geometry baking
+  PASS  every exported vertex is finite  size 85.8 x 123.2 x 45.7
+  PASS  GLB bounds match the hull Blender measured  glb 85.8 x 123.2 x 45.7 vs hull 85.8 x 123.2 x 45.7
+  PASS  GLB is centred on the origin  -0.01, 0.00, 0.00
+  PASS  no stray geometry parked away from the hull  7962 meshes all in place
+  PASS  every tagged part exists in the GLB
+  PASS  semantic tags cover the whole ship  {"deck":326,"rigging":61,"hull":31,"detail":7534,"trim":4,"mast":1,"sail":3,"flag":2}
+
+=== COLLISION PROXY ===
+  PASS  floor cells exist  15271 cells
+  PASS  boundary walls exist  1326 walls
+  PASS  obstacle colliders exist  17 obstacles
+  PASS  safety hull exists
+  PASS  floor cells are solid slabs (thick enough not to fall through)  0.60 m thick
+  PASS  safety hull sits below every deck  hull top -53.55 < lowest deck -53.15
+  PASS  the main deck is above the waterline  highest deck 61.60 > water -51.850717163085946
+
+=== METADATA ===
+  PASS  spawn point is finite  -4.29, 0.99, -40.55
+  PASS  metadata is in blender Z-up  blender-z-up
+  PASS  part groups recorded  deck, rigging, hull, detail, trim, mast, sail, flag
+  PASS  deck regions recorded  71 regions
+  PASS  ship length follows the authorized uniform experience scale  85.82 m
+  PASS  ship height follows the same proportional experience scale  123.20 m
+  PASS  rope ladders are rigging, not sails
+  PASS  three actual sails and two pirate flags
+  PASS  post-timeskip exterior features recorded
+  PASS  exterior metre/blade UVs export finite coordinates on every selected primitive
+  PASS  normalized sail paint and furnished room furniture keep separate UV scope
+  PASS  source hull and garden deck retain one UV metre per physical metre
+  PASS  fore and main mast grain UVs follow their full physical height
+  PASS  individual batched leaf blades export bounded normalized vein UVs
+  PASS  every exterior map uses repeating trilinear mipmaps and anisotropy
+  PASS  albedo and data maps keep correct colour spaces and metre repeats
+  PASS  filtered relief normals remain finite unit vectors
+  PASS  new exterior finish preserves the sourced palette and room material isolation
+  PASS  exported deck mast joins the actual aft mast and its supporting floor
+  PASS  fourteen pale/dark small hull-port frames replace the blind source caps
+  PASS  curved canvas exports UVs and a genuinely separated pair of gaff panels
+  PASS  exactly three human-sized mikan pots form one port-side cluster
+  PASS  mikan have oblate fruit plus calyx/stem/branch attachments
+  PASS  two rolling apertures have 64 shared-pivot dynamic timber slats and all seven digits
+  PASS  wheel integrates its controls and the convenience console is removed
+  PASS  seven source mane petals and a lower jaw have explicit exported pivots
+  PASS  paired stern lanterns have twelve transparent glass panes
+  PASS  both fore shroud fans connect to the real mast and supported deck
+  PASS  both retained anchor balls carry three transverse painted bands
+  PASS  both painted anchor balls export smooth normals across actual colour seams
+  PASS  exposed ladder access floors have real 12 cm undersides at unchanged walking heights
+  PASS  bow panel and lion disk preserve their distinct reference paint fields
+  PASS  lion disk has a broad gold collar rather than a thin painted rim  projected gold 49.1%
+  PASS  both retained foremast collars match the dark anime bands
+  PASS  mainmast platforms have timber decks, dark rims and mounted supports
+  PASS  reference front has two tall motifs and four round physically glazed ports
+  PASS  reference dark hull mouldings and rudder straps retain their authored geometry
+  PASS  outer bow shield has all three white painted divisions
+  PASS  lawn beside the dock hatch preserves support above its lower stair treads
+  PASS  both stowed anchor ropes end at measured hawse and retained anchor surfaces
+  PASS  lookout and library soffits preserve flared reference supports
+  PASS  red side panels remain within their measured white scroll border
+  PASS  lookout rope/ladder endpoints meet actual human-height walking floors
+  PASS  lookout cream enclosure and every bounded pane retain physical face colliders
+  PASS  lookout authoring publishes the retained floor independently of the raised glass sill
+  PASS  full lookout path and real hatch hole clear a 1.75 m body with 0.34 m radius
+  PASS  Aquarium uses the small sealed hinged gallery hatch and actual ladder from N
+  PASS  full Aquarium ladder shaft/landing clear the unchanged human body
+  PASS  F2 stern ladder replaces the central-garden cover with a small supported Library hatch
+  PASS  full stern ladder shaft/landings clear the unchanged human body
+  PASS  both outdoor toilet entries sit on the lawn below the foremast stairs
+  PASS  authored paint colors survive export
+  PASS  Tube005/Tube009 side pieces have matching attached heights
+  PASS  Line004/Line007 side pieces have matching attached heights
+  PASS  Box118/Box119 side pieces have matching attached heights
+  PASS  lion eyes are centered on its face
+  PASS  both lateral mane petals point radially and mirror across the face
+  PASS  helm pedestal is attached at the measured foredeck height
+  PASS  duplicate corner/bow stairs are removed
+  PASS  all blueprint levels and furnished rooms are exported
+  PASS  doors and six access hatches have moving nodes and no static leaf colliders
+  PASS  all six access hatches expose an actual hole instead of a static exit plate
+  PASS  door leaves match their section proportions and ordinary body clearance
+  PASS  sixteen human-sized dining chairs have 0.45 m seats
+  PASS  dining table stays 0.76 m high
+  PASS  rectangular aquarium water stays inside glass tank bounds
+  PASS  curved aquarium has 24 contained water sectors
+  PASS  Soldier Dock turntable is centered beneath the lawn
+  PASS  dining and kitchen share longitudinal span on opposite ship sides
+  PASS  SBS F2 dining/infirmary are port and kitchen/pantry are starboard
+  PASS  R13 shared F2 entrance is centred between dining and kitchen
+  PASS  room build retains an editable Blender master
+  PASS  three-barrel cola chamber replaces the provisional five tanks
+  PASS  SBS room fixtures include library table, canopy, oven, showers and workshop furnace
+  PASS  all eleven authored room lamps have usable finite metadata
+  PASS  all three bunk suspension beams meet the actual fore ceiling
+  PASS  reference curved bench has closed physical seating and supported base
+  PASS  curved bench surface collision leaves the central room open
+  PASS  range hood connects to the retained exterior chimney
+  PASS  hull ocean profile has 32 ordered cross-sections
+  PASS  enlargement retains a human-height helm pedestal
+  PASS  deck trees, pots, planters, bench and instruments meet their support floors
+  PASS  every rear tread is inboard of the hull sides
+  PASS  Soldier Dock plates are mounted symmetrically on both hull sides
+  PASS  every bare partition has full-height physical collision
+  PASS  both masts have full-height surface collision
+  PASS  replacement library shell has full-height physical wall/window segments
+  PASS  library lining stays at the stern and joins its floor
+  PASS  six physical dock contents have recognizable geometry and moving bounds
+  PASS  women tea cupboard has a teapot and four supported cups
+  PASS  ceilings preserve sampled stair apertures instead of full-room solid boxes
+  PASS  unsupported garden porthole duplicates and imported hut arches are removed
+  PASS  walkable lawn is enlarged to the requested experience scale
+  PASS  ship is centred on the origin  -0.0089, 0.0000, 0.0000
+  PASS  safety hull spans the hull length  83.2 m vs hull 85.8 m
+  PASS  safety hull spans the hull beam  44.5 m vs hull 45.7 m
+  PASS  safety hull only covers the part below the decks  6.4 m of 123.2 m tall hull
+  PASS  object counts recorded  7962 ship objects, 102 junk removed
+
+=== RESULT: 116 passed, 0 failed ===
+
+============================================================
+  27/41  exterior coplanar geometry
+============================================================
+PASS exported exterior has no coplanar overlap above 1 cm² within 3 mm of walking planes
+PASS all room floor tops have one physical surface owner, including tiled service and Aquarium floors
+PASS all 5 hatch coaming tops and inner walls have one visible surface owner
+PASS shared Library/Bath slab has opaque 18 cm undersides and no competing visible faces
+PASS both rounded fore enclosures have opaque 18 cm ceilings and stay inside the retained hull curve
+PASS curved helm floor has an opaque 18 cm underside and stays within the retained rim foot contour
+PASS forward chest/partitions remain enclosed and both fore plans are published
+PASS retained curved helm rail has supported human-height posts and no duplicate pole
+PASS three hollow mikan containers expose soil, face cavity walls inward and have supported solid collision
+PASS 1120 actual slide sections have no Aquarium/gallery intrusion, retained surrounding decks, a closed 6 cm underside and four floor-supported fitted physical posts
+PASS normal-body approach has bed step support before all four physical slide posts
+PASS every upper/lower balcony rail segment meets retained supporting post axes
+PASS seven opaque mane bodies retain supported roots/tips and swept source-led side contours
+PASS tall source-led mouth opens over a deep hollow cannon and closes with sealed muzzle/chin bodies
+PASS source-led compact ivory muzzle, circular eyes/black pupils and smaller nose meet their actual supporting skin
+PASS both white canvas head edges and all 26 fitted lashings meet actual oval yard skin
+PASS actual lookout and bathhouse undersides have eight recessed scalloped bays at both sampled sections
+PASS all retained mast-brace roots, fore fan tips and lookout yard tie meet actual tapered/oval wood skin
+PASS both deployed striped panels meet their retained gaff skins and white free leeches curve gently with all original corners retained
+PASS actual cream lookout piers/sill/header enclose bounded supported glazing on the unchanged floor/hatch
+PASS both retained bones are continuous closed round shafts with two-lobe ends, unchanged envelopes and source-supported roots
+PASS all sixteen retained collar stations have closed shallow rounded gold heads embedded in their actual gold support skin
+PASS fourteen retained side ports have closed hollow reveals, connected pale rims and unobstructed actual depth through source layers
+PASS both retained three-fluke anchors keep continuous stowed ropes entering hollow circular hawses supported by the actual sloped bow skin
+PASS six retained outer bow shield bosses have rounded crowns, red centres and actual painted-skin support at unchanged stations
+PASS the single C/N lowest-main-gaff diagonal tie has actual closed end rings contacting the retained free spar tip and Library roof rim
+PASS aft native red/cream envelope is closed, curved through height and supported on retained floors
+PASS retained/new aft arches have real crown corners, closed curved glazing, skin openings and attached sash frames
+PASS all fixed aft door stations and both real garden flights retain human body/headroom through the recovered envelope
+PASS R13 central upper-aft entrance has matching dynamic root/slide, closed arch leaf and surface-collision crown, true wall corners and normal-human headroom
+PASS six lower Aquarium side/rear true arches have unoccluded closed 28 mm glass, physically joined deep reveals, actual crown corners and bounded cream source paint
+PASS 972 actual garden body positions above highest footprint-supported treads clear the native wall on both complete flights
+PASS 972 actual garden body positions remain free of unsupported coarse terrain floors
+PASS retained Aquarium entry lintel has cream outside faces and timber inside
+PASS 168 actual room-to-stair rays terminate on the opaque 18 cm enclosures; native outside wall, windows and all prior real body/headroom guards retained
+
+============================================================
+  28/41  door and hatch collision
+============================================================
+PASS: 33 moving openings match GLB and safely open/close
+
+============================================================
+  29/41  collision physics
+============================================================
+colliders: 205604
+  floors: 15271
+  hull:   1
+  walls:  1326
+  obst:   17
+spawn (three): -4.29,-40.55,-0.99
+water level:   -51.850717163085946
+
+=== TEST 1: spawn is supported ===
+  PASS  ground found under spawn y=-40.55
+  PASS  spawn is just above ground dy=-0.00
+  PASS  deck is above water deck=-40.55 water=-51.850717163085946
+
+=== TEST 2: player falls at a plausible rate then lands ===
+  PASS  player lands after 0 frames (0.00s)
+  PASS  landing is on the deck y=-40.55
+
+=== TEST 3: walking forward stays supported ===
+  PASS  stays mostly supported while walking 40/600 frames airborne
+  PASS  did not sink below the hull y=-53.15
+
+=== TEST 4: cannot walk off the deck edge ===
+  (max horizontal travel from spawn: 20.61 m)
+  PASS  boundary walls contain the player max radius 20.61 m
+
+=== TEST 5: obstacles are solid ===
+  PASS  obstacles sit near walkable floor 7/17
+  PASS  has obstacle colliders 17 obstacles
+
+=== TEST 6: no degenerate colliders ===
+  PASS  no zero-size colliders 
+
+=== TEST 7: low diagonal edges are climbable ===
+  PASS  step probe sees a floor corner outside the centre ray 
+  PASS  step probe ignores overhead decks and distant edges 
+  PASS  step probe respects maximum climbing height 
+  PASS  sectioned moving blade keeps every sampled real surface solid 
+  PASS  sectioned moving blade leaves its empty upper-front corner clear 
+  PASS  surface collision skin gives every bound finite physical thickness 
+  PASS  non-finite moving surfaces cannot enter the collision world 
+  PASS  boosted flight cannot tunnel through a thin wall 
+  PASS  flight preserves motion along a wall 
+  PASS  flight head cannot pass upward through a floor 
+  PASS  flight feet cannot pass downward through a floor 
+  PASS  flight ignores synthetic walking edge guards 
+
+=== RESULT: 23 passed, 0 failed ===
+
+============================================================
+  30/41  deck reachability
+============================================================
+REACHABLE floor layers: 383916 of 873633 (43.9%)
+Reach along ship: -32.0 to 36.7 m
+Blocked boundaries: [
+  [ 'COLL_Solid_Sunny_RoomPartition_pantry_sickbay_seg0', 1844 ],
+  [ 'COLL_Solid_Sunny_RoomPartition_pantry_sickbay_seg2', 1680 ],
+  [ 'COLL_Solid_Sunny_RobinGarden_planter', 1152 ],
+  [ 'COLL_Solid_Sunny_PopGreens_planter', 1152 ],
+  [ 'COLL_Solid_Sunny_RoomPartition_q_cannon_seg2', 1116 ],
+  [ 'COLL_Solid_Sunny_RoomPartition_pantry_sickbay_seg4', 992 ],
+  [ 'COLL_Solid_Sunny_RoomPartition_q_cannon_seg0.001', 949 ],
+  [ 'COLL_Solid_Sunny_Quarters_lockers_body', 900 ]
+]
+  PASS  outdoor route to lawn
+  PASS  outdoor route to foredeck
+  PASS  outdoor route to aft deck
+  PASS  outdoor route to garden
+  PASS  outdoor route to stern balcony
+  PASS  outdoor route to men's quarters
+  FAIL  outdoor route to aquarium bar
+    nearest: [
+  {
+    x: 9.432196807861331,
+    y: -40.55070114135742,
+    z: -1.287105917930603,
+    i: 519,
+    j: 2,
+    id: '519,2,-40.551'
+  }
+]
+    destination blockers: [
+  [ 12.33219680786133, -0.2871059179306028, null ],
+  [ 12.33219680786133, -0.2871059179306028, null ],
+  [ 12.33219680786133, -0.18710591793060294, null ],
+  [ 12.33219680786133, -0.18710591793060294, null ],
+  [ 12.33219680786133, -0.08710591793060285, null ],
+  [ 12.33219680786133, -0.08710591793060285, null ],
+  [ 12.432196807861331, -0.2871059179306028, null ],
+  [ 12.432196807861331, -0.2871059179306028, null ]
+]
+  PASS  outdoor route to library
+  FAIL  outdoor route to soldier dock
+    nearest: []
+    destination blockers: []
+
+============================================================
+  31/41  all room and interior stair routes
+============================================================
+FAIL Storage Room 8247 isolated walkable cells
+FAIL Soldier Dock System 2433 isolated walkable cells
+FAIL Usopp's Main Factory 2608 isolated walkable cells
+FAIL Franky's Weapon Development Room 2348 isolated walkable cells
+FAIL Energy Room 1536 isolated walkable cells
+PASS Men's Quarters 36 waypoints, -24.8,-40.55070114135742,0.4
+PASS Men's Washroom 31 waypoints, -20.400000000000002,-40.55070114135742,-6.800000000000001
+FAIL Aquarium Service Passage 94 isolated walkable cells
+PASS Aquarium Bar 18 waypoints, 9.4,-40.55070114135742,-1.4000000000000001
+FAIL Women's Quarters 1666 isolated walkable cells
+FAIL Women's Washroom 61 isolated walkable cells
+PASS Dining Room 75 waypoints, 16.400000000000002,-35.62269973754883,6
+PASS Kitchen 65 waypoints, 16.400000000000002,-35.62269973754883,-7.4
+PASS Pantry 71 waypoints, 22.8,-35.62269973754883,-7.4
+PASS Sick Bay 73 waypoints, 22.8,-35.62269973754883,5.2
+PASS Library 91 waypoints, 30.400000000000002,-29.154699325561523,-1.2000000000000002
+PASS Bath 98 waypoints, 29.6,-26.104700088500977,-0.6000000000000001
+PASS Bath Washroom 96 waypoints, 29.400000000000002,-26.104700088500977,-4.800000000000001
+PASS Observation Deck 76 waypoints, 20.6,-29.37470054626465,-1.4000000000000001
+PASS Men Starboard Cannon Closet 32 waypoints, -24.8,-40.55070114135742,-8.6
+PASS Men Port Cannon Closet 46 waypoints, -24.8,-40.55070114135742,9.4
+FAIL Women Starboard Cannon Closet 62 isolated walkable cells
+FAIL Women Port Cannon Closet 36 isolated walkable cells
+PASS Fore Port Toilet 21 waypoints, -15.600000000000001,-40.55070114135742,3.8000000000000003
+PASS Fore Starboard Toilet 23 waypoints, -15.600000000000001,-40.55070114135742,-3.8000000000000003
+PASS Stern Ladder Access 82 waypoints, 29.6,-35.62269973754883,-1.2000000000000002
+PASS Bath Toilet 98 waypoints, 29,-26.104700088500977,-5.4
+PASS Stair: BathStair 103 waypoints, 31,-26.104700088500977,-4.2
+FAIL Stair: EnergyStair 0 isolated walkable cells
+FAIL Stair: StorageStair_over 0 isolated walkable cells
+FAIL Stair: StorageStair_up 0 isolated walkable cells
+PASS Ladder: Aquarium gallery ladder 48 waypoints, 11.55,-40.55071716308594,7.513000000000001
+PASS Ladder: Stern Library ladder 81 waypoints, 27.608023262023927,-29.15471716308594,-1.5494378089904786
+PASS Ladder: Dock waiting-room ladder 11 waypoints, 1.5950000000000013,-51.40071716308594,-1.287
+FAIL Fore cabin approach: fore lower starboard 0 isolated walkable cells
+FAIL Fore cabin approach: fore lower port 0 isolated walkable cells
+Reachable 93027/218474 grid nodes
+
+============================================================
+  32/41  in-browser gameplay
+============================================================
+=== LOADING ===
+  PASS  player controller is alive
+  PASS  collision world loaded  205604 colliders, 15271 floors
+  PASS  player is grounded at spawn  grounded=true
+  PASS  player is above the sea  y=-40.55 (water=-51.85)
+  PASS  player is near deck height  y=-40.55 spawn=-40.55
+
+=== WALKING ===
+  PASS  player moves under WASD  moved 4.71 m
+  PASS  walking speed is sensible  peak 3.40 m/s (expect ~3.4)
+  PASS  still grounded while walking
+  PASS  still above water while walking  y=-40.55
+
+=== RUNNING ===
+  PASS  running is faster than walking  walk=3.40 run=6.60 m/s
+  PASS  running speed is sensible  peak 6.60 m/s (expect ~6.6)
+
+=== JUMPING ===
+  PASS  jump leaves the ground  ground=-40.55 peak>-39.73 airborne=true
+  PASS  player lands back at deck height  landed=-40.55 ground=-40.55
+  PASS  grounded again after landing
+
+=== TRAVERSING THE SHIP ===
+  port       reached 8.52 m
+  starboard  reached 7.54 m
+  bow        reached 4.71 m
+  stern      reached 5.53 m
+  PASS  can leave spawn in every direction  min 4.71 m before the nearest fixture
+  PASS  walks a good distance in the open directions  max 8.52 m
+  PASS  lawn is traversable around the fixtures  combined 26.3 m across 4 directions
+
+=== CANNOT WALK OFF THE SHIP ===
+  PASS  never fell into the sea while running  lowest y=-40.55
+  PASS  still grounded after sprinting
+  PASS  going over the edge never drops near the water  lowest y=-42.15 vs deck -40.55
+  PASS  going over the edge puts you back on the deck  y=-40.55
+
+=== MODES ===
+  PASS  V switches to Inspect
+  PASS  V returns to Explore
+  PASS  player position preserved across Inspect  moved 0.007 m
+  PASS  C switches to 3rd person
+  PASS  C switches back to 1st person
+  PASS  F enables fly mode
+  PASS  fly mode lifts the player up  y -40.6 -> -32.5
+  PASS  flight collision starts off
+  PASS  flight collision button enables it
+  PASS  flying with collision stops at a real partition wall
+  PASS  B disables flight collision
+  PASS  flying without collision passes the same wall
+  PASS  F returns to walking
+  PASS  walking always collides with the same partition wall
+
+=== ACTUAL STAIR CLIMBS ===
+  PASS  aft port approach stays on its landing
+  PASS  aft port can be climbed with walking controls  feet=10.44,-35.62,13.08, blocker=null
+  PASS  aft starboard approach stays on its landing
+  PASS  aft starboard can be climbed with walking controls  feet=10.44,-35.62,-15.22, blocker=null
+  PASS  fore upper approach stays on its landing
+  PASS  fore upper can be climbed with walking controls  feet=-20.89,-33.16,-3.10, blocker=null
+  PASS  fore lower starboard approach stays on its landing
+  PASS  fore lower starboard can be climbed with walking controls  feet=-17.35,-36.41,-3.32, blocker=null
+  PASS  fore lower port approach stays on its landing
+  PASS  fore lower port can be climbed with walking controls  feet=-17.50,-36.41,3.89, blocker=null
+  PASS  garden port approach stays on its landing
+  PASS  garden port can be climbed with walking controls  feet=18.73,-29.37,13.20, blocker=null
+  PASS  garden starboard approach stays on its landing
+  PASS  garden starboard can be climbed with walking controls  feet=18.84,-29.37,-15.77, blocker=null
+
+=== COMPLETE DECK JOURNEYS ===
+{"route":"port to helm","trace":[{"label":"lawn approach","ok":true,"pos":[-4.289999999999999,-40.55070114135742,2.407142115822063],"grounded":true,"blocker":null,"recoveries":0},{"label":"lower entrance","ok":true,"pos":[-12.672083173164793,-40.29780578613281,2.3890825733295897],"grounded":true,"blocker":null,"recoveries":0},{"label":"fore lower port","ok":true,"recoveries":0,"pos":[-17.45796695670761,-36.41469955444336,3.8575388318904587],"grounded":true,"blocker":null},{"label":"cross landing","ok":true,"pos":[-17.468328519694538,-36.41469955444336,3.8546788993547088],"grounded":true,"blocker":null,"recoveries":0},{"label":"upper entrance","ok":true,"pos":[-17.402770641100172,-36.41469955444336,-3.160690300897686],"grounded":true,"blocker":null,"recoveries":0},{"label":"fore upper","ok":true,"recoveries":0,"pos":[-20.843975042981686,-33.16210174560547,-3.0699298772478736],"grounded":true,"blocker":null},{"label":"mast bypass","ok":true,"pos":[-22.13440123538695,-33.16210174560547,-4.531545191149095],"grounded":true,"blocker":null,"recoveries":0},{"label":"forward helm approach","ok":true,"pos":[-27.139534024280618,-33.16210174560547,-4.4997246600531176],"grounded":true,"blocker":null,"recoveries":0},{"label":"helm deck","ok":true,"pos":[-27.098974277049024,-33.16210174560547,-0.3283095219889279],"grounded":true,"blocker":null,"recoveries":0},{"label":"return mast bypass","ok":true,"pos":[-27.098559327350923,-33.16210174560547,-4.624286461817014],"grounded":true,"blocker":null,"recoveries":0},{"label":"return upper exit","ok":true,"pos":[-22.01178166190561,-33.16210174560547,-4.497591011620504],"grounded":true,"blocker":null,"recoveries":0},{"label":"return upper stairs","ok":true,"pos":[-20.722836163432014,-33.16210174560547,-3.064660587355976],"grounded":true,"blocker":null,"recoveries":0},{"label":"fore upper descent","ok":true,"recoveries":0,"pos":[-17.30952666260982,-36.41469955444336,-3.1179912049232983],"grounded":true,"blocker":null},{"label":"return lower landing","ok":true,"pos":[-17.40471058340851,-36.41469955444336,4.010008833801148],"grounded":true,"blocker":null,"recoveries":0},{"label":"fore lower port descent","ok":true,"recoveries":0,"pos":[-12.539976528179606,-40.55070114135742,2.3036618543420757],"grounded":true,"blocker":null},{"label":"return lawn approach","ok":true,"pos":[-4.1629285268328,-40.55070114135742,2.390669795541125],"grounded":true,"blocker":null,"recoveries":0},{"label":"back to lawn","ok":true,"pos":[-4.288495520348002,-40.55070114135742,-0.9536712346643229],"grounded":true,"blocker":null,"recoveries":0}]}
+  PASS  spawn to helm via port: approaches, transfers and exit
+{"route":"starboard to helm","trace":[{"label":"lawn approach","ok":true,"pos":[-4.289999999999999,-40.55070114135742,-5.137282564155996],"grounded":true,"blocker":null,"recoveries":0},{"label":"lower entrance","ok":true,"pos":[-12.650746063396246,-40.55070114135742,-5.1087378224332625],"grounded":true,"blocker":null,"recoveries":0},{"label":"fore lower starboard","ok":true,"recoveries":0,"pos":[-17.42876081472851,-36.20362854003906,-3.2899342400060343],"grounded":true,"blocker":null},{"label":"cross landing","ok":true,"pos":[-17.435079813246297,-36.20362854003906,-3.2884026210484376],"grounded":true,"blocker":null,"recoveries":0},{"label":"upper entrance","ok":true,"pos":[-17.43510314921817,-36.20362854003906,-3.2883969648013576],"grounded":true,"blocker":null,"recoveries":0},{"label":"fore upper","ok":true,"recoveries":0,"pos":[-20.845075418003116,-33.16210174560547,-3.071713406998347],"grounded":true,"blocker":null},{"label":"mast bypass","ok":true,"pos":[-22.142042814897657,-33.16210174560547,-4.540295550707732],"grounded":true,"blocker":null,"recoveries":0},{"label":"forward helm approach","ok":true,"pos":[-27.114080690932965,-33.16210174560547,-4.499869179536972],"grounded":true,"blocker":null,"recoveries":0},{"label":"helm deck","ok":true,"pos":[-27.09830198431013,-33.16210174560547,-0.21432106080848054],"grounded":true,"blocker":null,"recoveries":0},{"label":"return mast bypass","ok":true,"pos":[-27.098571081701454,-33.16210174560547,-4.497499087109327],"grounded":true,"blocker":null,"recoveries":0},{"label":"return upper exit","ok":true,"pos":[-22.017052743410147,-33.16210174560547,-4.500041135511177],"grounded":true,"blocker":null,"recoveries":0},{"label":"return upper stairs","ok":true,"pos":[-20.7235324069601,-33.16210174560547,-3.065351401440258],"grounded":true,"blocker":null,"recoveries":0},{"label":"fore upper descent","ok":true,"recoveries":0,"pos":[-17.3103501118589,-36.41469955444336,-3.118118604419402],"grounded":true,"blocker":null},{"label":"return lower landing","ok":true,"pos":[-17.341400449530834,-36.41469955444336,-3.226914086207774],"grounded":true,"blocker":null,"recoveries":0},{"label":"fore lower starboard descent","ok":true,"recoveries":0,"pos":[-12.5878561084459,-40.55070114135742,-5.073528576881931],"grounded":true,"blocker":null},{"label":"return lawn approach","ok":true,"pos":[-4.210788418241291,-40.55070114135742,-5.109384383205785],"grounded":true,"blocker":null,"recoveries":0},{"label":"back to lawn","ok":true,"pos":[-4.293545951554936,-40.55070114135742,-0.8307387227125475],"grounded":true,"blocker":null,"recoveries":0}]}
+  PASS  spawn to helm via starboard: approaches, transfers and exit
+{"route":"port to garden","trace":[{"label":"lawn approach","ok":true,"pos":[-4.289999999999999,-40.55070114135742,13.125476283221184],"grounded":true,"blocker":null,"recoveries":0},{"label":"lower entrance","ok":true,"pos":[2.9559358797067152,-40.55070114135742,13.083817282514563],"grounded":true,"blocker":null,"recoveries":0},{"label":"aft port","ok":true,"recoveries":0,"pos":[10.431607017839907,-35.62269973754883,13.084331153255325],"grounded":true,"blocker":null},{"label":"garden entrance","ok":true,"pos":[11.336945984568326,-35.62269973754883,13.207649373893783],"grounded":true,"blocker":null,"recoveries":0},{"label":"garden port","ok":true,"recoveries":0,"pos":[18.67101427836118,-29.37470054626465,13.20015020173652],"grounded":true,"blocker":null},{"label":"inward landing","ok":true,"pos":[19.110155516687,-29.37470054626465,13.20000718092458],"grounded":true,"blocker":null,"recoveries":0},{"label":"garden exit","ok":true,"pos":[19.121279382510256,-29.37470054626465,11.05828176136628],"grounded":true,"blocker":null,"recoveries":0},{"label":"garden deck","ok":true,"pos":[19.120512297787897,-29.37470054626465,9.471600442924105],"grounded":true,"blocker":null,"recoveries":0},{"label":"return upper landing","ok":true,"pos":[19.120588280283336,-29.37470054626465,13.156430126283672],"grounded":true,"blocker":null,"recoveries":0},{"label":"garden port descent","ok":true,"recoveries":0,"pos":[11.184900988129614,-35.62269973754883,13.200392722819455],"grounded":true,"blocker":null},{"label":"return dining deck","ok":true,"pos":[10.293984872908437,-35.62269973754883,13.085672826039293],"grounded":true,"blocker":null,"recoveries":0},{"label":"aft port descent","ok":true,"recoveries":0,"pos":[2.9215713383707254,-40.55070114135742,13.084435329900556],"grounded":true,"blocker":null},{"label":"return lawn approach","ok":true,"pos":[-4.443483690209564,-40.55070114135742,13.084322399523117],"grounded":true,"blocker":null,"recoveries":0},{"label":"back to lawn","ok":true,"pos":[-4.289023718599963,-40.55070114135742,-1.076894166095254],"grounded":true,"blocker":null,"recoveries":0}]}
+  PASS  spawn to garden via port: approaches, transfers and exit
+{"route":"starboard to garden","trace":[{"label":"lawn approach","ok":true,"pos":[-4.289999999999999,-40.55070114135742,-15.189687689687352],"grounded":true,"blocker":null,"recoveries":0},{"label":"lower entrance","ok":true,"pos":[2.9586899620421945,-40.29328536987305,-15.225234114700832],"grounded":true,"blocker":"COLL_FloorStair_41","recoveries":0},{"label":"aft starboard","ok":true,"recoveries":0,"pos":[10.551878548303144,-35.62269973754883,-15.22480475712984],"grounded":true,"blocker":null},{"label":"garden entrance","ok":true,"pos":[11.366651534605303,-35.62269973754883,-15.839144384394533],"grounded":true,"blocker":null,"recoveries":0},{"label":"garden starboard","ok":true,"recoveries":0,"pos":[18.97182702250885,-29.37470054626465,-15.772708640260872],"grounded":true,"blocker":null},{"label":"inward landing","ok":true,"pos":[18.976684829925183,-29.37470054626465,-15.772701537495271],"grounded":true,"blocker":null,"recoveries":0},{"label":"garden exit","ok":true,"pos":[19.132345881611545,-29.37470054626465,-13.632284023473249],"grounded":true,"blocker":null,"recoveries":0},{"label":"garden deck","ok":true,"pos":[19.119352764285694,-29.37470054626465,-12.050000633153736],"grounded":true,"blocker":null,"recoveries":0},{"label":"return upper landing","ok":true,"pos":[19.120633337644904,-29.37470054626465,-15.896147857102447],"grounded":true,"blocker":null,"recoveries":0},{"label":"garden starboard descent","ok":true,"recoveries":0,"pos":[11.118971958540042,-35.62269973754883,-15.774294423831066],"grounded":true,"blocker":null},{"label":"return dining deck","ok":true,"pos":[10.16955438230566,-35.62269973754883,-15.148306925101995],"grounded":true,"blocker":null,"recoveries":0},{"label":"aft starboard descent","ok":true,"recoveries":0,"pos":[2.7675715434256447,-40.55070114135742,-15.225637961517421],"grounded":true,"blocker":null},{"label":"return lawn approach","ok":true,"pos":[-4.27471814847564,-40.55070114135742,-15.22481062636035],"grounded":true,"blocker":null,"recoveries":0},{"label":"return around hatch","ok":true,"pos":[-4.290133784396959,-40.55070114135742,-0.8360397994290247],"grounded":true,"blocker":null,"recoveries":0},{"label":"back to lawn","ok":true,"pos":[-4.290137685170672,-40.55070114135742,-0.8315507564839252],"grounded":true,"blocker":null,"recoveries":0}]}
+  PASS  spawn to garden via starboard: approaches, transfers and exit
+
+=== DRY STRUCTURAL DECK ===
+  PASS  lower interior floor supports the player
+  PASS  open partition doorway connects the lower compartments
+  PASS  lower-compartment walk crosses the actual door station
+  PASS  full-window preview restored
+  PASS  ocean is a bounded mesh with reduced tessellation
+  PASS  sea extends to the horizon with only eight extra triangles
+  PASS  ocean shader excludes the measured hull interior
+  PASS  structural floor stays above every wave crest
+
+=== RENDERING ===
+  PASS  canvas is rendering  1440x900
+  FAIL  renders at an interactive frame rate  25 fps (headless software/ANGLE)
+
+=== ERRORS ===
+  PASS  no runtime errors
+
+=== RESULT: 63 passed, 1 failed ===
+
+============================================================
+  33/41  universal visible cannon controls
+============================================================
+PASS universal cannon: Inspect and ordinary spawn, actual jaw/colliders/blast/cola/recoil, mouse + keyboard + pointer-lock handoff, no jump/placement/helm, narrow fly UI
+
+============================================================
+  34/41  continuous balcony, gallery, slide and exterior passages
+============================================================
+PASS additional exterior journeys: physical mikan contact/exposed soil/return, full 360° stern balcony, library threshold/return, gallery crosswalk/slide descent, both full side passages/returns; no teleport, flight or recovery
+
+============================================================
+  35/41  outdoor thresholds, exterior hatch descents and returns
+============================================================
+PASS Fore Port Toilet outside → inside [ -15.599685296207557, -40.55070114135742, 3.8080937612670147 ]
+PASS Fore Port Toilet inside → lawn [ -4.2742230179615435, -40.55070114135742, -1.0051018284216677 ]
+PASS Fore Port Toilet return to original spawn [ -4.274120048098142, -40.55070114135742, -1.005094816515311 ]
+PASS Fore Starboard Toilet outside → inside [ -15.600150299060978, -40.55070114135742, -3.839083965709766 ]
+PASS Fore Starboard Toilet inside → lawn [ -4.280491144870149, -40.55070114135742, -0.9973203639356439 ]
+PASS Fore Starboard Toilet return to original spawn [ -4.280326795115137, -40.55070114135742, -0.997325754336723 ]
+PASS aft port lower exterior entrance [ 2.8017450663265526, -40.55070114135742, 13.053995454561456 ]
+PASS Aquarium gallery ladder upper landing [ 11.625945743868233, -35.62269973754883, 6.114559994058036 ]
+node:internal/modules/run_main:111
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: ladder endpoint must be reached physically
+    at ladderJourney (file:///Users/sukhjot/codes/Sunny-Ship/tests/ladderJourney.mjs:13:2)
+    at async file:///Users/sukhjot/codes/Sunny-Ship/tests/exteriorAccess.mjs:81:2 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v26.12.0
+
+============================================================
+  36/41  continuous lookout rope, ladder, hatch and return descent
+============================================================
+PASS clear dock stair opening
+PASS rope-side lawn approach
+PASS actual rope endpoint
+PASS rope ascent [ -11.026589846077709, -25.443619675803983, -8.423345057347046 ]
+PASS ladder ascent to shut hatch [ -10.478835105895996, 27.338973968505858, -2.259850263595581 ]
+PASS through hatch to lookout floor [ -12.078835487365723, 29.22097396850586, -2.259850263595581 ]
+PASS lookout floor excursion
+PASS return to ladder endpoint
+PASS return to shut hatch [ -10.478835105895996, 29.22297396850586, -2.259850263595581 ]
+PASS ladder return descent [ -11.195628472307266, 19.05713418611828, -3.4214017337407308 ]
+PASS rope return to lawn [ -10.866941452026367, -40.55070114135742, -9.993707656860352 ]
+PASS return from rope along lawn
+PASS return around dock stair opening
+PASS return to original lawn spawn
+PASS continuous lawn → rope → ladder → shut/open hatch → lookout floor → reverse descent → lawn; human speed, Inspect continuity, no placement/flight/recovery
+
+============================================================
+  37/41  continuous room tour and interior stairs
+============================================================
+FAIL Storage Room no connected planned route
+FAIL Soldier Dock System no connected planned route
+FAIL Usopp's Main Factory no connected planned route
+FAIL Franky's Weapon Development Room no connected planned route
+FAIL Energy Room no connected planned route
+file:///Users/sukhjot/codes/Sunny-Ship/node_modules/puppeteer-core/lib/puppeteer/common/CallbackRegistry.js:88
+            this._reject(callback, new TargetCloseError('Target closed'));
+                                   ^
+
+TargetCloseError: Protocol error (Runtime.callFunctionOn): Target closed
+    at CallbackRegistry.clear (file:///Users/sukhjot/codes/Sunny-Ship/node_modules/puppeteer-core/lib/puppeteer/common/CallbackRegistry.js:88:36)
+    at CdpCDPSession.onClosed (file:///Users/sukhjot/codes/Sunny-Ship/node_modules/puppeteer-core/lib/puppeteer/cdp/CdpSession.js:121:25)
+    at #onClose (file:///Users/sukhjot/codes/Sunny-Ship/node_modules/puppeteer-core/lib/puppeteer/cdp/Connection.js:217:21)
+    at WebSocket.<anonymous> (file:///Users/sukhjot/codes/Sunny-Ship/node_modules/puppeteer-core/lib/puppeteer/node/NodeWebSocketTransport.js:54:30)
+    at callListener (/Users/sukhjot/codes/Sunny-Ship/node_modules/ws/lib/event-target.js:290:14)
+    at WebSocket.onClose (/Users/sukhjot/codes/Sunny-Ship/node_modules/ws/lib/event-target.js:220:9)
+    at WebSocket.emit (node:events:514:20)
+    at WebSocket.emitClose (/Users/sukhjot/codes/Sunny-Ship/node_modules/ws/lib/websocket.js:292:10)
+    at Socket.socketOnClose (/Users/sukhjot/codes/Sunny-Ship/node_modules/ws/lib/websocket.js:1374:15)
+    at Socket.emit (node:events:514:20) {
+  cause: ProtocolError
+      at <instance_members_initializer> (file:///Users/sukhjot/codes/Sunny-Ship/node_modules/puppeteer-core/lib/puppeteer/common/CallbackRegistry.js:108:14)
+      at new Callback (file:///Users/sukhjot/codes/Sunny-Ship/node_modules/puppeteer-core/lib/puppeteer/common/CallbackRegistry.js:112:16)
+      at CallbackRegistry.create (file:///Users/sukhjot/codes/Sunny-Ship/node_modules/puppeteer-core/lib/puppeteer/common/CallbackRegistry.js:27:26)
+      at Connection._rawSend (file:///Users/sukhjot/codes/Sunny-Ship/node_modules/puppeteer-core/lib/puppeteer/cdp/Connection.js:125:26)
+      at CdpCDPSession.send (file:///Users/sukhjot/codes/Sunny-Ship/node_modules/puppeteer-core/lib/puppeteer/cdp/CdpSession.js:72:14)
+      at #evaluate (file:///Users/sukhjot/codes/Sunny-Ship/node_modules/puppeteer-core/lib/puppeteer/cdp/ExecutionContext.js:374:50)
+      at ExecutionContext.evaluate (file:///Users/sukhjot/codes/Sunny-Ship/node_modules/puppeteer-core/lib/puppeteer/cdp/ExecutionContext.js:288:36)
+      at IsolatedWorld.evaluate (file:///Users/sukhjot/codes/Sunny-Ship/node_modules/puppeteer-core/lib/puppeteer/cdp/IsolatedWorld.js:104:30)
+      at CdpFrame.evaluate (file:///Users/sukhjot/codes/Sunny-Ship/node_modules/puppeteer-core/lib/puppeteer/api/Frame.js:364:43)
+      at CdpFrame.<anonymous> (file:///Users/sukhjot/codes/Sunny-Ship/node_modules/puppeteer-core/lib/puppeteer/util/decorators.js:101:27)
+}
+
+Node.js v26.12.0
+
+============================================================
+  38/41  walking to ship controls and operating navigation
+============================================================
+PASS continuous lawn-to-helm walking without recovery
+PASS actual walking to integrated controls; steering/water/UVs, seven petals/jaw, airborne Burst/landing, rolling channel digits/collision, Log Pose simulation, continuous return descent, reset and separate Gaon/recoil
+
+============================================================
+  39/41  pointer / orbit interaction
+============================================================
+
+=== INSPECT MODE IS INTERACTIVE ===
+  PASS  pointer reaches the canvas in the centre of the screen  topmost element is <CANVAS> (pointer-events: auto)
+  PASS  canvas is the topmost element everywhere you could drag  5 sample points all hit the canvas
+  PASS  dragging orbits the camera  camera moved 84.96 m
+
+=== V STILL LEAVES INSPECT ===
+  PASS  V switches to Explore
+  PASS  Explore asks for the mouse
+
+=== NO RUNTIME ERRORS ===
+  PASS  no runtime errors
+
+=== RESULT: 6 passed, 0 failed ===
+
+============================================================
+  40/41  exterior movement and stationary comparison
+============================================================
+PASS actual WASD motion, grounded stop, no recovery; stationary deck pixel changes 0.000%
+PASS grounded garden walking/moving and five-second stop captures; broader material measurements {"samples":[{"name":"plants","target":[21.5,-27.2,3.9],"pane":null,"region":[320,130,800,520],"changed":0,"meanChannelChange":0,"notice":"Includes transparent/moving backgrounds; inspect actual pair"},{"name":"glass","target":[26.400796309714476,-27.359716415405273,2.9980861933261074],"pane":"Sunny_Library_lining_glass.013","region":[320,130,800,520],"changed":0,"meanChannelChange":0,"notice":"Includes transparent/moving backgrounds; inspect actual pair"}],"performanceContext":{"fps":29.041310448402108,"viewport":[1440,900],"renderer":"ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)"}}
+PASS exterior orbit/flight captures and no runtime errors; flight is not walking proof
+
+============================================================
+  41/41  visual capture
+============================================================
+errors: none
+
+============================================================
+  SUMMARY
+============================================================
+  PASS  1/41  R13 source facade authoring fixture
+  PASS  2/41  R13 actual central entry and front aperture topology
+  PASS  3/41  actual rectangular gallery floor support
+  PASS  4/41  circular shaft physical floor clearance
+  PASS  5/41  R14 round lawn hatch authoring fixture
+  PASS  6/41  R04/R14 continuous lawn and single round Dock access
+  PASS  7/41  below-deck crown and rounded mouth design
+  PASS  8/41  actual rounded outlets and outboard mouth flare
+  PASS  9/41  matching reversible reference-scale artifacts
+  PASS  10/41  conservative reachability broad phase
+  PASS  11/41  reference exterior profile and moving glazed doors
+  PASS  12/41  C03 convex floor-cut authoring fixture
+  PASS  13/41  C03 water, bed and retained-mouth geometry
+  PASS  14/41  C03 actual rotating chamber clearance
+  PASS  15/41  C03 selected bay alignment
+  PASS  16/41  C02 complete local mouth shell and body clearance
+  PASS  17/41  C02 actual paired dock lining apertures
+  PASS  18/41  C01 actual exported fore trim clearance
+  PASS  19/41  C01 real storage enclosure and physical join
+  PASS  20/41  C01 original bow exterior preservation
+  PASS  21/41  physical interior materials and metric projection
+  PASS  22/41  physical exterior materials and reflection guards
+  PASS  23/41  navigation logic
+  PASS  24/41  C04 mast-integrated food lift
+  PASS  25/41  climbing and interaction logic
+  PASS  26/41  asset structure
+  PASS  27/41  exterior coplanar geometry
+  PASS  28/41  door and hatch collision
+  PASS  29/41  collision physics
+  FAIL  30/41  deck reachability
+  FAIL  31/41  all room and interior stair routes
+  FAIL  32/41  in-browser gameplay
+  PASS  33/41  universal visible cannon controls
+  PASS  34/41  continuous balcony, gallery, slide and exterior passages
+  FAIL  35/41  outdoor thresholds, exterior hatch descents and returns
+  PASS  36/41  continuous lookout rope, ladder, hatch and return descent
+  FAIL  37/41  continuous room tour and interior stairs
+  PASS  38/41  walking to ship controls and operating navigation
+  PASS  39/41  pointer / orbit interaction
+  PASS  40/41  exterior movement and stationary comparison
+  PASS  41/41  visual capture
+
+  screenshots: /Users/sukhjot/codes/Sunny-Ship/tests/screenshots

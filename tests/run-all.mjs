@@ -60,6 +60,8 @@ if (!serverUp) {
 }
 
 const suites=[
+ ['collisionData.test.mjs','exact plain collision decoding'],
+ ['collisionIndex.test.mjs','conservative indexed body, step and flight equivalence'],
  ['aftFacadeFixture.test.mjs','R13 source facade authoring fixture'],
  ['aftFacadeReference.test.mjs','R13 actual central entry and front aperture topology'],
  ['floorCollision.test.mjs','actual rectangular gallery floor support'],
