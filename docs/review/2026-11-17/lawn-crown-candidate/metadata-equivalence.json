@@ -1,0 +1,10 @@
+{
+  "dockSolids": 558,
+  "sameExactGeometryMultiset": true,
+  "differences": [
+    "same558 Dock solid records in a different serialized order",
+    "five legacy sampled deck aggregate fields; actual floors and physical proxy are unchanged"
+  ],
+  "allOtherMetadataSemanticsExactlyEqual": true,
+  "nativeReplay": "focused applied-generation Dock ladder descent/lower excursion/ascent/closed stop/closure/lawn return required to check reordered dynamic solids"
+}

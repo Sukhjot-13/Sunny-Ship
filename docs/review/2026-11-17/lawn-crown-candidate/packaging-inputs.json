@@ -1,0 +1,6 @@
+{
+  "tools/preserve_cosmetic_collision.mjs": "89c3a69f866441819821fa3cb54df088f76228de68290d22c39f1139b907403a",
+  "tools/reference_views.mjs": "dd96fd6cdbd9d02ab2ef0fd991bc2fcf2a5d4b2bc13fb741b84929f896ed3b97",
+  "tests/lawnCrownReference.test.mjs": "47ed221b2f5ea08908af5db89a60dddf3ff27a8d2d2f121ef08825d438d004d6",
+  "tests/meshGeometryHash.mjs": "b24f3dbf601c90c6d2618b18b8a5afa1f1b0858d64f16768a1ac6caef5c73d8d"
+}

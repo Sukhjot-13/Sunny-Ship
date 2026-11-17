@@ -636,9 +636,10 @@ def plants(objects, bounds, frame, levels):
     lawn = levels['F1']
     stations = [(sum((bounds(o)[i] for i in (0,1)),Vector())/2) for o in trunks]
     discard(objects, lambda o: o.name.startswith(('Sunny_Mikan','Sunny_ShadeTree','Sunny_RobinGarden','Sunny_PopGreens')))
+    from sunny_shade import shade_tree
     for i, p in enumerate(stations):
         side = 'starboard' if p.y > frame.y(.585) else 'port'
-        reference_tree('ShadeTree_'+side, (p.x,p.y,lawn), seed=i+3)
+        shade_tree('ShadeTree_'+side, (p.x,p.y,lawn), seed=i+3)
     garden, cy = levels['F3G'], frame.y(.585)
     for i, (x,y) in enumerate(((21.2,cy-4.0),(22.3,cy-5.2),(20.9,cy-6.4))):
         reference_tree('Mikan%d'%i, (x,y,garden), citrus=True, seed=11+i)

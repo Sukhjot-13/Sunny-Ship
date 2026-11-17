@@ -25,6 +25,7 @@ const views=[
  ['lookout',offset(lookout,[-17,6,17]),lookout,'R01/R02/R13'],
  ['helm',offset(wheel,[5,1.8,3]),wheel,'R08'],
  ['lawn',[-15,lawn+8,14],[1,lawn+1,cy],'R04/R09/R13'],
+ ['lawn-crowns',[-8,lawn+3,cy],[3,lawn+3,cy],'R04/R13 rounded lawn masses; three-metre appearance camera is reconstruction',70],
  ['fore-facade',[0,lawn+3,cy],[-19,lawn+2,cy],'R04/R09'],
  ['aft-facade',[-3,lawn+9,cy],[15,lawn+5,cy],'R04/R10/R11/R13'],
  ['garden',[17,garden+8,16],[23,garden+.3,cy],'R04/R13/R15'],

@@ -1,8 +1,8 @@
 {
-  "source": "/private/tmp/sunny-fore-upper-fullflight-candidate/sunny-master.blend",
-  "workingVisualSource": "/private/tmp/sunny-fore-upper-fullflight-candidate/sunny.glb",
-  "sourceSha256": "1eaf49bff78a0e4baa88251dee23db07f6a77902de8e648982cc0fcc68c20015",
-  "workingVisualSha256": "f67c2d7a4dba37fbdcd3b64a4acc2528065c5b46f7b3293f2ec96f20c74c1bac",
+  "source": "/private/tmp/sunny-lawn-rounded-candidate/sunny-master.blend",
+  "workingVisualSource": "/private/tmp/sunny-lawn-rounded-candidate/sunny.glb",
+  "sourceSha256": "e4c599c53beac08bef5dd22e1a93fca0ca547ceaf2520365dc4c060eb6a72e71",
+  "workingVisualSha256": "87a8623ad8deff384b9031eb29f78b4375f15129e4aca808603c87a92b66552f",
   "workingScale": 2.2,
   "referenceScale": 1,
   "rootMultiplier": 0.45454545454545453,

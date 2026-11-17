@@ -1,0 +1,21 @@
+
+DevTools listening on ws://127.0.0.1:49912/devtools/browser/1e6c14a4-eaae-41f3-bc75-28d8fb56cdb3
+Trying to load the allocator multiple times. This is *not* supported.
+[40298:3132193:1117/114900.084100:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[40298:3132276:1117/114900.084333:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[40298:3132193:1117/114900.084510:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[40298:3132276:1117/114900.084533:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[40298:3132193:1117/114900.084608:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[40298:3132276:1117/114900.084633:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+MAIN FRAME NAVIGATION http://localhost:5173/
+[40298:3132193:1117/114903.599381:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[40298:3132276:1117/114903.599481:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+PASS Dock waiting-room ladder upper landing [ 3.1569418922600803, -40.55070114135742, -1.2018301137873324 ]
+PASS Dock waiting-room ladder complete descent [ 1.5950000000000013, -51.39869961547851, -1.287 ]
+PASS Dock waiting-room ladder lower floor excursion [ 1.7946146193566994, -51.400699615478516, -1.7357770977168931 ]
+PASS Dock waiting-room ladder walking return to ladder [ 1.6190001864613814, -51.400699615478516, -1.224892840305321 ]
+PASS Dock waiting-room ladder complete ascent [ 3.195000000000001, -40.55071716308594, -1.287 ]
+PASS Dock waiting-room ladder return along upper walking approach [ -4.135262242662821, -40.55070114135742, -0.9428921124125932 ]
+PASS Dock waiting-room ladder continuous return to spawn [ -4.1353050536825995, -40.55070114135742, -0.942929859480473 ]
+PASS dock-waiting-ladder full descents/ascents/closures and lawn returns; real W/E, no placement/flight/recovery
+BROWSER EXIT { code: 0, signal: null }

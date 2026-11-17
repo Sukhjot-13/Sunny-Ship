@@ -1,0 +1,5 @@
+{
+  "tests/lawnCrownReference.test.mjs": "47ed221b2f5ea08908af5db89a60dddf3ff27a8d2d2f121ef08825d438d004d6",
+  "tests/meshGeometryHash.mjs": "b24f3dbf601c90c6d2618b18b8a5afa1f1b0858d64f16768a1ac6caef5c73d8d",
+  "tests/fixtures/lawn-crown-preservation.json": "8524a1dbd291c6bfa31a40aacc1601b99483ba3a9aa754779a71d6539bf62a82"
+}

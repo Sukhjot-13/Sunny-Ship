@@ -1,0 +1,17 @@
+{
+  "collision-differential.json.gz": {
+    "uncompressedSha256": "33514e1a7352bf4188bfaddf76d3d508fa4df46a449bf09c0513a8c9ef1d2a4b",
+    "uncompressedBytes": 6693517,
+    "originalCopy": "/private/tmp/sunny-lawn-verbose-diagnostics/collision-differential.json"
+  },
+  "metadata-semantic-differential.json.gz": {
+    "uncompressedSha256": "d62fac66ba47bf10924cf30d63f091810ee9566fb7f926b25cbaf6102cd3104e",
+    "uncompressedBytes": 1293764,
+    "originalCopy": "/private/tmp/sunny-lawn-verbose-diagnostics/metadata-semantic-differential.json"
+  },
+  "raw-builder-metadata.json.gz": {
+    "uncompressedSha256": "13a7119342a177dea2f661fbab11d04fee6fbd734484292f9a1371261610aab0",
+    "uncompressedBytes": 1948696,
+    "originalCopy": "/private/tmp/sunny-lawn-verbose-diagnostics/raw-builder-metadata.json"
+  }
+}

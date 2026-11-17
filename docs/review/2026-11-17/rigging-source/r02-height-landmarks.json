@@ -1,0 +1,46 @@
+{
+  "status": "OPEN discrepancy; approximate hand-read source landmarks, no geometry mutation",
+  "source": "stuff/images/Thousand_Sunny_Digitally_Colored_Manga.webp",
+  "sourceSha256": "ff2a75471798d35efcd8cec3282447075c69f1aa1c19a1747611492d28486091",
+  "sourceImage": [
+    1002,
+    1280
+  ],
+  "landmarks": {
+    "foreYardMast": [
+      424,
+      277
+    ],
+    "foreMastDeck": [
+      385,
+      827
+    ],
+    "mainYardMast": [
+      645,
+      190
+    ],
+    "mainMastDeck": [
+      615,
+      813
+    ],
+    "dockOuterVertical": [
+      980,
+      1197
+    ]
+  },
+  "sourceRatios": {
+    "foreYardDeckOverDockDiameter": 2.5345622119815667,
+    "mainYardDeckOverDockDiameter": 2.870967741935484
+  },
+  "uncertainty": "Landmarks hand-read at roughly 10–15px uncertainty. Perspective/depth and stylised drawing prevent exact metric inference. Reconcile in matched source views and cross-check R01/R03 before changing rig.",
+  "actualWorking": {
+    "dockOuterVerticalDiameter": 17.34000248237048,
+    "foreYardCentreHeight": 63.8317559967041,
+    "mainYardCentreHeight": 77.37338638305664
+  },
+  "limitations": "World model ratios versus projected source ratios are evidence of a discrepancy needing camera/source reconciliation, not exact target dimensions.",
+  "actualRatios": {
+    "foreYardDeckOverDockDiameter": 3.681184939944595,
+    "mainYardDeckOverDockDiameter": 4.4621323706107825
+  }
+}

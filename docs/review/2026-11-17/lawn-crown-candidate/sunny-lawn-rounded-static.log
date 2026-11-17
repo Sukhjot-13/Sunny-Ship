@@ -1,0 +1,28 @@
+SUITE lawnCrownReference.test.mjs
+node:internal/modules/esm/module_job:702
+    return this.module.evaluateSync();
+                       ^
+
+AssertionError [ERR_ASSERTION]: every physical collider must remain byte-identical
++ actual - expected
+
++ '28de303946444a9d818964ec7fed8c5969cb739a9fc23022f1c5eacaaccb1b50'
+- 'b006511c66b43b31e2393628355554de846020d0e8626c81246124d082b2ad33'
+
+    at file:///Users/sukhjot/codes/Sunny-Ship/tests/lawnCrownReference.test.mjs:17:8
+    at #evaluateSync (node:internal/modules/esm/module_job:702:24)
+    at ModuleJobSync.runSync (node:internal/modules/esm/module_job:717:43)
+    at node:internal/modules/esm/loader:383:11
+    at TracingChannel.traceSync (node:diagnostics_channel:557:14)
+    at ModuleLoader.importForEntryPoint (node:internal/modules/esm/loader:372:21)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:184:34)
+    at node:internal/main/run_main_module:33:47 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: '28de303946444a9d818964ec7fed8c5969cb739a9fc23022f1c5eacaaccb1b50',
+  expected: 'b006511c66b43b31e2393628355554de846020d0e8626c81246124d082b2ad33',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v26.12.0

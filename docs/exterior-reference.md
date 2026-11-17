@@ -1,3 +1,5 @@
+> Current authority — November17,2026: only Sukhjot’s supplied25 reference images and golden-hour image establish the design. The text below is historical and does not authorize external sources, independent1x fitting sizes, stretched rig proportions or substituted access topology. Current working scale is a reversible2.2;39/56 are configured targets rather than dimensions printed on the supplied sheets. Every exterior and room still needs direct source-relative acceptance. Follow `reference-completion.md` and `relative-scale-audit.md` for current state; body access and uniform scale linkage alone do not prove fidelity.
+
 # Sunny exterior restoration — October 1, 2026
 
 Target: familiar post-timeskip Thousand Sunny, life-size first-person exploration.

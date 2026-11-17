@@ -1,0 +1,18 @@
+{
+  "sourceCandidate": "/private/tmp/sunny-lawn-rounded-candidate",
+  "traceEntries": 81,
+  "screenshots": {
+    "walk-Garden-inboard-beds.png": "fa2fb3d45f47729b178f26a6674e689a8f31ee4abad5654d182452d95495a4e5",
+    "walk-Library-exterior-threshold.png": "d098a91e6a7cb9d0be3166925fd1104327807c94738e2558aa51f5da22462e6b",
+    "walk-Mikan-open-soil.png": "e40c6c457a42e7f0baeafda5182005ceb56c371bd8405c363869d2052ac05690",
+    "walk-Side-passage-port.png": "510bdf347f37380afa9d1b91c1cc94fb91715539ecf634d8f64ff25a3eefd9a7",
+    "walk-Side-passage-starboard.png": "c48e86436240d463294ce10219c8cea29f9f1ff02850563ffa323791a25f6847",
+    "walk-Slide-entry.png": "644ef6c93db87cc62c302daf1a1fe7072d955caf3c18ce42f7edfd89e8305784",
+    "walk-Slide-return-lawn.png": "278e50b0b4f3d7d80a77f4b700fe64394a5b9b53a9e7e363bd01c2095a6427af",
+    "walk-Stern-balcony-1.png": "c249d577edf9f52b3044cecd35137c2127f2d5b4c2d3eb31cb5f5a1235958f6c",
+    "walk-Stern-balcony-2.png": "722690a4ded8145be1667a9b56cc9d6deca532079079f5ca9e0493fe3fbbabf6",
+    "walk-Stern-balcony-3.png": "87c3fa2ef1f15ef1e183f39dec47e162291058282410015d0f8a7628c8f96cca",
+    "walk-Stern-balcony-4.png": "d4cfc58970656bd794c707c9be4536d15e6bc1bd1ba78a9a590a6b79cc4b8b02"
+  },
+  "note": "Only the11 explicitly produced exteriorJourneys screenshots are copied; unrelated preview files excluded. Normal movement after initial spawn; no midroute placement/flight/recovery."
+}

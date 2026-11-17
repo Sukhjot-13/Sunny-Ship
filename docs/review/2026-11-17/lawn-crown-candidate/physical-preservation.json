@@ -1,0 +1,18 @@
+{
+  "protectedMeshes": 7871,
+  "originalColliders": 215992,
+  "rawBuilderColliders": 215994,
+  "rawBuilderSha256": "28de303946444a9d818964ec7fed8c5969cb739a9fc23022f1c5eacaaccb1b50",
+  "retainedPhysicalSha256": "b006511c66b43b31e2393628355554de846020d0e8626c81246124d082b2ad33",
+  "rawDifference": {
+    "removed": [
+      "[true,[-12.517805099487305,-41.150699615478516,-9.537105560302734],[8.282195091247559,-40.55070114135742,-9.137105941772461]]"
+    ],
+    "added": [
+      "[true,[-12.517805099487305,-41.150699615478516,-9.537105560302734],[0.6821953058242798,-40.55070114135742,-9.137105941772461]]",
+      "[true,[0.6821953058242798,-41.15079879760742,-9.537105560302734],[1.0821952819824219,-40.55080032348633,-9.137105941772461]]",
+      "[true,[1.0821952819824219,-41.150699615478516,-9.537105560302734],[8.282195091247559,-40.55070114135742,-9.137105941772461]]"
+    ]
+  },
+  "note": "Only nonphysical lawn crowns change. All other actual visual geometry is exact. Raw ray-cast floor sampling splits one unchanged row by one four-decimal quantization step; package the previously verified complete physical proxy unchanged, including its matching metadata counts. No controller/body/support tolerances change."
+}

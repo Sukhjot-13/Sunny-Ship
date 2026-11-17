@@ -73,6 +73,8 @@ const suites=[
  ['foreFacadeFixture.test.mjs','R09 fore entry, round ports and native frontage authoring'],
  ['foreFacadeReference.test.mjs','R09 actual fore topology and full body passages'],
  ['gardenPlanterFixture.test.mjs','R15 open planting shells and curved blade UV authoring'],
+ ['shadeTreeFixture.test.mjs','rooted lawn trunks and physically attached rounded foliage'],
+ ['lawnCrownReference.test.mjs','actual deep lawn crowns with exact unrelated geometry and physics preservation'],
  ['gardenReference.test.mjs','actual inboard planting, soil, approaches and mikan crowns'],
  ['floorCollision.test.mjs','actual rectangular gallery floor support'],
  ['roundAccessCollision.test.mjs','circular shaft physical floor clearance'],

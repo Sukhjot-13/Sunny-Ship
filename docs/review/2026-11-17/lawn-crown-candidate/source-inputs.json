@@ -1,0 +1,11 @@
+{
+  "tools/sunny_accuracy.py": "64d81e9ac50e187b5ee296178d698d59a3b3693a5d0f965663db6b33b192e967",
+  "tools/sunny_shade.py": "778c95c7ce9a33aa44cef831848a50fd4030c0e0dd26b30948ebc27902205091",
+  "tools/sunny_exterior.py": "a7e1057192ac8fdee9b2ec7e7240c1fb45b00d179c1f479f93d3895a7b4a1259",
+  "tools/sunny_balustrade.py": "13ffeaf346757acf02ba0d24847baf2e04dabba363f36066d4a703703ab8cb2d",
+  "tools/sunny_uv.py": "5772e4407c9dbf1ed29dfbca4341d379d8b0353a63f0c4ce17a889294b75d3e8",
+  "tests/shadeTreeFixture.py": "d161fe9175e5770ee5b24104c91f3ec24104c682b7b895d68f07a354f3f7572d",
+  "tests/lawnCrownReference.test.mjs": "e8276242687f22babfc74107921973263cf6adcca8e07cd9c893d693f75428fb",
+  "tests/meshGeometryHash.mjs": "b24f3dbf601c90c6d2618b18b8a5afa1f1b0858d64f16768a1ac6caef5c73d8d",
+  "tests/fixtures/lawn-crown-preservation.json": "8524a1dbd291c6bfa31a40aacc1601b99483ba3a9aa754779a71d6539bf62a82"
+}
