@@ -1,6 +1,18 @@
 # Active authority — November 17, 2026
 
-Complete the entire exterior first, then all interiors automatically. Only supplied reference images establish design; historical metre/count/station preservation and review pauses below are superseded wherever they conflict. Applied fore balustrade checkpoint is local commit `c0d6894`; rounded lawn crowns are applied with exact unrelated mesh/static-physics preservation and fresh outside/Dock native passes. Full rig/relative-scale and whole exterior acceptance remain open. Current state is in `reference-completion.md`. No remote publication.
+Sukhjot has paused remaining exterior work and moved the Aquarium Bar to the front of the queue. The table below is the checklist for work already verified. Leave these specific fixes alone unless a new change touches their geometry, shared boundaries or access, a test regresses, or a concrete source discrepancy comes to light. Use targeted checks in that case. Older entries below are history, not a fresh checklist. Only the supplied images establish design.
+
+| Section | Verified work to retain | Checkpoint |
+| --- | --- | --- |
+| Bow and figurehead | Seven supported mane petals; mouth/cannon construction; compact muzzle, eyes and nose; attached bones, collar heads, shield bosses and stowed anchors/hawses. Scope is the named geometry and attachments. | `5a21cb7`; actual exterior geometry checks at `b1c0dfb` |
+| Fore cabin exterior | True fore ports and broader trim, pair placement relative to the panel, fore entrances and gallery corrections. Real opening depth and normal threshold access retained. | `bcee1ad`, `42232a1`, `e0237f4` |
+| Fore stairs and helm rim | Source-shaped guard profiles on all six stair sides and the curved rim, actual tread support and open transitions. Both complete helm routes passed. | `c0d6894` |
+| Midship lawn and outside routes | Lawn/galleries, supported slide and side passages, two rounded anchored shade crowns and swing area. Continuous exterior route passed, including both lawn returns. | `6da9830`, `f3f822f` |
+| Stern and garden | Source-shaped aft shell, shared entrance, six lower Aquarium exterior arches and deep glazing; supported garden flights, inboard beds and citrus, gallery/balcony/Library routes. Aquarium room contents are separate. | `ad12616`, `065fae9`, `f3f822f` |
+| Dock access and channel | Rounded continuous throat, moving shutters, supported ladder and hatch with full return route. The visible annulus shape and its relation to the hull remain open. | `356c50a`, `3eccb21`, `f3f822f` |
+| Fore shrouds and lookout access | Outboard longitudinal fan planes, attached ends and 30 reconstructed rows per fan. Full normal rope, ladder, hatch, floor and reverse-to-lawn journey passed. Mast/yard proportions are separate. | `e0237f4`, `b1c0dfb` |
+
+Parked exterior work: rig and canvas pose, mast height/station, Dock rim/hull backing, remaining whole-ship and fitting proportions, and a fresh full suite/performance baseline. These are open, not evidence that the verified rows above need rework. See [current handoff](reference-completion.md) and [rigging evidence](rigging-reference-audit.md).
 
 # Exterior feature ledger — current repair and reference boundaries
 

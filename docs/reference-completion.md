@@ -1,3 +1,9 @@
+## Current phase: Aquarium Bar first — November 17, 2026
+
+Sukhjot has parked the remaining exterior and authorized committing and pushing the exterior checkpoint on `reference-completion` before starting the Aquarium Bar. The [verified feature ledger](exterior-feature-ledger.md) records work to retain and when a targeted regression check is warranted. Live port 5173 and isolated port 5174 start this phase from the verified `b1c0dfb` assets. Keep the Aquarium's shared exterior shell, entrances and verified shafts unless room work exposes a concrete interface problem. Other interiors follow separately.
+
+The finished rig/Dock diagnostic found that yaw can expose more canvas but does not fix the mast/yard height or the source spar slopes. Enlarging only the existing Dock annulus would raise its top farther above the lawn without adding corresponding hull backing. No rough pose or freestanding rim enlargement was applied; those are recorded as remaining exterior work. See `review/2026-11-17/yard-angle-study/`.
+
 ## Applied source-density fore fans — November 17, 2026
 
 Live 5173 and isolated preview 5174 serve the verified fore fans, with 7,879 meshes and 30 reconstructed rows per fan. R01 cross-fan scans find 24–26 clear rows over most of the visible height, compared with roughly 173 rows before this change. Only Plane006 and Plane007 changed. All roots, supports, rope diameters, climb endpoints and 7,877 other meshes were retained. The raw builder repartitioned one floor row and reordered otherwise identical records; the applied collision and metadata are byte-identical to f3f822f.

@@ -1,0 +1,439 @@
+{
+  "url": "http://localhost:5174",
+  "receipts": [
+    {
+      "file": "/private/tmp/sunny-yard-angle-study/r02.json",
+      "name": "r02-yaw-0.png",
+      "source": "stuff/images/Thousand_Sunny_Digitally_Colored_Manga.webp",
+      "modelSha256": "1372aed9f3bb0e71459dccb6a3ee56a900e39b95a918df26b9fa2675f2cbddc3",
+      "weightedHullFit": 8.535000529468784,
+      "parameters": {
+        "position": [
+          -9.10231905532824,
+          -2.5519197822690955,
+          77.64749718337205
+        ],
+        "target": [
+          -4.76320057269386,
+          -13.651730669146033,
+          -1.287
+        ],
+        "fov": 73.59095169166218,
+        "roll": 0.055659413407363974
+      },
+      "degrees": 0,
+      "assemblies": [
+        {
+          "pivot": [
+            -13.066940976755461,
+            23.2807559967041,
+            -1.1437087645653783
+          ],
+          "names": [
+            "Cylinder004",
+            "Plane004",
+            "Sunny_SailTie_Plane0040",
+            "Sunny_SailTie_Plane0041",
+            "Sunny_SailTie_Plane0042",
+            "Sunny_SailTie_Plane0043",
+            "Sunny_SailTie_Plane0044",
+            "Sunny_SailTie_Plane0045",
+            "Sunny_SailTie_Plane0046",
+            "Sunny_SailTie_Plane0047",
+            "Sunny_SailTie_Plane0048",
+            "Sunny_SailTie_Plane0049",
+            "Sunny_SailTie_Plane00410",
+            "Sunny_SailTie_Plane00411",
+            "Sunny_SailTie_Plane00412"
+          ]
+        },
+        {
+          "pivot": [
+            18.794662646913253,
+            47.99838638305664,
+            -1.1437082380543018
+          ],
+          "names": [
+            "Cylinder010",
+            "Plane005",
+            "Sunny_SailTie_Plane0050",
+            "Sunny_SailTie_Plane0051",
+            "Sunny_SailTie_Plane0052",
+            "Sunny_SailTie_Plane0053",
+            "Sunny_SailTie_Plane0054",
+            "Sunny_SailTie_Plane0055",
+            "Sunny_SailTie_Plane0056",
+            "Sunny_SailTie_Plane0057",
+            "Sunny_SailTie_Plane0058",
+            "Sunny_SailTie_Plane0059",
+            "Sunny_SailTie_Plane00510",
+            "Sunny_SailTie_Plane00511",
+            "Sunny_SailTie_Plane00512"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/private/tmp/sunny-yard-angle-study/r02.json",
+      "name": "r02-yaw-45.png",
+      "source": "stuff/images/Thousand_Sunny_Digitally_Colored_Manga.webp",
+      "modelSha256": "1372aed9f3bb0e71459dccb6a3ee56a900e39b95a918df26b9fa2675f2cbddc3",
+      "weightedHullFit": 8.535000529468784,
+      "parameters": {
+        "position": [
+          -9.10231905532824,
+          -2.5519197822690955,
+          77.64749718337205
+        ],
+        "target": [
+          -4.76320057269386,
+          -13.651730669146033,
+          -1.287
+        ],
+        "fov": 73.59095169166218,
+        "roll": 0.055659413407363974
+      },
+      "degrees": 45,
+      "assemblies": [
+        {
+          "pivot": [
+            -13.066940976755461,
+            23.2807559967041,
+            -1.1437087645653783
+          ],
+          "names": [
+            "Cylinder004",
+            "Plane004",
+            "Sunny_SailTie_Plane0040",
+            "Sunny_SailTie_Plane0041",
+            "Sunny_SailTie_Plane0042",
+            "Sunny_SailTie_Plane0043",
+            "Sunny_SailTie_Plane0044",
+            "Sunny_SailTie_Plane0045",
+            "Sunny_SailTie_Plane0046",
+            "Sunny_SailTie_Plane0047",
+            "Sunny_SailTie_Plane0048",
+            "Sunny_SailTie_Plane0049",
+            "Sunny_SailTie_Plane00410",
+            "Sunny_SailTie_Plane00411",
+            "Sunny_SailTie_Plane00412"
+          ]
+        },
+        {
+          "pivot": [
+            18.794662646913253,
+            47.99838638305664,
+            -1.1437082380543018
+          ],
+          "names": [
+            "Cylinder010",
+            "Plane005",
+            "Sunny_SailTie_Plane0050",
+            "Sunny_SailTie_Plane0051",
+            "Sunny_SailTie_Plane0052",
+            "Sunny_SailTie_Plane0053",
+            "Sunny_SailTie_Plane0054",
+            "Sunny_SailTie_Plane0055",
+            "Sunny_SailTie_Plane0056",
+            "Sunny_SailTie_Plane0057",
+            "Sunny_SailTie_Plane0058",
+            "Sunny_SailTie_Plane0059",
+            "Sunny_SailTie_Plane00510",
+            "Sunny_SailTie_Plane00511",
+            "Sunny_SailTie_Plane00512"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/private/tmp/sunny-yard-angle-study/r02.json",
+      "name": "r02-yaw-75.png",
+      "source": "stuff/images/Thousand_Sunny_Digitally_Colored_Manga.webp",
+      "modelSha256": "1372aed9f3bb0e71459dccb6a3ee56a900e39b95a918df26b9fa2675f2cbddc3",
+      "weightedHullFit": 8.535000529468784,
+      "parameters": {
+        "position": [
+          -9.10231905532824,
+          -2.5519197822690955,
+          77.64749718337205
+        ],
+        "target": [
+          -4.76320057269386,
+          -13.651730669146033,
+          -1.287
+        ],
+        "fov": 73.59095169166218,
+        "roll": 0.055659413407363974
+      },
+      "degrees": 75,
+      "assemblies": [
+        {
+          "pivot": [
+            -13.066940976755461,
+            23.2807559967041,
+            -1.1437087645653783
+          ],
+          "names": [
+            "Cylinder004",
+            "Plane004",
+            "Sunny_SailTie_Plane0040",
+            "Sunny_SailTie_Plane0041",
+            "Sunny_SailTie_Plane0042",
+            "Sunny_SailTie_Plane0043",
+            "Sunny_SailTie_Plane0044",
+            "Sunny_SailTie_Plane0045",
+            "Sunny_SailTie_Plane0046",
+            "Sunny_SailTie_Plane0047",
+            "Sunny_SailTie_Plane0048",
+            "Sunny_SailTie_Plane0049",
+            "Sunny_SailTie_Plane00410",
+            "Sunny_SailTie_Plane00411",
+            "Sunny_SailTie_Plane00412"
+          ]
+        },
+        {
+          "pivot": [
+            18.794662646913253,
+            47.99838638305664,
+            -1.1437082380543018
+          ],
+          "names": [
+            "Cylinder010",
+            "Plane005",
+            "Sunny_SailTie_Plane0050",
+            "Sunny_SailTie_Plane0051",
+            "Sunny_SailTie_Plane0052",
+            "Sunny_SailTie_Plane0053",
+            "Sunny_SailTie_Plane0054",
+            "Sunny_SailTie_Plane0055",
+            "Sunny_SailTie_Plane0056",
+            "Sunny_SailTie_Plane0057",
+            "Sunny_SailTie_Plane0058",
+            "Sunny_SailTie_Plane0059",
+            "Sunny_SailTie_Plane00510",
+            "Sunny_SailTie_Plane00511",
+            "Sunny_SailTie_Plane00512"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/private/tmp/sunny-yard-angle-study/r03.json",
+      "name": "r03-yaw-0.png",
+      "source": "stuff/images/Thousand_Sunny_pg.26.webp",
+      "modelSha256": "1372aed9f3bb0e71459dccb6a3ee56a900e39b95a918df26b9fa2675f2cbddc3",
+      "weightedHullFit": 4.678382851329111,
+      "parameters": {
+        "position": [
+          -5.000000000000089,
+          6.944846593559272,
+          199.36303020391568
+        ],
+        "target": [
+          -1.5846167580816326,
+          5.333045385691141,
+          -1.287
+        ],
+        "fov": 43.910677980033654,
+        "roll": 0.029527812531061712
+      },
+      "degrees": 0,
+      "assemblies": [
+        {
+          "pivot": [
+            -13.066940976755461,
+            23.2807559967041,
+            -1.1437087645653783
+          ],
+          "names": [
+            "Cylinder004",
+            "Plane004",
+            "Sunny_SailTie_Plane0040",
+            "Sunny_SailTie_Plane0041",
+            "Sunny_SailTie_Plane0042",
+            "Sunny_SailTie_Plane0043",
+            "Sunny_SailTie_Plane0044",
+            "Sunny_SailTie_Plane0045",
+            "Sunny_SailTie_Plane0046",
+            "Sunny_SailTie_Plane0047",
+            "Sunny_SailTie_Plane0048",
+            "Sunny_SailTie_Plane0049",
+            "Sunny_SailTie_Plane00410",
+            "Sunny_SailTie_Plane00411",
+            "Sunny_SailTie_Plane00412"
+          ]
+        },
+        {
+          "pivot": [
+            18.794662646913253,
+            47.99838638305664,
+            -1.1437082380543018
+          ],
+          "names": [
+            "Cylinder010",
+            "Plane005",
+            "Sunny_SailTie_Plane0050",
+            "Sunny_SailTie_Plane0051",
+            "Sunny_SailTie_Plane0052",
+            "Sunny_SailTie_Plane0053",
+            "Sunny_SailTie_Plane0054",
+            "Sunny_SailTie_Plane0055",
+            "Sunny_SailTie_Plane0056",
+            "Sunny_SailTie_Plane0057",
+            "Sunny_SailTie_Plane0058",
+            "Sunny_SailTie_Plane0059",
+            "Sunny_SailTie_Plane00510",
+            "Sunny_SailTie_Plane00511",
+            "Sunny_SailTie_Plane00512"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/private/tmp/sunny-yard-angle-study/r03.json",
+      "name": "r03-yaw-45.png",
+      "source": "stuff/images/Thousand_Sunny_pg.26.webp",
+      "modelSha256": "1372aed9f3bb0e71459dccb6a3ee56a900e39b95a918df26b9fa2675f2cbddc3",
+      "weightedHullFit": 4.678382851329111,
+      "parameters": {
+        "position": [
+          -5.000000000000089,
+          6.944846593559272,
+          199.36303020391568
+        ],
+        "target": [
+          -1.5846167580816326,
+          5.333045385691141,
+          -1.287
+        ],
+        "fov": 43.910677980033654,
+        "roll": 0.029527812531061712
+      },
+      "degrees": 45,
+      "assemblies": [
+        {
+          "pivot": [
+            -13.066940976755461,
+            23.2807559967041,
+            -1.1437087645653783
+          ],
+          "names": [
+            "Cylinder004",
+            "Plane004",
+            "Sunny_SailTie_Plane0040",
+            "Sunny_SailTie_Plane0041",
+            "Sunny_SailTie_Plane0042",
+            "Sunny_SailTie_Plane0043",
+            "Sunny_SailTie_Plane0044",
+            "Sunny_SailTie_Plane0045",
+            "Sunny_SailTie_Plane0046",
+            "Sunny_SailTie_Plane0047",
+            "Sunny_SailTie_Plane0048",
+            "Sunny_SailTie_Plane0049",
+            "Sunny_SailTie_Plane00410",
+            "Sunny_SailTie_Plane00411",
+            "Sunny_SailTie_Plane00412"
+          ]
+        },
+        {
+          "pivot": [
+            18.794662646913253,
+            47.99838638305664,
+            -1.1437082380543018
+          ],
+          "names": [
+            "Cylinder010",
+            "Plane005",
+            "Sunny_SailTie_Plane0050",
+            "Sunny_SailTie_Plane0051",
+            "Sunny_SailTie_Plane0052",
+            "Sunny_SailTie_Plane0053",
+            "Sunny_SailTie_Plane0054",
+            "Sunny_SailTie_Plane0055",
+            "Sunny_SailTie_Plane0056",
+            "Sunny_SailTie_Plane0057",
+            "Sunny_SailTie_Plane0058",
+            "Sunny_SailTie_Plane0059",
+            "Sunny_SailTie_Plane00510",
+            "Sunny_SailTie_Plane00511",
+            "Sunny_SailTie_Plane00512"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/private/tmp/sunny-yard-angle-study/r03.json",
+      "name": "r03-yaw-75.png",
+      "source": "stuff/images/Thousand_Sunny_pg.26.webp",
+      "modelSha256": "1372aed9f3bb0e71459dccb6a3ee56a900e39b95a918df26b9fa2675f2cbddc3",
+      "weightedHullFit": 4.678382851329111,
+      "parameters": {
+        "position": [
+          -5.000000000000089,
+          6.944846593559272,
+          199.36303020391568
+        ],
+        "target": [
+          -1.5846167580816326,
+          5.333045385691141,
+          -1.287
+        ],
+        "fov": 43.910677980033654,
+        "roll": 0.029527812531061712
+      },
+      "degrees": 75,
+      "assemblies": [
+        {
+          "pivot": [
+            -13.066940976755461,
+            23.2807559967041,
+            -1.1437087645653783
+          ],
+          "names": [
+            "Cylinder004",
+            "Plane004",
+            "Sunny_SailTie_Plane0040",
+            "Sunny_SailTie_Plane0041",
+            "Sunny_SailTie_Plane0042",
+            "Sunny_SailTie_Plane0043",
+            "Sunny_SailTie_Plane0044",
+            "Sunny_SailTie_Plane0045",
+            "Sunny_SailTie_Plane0046",
+            "Sunny_SailTie_Plane0047",
+            "Sunny_SailTie_Plane0048",
+            "Sunny_SailTie_Plane0049",
+            "Sunny_SailTie_Plane00410",
+            "Sunny_SailTie_Plane00411",
+            "Sunny_SailTie_Plane00412"
+          ]
+        },
+        {
+          "pivot": [
+            18.794662646913253,
+            47.99838638305664,
+            -1.1437082380543018
+          ],
+          "names": [
+            "Cylinder010",
+            "Plane005",
+            "Sunny_SailTie_Plane0050",
+            "Sunny_SailTie_Plane0051",
+            "Sunny_SailTie_Plane0052",
+            "Sunny_SailTie_Plane0053",
+            "Sunny_SailTie_Plane0054",
+            "Sunny_SailTie_Plane0055",
+            "Sunny_SailTie_Plane0056",
+            "Sunny_SailTie_Plane0057",
+            "Sunny_SailTie_Plane0058",
+            "Sunny_SailTie_Plane0059",
+            "Sunny_SailTie_Plane00510",
+            "Sunny_SailTie_Plane00511",
+            "Sunny_SailTie_Plane00512"
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "note": "Actual renderer; optional temporary rotation of square yards, sails and lashings. Attached mast ropes and collision were not refit. No hidden meshes or body placement. Camera and pose variations are diagnostic only; no assets are edited."
+}
