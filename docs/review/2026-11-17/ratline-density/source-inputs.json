@@ -1,0 +1,10 @@
+{
+  "tools/sunny_accuracy.py": "108cd04ef6e438eaae776c799c3741cec652e4319d2fbdf8fb2f33468e7583fe",
+  "tools/sunny_exterior.py": "a7e1057192ac8fdee9b2ec7e7240c1fb45b00d179c1f479f93d3895a7b4a1259",
+  "tools/sunny_shade.py": "778c95c7ce9a33aa44cef831848a50fd4030c0e0dd26b30948ebc27902205091",
+  "tools/sunny_balustrade.py": "13ffeaf346757acf02ba0d24847baf2e04dabba363f36066d4a703703ab8cb2d",
+  "tools/sunny_uv.py": "5772e4407c9dbf1ed29dfbca4341d379d8b0353a63f0c4ce17a889294b75d3e8",
+  "tests/exterior.test.mjs": "b2afe58d6b424e3b2c72940c163ad8bbbee8b48f92578be99b4a8cf403f9318a",
+  "tests/foreShroudFixture.py": "219afbc0211ac36192504149a4eb1602087e229e75456ab0ab38e4e9dc2e4125",
+  "tools/source_ratline_metrics.mjs": "5375ed3673cb038858a6bb9334ce7784b73e1c0f69906e7b12bf0d3e057a64e4"
+}

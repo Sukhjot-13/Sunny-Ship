@@ -1883,7 +1883,11 @@ def fore_shrouds(objects,bounds,levels):
         upper=[fitted_radial_attachment(mast_surface, (mx,my,top),
                                        ((i-2.5)*.15,side*.60,0)) for i in range(6)]
         for p,q in zip(bottom,upper):rod(p,q,.048)
-        count=math.ceil((top-floor)/.36)
+        # R01's directly sampled visible fan has about25–26 clear rows over
+        # most of its height. Thirty total rows are a reconstruction of the
+        # full few-dozen-row fan, not a human climbing-step/metre dimension.
+        rows=30
+        count=rows+1
         for i in range(1,count):
             t=i/count
             row=[p.lerp(q,t) for p,q in zip(bottom,upper)]
@@ -1892,7 +1896,8 @@ def fore_shrouds(objects,bounds,levels):
         obj['sunny_shroud_endpoints']=[list(p) for p in bottom+upper]
         obj['sunny_shroud_side']='port' if side<0 else 'starboard'
         obj['sunny_shroud_deck']=deck.name
-        obj['sunny_shroud_reference']='R01/R09: longitudinal outboard fan; exact span/stations reconstructed'
+        obj['sunny_shroud_rows']=rows
+        obj['sunny_shroud_reference']='R01/R09: longitudinal outboard fan and few-dozen ratlines; exact total30 rows/span/stations reconstructed; overall rig proportions remain under audit'
 
 
 def mast_platforms(objects,bounds):

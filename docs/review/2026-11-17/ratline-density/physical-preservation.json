@@ -1,0 +1,24 @@
+{
+  "rawArchive": "/private/tmp/sunny-ratline-density-raw",
+  "retained": {
+    "sunny-collision.glb": "b006511c66b43b31e2393628355554de846020d0e8626c81246124d082b2ad33",
+    "ship-metadata.json": "bb0bf60014efcb849123497c8d9aacda53f5b6eab7faf011398d948ac507bb5a"
+  },
+  "raw": {
+    "sunny-collision.glb": "28de303946444a9d818964ec7fed8c5969cb739a9fc23022f1c5eacaaccb1b50",
+    "ship-metadata.json": "f0dd7ab8fdffad5c8ead0b471212807661a1ce05542b5e52276fdad189cd458f"
+  },
+  "deckRegionAverageChanges": [
+    {
+      "index": 0,
+      "old": -39.601926343853265,
+      "new": -39.60192635149642
+    },
+    {
+      "index": 9,
+      "old": -40.62115185502647,
+      "new": -40.62115181816949
+    }
+  ],
+  "note": "Both changed fans are cosmetic and all other meshes are exact. Keep the previously verified proxy and all metadata byte for byte, including dynamic door/Dock ordering. The raw builder only repartitioned one floor row with a single quantization step, reordered equal records, and changed legacy sampled averages."
+}

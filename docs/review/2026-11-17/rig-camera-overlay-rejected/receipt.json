@@ -1,0 +1,49 @@
+{
+  "url": "http://localhost:5173",
+  "receipts": [
+    {
+      "file": "/private/tmp/sunny-r02-final-hull-fit.json",
+      "name": "sunny-r02-final-hull-fit.png",
+      "source": "stuff/images/Thousand_Sunny_Digitally_Colored_Manga.webp",
+      "modelSha256": "87a8623ad8deff384b9031eb29f78b4375f15129e4aca808603c87a92b66552f",
+      "weightedHullFit": 8.535000529468784,
+      "parameters": {
+        "position": [
+          -9.10231905532824,
+          -2.5519197822690955,
+          77.64749718337205
+        ],
+        "target": [
+          -4.76320057269386,
+          -13.651730669146033,
+          -1.287
+        ],
+        "fov": 73.59095169166218,
+        "roll": 0.055659413407363974
+      }
+    },
+    {
+      "file": "/private/tmp/sunny-r03-final-hull-fit.json",
+      "name": "sunny-r03-final-hull-fit.png",
+      "source": "stuff/images/Thousand_Sunny_pg.26.webp",
+      "modelSha256": "87a8623ad8deff384b9031eb29f78b4375f15129e4aca808603c87a92b66552f",
+      "weightedHullFit": 4.678382851329111,
+      "parameters": {
+        "position": [
+          -5.000000000000089,
+          6.944846593559272,
+          199.36303020391568
+        ],
+        "target": [
+          -1.5846167580816326,
+          5.333045385691141,
+          -1.287
+        ],
+        "fov": 43.910677980033654,
+        "roll": 0.029527812531061712
+      }
+    }
+  ],
+  "errors": [],
+  "note": "Actual renderer camera only. No hidden meshes or body placement. Camera-fit uncertainty and differing source sail states remain disclosed; this is diagnostic appearance evidence, not accepted geometry."
+}

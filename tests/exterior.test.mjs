@@ -715,6 +715,14 @@ for(const name of ['Plane006','Plane007']){
  const entries=riggingPoints.get(name)||[],points=uniqueRigPoints(entries),endpoints=riggingTags.get(name)?.sunny_shroud_endpoints
  assert.equal(endpoints?.length,12,name+' retains its six fan lines and recorded ends')
  const feet=endpoints.slice(0,6)
+ const rows=riggingTags.get(name)?.sunny_shroud_rows
+ assert(Number.isInteger(rows)&&rows>=25&&rows<=35,name+' keeps the supplied few-dozen-row fan rather than inherited metre-step density')
+ assert(points.length>1500&&points.length<3000,name+' actual rope geometry must have source-density rod count, not hidden dense rows')
+ for(let row=1;row<=rows;row++)for(let rope=0;rope<6;rope++){
+  const p=endpoints[rope],q=endpoints[rope+6],t=row/(rows+1)
+  const centre=new THREE.Vector3(p[0]+(q[0]-p[0])*t,p[2]+(q[2]-p[2])*t,-p[1]-(q[1]-p[1])*t)
+  assert(points.some(v=>v.distanceTo(centre)<.026),name+' actual source-density row must meet each of its six fan ropes')
+ }
  assert(/^Sunny_LawnSidewalk-?1$/.test(riggingTags.get(name)?.sunny_shroud_deck),name+' identifies its actual outboard supporting deck')
  assert(Math.max(...feet.map(p=>p[0]))-Math.min(...feet.map(p=>p[0]))>4&&Math.max(...feet.map(p=>p[1]))-Math.min(...feet.map(p=>p[1]))<.01,name+' must spread along the ship side, outside the cabin, as R01/R09 show')
  for(const [index,source] of endpoints.slice(6).entries()){

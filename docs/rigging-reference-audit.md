@@ -1,5 +1,13 @@
 # Fore shroud source audit — November 16, 2026
 
+## November 17: density correction and open rig proportions
+
+R01 pixel scans find 24–26 visible cross-fan rows over most of the fan. The isolated correction reconstructs 30 total rows per side and retains all longitudinal roots, mast attachments, diameters and the separate lookout climb. The actual asset differential isolates both changed fans and verifies all 7,877 other meshes. See `review/2026-11-17/ratline-density/` for scans, native geometry and physical preservation evidence.
+
+R02 and R03 hull-only camera fits and actual renderer captures are in `review/2026-11-17/rig-camera-study/`. Both indicate a rig projection mismatch, but they infer different mast/yard stations and heights. The foremast's visible base is partly occluded; the Dock outer annulus and inset opening are separate landmarks; the current yards look unusually end-on in these matches. R13 explicitly shows moving gaffs on the striped rig. Its arrows do not establish an exact default rotation for the fore square yard. Compare yard axes and attached canvas independently before inferring span. Neither fit justifies a single exact mast relocation or height remap. The complete source-relative rig, Dock and storey audit remains open.
+
+## Earlier fan-plane diagnosis
+
 R09 frontal fore-facade drawing places the ratline fans outside the cabin/scroll edges. R01 anime exterior and R13 whole-ship overview show their lower fan width running along the ship side. Current `fore_shrouds` puts all six lower points at exactly `mx+1.65` in Blender X and varies Blender Y from `my+side*3.6` to `my+side*8.35`. This makes two transverse curtains directly in front of the cabin doors; actual current `fore-facade.png` shows the obstruction. Passing deck-contact tests did not verify this source-plane interpretation.
 
 Next: compare front/side projections to the supplied images, then fit both lower fans along the actual outboard deck strips (vary longitudinal X, keep each side’s Y near its real deck edge). Retain/freshly fit all upper ends to the actual mast skin, real ratlines, measured floor contact and the lookout rope/ladder path. Proposed metre stations remain reconstruction, not source dimensions. Both source front and broadside views, attachment rays and normal access must verify the correction. Do not simply hide the grids or move unsupported feet into empty space.

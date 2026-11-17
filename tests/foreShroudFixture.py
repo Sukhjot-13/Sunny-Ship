@@ -42,9 +42,12 @@ for obj in fans:
     # Each ratline is segmented through all six physical fan ropes. It must
     # not bridge only the end ropes and float clear of the curved mast fan.
     points=[obj.matrix_world@v.co for v in obj.data.vertices]
-    count=__import__('math').ceil((upper[0].z-bottom[0].z)/.36)
-    for row in (1,count//2,count-1):
+    rows=int(obj['sunny_shroud_rows'])
+    assert 25<=rows<=35,'source visible fan has a few dozen rows, not metre-spaced hundreds'
+    assert len(obj.data.vertices)==16*(6+5*rows),'actual closed rod construction must match every recorded source-density row'
+    count=rows+1
+    for row in range(1,count):
         for p,q in zip(bottom,upper):
             centre=p.lerp(q,row/count)
             assert min((v-centre).length for v in points)<.026,'ratline meets every fan rope'
-print('PASS paired outboard longitudinal fans, fitted deck/mast roots, closed ropes and every ratline junction',flush=True)
+print('PASS paired outboard longitudinal fans, fitted deck/mast roots, closed ropes and every source-density ratline junction',flush=True)

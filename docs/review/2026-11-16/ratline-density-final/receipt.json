@@ -1,0 +1,508 @@
+{
+  "phase": "ratline-density-final",
+  "modelDir": "/private/tmp/sunny-ratline-density-candidate",
+  "previewURL": "http://localhost:5174",
+  "shots": [
+    {
+      "name": "bow-front",
+      "camera": [
+        -63.34955596923828,
+        -30.560855865478516,
+        -1.3995928764343262
+      ],
+      "target": [
+        -38.34955596923828,
+        -31.560855865478516,
+        -1.3995928764343262
+      ],
+      "reference": "R01/R02/R08"
+    },
+    {
+      "name": "bow-port",
+      "camera": [
+        -55.34955596923828,
+        -28.560855865478516,
+        20.600407123565674
+      ],
+      "target": [
+        -38.34955596923828,
+        -31.560855865478516,
+        -1.3995928764343262
+      ],
+      "reference": "R01/R02/R08"
+    },
+    {
+      "name": "bow-starboard",
+      "camera": [
+        -55.34955596923828,
+        -28.560855865478516,
+        -23.399592876434326
+      ],
+      "target": [
+        -38.34955596923828,
+        -31.560855865478516,
+        -1.3995928764343262
+      ],
+      "reference": "R01/R02/R08"
+    },
+    {
+      "name": "port-quarter",
+      "camera": [
+        -88,
+        -6,
+        82
+      ],
+      "target": [
+        0,
+        -16,
+        -1.287
+      ],
+      "reference": "R01/R02/R03"
+    },
+    {
+      "name": "starboard-quarter",
+      "camera": [
+        -88,
+        -6,
+        -82
+      ],
+      "target": [
+        0,
+        -16,
+        -1.287
+      ],
+      "reference": "R01/R02/R03"
+    },
+    {
+      "name": "stern-quarter",
+      "camera": [
+        75,
+        -6,
+        -65
+      ],
+      "target": [
+        8,
+        -24,
+        -1.287
+      ],
+      "reference": "R01/R02/R13"
+    },
+    {
+      "name": "port-side",
+      "camera": [
+        0,
+        -4,
+        126
+      ],
+      "target": [
+        0,
+        -4,
+        -1.287
+      ],
+      "reference": "R01/R02/R03"
+    },
+    {
+      "name": "starboard-side",
+      "camera": [
+        0,
+        -4,
+        -126
+      ],
+      "target": [
+        0,
+        -4,
+        -1.287
+      ],
+      "reference": "R01/R02/R03"
+    },
+    {
+      "name": "stern",
+      "camera": [
+        76,
+        -28,
+        -1.287
+      ],
+      "target": [
+        25,
+        -31,
+        -1.287
+      ],
+      "reference": "R01/R02/R13"
+    },
+    {
+      "name": "lookout",
+      "camera": [
+        -29.828835487365723,
+        38.96097373962402,
+        15.840149700641632
+      ],
+      "target": [
+        -12.828835487365723,
+        32.96097373962402,
+        -1.159850299358368
+      ],
+      "reference": "R01/R02/R13"
+    },
+    {
+      "name": "helm",
+      "camera": [
+        -22.808570861816406,
+        -30.242118072509765,
+        1.7130000591278076
+      ],
+      "target": [
+        -27.808570861816406,
+        -32.042118072509766,
+        -1.2869999408721924
+      ],
+      "reference": "R08"
+    },
+    {
+      "name": "lawn",
+      "camera": [
+        -15,
+        -32.551,
+        14
+      ],
+      "target": [
+        1,
+        -39.551,
+        -1.287
+      ],
+      "reference": "R04/R09/R13"
+    },
+    {
+      "name": "lawn-crowns",
+      "camera": [
+        -8,
+        -37.551,
+        -1.287
+      ],
+      "target": [
+        3,
+        -37.551,
+        -1.287
+      ],
+      "reference": "R04/R13 rounded lawn masses; three-metre appearance camera is reconstruction"
+    },
+    {
+      "name": "fore-facade",
+      "camera": [
+        0,
+        -37.551,
+        -1.287
+      ],
+      "target": [
+        -19,
+        -38.551,
+        -1.287
+      ],
+      "reference": "R04/R09"
+    },
+    {
+      "name": "aft-facade",
+      "camera": [
+        -3,
+        -31.551000000000002,
+        -1.287
+      ],
+      "target": [
+        15,
+        -35.551,
+        -1.287
+      ],
+      "reference": "R04/R10/R11/R13"
+    },
+    {
+      "name": "garden",
+      "camera": [
+        17,
+        -21.375,
+        16
+      ],
+      "target": [
+        23,
+        -29.075,
+        -1.287
+      ],
+      "reference": "R04/R13/R15"
+    },
+    {
+      "name": "mikan",
+      "camera": [
+        18,
+        -26.375,
+        10
+      ],
+      "target": [
+        22,
+        -28.375,
+        4
+      ],
+      "reference": "R13/R15"
+    },
+    {
+      "name": "slide",
+      "camera": [
+        0,
+        -35.551,
+        -22
+      ],
+      "target": [
+        6,
+        -37.551,
+        -12.5
+      ],
+      "reference": "R04/R13"
+    },
+    {
+      "name": "swing",
+      "camera": [
+        -2,
+        -36.551,
+        18
+      ],
+      "target": [
+        6,
+        -38.551,
+        10
+      ],
+      "reference": "R04/R13"
+    },
+    {
+      "name": "fore-rigging-port",
+      "camera": [
+        -11.06696367263794,
+        -9.468307495117188,
+        82.99175322055817
+      ],
+      "target": [
+        -12.06696367263794,
+        -9.468307495117188,
+        6.9917532205581665
+      ],
+      "reference": "R01/R09"
+    },
+    {
+      "name": "fore-rigging-starboard",
+      "camera": [
+        -11.066964149475098,
+        -9.468310356140137,
+        -85.12546116113663
+      ],
+      "target": [
+        -12.066964149475098,
+        -9.468310356140137,
+        -9.125461161136627
+      ],
+      "reference": "R01/R09"
+    },
+    {
+      "name": "fore-source-front",
+      "camera": [
+        10,
+        -26.415,
+        -1.287
+      ],
+      "target": [
+        -19,
+        -35.415,
+        -1.287
+      ],
+      "reference": "R09 elevated drawing comparison; camera height is reconstruction"
+    },
+    {
+      "name": "fore-gallery-depth",
+      "camera": [
+        -3,
+        -28.415,
+        -1.287
+      ],
+      "target": [
+        -19,
+        -35.815,
+        -1.287
+      ],
+      "reference": "R09 gallery depth/guard relationship; camera height is reconstruction"
+    },
+    {
+      "name": "fore-upper-entry",
+      "camera": [
+        -12.8,
+        -34.21471716308594,
+        -8.837
+      ],
+      "target": [
+        -18.35,
+        -35.164717163085946,
+        -8.837
+      ],
+      "reference": "R09"
+    },
+    {
+      "name": "fore-upper-ports",
+      "camera": [
+        -12.8,
+        -34.314717163085945,
+        9.452774623545206
+      ],
+      "target": [
+        -18.35,
+        -34.96471716308594,
+        9.452774623545206
+      ],
+      "reference": "R09"
+    },
+    {
+      "name": "fore-ground-ForeDoor",
+      "camera": [
+        -12.8,
+        -38.35071716308594,
+        -9.02
+      ],
+      "target": [
+        -16.877142857142857,
+        -38.945861163085944,
+        -9.02
+      ],
+      "reference": "R09"
+    },
+    {
+      "name": "fore-ground-ForeDoorStarboard",
+      "camera": [
+        -12.8,
+        -38.35071716308594,
+        6.820000000000001
+      ],
+      "target": [
+        -16.877142857142857,
+        -38.945861163085944,
+        6.820000000000001
+      ],
+      "reference": "R09"
+    },
+    {
+      "name": "garden-beds-eye",
+      "camera": [
+        15.8,
+        -27.675,
+        -8.5
+      ],
+      "target": [
+        17.949999809265137,
+        -28.575,
+        -5.437000095844269
+      ],
+      "reference": "R13/R15"
+    },
+    {
+      "name": "lawn-hatch",
+      "camera": [
+        3.995000000000001,
+        -38.45071716308594,
+        0.013000000000000123
+      ],
+      "target": [
+        1.5950000000000013,
+        -40.55071716308594,
+        -1.287
+      ],
+      "reference": "R04/R14"
+    },
+    {
+      "name": "restored-lawn",
+      "camera": [
+        -4.5,
+        -38.351,
+        -5
+      ],
+      "target": [
+        -3.5,
+        -40.551,
+        -8.8
+      ],
+      "reference": "R04/R14"
+    },
+    {
+      "name": "door-ForeDoor",
+      "camera": [
+        -13.277142857142858,
+        -39.35071716308594,
+        -9.02
+      ],
+      "target": [
+        -16.877142857142857,
+        -39.35071716308594,
+        -9.02
+      ],
+      "reference": "R09/R10/R11/R12/R13"
+    },
+    {
+      "name": "door-WomensDoor",
+      "camera": [
+        -14.750000000000002,
+        -35.21471716308594,
+        -8.837
+      ],
+      "target": [
+        -18.35,
+        -35.21471716308594,
+        -8.837
+      ],
+      "reference": "R09/R10/R11/R12/R13"
+    },
+    {
+      "name": "door-AquariumDoor",
+      "camera": [
+        5.050000000000001,
+        -39.35071716308594,
+        -1.2870000000000001
+      ],
+      "target": [
+        8.65,
+        -39.35071716308594,
+        -1.287
+      ],
+      "reference": "R09/R10/R11/R12/R13"
+    },
+    {
+      "name": "door-AftEntrance",
+      "camera": [
+        11.05,
+        -34.422717163085935,
+        -1.287
+      ],
+      "target": [
+        12.3,
+        -34.422717163085935,
+        -1.287
+      ],
+      "reference": "R09/R10/R11/R12/R13"
+    },
+    {
+      "name": "door-LibraryDoor",
+      "camera": [
+        20.955882352941174,
+        -27.95471716308594,
+        -1.2870000000000001
+      ],
+      "target": [
+        24.555882352941175,
+        -27.95471716308594,
+        -1.287
+      ],
+      "reference": "R09/R10/R11/R12/R13"
+    }
+  ],
+  "context": {
+    "drawCalls": 1178,
+    "triangles": 178901
+  },
+  "errors": [],
+  "assets": {
+    "sunny.glb": "1372aed9f3bb0e71459dccb6a3ee56a900e39b95a918df26b9fa2675f2cbddc3",
+    "sunny-collision.glb": "b006511c66b43b31e2393628355554de846020d0e8626c81246124d082b2ad33",
+    "ship-metadata.json": "bb0bf60014efcb849123497c8d9aacda53f5b6eab7faf011398d948ac507bb5a"
+  },
+  "note": "Appearance survey only. Main camera moves; no mesh hiding, player placement or movement-proof claim."
+}
