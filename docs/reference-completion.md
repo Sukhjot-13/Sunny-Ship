@@ -1,3 +1,23 @@
+## Focused stern endpoint/round-trip replay — terminal PASS
+
+Current applied source-ratio generation passes the complete stern Library ladder descent/lower excursion/ascent/closed-lid body stop/closure/upper-route/garden/aft-flight/lawn return with normal W/E, no placement/flight/recovery. The diagnostic browser exited0 with one initial main-frame navigation and no reported renderer-page error. Original log/trace/screenshots are in `review/2026-11-16/fore-port-ratios/stern-native/`. The older combined run is still an interrupted aggregate failure; its exact cause remains unproven. Dock focused current-generation replay and current full-run/FPS verification remain.
+
+## Applied first direct relative-ratio correction — R09 fore ports
+
+The paired ports now use the locally measured source spacing/outer-circle and clear-circle/rim ratios, with true smaller bores/panes and broad closed annular trim. Matching master/runtime/reference files are applied locally at5173; identical candidate remains at5174.7,969 meshes/32 openings/five hatches. All116 assets, native authoring fixture, actual source-ratio/topology/body and garden checks, all32 moving openings and all7,969 uniform reference-linkage comparisons pass. Final30 actual renders match applied hashes with no page errors; paired window/fore views were personally inspected. Exact evidence is `review/2026-11-16/fore-port-ratios/` and `fore-port-ratio-final/`.
+
+This closes only the measured same-panel pair/rim discrepancy. The overall metre size remains reconstructed; mandatory whole-ship relative-scale audit remains OPEN. Continue direct fitting/storey/hull comparisons, transverse fore-shroud correction, fore/gallery guard rhythm, fuller lawn crowns and complete exterior verification before all interiors automatically. The existing source-only/runtime human sizing split still requires reconciliation against supplied images.
+
+Current native focused stern-library ladder replay is running at `/private/tmp/sunny-stern-ladder-diagnostic.log` with actual browser frame/process diagnostics (active exec session in current chat). Do not run heavy Blender builds alongside it. The earlier combined run remains failed after Aquarium passed and the next browser frame detached; do not call stern/Dock accepted until their actual terminal round trips pass. Last earlier gameplay FPS26<30; current generation FPS unmeasured. No remote push/deploy/publication.
+
+## Active direct source-ratio correction — R09 paired fore ports
+
+The first concrete mixed-scale/proportion audit found the current port spacing/diameter and clear-circle/rim ratios differ from the supplied image. Reproducible local image contour measurements at thresholds140/180 give centre spacing approximately2.125 outer diameters and clear-circle widths approximately.56–.59 of outer widths. Original source SHA, complete/fragmented component evidence and uncertainty limits are in `review/2026-11-16/fore-port-ratios/source-metrics.json`; `tools/source_port_metrics.mjs` reproduces them without an external design source.
+
+A full isolated candidate `/private/tmp/sunny-fore-port-ratios-candidate` is complete and served at5174. Live remains the garden checkpoint065fae9 at5173; all seven live hashes are unchanged. The new source reduces only the pair spacing/clear bore to the measured ratios, authors a broad closed annular rim and retains the same pair midpoint/outer size pending the wider storey/hull perspective audit. Native authoring fixture, actual source-ratio/topology/body tests, garden checks, all116 assets and all32 opening checks pass. Final30 renderer views are running next. No application or overall relative-scale acceptance yet.
+
+Next inspect the actual pair/whole fore view, export matching uniform inspection copy and verify linkage, then apply/checkpoint this limited correction. Continue direct exterior relative comparisons, transverse fore-shroud correction, fore/gallery rail rhythm and fuller lawn crowns before every interior automatically. All broader mixed-scale, browser stability and last-measured FPS26 failures remain OPEN.
+
 ## Latest local garden checkpoint — November 16, 2026
 
 Matching master/runtime/reference files are applied locally:7,969 meshes/32 openings/five hatches at5173. The identical frozen candidate remains at5174. Improved layered mikan crowns, curved normalized leaf blades and actual inboard L-shaped flower/Pop Greens beds with open shells/supported inset soil are present. These are limited construction/appearance improvements; the mandatory relative-scale finding below remains OPEN. Exact plant sizes/stations are reconstruction, not canonical metric acceptance.

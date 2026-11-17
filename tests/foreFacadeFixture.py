@@ -34,12 +34,19 @@ assert len(records)==2
 for record in records:
     assert record['position'][1]<cy,'paired ports are opposite the upper entry'
     for i in range(24):
-        angle=i*math.tau/24;y=record['position'][1]+.45*math.cos(angle);z=record['position'][2]+.45*math.sin(angle)
+        angle=i*math.tau/24;y=record['position'][1]+record['radius']*.90*math.cos(angle);z=record['position'][2]+record['radius']*.90*math.sin(angle)
         assert not ray(wall,y,z),'actual wall layers block a port'
         assert ray(bpy.data.objects['Sunny_'+record['id']+'_glass'],y,z),'actual aperture needs its pane'
-    assert ray(wall,record['position'][1]+.46,record['position'][2]+.46),'round port must retain diagonal wall corners'
+    assert ray(wall,record['position'][1]+record['radius']*.92,record['position'][2]+record['radius']*.92),'round port must retain diagonal wall corners'
     pane=bpy.data.objects['Sunny_'+record['id']+'_glass']
     assert pane['sunny_obstacle'],'glass must participate in physical collision'
+    rim=bpy.data.objects['Sunny_'+record['id']+'_rim']
+    bm=bmesh.new();bm.from_mesh(rim.data)
+    assert all(edge.is_manifold for edge in bm.edges)and bm.calc_volume(signed=True)>0,'broad annular trim must be a real closed outward-wound body'
+    bm.free()
+spacing=records[1]['position'][1]-records[0]['position'][1]
+assert 2.0<spacing/(2*records[0]['outerRadius'])<2.3,'same-panel source spacing/outer-circle ratio must match R09'
+assert .52<records[0]['radius']/records[0]['outerRadius']<.60,'source inner/outer circle ratio needs the broad white rim'
 blocks=[o for o in bpy.data.objects if o.name.startswith('Sunny_ForeFacadeWomensDoor')]
 assert len(blocks)==20,'both jambs and every broad arch segment are required'
 front=interiors['foreFacade']['surrounds'][0]['x']

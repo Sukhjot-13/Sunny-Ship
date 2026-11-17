@@ -30,6 +30,14 @@ const cy=meta.interiors.dockCentre[1],entry=meta.interiors.doors.find(d=>d.id===
 assert(entry.pos[1]>cy,'R09 upper entry belongs on starboard, right viewed from the lawn')
 assert.equal(meta.interiors.foreFacade?.ports.length,2,'R09 opposite pair of ports is required')
 const visual=loadColliders(path.join(directory,'sunny.glb')),collision=loadColliders(path.join(directory,'sunny-collision.glb'))
+const sourcePorts=meta.interiors.foreFacade.ports.map(record=>{
+ const pane=visual.find(p=>p.name==='Sunny_'+record.id+'_glass'),rim=visual.find(p=>p.name==='Sunny_'+record.id+'_rim')
+ assert(pane&&rim,'source ratio check needs actual exported clear pane and outer rim')
+ return{centre:(pane.min.z+pane.max.z)/2,outer:rim.max.z-rim.min.z,clear:pane.max.z-pane.min.z}
+})
+const spacing=Math.abs(sourcePorts[1].centre-sourcePorts[0].centre),outer=sourcePorts.reduce((n,p)=>n+p.outer/2,0)
+assert(spacing/outer>2.0&&spacing/outer<2.3,'actual pair spacing relative to outer circles must match the complete R09 source outlines')
+assert(sourcePorts.every(p=>p.clear/p.outer>.52&&p.clear/p.outer<.60),'actual clear/outer circle ratio must retain R09’s broad annular rim')
 assert(!visual.some(p=>p.name.startsWith('Sunny_StorageStair')),'unsupported switchback must not protrude through the lawn-side entry')
 assert(meta.exterior.mechanisms.climbs.some(p=>p.id==='storage-ladder'),'R09 storage connection is a real registered ladder')
 const storage=normalizeClimbs(meta.exterior.mechanisms.climbs).find(p=>p.id==='storage-ladder')

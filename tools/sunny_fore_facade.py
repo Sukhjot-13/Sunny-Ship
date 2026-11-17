@@ -1,9 +1,40 @@
 """R09 fore front: starboard upper entry, paired port windows and arch bands."""
 import math
 import bpy
+import bmesh
 from mathutils import Vector
 from sunny_exterior import _mesh,finish,pole,ring,clip_face,material,assign_world_mesh
 from sunny_aft_facade import cut_front_circle,entrance_surround
+
+
+def fore_port_layout():
+    """R09 same-panel source ratios; overall metre size remains under audit."""
+    outer=.555
+    spacing=2*outer*2.125
+    return dict(outerRadius=outer,radius=outer*.56,spacing=spacing,
+                offsets=[-6-spacing/2,-6+spacing/2],
+                sourceSpacingRatio=2.125,sourceClearRatio=.56)
+
+
+def fore_port_ring(name,front,y,z,inner,outer):
+    """Broad closed annular white trim with its thin dark outer contour."""
+    profile=[(front-.02,inner),(front+.045,inner),(front+.065,inner+.024),
+             (front+.065,outer-.024),(front+.045,outer),(front-.02,outer)]
+    count=48
+    vertices=[(x,y+r*math.cos(i*math.tau/count),z+r*math.sin(i*math.tau/count))
+              for x,r in profile for i in range(count)]
+    faces=[]
+    for row in range(len(profile)):
+        for i in range(count):
+            j=(i+1)%count;next_row=(row+1)%len(profile)
+            faces.append((row*count+i,row*count+j,next_row*count+j,next_row*count+i))
+    rim=finish(_mesh(name,vertices,faces),name,'white',obstacle=True)
+    rim.data.materials.append(material('darkwood'))
+    for face in rim.data.polygons:
+        if face.index//count in (3,4):face.material_index=1
+    bm=bmesh.new();bm.from_mesh(rim.data);bmesh.ops.recalc_face_normals(bm,faces=list(bm.faces));bm.to_mesh(rim.data);bm.free()
+    rim['sunny_rail']=True
+    return rim
 
 
 def fore_front_ports(objects, interiors, centre):
@@ -14,12 +45,13 @@ def fore_front_ports(objects, interiors, centre):
     """
     from sunny_aft_envelope import closed_wall_bvh
     bpy.context.view_layer.update()
-    x=-18.35;z=interiors['levels']['F2F']+1.45;radius=.50
+    layout=fore_port_layout()
+    x=-18.35;z=interiors['levels']['F2F']+1.45;radius=layout['radius']
     targets=[o for o in bpy.data.objects if o.type=='MESH' and
              (o.name.startswith('Sunny_ForeF2_shell') or
               o.name in ('Line002','Line006','Tube008.001','对象001','对象002'))]
     records=[]
-    for i,offset in enumerate((-8.,-4.)):
+    for i,offset in enumerate(layout['offsets']):
         y=centre+offset;name='ForeFrontPort'+str(i);hits=[]
         for obj in targets:
             surface=closed_wall_bvh(obj)
@@ -43,11 +75,12 @@ def fore_front_ports(objects, interiors, centre):
         sleeve['sunny_rail']=True
         glass=pole(name+'_glass',(front-.055,y,z),(front-.02,y,z),radius-.006,'glass',sides=48)
         glass['sunny_obstacle']=True;glass['sunny_fore_front_port']=True
-        ring(name+'_rim',(front+.03,y,z),radius,.055,'white','X',48,8)
-        ring(name+'_inner',(front+.04,y,z),radius-.055,.020,'darkwood','X',48,8)
-        records.append(dict(id=name,position=[x,y,z],radius=radius,front=front,back=back))
+        fore_port_ring(name+'_rim',front,y,z,radius,layout['outerRadius'])
+        ring(name+'_inner',(front+.055,y,z),radius+.012,.012,'darkwood','X',48,8)
+        records.append(dict(id=name,position=[x,y,z],radius=radius,outerRadius=layout['outerRadius'],front=front,back=back))
     interiors['foreFacade']=dict(ports=records,upperEntry='WomensDoor',
-        reference='R09: upper entry to starboard, pair of circular ports to port; metre sizes/depth reconstructed')
+        portRatios=dict(spacingToOuterDiameter=layout['sourceSpacingRatio'],clearToOuterDiameter=layout['sourceClearRatio']),
+        reference='R09: upper entry to starboard, paired port circles measured locally in source; overall metre size/depth remain reconstructed')
     return records
 
 

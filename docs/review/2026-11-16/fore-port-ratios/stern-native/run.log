@@ -1,0 +1,72 @@
+
+DevTools listening on ws://127.0.0.1:58805/devtools/browser/6c3681fd-8fb3-42e7-8583-e9d3f4ab1383
+Trying to load the allocator multiple times. This is *not* supported.
+[27039:2604169:1116/190311.884691:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[27039:2604262:1116/190311.884920:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[27039:2604169:1116/190311.885105:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[27039:2604262:1116/190311.885134:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[27039:2604169:1116/190311.885219:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[27039:2604262:1116/190311.885247:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+MAIN FRAME NAVIGATION http://localhost:5173/
+[27039:2604169:1116/190317.851203:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[27039:2604262:1116/190317.851255:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+PASS aft port lower exterior entrance [ 2.8083108194455058, -40.55070114135742, 13.110402769657812 ]
+PASS garden port lower exterior entrance [ 11.10085378509214, -35.62269973754883, 13.190203326381576 ]
+PASS Stern Library ladder upper landing [ 27.522043678210135, -29.154699325561523, -1.5999966319450538 ]
+[27079:2606381:1116/190412.328334:VERBOSE1:chrome/updater/updater.cc:380] Version: 159.0.8140.0, opt, ARM_64, command line: /Users/sukhjot/Library/Application Support/Google/GoogleUpdater/159.0.8140.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake-all --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[27079:2606381:1116/190412.328965:VERBOSE1:chrome/updater/updater.cc:383] OS version: 27.2.1, arch: arm64, System uptime (seconds): 115355, parent pid: 27033
+[27079:2606381:1116/190412.330907:VERBOSE1:chrome/updater/updater.cc:388] Available disk space in install directory (/Users/sukhjot/Library/Application Support/Google/GoogleUpdater): 92057554944B (85.735GiB) / 494384795648B (460.432GiB)
+[27079:2606381:1116/190412.330937:VERBOSE1:chrome/updater/updater.cc:392] Available disk space in temporary directory (/var/folders/d6/n4prbxn92j96hfwbpslfs2nm0000gn/T/): 92057554944B (85.735GiB) / 494384795648B (460.432GiB)
+[27079:2606381:1116/190412.331003:VERBOSE2:chrome/updater/event_history.cc:266] Emitted a UPDATER_PROCESS START event to the history log
+[27081:2606385:1116/190412.340170:VERBOSE1:chrome/updater/updater.cc:380] Version: 159.0.8140.0, opt, ARM_64, command line: /Users/sukhjot/Library/Application Support/Google/GoogleUpdater/159.0.8140.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --crash-handler --database=/Users/sukhjot/Library/Application Support/Google/GoogleUpdater/159.0.8140.0/Crashpad --url=https://clients2.google.com/cr/report --annotation=prod=Update4 --annotation=ver=159.0.8140.0 --attachment=/Users/sukhjot/Library/Application Support/Google/GoogleUpdater/updater.log --attachment=/Users/sukhjot/Library/Application Support/Google/GoogleUpdater/updater_history.jsonl --handshake-fd=6 --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[27081:2606385:1116/190412.340652:VERBOSE1:chrome/updater/updater.cc:383] OS version: 27.2.1, arch: arm64, System uptime (seconds): 115355, parent pid: 1
+[27081:2606385:1116/190412.342235:VERBOSE1:chrome/updater/updater.cc:388] Available disk space in install directory (/Users/sukhjot/Library/Application Support/Google/GoogleUpdater): 92057550848B (85.735GiB) / 494384795648B (460.432GiB)
+[27081:2606385:1116/190412.342269:VERBOSE1:chrome/updater/updater.cc:392] Available disk space in temporary directory (/var/folders/d6/n4prbxn92j96hfwbpslfs2nm0000gn/T/): 92057550848B (85.735GiB) / 494384795648B (460.432GiB)
+[27081:2606385:1116/190412.342354:VERBOSE2:chrome/updater/event_history.cc:266] Emitted a UPDATER_PROCESS START event to the history log
+[27079:2606381:1116/190412.342818:VERBOSE1:chrome/updater/crash_reporter.cc:121] Crash handler launched and ready.
+[27079:2606381:1116/190412.343441:VERBOSE1:chrome/updater/crash_client.cc:109] Found 0 completed crash reports
+[27079:2606381:1116/190412.343507:VERBOSE1:chrome/updater/crash_client.cc:132] Found 0 pending crash reports
+[27079:2606381:1116/190412.343587:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/sukhjot/Library/Application Support/Google/RLZ/Crashpad/settings.dat: No such file or directory (2)
+[27079:2606381:1116/190412.343599:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/sukhjot/Library/Application Support/Google/consentOptions/Crashpad/settings.dat: No such file or directory (2)
+[27079:2606381:1116/190412.343669:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/sukhjot/Library/Application Support/Google/Chrome-headless/Crashpad/settings.dat: No such file or directory (2)
+[27079:2606381:1116/190412.343682:VERBOSE1:chrome/updater/updater.cc:107] Crash reporting initialized.
+[27079:2606395:1116/190412.343936:VERBOSE1:chrome/updater/app/app_wakeall.cc:58] Launching `/Users/sukhjot/Library/Application Support/Google/GoogleUpdater/159.0.8140.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake`
+[27082:2606401:1116/190412.353439:VERBOSE1:chrome/updater/updater.cc:380] Version: 159.0.8140.0, opt, ARM_64, command line: /Users/sukhjot/Library/Application Support/Google/GoogleUpdater/159.0.8140.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[27082:2606401:1116/190412.354278:VERBOSE1:chrome/updater/updater.cc:383] OS version: 27.2.1, arch: arm64, System uptime (seconds): 115355, parent pid: 27079
+[27082:2606401:1116/190412.356110:VERBOSE1:chrome/updater/updater.cc:388] Available disk space in install directory (/Users/sukhjot/Library/Application Support/Google/GoogleUpdater): 92055969792B (85.734GiB) / 494384795648B (460.432GiB)
+[27082:2606401:1116/190412.356142:VERBOSE1:chrome/updater/updater.cc:392] Available disk space in temporary directory (/var/folders/d6/n4prbxn92j96hfwbpslfs2nm0000gn/T/): 92055969792B (85.734GiB) / 494384795648B (460.432GiB)
+[27082:2606401:1116/190412.356210:VERBOSE2:chrome/updater/event_history.cc:266] Emitted a UPDATER_PROCESS START event to the history log
+[27084:2606415:1116/190412.365367:VERBOSE1:chrome/updater/updater.cc:380] Version: 159.0.8140.0, opt, ARM_64, command line: /Users/sukhjot/Library/Application Support/Google/GoogleUpdater/159.0.8140.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --crash-handler --database=/Users/sukhjot/Library/Application Support/Google/GoogleUpdater/159.0.8140.0/Crashpad --url=https://clients2.google.com/cr/report --annotation=prod=Update4 --annotation=ver=159.0.8140.0 --attachment=/Users/sukhjot/Library/Application Support/Google/GoogleUpdater/updater.log --attachment=/Users/sukhjot/Library/Application Support/Google/GoogleUpdater/updater_history.jsonl --handshake-fd=6 --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[27084:2606415:1116/190412.365880:VERBOSE1:chrome/updater/updater.cc:383] OS version: 27.2.1, arch: arm64, System uptime (seconds): 115355, parent pid: 1
+[27084:2606415:1116/190412.367672:VERBOSE1:chrome/updater/updater.cc:388] Available disk space in install directory (/Users/sukhjot/Library/Application Support/Google/GoogleUpdater): 92055162880B (85.733GiB) / 494384795648B (460.432GiB)
+[27084:2606415:1116/190412.367705:VERBOSE1:chrome/updater/updater.cc:392] Available disk space in temporary directory (/var/folders/d6/n4prbxn92j96hfwbpslfs2nm0000gn/T/): 92055162880B (85.733GiB) / 494384795648B (460.432GiB)
+[27084:2606415:1116/190412.367781:VERBOSE2:chrome/updater/event_history.cc:266] Emitted a UPDATER_PROCESS START event to the history log
+[27082:2606401:1116/190412.368298:VERBOSE1:chrome/updater/crash_reporter.cc:121] Crash handler launched and ready.
+[27082:2606401:1116/190412.368856:VERBOSE1:chrome/updater/crash_client.cc:109] Found 0 completed crash reports
+[27082:2606401:1116/190412.368924:VERBOSE1:chrome/updater/crash_client.cc:132] Found 0 pending crash reports
+[27082:2606401:1116/190412.369009:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/sukhjot/Library/Application Support/Google/RLZ/Crashpad/settings.dat: No such file or directory (2)
+[27082:2606401:1116/190412.369023:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/sukhjot/Library/Application Support/Google/consentOptions/Crashpad/settings.dat: No such file or directory (2)
+[27082:2606401:1116/190412.369088:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/sukhjot/Library/Application Support/Google/Chrome-headless/Crashpad/settings.dat: No such file or directory (2)
+[27082:2606401:1116/190412.369100:VERBOSE1:chrome/updater/updater.cc:107] Crash reporting initialized.
+[27082:2606401:1116/190412.369275:VERBOSE1:chrome/updater/ipc/update_service_internal_proxy_mojo.cc:61] Run
+PASS Stern Library ladder complete descent [ 27.608023262023927, -35.620699737548826, 0.05056219100952153 ]
+PASS Stern Library ladder lower floor excursion [ 28.000689228855308, -35.62269973754883, -1.0128287286464033 ]
+PASS Stern Library ladder walking return to ladder [ 27.710603741303267, -35.62269973754883, -0.009284085502133667 ]
+PASS Stern Library ladder complete ascent [ 27.608023262023927, -29.154699325561523, -1.5494378089904786 ]
+[27082:2606401:1116/190447.430597:VERBOSE1:chrome/updater/app/app.cc:52] Shutdown: 0
+[27082:2606401:1116/190447.430974:VERBOSE2:chrome/updater/event_history.cc:266] Emitted a UPDATER_PROCESS END event to the history log
+[27082:2606401:1116/190447.430995:VERBOSE1:chrome/updater/updater.cc:425] UpdaterMain (--wake) returned 0.
+[27079:2606395:1116/190447.635653:VERBOSE1:chrome/updater/app/app_wakeall.cc:68] `/Users/sukhjot/Library/Application Support/Google/GoogleUpdater/159.0.8140.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake` exited 0
+[27079:2606381:1116/190447.635884:VERBOSE1:chrome/updater/app/app.cc:52] Shutdown: 0
+[27079:2606381:1116/190447.636203:VERBOSE2:chrome/updater/event_history.cc:266] Emitted a UPDATER_PROCESS END event to the history log
+[27079:2606381:1116/190447.636222:VERBOSE1:chrome/updater/updater.cc:425] UpdaterMain (--wake-all) returned 0.
+[27084:2606415:1116/190457.442986:VERBOSE2:chrome/updater/event_history.cc:266] Emitted a UPDATER_PROCESS END event to the history log
+[27084:2606415:1116/190457.443029:VERBOSE1:chrome/updater/updater.cc:425] UpdaterMain (--crash-handler) returned 0.
+[27081:2606385:1116/190457.444330:VERBOSE2:chrome/updater/event_history.cc:266] Emitted a UPDATER_PROCESS END event to the history log
+[27081:2606385:1116/190457.444528:VERBOSE1:chrome/updater/updater.cc:425] UpdaterMain (--crash-handler) returned 0.
+PASS Stern Library ladder return along upper walking approach [ 18.753311046734765, -29.37470054626465, 13.246688953265258 ]
+PASS garden port upper exterior entrance [ 18.652208124137385, -29.37470054626465, 13.215937464825915 ]
+PASS aft port upper exterior entrance [ 10.384083344711637, -35.62269973754883, 12.998904866586917 ]
+PASS Stern Library ladder continuous return to spawn [ -4.200000000000004, -40.55070114135742, -0.8930802800719978 ]
+PASS stern-library-ladder full descents/ascents/closures and lawn returns; real W/E, no placement/flight/recovery
+BROWSER EXIT { code: 0, signal: null }

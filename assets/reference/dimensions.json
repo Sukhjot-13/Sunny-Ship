@@ -1,8 +1,8 @@
 {
-  "source": "/private/tmp/sunny-garden-planter-candidate/sunny-master.blend",
-  "workingVisualSource": "/private/tmp/sunny-garden-planter-candidate/sunny.glb",
-  "sourceSha256": "0f464badbbdfbf00c84343678254a5045f570c2204f4c13c26305f7428257ffc",
-  "workingVisualSha256": "43431b1ce4f7e699d3df0e0e7dcd135627fff415a5438c83462596ebecfa5a65",
+  "source": "/private/tmp/sunny-fore-port-ratios-candidate/sunny-master.blend",
+  "workingVisualSource": "/private/tmp/sunny-fore-port-ratios-candidate/sunny.glb",
+  "sourceSha256": "b3f45324c7f27c3fc39f3f97678a6b374e9b5f6dc10ed1c8b3c9887191055945",
+  "workingVisualSha256": "efe6c66e400a2149ef0017815db358b7ef1e46a3806a590730d7a46027f43e0f",
   "workingScale": 2.2,
   "referenceScale": 1,
   "rootMultiplier": 0.45454545454545453,
