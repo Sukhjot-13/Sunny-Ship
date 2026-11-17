@@ -15,6 +15,8 @@ interiors={'levels':{'F2F':0},'doors':[
     dict(id='WomensDoor',pos=[-18.35,cy+7.55,0],height=2.24,width=1.10)]}
 cap=_mesh('Line002',[(-20.285,cy-13,0),(-20.285,cy+13,0),(-20.285,cy+13,2.8),(-20.285,cy-13,2.8)],[(3,2,1,0)])
 cap.data.materials.append(material('timber'))
+panel=box('panel_fixture',(-16.9,(-14.7316675-6.16)/2,.5),(.18,14.7316675-6.16,1),'timber')
+panel.name='Box070'
 bpy.context.view_layer.update()
 open_volume_slot(wall,-19.2,-17.5,cy+7.55-.60,cy+7.55+.60,-.15,2.36)
 records=fore_front_ports([wall,cap],interiors,cy)

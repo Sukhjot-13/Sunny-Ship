@@ -1,0 +1,79 @@
+
+DevTools listening on ws://127.0.0.1:63020/devtools/browser/28b48af5-a26d-4a71-be1c-bd4486008aaa
+Trying to load the allocator multiple times. This is *not* supported.
+[34790:2913463:1117/041602.702450:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[34790:2913524:1117/041602.702676:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[34790:2913463:1117/041602.702862:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[34790:2913524:1117/041602.702891:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[34790:2913463:1117/041602.702958:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[34790:2913524:1117/041602.702983:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[34790:2913463:1117/041605.698655:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[34790:2913524:1117/041605.698738:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+PASS lawn to Fore cabin approach: fore lower starboard {
+  pos: [ -26.00000000000006, -36.41469955444336, 0.3428060986346542 ],
+  grounded: true,
+  blocker: null
+}
+[34821:2914162:1117/041703.134933:VERBOSE1:chrome/updater/updater.cc:380] Version: 159.0.8140.0, opt, ARM_64, command line: /Users/sukhjot/Library/Application Support/Google/GoogleUpdater/159.0.8140.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake-all --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[34821:2914162:1117/041703.135527:VERBOSE1:chrome/updater/updater.cc:383] OS version: 27.2.1, arch: arm64, System uptime (seconds): 126566, parent pid: 34784
+[34821:2914162:1117/041703.137371:VERBOSE1:chrome/updater/updater.cc:388] Available disk space in install directory (/Users/sukhjot/Library/Application Support/Google/GoogleUpdater): 89188446208B (83.063GiB) / 494384795648B (460.432GiB)
+[34821:2914162:1117/041703.137401:VERBOSE1:chrome/updater/updater.cc:392] Available disk space in temporary directory (/var/folders/d6/n4prbxn92j96hfwbpslfs2nm0000gn/T/): 89188446208B (83.063GiB) / 494384795648B (460.432GiB)
+[34821:2914162:1117/041703.137471:VERBOSE2:chrome/updater/event_history.cc:266] Emitted a UPDATER_PROCESS START event to the history log
+[34823:2914166:1117/041703.146778:VERBOSE1:chrome/updater/updater.cc:380] Version: 159.0.8140.0, opt, ARM_64, command line: /Users/sukhjot/Library/Application Support/Google/GoogleUpdater/159.0.8140.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --crash-handler --database=/Users/sukhjot/Library/Application Support/Google/GoogleUpdater/159.0.8140.0/Crashpad --url=https://clients2.google.com/cr/report --annotation=prod=Update4 --annotation=ver=159.0.8140.0 --attachment=/Users/sukhjot/Library/Application Support/Google/GoogleUpdater/updater.log --attachment=/Users/sukhjot/Library/Application Support/Google/GoogleUpdater/updater_history.jsonl --handshake-fd=6 --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[34823:2914166:1117/041703.147308:VERBOSE1:chrome/updater/updater.cc:383] OS version: 27.2.1, arch: arm64, System uptime (seconds): 126566, parent pid: 1
+[34823:2914166:1117/041703.149159:VERBOSE1:chrome/updater/updater.cc:388] Available disk space in install directory (/Users/sukhjot/Library/Application Support/Google/GoogleUpdater): 89188425728B (83.063GiB) / 494384795648B (460.432GiB)
+[34823:2914166:1117/041703.149197:VERBOSE1:chrome/updater/updater.cc:392] Available disk space in temporary directory (/var/folders/d6/n4prbxn92j96hfwbpslfs2nm0000gn/T/): 89188425728B (83.063GiB) / 494384795648B (460.432GiB)
+[34823:2914166:1117/041703.149271:VERBOSE2:chrome/updater/event_history.cc:266] Emitted a UPDATER_PROCESS START event to the history log
+[34821:2914162:1117/041703.149855:VERBOSE1:chrome/updater/crash_reporter.cc:121] Crash handler launched and ready.
+[34821:2914162:1117/041703.150426:VERBOSE1:chrome/updater/crash_client.cc:109] Found 0 completed crash reports
+[34821:2914162:1117/041703.150485:VERBOSE1:chrome/updater/crash_client.cc:132] Found 0 pending crash reports
+[34821:2914162:1117/041703.150559:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/sukhjot/Library/Application Support/Google/RLZ/Crashpad/settings.dat: No such file or directory (2)
+[34821:2914162:1117/041703.150572:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/sukhjot/Library/Application Support/Google/consentOptions/Crashpad/settings.dat: No such file or directory (2)
+[34821:2914162:1117/041703.150645:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/sukhjot/Library/Application Support/Google/Chrome-headless/Crashpad/settings.dat: No such file or directory (2)
+[34821:2914162:1117/041703.150659:VERBOSE1:chrome/updater/updater.cc:107] Crash reporting initialized.
+[34821:2914174:1117/041703.150973:VERBOSE1:chrome/updater/app/app_wakeall.cc:58] Launching `/Users/sukhjot/Library/Application Support/Google/GoogleUpdater/159.0.8140.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake`
+[34824:2914180:1117/041703.159063:VERBOSE1:chrome/updater/updater.cc:380] Version: 159.0.8140.0, opt, ARM_64, command line: /Users/sukhjot/Library/Application Support/Google/GoogleUpdater/159.0.8140.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[34824:2914180:1117/041703.159592:VERBOSE1:chrome/updater/updater.cc:383] OS version: 27.2.1, arch: arm64, System uptime (seconds): 126566, parent pid: 34821
+[34824:2914180:1117/041703.161295:VERBOSE1:chrome/updater/updater.cc:388] Available disk space in install directory (/Users/sukhjot/Library/Application Support/Google/GoogleUpdater): 89188421632B (83.063GiB) / 494384795648B (460.432GiB)
+[34824:2914180:1117/041703.161325:VERBOSE1:chrome/updater/updater.cc:392] Available disk space in temporary directory (/var/folders/d6/n4prbxn92j96hfwbpslfs2nm0000gn/T/): 89188421632B (83.063GiB) / 494384795648B (460.432GiB)
+[34824:2914180:1117/041703.161391:VERBOSE2:chrome/updater/event_history.cc:266] Emitted a UPDATER_PROCESS START event to the history log
+[34826:2914184:1117/041703.171011:VERBOSE1:chrome/updater/updater.cc:380] Version: 159.0.8140.0, opt, ARM_64, command line: /Users/sukhjot/Library/Application Support/Google/GoogleUpdater/159.0.8140.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --crash-handler --database=/Users/sukhjot/Library/Application Support/Google/GoogleUpdater/159.0.8140.0/Crashpad --url=https://clients2.google.com/cr/report --annotation=prod=Update4 --annotation=ver=159.0.8140.0 --attachment=/Users/sukhjot/Library/Application Support/Google/GoogleUpdater/updater.log --attachment=/Users/sukhjot/Library/Application Support/Google/GoogleUpdater/updater_history.jsonl --handshake-fd=6 --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[34826:2914184:1117/041703.171640:VERBOSE1:chrome/updater/updater.cc:383] OS version: 27.2.1, arch: arm64, System uptime (seconds): 126566, parent pid: 1
+[34826:2914184:1117/041703.173883:VERBOSE1:chrome/updater/updater.cc:388] Available disk space in install directory (/Users/sukhjot/Library/Application Support/Google/GoogleUpdater): 89188360192B (83.063GiB) / 494384795648B (460.432GiB)
+[34826:2914184:1117/041703.173973:VERBOSE1:chrome/updater/updater.cc:392] Available disk space in temporary directory (/var/folders/d6/n4prbxn92j96hfwbpslfs2nm0000gn/T/): 89188360192B (83.063GiB) / 494384795648B (460.432GiB)
+[34826:2914184:1117/041703.174053:VERBOSE2:chrome/updater/event_history.cc:266] Emitted a UPDATER_PROCESS START event to the history log
+[34824:2914180:1117/041703.174669:VERBOSE1:chrome/updater/crash_reporter.cc:121] Crash handler launched and ready.
+[34824:2914180:1117/041703.175288:VERBOSE1:chrome/updater/crash_client.cc:109] Found 0 completed crash reports
+[34824:2914180:1117/041703.175349:VERBOSE1:chrome/updater/crash_client.cc:132] Found 0 pending crash reports
+[34824:2914180:1117/041703.175416:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/sukhjot/Library/Application Support/Google/RLZ/Crashpad/settings.dat: No such file or directory (2)
+[34824:2914180:1117/041703.175427:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/sukhjot/Library/Application Support/Google/consentOptions/Crashpad/settings.dat: No such file or directory (2)
+[34824:2914180:1117/041703.175482:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/sukhjot/Library/Application Support/Google/Chrome-headless/Crashpad/settings.dat: No such file or directory (2)
+[34824:2914180:1117/041703.175494:VERBOSE1:chrome/updater/updater.cc:107] Crash reporting initialized.
+[34824:2914180:1117/041703.175676:VERBOSE1:chrome/updater/ipc/update_service_internal_proxy_mojo.cc:61] Run
+[34824:2914180:1117/041729.776184:VERBOSE1:chrome/updater/app/app.cc:52] Shutdown: 0
+[34824:2914180:1117/041729.776592:VERBOSE2:chrome/updater/event_history.cc:266] Emitted a UPDATER_PROCESS END event to the history log
+[34824:2914180:1117/041729.776611:VERBOSE1:chrome/updater/updater.cc:425] UpdaterMain (--wake) returned 0.
+[34821:2914174:1117/041730.000463:VERBOSE1:chrome/updater/app/app_wakeall.cc:68] `/Users/sukhjot/Library/Application Support/Google/GoogleUpdater/159.0.8140.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake` exited 0
+[34821:2914162:1117/041730.000600:VERBOSE1:chrome/updater/app/app.cc:52] Shutdown: 0
+[34821:2914162:1117/041730.001025:VERBOSE2:chrome/updater/event_history.cc:266] Emitted a UPDATER_PROCESS END event to the history log
+[34821:2914162:1117/041730.001040:VERBOSE1:chrome/updater/updater.cc:425] UpdaterMain (--wake-all) returned 0.
+[34826:2914184:1117/041739.790359:VERBOSE2:chrome/updater/event_history.cc:266] Emitted a UPDATER_PROCESS END event to the history log
+[34826:2914184:1117/041739.790387:VERBOSE1:chrome/updater/updater.cc:425] UpdaterMain (--crash-handler) returned 0.
+[34823:2914166:1117/041739.791409:VERBOSE2:chrome/updater/event_history.cc:266] Emitted a UPDATER_PROCESS END event to the history log
+[34823:2914166:1117/041739.791452:VERBOSE1:chrome/updater/updater.cc:425] UpdaterMain (--crash-handler) returned 0.
+PASS Fore cabin approach: fore lower starboard return to lawn [ -4.233538329772723, -40.55070114135742, -0.9742673363191883 ]
+PASS lawn to Fore cabin approach: fore lower port {
+  pos: [ -26, -36.41469955444336, 0.4261165166828691 ],
+  grounded: true,
+  blocker: null
+}
+Trying to load the allocator multiple times. This is *not* supported.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794907394.263250 2916507 environment.cc:526] Selected adapter: Apple M3 Pro, arch=metal-3, vendor=apple, backend=Metal, adapterType=Integrated GPU
+I0000 00:00:1794907394.267531 2916518 environment.cc:526] Selected adapter: Apple M3 Pro, arch=metal-3, vendor=apple, backend=Metal, adapterType=Integrated GPU
+sandbox_extension_issue_file failed for /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/157.0.8103.52/Helpers/Google Chrome Helper (Aperitif).app/Contents/Resources: 1 (Operation not permitted)
+PASS Fore cabin approach: fore lower port return to lawn [ -4.21270170035259, -40.55070114135742, -0.9872983008582644 ]
+[34790:2913463:1117/042359.171657:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:376] SharedImageManager::ProduceOverlay: Trying to Produce a Overlay representation from a non-existent mailbox.
+[34790:2913463:1117/042359.171707:ERROR:components/viz/service/display_embedder/skia_output_device_buffer_queue.cc:258] Invalid mailbox.
+BROWSER EXIT { code: 0, signal: null }
+Interior journey failures: []

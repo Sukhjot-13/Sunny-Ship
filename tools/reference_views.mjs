@@ -32,7 +32,14 @@ const views=[
  ['slide',[0,lawn+5,-22],[6,lawn+3,-12.5],'R04/R13'],
  ['swing',[-2,lawn+4,18],[6,lawn+2,10],'R04/R13'],
 ]
+for(const [name,node,side] of [['fore-rigging-port','Plane006',1],['fore-rigging-starboard','Plane007',-1]]){
+ const target=centre(node)
+ views.push([name,offset(target,[1,0,side*76]),target,'R01/R09',62])
+}
 if(meta.interiors.foreFacade){
+ const upperFloor=meta.interiors.levels.F2F
+ views.push(['fore-source-front',[10,upperFloor+10,cy],[-19,upperFloor+1,cy],'R09 elevated drawing comparison; camera height is reconstruction',62])
+ views.push(['fore-gallery-depth',[-3,upperFloor+8,cy],[-19,upperFloor+.6,cy],'R09 gallery depth/guard relationship; camera height is reconstruction',70])
  const upper=meta.interiors.doors.find(d=>d.id==='WomensDoor')
  const ports=meta.interiors.foreFacade.ports
  const target=[upper.pos[0],upper.pos[2]+1.25,-upper.pos[1]]

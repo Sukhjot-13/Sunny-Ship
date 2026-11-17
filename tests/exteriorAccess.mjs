@@ -120,8 +120,11 @@ try{
  assert.deepEqual(errors,[])
  console.log('PASS',process.env.ACCESS_FILTER??'both outdoor toilet thresholds and all three sourced ladders','full descents/ascents/closures and lawn returns; real W/E, no placement/flight/recovery')
 }catch(e){
- const page=(await browser.pages()).at(-1)
- trace.push({failure:e.message,...(diagnostics?{motion:await page?.evaluate(()=>window.__walkDiagnostics)}:{})});await page?.screenshot({path:'docs/review/stall-Exterior-access.png'});throw e
+ const page=(await browser.pages().catch(()=>[])).at(-1)
+ const motion=diagnostics&&page?await page.evaluate(()=>window.__walkDiagnostics).catch(error=>({unavailable:error.message})):undefined
+ trace.push({failure:e.message,...(diagnostics?{motion}: {})})
+ await page?.screenshot({path:'docs/review/stall-Exterior-access.png'}).catch(error=>trace.push({screenshotUnavailable:error.message}))
+ throw e
 }finally{
  fs.writeFileSync('docs/review/exterior-access-journeys.json',JSON.stringify({filter:process.env.ACCESS_FILTER??null,trace,errors},null,2));await browser.close()
 }

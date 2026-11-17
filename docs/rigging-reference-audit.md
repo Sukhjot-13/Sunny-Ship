@@ -5,3 +5,9 @@ R09 frontal fore-facade drawing places the ratline fans outside the cabin/scroll
 Next: compare front/side projections to the supplied images, then fit both lower fans along the actual outboard deck strips (vary longitudinal X, keep each side’s Y near its real deck edge). Retain/freshly fit all upper ends to the actual mast skin, real ratlines, measured floor contact and the lookout rope/ladder path. Proposed metre stations remain reconstruction, not source dimensions. Both source front and broadside views, attachment rays and normal access must verify the correction. Do not simply hide the grids or move unsupported feet into empty space.
 
 The separate lowered/gathered sail state is supported by R01. Keep all imported unlabelled rigging under review; metadata labels and old accepted tests alone do not establish canonical paths.
+
+## Source correction in progress
+
+Actual downward rays through the current exported native deck/sidewalks at six longitudinal stations X−14.5 through−9.5 find supported bands Y−14.5..−11.4 and13.7..16.5 at F1. The candidate uses the actual named sidewalk bounds to fit both lower fans near their outboard edges, varying X over .105 of the retained yard span with constant Y. These offsets/span are reconstructed; the source establishes direction and outboard relationship, not metre sizes. Upper endpoints are independently ray-fitted around the actual mast in the same longitudinal order. Every ratline passes through all six physical lines and each rod is a closed solid. Existing separate lookout access rope/ladder geometry and all controller dimensions remain unchanged.
+
+Candidate geometry, source/model front and broadside views, full outside access and exact reversible export remain required. The retained vertical rig/storey ratios are still part of the open whole-ship relative-scale audit.

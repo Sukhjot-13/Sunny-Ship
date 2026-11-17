@@ -714,6 +714,9 @@ for(const platform of ['Cylinder008','Cylinder012','Cylinder056']){
 for(const name of ['Plane006','Plane007']){
  const entries=riggingPoints.get(name)||[],points=uniqueRigPoints(entries),endpoints=riggingTags.get(name)?.sunny_shroud_endpoints
  assert.equal(endpoints?.length,12,name+' retains its six fan lines and recorded ends')
+ const feet=endpoints.slice(0,6)
+ assert(/^Sunny_LawnSidewalk-?1$/.test(riggingTags.get(name)?.sunny_shroud_deck),name+' identifies its actual outboard supporting deck')
+ assert(Math.max(...feet.map(p=>p[0]))-Math.min(...feet.map(p=>p[0]))>4&&Math.max(...feet.map(p=>p[1]))-Math.min(...feet.map(p=>p[1]))<.01,name+' must spread along the ship side, outside the cabin, as R01/R09 show')
  for(const [index,source] of endpoints.slice(6).entries()){
   const tip=new THREE.Vector3(source[0],source[2],-source[1]),base=endpoints[index]
   const axis=tip.clone().sub(new THREE.Vector3(base[0],base[2],-base[1])).normalize()

@@ -1,0 +1,1317 @@
+{
+  "trace": [
+    {
+      "label": "ForeDoor lawn approach",
+      "target": [
+        -4.4,
+        -40.55070114135742,
+        -1
+      ],
+      "position": [
+        -4.289999999999999,
+        -40.55070114135742,
+        -0.9900000000000001
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn approach",
+      "target": [
+        -5,
+        -40.55070114135742,
+        -1.6
+      ],
+      "position": [
+        -5.019663061395791,
+        -40.55070114135742,
+        -1.61689361612878
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn approach",
+      "target": [
+        -5.6000000000000005,
+        -40.55070114135742,
+        -2.2
+      ],
+      "position": [
+        -5.584399267850783,
+        -40.55070114135742,
+        -2.1843205363492824
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn approach",
+      "target": [
+        -6.2,
+        -40.55070114135742,
+        -2.8000000000000003
+      ],
+      "position": [
+        -6.237676314447779,
+        -40.55070114135742,
+        -2.837681191339298
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn approach",
+      "target": [
+        -6.800000000000001,
+        -40.55070114135742,
+        -3.4000000000000004
+      ],
+      "position": [
+        -6.7889517379151485,
+        -40.55070114135742,
+        -3.3889518374233956
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn approach",
+      "target": [
+        -7.4,
+        -40.55070114135742,
+        -4
+      ],
+      "position": [
+        -7.4319305206712345,
+        -40.55070114135742,
+        -4.0319305153457226
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn approach",
+      "target": [
+        -8,
+        -40.55070114135742,
+        -4.6000000000000005
+      ],
+      "position": [
+        -7.977517017410592,
+        -40.55070114135742,
+        -4.577517017194406
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn approach",
+      "target": [
+        -8.6,
+        -40.55070114135742,
+        -5.2
+      ],
+      "position": [
+        -8.625774290568287,
+        -40.55070114135742,
+        -5.225774290577393
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn approach",
+      "target": [
+        -9.200000000000001,
+        -40.55070114135742,
+        -5.800000000000001
+      ],
+      "position": [
+        -9.17281615177672,
+        -40.55070114135742,
+        -5.772816151777164
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn approach",
+      "target": [
+        -9.8,
+        -40.55070114135742,
+        -6.4
+      ],
+      "position": [
+        -9.810739437356016,
+        -40.55070114135742,
+        -6.410739437356009
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn approach",
+      "target": [
+        -10.4,
+        -40.55070114135742,
+        -7
+      ],
+      "position": [
+        -10.436626670433462,
+        -40.55070114135742,
+        -7.0366266704334635
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn approach",
+      "target": [
+        -11,
+        -40.55070114135742,
+        -7.6000000000000005
+      ],
+      "position": [
+        -10.964789246067266,
+        -40.55070114135742,
+        -7.564789246067269
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn approach",
+      "target": [
+        -11.600000000000001,
+        -40.55070114135742,
+        -8.200000000000001
+      ],
+      "position": [
+        -11.592823340185998,
+        -40.55070114135742,
+        -8.192823340185997
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn approach",
+      "target": [
+        -12.200000000000001,
+        -40.55070114135742,
+        -8.8
+      ],
+      "position": [
+        -12.228433888620216,
+        -40.55070114135742,
+        -8.828433888620216
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn approach",
+      "target": [
+        -12.4,
+        -40.55070114135742,
+        -9
+      ],
+      "position": [
+        -12.371845723809736,
+        -40.55070114135742,
+        -8.971845723809736
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn approach",
+      "target": [
+        -13.200000000000001,
+        -40.55070114135742,
+        -9
+      ],
+      "position": [
+        -13.167631982044616,
+        -40.55070114135742,
+        -8.99891843542551
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn approach",
+      "target": [
+        -14.4,
+        -40.55070114135742,
+        -9
+      ],
+      "position": [
+        -14.454958872729614,
+        -40.55070114135742,
+        -9.000048320907307
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn approach",
+      "target": [
+        -15.200000000000001,
+        -40.55070114135742,
+        -9
+      ],
+      "position": [
+        -15.238015712639061,
+        -40.55070114135742,
+        -8.999997559299063
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn approach",
+      "target": [
+        -16,
+        -40.55070114135742,
+        -9
+      ],
+      "position": [
+        -15.983208302361572,
+        -40.55070114135742,
+        -8.999999943181408
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor precise outside stance",
+      "target": [
+        -15.977142857142857,
+        -40.55071716308594,
+        -9.02
+      ],
+      "position": [
+        -15.983385022441455,
+        -40.55070114135742,
+        -8.999999943749936
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor actual threshold crossing",
+      "target": [
+        -17.777142857142856,
+        -40.55071716308594,
+        -9.02
+      ],
+      "position": [
+        -17.84155040925449,
+        -40.55070114135742,
+        -9.02071813220554
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor reverse threshold crossing",
+      "target": [
+        -15.977142857142857,
+        -40.55071716308594,
+        -9.02
+      ],
+      "position": [
+        -15.961605862364404,
+        -40.55070114135742,
+        -9.019993999439333
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn return",
+      "target": [
+        -15.200000000000001,
+        -40.55070114135742,
+        -9
+      ],
+      "position": [
+        -15.133405241002958,
+        -40.55070114135742,
+        -8.998251750143003
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn return",
+      "target": [
+        -14.4,
+        -40.55070114135742,
+        -9
+      ],
+      "position": [
+        -14.453607971020656,
+        -40.55070114135742,
+        -8.999873560466698
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn return",
+      "target": [
+        -13.200000000000001,
+        -40.55070114135742,
+        -9
+      ],
+      "position": [
+        -13.093614203653322,
+        -40.55070114135742,
+        -9.000010719946863
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn return",
+      "target": [
+        -12.4,
+        -40.55070114135742,
+        -9
+      ],
+      "position": [
+        -12.41360798048428,
+        -40.55070114135742,
+        -9.000000213159714
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn return",
+      "target": [
+        -12.200000000000001,
+        -40.55070114135742,
+        -8.8
+      ],
+      "position": [
+        -12.247874424709636,
+        -40.55070114135742,
+        -8.84485831298987
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn return",
+      "target": [
+        -11.600000000000001,
+        -40.55070114135742,
+        -8.200000000000001
+      ],
+      "position": [
+        -11.613046971613208,
+        -40.55070114135742,
+        -8.21298710919782
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn return",
+      "target": [
+        -11,
+        -40.55070114135742,
+        -7.6000000000000005
+      ],
+      "position": [
+        -10.994073178448724,
+        -40.55070114135742,
+        -7.594073836123914
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn return",
+      "target": [
+        -10.4,
+        -40.55070114135742,
+        -7
+      ],
+      "position": [
+        -10.37473637526977,
+        -40.55070114135742,
+        -6.974736348951668
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn return",
+      "target": [
+        -9.8,
+        -40.55070114135742,
+        -6.4
+      ],
+      "position": [
+        -9.770814386340549,
+        -40.55070114135742,
+        -6.370814387655832
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn return",
+      "target": [
+        -9.200000000000001,
+        -40.55070114135742,
+        -5.800000000000001
+      ],
+      "position": [
+        -9.173663020426963,
+        -40.55070114135742,
+        -5.773663020367196
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn return",
+      "target": [
+        -8.6,
+        -40.55070114135742,
+        -5.2
+      ],
+      "position": [
+        -8.58539884589131,
+        -40.55070114135742,
+        -5.185398845892792
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn return",
+      "target": [
+        -8,
+        -40.55070114135742,
+        -4.6000000000000005
+      ],
+      "position": [
+        -7.985421544559514,
+        -40.55070114135742,
+        -4.585421544559477
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn return",
+      "target": [
+        -7.4,
+        -40.55070114135742,
+        -4
+      ],
+      "position": [
+        -7.40229058580558,
+        -40.55070114135742,
+        -4.002290585805581
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn return",
+      "target": [
+        -6.800000000000001,
+        -40.55070114135742,
+        -3.4000000000000004
+      ],
+      "position": [
+        -6.829780059590909,
+        -40.55070114135742,
+        -3.429780059590911
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn return",
+      "target": [
+        -6.2,
+        -40.55070114135742,
+        -2.8000000000000003
+      ],
+      "position": [
+        -6.16603788262446,
+        -40.55070114135742,
+        -2.7660378826244614
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn return",
+      "target": [
+        -5.6000000000000005,
+        -40.55070114135742,
+        -2.2
+      ],
+      "position": [
+        -5.607459318524385,
+        -40.55070114135742,
+        -2.207459318524382
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn return",
+      "target": [
+        -5,
+        -40.55070114135742,
+        -1.6
+      ],
+      "position": [
+        -5.0290332213479925,
+        -40.55070114135742,
+        -1.6290332213479919
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn return",
+      "target": [
+        -4.4,
+        -40.55070114135742,
+        -1
+      ],
+      "position": [
+        -4.336882015487033,
+        -40.55070114135742,
+        -0.9368820154870334
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor lawn return",
+      "target": [
+        -4.2,
+        -40.55070114135742,
+        -1
+      ],
+      "position": [
+        -4.233573296040397,
+        -40.55070114135742,
+        -0.9844438556691149
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoor original spawn",
+      "target": [
+        -4.289999999999999,
+        -40.55071716308594,
+        -0.9900000000000001
+      ],
+      "position": [
+        -4.233499305653873,
+        -40.55070114135742,
+        -0.9844779697529265
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn approach",
+      "target": [
+        -4.800000000000001,
+        -40.55070114135742,
+        -0.4
+      ],
+      "position": [
+        -4.784015005708751,
+        -40.55070114135742,
+        -0.41649223838630395
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn approach",
+      "target": [
+        -5.4,
+        -40.55070114135742,
+        0.2
+      ],
+      "position": [
+        -5.459811602856807,
+        -40.55070114135742,
+        0.25986117010212045
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn approach",
+      "target": [
+        -6,
+        -40.55070114135742,
+        0.8
+      ],
+      "position": [
+        -5.9587755531422,
+        -40.55070114135742,
+        0.75877937475938
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn approach",
+      "target": [
+        -6.6000000000000005,
+        -40.55070114135742,
+        1.4000000000000001
+      ],
+      "position": [
+        -6.619704912788496,
+        -40.55070114135742,
+        1.419704793856368
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn approach",
+      "target": [
+        -7.2,
+        -40.55070114135742,
+        2
+      ],
+      "position": [
+        -7.2326900444322,
+        -40.55070114135742,
+        2.032690051038705
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn approach",
+      "target": [
+        -7.800000000000001,
+        -40.55070114135742,
+        2.6
+      ],
+      "position": [
+        -7.784588062254745,
+        -40.55070114135742,
+        2.584588062441359
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn approach",
+      "target": [
+        -8.4,
+        -40.55070114135742,
+        3.2
+      ],
+      "position": [
+        -8.451244046759339,
+        -40.55070114135742,
+        3.2512440467436807
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn approach",
+      "target": [
+        -9,
+        -40.55070114135742,
+        3.8000000000000003
+      ],
+      "position": [
+        -9.062163619910086,
+        -40.55070114135742,
+        3.862163619911855
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn approach",
+      "target": [
+        -9.600000000000001,
+        -40.55070114135742,
+        4.4
+      ],
+      "position": [
+        -9.613941306761332,
+        -40.55070114135742,
+        4.413941306761276
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn approach",
+      "target": [
+        -10.200000000000001,
+        -40.55070114135742,
+        5
+      ],
+      "position": [
+        -10.275140880806257,
+        -40.55070114135742,
+        5.075140880806263
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn approach",
+      "target": [
+        -10.8,
+        -40.55070114135742,
+        5.6000000000000005
+      ],
+      "position": [
+        -10.831374878205725,
+        -40.55070114135742,
+        5.6313748782057225
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn approach",
+      "target": [
+        -11.4,
+        -40.55070114135742,
+        6.2
+      ],
+      "position": [
+        -11.43295898375504,
+        -40.55070114135742,
+        6.232958983755045
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn approach",
+      "target": [
+        -12,
+        -40.55070114135742,
+        6.800000000000001
+      ],
+      "position": [
+        -12.018963426749606,
+        -40.55070114135742,
+        6.818963426749608
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn approach",
+      "target": [
+        -12.8,
+        -40.55070114135742,
+        6.800000000000001
+      ],
+      "position": [
+        -12.84355399699867,
+        -40.55070114135742,
+        6.798938123879202
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn approach",
+      "target": [
+        -13.600000000000001,
+        -40.55070114135742,
+        6.800000000000001
+      ],
+      "position": [
+        -13.568753339408563,
+        -40.55070114135742,
+        6.799954992210523
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn approach",
+      "target": [
+        -14.8,
+        -40.55070114135742,
+        6.800000000000001
+      ],
+      "position": [
+        -14.751918938663362,
+        -40.55070114135742,
+        6.799998270879666
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn approach",
+      "target": [
+        -15.600000000000001,
+        -40.55070114135742,
+        6.800000000000001
+      ],
+      "position": [
+        -15.63673274976994,
+        -40.55070114135742,
+        6.800000075598221
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn approach",
+      "target": [
+        -16,
+        -40.55070114135742,
+        6.800000000000001
+      ],
+      "position": [
+        -15.964200592475644,
+        -40.55070114135742,
+        6.800000007511882
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard precise outside stance",
+      "target": [
+        -15.977142857142857,
+        -40.55071716308594,
+        6.820000000000001
+      ],
+      "position": [
+        -15.964289674383675,
+        -40.55070114135742,
+        6.8000000074932
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard actual threshold crossing",
+      "target": [
+        -17.777142857142856,
+        -40.55071716308594,
+        6.820000000000001
+      ],
+      "position": [
+        -17.79202026009668,
+        -40.55070114135742,
+        6.820164132451321
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard reverse threshold crossing",
+      "target": [
+        -15.977142857142857,
+        -40.55071716308594,
+        6.820000000000001
+      ],
+      "position": [
+        -15.947387637597705,
+        -40.55070114135742,
+        6.819997289449765
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn return",
+      "target": [
+        -15.600000000000001,
+        -40.55070114135742,
+        6.800000000000001
+      ],
+      "position": [
+        -15.608134280931441,
+        -40.55070114135742,
+        6.800468023792916
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn return",
+      "target": [
+        -14.8,
+        -40.55070114135742,
+        6.800000000000001
+      ],
+      "position": [
+        -14.701464306465118,
+        -40.55070114135742,
+        6.799942541932984
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn return",
+      "target": [
+        -13.600000000000001,
+        -40.55070114135742,
+        6.800000000000001
+      ],
+      "position": [
+        -13.537857907442753,
+        -40.55070114135742,
+        6.800003244855792
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn return",
+      "target": [
+        -12.8,
+        -40.55070114135742,
+        6.800000000000001
+      ],
+      "position": [
+        -12.858026930063401,
+        -40.55070114135742,
+        6.800000253398014
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn return",
+      "target": [
+        -12,
+        -40.55070114135742,
+        6.800000000000001
+      ],
+      "position": [
+        -11.951364285639198,
+        -40.55070114135742,
+        6.7999999855801
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn return",
+      "target": [
+        -11.4,
+        -40.55070114135742,
+        6.2
+      ],
+      "position": [
+        -11.346268057287226,
+        -40.55070114135742,
+        6.141539377004848
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn return",
+      "target": [
+        -10.8,
+        -40.55070114135742,
+        5.6000000000000005
+      ],
+      "position": [
+        -10.786540883328758,
+        -40.55070114135742,
+        5.586655897689849
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn return",
+      "target": [
+        -10.200000000000001,
+        -40.55070114135742,
+        5
+      ],
+      "position": [
+        -10.163800530211978,
+        -40.55070114135742,
+        4.963793533328046
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn return",
+      "target": [
+        -9.600000000000001,
+        -40.55070114135742,
+        4.4
+      ],
+      "position": [
+        -9.537323066104642,
+        -40.55070114135742,
+        4.337323842365939
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn return",
+      "target": [
+        -9,
+        -40.55070114135742,
+        3.8000000000000003
+      ],
+      "position": [
+        -8.941173643614134,
+        -40.55070114135742,
+        3.741173558798848
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn return",
+      "target": [
+        -8.4,
+        -40.55070114135742,
+        3.2
+      ],
+      "position": [
+        -8.336875460631695,
+        -40.55070114135742,
+        3.1368754705072646
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn return",
+      "target": [
+        -7.800000000000001,
+        -40.55070114135742,
+        2.6
+      ],
+      "position": [
+        -7.751662633908378,
+        -40.55070114135742,
+        2.551662633022093
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn return",
+      "target": [
+        -7.2,
+        -40.55070114135742,
+        2
+      ],
+      "position": [
+        -7.181949529142733,
+        -40.55070114135742,
+        1.9819495291715485
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn return",
+      "target": [
+        -6.6000000000000005,
+        -40.55070114135742,
+        1.4000000000000001
+      ],
+      "position": [
+        -6.614105604566647,
+        -40.55070114135742,
+        1.4141056045673683
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn return",
+      "target": [
+        -6,
+        -40.55070114135742,
+        0.8
+      ],
+      "position": [
+        -6.040738883628545,
+        -40.55070114135742,
+        0.8407388836285945
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn return",
+      "target": [
+        -5.4,
+        -40.55070114135742,
+        0.2
+      ],
+      "position": [
+        -5.337760119937995,
+        -40.55070114135742,
+        0.13776011993799053
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn return",
+      "target": [
+        -4.800000000000001,
+        -40.55070114135742,
+        -0.4
+      ],
+      "position": [
+        -4.770995169609393,
+        -40.55070114135742,
+        -0.4290048303906055
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard lawn return",
+      "target": [
+        -4.2,
+        -40.55070114135742,
+        -1
+      ],
+      "position": [
+        -4.227228310556326,
+        -40.55070114135742,
+        -0.972771689443674
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    },
+    {
+      "label": "ForeDoorStarboard original spawn",
+      "target": [
+        -4.289999999999999,
+        -40.55071716308594,
+        -0.9900000000000001
+      ],
+      "position": [
+        -4.22716120238897,
+        -40.55070114135742,
+        -0.9728387976110302
+      ],
+      "grounded": true,
+      "recoveries": 0,
+      "blocker": null
+    }
+  ],
+  "errors": []
+}

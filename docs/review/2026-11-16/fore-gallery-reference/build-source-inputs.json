@@ -1,0 +1,8 @@
+{
+  "tools/sunny_accuracy.py": "41049bbf77f2d1d307ecf1933f0c0db29d69a5e3e413f2a7fa64f592f5b3aa3d",
+  "tools/sunny_fore_facade.py": "e267ec5fa1b70e05a5d2a006275aff0be153d1f94fc550b096d36838abed79aa",
+  "tools/sunny_exterior.py": "ab9802c82f6c7b2f1427d81884c0ea421366f4b59464bad45dada90ad6a2c5a5",
+  "tools/sunny_uv.py": "2f799970ade9a0e2eb5a1c8fb37e70df7c52a9a7bd9a84e32c195e689f0a0984",
+  "tests/foreGalleryFixture.py": "7e9893d61fef24943572ba91c43b5b48ac985ec3b5e13d623a1fb97dd6ae7190",
+  "tests/foreGalleryReference.test.mjs": "d6f186649abbc59604c884b322b7ea1bf5edc3e87f383307a580df04ec6c7cd2"
+}

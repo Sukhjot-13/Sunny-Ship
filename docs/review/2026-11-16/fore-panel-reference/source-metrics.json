@@ -1,0 +1,455 @@
+{
+  "source": "stuff/images/Thousand_Sunny%27s_Men_and_Woman_Quarters.webp",
+  "sourceSha256": "2cbccc4e1c6e28a78189d7e82aa84f53e1ea152b180173969e26ed494cd83218",
+  "size": [
+    1553,
+    1200
+  ],
+  "roi": [
+    300,
+    205,
+    520,
+    265
+  ],
+  "results": [
+    {
+      "threshold": 100,
+      "found": [
+        {
+          "box": [
+            458,
+            221,
+            482,
+            251
+          ],
+          "width": 25,
+          "height": 31,
+          "centre": [
+            470,
+            236
+          ],
+          "count": 105
+        },
+        {
+          "box": [
+            389,
+            223,
+            421,
+            254
+          ],
+          "width": 33,
+          "height": 32,
+          "centre": [
+            405,
+            238.5
+          ],
+          "count": 151
+        },
+        {
+          "box": [
+            464,
+            227,
+            480,
+            243
+          ],
+          "width": 17,
+          "height": 17,
+          "centre": [
+            472,
+            235
+          ],
+          "count": 130
+        },
+        {
+          "box": [
+            395,
+            229,
+            412,
+            247
+          ],
+          "width": 18,
+          "height": 19,
+          "centre": [
+            403.5,
+            238
+          ],
+          "count": 157
+        }
+      ],
+      "complete": false
+    },
+    {
+      "threshold": 140,
+      "found": [
+        {
+          "box": [
+            458,
+            220,
+            487,
+            251
+          ],
+          "width": 30,
+          "height": 32,
+          "centre": [
+            472.5,
+            235.5
+          ],
+          "count": 188
+        },
+        {
+          "box": [
+            388,
+            222,
+            421,
+            254
+          ],
+          "width": 34,
+          "height": 33,
+          "centre": [
+            404.5,
+            238
+          ],
+          "count": 184
+        },
+        {
+          "box": [
+            464,
+            226,
+            480,
+            243
+          ],
+          "width": 17,
+          "height": 18,
+          "centre": [
+            472,
+            234.5
+          ],
+          "count": 149
+        },
+        {
+          "box": [
+            394,
+            229,
+            412,
+            247
+          ],
+          "width": 19,
+          "height": 19,
+          "centre": [
+            403,
+            238
+          ],
+          "count": 180
+        }
+      ],
+      "complete": true,
+      "spacingToOuterWidth": 2.125,
+      "clearToOuterWidths": [
+        0.5588235294117647,
+        0.5666666666666667
+      ]
+    },
+    {
+      "threshold": 180,
+      "found": [
+        {
+          "box": [
+            458,
+            220,
+            487,
+            251
+          ],
+          "width": 30,
+          "height": 32,
+          "centre": [
+            472.5,
+            235.5
+          ],
+          "count": 225
+        },
+        {
+          "box": [
+            388,
+            222,
+            421,
+            255
+          ],
+          "width": 34,
+          "height": 34,
+          "centre": [
+            404.5,
+            238.5
+          ],
+          "count": 224
+        },
+        {
+          "box": [
+            464,
+            226,
+            480,
+            243
+          ],
+          "width": 17,
+          "height": 18,
+          "centre": [
+            472,
+            234.5
+          ],
+          "count": 167
+        },
+        {
+          "box": [
+            394,
+            228,
+            413,
+            247
+          ],
+          "width": 20,
+          "height": 20,
+          "centre": [
+            403.5,
+            237.5
+          ],
+          "count": 209
+        }
+      ],
+      "complete": true,
+      "spacingToOuterWidth": 2.125,
+      "clearToOuterWidths": [
+        0.5882352941176471,
+        0.5666666666666667
+      ]
+    }
+  ],
+  "panel": {
+    "approximateX": [
+      287,
+      533
+    ],
+    "pairMeanX": 438.5,
+    "meanOuterDiameter": 32,
+    "centreFraction": 0.6158536585365854,
+    "diameterFraction": 0.13008130081300814,
+    "limits": "Panel boundary is a disclosed approximate landmark correspondence; circle contours are measured directly."
+  },
+  "railColumns": [
+    {
+      "sourceX": 310,
+      "inkRunsY": [
+        [
+          263,
+          265
+        ],
+        [
+          272,
+          272
+        ],
+        [
+          295,
+          296
+        ],
+        [
+          304,
+          305
+        ]
+      ],
+      "complete": true,
+      "fullGuardPixels": 42,
+      "pitchToFullGuard": 0.40476190476190477
+    },
+    {
+      "sourceX": 328,
+      "inkRunsY": [
+        [
+          264,
+          266
+        ],
+        [
+          272,
+          272
+        ],
+        [
+          294,
+          295
+        ],
+        [
+          303,
+          304
+        ]
+      ],
+      "complete": true,
+      "fullGuardPixels": 40,
+      "pitchToFullGuard": 0.425
+    },
+    {
+      "sourceX": 345,
+      "inkRunsY": [
+        [
+          264,
+          265
+        ],
+        [
+          270,
+          271
+        ],
+        [
+          292,
+          294
+        ],
+        [
+          303,
+          304
+        ]
+      ],
+      "complete": true,
+      "fullGuardPixels": 40,
+      "pitchToFullGuard": 0.425
+    },
+    {
+      "sourceX": 362,
+      "inkRunsY": [
+        [
+          264,
+          265
+        ],
+        [
+          270,
+          272
+        ],
+        [
+          292,
+          293
+        ],
+        [
+          302,
+          303
+        ]
+      ],
+      "complete": true,
+      "fullGuardPixels": 39,
+      "pitchToFullGuard": 0.4358974358974359
+    },
+    {
+      "sourceX": 379,
+      "inkRunsY": [
+        [
+          264,
+          266
+        ],
+        [
+          270,
+          271
+        ],
+        [
+          291,
+          292
+        ],
+        [
+          302,
+          303
+        ]
+      ],
+      "complete": true,
+      "fullGuardPixels": 39,
+      "pitchToFullGuard": 0.4358974358974359
+    },
+    {
+      "sourceX": 396,
+      "inkRunsY": [
+        [
+          264,
+          265
+        ],
+        [
+          270,
+          271
+        ],
+        [
+          290,
+          292
+        ],
+        [
+          302,
+          303
+        ]
+      ],
+      "complete": true,
+      "fullGuardPixels": 39,
+      "pitchToFullGuard": 0.4358974358974359
+    },
+    {
+      "sourceX": 413,
+      "inkRunsY": [
+        [
+          262,
+          264
+        ],
+        [
+          268,
+          268
+        ],
+        [
+          292,
+          293
+        ],
+        [
+          301,
+          302
+        ]
+      ],
+      "complete": true,
+      "fullGuardPixels": 40,
+      "pitchToFullGuard": 0.425
+    },
+    {
+      "sourceX": 430,
+      "inkRunsY": [
+        [
+          262,
+          263
+        ],
+        [
+          268,
+          268
+        ],
+        [
+          292,
+          293
+        ],
+        [
+          301,
+          302
+        ]
+      ],
+      "complete": true,
+      "fullGuardPixels": 40,
+      "pitchToFullGuard": 0.425
+    },
+    {
+      "sourceX": 447,
+      "inkRunsY": [
+        [
+          262,
+          263
+        ],
+        [
+          267,
+          268
+        ],
+        [
+          290,
+          291
+        ],
+        [
+          300,
+          301
+        ]
+      ],
+      "complete": true,
+      "fullGuardPixels": 39,
+      "pitchToFullGuard": 0.4358974358974359
+    }
+  ],
+  "railLimits": "Nine clear gaps identify four upper/lower rail outlines. Full guard height includes both broad rails; use the separately observed17px post pitch, not only the open shaft gap.",
+  "limits": "Same-panel adjacent circle ratios from supplied hand drawing. Fragmented contours are excluded; perspective/sketch uncertainty remains. No canonical metre size or whole-ship scale is inferred."
+}

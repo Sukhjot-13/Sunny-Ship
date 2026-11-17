@@ -109,7 +109,8 @@ def metric_uv(obj):
     door_across=Vector((math.cos(door_rotation),math.sin(door_rotation),0))
     used = {mesh.materials[f.material_index].name for f in mesh.polygons}
     leaf = bool(re.search(r'_lea(?:f|ves)', name)) and used <= {'Sunny_leaf', 'Sunny_leaflight'}
-    cylinder = name in MASTS or bool(re.search(r'_(?:branch|twig|trunk|rung|rope|ladder_rail)', name))
+    cylinder = (name in MASTS or bool(re.search(r'_(?:branch|twig|trunk|rung|rope|ladder_rail)', name))
+                or bool(obj.get('sunny_fore_gallery_guard')))
     boards = (name in {'Line002', 'Line006', 'Box118', 'Box119', 'Box121', 'Line012'} or
               bool(re.search(r'(?:Deck|Landing|Sidewalk|Approach|Balcony_(?:floor|access)|SternAccess_(?:floor|neck)|InteriorFloor)', name)))
     tree = bool(re.search(r'(?:Mikan|ShadeTree|Swing_branch)', name))

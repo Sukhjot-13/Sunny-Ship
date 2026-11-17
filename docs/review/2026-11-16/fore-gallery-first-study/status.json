@@ -1,0 +1,10 @@
+{
+  "status": "NOT ACCEPTED / NOT APPLIED",
+  "findings": [
+    "actual exported guard UV tag is planar; current source UV correction was not loaded in this generation",
+    "source full rail height includes both broad bands: median40px with17px pitch, ratio~.425; first .65 pitch/height target used inherited height and is insufficient",
+    "native fixture first UV replay shadowed its full-points variable with a face subset; corrected source and fresh rerun required"
+  ],
+  "live": "unchanged port-ratio generation at5173",
+  "candidate": "/private/tmp/sunny-fore-gallery-candidate"
+}

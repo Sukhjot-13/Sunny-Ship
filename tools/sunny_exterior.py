@@ -1064,11 +1064,12 @@ def add_fittings(objects, vertex_bbox, frame, interiors):
     front_layout=facade_layout(levels,cy)
     add_front_ornaments(objects,interiors,front_layout)
     add_front_ports(objects,interiors,front_layout)
-    from sunny_fore_facade import fore_front_ports,fore_front_finish,fore_entry_surrounds,fore_upper_entry_depth
+    from sunny_fore_facade import fore_front_ports,fore_front_finish,fore_entry_surrounds,fore_upper_entry_depth,fore_gallery_guards
     fore_front_ports(objects,interiors,cy)
     fore_front_finish(interiors)
     fore_entry_surrounds(interiors)
     fore_upper_entry_depth(interiors)
+    fore_gallery_guards(interiors)
 
     # ---- hatches, with a real opening beneath each one ------------------
     def shaft(x0, x1, y0, y1, z0, z1):

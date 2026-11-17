@@ -1,0 +1,14 @@
+{
+  "source": "stuff/images/Thousand_Sunny%27s_Men_and_Woman_Quarters.webp",
+  "sourceSHA": "2cbccc4e1c6e28a78189d7e82aa84f53e1ea152b180173969e26ed494cd83218",
+  "approximatePanelX": [
+    287,
+    533
+  ],
+  "measuredPairMeanX": 438.5,
+  "measuredMeanOuterDiameter": 32,
+  "centreFraction": 0.6158536585365854,
+  "diameterFraction": 0.13008130081300814,
+  "limit": "Approximate front-panel correspondence to retained gallery span; perspective/ink boundaries and hidden metre depths remain reconstruction.",
+  "actualSupportRays": "Both proposed centres meet Sunny_ForeF2_shell atX\u221218.410/\u221218.590 and native Line002 cap atX\u221220.2855; exact current geometry supports both complete bores."
+}

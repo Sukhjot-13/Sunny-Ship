@@ -1,0 +1,8 @@
+{
+  "url": "http://localhost:5173",
+  "assets": {
+    "sunny.glb": "adb9b7d8254d33807b585dcc07f6eef915c990936faf768cf806e1d14a42792a",
+    "sunny-collision.glb": "92e3194435a7a1cdacf0e10104d868837b8853b71dd6edc21bec040ac4a771f4",
+    "ship-metadata.json": "5226a99c1ba0b0ae19c1b5f105c97831f9d92296d40cebdef9b5c7d25badb86e"
+  }
+}

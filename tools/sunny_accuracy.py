@@ -1841,11 +1841,11 @@ def scalloped_soffit(obj, bounds, throat):
 
 
 def fore_shrouds(objects,bounds,levels):
-    """N/A's paired fan shrouds: deck attachments, ratlines, and yard endpoints."""
+    """R01/R09's outboard longitudinal fans, fitted to real deck and mast."""
     mast=next(o for o in objects if o.name=='Cylinder003');a,b=bounds(mast)
     mx,my=(a.x+b.x)/2,(a.y+b.y)/2
     yard=next(o for o in objects if o.name=='Cylinder004');ya,yb=bounds(yard)
-    top=ya.z-.25;floor=levels['F1']+.04
+    top=ya.z-.25
     mast_surface = yard_skin(mast)
     rope=bpy.data.materials.get('Sunny_tarred_rope')
     if rope is None:
@@ -1860,23 +1860,38 @@ def fore_shrouds(objects,bounds,levels):
         verts,faces=[],[]
         def rod(start,end,radius):
             p,q=Vector(start),Vector(end);direction=(q-p).normalized()
-            u=direction.cross(Vector((1,0,0))).normalized();v=direction.cross(u)
+            reference=Vector((0,0,1)) if abs(direction.x)>.9 else Vector((1,0,0))
+            u=direction.cross(reference).normalized();v=direction.cross(u)
             offset=len(verts)
             for centre in (p,q):
                 for k in range(8):
                     t=k*math.tau/8;verts.append(centre+radius*(math.cos(t)*u+math.sin(t)*v))
             for k in range(8):faces.append((offset+k,offset+(k+1)%8,offset+(k+1)%8+8,offset+k+8))
-        bottom=[Vector((mx+1.65,my+side*(3.6+i*.95),floor)) for i in range(6)]
+            faces.extend((tuple(offset+k for k in reversed(range(8))),
+                          tuple(offset+8+k for k in range(8))))
+        # The source fixes the fan orientation/outboard relationship, not metre
+        # stations. Fit the retained six lines inside each actual deck strip;
+        # .105 yard span and the one-metre aft bias remain reconstruction.
+        deck=bpy.data.objects['Sunny_LawnSidewalk%d'%(-side)]
+        da,db=bounds(deck)
+        half_span=(yb.y-ya.y)*.105/2
+        centre_x=max(da.x+half_span+.15,min(mx+1.0,db.x-half_span-.15))
+        edge_y=db.y-.18 if side>0 else da.y+.18
+        floor=db.z-.018
+        bottom=[Vector((centre_x-half_span+2*half_span*i/5,edge_y,floor)) for i in range(6)]
         upper=[fitted_radial_attachment(mast_surface, (mx,my,top),
-                                       (.18,side*(.42+i*.16),0)) for i in range(6)]
+                                       ((i-2.5)*.15,side*.60,0)) for i in range(6)]
         for p,q in zip(bottom,upper):rod(p,q,.048)
         count=math.ceil((top-floor)/.36)
         for i in range(1,count):
             t=i/count
-            rod(bottom[0].lerp(upper[0],t),bottom[-1].lerp(upper[-1],t),.025)
+            row=[p.lerp(q,t) for p,q in zip(bottom,upper)]
+            for p,q in zip(row,row[1:]):rod(p,q,.025)
         replace(obj,verts,faces,'rope');obj.data.materials[0]=rope
         obj['sunny_shroud_endpoints']=[list(p) for p in bottom+upper]
         obj['sunny_shroud_side']='port' if side<0 else 'starboard'
+        obj['sunny_shroud_deck']=deck.name
+        obj['sunny_shroud_reference']='R01/R09: longitudinal outboard fan; exact span/stations reconstructed'
 
 
 def mast_platforms(objects,bounds):

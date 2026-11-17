@@ -1,0 +1,10 @@
+{
+  "old": "/private/tmp/sunny-fore-shroud-candidate/sunny-collision.glb",
+  "oldSHA": "c7a88c3a1413d2de0637b2b0085c0b9c7433d5771fcf61b8b6865230dd40d9d7",
+  "next": "/private/tmp/sunny-fore-gallery-source-candidate/sunny-collision.glb",
+  "nextSHA": "5740506f337b1f069ee0aceb6d48d7d4eec58d52dd6386660293edb789739c23",
+  "unchangedOutsideGuardBoxes": 208402,
+  "unchangedFloorBoxes": 15074,
+  "status": "PASS: exact names/order/Float32 bounds/floor roles for every non-gallery-guard collider",
+  "scope": "Only COLL_Rail_Box070/084 physical sections are excluded; all other static collision remains exactly equal to the completed shroud outside journey."
+}

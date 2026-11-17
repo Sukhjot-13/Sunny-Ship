@@ -7,13 +7,107 @@ from sunny_exterior import _mesh,finish,pole,ring,clip_face,material,assign_worl
 from sunny_aft_facade import cut_front_circle,entrance_surround
 
 
-def fore_port_layout():
-    """R09 same-panel source ratios; overall metre size remains under audit."""
-    outer=.555
+def fore_port_layout(centre):
+    """R09 pair/rim ratios and placement within the actual port-side panel.
+
+    Approximate source panel287..533 and pair mean438.5 locate the windows
+    over the gallery, not over its stair gap. Perspective limits the panel
+    correspondence; no source metre dimensions are inferred.
+    """
+    panel=bpy.data.objects['Box070']
+    points=[panel.matrix_world@v.co for v in panel.data.vertices]
+    low,high=min(p.y for p in points),max(p.y for p in points)
+    span=high-low
+    outer=span*(32/246)/2
+    midpoint=low+span*((438.5-287)/246)
     spacing=2*outer*2.125
     return dict(outerRadius=outer,radius=outer*.56,spacing=spacing,
-                offsets=[-6-spacing/2,-6+spacing/2],
+                offsets=[midpoint-centre-spacing/2,midpoint-centre+spacing/2],
+                panel=[low,high],panelCentreRatio=(438.5-287)/246,
                 sourceSpacingRatio=2.125,sourceClearRatio=.56)
+
+
+def fore_gallery_guards(interiors):
+    """R09's close shaped balusters, retaining native below-deck construction.
+
+    Nine source gaps give approximately40px full rail height and17px pitch.
+    Height uses the same-panel lower-storey relationship; metre dimensions and
+    the waisted profile remain reconstruction. Native span/stair gaps remain.
+    """
+    bpy.context.view_layer.update()
+    floor=interiors['levels']['F2F'];records=[]
+    for name in ('Box070','Box084'):
+        obj=bpy.data.objects[name]
+        points=[obj.matrix_world@v.co for v in obj.data.vertices]
+        low=Vector(tuple(min(p[i] for p in points) for i in range(3)))
+        high=Vector(tuple(max(p[i] for p in points) for i in range(3)))
+        height=(floor-interiors['levels']['F1'])*.36
+        depth=high.x-low.x;cx=(low.x+high.x)/2
+        if not .5<height<2 or not .05<depth<.4:
+            raise RuntimeError(name+' has no usable retained gallery guard envelope')
+        # Preserve all native construction below the standing surface, including
+        # fascia and supports. Close only fresh plane-cut edges, not old holes.
+        bm=bmesh.new();bm.from_mesh(obj.data)
+        for vertex in bm.verts:vertex.co=obj.matrix_world@vertex.co
+        plane=floor-.025
+        bmesh.ops.bisect_plane(bm,geom=list(bm.verts)+list(bm.edges)+list(bm.faces),
+            dist=1e-7,plane_co=(0,0,plane),plane_no=(0,0,1),clear_outer=True)
+        cut=[e for e in bm.edges if e.is_boundary and all(abs(v.co.z-plane)<1e-5 for v in e.verts)]
+        if cut:bmesh.ops.holes_fill(bm,edges=cut,sides=0)
+        bmesh.ops.recalc_face_normals(bm,faces=list(bm.faces))
+        bm.verts.index_update()
+        vertices=[tuple(v.co) for v in bm.verts]
+        faces=[tuple(v.index for v in f.verts) for f in bm.faces]
+        indices=[f.material_index for f in bm.faces]
+        smooth=[f.smooth for f in bm.faces];bm.free()
+        materials=list(obj.data.materials)
+        def slot(key):
+            mat=material(key)
+            if mat not in materials:materials.append(mat)
+            return materials.index(mat)
+        white,wood=slot('white'),slot('timber')
+        def solid_box(x0,x1,y0,y1,z0,z1,index):
+            offset=len(vertices)
+            vertices.extend((x,y,z) for z in (z0,z1) for y in (y0,y1) for x in (x0,x1))
+            faces.extend(tuple(offset+i for i in face) for face in
+                ((0,2,3,1),(4,5,7,6),(0,1,5,4),(2,6,7,3),(0,4,6,2),(1,3,7,5)))
+            indices.extend([index]*6)
+            smooth.extend([False]*6)
+        top=floor+height
+        bottom_top=floor+height*.25;top_base=top-height*.18
+        solid_box(low.x,high.x,low.y,high.y,plane,bottom_top,white)
+        solid_box(low.x,high.x,low.y,high.y,top_base,top,white)
+        width=height*.20
+        intervals=max(2,math.ceil((high.y-low.y-width)/(height*.43)))
+        centres=[low.y+width/2+(high.y-low.y-width)*i/intervals for i in range(intervals+1)]
+        profile=((0,1),(.07,1),(.14,.70),(.26,.60),(.65,.60),(.82,.72),(.92,1),(1,1))
+        segments=12
+        for centre in centres:
+            offset=len(vertices)
+            for t,r in profile:
+                vertices.extend((cx+depth*.5*r*math.cos(i*math.tau/segments),
+                    centre+width*.5*r*math.sin(i*math.tau/segments),
+                    bottom_top-.008+t*(top_base-bottom_top+.016)) for i in range(segments))
+            faces.append(tuple(offset+i for i in reversed(range(segments))));indices.append(wood)
+            smooth.append(False)
+            for row in range(len(profile)-1):
+                for i in range(segments):
+                    j=(i+1)%segments
+                    faces.append((offset+row*segments+i,offset+row*segments+j,
+                        offset+(row+1)*segments+j,offset+(row+1)*segments+i));indices.append(wood);smooth.append(True)
+            faces.append(tuple(offset+(len(profile)-1)*segments+i for i in range(segments)));indices.append(wood)
+            smooth.append(False)
+        mesh=bpy.data.meshes.new(name+'_referenceBalusters');mesh.from_pydata(vertices,[],faces);mesh.update()
+        for mat in materials:mesh.materials.append(mat)
+        for face,index,soft in zip(mesh.polygons,indices,smooth):face.material_index=index;face.use_smooth=soft
+        assign_world_mesh(obj,mesh)
+        obj['sunny_authored']=True;obj['sunny_rail']=True
+        obj['sunny_fore_gallery_guard']=True;obj['sunny_guard_centres']=centres
+        records.append(dict(node=name,height=height,centres=centres,
+            pitch=(centres[-1]-centres[0])/intervals,span=[low.y,high.y],
+            heightToStorey=.36,reference='R09 full broad-rail height and dense waisted balusters; native span retained, hidden profile/metre dimensions reconstructed'))
+    interiors.setdefault('foreFacade',{})['galleryGuards']=records
+    return records
 
 
 def fore_port_ring(name,front,y,z,inner,outer):
@@ -45,7 +139,7 @@ def fore_front_ports(objects, interiors, centre):
     """
     from sunny_aft_envelope import closed_wall_bvh
     bpy.context.view_layer.update()
-    layout=fore_port_layout()
+    layout=fore_port_layout(centre)
     x=-18.35;z=interiors['levels']['F2F']+1.45;radius=layout['radius']
     targets=[o for o in bpy.data.objects if o.type=='MESH' and
              (o.name.startswith('Sunny_ForeF2_shell') or
@@ -80,6 +174,7 @@ def fore_front_ports(objects, interiors, centre):
         records.append(dict(id=name,position=[x,y,z],radius=radius,outerRadius=layout['outerRadius'],front=front,back=back))
     interiors['foreFacade']=dict(ports=records,upperEntry='WomensDoor',
         portRatios=dict(spacingToOuterDiameter=layout['sourceSpacingRatio'],clearToOuterDiameter=layout['sourceClearRatio']),
+        portPanel=dict(span=layout['panel'],centreRatio=layout['panelCentreRatio'],diameterRatio=32/246),
         reference='R09: upper entry to starboard, paired port circles measured locally in source; overall metre size/depth remain reconstructed')
     return records
 

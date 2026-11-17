@@ -1,0 +1,11 @@
+{
+  "old": "/private/tmp/sunny-fore-shroud-candidate/sunny.glb",
+  "next": "/private/tmp/sunny-fore-gallery-source-candidate/sunny.glb",
+  "oldMeshes": 7969,
+  "newMeshes": 7969,
+  "changedMeshes": [
+    "Box070",
+    "Box084"
+  ],
+  "method": "Per-object actual world matrix, all exported geometry/UV/normal/index arrays and complete material definitions; independent of buffer/accessor numbering."
+}

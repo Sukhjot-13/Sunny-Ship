@@ -1,0 +1,11 @@
+{
+  "src/components/NavigationSystem.jsx": "a0f9c9fb2dbf28094305d2571c7d342844cf0e15080216fb2ea82c1fecc471a3",
+  "src/components/PlayerController.jsx": "b8a632f7cc99ed16876c991b25da07d72847713b534ce58ddbad1392fee9ee44",
+  "src/systems/innerGateCollision.js": "dfd5189512d46db09f572d5433ee4d9bf0a3d100cfef4a3c42a1c246eb669bd9",
+  "tests/exteriorAccess.mjs": "5933aea186c05524f69c08a56f1f534505f4a72687f9f5f982645c04bacfebb6",
+  "tests/innerGateCollision.test.mjs": "6e45fac7b348de87b334fffff313607bd6cf36a81b5d14c8853d6b30b0f4a185",
+  "public/models/sunny.glb": "efe6c66e400a2149ef0017815db358b7ef1e46a3806a590730d7a46027f43e0f",
+  "public/models/sunny-collision.glb": "f9e35c717a6a0d8a7e5f3caa56743f95075865791d010ea3b7a86d448fdf9119",
+  "public/models/ship-metadata.json": "e7d8fd8bb12cd9150f3575f22a2190e03cc7d732d9f4f2cf02cccb70ceb525ca",
+  "assets/sunny-master.blend": "b3f45324c7f27c3fc39f3f97678a6b374e9b5f6dc10ed1c8b3c9887191055945"
+}

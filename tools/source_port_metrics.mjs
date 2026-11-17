@@ -1,4 +1,4 @@
-/** Read-only R09 local ink-circle measurements; no metric size inference. */
+/** Read-only R09 circle/panel and full gallery-rail measurements. */
 import fs from 'node:fs'
 import path from 'node:path'
 import crypto from 'node:crypto'
@@ -36,7 +36,28 @@ try{
     clearToOuterWidths:inner.map((c,i)=>c.width/outer[i].width),
    }:{})})
   }
-  return{size:[image.width,image.height],roi,results}
+  const railColumns=[]
+  for(const x of [310,328,345,362,379,396,413,430,447]){
+   const runs=[]
+   for(let y=260;y<=310;y++){
+    const index=(y*image.width+x)*4,dark=(pixels[index]+pixels[index+1]+pixels[index+2])/3<160
+    if(!dark)continue
+    const last=runs.at(-1)
+    if(last&&last[1]===y-1)last[1]=y;else runs.push([y,y])
+   }
+   const complete=runs.length===4,height=complete?runs[3][1]-runs[0][0]:null
+   railColumns.push({sourceX:x,inkRunsY:runs,complete,fullGuardPixels:height,pitchToFullGuard:height?17/height:null})
+  }
+  const circles=results.find(r=>r.threshold===140&&r.complete)?.found.filter(c=>c.width>=28)
+  const panel=circles?.length===2?{
+   approximateX:[287,533],pairMeanX:circles.reduce((n,c)=>n+c.centre[0]/2,0),
+   meanOuterDiameter:circles.reduce((n,c)=>n+c.width/2,0),
+   centreFraction:(circles.reduce((n,c)=>n+c.centre[0]/2,0)-287)/246,
+   diameterFraction:circles.reduce((n,c)=>n+c.width/2,0)/246,
+   limits:'Panel boundary is a disclosed approximate landmark correspondence; circle contours are measured directly.'
+  }:null
+  return{size:[image.width,image.height],roi,results,panel,railColumns,
+   railLimits:'Nine clear gaps identify four upper/lower rail outlines. Full guard height includes both broad rails; use the separately observed17px post pitch, not only the open shaft gap.'}
  },'data:image/webp;base64,'+bytes.toString('base64'))
  const out=process.argv[2]??'docs/review/2026-11-16/r09-port-source-metrics.json'
  fs.mkdirSync(path.dirname(out),{recursive:true})

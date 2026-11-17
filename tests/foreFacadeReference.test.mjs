@@ -38,6 +38,12 @@ const sourcePorts=meta.interiors.foreFacade.ports.map(record=>{
 const spacing=Math.abs(sourcePorts[1].centre-sourcePorts[0].centre),outer=sourcePorts.reduce((n,p)=>n+p.outer/2,0)
 assert(spacing/outer>2.0&&spacing/outer<2.3,'actual pair spacing relative to outer circles must match the complete R09 source outlines')
 assert(sourcePorts.every(p=>p.clear/p.outer>.52&&p.clear/p.outer<.60),'actual clear/outer circle ratio must retain R09’s broad annular rim')
+const panel=visual.find(p=>p.name==='Box070'),panelSpan=panel.max.z-panel.min.z
+const pairCentre=sourcePorts.reduce((sum,p)=>sum+p.centre/sourcePorts.length,0),panelFraction=(panel.max.z-pairCentre)/panelSpan
+assert(panelFraction>.55&&panelFraction<.68,'source pair belongs over the port gallery panel, not over its stair gap')
+assert(sourcePorts.every(p=>p.outer/panelSpan>.115&&p.outer/panelSpan<.15),'source circles retain their observed scale within that panel')
+assert(sourcePorts.every(p=>p.centre-p.outer/2>panel.min.z&&p.centre+p.outer/2<panel.max.z),'both actual circles are above the intact gallery guard span')
+for(const y of [cy-6-1.18,cy-6+1.18])assert(ray(walls,[-16.35,meta.interiors.levels.F2F+1.45,-y],5).length>0,'old misplaced port bores above the stair gap must be closed')
 assert(!visual.some(p=>p.name.startsWith('Sunny_StorageStair')),'unsupported switchback must not protrude through the lawn-side entry')
 assert(meta.exterior.mechanisms.climbs.some(p=>p.id==='storage-ladder'),'R09 storage connection is a real registered ladder')
 const storage=normalizeClimbs(meta.exterior.mechanisms.climbs).find(p=>p.id==='storage-ladder')

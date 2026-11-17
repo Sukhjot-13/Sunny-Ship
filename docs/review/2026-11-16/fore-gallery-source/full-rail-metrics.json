@@ -1,0 +1,218 @@
+{
+  "source": "stuff/images/Thousand_Sunny%27s_Men_and_Woman_Quarters.webp",
+  "sha256": "2cbccc4e1c6e28a78189d7e82aa84f53e1ea152b180173969e26ed494cd83218",
+  "threshold": 160,
+  "columns": [
+    {
+      "sourceX": 310,
+      "inkRunsY": [
+        [
+          263,
+          265
+        ],
+        [
+          272,
+          272
+        ],
+        [
+          295,
+          296
+        ],
+        [
+          304,
+          305
+        ]
+      ],
+      "fullGuardPixels": 42,
+      "pitchToFullGuard": 0.40476190476190477
+    },
+    {
+      "sourceX": 328,
+      "inkRunsY": [
+        [
+          264,
+          266
+        ],
+        [
+          272,
+          272
+        ],
+        [
+          294,
+          295
+        ],
+        [
+          303,
+          304
+        ]
+      ],
+      "fullGuardPixels": 40,
+      "pitchToFullGuard": 0.425
+    },
+    {
+      "sourceX": 345,
+      "inkRunsY": [
+        [
+          264,
+          265
+        ],
+        [
+          270,
+          271
+        ],
+        [
+          292,
+          294
+        ],
+        [
+          303,
+          304
+        ]
+      ],
+      "fullGuardPixels": 40,
+      "pitchToFullGuard": 0.425
+    },
+    {
+      "sourceX": 362,
+      "inkRunsY": [
+        [
+          264,
+          265
+        ],
+        [
+          270,
+          272
+        ],
+        [
+          292,
+          293
+        ],
+        [
+          302,
+          303
+        ]
+      ],
+      "fullGuardPixels": 39,
+      "pitchToFullGuard": 0.4358974358974359
+    },
+    {
+      "sourceX": 379,
+      "inkRunsY": [
+        [
+          264,
+          266
+        ],
+        [
+          270,
+          271
+        ],
+        [
+          291,
+          292
+        ],
+        [
+          302,
+          303
+        ]
+      ],
+      "fullGuardPixels": 39,
+      "pitchToFullGuard": 0.4358974358974359
+    },
+    {
+      "sourceX": 396,
+      "inkRunsY": [
+        [
+          264,
+          265
+        ],
+        [
+          270,
+          271
+        ],
+        [
+          290,
+          292
+        ],
+        [
+          302,
+          303
+        ]
+      ],
+      "fullGuardPixels": 39,
+      "pitchToFullGuard": 0.4358974358974359
+    },
+    {
+      "sourceX": 413,
+      "inkRunsY": [
+        [
+          262,
+          264
+        ],
+        [
+          268,
+          268
+        ],
+        [
+          292,
+          293
+        ],
+        [
+          301,
+          302
+        ]
+      ],
+      "fullGuardPixels": 40,
+      "pitchToFullGuard": 0.425
+    },
+    {
+      "sourceX": 430,
+      "inkRunsY": [
+        [
+          262,
+          263
+        ],
+        [
+          268,
+          268
+        ],
+        [
+          292,
+          293
+        ],
+        [
+          301,
+          302
+        ]
+      ],
+      "fullGuardPixels": 40,
+      "pitchToFullGuard": 0.425
+    },
+    {
+      "sourceX": 447,
+      "inkRunsY": [
+        [
+          262,
+          263
+        ],
+        [
+          267,
+          268
+        ],
+        [
+          290,
+          291
+        ],
+        [
+          300,
+          301
+        ]
+      ],
+      "fullGuardPixels": 39,
+      "pitchToFullGuard": 0.4358974358974359
+    }
+  ],
+  "medianFullGuardPixels": 40,
+  "medianPitchToFullGuard": 0.425,
+  "interpretation": "Four dark runs at clear gaps identify outer/inner upper rail and inner/outer lower rail. Overall guard includes both broad rails. Do not divide pitch only by the clear baluster gap.",
+  "heightToLowerStorey": "Approximately .35-.39 in this panel: guard outer edges around264..304; standing gallery near304, lawn near410. Ink/perspective limits remain. Target .36 is reconstruction, not a metre measurement."
+}

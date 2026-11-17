@@ -1,8 +1,8 @@
 {
-  "source": "/private/tmp/sunny-fore-port-ratios-candidate/sunny-master.blend",
-  "workingVisualSource": "/private/tmp/sunny-fore-port-ratios-candidate/sunny.glb",
-  "sourceSha256": "b3f45324c7f27c3fc39f3f97678a6b374e9b5f6dc10ed1c8b3c9887191055945",
-  "workingVisualSha256": "efe6c66e400a2149ef0017815db358b7ef1e46a3806a590730d7a46027f43e0f",
+  "source": "/private/tmp/sunny-fore-panel-candidate/sunny-master.blend",
+  "workingVisualSource": "/private/tmp/sunny-fore-panel-candidate/sunny.glb",
+  "sourceSha256": "c653d3d53897255410df582b79dc68e91338682bc8c90d196c8634948183c606",
+  "workingVisualSha256": "adb9b7d8254d33807b585dcc07f6eef915c990936faf768cf806e1d14a42792a",
   "workingScale": 2.2,
   "referenceScale": 1,
   "rootMultiplier": 0.45454545454545453,

@@ -3,7 +3,7 @@
  *
  *   npm test
  *
- * Twenty-nine serial suites: pure navigation/climbing, physical interior/exterior materials, exported geometry/collision,
+ * Serial suites: pure navigation/climbing, physical interior/exterior materials, exported geometry/collision,
  * all room routes, real exterior/interior/controls journeys, interaction,
  * motion comparisons and visual capture. The suites array is authoritative.
  */
@@ -63,6 +63,9 @@ const suites=[
  ['collisionData.test.mjs','exact plain collision decoding'],
  ['collisionIndex.test.mjs','conservative indexed body, step and flight equivalence'],
  ['innerGateCollision.test.mjs','actual inner shutter coverage and clear waiting-room passage'],
+ ['foreShroudFixture.test.mjs','outboard longitudinal fore fans and physical rope junctions'],
+ ['foreGalleryFixture.test.mjs','dense gallery balusters and retained native supports'],
+ ['foreGalleryReference.test.mjs','actual full-height gallery/source rhythm and frozen native support'],
  ['aftFacadeFixture.test.mjs','R13 source facade authoring fixture'],
  ['aftFacadeReference.test.mjs','R13 actual central entry and front aperture topology'],
  ['foreFacadeFixture.test.mjs','R09 fore entry, round ports and native frontage authoring'],

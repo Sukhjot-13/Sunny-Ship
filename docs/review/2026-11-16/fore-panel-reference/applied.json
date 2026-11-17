@@ -1,0 +1,32 @@
+{
+  "status": "APPLIED LOCALLY",
+  "before": {
+    "assets/sunny-master.blend": "b3f45324c7f27c3fc39f3f97678a6b374e9b5f6dc10ed1c8b3c9887191055945",
+    "public/models/sunny.glb": "efe6c66e400a2149ef0017815db358b7ef1e46a3806a590730d7a46027f43e0f",
+    "public/models/sunny-collision.glb": "f9e35c717a6a0d8a7e5f3caa56743f95075865791d010ea3b7a86d448fdf9119",
+    "public/models/ship-metadata.json": "e7d8fd8bb12cd9150f3575f22a2190e03cc7d732d9f4f2cf02cccb70ceb525ca",
+    "assets/reference/sunny-reference.blend": "f3fc58ae3f8439f7c1324a7fdf63e681ac8c3ea5f44d25b5605163f2e5f08f65",
+    "assets/reference/sunny-reference.glb": "1ee2ade73dcb4d5b4cb6ceebe35ca0a0a978d6f1cf2197d0a270c13e1eef2127",
+    "assets/reference/dimensions.json": "61c98cf521c6f88f0b76e60ead8cd4655c119332ea7c856051e449a21a73892b"
+  },
+  "after": {
+    "assets/sunny-master.blend": "c653d3d53897255410df582b79dc68e91338682bc8c90d196c8634948183c606",
+    "public/models/sunny.glb": "adb9b7d8254d33807b585dcc07f6eef915c990936faf768cf806e1d14a42792a",
+    "public/models/sunny-collision.glb": "92e3194435a7a1cdacf0e10104d868837b8853b71dd6edc21bec040ac4a771f4",
+    "public/models/ship-metadata.json": "5226a99c1ba0b0ae19c1b5f105c97831f9d92296d40cebdef9b5c7d25badb86e",
+    "assets/reference/sunny-reference.blend": "94f9415d1714eac45768eb98d57c838e15eeb048ce94470782da7c002ab3cd43",
+    "assets/reference/sunny-reference.glb": "30de5f6768830f5989aa21041a16da8cebf675acac74c74fa8fd64d40aa28781",
+    "assets/reference/dimensions.json": "839467101c2abbb98c25df491849af35b7ae1cb6fb15a6f20c3e2bd9edcfb387"
+  },
+  "sources": {
+    "assets/sunny-master.blend": "/private/tmp/sunny-fore-panel-candidate/sunny-master.blend",
+    "public/models/sunny.glb": "/private/tmp/sunny-fore-panel-candidate/sunny.glb",
+    "public/models/sunny-collision.glb": "/private/tmp/sunny-fore-panel-candidate/sunny-collision.glb",
+    "public/models/ship-metadata.json": "/private/tmp/sunny-fore-panel-candidate/ship-metadata.json",
+    "assets/reference/sunny-reference.blend": "/private/tmp/sunny-fore-panel-reference/sunny-reference.blend",
+    "assets/reference/sunny-reference.glb": "/private/tmp/sunny-fore-panel-reference/sunny-reference.glb",
+    "assets/reference/dimensions.json": "/private/tmp/sunny-fore-panel-reference/dimensions.json"
+  },
+  "backup": "/private/tmp/sunny-panel-live-before",
+  "scope": "Limited fore shroud/gallery/port placement corrections. Overall exterior/relative-scale and all-room acceptance remain open. Uniform reversal proves linkage only; no canonical metre dimensions claimed."
+}
