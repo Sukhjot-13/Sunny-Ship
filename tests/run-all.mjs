@@ -62,6 +62,7 @@ if (!serverUp) {
 const suites=[
  ['collisionData.test.mjs','exact plain collision decoding'],
  ['collisionIndex.test.mjs','conservative indexed body, step and flight equivalence'],
+ ['innerGateCollision.test.mjs','actual inner shutter coverage and clear waiting-room passage'],
  ['aftFacadeFixture.test.mjs','R13 source facade authoring fixture'],
  ['aftFacadeReference.test.mjs','R13 actual central entry and front aperture topology'],
  ['foreFacadeFixture.test.mjs','R09 fore entry, round ports and native frontage authoring'],

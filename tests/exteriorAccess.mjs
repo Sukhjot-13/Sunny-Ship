@@ -26,6 +26,15 @@ try{
  await page.goto(process.env.URL??'http://localhost:5173',{waitUntil:'domcontentloaded',timeout:120000})
  await page.waitForFunction(()=>window.__ship&&!document.body.innerText.includes('Loading the ship'),{timeout:120000})
  await page.mouse.click(720,450);await page.keyboard.press('v');await page.waitForFunction(()=>window.__sunny&&window.__sunnyDoors);await page.mouse.click(720,450)
+ if(diagnostics)await page.evaluate(()=>{
+  window.__walkDiagnostics=[]
+  setInterval(()=>{
+   if(!window.__sunny)return
+   window.__walkDiagnostics.push({time:performance.now(),p:window.__sunny.position,v:window.__sunny.vel,
+    controls:window.__sunny.controlState,support:window.__sunny.support,blocker:window.__sunny.blocker,climbing:window.__sunny.climbing})
+   if(window.__walkDiagnostics.length>60)window.__walkDiagnostics.shift()
+  },100)
+ })
  const read=()=>page.evaluate(()=>{
   return {p:window.__sunny.position,g:window.__sunny.grounded,r:window.__sunny.recoveries,
    near:window.__sunnyDoors.near,doors:window.__sunnyDoors.state,blocker:window.__sunny.blocker}
@@ -112,7 +121,7 @@ try{
  console.log('PASS',process.env.ACCESS_FILTER??'both outdoor toilet thresholds and all three sourced ladders','full descents/ascents/closures and lawn returns; real W/E, no placement/flight/recovery')
 }catch(e){
  const page=(await browser.pages()).at(-1)
- trace.push({failure:e.message});await page?.screenshot({path:'docs/review/stall-Exterior-access.png'});throw e
+ trace.push({failure:e.message,...(diagnostics?{motion:await page?.evaluate(()=>window.__walkDiagnostics)}:{})});await page?.screenshot({path:'docs/review/stall-Exterior-access.png'});throw e
 }finally{
  fs.writeFileSync('docs/review/exterior-access-journeys.json',JSON.stringify({filter:process.env.ACCESS_FILTER??null,trace,errors},null,2));await browser.close()
 }

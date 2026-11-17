@@ -5,6 +5,7 @@ import {onInteract} from '../hooks/useInput.js'
 import {useStore} from '../state/useStore.js'
 import {setDynamic} from '../systems/collision.js'
 import {surfaceCollisionBounds} from '../systems/surfaceCollision.js'
+import {innerGateSections} from '../systems/innerGateCollision.js'
 import {boxToThree,toThree} from '../systems/shipMeta.js'
 import {voyage,LOG_BEARINGS,advanceVoyage,advanceCannon,operateCannon,channelAngle,channelName,dockBounds,rotatePoint,resetVoyage,shipYaw,shutterPose,startBurst} from '../systems/navigation.js'
 
@@ -22,6 +23,7 @@ function movingBounds(n,pivot,q,translation){
 }
 /** Roll an inner shutter around its own tangent, then rotate with its bay. */
 function innerGateBounds(n,centre,angle,progress){
+ if(n.innerPose?.angle===angle&&n.innerPose?.progress===progress)return n.innerPose.boxes
  const tags=n.o.userData,radial=new THREE.Vector3(Math.cos(tags.sunny_inner_angle),0,-Math.sin(tags.sunny_inner_angle))
  const tangent=new THREE.Vector3(radial.z,0,-radial.x)
  const pivot=tags.sunny_inner_centre?new THREE.Vector3(...toThree(...tags.sunny_inner_centre)):n.centre
@@ -32,8 +34,23 @@ function innerGateBounds(n,centre,angle,progress){
  const transform=p=>p.clone().sub(pivot).applyQuaternion(tilt).add(pivot).add(shift).sub(centre).applyQuaternion(yaw).add(centre)
  n.o.position.copy(transform(new THREE.Vector3(...n.p)))
  n.o.quaternion.copy(n.q).premultiply(tilt).premultiply(yaw)
- const box=new THREE.Box3();for(const p of n.corners)box.expandByPoint(transform(p))
- return {name:n.o.name,min:box.min.toArray(),max:box.max.toArray(),isFloor:false}
+ const boxes=tags.sunny_inner_gate?n.innerSections.map((corners,i)=>{
+  const box=new THREE.Box3();for(const p of corners)box.expandByPoint(transform(p))
+  return{name:n.o.name+'_surface_'+i,min:box.min.toArray(),max:box.max.toArray(),isFloor:false}
+ }):[]
+ n.innerPose={angle,progress,boxes}
+ return boxes
+}
+/** Split the real slat in its authored radial/tangent frame before animation. */
+function innerGateSurfaceSections(node,inverse){
+ const vertices=[],point=new THREE.Vector3(),matrix=new THREE.Matrix4()
+ node.traverse(child=>{
+  const positions=child.geometry?.attributes?.position
+  if(!child.isMesh||!positions)return
+  matrix.multiplyMatrices(inverse,child.matrixWorld)
+  for(let i=0;i<positions.count;i++)vertices.push(point.fromBufferAttribute(positions,i).applyMatrix4(matrix).toArray())
+ })
+ return innerGateSections(vertices,node.userData.sunny_inner_angle).map(corners=>corners.map(p=>new THREE.Vector3(...p)))
 }
 /** Cache exact mechanism bounds in the authored ship frame, excluding bobbing. */
 function shipLocalBounds(node,inverse){
@@ -117,7 +134,8 @@ export function NavigationSystem({meta,keys}){
     if(!(tags.sunny_dock_channel||tags.sunny_dock_shutter||tags.sunny_mane||tags.sunny_jaw||tags.sunny_paddle||tags.sunny_rudder||/Sunny_(?:Helm_(?:wheel|spoke|grip)|SoldierDock_|LogPose_needle)/.test(o.name)))return
     const box=shipLocalBounds(o,inverse),centre=box.getCenter(new THREE.Vector3()),corners=[]
     for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z])corners.push(new THREE.Vector3(x,y,z))
-    nodes.current.push({o,p:o.position.toArray(),q:o.quaternion.clone(),centre,corners,sections:tags.sunny_rudder?rudderSurfaceSections(o,inverse):null})
+    nodes.current.push({o,p:o.position.toArray(),q:o.quaternion.clone(),centre,corners,sections:tags.sunny_rudder?rudderSurfaceSections(o,inverse):null,
+     innerSections:tags.sunny_inner_gate?innerGateSurfaceSections(o,inverse):null})
    })
   }
   const wheel=nodes.current.find(n=>n.o.name==='Sunny_Helm_wheel')
@@ -125,8 +143,8 @@ export function NavigationSystem({meta,keys}){
   for(const n of nodes.current){
    const tags=n.o.userData
    if(tags.sunny_inner_gate||tags.sunny_inner_digit){
-    const box=innerGateBounds(n,new THREE.Vector3(...layout.centre),voyage.dockAngle,tags.sunny_dock_channel===voyage.channel?voyage.shutter:0)
-    if(tags.sunny_inner_gate)innerBoxes.push(box)
+    const boxes=innerGateBounds(n,new THREE.Vector3(...layout.centre),voyage.dockAngle,tags.sunny_dock_channel===voyage.channel?voyage.shutter:0)
+    if(tags.sunny_inner_gate)innerBoxes.push(...boxes)
    }
    else if(tags.sunny_dock_channel){n.o.position.fromArray(rotatePoint(n.p,voyage.dockAngle,layout.centre));n.o.quaternion.copy(n.q).premultiply(q.setFromAxisAngle(axisY,voyage.dockAngle))}
    else if(tags.sunny_dock_shutter){
