@@ -1,0 +1,24 @@
+{
+  "inheritedHullBoxes": 57994,
+  "cutHullBoxes": 666,
+  "keptHullBoxes": 57328,
+  "hullAfter": 57401,
+  "collisionBoxes": 217249,
+  "cut": [
+    [
+      9.74157943725586,
+      9.941579437255859
+    ],
+    [
+      -40.59071716308594,
+      -35.882717163085935
+    ],
+    [
+      -3.937,
+      1.363
+    ]
+  ],
+  "raw": "4de37d6533de0cf5cc52a9a3c2bfb44f8ae3451c002e48f57c183157d771b35c",
+  "packaged": "1aa4e32233e18b389753a16ff7140b1c09d04140aaf78ef314e1620754f3bd06",
+  "metadata": "f74fa9b5edd62a6d32123ce9221e225b900cfdd8de5d98e8f04a6c079dcc44a6"
+}

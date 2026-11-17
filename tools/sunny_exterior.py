@@ -759,7 +759,7 @@ def add_exterior(fore_z,dock_sides):
 # --------------------------------------------------------------------------
 from sunny_interiors import (  # noqa: E402  (needs bpy state from the pipeline)
     CENTRE_Y, LEVEL_B1, LEVEL_F1, LEVEL_F2A, LEVEL_F2F, LEVEL_F3G, Frame,
-    build_interiors, chair, hatch, open_plan_slot, rbox, switchback, rpole,
+    build_interiors, chair, hatch, open_plan_slot, rbox, switchback, rpole, ENERGY_STAIR_X, ENERGY_STAIR_SHAFT_HALF_WIDTH,
     sink, stair_flight, table, stool, workbench, planter, pot_plant, ladder,
     toilet, wall_run, door, inset_outline,
 )
@@ -1149,10 +1149,10 @@ def add_fittings(objects, vertex_bbox, frame, interiors):
         reference='R09 ladder to storage; interior station and metre clearances reconstructed'))
 
     # Energy room descent at the back of the aquarium service passage.
-    ep=(22.4,f.y(CENTRE_Y)+3.0,b1)
+    ep=(ENERGY_STAIR_X,f.y(CENTRE_Y)+3.0,b1)
     er=levels['F1']-b1
     erun=er/0.185*0.30
-    shaft(ep[0]-0.65,ep[0]+0.65,ep[1]-erun-1.6,ep[1]+0.2,levels['F1']-2.2,levels['F1']+0.2)
+    shaft(ep[0]-ENERGY_STAIR_SHAFT_HALF_WIDTH,ep[0]+ENERGY_STAIR_SHAFT_HALF_WIDTH,ep[1]-erun-1.6,ep[1]+0.2,levels['F1']-2.2,levels['F1']+0.2)
     stair_flight('EnergyStair',ep,-math.pi/2,er,erun,1.1,rails=(False,False))
     rbox('EnergyStair_exit',(ep[0],ep[1]-erun-0.5,levels['F1']),0,(1.1,1.2,0.12),'deck',(0,0,-0.06),walkable=True)
     # The enlarged upper fore flight crosses the previously authored cabin

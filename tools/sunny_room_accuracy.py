@@ -472,7 +472,7 @@ def complete_room_fittings(objects, frame, interiors):
     lc=(rooms['Library']['x'][0]+rooms['Library']['x'][1])/2
     bath_details(lc,cy,levels['F3B'])
     for obj in list(bpy.data.objects):
-        if obj.type=='MESH' and obj.name.startswith(('Sunny_Aquarium_sofa','Sunny_Aquarium_armchair','Sunny_Dining_sofa','Sunny_Womens_sofa')) and any(word in obj.name for word in ('_base','_back','_arm','_cushion')):
+        if obj.type=='MESH' and obj.name.startswith(('Sunny_Dining_sofa','Sunny_Womens_sofa')) and any(word in obj.name for word in ('_base','_back','_arm','_cushion')):
             key='upholstery_lilac' if obj.name.startswith('Sunny_Womens') else 'upholstery_teal'
             obj.data.materials.clear();obj.data.materials.append(material(key))
             for face in obj.data.polygons:face.material_index=0
@@ -481,11 +481,15 @@ def complete_room_fittings(objects, frame, interiors):
         stocked_shelf('Pantry_shelf%d'%i,(24.0,cy+2+i*3,levels['F2A']),-math.pi/2)
     from sunny_room_details import complete_reference_details
     complete_reference_details(frame, interiors)
+    from sunny_aquarium import open_aquarium_entrance
+    entry=next(door for door in interiors['doors'] if door['id']=='AquariumDoor')
+    rooms['Aquarium Bar']['lounge']['entryBay']=open_aquarium_entrance(
+        bpy.data.objects['Line002'],entry['pos'],levels['F1'],levels['F2A']-.18)
     # Patterns belong to the actual floor surface, preserving hatches/headroom.
     for name in ('Sunny_AquariumFloor_entry','Sunny_AquariumFloor_shell'):
         obj=bpy.data.objects.get(name)
         if obj:
-            tile_floor(obj,.75,('tile_ivory','tile_dark'))
+            tile_floor(obj,.75,('tile_aquarium_pale','tile_aquarium_dark'))
     tile_floor(bpy.data.objects['Sunny_InteriorFloor_F3_library'],.65,('tile_blue','tile_sage'))
     tile_floor(bpy.data.objects['Sunny_InteriorFloor_lower'],.85,('steel',),(8.5,20.2,cy,13.2))
     tile_floor(bpy.data.objects['Sunny_InteriorFloor_F2_service'],.55,('tile_ivory','tile_dark'),(20.6,24.8,-11.5,cy))
@@ -496,7 +500,6 @@ def complete_room_fittings(objects, frame, interiors):
     for name, p, ceiling in (
         ("Men's Quarters",((rooms["Men's Quarters"]['x'][0]+rooms["Men's Quarters"]['x'][1])/2,cy,levels['F1']+2.9),levels['F2F']-.18),
         ("Women's Quarters",((rooms["Women's Quarters"]['x'][0]+rooms["Women's Quarters"]['x'][1])/2,cy,levels['F2F']+2.25),levels['F2F']+2.80),
-        ('Aquarium Bar',(12.8,cy,levels['F1']+3.1),levels['F2A']-.18),
         ('Kitchen',(16.4,cy+5.2,levels['F2A']+2.9),levels['F3G']-.18),
         ('Dining Room',(16.4,cy-5.2,levels['F2A']+2.9),levels['F3G']-.18),
         ('Sick Bay',(22.8,cy-5.4,levels['F2A']+2.6),levels['F3G']-.18),
@@ -508,6 +511,9 @@ def complete_room_fittings(objects, frame, interiors):
     ):
         safe=name.replace("'",'').replace(' ','_')
         lights.append(pendant('RoomLamp_'+safe,p,ceiling,name))
+    mast_x=rooms['Aquarium Bar']['lounge']['centre'][0]
+    lights.append(dict(room='Aquarium Bar',pos=(mast_x-1.64,cy,levels['F1']+3.87),
+                       colour='#ffd48b',intensity=38,distance=12))
     interiors['lights']=lights
     retained=[bpy.data.objects[name] for name in original_names if name in bpy.data.objects]
     additions=[obj for obj in bpy.data.objects if obj not in before and obj.type=='MESH']

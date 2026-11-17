@@ -1,40 +1,8 @@
 """Remaining SBS room fittings around preserved human walking connections."""
 import math
 import bpy
-from mathutils import Vector
-from sunny_exterior import material, pole, ring, sphere, text
-from sunny_interiors import L, rbox, rpole, wall_run, door, toilet, DOORS
-
-
-def aquarium_drapery(floor, cy):
-    """Supported side curtains and a scalloped valance on the real tank rail."""
-    from sunny_room_accuracy import cloth_panel
-    centre=(15.0,cy,floor)
-    for side in (-1,1):
-        p=(15.0,cy+side*8.96,floor+.13)
-        cloth_panel('Aquarium_curtain',p,math.pi/2,.78,3.23,8,'cloth_aqua')
-        for dx in (-.31,.31):
-            pole('Aquarium_curtain_support',(15.0,cy+side*8.96+dx,floor+3.39),
-                 (15.0,cy+side*8.96+dx,floor+3.44),.012,'brass')
-    # Eight real cloth swags follow the inner tank's measured elliptical arc.
-    for i in range(8):
-        a=-math.pi/2+i*math.pi/8;b=a+math.pi/8
-        pa=Vector((15+5*math.cos(a),cy+9*math.sin(a),floor+3.42))
-        pb=Vector((15+5*math.cos(b),cy+9*math.sin(b),floor+3.42))
-        points=[]
-        count=32
-        for row in (0,1):
-            for j in range(count+1):
-                t=j/count;q=pa.lerp(pb,t)
-                q.z-=.06 if row==0 else .11+.30*math.sin(t*math.pi)
-                q.x-=.014*math.sin(t*math.tau*5)
-                points.append(q)
-        n=count+1;faces=[(j,j+1,n+j+1,n+j) for j in range(count)]
-        mesh=bpy.data.meshes.new('Aquarium_valance');mesh.from_pydata(points,[],faces)
-        mesh.materials.append(material('cloth_aqua'));mesh.update()
-        obj=bpy.data.objects.new('Sunny_Aquarium_valance',mesh);bpy.context.scene.collection.objects.link(obj)
-        obj['sunny_authored']=True;obj['sunny_fabric']=True;obj['sunny_obstacle']=False
-        pole('Aquarium_valance_rail',pa,pb,.012,'brass')
+from sunny_exterior import material, text
+from sunny_interiors import rbox, rpole, wall_run, door, toilet, DOORS
 
 
 def bath_wc(cx, cy, floor, interiors):
@@ -97,7 +65,6 @@ def complete_reference_details(frame, interiors):
     cy=frame.y(.585);levels=interiors['levels']
     rooms={r['name']:r for r in interiors['rooms']}
     cx=(rooms['Library']['x'][0]+rooms['Library']['x'][1])/2
-    aquarium_drapery(levels['F1'],cy)
     bath_wc(cx,cy,levels['F3B'],interiors)
     workshop_metals(cy)
     lumber_storage(rooms,levels['B1'])

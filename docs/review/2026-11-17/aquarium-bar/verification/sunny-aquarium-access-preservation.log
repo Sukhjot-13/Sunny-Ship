@@ -1,0 +1,12 @@
+PASS two deep actual lawn crowns; 7511 other meshes and the collision asset match the approved checkpoint fingerprints
+✔ /Users/sukhjot/codes/Sunny-Ship/tests/lawnCrownReference.test.mjs (526.60625ms)
+PASS exact working/reference asset hashes and uniform 1/2.2 transform across 7519 real exported meshes
+✔ /Users/sukhjot/codes/Sunny-Ship/tests/referenceScale.test.mjs (332.066375ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 530.8185

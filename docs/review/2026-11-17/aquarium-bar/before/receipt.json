@@ -1,0 +1,68 @@
+{
+  "url": "http://localhost:5174",
+  "shots": [
+    {
+      "name": "lounge",
+      "camera": [
+        11.2,
+        -38.851,
+        -1.287
+      ],
+      "target": [
+        22,
+        -38.501000000000005,
+        -1.287
+      ],
+      "fov": 77
+    },
+    {
+      "name": "tank-close",
+      "camera": [
+        18,
+        -38.851,
+        3.8129999999999997
+      ],
+      "target": [
+        22,
+        -38.351,
+        1.3130000000000002
+      ],
+      "fov": 66
+    },
+    {
+      "name": "mast-table",
+      "camera": [
+        15.25,
+        -38.851,
+        -4.186999999999999
+      ],
+      "target": [
+        19.6,
+        -38.901,
+        -1.287
+      ],
+      "fov": 70
+    },
+    {
+      "name": "aft-passage",
+      "camera": [
+        25.1,
+        -38.851,
+        3.9130000000000003
+      ],
+      "target": [
+        25.1,
+        -37.871,
+        -5.987
+      ],
+      "fov": 75
+    }
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "assets": {
+    "sunny.glb": "1372aed9f3bb0e71459dccb6a3ee56a900e39b95a918df26b9fa2675f2cbddc3",
+    "ship-metadata.json": "bb0bf60014efcb849123497c8d9aacda53f5b6eab7faf011398d948ac507bb5a"
+  },
+  "note": "Actual room renderer, inspection camera only. Separate normal-controller tests cover access."
+}

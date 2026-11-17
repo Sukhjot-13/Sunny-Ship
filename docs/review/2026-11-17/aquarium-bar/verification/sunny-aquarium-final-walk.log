@@ -1,0 +1,21 @@
+PASS lawn to Aquarium Service Passage {
+  pos: [ 24.400000011948954, -40.55070114135742, -1.1302818647786494 ],
+  grounded: true,
+  blocker: null
+}
+PASS Aquarium Service Passage return to lawn [ -4.175650043474881, -40.55070114135742, -0.9751106666614795 ]
+PASS lawn to Aquarium Bar {
+  pos: [ 16.91864450488119, -40.55070114135742, -1.4 ],
+  grounded: true,
+  blocker: null
+}
+PASS Aquarium Bar return to lawn [ -4.178292433580647, -40.55070114135742, -0.9751113618972145 ]
+Physical ladder endpoint approach Ladder: Aquarium gallery ladder {
+  endpoint: [ 11.55, -40.55071716308594, 7.513000000000001 ],
+  feet: [ 11.600000000013232, -40.55070114135742, 7.596670228963121 ]
+}
+PASS Aquarium gallery ladder complete ascent [ 11.55, -35.62271716308594, 5.913 ]
+PASS lawn to Ladder: Aquarium gallery ladder { pos: [ 11.55, -35.62269973754883, 5.913 ], grounded: true }
+PASS Aquarium gallery ladder complete descent [ 11.55, -40.55070114135742, 7.513000000000001 ]
+PASS Ladder: Aquarium gallery ladder return to lawn [ -4.188722385502478, -40.55070114135742, -0.9863208856850998 ]
+Interior journey failures: []

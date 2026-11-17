@@ -2,6 +2,8 @@
 
 # Interior reference contract — 2026-10-01
 
+November 17 room ledger: the [Aquarium Bar](aquarium-reference-audit.md) is applied and verified for its source-led tank, canopy, curtains, seating, mast fixtures, wine storage, textures and lighting, and for actual lounge, passage and ladder access. Preserve those features; only reopen a named concern when new evidence or a shared interface change warrants it. Other rooms remain unverified against their supplied images.
+
 Sukhjot's supplied B1/F1/F2/F3 manga plans determine room placement. The readable
 [Oda blueprint sheet](https://4.bp.blogspot.com/-XDb3Ozpx6YA/U-RHnsS3qxI/AAAAAAAACB8/DJpVz5pOdRY/s1600/artikel-Thousand_Sunny_all.jpg)
 supplements their small resolution. The

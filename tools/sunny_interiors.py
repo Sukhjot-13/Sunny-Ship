@@ -53,6 +53,8 @@ LEVEL_F2F = -5.62    # second floor fore: women's quarters
 LEVEL_F2A = -5.26    # second floor aft: dining, kitchen, pantry, sick bay
 LEVEL_F3G = -2.42    # observation deck / garden
 LEVEL_F3L = -2.32    # stern balcony and library
+ENERGY_STAIR_X = 22.4
+ENERGY_STAIR_SHAFT_HALF_WIDTH = .65
 
 LEVEL_NAMES = {
     'B1': LEVEL_B1, 'F1': LEVEL_F1, 'F2F': LEVEL_F2F,
@@ -832,114 +834,6 @@ def switchback(name, p, rot, rise, run, width=1.40, gap=1.60, rails=True):
     rbox(name + '_exit', p, rot, (1.5, width, 0.16), 'deck', (-0.70, -separation, rise - 0.08), walkable=True)
     return n1, n2, landing
 
-
-# --------------------------------------------------------------------------
-# aquarium
-# --------------------------------------------------------------------------
-def aquarium(name, p, size, water_depth=2.6, seed=0):
-    """Glass-walled tank with its own water volume, rocks, coral and fish.
-
-    The tank water is a separate closed volume inside the glass, which is what
-    keeps the ocean outside the hull and the aquarium water inside its tank.
-    """
-    w, d, h = size
-    # frame posts and rails
-    for dx in (-1, 1):
-        for dy in (-1, 1):
-            peg('%s_post' % name, p, 0, (dx * w / 2, dy * d / 2, 0), 0.075, 'gold', height=h)
-    for z in (0.08, h - 0.06):
-        for dy in (-1, 1):
-            rbox('%s_rail' % name, p, 0, (w, 0.10, 0.12), 'gold', (0, dy * d / 2, z))
-        for dx in (-1, 1):
-            rbox('%s_rail' % name, p, 0, (0.10, d, 0.12), 'gold', (dx * w / 2, 0, z))
-    # glass panes (solid so the water reads as enclosed)
-    for dy in (-1, 1):
-        rbox('%s_glass' % name, p, 0, (w, 0.05, h - 0.2), 'glass', (0, dy * d / 2, h / 2))
-    for dx in (-1, 1):
-        rbox('%s_glass' % name, p, 0, (0.05, d, h - 0.2), 'glass', (dx * w / 2, 0, h / 2))
-    rbox('%s_tankbed' % name, p, 0, (w, d, 0.12), 'cream', (0, 0, 0.06))
-    # the water body itself
-    rbox('%s_water' % name, p, 0, (w - 0.22, d - 0.22, water_depth), 'tankwater',
-         (0, 0, water_depth / 2 + 0.10), obstacle=False)
-    value = 9176 + seed * 104729
-    for i in range(7):
-        value = (value * 1103515245 + 12345) & 0x7FFFFFFF
-        rx = (value % 1000) / 1000.0 - 0.5
-        value = (value * 1103515245 + 12345) & 0x7FFFFFFF
-        rz = (value % 1000) / 1000.0 - 0.5
-        s = 0.30 + (value % 5) * 0.11
-        sphere('%s_rock%d' % (name, i), (p[0] + rx * (w - 1.6), p[1] + rz * (d - 1.6), p[2] + s * 0.45),
-               (s, s * 0.85, s * 0.7), 'mane' if i % 2 else 'cream')
-    for i in range(10):
-        a = i * 2.399
-        px = p[0] + math.cos(a) * (w / 2 - 0.7) * (0.35 + 0.12 * (i % 4))
-        py = p[1] + math.sin(a) * (d / 2 - 0.7) * (0.35 + 0.12 * (i % 3))
-        base = p[2] + 0.14
-        height = 0.55 + (i % 4) * 0.34
-        for k in range(3):
-            ang = a + k * 0.9
-            pole('%s_coral%d_%d' % (name, i, k), (px, py, base),
-                 (px + math.cos(ang) * 0.28, py + math.sin(ang) * 0.28, base + height * (1 - 0.2 * k)),
-                 0.05, ('mane', 'red', 'pink')[k], radius2=0.025)
-    for i in range(12):
-        value = (value * 1103515245 + 12345) & 0x7FFFFFFF
-        fx = p[0] + ((value % 1000) / 1000.0 - 0.5) * (w - 1.2)
-        value = (value * 1103515245 + 12345) & 0x7FFFFFFF
-        fy = p[1] + ((value % 1000) / 1000.0 - 0.5) * (d - 1.2)
-        value = (value * 1103515245 + 12345) & 0x7FFFFFFF
-        fz = p[2] + 0.5 + ((value % 1000) / 1000.0) * (water_depth - 0.9)
-        key = ('mane', 'white', 'gold', 'red')[value % 4]
-        rbox('%s_fish%d' % (name, i), (fx, fy, fz), value % 6, (0.30, 0.11, 0.16), key, obstacle=False)
-        rbox('%s_tail%d' % (name, i), (fx, fy, fz), value % 6, (0.12, 0.05, 0.13), key, (-0.20, 0, 0), obstacle=False)
-
-
-def curved_aquarium(name, p, outer=(6.5, 10.5), thickness=1.5, h=3.5):
-    """Segmented elliptical tank following Oda's semicircular aquarium lounge.
-
-    Each pane has a narrow collision box; water sectors are closed prisms inset
-    from glass on all sides. The volume and panes share the same angular bounds.
-    """
-    count=24
-    def point(a, rx, ry, z):
-        return (p[0]+rx*math.cos(a),p[1]+ry*math.sin(a),p[2]+z)
-    def prism(id_, a, b, rx, ry, thick, low, high, key, obstacle):
-        verts=[point(t,x,y,z) for z in (low,high) for t,x,y in
-               ((a,rx,ry),(b,rx,ry),(b,rx-thick,ry-thick),(a,rx-thick,ry-thick))]
-        faces=[(0,3,2,1),(4,5,6,7),(0,1,5,4),(1,2,6,5),(2,3,7,6),(3,0,4,7)]
-        obj=_merge('Sunny_'+id_,verts,faces,[key]*6)
-        obj['sunny_authored']=True
-        obj['sunny_feature']='Aquarium'
-        obj['sunny_obstacle']=obstacle
-        return obj
-    for i in range(count):
-        a=-math.pi/2+i*math.pi/count;b=a+math.pi/count
-        ident=name+'_sector%d'%i
-        rx,ry=outer
-        prism(ident+'_glass',a,b,rx,ry,.045,.1,h-.1,'glass',True)
-        prism(ident+'_glass_inner',a,b,rx-thickness,ry-thickness,.045,.1,h-.1,'glass',True)
-        prism(ident+'_tankbed',a,b,rx,ry,thickness,0,.12,'cream',True)
-        # Inset angles and radii avoid the glass and the sector end faces.
-        water=prism(ident+'_water',a+.012,b-.012,rx-.12,ry-.12,thickness-.26,.14,2.8,'tankwater',False)
-        water['sunny_tank_sector']=i
-        for z in (.08,h-.06):
-            for inset in (0,thickness):
-                pole(ident+'_rail',point(a,rx-inset,ry-inset,z),point(b,rx-inset,ry-inset,z),.05,'gold')
-        if i%4==0:
-            pole(ident+'_post',point(a,rx-thickness,ry-thickness,0),point(a,rx-thickness,ry-thickness,h),.05,'gold')
-        if i%2==0:
-            ang=(a+b)/2
-            q=point(ang,rx-thickness/2,ry-thickness/2,1.0+(i%3)*.55)
-            body=sphere(ident+'_fish',q,(.32,.10,.15),('orange','white','gold')[i%3])
-            body.rotation_euler.z=ang+math.pi/2
-            eye=point(ang,rx-thickness/2-.06,ry-thickness/2-.06,1.04+(i%3)*.55)
-            sphere(ident+'_eye',eye,(.028,.028,.028),'black')
-            rbox(ident+'_tail',q,ang+math.pi/2,(.12,.05,.24),'orange',(-.34,0,0),obstacle=False)
-        if i%3==0:
-            q=point((a+b)/2,rx-.75,ry-.75,.25)
-            sphere(ident+'_rock',q,(.25,.3,.2),'cream')
-            pole(ident+'_coral',q,(q[0]+.15,q[1]-.1,q[2]+.7),.04,'pink',radius2=.02)
-
-
 def den_den_mushi(name, p, rot=0.0):
     rbox(name + '_body', p, rot, (0.34, 0.30, 0.52), 'mane', (0, 0, 0.26))
     sphere(name + '_head', (p[0], p[1], p[2] + 0.66), (0.21, 0.21, 0.19), 'white')
@@ -1561,36 +1455,22 @@ def build_interiors(objects, vertex_bbox, shift, aft_snapshot=None):
     door('AquariumDoor', (aq[0], cy, F1), math.pi / 2, aquarium_entry_width, aquarium_entry_height, 'slide', 1,
          rooms=('F1', 'Aquarium Bar'), key='red')
     tank_x0, tank_x1 = aq[1] - 3.6, aq[1] - 1.8
-    for side in (-1, 1):
-        aquarium('Aquarium_side%d' % side, ((aq[0] + 3.2 + tank_x0) / 2, cy + side * 11.2, F1),
-                 (tank_x0 - aq[0] - 3.2, 1.6, 3.5), water_depth=2.7, seed=3 + side)
-    curved_aquarium('Aquarium', (15.0,cy,F1))
-    aquarium('Aquarium_passage_ceiling', ((tank_x1 + aq[1] - 0.2) / 2, cy, F1 + 2.35),
-             (aq[1] - 0.2 - tank_x1, 16, 1.15), water_depth=0.85, seed=7)
-    # bar counter and stools in the viewing lounge
-    rbox('Aquarium_bar', ((aq[0] + tank_x0) / 2, f.y(4.6), F1), 0.0, (2.2, 0.7, 1.05), 'timber',
-         (0, 0, 0.52), obstacle=True)
-    rbox('Aquarium_bar_top', ((aq[0] + tank_x0) / 2, f.y(4.6), F1), 0.0, (2.4, 0.9, 0.07), 'deck',
-         (0, 0, 1.08))
-    for i in range(3):
-        stool('Aquarium_stool%d' % i, ((aq[0] + tank_x0) / 2 - 0.8 + i * 0.8, f.y(3.5), F1))
-    sofa('Aquarium_sofa', ((aq[0] + tank_x0) / 2, f.y(-3.6), F1), math.pi, 2.6)
-    armchair('Aquarium_armchair', (aq[0] + 1.4, f.y(-1.2), F1), math.pi / 2)
     # The main mast continues through the lounge to the kitchen above.
     # Exterior-visible structural extension must join the actual enlarged mast.
     ma, mb = vertex_bbox(next(o for o in objects if o.name == 'Cylinder007'))
     mx, my = (ma.x+mb.x)/2, (ma.y+mb.y)/2
     mast=pole('InteriorMainMast',(mx,my,F1),(mx,my,ma.z+.025),(mb.y-ma.y)/2,'darkwood',sides=20)
     mast['sunny_obstacle']=True
+    from sunny_aquarium import build_aquarium_lounge
+    aquarium_layout=build_aquarium_lounge(F1,level_of['F2A']-.18,cy,tank_x1,(mx,my),ENERGY_STAIR_X-ENERGY_STAIR_SHAFT_HALF_WIDTH)
     # "the aquarium surrounds the whole room and functions as a ceiling for a
     # passageway behind it" - a service passage under the tank, and the ladder
     # down to the Energy Room at the back of the room.
-    pass_x = tank_x1 + 0.8
     door('AquariumPassageDoor', (tank_x1, cy - 9.2, F1), math.pi / 2, 1.15, 2.25, 'slide', 1,
          rooms=('Aquarium Bar', 'Aquarium Service Passage'), key='white')
     rooms.append(dict(level='F1', name='Aquarium Service Passage', x=(tank_x1, aq[1]), y=(cy - 9.8, cy + 9.8)))
     rooms.append(dict(level='F1', name='Aquarium Bar', x=aq, y=(f.y(-5.8), f.y(7.0)),
-                      tank=dict(x=(tank_x0, tank_x1), y=(f.y(-5.2), f.y(6.0)))))
+                      tank=dict(x=(tank_x0, tank_x1), y=(f.y(-5.2), f.y(6.0))), lounge=aquarium_layout))
 
     # ======================================================================
     # F2 - women's quarters forward; dining, kitchen, pantry, sick bay aft

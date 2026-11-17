@@ -1,6 +1,7 @@
 /** Room finishes on the existing meshes; no construction or palette changes. */
 import * as THREE from 'three'
 import {realisticTextureSet} from './realisticExterior.js'
+import {applyAquariumFloorLight} from './aquariumFinish.js'
 
 const maps=new Map(),materials=new Map(),TAU=Math.PI*2
 const clamp=v=>Math.max(0,Math.min(1,v))
@@ -67,6 +68,7 @@ export function interiorSurfaceRole(source,{name='',wood='grain',fabric=false}={
  if(label==='paper')return 'paper'
  if(label==='linen')return 'linen'
  if(label.startsWith('upholstery_'))return 'upholstery'
+ if(label==='cloth_aquarium')return 'curtain'
  if(label==='cloth_aqua'||fabric)return /curtain|canopy/i.test(name)?'curtain':'linen'
  if(/cushion|mattress|pillow|blanket|quilt|sofa|armchair/i.test(name)&&!['timber','deck','darkwood','gold','brass','black','steel'].includes(label))return 'upholstery'
  if(['gold','brass'].includes(label))return 'brass'
@@ -151,16 +153,19 @@ export function applyInteriorProjection(shader,set,tileSize=0){
 /** Separate cached room materials; source/exterior instances are never modified. */
 export function realisticInteriorMaterial(source,options={}){
  const role=interiorSurfaceRole(source,options),projected=!options.uv||role==='tile',tile=role==='tile'?interiorTileSize(options.name??''):0
- const key=[source.name,source.color.getHexString(),role,projected,tile].join(':')
- if(materials.has(key))return materials.get(key)
+ const aquariumFloor=!!options.aquarium&&role==='tile'&&/^Sunny_AquariumFloor/.test(options.name)
+ const aquariumCeiling=!!options.aquarium&&options.name==='Sunny_Aquarium_ceiling'
+ const key=[source.name,source.color.getHexString(),role,projected,tile,aquariumCeiling].join(':')
+ if(!aquariumFloor&&materials.has(key))return materials.get(key)
  const shared=role==='brass'||role==='steel'?'metal':role==='water'||role==='glass'||role==='mirror'||role==='lamp'?null:role
  const profile=profiles[role]
  const m=new THREE.MeshPhysicalMaterial({name:source.name,color:source.color.clone(),side:THREE.DoubleSide,
   roughness:1,metalness:['brass','steel','iron','mirror'].includes(role)?role==='mirror'?1:.82:0,
   clearcoat:profile?.coat??(['grain','boards'].includes(role)?.16:role==='paint'?.24:0),clearcoatRoughness:.35,envMapIntensity:.85})
+ if(aquariumCeiling)m.color.multiplyScalar(.22)
  if(shared){
   const set=interiorTextureSet(shared)
-  if(projected){m.onBeforeCompile=shader=>applyInteriorProjection(shader,set,tile);m.customProgramCacheKey=()=>`interior-metric-v1`}
+  if(projected){m.onBeforeCompile=shader=>{applyInteriorProjection(shader,set,tile);if(aquariumFloor)applyAquariumFloorLight(shader,options.aquarium)};m.customProgramCacheKey=()=>`interior-metric-v1${aquariumFloor?':aquarium-light':''}`}
   else{m.map=set.map;m.normalMap=set.normalMap;m.roughnessMap=set.roughnessMap}
   if(profile?.sheen){m.sheen=profile.sheen;m.sheenColor.copy(source.color);m.sheenRoughness=.9}
  }else if(role==='lamp'){
@@ -171,5 +176,7 @@ export function realisticInteriorMaterial(source,options={}){
   m.transparent=true;m.opacity=role==='water'?.16:.20;m.depthWrite=false;m.roughness=role==='water'?.08:.065;m.ior=1.5;m.clearcoat=1;m.clearcoatRoughness=.08
  }
  m.userData={interiorSurface:role,interiorProjection:projected?'metric':'authored-uv',finishVersion:1}
- materials.set(key,m);return m
+ if(aquariumFloor)m.userData.aquariumOwned=true
+ else materials.set(key,m)
+ return m
 }

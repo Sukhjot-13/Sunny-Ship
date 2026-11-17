@@ -7,6 +7,7 @@ import { exteriorMaterial } from '../systems/exteriorMaterials.js'
 import { realisticExteriorMaterial,usesRealisticExterior } from '../systems/realisticExterior.js'
 import { interiorGeometry,realisticInteriorMaterial,usesRealisticInterior } from '../systems/realisticInterior.js'
 import { createInteriorLightRig } from '../systems/interiorLighting.js'
+import { createAquariumFinish } from '../systems/aquariumFinish.js'
 import { makeSailMaterial, updateWind } from '../systems/sails.js'
 import { SHIP_COLORS } from '../config/shipConfig.js'
 import { registerDoorNode } from './DoorSystem.jsx'
@@ -26,7 +27,7 @@ import { shipYaw, voyage } from '../systems/navigation.js'
  * cloned the sail meshes and that mis-placed them, because several of the
  * FBX objects carry baked vertex offsets relative to their origin.)
  */
-export function Ship({ sunDir, skyColor = '#9fc4e0', deckY = 0, waterY = -14, roomLights, ...props }) {
+export function Ship({ sunDir, skyColor = '#9fc4e0', deckY = 0, waterY = -14, roomLights, aquariumLayout, ...props }) {
   const bobRef = useRef()
   const timeRef = useRef(0)
   const { scene } = useGLTF('/models/sunny.glb')
@@ -39,6 +40,8 @@ export function Ship({ sunDir, skyColor = '#9fc4e0', deckY = 0, waterY = -14, ro
     const root = scene.clone(true)
     const sails = []
     const interiorGeometries = []
+    const aquarium = createAquariumFinish(aquariumLayout)
+    const aquariumHalos = [], aquariumFloorMaterials = new Map()
     let sailCount = 0
 
     root.updateMatrixWorld(true)
@@ -46,8 +49,16 @@ export function Ship({ sunDir, skyColor = '#9fc4e0', deckY = 0, waterY = -14, ro
       if (!child.isMesh) return
       const tags = child.userData?.sunny_part ? child.userData : child.parent?.userData ?? {}
       const part = tags.sunny_part ?? inferPart(child.name)
+      const aquariumRole = tags.sunny_aquarium_surface
 
-      if (part === 'sail' || part === 'flag') {
+      if(aquariumRole){
+        const paint=material=>aquarium.materialFor(material,aquariumRole,tags.sunny_aquarium_swim)
+        child.material=Array.isArray(child.material)?child.material.map(paint):paint(child.material)
+        if(aquariumRole==='lamp'){
+          const centre=new THREE.Box3().setFromObject(child).getCenter(new THREE.Vector3())
+          aquariumHalos.push(root.worldToLocal(centre))
+        }
+      } else if (part === 'sail' || part === 'flag') {
         const bounds = new THREE.Box3().setFromObject(child)
         const sailName = child.parent?.userData?.sunny_part ? child.parent.name : child.name
         const mat = makeSailMaterial({
@@ -78,8 +89,16 @@ export function Ship({ sunDir, skyColor = '#9fc4e0', deckY = 0, waterY = -14, ro
           interiorGeometries.push(child.geometry)
         }
         const finish=outside?realisticExteriorMaterial:exteriorMaterial
+        const paintInterior=m=>{
+          const floor=/^Sunny_AquariumFloor/.test(child.name)
+          if(floor&&aquariumFloorMaterials.has(m.name))return aquariumFloorMaterials.get(m.name)
+          const result=realisticInteriorMaterial(m,{wood:tags.sunny_wood_kind,name:child.name,fabric:tags.sunny_fabric,uv:!!tags.sunny_uv_space,
+            aquarium:aquariumLayout?aquarium:null})
+          if(result.userData.aquariumOwned)aquariumFloorMaterials.set(m.name,result)
+          return result
+        }
         const paint = m => inside
-          ? realisticInteriorMaterial(m,{wood:tags.sunny_wood_kind,name:child.name,fabric:tags.sunny_fabric,uv:!!tags.sunny_uv_space})
+          ? paintInterior(m)
           : tags.sunny_uv_space
           ? finish(m,{wood:tags.sunny_wood_kind,kind:tags.sunny_uv_kind,name:child.name,feature:tags.sunny_feature})
           : authoredMaterial(m,{solid:part==='mast'||part==='rigging',vertical:part==='mast'})
@@ -87,13 +106,14 @@ export function Ship({ sunDir, skyColor = '#9fc4e0', deckY = 0, waterY = -14, ro
           ? (Array.isArray(child.material) ? child.material.map(paint) : paint(child.material))
           : resolveMaterial(part, child.name, deckY, waterY)
       }
-      child.castShadow = true
-      child.receiveShadow = true
+      child.castShadow = !aquariumRole
+      child.receiveShadow = !aquariumRole
       child.frustumCulled = true
     })
 
-    return { root, sails, sailCount, interiorGeometries }
-  }, [scene, emblem, sunDir, skyColor, deckY, waterY])
+    for(const position of aquariumHalos)aquarium.addHalo(root,position)
+    return { root, sails, sailCount, interiorGeometries, aquarium, aquariumFloorMaterials }
+  }, [scene, emblem, sunDir, skyColor, deckY, waterY, aquariumLayout])
 
   useEffect(() => {
     const unregister = []
@@ -111,6 +131,7 @@ export function Ship({ sunDir, skyColor = '#9fc4e0', deckY = 0, waterY = -14, ro
 
   useFrame((state, delta) => {
     timeRef.current += delta
+    ship.aquarium.time.value=timeRef.current
     const wind = updateWind(timeRef.current)
 
     if (bobRef.current) {
@@ -143,6 +164,8 @@ export function Ship({ sunDir, skyColor = '#9fc4e0', deckY = 0, waterY = -14, ro
     () => () => {
       for (const { mat } of ship.sails) mat.dispose()
       for (const geometry of ship.interiorGeometries) geometry.dispose()
+      for(const material of ship.aquariumFloorMaterials.values())material.dispose()
+      ship.aquarium.dispose()
     },
     [ship]
   )

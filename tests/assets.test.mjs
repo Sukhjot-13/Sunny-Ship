@@ -414,19 +414,19 @@ console.log('\n=== METADATA ===')
     Math.abs((o.min.y+o.max.y)/2-meta.interiors.levels.F2A-0.45)<0.01&&o.max.x-o.min.x<0.5&&o.max.z-o.min.z<0.5))
   const table=ship.find(o=>o.name==='Sunny_Dining_table_top')
   check('dining table stays 0.76 m high',table&&Math.abs((table.min.y+table.max.y)/2-meta.interiors.levels.F2A-0.76)<0.01)
-  const tanks=ship.filter(o=>/Sunny_Aquarium.*_water$/.test(o.name))
-  check('rectangular aquarium water stays inside glass tank bounds',tanks.length>=3&&tanks.filter(w=>!w.name.includes('_sector')).every(w=>{
+  const tanks=ship.filter(o=>o.name==='Sunny_Aquarium_passage_ceiling_water')
+  check('rear passage aquarium water stays inside its glazed tank',tanks.length===1&&tanks.every(w=>{
     const prefix=w.name.slice(0,-6), glass=ship.filter(o=>o.name.startsWith(prefix+'_glass'))
     return glass.length===4&&w.min.x>Math.min(...glass.map(o=>o.min.x))&&w.max.x<Math.max(...glass.map(o=>o.max.x))&&
       w.min.z>Math.min(...glass.map(o=>o.min.z))&&w.max.z<Math.max(...glass.map(o=>o.max.z))&&w.max.y<Math.max(...glass.map(o=>o.max.y))
   }))
-  const curved=tanks.filter(w=>w.name.includes('_sector'))
-  check('curved aquarium has 24 contained water sectors',curved.length===24&&curved.every(w=>{
-    const pane=ship.find(o=>o.name===w.name.replace('_water','_glass'))
-    const inner=ship.find(o=>o.name===w.name.replace('_water','_glass_inner'))
-    return pane&&inner&&w.min.x>=Math.min(pane.min.x,inner.min.x)-.01&&w.max.x<=Math.max(pane.max.x,inner.max.x)+.01&&
-      w.min.z>=Math.min(pane.min.z,inner.min.z)-.01&&w.max.z<=Math.max(pane.max.z,inner.max.z)+.01&&w.max.y<pane.max.y
-  }))
+  const panorama=ship.find(o=>o.name==='Sunny_Aquarium_panoramic_water')
+  const aquariumGlass=ship.find(o=>o.name==='Sunny_Aquarium_panoramic_glass')
+  const aquariumBacking=ship.find(o=>o.name==='Sunny_Aquarium_panoramic_backdrop')
+  check('one closed panoramic aquarium holds water behind its continuous glass',
+    panorama&&aquariumGlass&&aquariumBacking&&panorama.max.x>aquariumGlass.max.x&&panorama.max.x<aquariumBacking.max.x&&
+    panorama.min.z>aquariumBacking.min.z&&panorama.max.z<aquariumBacking.max.z&&panorama.max.y<aquariumGlass.max.y&&
+    closedExportedMeshes(['Sunny_Aquarium_panoramic_water','Sunny_Aquarium_panoramic_glass']))
   const dock=ship.find(o=>o.name==='Sunny_Dock_turntable_deck')
   check('Soldier Dock turntable is centered beneath the lawn',dock&&Math.abs((dock.min.x+dock.max.x)/2-.45)<.05)
   const dining=meta.interiors.rooms.find(r=>r.name==='Dining Room'),kitchen=meta.interiors.rooms.find(r=>r.name==='Kitchen')

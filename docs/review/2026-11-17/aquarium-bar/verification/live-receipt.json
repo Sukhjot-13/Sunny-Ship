@@ -1,0 +1,17 @@
+{
+  "backup": "/private/tmp/sunny-aquarium-live-before",
+  "applied": {
+    "assets/sunny-master.blend": "fde28f5a516e48bac40fb7aac30fa3af34dc820ea51d69722298481937708995",
+    "public/models/sunny.glb": "4e3e5bda76807ca897bdf0a4f6799bc2a0dbfd6cad5fd3c3cd6e1100855c371c",
+    "public/models/sunny-collision.glb": "1aa4e32233e18b389753a16ff7140b1c09d04140aaf78ef314e1620754f3bd06",
+    "public/models/ship-metadata.json": "f74fa9b5edd62a6d32123ce9221e225b900cfdd8de5d98e8f04a6c079dcc44a6",
+    "assets/reference/sunny-reference.blend": "9694b89bb7d5de9cb9d2941a2d155dc0952304375e21afe6e84150afbb92e3f5",
+    "assets/reference/sunny-reference.glb": "0a248fd750074b6ffbf39a011a0b0148398723ee51e07501d5cef42ac1aef013",
+    "assets/reference/dimensions.json": "f708f368b998fb8c7830bf8e949da5eac4f1475de9e74bcd2989c5fe371f335d"
+  },
+  "served": {
+    "sunny.glb": "4e3e5bda76807ca897bdf0a4f6799bc2a0dbfd6cad5fd3c3cd6e1100855c371c",
+    "sunny-collision.glb": "1aa4e32233e18b389753a16ff7140b1c09d04140aaf78ef314e1620754f3bd06",
+    "ship-metadata.json": "f74fa9b5edd62a6d32123ce9221e225b900cfdd8de5d98e8f04a6c079dcc44a6"
+  }
+}

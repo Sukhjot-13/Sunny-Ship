@@ -6,6 +6,7 @@ import {driveTo} from './stairFlights.mjs'
 import {ladderJourney} from './ladderJourney.mjs'
 import {pointAt} from '../src/systems/climbing.js'
 const plan=roomRoutes(),failures=[]
+const aquarium=JSON.parse(fs.readFileSync('public/models/ship-metadata.json')).interiors.rooms.find(room=>room.name==='Aquarium Bar')?.lounge
 const browser=await puppeteer.launch({headless:true,dumpio:process.env.BROWSER_DIAGNOSTICS==='1',args:['--use-gl=angle','--use-angle=metal','--enable-unsafe-swiftshader','--enable-webgl']})
 if(process.env.BROWSER_DIAGNOSTICS==='1')browser.process()?.once('exit',(code,signal)=>console.log('BROWSER EXIT',{code,signal}))
 try{
@@ -56,6 +57,7 @@ try{
    catch(e){console.log('FAIL',route.name,e.message);result.ok=false}
   }
   let ok=result.ok&&Math.abs(result.last.pos[1]-route.target[1])<.35
+  if(ok&&aquarium?.entryBay&&route.name==='Aquarium Bar')ok=result.last.pos[0]>aquarium.entryBay[0][1]+2.0
   console.log(ok?'PASS':'FAIL',continued?'tour to':'lawn to',route.name,result.last)
   if(!ok){failures.push(route.name);await page.screenshot({path:`docs/review/stall-${route.name.replace(/[^a-z0-9]+/gi,'-')}.png`})}
   if(ok&&!isStair){lastRoom=route;tour=true}

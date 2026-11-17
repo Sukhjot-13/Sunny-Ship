@@ -1,0 +1,19 @@
+FAIL Aquarium Service Passage no connected planned route
+PASS lawn to Aquarium Bar {
+  pos: [ 9.341532880495405, -40.55070114135742, -1.3999999983649205 ],
+  grounded: true,
+  blocker: null
+}
+PASS Aquarium Bar return to lawn [ -4.22790906199462, -40.55070114135742, -0.9724558354264059 ]
+Physical ladder endpoint approach Ladder: Aquarium gallery ladder {
+  endpoint: [ 11.55, -35.62271716308594, 5.913 ],
+  feet: [ 11.563724723549392, -35.62269973754883, 5.945220026010376 ]
+}
+PASS Aquarium gallery ladder complete descent [ 11.55, -40.55070114135742, 7.513000000000001 ]
+PASS lawn to Ladder: Aquarium gallery ladder {
+  pos: [ 11.55, -40.55070114135742, 7.513000000000001 ],
+  grounded: true
+}
+PASS Aquarium gallery ladder complete ascent [ 11.55, -35.62269973754883, 5.914270000006257 ]
+PASS Ladder: Aquarium gallery ladder return to lawn [ -4.196627167562995, -40.55070114135742, -0.9966271675629954 ]
+Interior journey failures: [ 'Aquarium Service Passage' ]

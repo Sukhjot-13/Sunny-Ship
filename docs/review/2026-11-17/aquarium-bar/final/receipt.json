@@ -1,0 +1,112 @@
+{
+  "url": "http://localhost:5174",
+  "shots": [
+    {
+      "name": "lounge",
+      "camera": [
+        11.2,
+        -38.851,
+        -1.287
+      ],
+      "target": [
+        22,
+        -38.501000000000005,
+        -1.287
+      ],
+      "fov": 77
+    },
+    {
+      "name": "tank-close",
+      "camera": [
+        18,
+        -38.851,
+        3.8129999999999997
+      ],
+      "target": [
+        22,
+        -38.351,
+        1.3130000000000002
+      ],
+      "fov": 66
+    },
+    {
+      "name": "mast-table",
+      "camera": [
+        15.25,
+        -38.851,
+        -4.186999999999999
+      ],
+      "target": [
+        19.6,
+        -38.901,
+        -1.287
+      ],
+      "fov": 70
+    },
+    {
+      "name": "aft-passage",
+      "camera": [
+        24.25,
+        -38.851,
+        3.4130000000000003
+      ],
+      "target": [
+        24.22,
+        -37.251000000000005,
+        -5.186999999999999
+      ],
+      "fov": 77
+    }
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "materials": {
+    "roles": {
+      "lamp": 3,
+      "backdrop": 1,
+      "glass": 8,
+      "volume": 2,
+      "canopy": 1,
+      "fish": 64,
+      "reef": 3,
+      "sand": 1
+    },
+    "finishes": {
+      "Sunny_Aquarium_ceiling": {
+        "name": "Sunny_deck",
+        "colour": "705b39",
+        "details": {
+          "interiorSurface": "boards",
+          "interiorProjection": "metric",
+          "finishVersion": 1
+        }
+      },
+      "Sunny_AquariumFloor_entry_1": {
+        "name": "Sunny_tile_aquarium_pale",
+        "colour": "b5b8af",
+        "details": {
+          "interiorSurface": "tile",
+          "interiorProjection": "metric",
+          "finishVersion": 1,
+          "aquariumOwned": true
+        }
+      },
+      "Sunny_AquariumFloor_entry_2": {
+        "name": "Sunny_tile_aquarium_dark",
+        "colour": "334657",
+        "details": {
+          "interiorSurface": "tile",
+          "interiorProjection": "metric",
+          "finishVersion": 1,
+          "aquariumOwned": true
+        }
+      }
+    },
+    "halos": 3
+  },
+  "assets": {
+    "sunny.glb": "4e3e5bda76807ca897bdf0a4f6799bc2a0dbfd6cad5fd3c3cd6e1100855c371c",
+    "ship-metadata.json": "f74fa9b5edd62a6d32123ce9221e225b900cfdd8de5d98e8f04a6c079dcc44a6"
+  },
+  "note": "Actual room renderer, inspection camera only. Separate normal-controller tests cover access."
+}

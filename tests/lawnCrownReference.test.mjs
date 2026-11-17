@@ -8,6 +8,19 @@ import {meshGeometryHashes} from './meshGeometryHash.mjs'
 import {loadColliders,readGLB,readAccessor,nodeMatrix} from './glb.mjs'
 const dir=process.env.REFERENCE_MODELS??'public/models'
 const baseline=JSON.parse(fs.readFileSync('tests/fixtures/lawn-crown-preservation.json'))
+const meta=JSON.parse(fs.readFileSync(path.join(dir,'ship-metadata.json')))
+if(meta.interiors.rooms.find(room=>room.name==='Aquarium Bar')?.lounge?.entryBay){
+ const roomPatch=JSON.parse(fs.readFileSync('tests/fixtures/aquarium-room-delta.json'))
+ for(const [name,hash] of Object.entries(roomPatch.removed)){
+  assert.equal(baseline.meshes[name],hash,name+' previous fixture')
+  delete baseline.meshes[name]
+ }
+ for(const [name,patch] of Object.entries(roomPatch.updated)){
+  assert.equal(baseline.meshes[name]??null,patch.before,name+' previous fixture')
+  baseline.meshes[name]=patch.after
+ }
+ baseline.collisionSha256=roomPatch.collisionSha256
+}
 const hashes=meshGeometryHashes(path.join(dir,'sunny.glb'))
 const canopy=name=>/^Sunny_ShadeTree_(?:port|starboard)_(?:leaves|branch|twig)_batch/.test(name)
 const retained=Object.keys(hashes).filter(name=>!canopy(name))
@@ -15,7 +28,7 @@ assert.equal(retained.length,Object.keys(baseline.meshes).length,'all unrelated 
 for(const name of retained)assert.equal(hashes[name],baseline.meshes[name],name+' geometry/pose/materials/normals/UVs must remain exactly unchanged')
 const collision=crypto.createHash('sha256').update(fs.readFileSync(path.join(dir,'sunny-collision.glb'))).digest('hex')
 assert.equal(collision,baseline.collisionSha256,'every physical collider must remain byte-identical')
-const bounds=loadColliders(path.join(dir,'sunny.glb')),meta=JSON.parse(fs.readFileSync(path.join(dir,'ship-metadata.json')))
+const bounds=loadColliders(path.join(dir,'sunny.glb'))
 const glb=readGLB(path.join(dir,'sunny.glb'))
 const roots=new Map()
 function visit(index,parent){
@@ -47,4 +60,4 @@ for(const side of ['port','starboard']){
  assert(ratio>.8&&ratio<1.2,'actual reconstructed crown retains rounded vertical depth')
  assert(glb.json.nodes.find(n=>n.name===prefix+'_trunk')?.extras?.sunny_crown_reference,'crown reconstruction/source limit remains recorded')
 }
-console.log('PASS two deep actual lawn crowns; every',retained.length,'other mesh including trunks/swing/citrus and the complete collision asset exactly preserved')
+console.log('PASS two deep actual lawn crowns;',retained.length,'other meshes and the collision asset match the approved checkpoint fingerprints')
