@@ -20,7 +20,7 @@
     ],
     "center": [
       -0.00890350341796875,
-      0,
+      0.0,
       1.9073486328125e-06
     ]
   },
@@ -27426,9 +27426,9 @@
       {
         "room": "Library",
         "pos": [
-          28.105882352941176,
+          29.125882352941176,
           1.287,
-          -26.45471716308594
+          -26.72471716308594
         ],
         "colour": "#ffda98",
         "intensity": 28,
@@ -66209,9 +66209,9 @@
               -34.6727180480957
             ],
             "outward": [
-              0,
-              -1,
-              0
+              0.0,
+              -1.0,
+              0.0
             ],
             "radius": 0.5,
             "straight": 1.15,
@@ -66226,9 +66226,9 @@
               -34.6727180480957
             ],
             "outward": [
-              0,
-              -1,
-              0
+              0.0,
+              -1.0,
+              0.0
             ],
             "radius": 0.5,
             "straight": 1.15,
@@ -66243,9 +66243,9 @@
               -34.6727180480957
             ],
             "outward": [
-              0,
-              1,
-              0
+              0.0,
+              1.0,
+              0.0
             ],
             "radius": 0.5,
             "straight": 1.15,
@@ -66260,9 +66260,9 @@
               -34.6727180480957
             ],
             "outward": [
-              0,
-              1,
-              0
+              0.0,
+              1.0,
+              0.0
             ],
             "radius": 0.5,
             "straight": 1.15,
@@ -66272,14 +66272,14 @@
           {
             "id": "AftRearWindow0",
             "position": [
-              24,
+              24.0,
               -6.813000202178955,
               -34.6727180480957
             ],
             "outward": [
-              1,
-              0,
-              0
+              1.0,
+              0.0,
+              0.0
             ],
             "radius": 0.5,
             "straight": 1.15,
@@ -66289,14 +66289,14 @@
           {
             "id": "AftRearWindow1",
             "position": [
-              24,
+              24.0,
               9.38700008392334,
               -34.6727180480957
             ],
             "outward": [
-              1,
-              0,
-              0
+              1.0,
+              0.0,
+              0.0
             ],
             "radius": 0.5,
             "straight": 1.15,
@@ -67017,9 +67017,9 @@
           -39.60071563720703
         ],
         "outward": [
-          0,
-          -1,
-          0
+          0.0,
+          -1.0,
+          0.0
         ],
         "radius": 0.55,
         "straight": 1.15,
@@ -67039,9 +67039,9 @@
           -39.60071563720703
         ],
         "outward": [
-          0,
-          -1,
-          0
+          0.0,
+          -1.0,
+          0.0
         ],
         "radius": 0.55,
         "straight": 1.15,
@@ -67057,13 +67057,13 @@
         "id": "AquariumSideWindowStarboard0",
         "position": [
           18.399999618530273,
-          14,
+          14.0,
           -39.60071563720703
         ],
         "outward": [
-          0,
-          1,
-          0
+          0.0,
+          1.0,
+          0.0
         ],
         "radius": 0.55,
         "straight": 1.15,
@@ -67079,13 +67079,13 @@
         "id": "AquariumSideWindowStarboard1",
         "position": [
           21.149999618530273,
-          14,
+          14.0,
           -39.60071563720703
         ],
         "outward": [
-          0,
-          1,
-          0
+          0.0,
+          1.0,
+          0.0
         ],
         "radius": 0.55,
         "straight": 1.15,
@@ -67105,9 +67105,9 @@
           -39.60071563720703
         ],
         "outward": [
-          1,
-          0,
-          0
+          1.0,
+          0.0,
+          0.0
         ],
         "radius": 0.55,
         "straight": 1.15,
@@ -67127,9 +67127,9 @@
           -39.60071563720703
         ],
         "outward": [
-          1,
-          0,
-          0
+          1.0,
+          0.0,
+          0.0
         ],
         "radius": 0.55,
         "straight": 1.15,
@@ -67146,7 +67146,7 @@
       8.65,
       25.71353,
       -11.6,
-      14,
+      14.0,
       -40.55071716308594,
       -35.82271716308594
     ],
@@ -67156,7 +67156,7 @@
         "name": "Storage Room",
         "x": [
           -30.27,
-          -9
+          -9.0
         ],
         "y": [
           -9,
@@ -67167,7 +67167,7 @@
         "level": "B1",
         "name": "Soldier Dock System",
         "x": [
-          -9,
+          -9.0,
           8.5
         ],
         "y": [
@@ -67208,7 +67208,7 @@
         ],
         "y": [
           -10.12,
-          11
+          11.0
         ]
       },
       {
@@ -67232,7 +67232,7 @@
         ],
         "y": [
           5.55,
-          8
+          8.0
         ]
       },
       {
@@ -67376,7 +67376,102 @@
         "y": [
           -3.61,
           6.19
-        ]
+        ],
+        "libraryLayout": {
+          "centre": [
+            29.505882352941175,
+            1.287,
+            -29.15471716308594
+          ],
+          "cases": [
+            {
+              "bay": 3,
+              "bookcase": "Library_case0",
+              "boundVolumes": 48,
+              "centre": [
+                33.91278772302001,
+                3.3228758601822777,
+                -28.37471716308594
+              ]
+            },
+            {
+              "bay": 9,
+              "bookcase": "Library_case1",
+              "boundVolumes": 48,
+              "centre": [
+                31.331282325322654,
+                6.202039112960046,
+                -28.37471716308594
+              ]
+            },
+            {
+              "bay": 15,
+              "bookcase": "Library_case2",
+              "boundVolumes": 45,
+              "centre": [
+                27.6804823805597,
+                6.202039112960046,
+                -28.37471716308594
+              ]
+            },
+            {
+              "bay": 21,
+              "bookcase": "Library_case3",
+              "boundVolumes": 45,
+              "centre": [
+                25.09897698286234,
+                3.322875860182278,
+                -28.37471716308594
+              ]
+            },
+            {
+              "bay": 27,
+              "bookcase": "Library_case4",
+              "boundVolumes": 48,
+              "centre": [
+                25.098976982862336,
+                -0.7488758601822774,
+                -28.37471716308594
+              ]
+            },
+            {
+              "bay": 33,
+              "bookcase": "Library_case5",
+              "boundVolumes": 46,
+              "centre": [
+                27.6804823805597,
+                -3.628039112960046,
+                -28.37471716308594
+              ]
+            },
+            {
+              "bay": 39,
+              "bookcase": "Library_case6",
+              "boundVolumes": 45,
+              "centre": [
+                31.33128232532265,
+                -3.628039112960047,
+                -28.37471716308594
+              ]
+            },
+            {
+              "bay": 45,
+              "bookcase": "Library_case7",
+              "boundVolumes": 46,
+              "centre": [
+                33.91278772302001,
+                -0.7488758601822765,
+                -28.37471716308594
+              ]
+            }
+          ],
+          "surveyStation": [
+            32.53588235294117,
+            1.287,
+            -29.15471716308594
+          ],
+          "source": "R12 and supplied anime Library still"
+        }
       },
       {
         "level": "F3B",
@@ -68313,11 +68408,38 @@
         ],
         "node": "Sunny_Door_BathWCDoor_leaf",
         "baseOffset": 1.15
+      },
+      {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "mode": "lift",
+        "shape": "rectangle",
+        "rooms": [
+          "Library",
+          "Bath Washroom"
+        ],
+        "pos": [
+          27.325882352941175,
+          4.117,
+          -26.10471716308594
+        ],
+        "rot": 3.141592653589793,
+        "width": 1.48,
+        "depth": 1.4,
+        "height": 0.09,
+        "thickness": 0.09,
+        "baseOffset": -0.045,
+        "node": "Sunny_Hatch_BathLadderHatch_lid",
+        "hinge": [
+          0.74,
+          0
+        ],
+        "angle": 1.5707963267948966
       }
     ],
-    "doorCount": 32,
+    "doorCount": 33,
     "partitions": 53,
-    "furniture": 2538
+    "furniture": 2456
   },
   "exterior": {
     "version": "post-timeskip",
@@ -68358,7 +68480,7 @@
       "B1",
       "Bath",
       "BathDoor",
-      "BathStair",
+      "BathLadderHatch",
       "BathWCDoor",
       "CoupDeBurst",
       "CrowNestHatch",
@@ -68724,17 +68846,17 @@
           "hatch": "StorageHatch",
           "points": [
             [
-              -23,
+              -23.0,
               -5.5,
               -47.15071716308594
             ],
             [
-              -23,
+              -23.0,
               -5.5,
               -40.55071716308594
             ],
             [
-              -23,
+              -23.0,
               -3.9,
               -40.55071716308594
             ]
@@ -68786,6 +68908,29 @@
             ]
           ],
           "reference": "R14: central waiting-room ladder to lawn; offsets reconstructed for body clearance"
+        },
+        {
+          "id": "library-bath-ladder",
+          "label": "Library Bath ladder",
+          "hatch": "BathLadderHatch",
+          "points": [
+            [
+              27.325882352941175,
+              4.117,
+              -29.15471716308594
+            ],
+            [
+              27.325882352941175,
+              4.117,
+              -26.10471716308594
+            ],
+            [
+              28.795882352941174,
+              4.117,
+              -26.10471716308594
+            ]
+          ],
+          "reference": "R12 upright timber ladder and ceiling opening; reconstructed safety lid and clearances"
         }
       ],
       "smallHullPorts": 14,
@@ -68882,7 +69027,7 @@
   },
   "deck": {
     "height": -39.60192635149642,
-    "regionCount": 69,
+    "regionCount": 68,
     "main": {
       "n": 4991,
       "zAvg": -39.60192635149642,
@@ -69014,8 +69159,8 @@
         ]
       },
       {
-        "n": 705,
-        "zAvg": -29.267369561161555,
+        "n": 703,
+        "zAvg": -29.26769005353556,
         "zMin": -29.374725341796875,
         "zMax": -29.15471649169922,
         "x": [
@@ -69298,23 +69443,6 @@
       "Sunny_AquariumFloor_entry",
       "Sunny_Aquarium_ceiling",
       "Sunny_B1_ceiling",
-      "Sunny_BathStair_landing",
-      "Sunny_BathStair_tread0",
-      "Sunny_BathStair_tread1",
-      "Sunny_BathStair_tread10",
-      "Sunny_BathStair_tread11",
-      "Sunny_BathStair_tread12",
-      "Sunny_BathStair_tread13",
-      "Sunny_BathStair_tread14",
-      "Sunny_BathStair_tread15",
-      "Sunny_BathStair_tread2",
-      "Sunny_BathStair_tread3",
-      "Sunny_BathStair_tread4",
-      "Sunny_BathStair_tread5",
-      "Sunny_BathStair_tread6",
-      "Sunny_BathStair_tread7",
-      "Sunny_BathStair_tread8",
-      "Sunny_BathStair_tread9",
       "Sunny_Bath_ceiling",
       "Sunny_Dock_aft_stair_landing",
       "Sunny_Dock_aft_stair_landing.001",
@@ -69444,6 +69572,10 @@
       "Sunny_Hatch_AquariumHatch_frame_x1",
       "Sunny_Hatch_AquariumHatch_frame_y-1",
       "Sunny_Hatch_AquariumHatch_frame_y1",
+      "Sunny_Hatch_BathLadderHatch_frame_x-1",
+      "Sunny_Hatch_BathLadderHatch_frame_x1",
+      "Sunny_Hatch_BathLadderHatch_frame_y-1",
+      "Sunny_Hatch_BathLadderHatch_frame_y1",
       "Sunny_Hatch_CrowNestHatch_frame_x-1",
       "Sunny_Hatch_CrowNestHatch_frame_x1",
       "Sunny_Hatch_CrowNestHatch_frame_y-1",
@@ -71269,22 +71401,9 @@
       "Sunny_BathDoor_frame_jamb-1",
       "Sunny_BathDoor_frame_jamb1",
       "Sunny_BathDoor_handle",
-      "Sunny_BathStair_riser0",
-      "Sunny_BathStair_riser1",
-      "Sunny_BathStair_riser10",
-      "Sunny_BathStair_riser11",
-      "Sunny_BathStair_riser12",
-      "Sunny_BathStair_riser13",
-      "Sunny_BathStair_riser14",
-      "Sunny_BathStair_riser15",
-      "Sunny_BathStair_riser2",
-      "Sunny_BathStair_riser3",
-      "Sunny_BathStair_riser4",
-      "Sunny_BathStair_riser5",
-      "Sunny_BathStair_riser6",
-      "Sunny_BathStair_riser7",
-      "Sunny_BathStair_riser8",
-      "Sunny_BathStair_riser9",
+      "Sunny_BathLadderHatch_hinge0",
+      "Sunny_BathLadderHatch_hinge1",
+      "Sunny_BathLadderHatch_ring",
       "Sunny_BathWCDoor_frame_head",
       "Sunny_BathWCDoor_frame_jamb-1",
       "Sunny_BathWCDoor_frame_jamb1",
@@ -73305,6 +73424,7 @@
       "Sunny_GardenStair_post.026",
       "Sunny_GardenStair_post.027",
       "Sunny_Hatch_AquariumHatch_lid",
+      "Sunny_Hatch_BathLadderHatch_lid",
       "Sunny_Hatch_CrowNestHatch_lid",
       "Sunny_Hatch_DockLadderHatch_lid",
       "Sunny_Hatch_KitchenHatch_lid",
@@ -73993,132 +74113,145 @@
       "Sunny_LibraryRoof_ventrail.045",
       "Sunny_LibraryRoof_ventrail.046",
       "Sunny_LibraryRoof_ventrail.047",
+      "Sunny_Library_bath_ladder_rail",
+      "Sunny_Library_bath_ladder_rail.001",
+      "Sunny_Library_bath_ladder_rung",
+      "Sunny_Library_bath_ladder_rung.001",
+      "Sunny_Library_bath_ladder_rung.002",
+      "Sunny_Library_bath_ladder_rung.003",
+      "Sunny_Library_bath_ladder_rung.004",
+      "Sunny_Library_bath_ladder_rung.005",
+      "Sunny_Library_bath_ladder_rung.006",
+      "Sunny_Library_bath_ladder_rung.007",
+      "Sunny_Library_bath_ladder_rung.008",
+      "Sunny_Library_bath_ladder_rung.009",
+      "Sunny_Library_bath_ladder_rung.010",
+      "Sunny_Library_bath_ladder_rung.011",
       "Sunny_Library_bench0_back",
       "Sunny_Library_bench0_plinth",
+      "Sunny_Library_bench0_recesses",
       "Sunny_Library_bench0_seat",
-      "Sunny_Library_books0_back",
-      "Sunny_Library_books0_shelf0",
-      "Sunny_Library_books0_shelf1",
-      "Sunny_Library_books0_shelf2",
-      "Sunny_Library_books0_shelf3",
-      "Sunny_Library_books0_shelf4",
-      "Sunny_Library_books0_side",
-      "Sunny_Library_books0_side.001",
-      "Sunny_Library_books0_spines0",
-      "Sunny_Library_books0_spines1",
-      "Sunny_Library_books0_spines2",
-      "Sunny_Library_books0_spines3",
-      "Sunny_Library_books0_spines4",
-      "Sunny_Library_books1_back",
-      "Sunny_Library_books1_shelf0",
-      "Sunny_Library_books1_shelf1",
-      "Sunny_Library_books1_shelf2",
-      "Sunny_Library_books1_shelf3",
-      "Sunny_Library_books1_shelf4",
-      "Sunny_Library_books1_side",
-      "Sunny_Library_books1_side.001",
-      "Sunny_Library_books1_spines0",
-      "Sunny_Library_books1_spines1",
-      "Sunny_Library_books1_spines2",
-      "Sunny_Library_books1_spines3",
-      "Sunny_Library_books1_spines4",
-      "Sunny_Library_books2_back",
-      "Sunny_Library_books2_shelf0",
-      "Sunny_Library_books2_shelf1",
-      "Sunny_Library_books2_shelf2",
-      "Sunny_Library_books2_shelf3",
-      "Sunny_Library_books2_shelf4",
-      "Sunny_Library_books2_side",
-      "Sunny_Library_books2_side.001",
-      "Sunny_Library_books2_spines0",
-      "Sunny_Library_books2_spines1",
-      "Sunny_Library_books2_spines2",
-      "Sunny_Library_books2_spines3",
-      "Sunny_Library_books2_spines4",
-      "Sunny_Library_books3_back",
-      "Sunny_Library_books3_shelf0",
-      "Sunny_Library_books3_shelf1",
-      "Sunny_Library_books3_shelf2",
-      "Sunny_Library_books3_shelf3",
-      "Sunny_Library_books3_shelf4",
-      "Sunny_Library_books3_side",
-      "Sunny_Library_books3_side.001",
-      "Sunny_Library_books3_spines0",
-      "Sunny_Library_books3_spines1",
-      "Sunny_Library_books3_spines2",
-      "Sunny_Library_books3_spines3",
-      "Sunny_Library_books3_spines4",
-      "Sunny_Library_books4_back",
-      "Sunny_Library_books4_shelf0",
-      "Sunny_Library_books4_shelf1",
-      "Sunny_Library_books4_shelf2",
-      "Sunny_Library_books4_shelf3",
-      "Sunny_Library_books4_shelf4",
-      "Sunny_Library_books4_side",
-      "Sunny_Library_books4_side.001",
-      "Sunny_Library_books4_spines0",
-      "Sunny_Library_books4_spines1",
-      "Sunny_Library_books4_spines2",
-      "Sunny_Library_books4_spines3",
-      "Sunny_Library_books4_spines4",
-      "Sunny_Library_books5_back",
-      "Sunny_Library_books5_shelf0",
-      "Sunny_Library_books5_shelf1",
-      "Sunny_Library_books5_shelf2",
-      "Sunny_Library_books5_shelf3",
-      "Sunny_Library_books5_shelf4",
-      "Sunny_Library_books5_side",
-      "Sunny_Library_books5_side.001",
-      "Sunny_Library_books5_spines0",
-      "Sunny_Library_books5_spines1",
-      "Sunny_Library_books5_spines2",
-      "Sunny_Library_books5_spines3",
-      "Sunny_Library_books5_spines4",
-      "Sunny_Library_books6_back",
-      "Sunny_Library_books6_shelf0",
-      "Sunny_Library_books6_shelf1",
-      "Sunny_Library_books6_shelf2",
-      "Sunny_Library_books6_shelf3",
-      "Sunny_Library_books6_shelf4",
-      "Sunny_Library_books6_side",
-      "Sunny_Library_books6_side.001",
-      "Sunny_Library_books6_spines0",
-      "Sunny_Library_books6_spines1",
-      "Sunny_Library_books6_spines2",
-      "Sunny_Library_books6_spines3",
-      "Sunny_Library_books6_spines4",
-      "Sunny_Library_central_table_panel",
-      "Sunny_Library_central_table_panel.001",
-      "Sunny_Library_central_table_panel.002",
-      "Sunny_Library_central_table_panel.003",
-      "Sunny_Library_central_table_panel.004",
-      "Sunny_Library_central_table_panel.005",
-      "Sunny_Library_central_table_panel.006",
-      "Sunny_Library_central_table_panel.007",
+      "Sunny_Library_bench1_back",
+      "Sunny_Library_bench1_plinth",
+      "Sunny_Library_bench1_recesses",
+      "Sunny_Library_bench1_seat",
+      "Sunny_Library_case0_back",
+      "Sunny_Library_case0_bound_volumes",
+      "Sunny_Library_case0_lip",
+      "Sunny_Library_case0_lip.001",
+      "Sunny_Library_case0_lip.002",
+      "Sunny_Library_case0_lip.003",
+      "Sunny_Library_case0_lip.004",
+      "Sunny_Library_case0_shelf",
+      "Sunny_Library_case0_shelf.001",
+      "Sunny_Library_case0_shelf.002",
+      "Sunny_Library_case0_shelf.003",
+      "Sunny_Library_case0_shelf.004",
+      "Sunny_Library_case0_stile",
+      "Sunny_Library_case0_stile.001",
+      "Sunny_Library_case1_back",
+      "Sunny_Library_case1_bound_volumes",
+      "Sunny_Library_case1_lip",
+      "Sunny_Library_case1_lip.001",
+      "Sunny_Library_case1_lip.002",
+      "Sunny_Library_case1_lip.003",
+      "Sunny_Library_case1_lip.004",
+      "Sunny_Library_case1_shelf",
+      "Sunny_Library_case1_shelf.001",
+      "Sunny_Library_case1_shelf.002",
+      "Sunny_Library_case1_shelf.003",
+      "Sunny_Library_case1_shelf.004",
+      "Sunny_Library_case1_stile",
+      "Sunny_Library_case1_stile.001",
+      "Sunny_Library_case2_back",
+      "Sunny_Library_case2_bound_volumes",
+      "Sunny_Library_case2_lip",
+      "Sunny_Library_case2_lip.001",
+      "Sunny_Library_case2_lip.002",
+      "Sunny_Library_case2_lip.003",
+      "Sunny_Library_case2_lip.004",
+      "Sunny_Library_case2_shelf",
+      "Sunny_Library_case2_shelf.001",
+      "Sunny_Library_case2_shelf.002",
+      "Sunny_Library_case2_shelf.003",
+      "Sunny_Library_case2_shelf.004",
+      "Sunny_Library_case2_stile",
+      "Sunny_Library_case2_stile.001",
+      "Sunny_Library_case3_back",
+      "Sunny_Library_case3_bound_volumes",
+      "Sunny_Library_case3_lip",
+      "Sunny_Library_case3_lip.001",
+      "Sunny_Library_case3_lip.002",
+      "Sunny_Library_case3_lip.003",
+      "Sunny_Library_case3_lip.004",
+      "Sunny_Library_case3_shelf",
+      "Sunny_Library_case3_shelf.001",
+      "Sunny_Library_case3_shelf.002",
+      "Sunny_Library_case3_shelf.003",
+      "Sunny_Library_case3_shelf.004",
+      "Sunny_Library_case3_stile",
+      "Sunny_Library_case3_stile.001",
+      "Sunny_Library_case4_back",
+      "Sunny_Library_case4_bound_volumes",
+      "Sunny_Library_case4_lip",
+      "Sunny_Library_case4_lip.001",
+      "Sunny_Library_case4_lip.002",
+      "Sunny_Library_case4_lip.003",
+      "Sunny_Library_case4_lip.004",
+      "Sunny_Library_case4_shelf",
+      "Sunny_Library_case4_shelf.001",
+      "Sunny_Library_case4_shelf.002",
+      "Sunny_Library_case4_shelf.003",
+      "Sunny_Library_case4_shelf.004",
+      "Sunny_Library_case4_stile",
+      "Sunny_Library_case4_stile.001",
+      "Sunny_Library_case5_back",
+      "Sunny_Library_case5_bound_volumes",
+      "Sunny_Library_case5_lip",
+      "Sunny_Library_case5_lip.001",
+      "Sunny_Library_case5_lip.002",
+      "Sunny_Library_case5_lip.003",
+      "Sunny_Library_case5_lip.004",
+      "Sunny_Library_case5_shelf",
+      "Sunny_Library_case5_shelf.001",
+      "Sunny_Library_case5_shelf.002",
+      "Sunny_Library_case5_shelf.003",
+      "Sunny_Library_case5_shelf.004",
+      "Sunny_Library_case5_stile",
+      "Sunny_Library_case5_stile.001",
+      "Sunny_Library_case6_back",
+      "Sunny_Library_case6_bound_volumes",
+      "Sunny_Library_case6_lip",
+      "Sunny_Library_case6_lip.001",
+      "Sunny_Library_case6_lip.002",
+      "Sunny_Library_case6_lip.003",
+      "Sunny_Library_case6_lip.004",
+      "Sunny_Library_case6_shelf",
+      "Sunny_Library_case6_shelf.001",
+      "Sunny_Library_case6_shelf.002",
+      "Sunny_Library_case6_shelf.003",
+      "Sunny_Library_case6_shelf.004",
+      "Sunny_Library_case6_stile",
+      "Sunny_Library_case6_stile.001",
+      "Sunny_Library_case7_back",
+      "Sunny_Library_case7_bound_volumes",
+      "Sunny_Library_case7_lip",
+      "Sunny_Library_case7_lip.001",
+      "Sunny_Library_case7_lip.002",
+      "Sunny_Library_case7_lip.003",
+      "Sunny_Library_case7_lip.004",
+      "Sunny_Library_case7_shelf",
+      "Sunny_Library_case7_shelf.001",
+      "Sunny_Library_case7_shelf.002",
+      "Sunny_Library_case7_shelf.003",
+      "Sunny_Library_case7_shelf.004",
+      "Sunny_Library_case7_stile",
+      "Sunny_Library_case7_stile.001",
+      "Sunny_Library_central_table_edge",
+      "Sunny_Library_central_table_marquetry",
       "Sunny_Library_central_table_pedestal",
+      "Sunny_Library_central_table_plinth",
       "Sunny_Library_central_table_top",
-      "Sunny_Library_chair_arm",
-      "Sunny_Library_chair_arm.001",
-      "Sunny_Library_chair_back",
-      "Sunny_Library_chair_base",
-      "Sunny_Library_chair_cushion0",
-      "Sunny_Library_chair_cushion1",
-      "Sunny_Library_chair_foot",
-      "Sunny_Library_chair_foot.001",
-      "Sunny_Library_chair_foot.002",
-      "Sunny_Library_chair_foot.003",
-      "Sunny_Library_chart",
-      "Sunny_Library_chart_island0",
-      "Sunny_Library_chart_island1",
-      "Sunny_Library_chart_island2",
-      "Sunny_Library_chart_meridian",
-      "Sunny_Library_chart_meridian.001",
-      "Sunny_Library_clock",
-      "Sunny_Library_clock_hour",
-      "Sunny_Library_clock_minute",
-      "Sunny_Library_clock_rim",
-      "Sunny_Library_globe",
-      "Sunny_Library_globestand",
       "Sunny_Library_lining_crossbar",
       "Sunny_Library_lining_crossbar.001",
       "Sunny_Library_lining_crossbar.002",
@@ -74361,35 +74494,32 @@
       "Sunny_Library_lining_window_jamb.039",
       "Sunny_Library_lining_window_jamb.040",
       "Sunny_Library_lining_window_jamb.041",
-      "Sunny_Library_mapdesk_drawer0",
-      "Sunny_Library_mapdesk_drawer1",
-      "Sunny_Library_mapdesk_drawer2",
-      "Sunny_Library_mapdesk_leg",
-      "Sunny_Library_mapdesk_leg.001",
-      "Sunny_Library_mapdesk_pedestal",
-      "Sunny_Library_mapdesk_top",
-      "Sunny_Library_shiplog",
-      "Sunny_Library_shiplog_label",
-      "Sunny_Library_table_stool0_cushion",
-      "Sunny_Library_table_stool0_leg",
-      "Sunny_Library_table_stool0_leg.001",
-      "Sunny_Library_table_stool0_leg.002",
-      "Sunny_Library_table_stool0_seat",
-      "Sunny_Library_table_stool1_cushion",
-      "Sunny_Library_table_stool1_leg",
-      "Sunny_Library_table_stool1_leg.001",
-      "Sunny_Library_table_stool1_leg.002",
-      "Sunny_Library_table_stool1_seat",
-      "Sunny_Library_table_stool2_cushion",
-      "Sunny_Library_table_stool2_leg",
-      "Sunny_Library_table_stool2_leg.001",
-      "Sunny_Library_table_stool2_leg.002",
-      "Sunny_Library_table_stool2_seat",
-      "Sunny_Library_table_stool3_cushion",
-      "Sunny_Library_table_stool3_leg",
-      "Sunny_Library_table_stool3_leg.001",
-      "Sunny_Library_table_stool3_leg.002",
-      "Sunny_Library_table_stool3_seat",
+      "Sunny_Library_survey_base",
+      "Sunny_Library_survey_chair_column",
+      "Sunny_Library_survey_chair_foot",
+      "Sunny_Library_survey_chair_seat",
+      "Sunny_Library_survey_chair_shell",
+      "Sunny_Library_survey_chart",
+      "Sunny_Library_survey_chart_roller",
+      "Sunny_Library_survey_chart_weight",
+      "Sunny_Library_survey_chart_weight.001",
+      "Sunny_Library_survey_log",
+      "Sunny_Library_table_chair0_column",
+      "Sunny_Library_table_chair0_foot",
+      "Sunny_Library_table_chair0_seat",
+      "Sunny_Library_table_chair0_shell",
+      "Sunny_Library_table_chair1_column",
+      "Sunny_Library_table_chair1_foot",
+      "Sunny_Library_table_chair1_seat",
+      "Sunny_Library_table_chair1_shell",
+      "Sunny_Library_table_chair2_column",
+      "Sunny_Library_table_chair2_foot",
+      "Sunny_Library_table_chair2_seat",
+      "Sunny_Library_table_chair2_shell",
+      "Sunny_Library_table_chair3_column",
+      "Sunny_Library_table_chair3_foot",
+      "Sunny_Library_table_chair3_seat",
+      "Sunny_Library_table_chair3_shell",
       "Sunny_LionEye_pupil",
       "Sunny_LionEye_pupil.001",
       "Sunny_LionEye_white",
@@ -76723,15 +76853,15 @@
     ]
   },
   "collision": {
-    "floorRegions": 69,
+    "floorRegions": 68,
     "obstacles": 17,
     "boundaryWall": 1.3,
-    "detailFloorCells": 40692,
-    "floorColliderBoxes": 15072,
+    "detailFloorCells": 40707,
+    "floorColliderBoxes": 15064,
     "floorSlabDepth": 0.6
   },
   "counts": {
-    "shipObjects": 7519,
+    "shipObjects": 7504,
     "removedJunkObjects": 102,
     "skippedDegenerateMeshes": 3
   }

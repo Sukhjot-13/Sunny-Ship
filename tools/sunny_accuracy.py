@@ -2587,6 +2587,7 @@ def apply_exterior_accuracy(objects, bounds, frame, interiors):
     for name,throat in (('Cylinder005',.28),('Cylinder001',.17)):
         scalloped_soffit(next(o for o in objects if o.name==name),bounds,throat)
     climbs=lookout_access(objects,bounds,interiors)+interiors.get('exteriorClimbs',[])+stern_ladder_access(objects,bounds,interiors)+dock_ladder_access(objects,bounds,interiors)
+    if 'bathClimb' in interiors:climbs.append(interiors.pop('bathClimb'))
     from sunny_aft_envelope import add_lower_aquarium_windows
     add_lower_aquarium_windows(objects,interiors)
     branch_office(objects,bounds,interiors['levels'])

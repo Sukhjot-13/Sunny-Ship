@@ -162,17 +162,6 @@ def pendant(name, p, ceiling, room):
     return dict(room=room,pos=[x,y,z],colour='#ffda98',intensity=28,distance=12)
 
 
-def rounded_table(name, p, radius=.85, height=.76, sides=8):
-    """The library's octagonal central table and panelled pedestal."""
-    top = pole(name+'_top',(p[0],p[1],p[2]+height-.045),(p[0],p[1],p[2]+height),radius,'timber',sides=sides)
-    top['sunny_obstacle'] = True
-    body = pole(name+'_pedestal',(p[0],p[1],p[2]+.06),(p[0],p[1],p[2]+height-.055),radius*.64,'darkwood',sides=sides)
-    body['sunny_obstacle'] = True
-    for i in range(sides):
-        a=(i+.5)*math.tau/sides
-        rpole(name+'_panel',p,a,(radius*.64,-.15,.17),(radius*.64,-.15,height-.16),.015,'gold')
-
-
 def stocked_shelf(name, p, rot=0, width=2, tiers=4):
     """Pantry's raw stores on open shelving, rather than empty cabinet boxes."""
     shelf_unit(name,p,rot,width,.42,2.0,tiers)
@@ -185,63 +174,6 @@ def stocked_shelf(name, p, rot=0, width=2, tiers=4):
                 rpole(name+'_lid',p,rot,(x,0,z+.23),(x,0,z+.25),.08,'timber',sides=14)
             else:
                 sphere(name+'_produce',L(p,rot,x,0,z+.085),(.12,.10,.085),('orange','leaf','cream','red','gold')[i])
-
-
-def curved_bench_part(name, centre, inner, outer, bottom, top, start, end, key):
-    """Closed annular seating with real curved sides, rather than spaced chairs."""
-    count=math.ceil((end-start)/.045)
-    vertices=[]
-    for z in (bottom,top):
-        for radius in (inner,outer):
-            vertices.extend((centre[0]+radius*math.cos(start+(end-start)*i/count),
-                             centre[1]+radius*math.sin(start+(end-start)*i/count),
-                             centre[2]+z) for i in range(count+1))
-    n=count+1
-    faces=[]
-    for i in range(count):
-        faces.extend(((i,n+i,n+i+1,i+1),(2*n+i,2*n+i+1,3*n+i+1,3*n+i),
-                      (i,i+1,2*n+i+1,2*n+i),(n+i,3*n+i,3*n+i+1,n+i+1)))
-    faces.extend(((0,2*n,3*n,n),(n-1,2*n-1,4*n-1,3*n-1)))
-    mesh=bpy.data.meshes.new(name)
-    mesh.from_pydata(vertices,[],faces)
-    mesh.materials.append(material(key))
-    bm=bmesh.new();bm.from_mesh(mesh)
-    bmesh.ops.recalc_face_normals(bm,faces=list(bm.faces))
-    bm.to_mesh(mesh);bm.free();mesh.update()
-    for face in mesh.polygons:
-        face.use_smooth=abs(face.normal.z)<.01 and face.index<4*count
-    obj=bpy.data.objects.new('Sunny_'+name,mesh)
-    bpy.context.scene.collection.objects.link(obj)
-    obj['sunny_authored']=True;obj['sunny_obstacle']=True
-    obj['sunny_walkable']=False;obj['sunny_rail']=True
-    obj['sunny_reference']='SBS p195 and supplied anime Library: continuous curved perimeter bench'
-    return obj
-
-
-def library_details(room, floor):
-    """Reference green encircling seating, chart desk and central octagonal table."""
-    cx=(room['x'][0]+room['x'][1])/2
-    cy=(room['y'][0]+room['y'][1])/2
-    remove_family('Library_bench')
-    # Keep the fore door/ladder gap and port bath-stair approach open.
-    # Hidden metric endpoints fit the existing enlarged room, not the drawing.
-    centre=(cx,cy,floor)
-    for name,inner,outer,bottom,top,key in (
-        ('plinth',3.68,4.29,.02,.42,'darkwood'),
-        ('seat',3.58,4.30,.42,.52,'upholstery_teal'),
-        ('back',4.19,4.31,.50,.97,'upholstery_teal')):
-        curved_bench_part('Library_bench0_'+name,centre,inner,outer,bottom,top,-2.55,1.87,key)
-    # Move the survey desk and its actual attached mapping props to the aft wall.
-    shift=Vector((3.25,0,0))
-    for obj in bpy.data.objects:
-        if obj.name.startswith(('Sunny_Library_mapdesk','Sunny_Library_chart','Sunny_Library_globe','Sunny_Library_shiplog','Sunny_Library_chair')):
-            obj.location += shift
-    rounded_table('Library_central_table',(cx-.4,cy,floor),.83)
-    for i in range(4):
-        a=math.pi/4+i*math.tau/4
-        p=(cx-.4+1.10*math.cos(a),cy+1.10*math.sin(a),floor)
-        stool('Library_table_stool%d'%i,p,a,seat=.46,key='gold')
-        soft_box('Library_table_stool%d_cushion'%i,p,a,(.38,.38,.055),'upholstery_teal',(0,0,.51),radius=.02)
 
 
 def quarters_details(frame, levels, rooms):
@@ -466,6 +398,7 @@ def complete_room_fittings(objects, frame, interiors):
     quarters_details(frame,levels,rooms)
     kitchen_details(cy,levels['F2A'])
     infirmary_details(cy,levels['F2A'])
+    from sunny_library import library_details
     library_details(rooms['Library'],levels['F3L'])
     workshop_details(rooms,levels['B1'])
     energy_details(levels['B1'])
@@ -490,7 +423,7 @@ def complete_room_fittings(objects, frame, interiors):
         obj=bpy.data.objects.get(name)
         if obj:
             tile_floor(obj,.75,('tile_aquarium_pale','tile_aquarium_dark'))
-    tile_floor(bpy.data.objects['Sunny_InteriorFloor_F3_library'],.65,('tile_blue','tile_sage'))
+    tile_floor(bpy.data.objects['Sunny_InteriorFloor_F3_library'],.65,('tile_library_blue','tile_library_sage'))
     tile_floor(bpy.data.objects['Sunny_InteriorFloor_lower'],.85,('steel',),(8.5,20.2,cy,13.2))
     tile_floor(bpy.data.objects['Sunny_InteriorFloor_F2_service'],.55,('tile_ivory','tile_dark'),(20.6,24.8,-11.5,cy))
     tile_floor(bpy.data.objects['Sunny_InteriorFloor_F3_bath'],.55,('tile_ivory','tile_sage'))
@@ -503,7 +436,7 @@ def complete_room_fittings(objects, frame, interiors):
         ('Kitchen',(16.4,cy+5.2,levels['F2A']+2.9),levels['F3G']-.18),
         ('Dining Room',(16.4,cy-5.2,levels['F2A']+2.9),levels['F3G']-.18),
         ('Sick Bay',(22.8,cy-5.4,levels['F2A']+2.6),levels['F3G']-.18),
-        ('Library',(lc-1.4,cy,levels['F3L']+2.70),levels['F3L']+3.05),
+        ('Library',(lc-.38,cy,levels['F3L']+2.43),levels['F3L']+2.87),
         ('Bath',(lc,cy-.8,levels['F3B']+2.16),levels['F3B']+2.58),
         ("Usopp's Main Factory",(14.4,-5.6,levels['B1']+3.2),levels['F1']-.18),
         ("Franky's Weapon Development Room",(14.4,6.6,levels['B1']+3.2),levels['F1']-.18),

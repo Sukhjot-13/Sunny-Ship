@@ -96,6 +96,7 @@ const suites=[
  ['foreExterior.test.mjs','C01 original bow exterior preservation'],
  ['interiorMaterials.test.mjs','physical interior materials and metric projection'],
  ['aquariumRoom.test.mjs','Aquarium tank, furnishings and preserved route interfaces'],
+ ['libraryRoom.test.mjs','Library furnishings, clear glazing and full Bath ladder'],
  ['exteriorMaterials.test.mjs','physical exterior materials and reflection guards'],
  ['navigation.test.mjs','navigation logic'],['foodLift.test.mjs','C04 mast-integrated food lift'],['climbing.test.mjs','climbing and interaction logic'],['assets.test.mjs','asset structure'],['exterior.test.mjs','exterior coplanar geometry'],['doors.test.mjs','door and hatch collision'],
  ['physics.test.mjs','collision physics'],['reachability.mjs','deck reachability'],

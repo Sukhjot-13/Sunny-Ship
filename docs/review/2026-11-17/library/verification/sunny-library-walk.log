@@ -1,0 +1,29 @@
+PASS lawn to Library {
+  pos: [ 30.40068353350948, -29.154699325561523, -1.211065250518064 ],
+  grounded: true,
+  blocker: null
+}
+PASS Library return to lawn [ -4.189644296719954, -40.55070114135742, -0.9896442967199544 ]
+Physical ladder endpoint approach Ladder: Stern Library ladder {
+  endpoint: [ 27.608023262023927, -35.62271716308594, 0.05056219100952153 ],
+  feet: [ 27.608020719778402, -35.62269973754883, 0.050575147250328 ]
+}
+PASS Stern Library ladder complete ascent [ 27.608023262023927, -29.15471716308594, -1.5494378089904786 ]
+PASS lawn to Ladder: Stern Library ladder {
+  pos: [ 27.608023262023927, -29.154699325561523, -1.5494378089904786 ],
+  grounded: true
+}
+PASS Stern Library ladder complete descent [ 27.608023262023927, -35.62269973754883, 0.05056219100952153 ]
+PASS Ladder: Stern Library ladder return to lawn [ -4.161206427037354, -40.55070114135742, -1.0387935729626718 ]
+Physical ladder endpoint approach Ladder: Library Bath ladder {
+  endpoint: [ 27.325882352941175, -29.15471716308594, -4.117 ],
+  feet: [ 27.403584425291594, -29.154699325561523, -4.111972820864488 ]
+}
+PASS Library Bath ladder complete ascent [ 28.795882352941174, -26.104700088500977, -4.117 ]
+PASS lawn to Ladder: Library Bath ladder {
+  pos: [ 28.795882352941174, -26.104700088500977, -4.117 ],
+  grounded: true
+}
+PASS Library Bath ladder complete descent [ 27.325882352941175, -29.152699325561525, -4.117 ]
+PASS Ladder: Library Bath ladder return to lawn [ -4.21323917719565, -40.55070114135742, -1.0132391771956486 ]
+Interior journey failures: []

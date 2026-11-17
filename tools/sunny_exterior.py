@@ -1372,6 +1372,8 @@ def restore_exterior(objects, vertex_bbox):
     bpy.context.view_layer.update()
     from sunny_surfaces import prepare_exterior_surfaces
     log(f'[pipeline]   exterior coplanar faces trimmed: {prepare_exterior_surfaces(objects,vertex_bbox)}')
+    from sunny_library import library_ceiling_finish
+    library_ceiling_finish(objects)
     # Final construction ownership follows all overlap/topology cleanup so a
     # later n-gon tessellation cannot bridge a repaired room boundary.
     from sunny_fore_trim import reconcile_fore_trim

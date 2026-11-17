@@ -1,0 +1,19 @@
+{
+  "backup": "/private/tmp/sunny-library-live-before",
+  "stage": "/private/tmp/sunny-library-candidate",
+  "url": "http://localhost:5173",
+  "applied": {
+    "assets/sunny-master.blend": "db3ca567777f04fa0ec9cf20590a43e57e01ad3bd199860c196fb204c6428853",
+    "public/models/sunny.glb": "d8336014cf606119b4fb345094b7f3081119098381b359fd7d082b0bb0fbfae3",
+    "public/models/sunny-collision.glb": "4c7156a7e1f86b9e51507b99c391e899683b6e30b37762eb52cf30cf13da7cc2",
+    "public/models/ship-metadata.json": "aba41af0f22c2aac57f45bc46cb770bd7aecf904eddd2639128ab6f808e69478",
+    "assets/reference/sunny-reference.blend": "ac03fb7899467176e26ed833f9676f8832de4d8c0426243c28157fbe77d65a09",
+    "assets/reference/sunny-reference.glb": "579ca02334b505e74f2fe36cd99a82ae950f3da6b60115725bbc6cf8e9b9ff2d",
+    "assets/reference/dimensions.json": "693a40979d23b244b88d9cceaf6aac42c9a615a1745ebe423bf64d6a0ed40bcc"
+  },
+  "served": {
+    "sunny.glb": "d8336014cf606119b4fb345094b7f3081119098381b359fd7d082b0bb0fbfae3",
+    "sunny-collision.glb": "4c7156a7e1f86b9e51507b99c391e899683b6e30b37762eb52cf30cf13da7cc2",
+    "ship-metadata.json": "aba41af0f22c2aac57f45bc46cb770bd7aecf904eddd2639128ab6f808e69478"
+  }
+}

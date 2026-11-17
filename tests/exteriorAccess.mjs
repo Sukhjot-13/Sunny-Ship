@@ -88,7 +88,7 @@ try{
  // Preserve its entire descent/ascent/closure and outside return coverage.
  // Storage is an interior connection covered by interiorJourneys; its upper
  // endpoint is inside the men's cabin, rather than beyond the aft flights.
- const ladders=normalizeClimbs(meta.exterior.mechanisms.climbs).filter(p=>!['fore-lookout','storage-ladder'].includes(p.id))
+ const ladders=normalizeClimbs(meta.exterior.mechanisms.climbs).filter(p=>!['fore-lookout','storage-ladder','library-bath-ladder'].includes(p.id))
  assert.equal(ladders.length,3,'R13 gallery/stern and R14 central Dock ladder connections are required')
  for(const ladder of ladders.filter(p=>selected(p.id))){
  const stern=ladder.id==='stern-library-ladder',dock=ladder.id==='dock-waiting-ladder',id=ladder.hatch

@@ -1,5 +1,21 @@
 # Sunny interior completion contract — October 15, 2026
 
+## Active room order — November 17, 2026
+
+The Aquarium (`1b1a9aa`) and earlier exterior checkpoints are pushed on `reference-completion`. Leave their verified features alone unless a shared interface changes or an actual regression appears. The user has requested all interiors now, with realistic materials and lighting in each room. Remaining exterior work is parked. The older order and graphics hold below are historical.
+
+| Group | Current status |
+| --- | --- |
+| Aquarium lounge, rear passage and gallery ladder | Applied and pushed; [evidence and limits](aquarium-reference-audit.md). |
+| Library and its immediate entry/landing | Applied locally. [Evidence](library-reference-audit.md): clear glazing, bound books, furnishings/finishes, three actual access round trips. Bench rotation remains a mechanism item. |
+| Bath, washroom and toilet | Active. The source ladder and landing are already verified; add the wet/dry finishes and visit all three upper spaces. |
+| Dining, Kitchen, Pantry and Sick Bay | Pending. Evaluate each room and its shared routes. |
+| Men’s and women’s quarters, both washrooms and four cannon closets | Pending. |
+| Storage and service passage, Energy Room, Dock interior and both workshops | Pending. |
+| Crow’s Nest/survey and gym | Pending. Keep the verified exterior rope/ladder and hatch. |
+
+For each checkpoint, compare the supplied drawings and anime still, check the actual materials and editable geometry, and walk the affected access/return. Use before/after fingerprints to avoid reopening accepted rooms. The working 2.2 scale and normal player remain unchanged; exact metre sizes are reconstructed.
+
 ## Current — October 22, 2026
 
 The active section remains E1, both garden-stair enclosures. Publication 35449 is terminal (116/116 structure, all original 34 geometry groups and route plans pass), but the current master and GLB still have a measured starboard fore-corner gap. The real-Blender staged fixture proves that the later legacy lower-flight broad cut erases the correctly built cheek. `tools/sunny_exterior.py:add_fittings` now excludes this native wall from that redundant cut, retaining all 66 exact real-tread standing volumes. The exported regression has also been corrected to start inside the room beyond its actual front wall and fails the previous export on the real gap. New coherent publication, current pictures, full both-side real walking/descents and the complete original test runner/build remain pending. No current full pass is claimed.

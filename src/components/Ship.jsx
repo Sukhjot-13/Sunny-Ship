@@ -27,7 +27,7 @@ import { shipYaw, voyage } from '../systems/navigation.js'
  * cloned the sail meshes and that mis-placed them, because several of the
  * FBX objects carry baked vertex offsets relative to their origin.)
  */
-export function Ship({ sunDir, skyColor = '#9fc4e0', deckY = 0, waterY = -14, roomLights, aquariumLayout, ...props }) {
+export function Ship({ sunDir, skyColor = '#9fc4e0', deckY = 0, waterY = -14, roomLights, aquariumLayout, libraryLayout, ...props }) {
   const bobRef = useRef()
   const timeRef = useRef(0)
   const { scene } = useGLTF('/models/sunny.glb')
@@ -93,7 +93,7 @@ export function Ship({ sunDir, skyColor = '#9fc4e0', deckY = 0, waterY = -14, ro
           const floor=/^Sunny_AquariumFloor/.test(child.name)
           if(floor&&aquariumFloorMaterials.has(m.name))return aquariumFloorMaterials.get(m.name)
           const result=realisticInteriorMaterial(m,{wood:tags.sunny_wood_kind,name:child.name,fabric:tags.sunny_fabric,uv:!!tags.sunny_uv_space,
-            aquarium:aquariumLayout?aquarium:null})
+            aquarium:aquariumLayout?aquarium:null,library:libraryLayout})
           if(result.userData.aquariumOwned)aquariumFloorMaterials.set(m.name,result)
           return result
         }
@@ -113,7 +113,7 @@ export function Ship({ sunDir, skyColor = '#9fc4e0', deckY = 0, waterY = -14, ro
 
     for(const position of aquariumHalos)aquarium.addHalo(root,position)
     return { root, sails, sailCount, interiorGeometries, aquarium, aquariumFloorMaterials }
-  }, [scene, emblem, sunDir, skyColor, deckY, waterY, aquariumLayout])
+  }, [scene, emblem, sunDir, skyColor, deckY, waterY, aquariumLayout, libraryLayout])
 
   useEffect(() => {
     const unregister = []

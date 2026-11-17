@@ -1,0 +1,14 @@
+PASS two deep actual lawn crowns; 7496 other meshes and the collision asset match the approved checkpoint fingerprints
+✔ /Users/sukhjot/codes/Sunny-Ship/tests/lawnCrownReference.test.mjs (556.197375ms)
+PASS fitted Library cases and bindings, two supported benches and full real Bath ladder clearance
+✔ /Users/sukhjot/codes/Sunny-Ship/tests/libraryRoom.test.mjs (582.882666ms)
+PASS exact working/reference asset hashes and uniform 1/2.2 transform across 7504 real exported meshes
+✔ /Users/sukhjot/codes/Sunny-Ship/tests/referenceScale.test.mjs (342.569375ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 589.094708

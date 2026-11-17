@@ -1607,33 +1607,6 @@ def build_interiors(objects, vertex_bbox, shift, aft_snapshot=None):
     hut_roof('LibraryRoof',(lcx,lcy,F3L))
     door('LibraryDoor', (lcx-4.95, lcy, F3L), math.pi / 2, 1.45, 2.40, 'slide', 1,
          rooms=('Library', 'Stern Balcony'), key='red')
-    for i in range(7):
-        a = (-2.45,-1.8,-1.15,-.5,.15,.8,1.45)[i]
-        bookcase('Library_books%d' % i,
-                 (lcx + (lrad - 0.5) * math.cos(a), lcy + (lrad - 0.5) * math.sin(a), F3L),
-                 a - math.pi / 2, 1.95, 0.4, 2.2, seed=20 + i)
-    # Wall clock and mapping materials distinguish the reference library.
-    pole('Library_clock',(lcx+4.80,lcy,F3L+2.50),(lcx+4.89,lcy,F3L+2.50),.25,'white')
-    ring('Library_clock_rim',(lcx+4.77,lcy,F3L+2.50),.255,.025,'gold','X')
-    pole('Library_clock_hour',(lcx+4.75,lcy,F3L+2.50),(lcx+4.75,lcy+.10,F3L+2.58),.012,'black')
-    pole('Library_clock_minute',(lcx+4.74,lcy,F3L+2.50),(lcx+4.74,lcy-.02,F3L+2.70),.009,'black')
-    for i in range(16):
-        a = -2.55 + i * 5.1 / 15
-        if 2.0 < a < 2.8:
-            continue  # clear the port bath-stair entrance
-        b = (lcx + (lrad - 0.85) * math.cos(a), lcy + (lrad - 0.85) * math.sin(a), F3L)
-        bench('Library_bench%d'%i,b,a-math.pi/2,w=1.0,d=.42,h=.45)
-    desk('Library_mapdesk', (lcx, lcy, F3L), 0.0, 1.7, 0.95)
-    rbox('Library_chart',(lcx+.25,lcy,F3L+.80),0,(.62,.64,.008),'cream',obstacle=False)
-    for i in range(3):
-        sphere('Library_chart_island%d'%i,(lcx+.07+i*.17,lcy-.15+(i%2)*.27,F3L+.811),(.06,.09,.003),'leaf')
-    for x in (-.02,.48):pole('Library_chart_meridian',(lcx+x,lcy-.28,F3L+.813),(lcx+x,lcy+.28,F3L+.813),.003,'gold')
-    text('Library_shiplog_label','SHIP LOG',(lcx+.4,lcy-.26,F3L+.832),.06,'white',(0,0,0))
-    sphere('Library_globe', (lcx - 0.2, lcy, F3L + 1.32), (0.26, 0.26, 0.26), 'glass')
-    pole('Library_globestand', (lcx - 0.2, lcy, F3L + 0.78), (lcx - 0.2, lcy, F3L + 1.06), 0.05, 'gold')
-    rbox('Library_shiplog', (lcx + 0.5, lcy - 0.2, F3L + 0.80), 0.4, (0.44, 0.32, 0.06), 'red')
-    armchair('Library_chair', (lcx + 0.1, lcy + 1.3, F3L), math.pi)
-
     rooms.append(dict(level='F3L', name='Library', x=(lcx - lrad, lcx + lrad),
                       y=(lcy - lrad, lcy + lrad)))
 
@@ -1649,16 +1622,8 @@ def build_interiors(objects, vertex_bbox, shift, aft_snapshot=None):
     ceiling=plan_floor('Bath_ceiling',bath_outline,bath_floor+2.58)
     ceiling['sunny_walkable']=True
     ceiling['sunny_obstacle']=False
-    bath_start = (lcx - 3.3, lcy + 2.9, F3L)
-    stair_flight('BathStair', bath_start, 0.0, bath_floor - F3L, 4.4, 1.05, rails=(False, False))
-    open_plan_slot(lc,bath_start[0]-.6,bath_start[0]+4.5,bath_start[1]-.65,bath_start[1]+.65)
-    open_plan_slot(bath_deck, bath_start[0] - 0.6, bath_start[0] + 4.5, bath_start[1] - 0.65, bath_start[1] + 0.65)
-    rbox('BathStair_landing', (bath_start[0] + 4.95, bath_start[1], bath_floor), 0.0,
-         (1.5, 1.15, 0.12), 'deck', (0, 0, -0.06), walkable=True)
-    for obj in objects:
-        if obj.name == 'Cylinder002':
-            open_volume_slot(obj, bath_start[0] - 0.6, bath_start[0] + 6.0, bath_start[1] - 0.65,
-                             bath_start[1] + 0.65, F3L, bath_floor + 2.2)
+    from sunny_library import library_bath_access
+    bath_climb=library_bath_access(objects,lcx,lcy,F3L,bath_floor)
 
     wall_run('RoomPartition_bath', (lcx, lcy + brad * 0.45, bath_floor), 0.0, 8.2, 2.55,
              openings=((0.0, 1.0, 2.1),), key='cream', thickness=0.16)
@@ -1676,6 +1641,7 @@ def build_interiors(objects, vertex_bbox, shift, aft_snapshot=None):
                       y=(f.y(-6.0), f.y(7.2))))
 
     for spec in DOORS:
+        if spec['id']=='BathLadderHatch':continue
         x, y, z = spec['pos']
         across_x = abs(math.cos(spec['rot'])) > 0.5
         width = spec['width'] + 0.10
@@ -1699,6 +1665,7 @@ def build_interiors(objects, vertex_bbox, shift, aft_snapshot=None):
     return {
         'dockCentre':[dcentre[0],cy,B1], 'dockSolids':dock_solids, 'dockWaterLevel':dock_water, 'foodLift':food_lift,
         'levels': level_of,
+        'bathClimb':bath_climb,
         'aftEnclosures': [aft_enclosure],
         'foreTrimVolumes': [dict(level=level, outline=outline, bottom=bottom, top=top)
             for level,outline,bottom,top in (

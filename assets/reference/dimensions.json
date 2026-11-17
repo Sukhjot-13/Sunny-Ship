@@ -1,8 +1,8 @@
 {
-  "source": "/private/tmp/sunny-aquarium-access-candidate/sunny-master.blend",
-  "workingVisualSource": "/private/tmp/sunny-aquarium-access-candidate/sunny.glb",
-  "sourceSha256": "fde28f5a516e48bac40fb7aac30fa3af34dc820ea51d69722298481937708995",
-  "workingVisualSha256": "4e3e5bda76807ca897bdf0a4f6799bc2a0dbfd6cad5fd3c3cd6e1100855c371c",
+  "source": "/private/tmp/sunny-library-candidate/sunny-master.blend",
+  "workingVisualSource": "/private/tmp/sunny-library-candidate/sunny.glb",
+  "sourceSha256": "db3ca567777f04fa0ec9cf20590a43e57e01ad3bd199860c196fb204c6428853",
+  "workingVisualSha256": "d8336014cf606119b4fb345094b7f3081119098381b359fd7d082b0bb0fbfae3",
   "workingScale": 2.2,
   "referenceScale": 1,
   "rootMultiplier": 0.45454545454545453,

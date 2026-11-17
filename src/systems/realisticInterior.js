@@ -12,11 +12,32 @@ const profiles={
  tile:{period:[.28,.28],roughness:.24,relief:.000006,coat:.5},
  porcelain:{period:[.18,.18],roughness:.18,relief:.000003,coat:.7},
  paper:{period:[.12,.12],roughness:.94,relief:.000014},
+ bookcloth:{period:[.043,.046],roughness:.81,relief:.000065,sheen:.12},
+ leather:{period:[.067,.061],roughness:.57,relief:.000038,coat:.16},
+ 'bath-stone':{period:[1.22,1.22],roughness:.37,relief:.0014,coat:.3},
 }
 /** Stable periodic noise for fine fibres and fired glaze, without animation. */
 function noise(u,v,seed=1){
  return Math.sin(TAU*(u*7+v*3)+seed)*Math.sin(TAU*(u*3-v*11)-seed)*.5+
   Math.sin(TAU*(u*29+v*17)+seed*2)*.25
+}
+
+function stoneChip(u,v){
+ const cells=7,x=u*cells,y=v*cells
+ let chip=0,tint=0,selection=Infinity
+ const seed=(a,b,offset)=>{
+  const phase=((a+cells)%cells)*127.1+((b+cells)%cells)*311.7+offset
+  const wave=Math.sin(phase)*43758.5453
+  return wave-Math.floor(wave)
+ }
+ for(let row=-1;row<=1;row++)for(let column=-1;column<=1;column++){
+  const a=Math.floor(x)+column,b=Math.floor(y)+row
+  const spread=.29+seed(a,b,13)*.20
+  const first=x-a-.24-.48*seed(a,b,5),second=y-b-.22-.50*seed(a,b,19)
+  const distance=Math.hypot(first+.20*second,second*(.88+.33*seed(a,b,31)))/spread
+  if(distance<selection){selection=distance;chip=clamp((1.03-distance)*8);tint=seed(a,b,61)}
+ }
+ return {chip,tint}
 }
 /** Colour-managed mipmapped maps; repetition is measured in metres. */
 function texture(data,size,period,color=false){
@@ -34,13 +55,16 @@ export function interiorTextureSet(role){
  const albedo=new Uint8Array(count*4),normal=new Uint8Array(count*4),roughness=new Uint8Array(count*4),height=new Float32Array(count)
  for(let y=0;y<size;y++)for(let x=0;x<size;x++){
   const u=x/size,v=y/size,i=y*size+x,j=i*4,n=noise(u,v)
-  const fabric=['upholstery','linen','curtain'].includes(role)
+  const fabric=['upholstery','linen','curtain','bookcloth'].includes(role)
   const warp=Math.sin(TAU*u*64),weft=Math.sin(TAU*v*64),weave=warp*weft
-  const fibres=fabric?weave*.65+noise(u,v,4)*.35:n
-  const tone=clamp((fabric?.95:.985)+fibres*(fabric?.035:.008))
-  const srgb=tone<=.0031308?tone*12.92:1.055*Math.pow(tone,1/2.4)-.055
-  albedo[j]=albedo[j+1]=albedo[j+2]=Math.round(srgb*255);albedo[j+3]=255
-  roughness[j]=roughness[j+1]=roughness[j+2]=Math.round(clamp(p.roughness+fibres*(fabric?.045:.025))*255);roughness[j+3]=255
+  const stone=role==='bath-stone'?stoneChip(u,v):null
+  const fibres=stone?stone.chip*.67+n*.09:fabric?weave*.65+noise(u,v,4)*.35:n
+  const tone=clamp(stone?.chip!==undefined?.95-stone.chip*(.13+stone.tint*.22)+n*.035:(fabric?.95:.985)+fibres*(fabric?.035:.008))
+  const gamma=value=>value<=.0031308?value*12.92:1.055*Math.pow(value,1/2.4)-.055
+  albedo[j]=Math.round(gamma(clamp(tone+(stone?.chip??0)*.04))*255)
+  albedo[j+1]=Math.round(gamma(tone)*255)
+  albedo[j+2]=Math.round(gamma(clamp(tone+(stone?.chip??0)*(.12-(stone?.tint??0)*.08)))*255);albedo[j+3]=255
+  roughness[j]=roughness[j+1]=roughness[j+2]=Math.round(clamp(p.roughness+fibres*(stone?.chip!==undefined?.13:fabric?.045:.025))*255);roughness[j+3]=255
   height[i]=fibres*p.relief
  }
  const at=(x,y)=>height[((y+size)%size)*size+(x+size)%size]
@@ -63,9 +87,17 @@ export function interiorSurfaceRole(source,{name='',wood='grain',fabric=false}={
  const label=source.name.replace('Sunny_','')
  if(label==='lamp_glow')return 'lamp'
  if(label==='tankwater')return 'water'
+ if(label==='bath_water')return 'bath-water'
+ if(label==='bath_stone')return 'bath-stone'
+ if(label==='bath_pipe')return 'steel'
+ if(/^bath_(?:jade|porcelain|enamel|tile)$/.test(label))return 'porcelain'
+ if(/^bath_(?:cedar|amber)$/.test(label))return 'boards'
  if(label==='glass')return /mirror/i.test(name)?'mirror':'glass'
  if(/^tile_/.test(label))return 'tile'
- if(label==='paper')return 'paper'
+ if(label==='paper'||label.startsWith('paper_'))return 'paper'
+ if(/^library_binding\d+$/.test(label))return 'bookcloth'
+ if(label==='library_leather'||label==='library_log')return 'leather'
+ if(/^library_(?:walnut|oak|inlay|casing)$/.test(label))return label==='library_casing'?'boards':'grain'
  if(label==='linen')return 'linen'
  if(label.startsWith('upholstery_'))return 'upholstery'
  if(label==='cloth_aquarium')return 'curtain'
@@ -155,9 +187,10 @@ export function realisticInteriorMaterial(source,options={}){
  const role=interiorSurfaceRole(source,options),projected=!options.uv||role==='tile',tile=role==='tile'?interiorTileSize(options.name??''):0
  const aquariumFloor=!!options.aquarium&&role==='tile'&&/^Sunny_AquariumFloor/.test(options.name)
  const aquariumCeiling=!!options.aquarium&&options.name==='Sunny_Aquarium_ceiling'
- const key=[source.name,source.color.getHexString(),role,projected,tile,aquariumCeiling].join(':')
+ const libraryFloor=!!options.library&&role==='tile'&&/^Sunny_InteriorFloor_F3_library/.test(options.name)
+ const key=[source.name,source.color.getHexString(),role,projected,tile,aquariumCeiling,libraryFloor].join(':')
  if(!aquariumFloor&&materials.has(key))return materials.get(key)
- const shared=role==='brass'||role==='steel'?'metal':role==='water'||role==='glass'||role==='mirror'||role==='lamp'?null:role
+ const shared=role==='brass'||role==='steel'?'metal':['water','bath-water','glass','mirror','lamp'].includes(role)?null:role
  const profile=profiles[role]
  const m=new THREE.MeshPhysicalMaterial({name:source.name,color:source.color.clone(),side:THREE.DoubleSide,
   roughness:1,metalness:['brass','steel','iron','mirror'].includes(role)?role==='mirror'?1:.82:0,
@@ -165,18 +198,54 @@ export function realisticInteriorMaterial(source,options={}){
  if(aquariumCeiling)m.color.multiplyScalar(.22)
  if(shared){
   const set=interiorTextureSet(shared)
-  if(projected){m.onBeforeCompile=shader=>{applyInteriorProjection(shader,set,tile);if(aquariumFloor)applyAquariumFloorLight(shader,options.aquarium)};m.customProgramCacheKey=()=>`interior-metric-v1${aquariumFloor?':aquarium-light':''}`}
+  if(projected){m.onBeforeCompile=shader=>{applyInteriorProjection(shader,set,tile);if(aquariumFloor)applyAquariumFloorLight(shader,options.aquarium);if(libraryFloor)applyLibraryDaylight(shader,options.library)};m.customProgramCacheKey=()=>`interior-metric-v1${aquariumFloor?':aquarium-light':libraryFloor?':library-light':''}`}
   else{m.map=set.map;m.normalMap=set.normalMap;m.roughnessMap=set.roughnessMap}
   if(profile?.sheen){m.sheen=profile.sheen;m.sheenColor.copy(source.color);m.sheenRoughness=.9}
  }else if(role==='lamp'){
   m.roughness=.32;m.emissive.copy(source.color);m.emissiveIntensity=1.65
  }else if(role==='mirror'){
   m.roughness=.055;m.color.setRGB(.92,.94,.95);m.clearcoat=1
+ }else if(role==='bath-water'&&options.bath){
+  m.transparent=true;m.opacity=.78;m.depthWrite=false;m.roughness=.14;m.ior=1.333;m.clearcoat=.9;m.clearcoatRoughness=.08
+  m.onBeforeCompile=shader=>applyBathWater(shader,options.bath)
+  m.customProgramCacheKey=()=>`bath-water-v1`
  }else{
   m.transparent=true;m.opacity=role==='water'?.16:.20;m.depthWrite=false;m.roughness=role==='water'?.08:.065;m.ior=1.5;m.clearcoat=1;m.clearcoatRoughness=.08
  }
  m.userData={interiorSurface:role,interiorProjection:projected?'metric':'authored-uv',finishVersion:1}
- if(aquariumFloor)m.userData.aquariumOwned=true
+ if(aquariumFloor||role==='bath-water'&&options.bath)m.userData.aquariumOwned=true
  else materials.set(key,m)
  return m
+}
+
+export function applyBathWater(shader,bath){
+ shader.uniforms.bathTime=bath.time
+ shader.vertexShader=shader.vertexShader.replace('#include <common>',`#include <common>
+ attribute vec3 interiorPosition;
+ varying vec3 vBathPosition;`)
+ shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>',`#include <begin_vertex>
+ vBathPosition=interiorPosition;`)
+ shader.fragmentShader=shader.fragmentShader.replace('#include <common>',`#include <common>
+ varying vec3 vBathPosition;
+ uniform float bathTime;`)
+ shader.fragmentShader=shader.fragmentShader.replace('#include <color_fragment>',`#include <color_fragment>
+ vec2 ripplePoint=vBathPosition.xz;
+ float ripples=sin(ripplePoint.x*7.8+ripplePoint.y*3.1+bathTime*1.33)+sin(ripplePoint.y*9.1-ripplePoint.x*1.7-bathTime*1.13);
+ diffuseColor.rgb+=vec3(.037,.16,.13)*pow(1.-abs(ripples)*.5,5.);`)
+ shader.fragmentShader=shader.fragmentShader.replace('#include <normal_fragment_maps>',`#include <normal_fragment_maps>
+ normal=normalize(normal+vec3(dFdx(ripples),dFdy(ripples),0.)*.17);`)
+}
+
+export function applyLibraryDaylight(shader,layout){
+ const [x,y]=layout.centre
+ shader.uniforms.libraryCentre={value:new THREE.Vector2(x,-y)}
+ shader.fragmentShader=shader.fragmentShader.replace('#include <common>',`#include <common>
+ uniform vec2 libraryCentre;`)
+ shader.fragmentShader=shader.fragmentShader.replace('#include <color_fragment>',`#include <color_fragment>
+ vec2 direction=(vInteriorPosition.xz-libraryCentre)/vec2(4.95,5.50);
+ float radius=length(direction);
+ float windows=cos(8.*atan(direction.y,direction.x));
+ float wash=smoothstep(.26,.89,radius)*(.27+.73*smoothstep(-.32,.87,windows));
+ diffuseColor.rgb*=vec3(.87,.90,.92)+vec3(.06,.15,.28)*wash;
+ diffuseColor.rgb+=vec3(.010,.022,.035)*wash;`)
 }

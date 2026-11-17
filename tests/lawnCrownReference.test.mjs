@@ -9,8 +9,12 @@ import {loadColliders,readGLB,readAccessor,nodeMatrix} from './glb.mjs'
 const dir=process.env.REFERENCE_MODELS??'public/models'
 const baseline=JSON.parse(fs.readFileSync('tests/fixtures/lawn-crown-preservation.json'))
 const meta=JSON.parse(fs.readFileSync(path.join(dir,'ship-metadata.json')))
-if(meta.interiors.rooms.find(room=>room.name==='Aquarium Bar')?.lounge?.entryBay){
- const roomPatch=JSON.parse(fs.readFileSync('tests/fixtures/aquarium-room-delta.json'))
+const rooms=meta.interiors.rooms
+const roomDeltas=[['aquarium-room-delta',rooms.find(room=>room.name==='Aquarium Bar')?.lounge?.entryBay],
+ ['library-room-delta',rooms.find(room=>room.name==='Library')?.libraryLayout]]
+for(const [fixture,active] of roomDeltas){
+ if(!active)continue
+ const roomPatch=JSON.parse(fs.readFileSync(`tests/fixtures/${fixture}.json`))
  for(const [name,hash] of Object.entries(roomPatch.removed)){
   assert.equal(baseline.meshes[name],hash,name+' previous fixture')
   delete baseline.meshes[name]
