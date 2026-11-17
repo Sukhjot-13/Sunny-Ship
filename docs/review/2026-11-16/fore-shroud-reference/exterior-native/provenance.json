@@ -1,0 +1,69 @@
+{
+  "nativeRun": "run.log",
+  "trace": "trace.json",
+  "screenshots": {
+    "walk-Garden-inboard-beds.png": "9935f0676b98f62317cd1b67170753ec454402afa03e27d5a81d5f5e63daf77d",
+    "walk-Library-exterior-threshold.png": "67ce4338fe1140d1a3f1d86e2ced3037acdefee64c9fe055d30b3d390d146a96",
+    "walk-Mikan-open-soil.png": "3ed0a4ce4c04178a1f91e9127c41c9b6bcf87850e70180ae03cfe9bc92bc9fc9",
+    "walk-Side-passage-port.png": "a7ba8943c04a3b2c4aee2fdb2ff1b88a3c2a2bd0b5614814bd5e243bf9f2534d",
+    "walk-Side-passage-starboard.png": "1131554d0801bd67a85b3ada2900e84efbbfa41601aa63043cc87bae4fd38db7",
+    "walk-Slide-entry.png": "8a8623b7b96b30e0b0d99fc7a2f02425ee72a53c4505babf80fc26a2d63ea35b",
+    "walk-Slide-return-lawn.png": "59f171565ca1c55f7398654875b071c9ddcd1fbf50ef8931b3d4f4a214cec1b2",
+    "walk-Stern-balcony-1.png": "fa23780f9c30290e79e72a43af739c8499e8f771ac309e89fa8071b23853882f",
+    "walk-Stern-balcony-2.png": "4b7ad96bfecc329e9deb3cf5523e79ff97a529e5a486f933eaeb679f2a2dd501",
+    "walk-Stern-balcony-3.png": "ade6732a1009976cdc713d6f9f5f63aa957f80c433a7ad86bbeb73ecc22b0148",
+    "walk-Stern-balcony-4.png": "be12350907f9bc9c3b2aff2f4324d7f1cc8ca708934e81e6343a9760fe132571"
+  },
+  "sourceCandidate": "/private/tmp/sunny-fore-shroud-candidate",
+  "excludedUnrelatedPreviewCopies": [
+    {
+      "name": "walk-Ladder-Men-s-cabin-storage-ladder.png",
+      "sha256": "78be1d915ca40002e796e849828acca43433365551523895932f941c1726675e"
+    },
+    {
+      "name": "walk-storage-ladder-closed-hatch.png",
+      "sha256": "de61e0fae33b45678acf8949cf804f4f93881f37fa54a2bbd3927365950adca4"
+    },
+    {
+      "name": "walk-Kitchen.png",
+      "sha256": "9b44bcfbcb878f6656364d94e974ebc1cb9793d38b29127fd21af636b0b32c74"
+    },
+    {
+      "name": "walk-Dining-Room.png",
+      "sha256": "af38e3aa1dcfa3e4f525dbeb2d5d252dbd053834c2d4cd8c30012f10e7c994da"
+    },
+    {
+      "name": "walk-Women-s-Quarters.png",
+      "sha256": "093c6b249e8ceb19b76aefaef7e1a9c4a311d82f2ea82db507519f422c506c53"
+    },
+    {
+      "name": "walk-ForeDoorStarboard-inside.png",
+      "sha256": "a4b047c381e185c98d1f48bd146691dde2bc888b78f1f90331887d7092b84d09"
+    },
+    {
+      "name": "walk-Aquarium-Bar.png",
+      "sha256": "c4fe7f8bbebffeca45df1cb91ee6442ea0b6f7b6c799803d01ba2260e5f1a6e3"
+    },
+    {
+      "name": "walk-storage-ladder-ascent.png",
+      "sha256": "dcd563642fb25c63340045c5fc834ef7f8c223935dc48174747bd7c7c245387a"
+    },
+    {
+      "name": "walk-ForeDoor-inside.png",
+      "sha256": "4ba9ed2d132b677e07418b82cfb668fc099a8f1b5c09ca37c7c776f769198b4d"
+    },
+    {
+      "name": "walk-storage-ladder-descent.png",
+      "sha256": "e9ed6b151a800d507890581d435b7b53eb9068d89e1e731734f195214773468a"
+    },
+    {
+      "name": "walk-Fore-cabin-approach-fore-lower-port.png",
+      "sha256": "0b9a3e38b55371229feb8a7e52132b8d775c9b710274c75752fff7b3cd0c12fb"
+    },
+    {
+      "name": "walk-Fore-cabin-approach-fore-lower-starboard.png",
+      "sha256": "9e7d8e4da849459a0892f17ff2a09cd696b0562f3140b559424874035e999700"
+    }
+  ],
+  "note": "Only screenshots written by exteriorJourneys.mjs belong to this native run. Unrelated inherited room/storage/fore screenshot copies were excluded; originals/temporary archive remain. They are not evidence for this run."
+}
