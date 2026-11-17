@@ -1,0 +1,423 @@
+{
+  "trace": [
+    {
+      "side": "port",
+      "journey": [
+        {
+          "label": "lawn approach",
+          "ok": true,
+          "pos": [
+            -4.289999999999999,
+            -40.55070114135742,
+            2.3908544522265904
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "lower entrance",
+          "ok": true,
+          "pos": [
+            -12.50382904117616,
+            -40.55070114135742,
+            2.3893785082868093
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "fore lower port",
+          "ok": true,
+          "recoveries": 0,
+          "pos": [
+            -17.334631964772193,
+            -36.41469955444336,
+            3.8899858243541003
+          ],
+          "grounded": true,
+          "blocker": null
+        },
+        {
+          "label": "cross landing",
+          "ok": true,
+          "pos": [
+            -17.338109146640285,
+            -36.41469955444336,
+            3.8890148378234426
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "upper entrance",
+          "ok": true,
+          "pos": [
+            -17.402797275151382,
+            -36.41469955444336,
+            -3.0472549536496407
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "fore upper",
+          "ok": true,
+          "recoveries": 0,
+          "pos": [
+            -20.77966313820093,
+            -33.16210174560547,
+            -3.1119751075633375
+          ],
+          "grounded": true,
+          "blocker": null
+        },
+        {
+          "label": "mast bypass",
+          "ok": true,
+          "pos": [
+            -22.125879315418217,
+            -33.16210174560547,
+            -4.5200630626989975
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "forward helm approach",
+          "ok": true,
+          "pos": [
+            -27.126400049184117,
+            -33.16210174560547,
+            -4.499877207924872
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "helm deck",
+          "ok": true,
+          "pos": [
+            -27.098082349114126,
+            -33.16210174560547,
+            -0.2133525010742583
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "return mast bypass",
+          "ok": true,
+          "pos": [
+            -27.098576859060543,
+            -33.16210174560547,
+            -4.547689373051589
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "return upper exit",
+          "ok": true,
+          "pos": [
+            -22.112334416807418,
+            -33.16210174560547,
+            -4.500056103458775
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "return upper stairs",
+          "ok": true,
+          "pos": [
+            -20.708147557867118,
+            -33.16210174560547,
+            -3.05254434351428
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "fore upper descent",
+          "ok": true,
+          "recoveries": 0,
+          "pos": [
+            -17.319254432508753,
+            -36.41469955444336,
+            -3.093805105854974
+          ],
+          "grounded": true,
+          "blocker": null
+        },
+        {
+          "label": "return lower landing",
+          "ok": true,
+          "pos": [
+            -17.403779842850458,
+            -36.41469955444336,
+            3.9432742261327824
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "fore lower port descent",
+          "ok": true,
+          "recoveries": 0,
+          "pos": [
+            -12.469261321205591,
+            -40.55070114135742,
+            2.290914368136898
+          ],
+          "grounded": true,
+          "blocker": null
+        },
+        {
+          "label": "return lawn approach",
+          "ok": true,
+          "pos": [
+            -4.308488023841507,
+            -40.55070114135742,
+            2.389133307673481
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "back to lawn",
+          "ok": true,
+          "pos": [
+            -4.2895658662790055,
+            -40.55070114135742,
+            -1.070191751464224
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        }
+      ]
+    },
+    {
+      "side": "starboard",
+      "journey": [
+        {
+          "label": "lawn approach",
+          "ok": true,
+          "pos": [
+            -4.289999999999999,
+            -40.55070114135742,
+            -5.083973007932474
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "lower entrance",
+          "ok": true,
+          "pos": [
+            -12.598903187054512,
+            -40.55070114135742,
+            -5.109120201753686
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "fore lower starboard",
+          "ok": true,
+          "recoveries": 0,
+          "pos": [
+            -17.246606070193277,
+            -36.41469955444336,
+            -3.2616554690602015
+          ],
+          "grounded": true,
+          "blocker": null
+        },
+        {
+          "label": "cross landing",
+          "ok": true,
+          "pos": [
+            -17.251234818583104,
+            -36.41469955444336,
+            -3.2597860333926696
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "upper entrance",
+          "ok": true,
+          "pos": [
+            -17.25125715152123,
+            -36.41469955444336,
+            -3.259777013677712
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "fore upper",
+          "ok": true,
+          "recoveries": 0,
+          "pos": [
+            -20.898432585463794,
+            -33.16210174560547,
+            -3.091767649228116
+          ],
+          "grounded": true,
+          "blocker": null
+        },
+        {
+          "label": "mast bypass",
+          "ok": true,
+          "pos": [
+            -22.13482134373942,
+            -33.16210174560547,
+            -4.532844499425165
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "forward helm approach",
+          "ok": true,
+          "pos": [
+            -27.114677242637573,
+            -33.16210174560547,
+            -4.49988707237896
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "helm deck",
+          "ok": true,
+          "pos": [
+            -27.098558759577465,
+            -33.16210174560547,
+            -0.28376074805527096
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "return mast bypass",
+          "ok": true,
+          "pos": [
+            -27.098571581168546,
+            -33.16210174560547,
+            -4.574012222173694
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "return upper exit",
+          "ok": true,
+          "pos": [
+            -22.113191871278666,
+            -33.16210174560547,
+            -4.500098630747222
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "return upper stairs",
+          "ok": true,
+          "pos": [
+            -20.714212280684325,
+            -33.16210174560547,
+            -3.0588093054182384
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "fore upper descent",
+          "ok": true,
+          "recoveries": 0,
+          "pos": [
+            -17.32615157064219,
+            -36.41469955444336,
+            -3.093259526135628
+          ],
+          "grounded": true,
+          "blocker": null
+        },
+        {
+          "label": "return lower landing",
+          "ok": true,
+          "pos": [
+            -17.35565101678072,
+            -36.41469955444336,
+            -3.2437806553962143
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "fore lower starboard descent",
+          "ok": true,
+          "recoveries": 0,
+          "pos": [
+            -12.43442004640098,
+            -40.55070114135742,
+            -5.11374998043028
+          ],
+          "grounded": true,
+          "blocker": null
+        },
+        {
+          "label": "return lawn approach",
+          "ok": true,
+          "pos": [
+            -4.161785199896826,
+            -40.55070114135742,
+            -5.108961684975743
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        },
+        {
+          "label": "back to lawn",
+          "ok": true,
+          "pos": [
+            -4.289296513598294,
+            -40.55070114135742,
+            -1.0122588979715204
+          ],
+          "grounded": true,
+          "blocker": null,
+          "recoveries": 0
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

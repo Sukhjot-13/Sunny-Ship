@@ -1,0 +1,10 @@
+00:00.281  blend            | Read blend: "/Users/sukhjot/codes/Sunny-Ship/assets/sunny-master.blend"
+FORE_RIM_INSPECTION {"floor": -33.16211700439453, "height": 2.1909027099609375, "vertices": 2734, "faces": 650}
+SECTION 0.15 18 groups 18 closed
+SECTION 0.5 18 groups 18 closed
+SECTION 0.8 18 groups 18 closed
+SECTION 0.96 5 groups 0 closed
+FLOOR_CAP_AREA 0.7716480235164774 UPWARD 0
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:49:19)
+
+Blender quit

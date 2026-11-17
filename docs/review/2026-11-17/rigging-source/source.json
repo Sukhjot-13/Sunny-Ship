@@ -1,0 +1,12 @@
+{
+  "source": "stuff/images/Thousand_Sunny_Infobox.webp",
+  "sha256": "05350db9df7b30f66f5f4153816a3b89c9d43dd0e09766c4163d9f11e6f85adf",
+  "cropRectangleXY": [
+    440,
+    260,
+    600,
+    740
+  ],
+  "observation": "Supplied visible fan has a few dozen ratline rows; current .36 working-metre authoring creates approximately173. Exact source count/height ratios remain to measure across supplied views.",
+  "status": "OPEN; no rig change during upper railing build"
+}

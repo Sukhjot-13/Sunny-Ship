@@ -1,0 +1,10 @@
+PASS port complete lawn/fore flights/helm/new upper gap/return {
+  position: [ -4.289563523180698, -40.55070114135742, -1.070624570539765 ],
+  grounded: true,
+  recoveries: 0
+}
+PASS starboard complete lawn/fore flights/helm/new upper gap/return {
+  position: [ -4.289298010952766, -40.55070114135742, -1.0122115195195918 ],
+  grounded: true,
+  recoveries: 0
+}

@@ -627,28 +627,23 @@ def add_garden_deck():
     return obj
 
 
-def rebuild_stair_rails(objects,vertex_bbox):
-    """Rails along both widened fore lower flights, with unobstructed exits."""
+def rebuild_stair_rails(objects,vertex_bbox,height):
+    """R09 shaped fore balustrades on actual treads, retaining transfer gaps."""
+    from sunny_balustrade import balustrade_object,stair_edge_path
     before=set(bpy.data.objects)
     for low,high,label in ((85,103,'ForeStarRail'),(104,117,'ForePortRail'),(52,69,'ForeUpperRail')):
-        treads=[o for o in objects if o.get('sunny_stair') and o.name.startswith('Box') and low<=int(o.name[3:].split('.')[0])<=high]
+        # Retreading adds linked scene objects before the caller refreshes its
+        # object list. Include those real additional steps in the whole flight.
+        treads=[o for o in bpy.data.objects if o.type=='MESH' and o.get('sunny_stair') and o.name.startswith('Box') and low<=int(o.name[3:].split('.')[0])<=high]
         treads.sort(key=lambda o:vertex_bbox(o)[1].z)
+        supports=list(treads)
         # Open transfer zone: lower rails end before the landing, upper rails
         # start after the first two treads. This leaves room to turn into it.
         treads=treads[2:] if low==52 else treads[:-2]
         for side in (0,1):
-            path=[]
-            for index,obj in enumerate(treads):
-                lo,hi=vertex_bbox(obj)
-                x=(lo.x+hi.x)/2
-                y=(lo.y+0.03) if side==0 else (hi.y-0.03)
-                p=(x,y,hi.z+0.98);path.append(p)
-                if index%3==0 or index==len(treads)-1:
-                    post=pole(label+'_post',(x,y,hi.z),p,0.025,'white')
-                    post['sunny_rail']=True;post['sunny_obstacle']=True
-            for a,b in zip(path,path[1:]):
-                rail=pole(label+'_handrail',a,b,0.032,'white')
-                rail['sunny_rail']=True;rail['sunny_obstacle']=True
+            path=stair_edge_path(treads,vertex_bbox,side,supports=supports)
+            posts=[p for i,p in enumerate(path)if i%2==0 or i==len(path)-1]
+            balustrade_object(label+'_guard'+str(side),path,height,post_points=posts)
     return [o for o in bpy.data.objects if o not in before and o.type=='MESH']
 
 
@@ -1185,6 +1180,11 @@ def add_fittings(objects, vertex_bbox, frame, interiors):
                     continue  # fixed door apertures were closed-cut in build_interiors
                 open_volume_slot(obj,x-dx,x+dx,y-dy,y+dy,z-0.15,z+spec['height']+0.12)
     report['hatches'] = ['DockLadderHatch', 'AquariumHatch', 'KitchenHatch', 'StorageHatch']
+    from sunny_balustrade import fore_top_guard
+    last=max(upper,key=lambda o:vertex_bbox(o)[1].z)
+    lo,hi=vertex_bbox(last)
+    guard_height=interiors['foreFacade']['galleryGuards'][0]['height']
+    interiors['foreFacade']['upperGuard']=fore_top_guard(helm_outline,foredeck,guard_height,(lo.y,hi.y),find('Line006'))
     return report
 
 
@@ -1346,7 +1346,7 @@ def restore_exterior(objects, vertex_bbox):
     from sunny_interiors import DOORS as _openings
     interiors['doors']=list(_openings)
     log('[pipeline]   stair rails ...')
-    rebuild_stair_rails(objects,vertex_bbox)
+    rebuild_stair_rails(objects,vertex_bbox,interiors['foreFacade']['galleryGuards'][0]['height'])
     objects=objects+[o for o in bpy.data.objects
                      if o not in before and o.type=='MESH']
     bpy.context.view_layer.update()

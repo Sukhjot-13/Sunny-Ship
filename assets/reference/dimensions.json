@@ -1,8 +1,8 @@
 {
-  "source": "/private/tmp/sunny-fore-panel-candidate/sunny-master.blend",
-  "workingVisualSource": "/private/tmp/sunny-fore-panel-candidate/sunny.glb",
-  "sourceSha256": "c653d3d53897255410df582b79dc68e91338682bc8c90d196c8634948183c606",
-  "workingVisualSha256": "adb9b7d8254d33807b585dcc07f6eef915c990936faf768cf806e1d14a42792a",
+  "source": "/private/tmp/sunny-fore-upper-fullflight-candidate/sunny-master.blend",
+  "workingVisualSource": "/private/tmp/sunny-fore-upper-fullflight-candidate/sunny.glb",
+  "sourceSha256": "1eaf49bff78a0e4baa88251dee23db07f6a77902de8e648982cc0fcc68c20015",
+  "workingVisualSha256": "f67c2d7a4dba37fbdcd3b64a4acc2528065c5b46f7b3293f2ec96f20c74c1bac",
   "workingScale": 2.2,
   "referenceScale": 1,
   "rootMultiplier": 0.45454545454545453,

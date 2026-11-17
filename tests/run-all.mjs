@@ -66,6 +66,8 @@ const suites=[
  ['foreShroudFixture.test.mjs','outboard longitudinal fore fans and physical rope junctions'],
  ['foreGalleryFixture.test.mjs','dense gallery balusters and retained native supports'],
  ['foreGalleryReference.test.mjs','actual full-height gallery/source rhythm and frozen native support'],
+ ['balustradeFixture.test.mjs','closed supported fore path balustrades and real upper stair gap'],
+ ['foreTopGuardReference.test.mjs','actual supported fore rim and all six complete stair guards'],
  ['aftFacadeFixture.test.mjs','R13 source facade authoring fixture'],
  ['aftFacadeReference.test.mjs','R13 actual central entry and front aperture topology'],
  ['foreFacadeFixture.test.mjs','R09 fore entry, round ports and native frontage authoring'],

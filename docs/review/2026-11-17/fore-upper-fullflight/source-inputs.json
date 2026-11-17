@@ -1,0 +1,10 @@
+{
+  "tools/sunny_exterior.py": "a7e1057192ac8fdee9b2ec7e7240c1fb45b00d179c1f479f93d3895a7b4a1259",
+  "tools/sunny_balustrade.py": "13ffeaf346757acf02ba0d24847baf2e04dabba363f36066d4a703703ab8cb2d",
+  "tools/sunny_uv.py": "5772e4407c9dbf1ed29dfbca4341d379d8b0353a63f0c4ce17a889294b75d3e8",
+  "tools/sunny_fore_facade.py": "7ad6825fa76fde7be0360be8a3690af3e1d27a0110532a9008bea55c2f0e2408",
+  "tools/sunny_accuracy.py": "41049bbf77f2d1d307ecf1933f0c0db29d69a5e3e413f2a7fa64f592f5b3aa3d",
+  "tests/foreTopGuardReference.test.mjs": "e6a50810f78286fad44db9e5bb15867e54298570fe0b7fd33f01d5d309b5d1d2",
+  "tests/balustradeFixture.py": "0a4c32b2a9c4ed1c9560d7ae6f9d04075bf26a9882537011eacc32931d8321e4",
+  "tests/fixtures/fore-supported-surfaces.json": "b2cab152f69550ec959d02e979e80d903b9ee49f6c23e34c6f2451e9fa12c8a9"
+}
