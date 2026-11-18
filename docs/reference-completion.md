@@ -1,8 +1,10 @@
 ## Exterior resumed — November 18, 2026
 
-The interior checkpoint `251fa3b` was pushed before exterior changes. The Gaon accepts six individual shots from a full tank, with one synthesized sound per shot. `K` fires, `J` operates the mouth, `X` opens the cannon panel, `0`–`6` select the numbered Dock position, and `L` controls the shutters. Actual input verifies rapid shots, held-key suppression, correct Dock rotation, and the roll-closed transition from the previous physical bay. [Keyboard evidence](review/2026-11-18/exterior-controls/verification/keyboard-controls.json)
+The interior checkpoint `251fa3b` was pushed before exterior changes. `K` fires one Gaon shot, `J` operates the mouth, `X` opens the cannon panel, `0`–`6` select the numbered Dock position, and `L` controls the shutters. Cola holds 30 and refills automatically at five per second. A Gaon shot uses half a cola and plays one synthesized sound. Actual input verifies rapid shots, held-key suppression, same-page refill, correct Dock rotation and the transition from the previous physical bay. [Keyboard and refill evidence](review/2026-11-18/dock-rims/verification/cola-controls.json)
 
 The closed figurehead’s nose stroke now meets the smile. Four inherited hull bands are terminated at the aft B1 lining, and the remaining model meshes and collision file match the verified interior checkpoint. The Observation Deck lawn round trip passed. [Render and source checks](review/2026-11-18/exterior-controls/) · [Open exterior items](exterior-feature-ledger.md)
+
+Both numbered Dock rims now have a rounded dark face and continuous backing into the existing timber reveals. Actual rays find at least 0.177 m of overlapping material at all 96 sampled angles on each side. The numbered shutters, physical mouth opening and collision remain exact. [Rim views and checks](review/2026-11-18/dock-rims/)
 
 ## Enclosed interior furnishing and materials — November 18, 2026
 

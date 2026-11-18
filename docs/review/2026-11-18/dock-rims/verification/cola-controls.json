@@ -1,0 +1,683 @@
+{
+  "records": [
+    {
+      "name": "inspect-open",
+      "navigation": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockGateChannel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 30,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": true,
+        "jaw": 0.9871800159278011,
+        "gaon": 0,
+        "paddleAngle": 0,
+        "foodLift": 0,
+        "foodLiftTarget": 0
+      },
+      "jawQuaternion": [
+        0,
+        0,
+        0.5671439024098797,
+        0.8236187188009345
+      ],
+      "jawColliders": [
+        {
+          "name": "Sunny_Gaon_chin",
+          "min": [
+            -43.11638503557626,
+            -37.65442892718045,
+            -2.7282087802886963
+          ],
+          "max": [
+            -39.46918634554301,
+            -34.64776350147972,
+            -0.07097701728343964
+          ],
+          "isFloor": false
+        },
+        {
+          "name": "Sunny_Gaon_jaw",
+          "min": [
+            -43.78084433540625,
+            -38.032391252077495,
+            -3.304795742034912
+          ],
+          "max": [
+            -41.28575265443502,
+            -35.401829773080955,
+            0.4722249209880829
+          ],
+          "isFloor": false
+        }
+      ],
+      "locked": false,
+      "focused": "Close Mouth",
+      "text": "Cannon · X\nGaon cannon\n\n60 shots available · Cola 30.0 / 30\n\nPress K to fire. Each shot uses 0.5 barrel. Cola refills at 5/sec.\n\nClose Mouth\nFire Gaon\n\nReady to fire. Firing also opens the mouth.\n\nGaon mouth opening\n\nClose controls · Esc\nDrag to orbit · Scroll to zoom · V to step aboard\nINSPECT\n1ST PERSON\nWASD\n270° · 0.0 m/s · Dock 1 · Cola 30.0\nGaon mouth opening"
+    },
+    {
+      "name": "inspect-closed",
+      "navigation": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockGateChannel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 30,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": false,
+        "jaw": 0.013599214702437152,
+        "gaon": 0,
+        "paddleAngle": 0,
+        "foodLift": 0,
+        "foodLiftTarget": 0
+      },
+      "jawQuaternion": [
+        0,
+        0,
+        0.008307191979767203,
+        0.9999654946853973
+      ],
+      "jawColliders": [
+        {
+          "name": "Sunny_Gaon_chin",
+          "min": [
+            -41.543572234736274,
+            -35.79844287101992,
+            -2.7282087802886963
+          ],
+          "max": [
+            -39.46918490163115,
+            -32.63353465599996,
+            -0.07097701728343964
+          ],
+          "isFloor": false
+        },
+        {
+          "name": "Sunny_Gaon_jaw",
+          "min": [
+            -42.56006504405012,
+            -34.22657248371713,
+            -3.304795742034912
+          ],
+          "max": [
+            -40.42675881451158,
+            -32.32390633462676,
+            0.4722249209880829
+          ],
+          "isFloor": false
+        }
+      ],
+      "locked": false,
+      "focused": "Open Mouth",
+      "text": "Cannon · X\nGaon cannon\n\n60 shots available · Cola 30.0 / 30\n\nPress K to fire. Each shot uses 0.5 barrel. Cola refills at 5/sec.\n\nOpen Mouth\nFire Gaon\n\nReady to fire. Firing also opens the mouth.\n\nGaon mouth closing\n\nClose controls · Esc\nDrag to orbit · Scroll to zoom · V to step aboard\nINSPECT\n1ST PERSON\nWASD\n270° · 0.0 m/s · Dock 1 · Cola 30.0\nGaon mouth closing"
+    },
+    {
+      "name": "inspect-fired",
+      "navigation": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockGateChannel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 30,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": true,
+        "jaw": 0.9985785543657795,
+        "gaon": 2.1478000000119213,
+        "paddleAngle": 0,
+        "foodLift": 0,
+        "foodLiftTarget": 0
+      },
+      "jawQuaternion": [
+        0,
+        0,
+        0.5728649408867095,
+        0.8196497785657402
+      ],
+      "jawColliders": [
+        {
+          "name": "Sunny_Gaon_chin",
+          "min": [
+            -43.105273784701126,
+            -37.664292486551325,
+            -2.7282087802886963
+          ],
+          "max": [
+            -39.4691863532166,
+            -34.688614112059355,
+            -0.07097701728343964
+          ],
+          "isFloor": false
+        },
+        {
+          "name": "Sunny_Gaon_jaw",
+          "min": [
+            -43.758128122215254,
+            -38.067911744652,
+            -3.304795742034912
+          ],
+          "max": [
+            -41.28135299855383,
+            -35.4514631855163,
+            0.4722249209880829
+          ],
+          "isFloor": false
+        }
+      ],
+      "locked": false,
+      "focused": "Fire Gaon",
+      "text": "Cannon · X\nGaon cannon\n\n60 shots available · Cola 30.0 / 30\n\nPress K to fire. Each shot uses 0.5 barrel. Cola refills at 5/sec.\n\nClose Mouth\nFire Gaon\n\nReady to fire. Firing also opens the mouth.\n\nGaon air blast · half a barrel spent · reverse recoil\n\nClose controls · Esc\nDrag to orbit · Scroll to zoom · V to step aboard\nINSPECT\n1ST PERSON\nWASD\n270° · 0.0 m/s · Dock 1 · Cola 30.0\nGaon air blast · half a barrel spent · reverse recoil"
+    },
+    {
+      "name": "inspect-after-six",
+      "navigation": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockGateChannel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 30,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": true,
+        "jaw": 0.9999999999999934,
+        "gaon": 2.1819999999999995,
+        "paddleAngle": 0,
+        "foodLift": 0,
+        "foodLiftTarget": 0
+      },
+      "jawQuaternion": [
+        0,
+        0,
+        0.5735764363510428,
+        0.8191520442889941
+      ],
+      "jawColliders": [
+        {
+          "name": "Sunny_Gaon_chin",
+          "min": [
+            -43.10383866948606,
+            -37.66549672010435,
+            -2.7282087802886963
+          ],
+          "max": [
+            -39.469186354153464,
+            -34.69372315380548,
+            -0.07097701728343964
+          ],
+          "isFloor": false
+        },
+        {
+          "name": "Sunny_Gaon_jaw",
+          "min": [
+            -43.75523689445632,
+            -38.07231011808855,
+            -3.304795742034912
+          ],
+          "max": [
+            -41.280779679712936,
+            -35.45765713952258,
+            0.4722249209880829
+          ],
+          "isFloor": false
+        }
+      ],
+      "locked": false,
+      "focused": "Fire Gaon",
+      "text": "Cannon · X\nGaon cannon\n\n60 shots available · Cola 30.0 / 30\n\nPress K to fire. Each shot uses 0.5 barrel. Cola refills at 5/sec.\n\nClose Mouth\nFire Gaon\n\nReady to fire. Firing also opens the mouth.\n\nGaon air blast · half a barrel spent · reverse recoil\n\nClose controls · Esc\nDrag to orbit · Scroll to zoom · V to step aboard\nINSPECT\n1ST PERSON\nWASD\n270° · 0.0 m/s · Dock 1 · Cola 30.0\nGaon air blast · half a barrel spent · reverse recoil"
+    },
+    {
+      "name": "inspect-refilled",
+      "navigation": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockGateChannel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 30,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": true,
+        "jaw": 0.9999999999999986,
+        "gaon": 1.8418000000119208,
+        "paddleAngle": 0,
+        "foodLift": 0,
+        "foodLiftTarget": 0
+      },
+      "jawQuaternion": [
+        0,
+        0,
+        0.5735764363510454,
+        0.8191520442889924
+      ],
+      "jawColliders": [
+        {
+          "name": "Sunny_Gaon_chin",
+          "min": [
+            -43.10383866948606,
+            -37.66549672010436,
+            -2.7282087802886963
+          ],
+          "max": [
+            -39.469186354153464,
+            -34.6937231538055,
+            -0.07097701728343964
+          ],
+          "isFloor": false
+        },
+        {
+          "name": "Sunny_Gaon_jaw",
+          "min": [
+            -43.75523689445631,
+            -38.072310118088566,
+            -3.304795742034912
+          ],
+          "max": [
+            -41.28077967971293,
+            -35.4576571395226,
+            0.4722249209880829
+          ],
+          "isFloor": false
+        }
+      ],
+      "locked": false,
+      "focused": "Fire Gaon",
+      "text": "Cannon · X\nGaon cannon\n\n60 shots available · Cola 30.0 / 30\n\nPress K to fire. Each shot uses 0.5 barrel. Cola refills at 5/sec.\n\nClose Mouth\nFire Gaon\n\nReady to fire. Firing also opens the mouth.\n\nGaon air blast · half a barrel spent · reverse recoil\n\nClose controls · Esc\nDrag to orbit · Scroll to zoom · V to step aboard\nINSPECT\n1ST PERSON\nWASD\n270° · 0.0 m/s · Dock 1 · Cola 30.0\nGaon air blast · half a barrel spent · reverse recoil"
+    },
+    {
+      "name": "inspect-keyboard-dock-and-cannon",
+      "navigation": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 4,
+        "dockGateChannel": 4,
+        "dockOpen": true,
+        "shutter": 1,
+        "dockAngle": -3.121946038661863,
+        "logNeedle": 0,
+        "cola": 30,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": true,
+        "jaw": 0.9999999999999999,
+        "gaon": 0,
+        "paddleAngle": 0,
+        "foodLift": 0,
+        "foodLiftTarget": 0
+      },
+      "jawQuaternion": [
+        0,
+        0,
+        0.5735764363510459,
+        0.8191520442889919
+      ],
+      "jawColliders": [
+        {
+          "name": "Sunny_Gaon_chin",
+          "min": [
+            -43.10383866948606,
+            -37.66549672010436,
+            -2.7282087802886963
+          ],
+          "max": [
+            -39.469186354153464,
+            -34.6937231538055,
+            -0.07097701728343964
+          ],
+          "isFloor": false
+        },
+        {
+          "name": "Sunny_Gaon_jaw",
+          "min": [
+            -43.75523689445631,
+            -38.07231011808857,
+            -3.304795742034912
+          ],
+          "max": [
+            -41.28077967971293,
+            -35.45765713952261,
+            0.4722249209880829
+          ],
+          "isFloor": false
+        }
+      ],
+      "locked": false,
+      "focused": "\n    Cannon · XDrag to orbit · Scroll to zoom · V to step aboardINSPECT1ST PERSONWASD270° · 0.0 m/s · Dock 4 · Cola 30.0Soldier Dock: align, then roll shutters open\n    \n  \n\n",
+      "text": "Cannon · X\nDrag to orbit · Scroll to zoom · V to step aboard\nINSPECT\n1ST PERSON\nWASD\n270° · 0.0 m/s · Dock 4 · Cola 30.0\nSoldier Dock: align, then roll shutters open"
+    },
+    {
+      "name": "spawn-panel-open",
+      "navigation": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": 0,
+        "east": 0,
+        "south": 0,
+        "helm": false,
+        "channel": 1,
+        "dockGateChannel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 30,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": true,
+        "jaw": 0.9833525709186935,
+        "gaon": 0,
+        "paddleAngle": 0,
+        "foodLift": 0,
+        "foodLiftTarget": 0
+      },
+      "jawQuaternion": [
+        0,
+        0,
+        0.565216689716504,
+        0.8249424790043953
+      ],
+      "jawColliders": [
+        {
+          "name": "Sunny_Gaon_chin",
+          "min": [
+            -43.11995749351783,
+            -37.65103462456367,
+            -2.7282087802886963
+          ],
+          "max": [
+            -39.469186342902326,
+            -34.63409471820681,
+            -0.07097701728343964
+          ],
+          "isFloor": false
+        },
+        {
+          "name": "Sunny_Gaon_jaw",
+          "min": [
+            -43.78828476460737,
+            -38.02036508013222,
+            -3.304795742034912
+          ],
+          "max": [
+            -41.28715102223302,
+            -35.38517898572066,
+            0.4722249209880829
+          ],
+          "isFloor": false
+        }
+      ],
+      "feet": [
+        -4.289999999999999,
+        -40.55070114135742,
+        -0.9900000000000001
+      ],
+      "recoveries": 0,
+      "locked": false,
+      "focused": "Close Mouth",
+      "text": "Cannon · X\nGaon cannon\n\n60 shots available · Cola 30.0 / 30\n\nPress K to fire. Each shot uses 0.5 barrel. Cola refills at 5/sec.\n\nClose Mouth\nFire Gaon\n\nReady to fire. Firing also opens the mouth.\n\nGaon mouth opening\n\nClose controls · Esc\nEXPLORE\n1ST PERSON\nWASD\n270° · 0.0 m/s · Dock 1 · Cola 30.0\nGaon mouth opening"
+    },
+    {
+      "name": "spawn-fired",
+      "navigation": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": -0.7226881570750736,
+        "east": 0.0693643610128699,
+        "south": -1.2742026403396886e-17,
+        "helm": false,
+        "channel": 1,
+        "dockGateChannel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 30,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": true,
+        "jaw": 0.9980372091221809,
+        "gaon": 2.3421999999880794,
+        "paddleAngle": 0,
+        "foodLift": 0,
+        "foodLiftTarget": 0
+      },
+      "jawQuaternion": [
+        0,
+        0,
+        0.5725938604103737,
+        0.8198391738751848
+      ],
+      "jawColliders": [
+        {
+          "name": "Sunny_Gaon_chin",
+          "min": [
+            -43.105817452728715,
+            -37.66383235819669,
+            -2.7282087802886963
+          ],
+          "max": [
+            -39.469186352858635,
+            -34.68666923041763,
+            -0.07097701728343964
+          ],
+          "isFloor": false
+        },
+        {
+          "name": "Sunny_Gaon_jaw",
+          "min": [
+            -43.75922582060792,
+            -38.06623483523107,
+            -3.304795742034912
+          ],
+          "max": [
+            -41.281569905120406,
+            -35.44910451933685,
+            0.4722249209880829
+          ],
+          "isFloor": false
+        }
+      ],
+      "feet": [
+        -4.289999999999999,
+        -40.55070114135742,
+        -0.9900000000000001
+      ],
+      "recoveries": 0,
+      "locked": false,
+      "focused": "Close Mouth",
+      "text": "Cannon · X\nGaon cannon\n\n59 shots available · Cola 29.7 / 30\n\nPress K to fire. Each shot uses 0.5 barrel. Cola refills at 5/sec.\n\nClose Mouth\nFire Gaon\n\nReady to fire. Firing also opens the mouth.\n\nGaon mouth opening\n\nClose controls · Esc\nEXPLORE\n1ST PERSON\nWASD\n270° · -0.2 m/s · Dock 1 · Cola 29.7\nGaon air blast · half a barrel spent · reverse recoil"
+    },
+    {
+      "name": "fly-narrow",
+      "navigation": {
+        "heading": 270,
+        "throttle": 0,
+        "speed": -4.105047275818163,
+        "east": 2.8140837776815,
+        "south": -5.169388036305212e-16,
+        "helm": false,
+        "channel": 1,
+        "dockGateChannel": 1,
+        "dockOpen": false,
+        "shutter": 0,
+        "dockAngle": 0,
+        "logNeedle": 0,
+        "cola": 30,
+        "burst": 0,
+        "lift": 0,
+        "pitch": 0,
+        "wheel": 0,
+        "chicken": false,
+        "maneAngle": 0,
+        "jawOpen": true,
+        "jaw": 0.9999763341595415,
+        "gaon": 1.30040000000596,
+        "paddleAngle": 0,
+        "foodLift": 0,
+        "foodLiftTarget": 0
+      },
+      "jawQuaternion": [
+        0,
+        0,
+        0.5735645941054986,
+        0.8191603361910259
+      ],
+      "jawColliders": [
+        {
+          "name": "Sunny_Gaon_chin",
+          "min": [
+            -43.103862652656666,
+            -37.66547671757005,
+            -2.7282087802886963
+          ],
+          "max": [
+            -39.4691863541379,
+            -34.6936380661928,
+            -0.07097701728343964
+          ],
+          "isFloor": false
+        },
+        {
+          "name": "Sunny_Gaon_jaw",
+          "min": [
+            -43.75528513673518,
+            -38.07223694590427,
+            -3.304795742034912
+          ],
+          "max": [
+            -41.2807892697048,
+            -35.45755400790981,
+            0.4722249209880829
+          ],
+          "isFloor": false
+        }
+      ],
+      "feet": [
+        -4.289999999999999,
+        -40.55070114135742,
+        -0.9900000000000001
+      ],
+      "recoveries": 0,
+      "locked": false,
+      "focused": "Close Mouth",
+      "text": "Cannon · X\nGaon cannon\n\n60 shots available · Cola 30.0 / 30\n\nPress K to fire. Each shot uses 0.5 barrel. Cola refills at 5/sec.\n\nClose Mouth\nFire Gaon\n\nReady to fire. Firing also opens the mouth.\n\nGaon mouth opening\n\nClose controls · Esc\nEXPLORE\nFLY\nQ/E altitude\n270° · -3.8 m/s · Dock 1 · Cola 30.0\nFlight mode - Q/E for altitude"
+    }
+  ],
+  "errors": [],
+  "audio": [
+    {
+      "duration": 1.8,
+      "peak": 0.6529288291931152,
+      "state": "running",
+      "cola": 29.5
+    },
+    {
+      "duration": 1.8,
+      "peak": 0.6529288291931152,
+      "state": "running",
+      "cola": 29.5
+    },
+    {
+      "duration": 1.8,
+      "peak": 0.6529288291931152,
+      "state": "running",
+      "cola": 29.5
+    },
+    {
+      "duration": 1.8,
+      "peak": 0.6529288291931152,
+      "state": "running",
+      "cola": 29.5
+    },
+    {
+      "duration": 1.8,
+      "peak": 0.6529288291931152,
+      "state": "running",
+      "cola": 29.5
+    },
+    {
+      "duration": 1.8,
+      "peak": 0.6529288291931152,
+      "state": "running",
+      "cola": 29.5
+    }
+  ],
+  "notice": "All actions through actual visible controls or user keys. Read-only hooks measure results; no placement/flight used to reach a control. Final fly mode is only a global-availability check."
+}

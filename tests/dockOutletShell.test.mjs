@@ -19,16 +19,34 @@ function visit(i,parent){
 }
 for(const i of gltf.json.scenes[gltf.json.scene??0].nodes)visit(i,new THREE.Matrix4())
 const boxes=loadColliders('public/models/sunny-collision.glb').map(b=>({name:b.name,box:new THREE.Box3(b.min,b.max)})),floor=meta.interiors.levels.B1,records=[]
+/** Weld only exported UV/material splits at 10 µm to count real surface edges. */
+function closedEdges(mesh){
+ const positions=mesh.geometry.attributes.position,ids=mesh.geometry.index?.array??Array.from({length:positions.count},(_,i)=>i),edges=new Map()
+ const vertex=i=>new THREE.Vector3().fromBufferAttribute(positions,i).applyMatrix4(mesh.matrixWorld).toArray().map(v=>Math.round(v*1e5)).join(',')
+ for(let i=0;i<ids.length;i+=3)for(let j=0;j<3;j++){const a=vertex(ids[i+j]),b=vertex(ids[i+(j+1)%3]);if(a===b)continue;const key=[a,b].sort().join('|');edges.set(key,(edges.get(key)||0)+1)}
+ assert([...edges.values()].every(v=>v===2),mesh.name+' must be a closed annular body')
+ return edges.size
+}
 assert.deepEqual(meta.exterior.mechanisms.dockOpenings.map(o=>o.side).sort(),['port','starboard'])
 for(const o of meta.exterior.mechanisms.dockOpenings){
  const shell=shells.filter(s=>s.name===o.outletShell);assert.equal(shell.length,1,'exactly one real mouth shell per side')
- const mesh=shell[0],positions=mesh.geometry.attributes.position,ids=mesh.geometry.index?.array??Array.from({length:positions.count},(_,i)=>i),edges=new Map()
- /** Weld only exported UV/material splits at10µm to count actual surface-edge incidence. */
- const vertex=i=>new THREE.Vector3().fromBufferAttribute(positions,i).applyMatrix4(mesh.matrixWorld).toArray().map(v=>Math.round(v*1e5)).join(',')
- for(let i=0;i<ids.length;i+=3)for(let j=0;j<3;j++){const a=vertex(ids[i+j]),b=vertex(ids[i+(j+1)%3]);if(a===b)continue;const key=[a,b].sort().join('|');edges.set(key,(edges.get(key)||0)+1)}
- assert([...edges.values()].every(v=>v===2),'actual exported annular shell must be closed')
+ const edges=closedEdges(shell[0])
  const physical=boxes.filter(b=>b.name.includes(o.outletShell));assert(physical.length>100,'real mouth shell has matching face collision')
  const port=o.side==='port',side=port?1:-1,x=o.centre[0],outer=-o.centre[1],inner=port?13.8:-16.3,mid=(inner+outer)/2,centreY=o.centre[2]
+ if(o.rim){
+  const rim=meshes.find(mesh=>mesh.name===o.rim)
+  assert(rim&&closedEdges(rim)>0,'each mouth retains a closed, supported dark rim')
+  let overlap=Infinity
+  for(let i=0;i<96;i++){
+   const a=(i+.37)*Math.PI*2/96,r=o.radius+.045
+   const ray=new THREE.Raycaster(new THREE.Vector3(x+r*Math.cos(a),centreY+r*Math.sin(a),outer+1.2*side),new THREE.Vector3(0,0,-side))
+   const [bevel,reveal]=[rim,shell[0]].map(mesh=>ray.intersectObject(mesh,false).map(hit=>hit.distance))
+   assert(bevel.length>=2&&reveal.length>=2,'real rim and reveal must overlap at every station')
+   overlap=Math.min(overlap,Math.min(bevel.at(-1),reveal.at(-1))-Math.max(bevel[0],reveal[0]))
+  }
+  assert(overlap>.13,`${o.side} continuous backing shoulder must seat into the actual reveal`)
+  console.log(`PASS ${o.side} dark rim backs into all 96 reveal samples by at least ${overlap.toFixed(3)} m`)
+ }
  // Every angle retains a real radial shell and a blocking physical section.
  const radial=[]
  for(let i=0;i<96;i++){
@@ -49,7 +67,7 @@ for(const o of meta.exterior.mechanisms.dockOpenings){
   const hit=ray.intersectObjects(meshes,false)[0];assert(!hit,`actual static mesh blocks mouth ${o.side}: ${hit?.object.name}`)
   rayHits.push([dx,dy])
  }
- records.push({side:o.side,closedEdges:edges.size,physicalSections:physical.length,radialSamples:radial.length,fullBody:{radius:.34,height:1.75,start:start.toArray(),end:moved.position.toArray()},visualBodyRays:rayHits.length})
+ records.push({side:o.side,closedEdges:edges,physicalSections:physical.length,radialSamples:radial.length,fullBody:{radius:.34,height:1.75,start:start.toArray(),end:moved.position.toArray()},visualBodyRays:rayHits.length})
 }
 console.log('PASS C02 exported closed reveals, all-angle physical containment and all-static full-body mouth clearance',JSON.stringify(records))
 

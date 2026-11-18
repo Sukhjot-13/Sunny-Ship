@@ -636,9 +636,20 @@ function fittingHits(faces,origin,direction){
  for(const f of faces)if(ray.intersectTriangle(...f,false,point))hits.push(point.clone())
  return hits.sort((a,b)=>a.distanceToSquared(origin)-b.distanceToSquared(origin))
 }
+const originalRigFrame=new Map()
+for(const {yard,sail,pivot,yawDegrees,tiltDegrees} of metadata.exterior.mechanisms.squareRigPose??[]){
+ const centre=new THREE.Vector3(pivot[0],pivot[2],-pivot[1])
+ const placement=new THREE.Matrix4().makeTranslation(...centre.toArray())
+  .multiply(new THREE.Matrix4().makeRotationY(yawDegrees*Math.PI/180))
+  .multiply(new THREE.Matrix4().makeRotationX(tiltDegrees*Math.PI/180))
+  .multiply(new THREE.Matrix4().makeTranslation(...centre.clone().negate().toArray())).invert()
+ originalRigFrame.set(yard,placement);originalRigFrame.set(sail,placement)
+}
+function unpose(name,point){return originalRigFrame.has(name)?point.clone().applyMatrix4(originalRigFrame.get(name)):point}
 const fittingIssues=[]
 for(const [canvas,yard] of [['Plane004','Cylinder004'],['Plane005','Cylinder010']]){
- const wood=fittingFaces.get(yard)||[],heads=sailHeadPoints.get(canvas)||[]
+ const wood=(fittingFaces.get(yard)||[]).map(face=>face.map(vertex=>unpose(yard,vertex)))
+ const heads=(sailHeadPoints.get(canvas)||[]).map(vertex=>unpose(canvas,vertex))
  assert(wood.length&&heads.length>=30,canvas+' needs its actual exported UV head edge and yard')
  for(const p of heads){
   const skin=fittingHits(wood,new THREE.Vector3(p.x,-100,p.z),new THREE.Vector3(0,1,0))[0]
@@ -648,7 +659,8 @@ for(const [canvas,yard] of [['Plane004','Cylinder004'],['Plane005','Cylinder010'
  const centre=new THREE.Box3().setFromPoints(wood.flat()).getCenter(new THREE.Vector3())
  const ties=[...fittingFaces].filter(([n])=>n.startsWith('Sunny_SailTie_'+canvas))
  assert.equal(ties.length,13,canvas+' retains thirteen authored lash stations; count is reconstructed')
- for(const [name,rope] of ties){
+ for(const [name,posedRope] of ties){
+  const rope=posedRope.map(face=>face.map(vertex=>unpose(canvas,vertex)))
   const z=new THREE.Box3().setFromPoints(rope.flat()).getCenter(new THREE.Vector3()).z
   const origin=new THREE.Vector3(centre.x,centre.y,z)
   for(let i=0;i<8;i++){
@@ -693,11 +705,12 @@ console.log('PASS actual lookout and bathhouse undersides have eight recessed sc
 function uniqueRigPoints(entries){return [...new Map(entries.map(({point})=>[point.toArray().map(v=>v.toFixed(5)).join(':'),point])).values()]}
 function ringCentre(points){return points.reduce((sum,p)=>sum.add(p),new THREE.Vector3()).divideScalar(points.length)}
 function radialWoodOverlap(name,point,axis){
- const faces=riggingFaces.get(name)||[],centre=new THREE.Box3().setFromPoints(faces.flat()).getCenter(new THREE.Vector3())
- centre.setComponent(axis,point.getComponent(axis))
- const direction=point.clone().sub(centre);direction.setComponent(axis,0);direction.normalize()
+ const faces=(riggingFaces.get(name)||[]).map(face=>face.map(vertex=>unpose(name,vertex)))
+ const attachment=unpose(name,point),centre=new THREE.Box3().setFromPoints(faces.flat()).getCenter(new THREE.Vector3())
+ centre.setComponent(axis,attachment.getComponent(axis))
+ const direction=attachment.clone().sub(centre);direction.setComponent(axis,0);direction.normalize()
  const hit=fittingHits(faces,centre,direction)[0]
- return hit?hit.distanceTo(centre)-point.distanceTo(centre):null
+ return hit?hit.distanceTo(centre)-attachment.distanceTo(centre):null
 }
 const rigJoinIssues=[]
 const rootStations={Cylinder008:-22.940352,Cylinder012:48.804854,Cylinder056:13.324303}
@@ -741,7 +754,7 @@ const guidePoints=uniqueRigPoints(riggingPoints.get('Sunny_Lookout_rope_yard_tie
 const guideRing=guidePoints.filter(p=>p.y>guideMiddle.y)
 assert.equal(guideRing.length,10,'lookout yard tie needs its actual ten-sided upper end ring')
 const guideTip=ringCentre(guideRing),guideOverlap=radialWoodOverlap('Cylinder004',guideTip,2)
-if(guideOverlap===null||guideOverlap<.005||guideOverlap>.045||Math.abs(guideTip.z+3.893707)>.003)rigJoinIssues.push({name:'Sunny_Lookout_rope_yard_tie',tip:guideTip.toArray(),overlap:guideOverlap})
+if(guideOverlap===null||guideOverlap<.005||guideOverlap>.045||Math.abs(unpose('Cylinder004',guideTip).z+3.893707)>.003)rigJoinIssues.push({name:'Sunny_Lookout_rope_yard_tie',tip:guideTip.toArray(),overlap:guideOverlap})
 assert.equal(rigJoinIssues.length,0,'actual rigging attachment failures: '+JSON.stringify(rigJoinIssues))
 console.log('PASS all retained mast-brace roots, fore fan tips and lookout yard tie meet actual tapered/oval wood skin')
 
@@ -784,7 +797,7 @@ const whiteCorners={
  Plane005:[[18.794662,8.502682,19.751516],[18.794662,46.626392,22.702892],[18.794662,8.502682,-19.751516],[18.794662,46.626385,-22.702892]],
 }
 for(const name of ['Plane004','Plane005'])for(const side of [0,1]){
- const points=uniqueRigPoints((riggingPoints.get(name)||[]).filter(o=>Math.abs(o.uv?.[0]-side)<1e-6))
+ const points=uniqueRigPoints((riggingPoints.get(name)||[]).filter(o=>Math.abs(o.uv?.[0]-side)<1e-6)).map(point=>unpose(name,point))
  assert.equal(points.length,29,name+' retains its 29 free-leech vertices')
  const foot=points.reduce((a,p)=>p.y<a.y?p:a,points[0]),head=points.reduce((a,p)=>p.y>a.y?p:a,points[0])
  assert(foot.distanceTo(new THREE.Vector3(...whiteCorners[name][side*2]))<.003&&head.distanceTo(new THREE.Vector3(...whiteCorners[name][side*2+1]))<.003,name+' retains both original leech corner stations')

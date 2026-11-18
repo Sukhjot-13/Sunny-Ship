@@ -7,8 +7,29 @@ import math
 import bmesh
 import bpy
 from mathutils import Vector
-from sunny_exterior import assign_world_mesh
+from sunny_exterior import _mesh, assign_world_mesh, finish
 from dock_channel_profile import section_profile,half_width_at,CROWN_TRANSITION_START
+
+
+def dock_rim(centre, radius, direction):
+    """A rounded dark face with a backing shoulder seated inside the timber reveal."""
+    x,y,z=centre
+    profile=((-0.31,.06),(-.25,.39),(-.08,.53),(.64,.53),(.81,.43),(.87,.24),
+             (.83,0),(.64,-.15),(.20,-.32),(.055,-.30),(.018,-.16),(-.22,-.12))
+    count=96
+    vertices=[(x+(radius+radial)*math.cos(i*math.tau/count),y+direction*axial,
+               z+(radius+radial)*math.sin(i*math.tau/count))
+              for radial,axial in profile for i in range(count)]
+    faces=[]
+    for row in range(len(profile)):
+        next_row=(row+1)%len(profile)
+        for i in range(count):
+            j=(i+1)%count
+            faces.append((row*count+i,next_row*count+i,next_row*count+j,row*count+j))
+    obj=_mesh('Dock1_rim',vertices,faces)
+    bm=bmesh.new();bm.from_mesh(obj.data)
+    bmesh.ops.recalc_face_normals(bm,faces=list(bm.faces));bm.to_mesh(obj.data);bm.free()
+    return finish(obj,'Dock1_rim','black')
 
 
 def _clip(points, normal, distance, inside):

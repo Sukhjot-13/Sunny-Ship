@@ -4,17 +4,18 @@ Exterior work has resumed after the enclosed interior pass. The table records ch
 
 | Section | Verified work to retain | Checkpoint |
 | --- | --- | --- |
-| Bow and figurehead | Seven supported mane petals, working mouth, compact muzzle, eyes and nose, attached bones and stowed anchors. The nose stroke now meets the closed smile. The Gaon accepts six single shots per full tank, with one air blast sound per press. | [Current bow and controls](review/2026-11-18/exterior-controls/) |
+| Bow and figurehead | Seven supported mane petals, working mouth, compact muzzle, eyes and nose, attached bones and stowed anchors. The nose stroke now meets the closed smile. The Gaon fires one air blast per press and draws from a 30-cola reserve with a five-per-second refill. | [Current bow and controls](review/2026-11-18/exterior-controls/) |
 | Fore cabin exterior | True fore ports and broader trim, pair placement relative to the panel, fore entrances and gallery corrections. Real opening depth and normal threshold access retained. | `bcee1ad`, `42232a1`, `e0237f4` |
 | Fore stairs and helm rim | Source-shaped guard profiles on all six stair sides and the curved rim, actual tread support and open transitions. Both complete helm routes passed. | `c0d6894` |
 | Midship lawn and outside routes | Lawn/galleries, supported slide and side passages, two rounded anchored shade crowns and swing area. Continuous exterior route passed, including both lawn returns. | `6da9830`, `f3f822f` |
 | Stern and garden | Source-shaped aft shell, shared entrance, six lower Aquarium exterior arches and deep glazing; supported garden flights, inboard beds and citrus, gallery/balcony/Library routes. Aquarium room contents are separate. | `ad12616`, `065fae9`, `f3f822f` |
-| Dock access and channel | Rounded continuous throat, moving shutters, supported ladder and hatch with full return route. The visible annulus shape and its relation to the hull remain open. | `356c50a`, `3eccb21`, `f3f822f` |
+| Dock access and channel | Rounded continuous throat, moving shutters, supported ladder and hatch with full return route. The two dark beveled rims sit continuously in the retained timber reveals. | [Rim views and checks](review/2026-11-18/dock-rims/) |
 | Fore shrouds and lookout access | Outboard longitudinal fan planes, attached ends and 30 reconstructed rows per fan. Full normal rope, ladder, hatch, floor and reverse-to-lawn journey passed. Mast/yard proportions are separate. | `e0237f4`, `b1c0dfb` |
+| Deployed square sails | Both yard and sail faces are turned into a reconstructed deployed pose. The canvas hems and 26 lashings retain contact and the lookout rope tie is refitted. | [Matched views](review/2026-11-18/deployed-rig/) |
 | Open Observation Deck | Normal lawn-to-deck walk and return verified on the enclosed-interior checkpoint. | [Keyboard trace](review/2026-11-18/exterior-controls/verification/observation-journey.json) |
 | Hull bands through aft B1 lining | Four imported band meshes terminate at the existing room lining. Current renders show two much smaller side-port fixtures at the floor line. | [Workshop views](review/2026-11-18/exterior-controls/final/) |
 
-Open work includes the Dock rim and hull backing, rig and canvas pose, mast height and station, remaining whole-ship fitting proportions, and a fresh full suite and performance baseline. [Rigging evidence](rigging-reference-audit.md)
+The open exterior items are exact mast height and station, remaining shipwide fitting proportions, the four cannon-closet gunport connections and the two small side-port protrusions near the B1 floor line. The existing matching-level port centers are about eight metres aft of the four barrel centers, beyond all four closet footprints. The Dock craft and pool still have separate operation work under M10. [Rigging evidence](rigging-reference-audit.md) · [Gunport and vehicle findings](whole-ship-blueprint-audit.md)
 
 # Exterior feature ledger — current repair and reference boundaries
 

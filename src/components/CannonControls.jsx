@@ -1,6 +1,6 @@
 import {useEffect,useRef,useState} from 'react'
 import {useStore} from '../state/useStore.js'
-import {cannonAvailability,voyage} from '../systems/navigation.js'
+import {COLA,GAON,cannonAvailability,voyage} from '../systems/navigation.js'
 import {operateAudibleCannon} from '../systems/cannonAudio.js'
 
 /** Visible global controls for the actual Gaon mechanism, with focus handoff. */
@@ -36,8 +36,8 @@ export function CannonControls(){
    onClick={()=>open?setOpen(false):showPanel()} style={styles.trigger}>Cannon · X</button>
   {open?<div id="cannon-panel" style={styles.panel}>
    <h2 style={styles.title}>Gaon cannon</h2>
-   <p style={styles.detail}>{ready.shots} {ready.shots===1?'shot':'shots'} remaining · Cola {(nav.cola??3).toFixed(1)} / 3</p>
-   <p style={styles.detail}>Mouth {nav.jawOpen?'open':'closed'}. Press K to fire. Each shot uses half a barrel.</p>
+   <p style={styles.detail}>{ready.shots} {ready.shots===1?'shot':'shots'} available · Cola {(nav.cola??COLA.capacity).toFixed(1)} / {COLA.capacity}</p>
+   <p style={styles.detail}>Press K to fire. Each shot uses {GAON.cost} barrel. Cola refills at {COLA.perSecond}/sec.</p>
    <div style={styles.actions}>
     <button ref={mouth} type="button" aria-pressed={!!nav.jawOpen}
      onClick={()=>operate('toggle-mouth')} style={styles.action}>{nav.jawOpen?'Close Mouth':'Open Mouth'}</button>

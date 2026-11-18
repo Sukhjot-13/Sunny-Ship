@@ -17,11 +17,15 @@ const check = (name, cond, detail = '') => {
 }
 
 const meta = JSON.parse(fs.readFileSync('public/models/ship-metadata.json', 'utf8'))
+const rigPose = meta.exterior.mechanisms.squareRigPose??[]
 const exteriorConfig = JSON.parse(fs.readFileSync('src/config/exteriorConfig.json','utf8'))
 const expectedLength = exteriorConfig.referenceLengthM*exteriorConfig.experienceScale
 const expectedHeight = exteriorConfig.referenceHeightM*exteriorConfig.experienceScale
 const ship = loadColliders('public/models/sunny.glb')
 const coll = loadColliders('public/models/sunny-collision.glb')
+const posing = rigPose.length>0
+const rigPieces = new Set(rigPose.flatMap(({yard,sail})=>[yard,sail,...Array.from({length:13},(_,index)=>`Sunny_SailTie_${sail}${index}`)]))
+const allBounds = ship.reduce((bounds,mesh)=>bounds.expandByPoint(mesh.min).expandByPoint(mesh.max),new THREE.Box3())
 
 function closedExportedMeshes(names) {
   const gltf=readGLB('public/models/sunny.glb')
@@ -129,9 +133,12 @@ console.log('\n=== VISUAL SHIP ===')
     `glb ${size.map((v) => v.toFixed(1)).join(' x ')} vs hull ${hullSize.map((v) => v.toFixed(1)).join(' x ')}`)
 
   const centre = [0, 1, 2].map((i) => (mn[i] + mx[i]) / 2)
-  check('GLB is centred on the origin',
-    Math.max(...centre.map(Math.abs)) < 0.05,
-    centre.map((v) => v.toFixed(2)).join(', '))
+  const fixedBounds = ship.filter(mesh=>!rigPieces.has(mesh.name))
+    .reduce((bounds,mesh)=>bounds.expandByPoint(mesh.min).expandByPoint(mesh.max),new THREE.Box3())
+  const fixedCentre = fixedBounds.getCenter(new THREE.Vector3())
+  const datum = posing ? [fixedCentre.x,fixedCentre.y,fixedCentre.z+meta.interiors.dockCentre[1]] : centre
+  check('the fixed ship stays centred on its datum',Math.max(...datum.map(Math.abs))<.05,
+    datum.map(value=>value.toFixed(2)).join(', '))
 
   // nothing may sit far from the hull
   const stray = ship.filter((o) => {
@@ -568,8 +575,9 @@ console.log('\n=== METADATA ===')
   check('unsupported garden porthole duplicates and imported hut arches are removed',!ship.some(o=>/Sunny_GardenWindow|^Rectangle03[78]$|^Box12[3-9]$|^Box13[0-7]$/.test(o.name)))
   check('walkable lawn is enlarged to the requested experience scale',
     Math.abs((lawn.max.x-lawn.min.x)-meta.exterior.lawnLengthM)<0.05)
-  check('ship is centred on the origin',
-    Math.max(...meta.hull.center.map(Math.abs)) < 0.01,
+  const centre = allBounds.getCenter(new THREE.Vector3())
+  check('ship metadata matches the actual exported envelope centre',
+    [centre.x,-centre.z,centre.y].every((value,index)=>Math.abs(value-meta.hull.center[index])<.01),
     meta.hull.center.map((v) => v.toFixed(4)).join(', '))
 
   // The safety hull is a catch box hung UNDER the lowest deck, so it covers the
@@ -583,7 +591,7 @@ console.log('\n=== METADATA ===')
     Math.abs(meta.hull.size[0] - got[0]) < meta.hull.size[0]*0.05,
     `${got[0].toFixed(1)} m vs hull ${meta.hull.size[0].toFixed(1)} m`)
   check('safety hull spans the hull beam',
-    Math.abs(meta.hull.size[1] - got[2]) < 1.5,
+    posing ? hull.min.z<=allBounds.min.z && hull.max.z>=allBounds.max.z : Math.abs(meta.hull.size[1] - got[2]) < 1.5,
     `${got[2].toFixed(1)} m vs hull ${meta.hull.size[1].toFixed(1)} m`)
   check('safety hull only covers the part below the decks',
     got[1] < meta.hull.size[2],

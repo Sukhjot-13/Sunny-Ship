@@ -18,7 +18,9 @@ const roomDeltas=[['aquarium-room-delta',rooms.find(room=>room.name==='Aquarium 
  ['aft-service-room-delta',rooms.find(room=>room.name==='Pantry')?.pantryLayout],
  ['fore-cabins-room-delta',rooms.find(room=>room.name==="Men's Quarters")?.cabinLayout],
  ['lower-interior-room-delta',meta.interiors.lookoutRoom],
- ['exterior-detail-delta',meta.interiors.workshopTrimRepair]]
+ ['exterior-detail-delta',meta.interiors.workshopTrimRepair],
+ ['dock-rim-delta',meta.exterior.mechanisms.dockOpenings?.length&&meta.exterior.mechanisms.dockOpenings.every(opening=>opening.rim)],
+ ['square-rig-delta',meta.exterior.mechanisms.squareRigPose?.length]]
 for(const [fixture,active] of roomDeltas){
  if(!active)continue
  const roomPatch=JSON.parse(fs.readFileSync(`tests/fixtures/${fixture}.json`))

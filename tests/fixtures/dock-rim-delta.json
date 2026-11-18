@@ -1,0 +1,14 @@
+{
+  "removed": {},
+  "updated": {
+    "Sunny_Dock1_rim": {
+      "before": "f24508d0c5a0488f9b5fc3c275e24d3947f9eb7148526825a24aa85bfd584fcc",
+      "after": "66280e53748d71774f34ea56725ff3091b64e34377309822af9d3c428f34539a"
+    },
+    "Sunny_Dock1_rim.001": {
+      "before": "c1c96970af6e5d5403b1e0c9ad3b40b929bce77e47ed8725dd0299af04394daa",
+      "after": "33eb5b0969b31850d7d1c03d073a803239bb3d07cd76546c0fc62841fd314d43"
+    }
+  },
+  "collisionSha256": "7be1103698d3ba7b7a990a3aba4c266017419c8a0f785c433e187778463fba90"
+}

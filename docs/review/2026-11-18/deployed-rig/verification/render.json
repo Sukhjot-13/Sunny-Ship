@@ -1,0 +1,95 @@
+{
+  "phase": "deployed-square-rig",
+  "modelDir": "public/models",
+  "previewURL": "http://localhost:5174",
+  "shots": [
+    {
+      "name": "port-side",
+      "camera": [
+        0,
+        -4,
+        126
+      ],
+      "target": [
+        0,
+        -4,
+        -1.287
+      ],
+      "reference": "R01/R02/R03"
+    },
+    {
+      "name": "starboard-side",
+      "camera": [
+        0,
+        -4,
+        -126
+      ],
+      "target": [
+        0,
+        -4,
+        -1.287
+      ],
+      "reference": "R01/R02/R03"
+    },
+    {
+      "name": "lookout",
+      "camera": [
+        -29.828835487365723,
+        38.96097373962402,
+        15.840149700641632
+      ],
+      "target": [
+        -12.828835487365723,
+        32.96097373962402,
+        -1.159850299358368
+      ],
+      "reference": "R01/R02/R13"
+    },
+    {
+      "name": "fore-rigging-port",
+      "camera": [
+        -11.06696367263794,
+        -9.468307495117188,
+        82.99175322055817
+      ],
+      "target": [
+        -12.06696367263794,
+        -9.468307495117188,
+        6.9917532205581665
+      ],
+      "reference": "R01/R09"
+    },
+    {
+      "name": "fore-rigging-starboard",
+      "camera": [
+        -11.066964149475098,
+        -9.468310356140137,
+        -85.12546116113663
+      ],
+      "target": [
+        -12.066964149475098,
+        -9.468310356140137,
+        -9.125461161136627
+      ],
+      "reference": "R01/R09"
+    }
+  ],
+  "context": {
+    "drawCalls": 8162,
+    "triangles": 1266355,
+    "framesPerSecond": 18.913454640318264,
+    "viewport": [
+      1440,
+      900
+    ],
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)"
+  },
+  "errors": [],
+  "consoleErrors": [],
+  "assets": {
+    "sunny.glb": "f4f8381c5a8591f27ddd0c81ae81e396c82fc618b78731ce6f03dc7ea75859f7",
+    "sunny-collision.glb": "7be1103698d3ba7b7a990a3aba4c266017419c8a0f785c433e187778463fba90",
+    "ship-metadata.json": "28601a89cdc5be9ccc72af0605fdb38a73fb2ee794a16706401f1a909cd0e332"
+  },
+  "note": "Appearance survey only. Main camera moves; no mesh hiding, player placement or movement-proof claim."
+}

@@ -766,6 +766,7 @@ def dock_outlet_shell(side, centre, radius, outline, direction):
 
 def rolling_dock(objects,bounds,cy,outline,b1,roof):
     """D's timber shutter slats and changing numbers through a real hull aperture."""
+    from sunny_dock_transition import dock_rim
     originals=[o for o in objects if o.name.startswith('Sunny_Dock1_shutter')]
     stations=[(bounds(o)[0]+bounds(o)[1])/2 for o in originals]
     discard(objects,lambda o:o.name.startswith(('Sunny_Dock1_','Sunny_DockNumber','Sunny_Paddle')))
@@ -822,7 +823,7 @@ def rolling_dock(objects,bounds,cy,outline,b1,roof):
             # Build collision from the retained faces, not the original bounds.
             obj['sunny_rail'] = True
         dock_outlet_shell(side, p, radius, outline, direction)
-        ring('Dock1_rim',(x,y+direction*.09,z),radius+.28,.59,'black','Y',64,10)
+        rim=dock_rim(p,radius,direction)
         ring('Dock1_reveal',(x,y-direction*.18,z),radius-.08,.16,'darkwood','Y',64,8)
         count=32
         step=2*radius/count
@@ -863,7 +864,7 @@ def rolling_dock(objects,bounds,cy,outline,b1,roof):
             ob['sunny_paddle']=side;ob['sunny_pivot']=list(pivot);ob['sunny_dynamic']=True
             ob=box('Paddle_blade_'+side,tip,(1.3,.92,.25),'deck');ob.rotation_euler.y=t
             ob['sunny_paddle']=side;ob['sunny_pivot']=list(pivot);ob['sunny_dynamic']=True
-        result.append({'side':side,'centre':list(p),'radius':radius,'rollRadius':.43,'slats':count,
+        result.append({'side':side,'centre':list(p),'radius':radius,'rollRadius':.43,'slats':count,'rim':rim.name,
                        'outletShell':'Sunny_DockOutlet_'+side,'clearRadius':radius-.16})
     return result
 
@@ -2596,6 +2597,8 @@ def apply_exterior_accuracy(objects, bounds, frame, interiors):
     for name,throat in (('Cylinder005',.28),('Cylinder001',.17)):
         scalloped_soffit(next(o for o in objects if o.name==name),bounds,throat)
     climbs=lookout_access(objects,bounds,interiors)+interiors.get('exteriorClimbs',[])+stern_ladder_access(objects,bounds,interiors)+dock_ladder_access(objects,bounds,interiors)
+    from sunny_square_rig import pose_square_rig
+    rig=pose_square_rig(bounds)
     if 'bathClimb' in interiors:climbs.append(interiors.pop('bathClimb'))
     from sunny_aft_envelope import add_lower_aquarium_windows
     add_lower_aquarium_windows(objects,interiors)
@@ -2605,4 +2608,4 @@ def apply_exterior_accuracy(objects, bounds, frame, interiors):
     rudder=rudder_mechanism(objects,bounds)
     objects += [o for o in bpy.data.objects if o.type == 'MESH' and o not in before and o not in objects]
     bpy.context.view_layer.update()
-    return objects, {'burst':burst, 'controls':controls,'dockOpenings':docks,'lion':lion,'rudder':rudder,'anchors':anchors,'climbs':climbs,'smallHullPorts':port_count,'vegetation':vegetation, 'reference':'docs/exterior-feature-ledger.md'}
+    return objects, {'burst':burst, 'controls':controls,'dockOpenings':docks,'lion':lion,'rudder':rudder,'anchors':anchors,'climbs':climbs,'squareRigPose':rig,'smallHullPorts':port_count,'vegetation':vegetation, 'reference':'docs/exterior-feature-ledger.md'}

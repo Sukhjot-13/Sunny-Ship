@@ -1,0 +1,19 @@
+{
+  "backup": "/private/tmp/sunny-dock-rim-live-before",
+  "stage": "/private/tmp/sunny-dock-rim-candidate",
+  "url": "http://localhost:5173",
+  "applied": {
+    "assets/sunny-master.blend": "0835a776868cbc216ca6ac87c20391ee80967374db2c902c2f2b8c17cbf0b066",
+    "public/models/sunny.glb": "08b26f235610d0c9cb5a62cc692fac84e14a10fe5792c63b4e003de39aeb24f5",
+    "public/models/sunny-collision.glb": "7be1103698d3ba7b7a990a3aba4c266017419c8a0f785c433e187778463fba90",
+    "public/models/ship-metadata.json": "7e93154f7d12895b034f2465b9d3289936dffb5eb1c83a2212015eeae5c8e6a1",
+    "assets/reference/sunny-reference.blend": "09d9c82118f7be939a18f42d78e3d4b24fbb759cb489a21f5496e14074b8f15a",
+    "assets/reference/sunny-reference.glb": "4973def79c8b1bee52579da9c65c7656d1a511c1ccd6c7b8b8177362f74ae571",
+    "assets/reference/dimensions.json": "c2985f042f38a7adf0ec8e0a41f2410b156aa412dcd99ded7df22de0e359d11a"
+  },
+  "served": {
+    "sunny.glb": "08b26f235610d0c9cb5a62cc692fac84e14a10fe5792c63b4e003de39aeb24f5",
+    "sunny-collision.glb": "7be1103698d3ba7b7a990a3aba4c266017419c8a0f785c433e187778463fba90",
+    "ship-metadata.json": "7e93154f7d12895b034f2465b9d3289936dffb5eb1c83a2212015eeae5c8e6a1"
+  }
+}

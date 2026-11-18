@@ -1,42 +1,42 @@
 {
-  "source": "/private/tmp/sunny-exterior-detail-candidate/sunny-master.blend",
-  "workingVisualSource": "/private/tmp/sunny-exterior-detail-candidate/sunny.glb",
-  "sourceSha256": "27fd7f994652570a1abf16482bf9cd499150802d6536561f96d973757e16d812",
-  "workingVisualSha256": "1c5e5646acba442ab0f4e58e84290bafca3949fb62e105d0e0e960d6252e10dd",
+  "source": "/private/tmp/sunny-square-rig-slope-candidate/sunny-master.blend",
+  "workingVisualSource": "/private/tmp/sunny-square-rig-slope-candidate/sunny.glb",
+  "sourceSha256": "4dc7594f070ced4c2b343d473b8210ad9cc8c7d0efcc643223d8d44fa347351c",
+  "workingVisualSha256": "f4f8381c5a8591f27ddd0c81ae81e396c82fc618b78731ce6f03dc7ea75859f7",
   "workingScale": 2.2,
   "referenceScale": 1,
   "rootMultiplier": 0.45454545454545453,
   "workingBoundsBlender": {
     "min": [
       -42.91780471801758,
-      -22.86289405822754,
+      -20.957992553710938,
       -61.600006103515625
     ],
     "max": [
       42.89999771118164,
-      22.86289405822754,
+      21.332847595214844,
       61.60000991821289
     ],
     "size": [
       85.81780242919922,
-      45.72578811645508,
+      42.29084014892578,
       123.20001220703125
     ]
   },
   "referenceBoundsBlender": {
     "min": [
       -19.508092880249023,
-      -10.39222526550293,
+      -9.526360511779785,
       -28.000003814697266
     ],
     "max": [
       19.5,
-      10.39222526550293,
+      9.696748733520508,
       28.0000057220459
     ],
     "size": [
       39.008094787597656,
-      20.78445053100586,
+      19.22311019897461,
       56.00000762939453
     ]
   },

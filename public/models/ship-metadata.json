@@ -5,22 +5,22 @@
   "hull": {
     "min": [
       -42.91780471801758,
-      -22.86289405822754,
+      -20.957992553710938,
       -61.600006103515625
     ],
     "max": [
       42.89999771118164,
-      22.86289405822754,
+      21.332847595214844,
       61.60000991821289
     ],
     "size": [
       85.81780242919922,
-      45.72578811645508,
+      42.29084014892578,
       123.20001220703125
     ],
     "center": [
       -0.00890350341796875,
-      0.0,
+      0.18742752075195312,
       1.9073486328125e-06
     ]
   },
@@ -68908,7 +68908,8 @@
           "rollRadius": 0.43,
           "slats": 32,
           "outletShell": "Sunny_DockOutlet_port",
-          "clearRadius": 7.64
+          "clearRadius": 7.64,
+          "rim": "Sunny_Dock1_rim"
         },
         {
           "side": "starboard",
@@ -68921,7 +68922,8 @@
           "rollRadius": 0.43,
           "slats": 32,
           "outletShell": "Sunny_DockOutlet_starboard",
-          "clearRadius": 7.64
+          "clearRadius": 7.64,
+          "rim": "Sunny_Dock1_rim.001"
         }
       ],
       "lion": {
@@ -69214,7 +69216,31 @@
         "shadeCount": 2,
         "layout": "inboard mast-side L-shaped beds"
       },
-      "reference": "docs/exterior-feature-ledger.md"
+      "reference": "docs/exterior-feature-ledger.md",
+      "squareRigPose": [
+        {
+          "yard": "Cylinder004",
+          "sail": "Plane004",
+          "pivot": [
+            -13.066941261291504,
+            1.143707275390625,
+            23.2807559967041
+          ],
+          "yawDegrees": 49,
+          "tiltDegrees": -15
+        },
+        {
+          "yard": "Cylinder010",
+          "sail": "Plane005",
+          "pivot": [
+            18.794662475585938,
+            1.143707036972046,
+            47.99838638305664
+          ],
+          "yawDegrees": 38,
+          "tiltDegrees": -11
+        }
+      ]
     },
     "reference": "docs/exterior-reference.md",
     "landmarks": {

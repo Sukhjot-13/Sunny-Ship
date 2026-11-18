@@ -1,9 +1,10 @@
 /** Navigation is simulated; collision queries remain in ship coordinates. */
 export const CHANNELS=['Shiro Mokuba I','Mini Merry II','Shark Submerge III','Kurosai FR-U IV','Brachio Tank V','Inflatable Pool']
 export const LOG_BEARINGS=[35,145,285]
+export const COLA={capacity:30,perSecond:5}
 export const BURST={seconds:6,height:32,range:240,cost:3}
 export const GAON={seconds:2.5,cost:.5}
-const initial=()=>({heading:270,throttle:0,speed:0,east:0,south:0,helm:false,channel:1,dockGateChannel:1,dockOpen:false,shutter:0,dockAngle:0,logNeedle:0,cola:3,burst:0,lift:0,pitch:0,wheel:0,chicken:false,maneAngle:0,jawOpen:false,jaw:0,gaon:0,paddleAngle:0,foodLift:0,foodLiftTarget:0})
+const initial=()=>({heading:270,throttle:0,speed:0,east:0,south:0,helm:false,channel:1,dockGateChannel:1,dockOpen:false,shutter:0,dockAngle:0,logNeedle:0,cola:COLA.capacity,burst:0,lift:0,pitch:0,wheel:0,chicken:false,maneAngle:0,jawOpen:false,jaw:0,gaon:0,paddleAngle:0,foodLift:0,foodLiftTarget:0})
 export const voyage=initial()
 const RAD=Math.PI/180
 export function resetVoyage(){Object.assign(voyage,initial())}
@@ -21,7 +22,7 @@ export function toggleDockShutters(){
 /** Shared readiness for the visible panel and keyboard mechanism actions. */
 export function cannonAvailability(state=voyage){
  const shots=Math.floor(state.cola/GAON.cost)
- const reason=state.burst>0?'Wait for Coup de Burst to land.':shots===0?'Needs half a cola barrel.':''
+ const reason=state.burst>0?'Wait for Coup de Burst to land.':shots===0?'Cola refilling…':''
  return {canFire:!reason,reason,shots}
 }
 /** Operate the existing real cannon from either user interface. */
@@ -36,11 +37,12 @@ export function operateCannon(action){
  }
  return {ok:false,message:'Unknown cannon action'}
 }
-/** Animate the real jaw/blast in Inspect as well as while walking. */
-export function advanceCannon(dt){
- dt=Math.min(.1,Math.max(0,dt))
+/** Animate the real jaw/blast and replenish cola in either camera mode. */
+export function advanceCannon(elapsed){
+ const dt=Math.min(.1,Math.max(0,elapsed))
  voyage.jaw+=((voyage.jawOpen?1:0)-voyage.jaw)*Math.min(1,dt*4)
  voyage.gaon=Math.max(0,voyage.gaon-dt)
+ voyage.cola=Math.min(COLA.capacity,voyage.cola+Math.max(0,elapsed)*COLA.perSecond)
 }
 /** Rotate a ship-local point around a Y-up pivot. */
 export function rotatePoint(point,angle,centre=[0,0,0]){
@@ -75,8 +77,8 @@ export function advanceDock(dt,dockOccupied=false,shutterOccupied=false){
 }
 
 /** Advance the ship and its guarded moving mechanisms in Explore. */
-export function advanceVoyage(dt,keys={},dockOccupied=false,shutterOccupied=false){
- dt=Math.min(.1,Math.max(0,dt))
+export function advanceVoyage(elapsed,keys={},dockOccupied=false,shutterOccupied=false){
+ const dt=Math.min(.1,Math.max(0,elapsed))
  if(voyage.helm&&voyage.burst===0){
   const steering=(keys.right?1:0)-(keys.left?1:0)
   voyage.throttle=Math.max(0,Math.min(1,voyage.throttle+((keys.forward?1:0)-(keys.back?1:0))*dt*.35))
@@ -84,7 +86,6 @@ export function advanceVoyage(dt,keys={},dockOccupied=false,shutterOccupied=fals
   voyage.wheel+=((steering*.55)-voyage.wheel)*Math.min(1,dt*6)
  }else voyage.wheel*=Math.exp(-dt*6)
  advanceDock(dt,dockOccupied,shutterOccupied)
- advanceCannon(dt)
  voyage.foodLift+=(((voyage.foodLiftTarget>0)?1:0)-voyage.foodLift)*Math.min(1,dt*2.2)
  if(Math.abs(voyage.foodLift-voyage.foodLiftTarget)<.001)voyage.foodLift=voyage.foodLiftTarget>0?1:0
  if(voyage.chicken)voyage.maneAngle=(voyage.maneAngle+dt*2.4)%(Math.PI*2)
@@ -105,6 +106,7 @@ export function advanceVoyage(dt,keys={},dockOccupied=false,shutterOccupied=fals
  }
  voyage.east+=Math.sin(voyage.heading*RAD)*distance
  voyage.south-=Math.cos(voyage.heading*RAD)*distance
+ advanceCannon(elapsed)
  return voyage
 }
 /** Three tank barrels fund one Burst. Flight dimensions are simulated. */

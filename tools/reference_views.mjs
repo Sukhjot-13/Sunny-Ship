@@ -63,6 +63,10 @@ if(dockHatch){
  views.push(['lawn-hatch',[hx+2.4,hz+2.1,-hy+1.3],[hx,hz,-hy],'R04/R14'])
  views.push(['restored-lawn',[-4.5,lawn+2.2,-5],[-3.5,lawn,-8.8],'R04/R14'])
 }
+for(const opening of meta.exterior.mechanisms.dockOpenings??[]){
+ const [x,y,z]=opening.centre,side=opening.side==='port'?1:-1,target=[x,z,-y]
+ views.push(['dock-rim-'+opening.side,offset(target,[5,5,side*25]),target,'R01/R02/R14',55])
+}
 for(const id of ['ForeDoor','WomensDoor','AquariumDoor','AftEntrance','DiningEntrance','KitchenEntrance','LibraryDoor']){
  const spec=meta.interiors.doors.find(d=>d.id===id);if(!spec)continue
  const [x,y,z]=spec.pos,normal=[-Math.sin(spec.rot),0,-Math.cos(spec.rot)]
@@ -88,7 +92,19 @@ try{
   shots.push({name,camera:p,target:t,reference})
  }
  const sha=file=>crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')
- const context=await page.evaluate(()=>({drawCalls:window.__review.gl.info.render.calls,triangles:window.__review.gl.info.render.triangles}))
+ const context=await page.evaluate(async()=>{
+  let start,frames=0,elapsed
+  await new Promise(resolve=>{
+   function frame(time){
+    start??=time;elapsed=time-start;frames++
+    if(elapsed>=3000)resolve();else requestAnimationFrame(frame)
+   }
+   requestAnimationFrame(frame)
+  })
+  const renderer=window.__review.gl,gl=renderer.getContext(),info=gl.getExtension('WEBGL_debug_renderer_info')
+  return {drawCalls:renderer.info.render.calls,triangles:renderer.info.render.triangles,
+   framesPerSecond:(frames-1)*1000/elapsed,viewport:[innerWidth,innerHeight],renderer:info?gl.getParameter(info.UNMASKED_RENDERER_WEBGL):null}
+ })
  if(!shots.length)throw Error('The selected exterior camera filter matched no views')
  fs.writeFileSync(path.join(out,'receipt.json'),JSON.stringify({phase,modelDir,previewURL,shots,context,errors,consoleErrors,
   assets:Object.fromEntries(['sunny.glb','sunny-collision.glb','ship-metadata.json'].map(f=>[f,sha(path.join(modelDir,f))])),

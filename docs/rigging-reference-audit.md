@@ -1,5 +1,13 @@
 # Fore shroud source audit — November 16, 2026
 
+## November 18 deployed square sails
+
+The fore and main square assemblies use reconstructed turns of 49° and 38° and tilts of −15° and −11° at their existing mast intersections. The R03 fitted view shows more of both sail faces and a rising spar line. R02 supplies a second view of the spars with gathered sails. The two drawings leave the exact mast heights, stations and overall proportions open. [R03 before](review/2026-11-18/deployed-rig/before/r03.png) · [R03 after](review/2026-11-18/deployed-rig/final/r03.png) · [R02 after](review/2026-11-18/deployed-rig/final/r02.png)
+
+Both white canvas heads and all 26 lashings remain attached to their actual yards. The small lookout tie follows the same point on the fore yard, with the end on the guide held in place. The exported fore canvas and yard clear the sampled climb capsule axis by 2.540 m and 1.511 m. The rest of the ship retains 8,041 exact meshes and the collision proxy is byte-identical. [Geometry checks](review/2026-11-18/deployed-rig/verification/static.log) · [Climb clearance](review/2026-11-18/deployed-rig/verification/climb-clearance.log) · [Mesh comparison](review/2026-11-18/deployed-rig/verification/model-delta.json)
+
+The full lookout ascent, hatch operation, interior stops and lawn return passed in the browser. The 121 structure checks and production build passed, and the applied assets match the verified package. The isolated headless renderer sampled 22.5 FPS at 1440 × 900 on ANGLE Metal. The 30 FPS target remains open. [Native climb trace](review/2026-11-18/deployed-rig/verification/lookout-climb-journey.json) · [Live receipt](review/2026-11-18/deployed-rig/verification/live-receipt.json) · [Performance sample](review/2026-11-18/deployed-rig/verification/live-performance.json)
+
 ## November 17: density correction and open rig proportions
 
 R01 pixel scans find 24–26 visible cross-fan rows over most of the fan. The isolated correction reconstructs 30 total rows per side and retains all longitudinal roots, mast attachments, diameters and the separate lookout climb. The actual asset differential isolates both changed fans and verifies all 7,877 other meshes. See `review/2026-11-17/ratline-density/` for scans, native geometry and physical preservation evidence.

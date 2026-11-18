@@ -1,0 +1,23 @@
+PASS all six exported selected bay centres align with the transverse mouth axis
+✔ tests/dockAlignment.test.mjs (250.688875ms)
+PASS port dark rim backs into all 96 reveal samples by at least 0.177 m
+PASS starboard dark rim backs into all 96 reveal samples by at least 0.177 m
+PASS C02 exported closed reveals, all-angle physical containment and all-static full-body mouth clearance [{"side":"port","closedEdges":1152,"physicalSections":4728,"radialSamples":96,"fullBody":{"radius":0.34,"height":1.75,"start":[0.4949997663497925,-44.651,13.8],"end":[0.4949997663497925,-44.651,17.79884452819824]},"visualBodyRays":9},{"side":"starboard","closedEdges":1152,"physicalSections":4920,"radialSamples":96,"fullBody":{"radius":0.34,"height":1.75,"start":[0.49499964714050293,-44.651,-16.3],"end":[0.49499964714050293,-44.651,-20.3728458404541]},"visualBodyRays":9}]
+PASS C02 retained original lining outside both mouth cuts 112
+✔ tests/dockOutletShell.test.mjs (1333.539375ms)
+PASS actual rotating guides and partitions clear their fixed and radial boundaries
+✔ tests/dockRotatingClearance.test.mjs (181.326334ms)
+PASS actual rounded channels, circular mouth transitions and wide static rays [{"side":"port","measured":[{"t":0.1,"left":3.279676459630828,"right":3.280714426215856},{"t":0.5,"left":5.219508882189024,"right":5.21950912082613},{"t":0.9,"left":7.132026176447707,"right":7.132026368591335},{"t":0.99,"left":7.589202764915351,"right":7.589202956649306}],"physical":17609},{"side":"starboard","measured":[{"t":0.1,"left":3.279676442881204,"right":3.2796765075793486},{"t":0.5,"left":5.21950901130429,"right":5.219509249941456},{"t":0.9,"left":7.1320264790109915,"right":7.132026737559295},{"t":0.99,"left":7.5892027951715635,"right":7.589203112335422}],"physical":17769}]
+✔ tests/dockRoundTransition.test.mjs (1054.30925ms)
+PASS two deep actual lawn crowns; 8064 other meshes and the collision asset match the approved checkpoint fingerprints
+✔ tests/lawnCrownReference.test.mjs (590.536666ms)
+PASS exact working/reference asset hashes and uniform 1/2.2 transform across 8072 real exported meshes
+✔ tests/referenceScale.test.mjs (379.16725ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1340.605958

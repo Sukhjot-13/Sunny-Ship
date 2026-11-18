@@ -1,0 +1,144 @@
+{
+  "visual": {
+    "unchanged": 8041,
+    "removed": {},
+    "updated": {
+      "Cylinder004": {
+        "before": "a6f68aaf34f350dae59f723ea28a6450542625b9dbb012c84a38a9859c7e2cdc",
+        "after": "4d4921f5c147c4f962e82a8efa9bfc4977e8b9f49f9402acdd797a4804cc4251"
+      },
+      "Cylinder010": {
+        "before": "01c9457eb5ccc25db7a73b75b3c61a736cbf3939bd4d1892c1ae7911950d479d",
+        "after": "4d5023f73ba7877b1b9626513a10b7a80cfb18b20309996c76642279dfdd4808"
+      },
+      "Plane004": {
+        "before": "a58fc0a39b94d120588567380236d743aff40e5ee01dce809970dc286dcc417e",
+        "after": "a9a345bacd7acdb7e9fb1ff5588d3b5bcc49da95c132dbfba32864d810178626"
+      },
+      "Plane005": {
+        "before": "a584b71068c5294357e0e9b875084422e8a910c9e912431c389b9018f33836cf",
+        "after": "a3d4d0c2b20d4ddcf7d7395c21c29d69b09b3ba653d1f63749c7a825188ed74c"
+      },
+      "Sunny_Lookout_rope_yard_tie": {
+        "before": "0d6452175fc40dd32f1b2001f01f6e8735359aab905b229401b2526a4a2b7539",
+        "after": "74f8671435c67054122bfaffacab7a04b17f5a9351402c2a6c0d6a5dec21f450"
+      },
+      "Sunny_SailTie_Plane0040": {
+        "before": "43ca27b15a309015d768ee66e598154fc892ab247b489994d29c289c65ee2407",
+        "after": "31b973e0803689ed54dc27675be1bd053d01d2aa9743531ad26053cfb5dff08e"
+      },
+      "Sunny_SailTie_Plane0041": {
+        "before": "8cdf8f7c503eacb90f395d9cb9b80f9bc4f01328833937c953930251e4e60c04",
+        "after": "b12b7f980510ddd74d1fee6354a7a5f1cf93a54918759cb97e78686ac820d29b"
+      },
+      "Sunny_SailTie_Plane0042": {
+        "before": "8e81f0cf2288453ae455fd49876abd32e3c176f7a382b2e3249ae4a990f732d4",
+        "after": "3b9860f6a34d19fe4fb30bc6fd8d163b3d0858c77340cacafa7b32667f1b8840"
+      },
+      "Sunny_SailTie_Plane0043": {
+        "before": "207d2837aaf2a4888701d2bbbb1acd19d8bc951aadaec0be1b16e7bf3ac8cabe",
+        "after": "4676e90c996e3758e9f36497b3032eb750878a0e214f0985902affa26b4d9b13"
+      },
+      "Sunny_SailTie_Plane0044": {
+        "before": "b6d540ea0f4f002aad3f7602cc99b9766ef7558285c537c2eb1cbaca94b42e5b",
+        "after": "c1c51ad5b31075b4ac589ea8b401e72986b235f911b73c5109fa9470fc7a5ffb"
+      },
+      "Sunny_SailTie_Plane0045": {
+        "before": "a086c70402011beb522497362160da9a028a7731d1b09feed5027f39cc67e3bc",
+        "after": "add03bb1cad1b4e5544cc162a74db4409cf2a3cbd0ddd62ad3437089b83a3240"
+      },
+      "Sunny_SailTie_Plane0046": {
+        "before": "f8cc7297cd2aa944d409e1ef5df1a881fd4685b8f71d9782909c85959921493b",
+        "after": "e4189d22cc1debe1ae73084bde7c362efcce8f56a6d354568ae9b4d390d602ac"
+      },
+      "Sunny_SailTie_Plane0047": {
+        "before": "dfd79bd383b16e437736d732443efeb76fb1819ef706a57a2b88a524e3435037",
+        "after": "d1543629a5304415a9c927c59cb406b8ccde0264b466f465d55dd17d7c5056e6"
+      },
+      "Sunny_SailTie_Plane0048": {
+        "before": "0bf86123b564723edeab664e643025cdf3b4dcf76b8c0d464418d0aa9d0c006b",
+        "after": "398a15a07fec629ffe9ad9b0747cba4c7398b0c0de1361b8d099ed5502c0b5b4"
+      },
+      "Sunny_SailTie_Plane0049": {
+        "before": "54c88291dfa37a1fa6b7926296d091dc6fab5e5b242329937ffe51a2a9c2676e",
+        "after": "eb7c452eff53ae4b5729952592f9f0b494d9dff16f624cd4fc8b3f734f017647"
+      },
+      "Sunny_SailTie_Plane0050": {
+        "before": "52ee8a222de624092ac67778696dfc9027a638203eb6f1006f2c89dc5ce8093e",
+        "after": "f92bb0c9183f6b267bff2b82fbb74a6163d2556679066cfa3df117f0a0ffd8ce"
+      },
+      "Sunny_SailTie_Plane0051": {
+        "before": "06849c0cb575b2089b0d0dadbed008f099436520cd5ba5c37b5034cdde53336c",
+        "after": "6767aed1299443da472d0f1339a6a9c9d8f908a8c75afb1c21732eae15609519"
+      },
+      "Sunny_SailTie_Plane0052": {
+        "before": "0cf2aa2470749956a20be328cdac0e431a860bc2372e5ea9308b564e5dca4781",
+        "after": "0881e95ed7f72e8b675b648f0236df83095a0f9613312b7de0d04932707c867e"
+      },
+      "Sunny_SailTie_Plane0053": {
+        "before": "786f9e83ab458f9357b365bef556b54a00901576c09fb7f88f6d63c62102a73e",
+        "after": "c535a91e72534ff3fef858e1eae4067a52b9557aad5f9db5eef01bd1a280f82c"
+      },
+      "Sunny_SailTie_Plane0054": {
+        "before": "9884577ad87b917b3987786d03a4d2ab801be6c59e36f5f33fd114352c0d2a73",
+        "after": "35d4d6b73a97609256772c708eb87b522010094272cdf991a7c84017f51b13a4"
+      },
+      "Sunny_SailTie_Plane0055": {
+        "before": "083a6677fd732b493da757d3aa8137866863d9f542309c13e8812f0d965ffe08",
+        "after": "de1e417cb572fe7a0c0620ba7917d3732a8674f7807e5c0fd96acda5060b1c11"
+      },
+      "Sunny_SailTie_Plane0056": {
+        "before": "84e295e5f733cb842693b30a91942ca6dc2a1300b1d538f59ddfc13b60a44593",
+        "after": "c8465156809a1ea9ee7185eeac3005dd0f277e1574b5693a932500a695bdbe9a"
+      },
+      "Sunny_SailTie_Plane0057": {
+        "before": "4ec29ac2442a79ce1133886bfb364d769142884347641c914c8b603f76beacd5",
+        "after": "a0d5c2f732b10a8f90d774e75626e65cb34b3428d7d726c91cb4ec3ba0b32cf2"
+      },
+      "Sunny_SailTie_Plane0058": {
+        "before": "d743f14d9e8246803df56449f1869eb4943665392baef07d3ea62a0baac0e588",
+        "after": "045ee5017492f12124017ac843693f78591955a1dd231c5ac5d260c3843ee989"
+      },
+      "Sunny_SailTie_Plane0059": {
+        "before": "04639f08a30d147e8319b11d083a576cecfbd22fc8c901448052aef9891af38e",
+        "after": "193ea5fee29122742631cba332464d862db4f1150342444d8c4130eceb83689e"
+      },
+      "Sunny_SailTie_Plane00410": {
+        "before": "590d73155f699160ec1731beb3b769892b8895e151a40ad7abd2a6efa0c8c710",
+        "after": "2edad83883f6a09d3657cbcf3e81c06b6238db3f594e065365e65587b2c95e08"
+      },
+      "Sunny_SailTie_Plane00411": {
+        "before": "aee25be18e93d1b7abf70efc4dface88934d1859dbac989d16f9f2ea3f1d5293",
+        "after": "811d13e14930e8e04798708dc12e0db8f59656eb860badacdd19ea2ce1ac91ea"
+      },
+      "Sunny_SailTie_Plane00412": {
+        "before": "77ddb2a35175e1abfe9ae9bab55690243b7466ca5e82207921bf17a7764a256f",
+        "after": "f9b04d79516acbee6686fd64e0f3cd716a2a93d16a0e7bd428f3d0969e8019db"
+      },
+      "Sunny_SailTie_Plane00510": {
+        "before": "d10474676ec8b0c4a0a5cfb83f34f4c31c82ae950ebf24de7993486197421aa1",
+        "after": "a5455eabbe30233f6ba9b1b397d83f332ea1eeb6d5831d75646e65bdbf7cce9e"
+      },
+      "Sunny_SailTie_Plane00511": {
+        "before": "bfab79408e4b59c18662bf04fa5d5ddfacc88f6b91fbc87efeb2c1ea08ed2b63",
+        "after": "2de0222b5355e87505e70f2eb87ac69764650bb6e072be4e12efbb8f5c027200"
+      },
+      "Sunny_SailTie_Plane00512": {
+        "before": "0f8d9356273e0b9f8dddddd3f0a799c887f49253b46210dd8e761344411369da",
+        "after": "66d5252b172dcadcaa8bb58a76b4fffe0510249378f3d8a08e31715c597504ff"
+      }
+    }
+  },
+  "collision": {
+    "sha256": [
+      "7be1103698d3ba7b7a990a3aba4c266017419c8a0f785c433e187778463fba90",
+      "7be1103698d3ba7b7a990a3aba4c266017419c8a0f785c433e187778463fba90"
+    ],
+    "counts": [
+      217606,
+      217606
+    ],
+    "removed": [],
+    "added": []
+  }
+}

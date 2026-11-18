@@ -1,0 +1,17 @@
+PASS clear dock stair opening
+PASS rope-side lawn approach
+PASS actual rope endpoint
+PASS rope ascent [ -11.02692865393123, -25.411559202884543, -8.420012413854119 ]
+PASS ladder ascent to shut hatch [ -10.478835105895996, 27.338973968505858, -2.259850263595581 ]
+PASS through hatch to lookout floor [ -12.077030028532699, 29.22100067138672, -2.259850263595581 ]
+PASS lookout floor excursion
+PASS survey telescope station
+PASS training locker aisle
+PASS return to ladder endpoint
+PASS return to shut hatch [ -10.478835105895996, 29.22297396850586, -2.259850263595581 ]
+PASS ladder return descent [ -11.153141109682931, 19.191980876047293, -3.352551684575278 ]
+PASS rope return to lawn [ -10.866941452026367, -40.55070114135742, -9.993707656860352 ]
+PASS return from rope along lawn
+PASS return around dock stair opening
+PASS return to original lawn spawn
+PASS continuous lawn → rope → ladder → shut/open hatch → lookout floor → reverse descent → lawn; human speed, Inspect continuity, no placement/flight/recovery

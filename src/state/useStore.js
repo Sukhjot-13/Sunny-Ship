@@ -1,5 +1,6 @@
 import { create } from 'zustand'
 import { CAMERA_MODES, MOVEMENT_MODES, PERSON_MODES } from '../config/shipConfig.js'
+import { COLA } from '../systems/navigation.js'
 
 /**
  * Global app state.
@@ -45,7 +46,7 @@ export const useStore = create((set, get) => ({
   nearInteraction: null,
   /** How many openings are currently open (HUD readout). */
   openDoorCount: 0,
-  navigation: { heading:270, speed:0, channel:1, cola:3, prompt:'' },
+  navigation: { heading:270, speed:0, channel:1, cola:COLA.capacity, prompt:'' },
   setNavigation: (navigation) => set({navigation}),
 
   setLoading: (loading, progress = 0) => set({ loading, progress }),
