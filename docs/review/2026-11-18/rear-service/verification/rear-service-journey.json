@@ -1,0 +1,93 @@
+{
+  "trace": [
+    {
+      "label": "lawn to open galley",
+      "position": [
+        16.399999030104304,
+        -35.62269973754883,
+        -6.897166796973705
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "Pantry stocked aisle",
+      "position": [
+        22.52013252085724,
+        -35.62269973754883,
+        -7.720132050455107
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "Pantry outside landing",
+      "position": [
+        25.077166451383192,
+        -35.62269973754883,
+        -6.199691907659085
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "Pantry return inside",
+      "position": [
+        23.647190637615157,
+        -35.62269973754883,
+        -6.200006382449273
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "Sick Bay beside the bed",
+      "position": [
+        22.388962754032857,
+        -35.62269973754883,
+        7.523229620076606
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "Sick outside landing",
+      "position": [
+        25.121055191916575,
+        -35.62269973754883,
+        3.7983799295350087
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "Sick return inside",
+      "position": [
+        23.549261644014056,
+        -35.62269973754883,
+        3.7999908433444274
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "aft interior return to lawn",
+      "position": [
+        -4.199999997351365,
+        -40.55070114135742,
+        -0.969784796973619
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    }
+  ],
+  "errors": []
+}

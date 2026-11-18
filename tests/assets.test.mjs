@@ -455,6 +455,7 @@ console.log('\n=== METADATA ===')
      'Sunny_Bath_shower_head','Sunny_Weapons_furnace','Sunny_Sick_bulletin_board'].every(name=>ship.some(o=>o.name===name)))
   const diningLights=meta.interiors.lights?.filter(light=>light.room==='Dining Room')
   const kitchenLayout=kitchen?.galleyLayout
+  const rebuiltPantry=meta.interiors.rooms.find(room=>room.name==='Pantry')?.pantryLayout
   if(kitchenLayout){
     const part=name=>ship.find(o=>o.name==='Sunny_Kitchen_'+name)
     const island=part('serving_island_marble'),prep=part('prep_cabinet_stone'),basin=part('sink_bowl'),hood=part('hood')
@@ -463,7 +464,16 @@ console.log('\n=== METADATA ===')
       Math.abs(island.max.y-meta.interiors.levels.F2A-.947)<.01&&island.min.z-prep.max.z>1.25&&
       basin.min.y<prep.max.y&&basin.max.y>prep.max.y&&hood.min.y>meta.interiors.levels.F2A+1.95)
   }
-  check('all authored room lamps have usable finite metadata',meta.interiors.lights?.length===11+Number(!!diningLayout)+Number(!!kitchenLayout)&&
+  if(rebuiltPantry){
+    const pairs=[['PantryOutsideDoor','Sunny_Pantry_'],['SickOutsideDoor','Sunny_Sick_']]
+    check('rear room furnishings leave the outside doorway corridors clear',pairs.every(([id,prefix])=>{
+      const [x,y,z]=meta.interiors.doors.find(door=>door.id===id).pos
+      return coll.filter(b=>b.name.includes(prefix)).every(b=>
+        b.max.z<=-y-.34||b.min.z>=-y+.34||b.min.x>=x+.84||
+        b.max.x<x-4.4||b.min.y>=z+1.75||b.max.y<=z+.019)
+    }))
+  }
+  check('all authored room lamps have usable finite metadata',meta.interiors.lights?.length===11+Number(!!diningLayout)+Number(!!kitchenLayout)+Number(!!rebuiltPantry)&&
     diningLights.length===(diningLayout?2:1)&&
     meta.interiors.lights.every(l=>l.pos.length===3&&l.pos.every(Number.isFinite)&&l.intensity>0&&l.distance>0))
   const bunkBeams=ship.filter(o=>/^Sunny_Quarters_bunk\d+_ceiling_beam$/.test(o.name))

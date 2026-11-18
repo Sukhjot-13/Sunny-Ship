@@ -13,6 +13,11 @@ const plan=roomRoutes(),route=plan.routes.find(route=>route.name==='Kitchen')
 assert(route?.ok,'The standard lawn route must reach the galley')
 const level=meta.interiors.levels.F2A
 const toward=([x,y],dx,dy)=>[x+dx,level,-y+dy]
+const scope=process.env.AFT_WALK_SCOPE??'all'
+assert(['all','galley','rear'].includes(scope))
+const pantry=meta.interiors.rooms.find(room=>room.name==='Pantry')?.pantryLayout
+const sick=meta.interiors.rooms.find(room=>room.name==='Sick Bay')?.infirmaryLayout
+if(scope==='rear')assert(pantry&&sick,'The rear room journey requires both refitted rooms')
 const trace=[],errors=[]
 const out=process.env.AFT_WALK_EVIDENCE??'docs/review/aft-interior-journey'
 fs.mkdirSync(out,{recursive:true})
@@ -47,12 +52,27 @@ try{
   assert(Math.hypot(state.position[0]-target[0],state.position[2]-target[2])<.62,label)
  }
  await walk('lawn to open galley',route.path)
- await visit('stone serving island work side',toward(layout.island,0,-1.30))
- await visit('inset sink approach',toward(layout.sink,.23,.83))
- await visit('stove working position',toward(layout.stove,0,.99))
- const pantry=meta.interiors.doors.find(door=>door.id==='PantryInDoor')
- await visit('Kitchen side of Pantry doorway',toward(pantry.pos,-.83,0))
- await visit('galley return to lawn',plan.spawn)
+ const door=id=>meta.interiors.doors.find(door=>door.id===id)
+ if(scope!=='rear'){
+  await visit('stone serving island work side',toward(layout.island,0,-1.30))
+  await visit('inset sink approach',toward(layout.sink,.23,.83))
+  await visit('stove working position',toward(layout.stove,0,.99))
+  await visit('Kitchen side of Pantry doorway',toward(door('PantryInDoor').pos,-.83,0))
+ }
+ if(scope!=='galley'&&pantry&&sick){
+  async function outsideRoundTrip(name){
+   const outer=door(name+'OutsideDoor').pos
+   await visit(name+' outside landing',toward(outer,.50,0))
+   assert((await snapshot()).position[0]>outer[0]+.22,name+' must cross the opening')
+   await visit(name+' return inside',toward(outer,-1.07,0))
+   assert((await snapshot()).position[0]<outer[0]-.70,name+' must return through the opening')
+  }
+  await visit('Pantry stocked aisle',[22.55,level,-pantry.doorCorridorY-1.56])
+  await outsideRoundTrip('Pantry')
+  await visit('Sick Bay beside the bed',toward(sick.bed,-1.04,0))
+  await outsideRoundTrip('Sick')
+ }
+ await visit('aft interior return to lawn',plan.spawn)
  assert.deepEqual(errors,[])
 }catch(error){
  await page.screenshot({path:`${out}/stall.png`}).catch(()=>{})

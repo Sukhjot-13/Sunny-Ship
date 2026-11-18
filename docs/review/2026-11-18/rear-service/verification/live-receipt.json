@@ -1,0 +1,19 @@
+{
+  "backup": "/private/tmp/sunny-rear-service-live-before",
+  "stage": "/private/tmp/sunny-rear-service-candidate",
+  "url": "http://localhost:5173",
+  "applied": {
+    "assets/sunny-master.blend": "c097f1eff1dc5c7f86800fdda5123d00b44c36f71ebc024d0657d5e176d9abe6",
+    "public/models/sunny.glb": "b9d439ba68784e93e8450d4537cb4457dfdf725f704ae5fbf06f77eb894bdb69",
+    "public/models/sunny-collision.glb": "65b1a1e4208c7fcc8241822c14eaed13e32d6761597caa2b5746b81cae90fffd",
+    "public/models/ship-metadata.json": "123769729a076df68506f07d95ac6eb27ff26e606c565819305c46a9473389f3",
+    "assets/reference/sunny-reference.blend": "d67408ca5265478b48fbdff3952f5b38fb9f69953da6118d8f84feb90332927b",
+    "assets/reference/sunny-reference.glb": "33442ab05a09180f506659e8e25824ab29b6cc50c8a86c31f57eed9844a7e6b0",
+    "assets/reference/dimensions.json": "73b4475830091235726692f6ab76c1ff197088ca57ff44dc01e445b63d101ce8"
+  },
+  "served": {
+    "sunny.glb": "b9d439ba68784e93e8450d4537cb4457dfdf725f704ae5fbf06f77eb894bdb69",
+    "sunny-collision.glb": "65b1a1e4208c7fcc8241822c14eaed13e32d6761597caa2b5746b81cae90fffd",
+    "ship-metadata.json": "123769729a076df68506f07d95ac6eb27ff26e606c565819305c46a9473389f3"
+  }
+}

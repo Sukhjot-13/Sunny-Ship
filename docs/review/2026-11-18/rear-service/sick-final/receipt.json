@@ -1,0 +1,57 @@
+{
+  "roomName": "Sick Bay",
+  "url": "http://localhost:5174",
+  "shots": [
+    {
+      "name": "bed-and-entry",
+      "camera": [
+        21.380000000000003,
+        -33.943,
+        5.085000000000001
+      ],
+      "target": [
+        23.960000000000004,
+        -34.503,
+        7.1450000000000005
+      ],
+      "fov": 78
+    },
+    {
+      "name": "workstation",
+      "camera": [
+        23.880000000000003,
+        -34.003,
+        6.585000000000001
+      ],
+      "target": [
+        21.240000000000002,
+        -34.433,
+        6.875
+      ],
+      "fov": 74
+    },
+    {
+      "name": "passage",
+      "camera": [
+        21.28,
+        -33.963,
+        3.7130000000000005
+      ],
+      "target": [
+        24.450000000000003,
+        -34.272999999999996,
+        3.7130000000000005
+      ],
+      "fov": 73
+    }
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "bathWater": false,
+  "surfaceRoles": null,
+  "assets": {
+    "sunny.glb": "b9d439ba68784e93e8450d4537cb4457dfdf725f704ae5fbf06f77eb894bdb69",
+    "ship-metadata.json": "123769729a076df68506f07d95ac6eb27ff26e606c565819305c46a9473389f3"
+  },
+  "note": "Actual renderer, inspection camera only. Keyboard routes are verified separately."
+}

@@ -17,6 +17,7 @@ const profiles={
  leather:{period:[.067,.061],roughness:.57,relief:.000038,coat:.16},
  'bath-stone':{period:[1.22,1.22],roughness:.37,relief:.0014,coat:.3},
  marble:{period:[1.74,1.23],roughness:.32,relief:.000028,coat:.44},
+ hessian:{period:[.153,.162],roughness:.95,relief:.00015,sheen:.12},
 }
 /** Stable periodic noise for fine fibres and fired glaze, without animation. */
 function noise(u,v,seed=1){
@@ -61,7 +62,7 @@ export function interiorTextureSet(role){
  if(!profiles[role])return realisticTextureSet(role)
  if(maps.has(role))return maps.get(role)
  const p=profiles[role],size=512,count=size*size
- const fabric=['upholstery','linen','curtain','bookcloth'].includes(role)
+ const fabric=['upholstery','linen','curtain','bookcloth','hessian'].includes(role)
  const albedo=new Uint8Array(count*4),normal=new Uint8Array(count*4),roughness=new Uint8Array(count*4),height=new Float32Array(count)
  for(let y=0;y<size;y++)for(let x=0;x<size;x++){
   const u=x/size,v=y/size,i=y*size+x,j=i*4,n=noise(u,v)
@@ -107,6 +108,11 @@ export function interiorSurfaceRole(source,{name='',wood='grain',fabric=false}={
  if(label==='kitchen_enamel'||label==='kitchen_oven_glaze')return 'porcelain'
  if(label==='kitchen_steel')return 'steel'
  if(label==='kitchen_walnut')return 'grain'
+ if(/^cloth_pantry_/.test(label))return 'hessian'
+ if(/^pantry_(?:oak|endgrain)$/.test(label))return 'grain'
+ if(label==='pantry_ceramic'||label==='sick_powdercoat')return 'porcelain'
+ if(/^cloth_sick_/.test(label))return 'linen'
+ if(label==='sick_cork')return 'paper'
  if(label==='glass')return /mirror/i.test(name)?'mirror':'glass'
  if(/^tile_/.test(label))return 'tile'
  if(label==='paper'||label.startsWith('paper_'))return 'paper'

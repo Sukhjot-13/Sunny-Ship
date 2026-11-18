@@ -25,6 +25,11 @@ SCOPES = {
         'solids': ('Kitchen',),
         'floor_bounds': None,
     },
+    'AftService': {
+        'visual': ('Sunny_Pantry_', 'Sunny_Sick_'),
+        'solids': ('Sunny_Pantry_', 'Sunny_Sick_'),
+        'floor_bounds': None,
+    },
 }
 
 

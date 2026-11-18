@@ -1,8 +1,8 @@
 {
-  "source": "/private/tmp/sunny-kitchen-candidate/sunny-master.blend",
-  "workingVisualSource": "/private/tmp/sunny-kitchen-candidate/sunny.glb",
-  "sourceSha256": "88fa5b8ff202edab7f16b3ce7057c8cdf9bb8a49f93950626597f4f95d9eb0df",
-  "workingVisualSha256": "75d5728a71aa46cef95839b9007b213375d831624b711024f966e568ce5ddc6a",
+  "source": "/private/tmp/sunny-rear-service-candidate/sunny-master.blend",
+  "workingVisualSource": "/private/tmp/sunny-rear-service-candidate/sunny.glb",
+  "sourceSha256": "c097f1eff1dc5c7f86800fdda5123d00b44c36f71ebc024d0657d5e176d9abe6",
+  "workingVisualSha256": "b9d439ba68784e93e8450d4537cb4457dfdf725f704ae5fbf06f77eb894bdb69",
   "workingScale": 2.2,
   "referenceScale": 1,
   "rootMultiplier": 0.45454545454545453,

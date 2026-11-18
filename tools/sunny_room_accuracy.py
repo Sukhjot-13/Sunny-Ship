@@ -162,20 +162,6 @@ def pendant(name, p, ceiling, room):
     return dict(room=room,pos=[x,y,z],colour='#ffda98',intensity=28,distance=12)
 
 
-def stocked_shelf(name, p, rot=0, width=2, tiers=4):
-    """Pantry's raw stores on open shelving, rather than empty cabinet boxes."""
-    shelf_unit(name,p,rot,width,.42,2.0,tiers)
-    for row in range(tiers):
-        z=.12+1.8*row/max(1,tiers-1)+.045
-        for i in range(5):
-            x=-width*.4+i*width*.2
-            if row%2:
-                rpole(name+'_jar',p,rot,(x,0,z),(x,0,z+.23),.075,'white',sides=14)
-                rpole(name+'_lid',p,rot,(x,0,z+.23),(x,0,z+.25),.08,'timber',sides=14)
-            else:
-                sphere(name+'_produce',L(p,rot,x,0,z+.085),(.12,.10,.085),('orange','leaf','cream','red','gold')[i])
-
-
 def quarters_details(frame, levels, rooms):
     """Laundry, correctly supported suspended bunks and the women's canopy."""
     men=rooms["Men's Quarters"]
@@ -266,25 +252,6 @@ def kitchen_details(cy, floor):
         rbox('Kitchen_fridge_lock_digit',fridge,math.pi/2,(.032,.013,.035),'cream',(.15+i*.045,-.438,1.11),obstacle=False)
 
 
-def infirmary_details(cy, floor):
-    """Chopper's green bed, swivel chair, bulletin board and medicines."""
-    repaint_family('Sick_chair_seat','upholstery_teal')
-    repaint_family('Sick_chair_back','upholstery_teal')
-    soft_box('Sick_blanket',(23.5,cy-8.5,floor),0,(.86,1.48,.045),'cloth_aqua',(0,-.20,.75),radius=.018,obstacle=False)
-    p=(24.45,cy-8.3,floor)
-    rbox('Sick_bulletin_board',p,-math.pi/2,(1.5,.065,1.15),'upholstery_teal',(0,0,1.60),obstacle=False)
-    for i in range(5):
-        dx=-.55+(i%3)*.5
-        dz=1.45+(i//3)*.44
-        rbox('Sick_notice',p,-math.pi/2,(.30,.008,.35),'paper',(dx,-.04,dz),obstacle=False)
-        sphere('Sick_pin',L(p,-math.pi/2,dx,-.05,dz+.13),(.016,.016,.016),'red')
-    for i in range(5):
-        x=22.95+i*.20
-        pole('Sick_medicine',(x,cy-2.5,floor+.80),(x,cy-2.5,floor+.98),.055,'glass',sides=16)
-        pole('Sick_medicine_lid',(x,cy-2.5,floor+.98),(x,cy-2.5,floor+1.015),.055,'white',sides=16)
-    text('Sick_first_aid','+', (23.8,cy-10.76,floor+1.75),.30,'red',(-math.pi/2,0,0))
-
-
 def workshop_details(rooms, floor):
     """Distinct timber Usopp factory and Franky's metal furnace/scrap station."""
     factory=rooms["Usopp's Main Factory"]
@@ -371,7 +338,8 @@ def complete_room_fittings(objects, frame, interiors):
     galley_light=finish_galley(rooms['Kitchen'],cy,levels['F2A'])
     from sunny_dining import dining_details, finish_dining_floor
     dining_lights=dining_details(rooms['Dining Room'],levels['F2A'],cy)
-    infirmary_details(cy,levels['F2A'])
+    from sunny_infirmary import finish_infirmary
+    finish_infirmary(rooms['Sick Bay'],cy,levels['F2A'])
     from sunny_library import library_details
     library_details(rooms['Library'],levels['F3L'])
     workshop_details(rooms,levels['B1'])
@@ -383,9 +351,8 @@ def complete_room_fittings(objects, frame, interiors):
         if obj.type=='MESH' and obj.name.startswith('Sunny_Womens_sofa') and any(word in obj.name for word in ('_base','_back','_arm','_cushion')):
             obj.data.materials.clear();obj.data.materials.append(material('upholstery_lilac'))
             for face in obj.data.polygons:face.material_index=0
-    for i in range(3):
-        remove_family('Pantry_shelf%d'%i)
-        stocked_shelf('Pantry_shelf%d'%i,(24.0,cy+2+i*3,levels['F2A']),-math.pi/2)
+    from sunny_pantry import finish_dry_stores
+    pantry_light=finish_dry_stores(rooms['Pantry'],interiors['doors'],cy,levels['F2A'])
     from sunny_room_details import complete_reference_details
     complete_reference_details(frame, interiors)
     from sunny_aquarium import open_aquarium_entrance
@@ -404,7 +371,7 @@ def complete_room_fittings(objects, frame, interiors):
     aft_floor=bpy.data.objects['Sunny_InteriorFloor_F2_aft']
     tile_floor(aft_floor,.65,('tile_ivory','tile_dark'),(12.3,20.6,cy,13.5))
     finish_dining_floor(aft_floor,rooms['Dining Room'])
-    lights=[*dining_lights,galley_light]
+    lights=[*dining_lights,galley_light,pantry_light]
     for name, p, ceiling in (
         ("Men's Quarters",((rooms["Men's Quarters"]['x'][0]+rooms["Men's Quarters"]['x'][1])/2,cy,levels['F1']+2.9),levels['F2F']-.18),
         ("Women's Quarters",((rooms["Women's Quarters"]['x'][0]+rooms["Women's Quarters"]['x'][1])/2,cy,levels['F2F']+2.25),levels['F2F']+2.80),

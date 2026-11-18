@@ -7,12 +7,13 @@ The Aquarium (`1b1a9aa`) and earlier exterior checkpoints are pushed on `referen
 | Group | Current status |
 | --- | --- |
 | Aquarium lounge, rear passage and gallery ladder | Applied and pushed; [evidence and limits](aquarium-reference-audit.md). |
-| Library and its immediate entry/landing | Applied locally. [Evidence](library-reference-audit.md): clear glazing, bound books, furnishings/finishes, three actual access round trips. Bench rotation remains a mechanism item. |
+| Library and its entry/landings, including Stern Ladder Access | Applied locally. [Evidence](library-reference-audit.md) covers clear glazing, bound books, furnishings and three actual access round trips. Bench rotation remains a mechanism item. |
 | Bath, washroom and toilet | Verified. [Evidence](bath-reference-audit.md) covers the finishes, four native views and the full keyboard route through all three areas and back to the lawn. |
 | Dining | Applied locally. [Evidence](dining-reference-audit.md) covers fitted furnishings, material and lighting passes, and the normal visit and return. |
 | Kitchen | Applied locally. [Evidence](kitchen-reference-audit.md) covers material roles, the preserved mast lift and the actual walk through the prep aisle and back. |
-| Pantry and Sick Bay | Active. Verify normal passage through each room and its existing outside doorway and landing. |
-| Men’s and women’s quarters, both washrooms and four cannon closets | Pending. |
+| Pantry and Sick Bay | Applied locally. [Evidence](rear-service-room-audit.md) covers fitted shelves and clinic furnishings and normal circulation through both outside doorways and back. |
+| Men’s and women’s quarters, both washrooms and four cannon closets | Active. |
+| Two fore toilets beneath the stairwells | Pending. Check the enclosed fixtures and both normal door approaches. |
 | Storage and service passage, Energy Room, Dock interior and both workshops | Pending. |
 | Crow’s Nest/survey and gym | Pending. Keep the verified exterior rope/ladder and hatch. |
 

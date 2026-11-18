@@ -1,0 +1,43 @@
+{
+  "roomName": "Pantry",
+  "url": "http://localhost:5173",
+  "shots": [
+    {
+      "name": "stores",
+      "camera": [
+        21.26,
+        -33.963,
+        -5.944999999999999
+      ],
+      "target": [
+        23.85,
+        -34.242999999999995,
+        -8.594999999999999
+      ],
+      "fov": 72
+    },
+    {
+      "name": "outer-door",
+      "camera": [
+        21.470000000000002,
+        -33.963,
+        -6.286999999999999
+      ],
+      "target": [
+        24.500000000000004,
+        -34.352999999999994,
+        -6.286999999999999
+      ],
+      "fov": 74
+    }
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "bathWater": false,
+  "surfaceRoles": null,
+  "assets": {
+    "sunny.glb": "75d5728a71aa46cef95839b9007b213375d831624b711024f966e568ce5ddc6a",
+    "ship-metadata.json": "9956a930be4cbb89d227c32ff16b69acc53ade2c58142897a9803df3e0dbbf1b"
+  },
+  "note": "Actual renderer, inspection camera only. Keyboard routes are verified separately."
+}
