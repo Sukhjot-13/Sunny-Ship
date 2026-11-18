@@ -17,6 +17,8 @@ assert(shell.min.y>layout.centre[2]&&shell.min.y<layout.centre[2]+.025,'basin re
 assert(shell.max.y>water.max.y+.22&&Math.abs(water.max.y-layout.waterline)<.001,'the visible waterline is recessed inside the actual rim')
 for(const axis of ['x','z'])assert(water.min[axis]>shell.min[axis]+.20&&water.max[axis]<shell.max[axis]-.20,'water remains inside the rounded basin')
 assert(find('Bath_wash_basin')&&find('Bath_wash_mirror')&&find('Bath_wash_towel_shelf'))
+assert(find('Bath_wc_toilet_bowl')&&find('Bath_wc_book_shelf'))
+assert(!visual.some(box=>box.name.startsWith('Sunny_Bath_wash_toilet')))
 assert.equal(visual.filter(box=>/^Sunny_Bath_shower_head(?:\.\d+)?$/.test(box.name)).length,2)
 assert(visual.filter(box=>/^Sunny_Bath_partition_lattice/.test(box.name)).length>=16)
 const {json}=readGLB(`${directory}/sunny.glb`)

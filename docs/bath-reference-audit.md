@@ -1,0 +1,11 @@
+# Bath suite — verified November 17, 2026
+
+The supplied R12 sheet and anime image show a wet bathing room and a dry entry beside the Library ladder. Green glazed rims, warm timber, a pale mosaic, two wash stations, a towel area and a separate WC furnish the suite. The Library ladder itself already passed both ways from the lawn; do not change it without a measured interface defect.
+
+Baseline browser shots show a rectangular open box of plain water, disconnected fittings, one checkerboard across both spaces, and a box toilet with unsupported books. The rebuilt suite has a curved bath with a glazed rim and animated water surface, two supported showers, a lattice in the partition, a jade wash basin with mirror, and a separate porcelain toilet with a wall-mounted holder and supported book shelf. The wet mosaic and dry cedar use material regions on the existing slab.
+
+The [before](review/2026-11-17/bath/before/) and [final](review/2026-11-17/bath/final/) native captures include the bathing area, showers, washroom and toilet. The [keyboard trace](review/2026-11-17/bath/verification/bath-journey.json) records the full normal-size player route from the lawn, the ladder's closed-hatch stop and ascent, all three upper spaces, descent and the lawn return without recovery. The holder was moved after the route. The two meshes are decorative and the collision proxy is byte-identical to the tested one. The final master and GLB agree on their transforms.
+
+The final [asset checks](review/2026-11-17/bath/verification/static.log) passed 116/116, including Bath geometry and the Library ladder. All 7,580 meshes passed the uniform 1/2.2 reference-copy check. The exact comparison retained 7,429 prior visual meshes. The Bath-bound portion of the shared Library ceiling was retriangulated. The original grid found 11 hit/miss differences on an exact polygon edge, and all 4,012 off-edge upward rays matched the original material and height. The packaged model retained all 57,401 previous hull collider boxes and the existing door/Dock data. See the [application receipt](review/2026-11-17/bath/verification/live-receipt.json) for the seven linked files and served hashes.
+
+Fixture counts and hidden dimensions follow the available source views and human clearance. Dining and the shared Kitchen follow R10.

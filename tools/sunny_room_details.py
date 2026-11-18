@@ -6,9 +6,7 @@ from sunny_interiors import rbox, rpole, wall_run, door, toilet, DOORS
 
 
 def bath_wc(cx, cy, floor, interiors):
-    """Separate accessible WC beyond the preserved bath-stair headroom slot."""
-    # The walking-stair adaptation consumes y=2.25..3.55 of the entrance floor.
-    # This compact chamber starts beyond that real opening, not over the shaft.
+    """Separate WC beyond the dry landing, with space beside the basin."""
     y=cy+3.64
     wall_run('RoomPartition_bathwc_front',(cx,y,floor),0,1.90,2.55,
              openings=((-0.30,1.10,2.30),),key='timber')
@@ -25,9 +23,13 @@ def bath_wc(cx, cy, floor, interiors):
     for obj in list(bpy.data.objects):
         if obj.name.startswith('Sunny_Bath_wash_toilet'):
             bpy.data.objects.remove(obj,do_unlink=True)
-    toilet('Bath_wash_toilet',(cx+.28,cy+4.25,floor),-math.pi/2)
-    rbox('Bath_wc_books',(cx+.60,cy+4.43,floor),0,(.21,.16,.045),'blue',(0,0,1.0),obstacle=False)
-    rbox('Bath_wc_book2',(cx+.60,cy+4.43,floor),.08,(.22,.16,.04),'red',(0,0,1.045),obstacle=False)
+    if any(room.get('bathLayout') for room in interiors['rooms'] if room['name']=='Bath'):
+        from sunny_bath import toilet_details
+        toilet_details(cx,cy,floor)
+    else:
+        toilet('Bath_wash_toilet',(cx+.28,cy+4.25,floor),-math.pi/2)
+        rbox('Bath_wc_books',(cx+.60,cy+4.43,floor),0,(.21,.16,.045),'blue',(0,0,1.0),obstacle=False)
+        rbox('Bath_wc_book2',(cx+.60,cy+4.43,floor),.08,(.22,.16,.04),'red',(0,0,1.045),obstacle=False)
     text('Bath_wc_sign','WC',(cx-.30,y-.09,floor+1.94),.11,'brass',(math.pi/2,0,0))
     interiors['rooms'].append(dict(level='F3B',name='Bath Toilet',x=(cx-.95,cx+.95),y=(cy+3.50,cy+4.80)))
 

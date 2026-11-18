@@ -87,7 +87,8 @@ function SceneRig({ meta, keys, look }) {
 
       <Ship sunDir={SUN_DIR} skyColor="#9fc4e0" deckY={deckY} waterY={waterLevel} roomLights={meta?.interiors?.lights}
         aquariumLayout={meta?.interiors?.rooms?.find(room=>room.name==='Aquarium Bar')?.lounge}
-        libraryLayout={meta?.interiors?.rooms?.find(room=>room.name==='Library')?.libraryLayout} />
+        libraryLayout={meta?.interiors?.rooms?.find(room=>room.name==='Library')?.libraryLayout}
+        bathLayout={meta?.interiors?.rooms?.find(room=>room.name==='Bath')?.bathLayout} />
 
       <DoorSystem meta={meta} />
 

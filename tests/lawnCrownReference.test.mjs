@@ -11,7 +11,8 @@ const baseline=JSON.parse(fs.readFileSync('tests/fixtures/lawn-crown-preservatio
 const meta=JSON.parse(fs.readFileSync(path.join(dir,'ship-metadata.json')))
 const rooms=meta.interiors.rooms
 const roomDeltas=[['aquarium-room-delta',rooms.find(room=>room.name==='Aquarium Bar')?.lounge?.entryBay],
- ['library-room-delta',rooms.find(room=>room.name==='Library')?.libraryLayout]]
+ ['library-room-delta',rooms.find(room=>room.name==='Library')?.libraryLayout],
+ ['bath-room-delta',rooms.find(room=>room.name==='Bath')?.bathLayout]]
 for(const [fixture,active] of roomDeltas){
  if(!active)continue
  const roomPatch=JSON.parse(fs.readFileSync(`tests/fixtures/${fixture}.json`))

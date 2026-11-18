@@ -1,0 +1,2916 @@
+{
+  "trace": [
+    {
+      "label": "lawn to Library bath ladder",
+      "position": [
+        27.387936479212495,
+        -29.154699325561523,
+        -4.120421316093386
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -29.062422163079685,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 0.09229500000625848,
+        "length": 4.52
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 0,
+        "target": 0,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": false
+      },
+      "near": null,
+      "t": 71295.90000000596
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -28.970652163073428,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 0.18406500001251697,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 0,
+        "target": 0,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": false
+      },
+      "near": null,
+      "t": 71383.59999999404
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -28.879617163085946,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 0.2751,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 0,
+        "target": 0,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": false
+      },
+      "near": null,
+      "t": 71471.19999998808
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -28.789842163085947,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 0.36487500000000006,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 0,
+        "target": 0,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": false
+      },
+      "near": null,
+      "t": 71558.19999998808
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -28.69807216307969,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 0.4566450000062586,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 0,
+        "target": 0,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": false
+      },
+      "near": null,
+      "t": 71643.09999999404
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -28.605987163092205,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 0.5487299999937416,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 0,
+        "target": 0,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": false
+      },
+      "near": null,
+      "t": 71730.79999998212
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -28.514112163092207,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 0.6406049999937415,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 0,
+        "target": 0,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": false
+      },
+      "near": null,
+      "t": 71818.19999998808
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -28.425072163079694,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 0.7296450000062585,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 0,
+        "target": 0,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": false
+      },
+      "near": null,
+      "t": 71906.59999999404
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -28.33130716309847,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 0.8234099999874831,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 0,
+        "target": 0,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": false
+      },
+      "near": null,
+      "t": 71993.90000000596
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -28.237332163098465,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 0.9173849999874831,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 0,
+        "target": 0,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": false
+      },
+      "near": null,
+      "t": 72084
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -28.141362163092204,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 1.0133549999937417,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 0,
+        "target": 0,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": false
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": false
+      },
+      "t": 72175.29999998212
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -28.050957163098463,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 1.1037599999874832,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 0,
+        "target": 0,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": false
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": false
+      },
+      "t": 72263.59999999404
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -27.98671716308594,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 1.1677049999937417,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 0,
+        "target": 0,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": false
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": false
+      },
+      "t": 72349.40000000596
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -27.98671716308594,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 1.1677049999937417,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 0,
+        "target": 0,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": false
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": false
+      },
+      "t": 72441
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -27.98671716308594,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 1.1677049999937417,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 0,
+        "target": 0,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": false
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": false
+      },
+      "t": 72530.29999998212
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -27.98671716308594,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 1.1677049999937417,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 0,
+        "target": 0,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": false
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": false
+      },
+      "t": 72620.59999999404
+    },
+    {
+      "label": "library-bath-ladder E open",
+      "p": [
+        27.325882352941175,
+        -27.9870121630922,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 1.1677049999937417,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 74377.79999998212
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -27.897972163079686,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 1.2567450000062586,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 74519.19999998808
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -27.806517163085946,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 1.3482,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 74606
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -27.71884216308595,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 1.435875,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 74692.90000000596
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -27.62759716307969,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 1.5271200000062584,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 74776.29999998212
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -27.53656216309221,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 1.6181549999937415,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 74862.5
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -27.447522163079693,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 1.7071950000062583,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 74948.5
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -27.357432163098473,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 1.7972849999874827,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 75037.5
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -27.2658721630797,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 1.8888450000062582,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 75121.09999999404
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -27.176412163092216,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 1.9783049999937412,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 75205.79999998212
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -27.088527163104732,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 2.0661899999812245,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 75289.19999998808
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -27.003267163085958,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 2.1514500000000005,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 75372.90000000596
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -26.915802163104733,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 2.238914999981225,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 75452.79999998212
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -26.826867163085957,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 2.3278499999999998,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 75540.19999998808
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -26.739192163085956,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 2.4155249999999997,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 75622.29999998212
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -26.651412163092218,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 2.503304999993741,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 75709.19999998808
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -26.562057163098476,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 2.592659999987483,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 75792
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -26.472702163104735,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 2.682014999981224,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 75876.19999998808
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -26.383977163104735,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 2.770739999981224,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 75961.29999998212
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -26.294517163085963,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 2.860199999999999,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 76052.40000000596
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.325882352941175,
+        -26.19704216308596,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 2.957674999999999,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 76141
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.326167352928657,
+        -26.10471716308594,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 3.050284999987482,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 76229.59999999404
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.422662352934914,
+        -26.10471716308594,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 3.1467799999937407,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 76320.79999998212
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.51338235294117,
+        -26.10471716308594,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 3.2374999999999994,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 76410.5
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.607672352922393,
+        -26.10471716308594,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 3.3317899999812237,
+        "length": 4.52
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 76497.90000000596
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.70206735292865,
+        -26.10471716308594,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 3.4261849999874823,
+        "length": 4.52
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 76586.69999998808
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.794257352941166,
+        -26.10471716308594,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 3.5183749999999994,
+        "length": 4.52
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 76676.40000000596
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.888862352934908,
+        -26.10471716308594,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 3.612979999993741,
+        "length": 4.52
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 76767.19999998808
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        27.983677352947428,
+        -26.10471716308594,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 3.7077950000062576,
+        "length": 4.52
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 76854.90000000596
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        28.077862352934908,
+        -26.10471716308594,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 3.8019799999937405,
+        "length": 4.52
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 76946.5
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        28.175302352947423,
+        -26.10471716308594,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 3.8994200000062573,
+        "length": 4.52
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 77039.40000000596
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        28.26717735294742,
+        -26.10471716308594,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 3.9912950000062573,
+        "length": 4.52
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 77127.09999999404
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        28.358737352934902,
+        -26.10471716308594,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 4.0828549999937405,
+        "length": 4.52
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 77211.90000000596
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        28.4490373529349,
+        -26.10471716308594,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 4.17315499999374,
+        "length": 4.52
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 77299.59999999404
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        28.54070235294742,
+        -26.10471716308594,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 4.264820000006257,
+        "length": 4.52
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 77385.29999998212
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        28.630897352922382,
+        -26.10471716308594,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 4.355014999981224,
+        "length": 4.52
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 77474
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        28.723297352922383,
+        -26.10471716308594,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 4.447414999981224,
+        "length": 4.52
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 77559.69999998808
+    },
+    {
+      "label": "library-bath-ladder ascent",
+      "p": [
+        28.795882352941174,
+        -26.10471716308594,
+        -4.117
+      ],
+      "c": null,
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 77647
+    },
+    {
+      "label": "upper washroom",
+      "position": [
+        30.349713572228676,
+        -26.104700088500977,
+        -4.000605640189749
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "bath tub approach",
+      "position": [
+        30.00003001750637,
+        -26.104700088500977,
+        -0.2167017350245083
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "separate toilet",
+      "position": [
+        29.199992909310527,
+        -26.104700088500977,
+        -5.40401958556141
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "return to upper ladder",
+      "position": [
+        28.822439336420913,
+        -26.104700088500977,
+        -4.2182491942967815
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "library-bath-ladder E close",
+      "p": [
+        28.795882352941174,
+        -26.102700088500978,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 4.52,
+        "length": 4.52
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 0,
+        "target": 0,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": false
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": false
+      },
+      "t": 97387.19999998808
+    },
+    {
+      "label": "library-bath-ladder E open",
+      "p": [
+        28.795882352941174,
+        -26.102700088500978,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 4.52,
+        "length": 4.52
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 98122.79999998212
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        28.69501756104505,
+        -26.102700088500978,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 4.418955000025034,
+        "length": 4.52
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 98284.69999998808
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        28.59236277563111,
+        -26.104695813991746,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 4.3161249999999995,
+        "length": 4.52
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 98381.90000000596
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        28.490957462979022,
+        -26.102700088500978,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 4.214660000018775,
+        "length": 4.52
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 98479.79999998212
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        28.38985674494239,
+        -26.104684729393377,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 4.113440000012516,
+        "length": 4.52
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 98578.79999998212
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        28.28876673276187,
+        -26.102700088500978,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 4.045680000025032,
+        "length": 4.52
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 98673.79999998212
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        28.253290880429603,
+        -26.102700088500978,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 3.9772900000125153,
+        "length": 4.52
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 98772.40000000596
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        28.152880685511263,
+        -26.104700070614108,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 3.8766999999999983,
+        "length": 4.52
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 98869
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        28.054766508565166,
+        -26.102700088500978,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 3.7785249999999984,
+        "length": 4.52
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 98964.09999999404
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.951315678103775,
+        -26.104689854573113,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 3.674959999987481,
+        "length": 4.52
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 99061.29999998212
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.85088753316471,
+        -26.102700088500978,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 3.5744749999999983,
+        "length": 4.52
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 99155.79999998212
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.818332352941173,
+        -26.102700088500978,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 3.5424499999999983,
+        "length": 4.52
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 99254.40000000596
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.719711576949,
+        -26.102700088500978,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 3.443645000006257,
+        "length": 4.52
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 99350.19999998808
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.617733298645337,
+        -26.102700088500978,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 3.341549999999998,
+        "length": 4.52
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 99446.5
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.514179273386585,
+        -26.10469314222388,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 3.2378799999937393,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 99548.59999999404
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.409179281437655,
+        -26.104717163046754,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 3.132879999993739,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 99651.19999998808
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -26.126137163092203,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 3.028579999993739,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 99751.59999999404
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -26.228337163092203,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 2.9263799999937388,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 99847.59999999404
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -26.32990716306717,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 2.824810000018773,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 99945.59999999404
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -26.433052163073427,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 2.721665000012514,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 100045.79999998212
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -26.534902163073426,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 2.619815000012514,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 100147.09999999404
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -26.639727163073424,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 2.514990000012514,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 100245.09999999404
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -26.741507163067165,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 2.4132100000187724,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 100345.90000000596
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -26.846262163060906,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 2.3084550000250306,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 100447
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -26.950037163060905,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 2.2046800000250304,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 100548.59999999404
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -27.053917163054646,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 2.1008000000312888,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 100645.90000000596
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -27.157307163067163,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 1.9974100000187718,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 100746.69999998808
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -27.259192163054646,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 1.8955250000312889,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 100845.69999998808
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -27.362197163048386,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 1.7925200000375474,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 100946.40000000596
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -27.465657163035868,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 1.6890600000500644,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 101044
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -27.567752163042126,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 1.586965000043806,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 101142.29999998212
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -27.668132163035867,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 1.4865850000500644,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 101237.59999999404
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -27.767567163054643,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 1.3871500000312889,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 101334.59999999404
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -27.86745716306716,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 1.287260000018772,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 101428.90000000596
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -27.97070716306716,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 1.184010000018772,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 101527.90000000596
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -28.072067163085936,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 1.0826499999999966,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "BathLadderHatch",
+        "kind": "hatch",
+        "label": "Library / Bath Washroom hatch",
+        "open": true
+      },
+      "t": 101625.5
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -28.17087216307968,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 0.983845000006255,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 101724.19999998808
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -28.27307216307968,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 0.881645000006255,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 101821
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -28.375377163104712,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 0.779339999981221,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 101919.40000000596
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -28.478417163085936,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 0.6762999999999965,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 102019.19999998808
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -28.580267163085935,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 0.5744499999999966,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 102119.59999999404
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -28.683412163092193,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 0.4713049999937381,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 102216.90000000596
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -28.78550716309845,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 0.36920999998747966,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 102314.5
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -28.88760216310471,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 0.26711499998122124,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 102412.79999998212
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -28.98945216310471,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 0.16526499998122124,
+        "length": 4.52
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 102514.79999998212
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -29.091022163079675,
+        -4.117
+      ],
+      "c": {
+        "id": "library-bath-ladder",
+        "progress": 0.06369500000625519,
+        "length": 4.52
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 102612.79999998212
+    },
+    {
+      "label": "library-bath-ladder descent",
+      "p": [
+        27.325882352941175,
+        -29.154699325561523,
+        -4.117
+      ],
+      "c": null,
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 102718.59999999404
+    },
+    {
+      "label": "Library bath return to lawn",
+      "position": [
+        -4.234921921381026,
+        -40.55070114135742,
+        -1.0349219213810263
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    }
+  ],
+  "errors": []
+}

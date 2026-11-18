@@ -5,6 +5,7 @@ import {applyAquariumFloorLight} from './aquariumFinish.js'
 
 const maps=new Map(),materials=new Map(),TAU=Math.PI*2
 const clamp=v=>Math.max(0,Math.min(1,v))
+const displayGamma=value=>value<=.0031308?value*12.92:1.055*Math.pow(value,1/2.4)-.055
 const profiles={
  upholstery:{period:[.064,.064],roughness:.88,relief:.000055,sheen:.28},
  linen:{period:[.08,.08],roughness:.93,relief:.00004,sheen:.16},
@@ -59,12 +60,11 @@ export function interiorTextureSet(role){
   const warp=Math.sin(TAU*u*64),weft=Math.sin(TAU*v*64),weave=warp*weft
   const stone=role==='bath-stone'?stoneChip(u,v):null
   const fibres=stone?stone.chip*.67+n*.09:fabric?weave*.65+noise(u,v,4)*.35:n
-  const tone=clamp(stone?.chip!==undefined?.95-stone.chip*(.13+stone.tint*.22)+n*.035:(fabric?.95:.985)+fibres*(fabric?.035:.008))
-  const gamma=value=>value<=.0031308?value*12.92:1.055*Math.pow(value,1/2.4)-.055
-  albedo[j]=Math.round(gamma(clamp(tone+(stone?.chip??0)*.04))*255)
-  albedo[j+1]=Math.round(gamma(tone)*255)
-  albedo[j+2]=Math.round(gamma(clamp(tone+(stone?.chip??0)*(.12-(stone?.tint??0)*.08)))*255);albedo[j+3]=255
-  roughness[j]=roughness[j+1]=roughness[j+2]=Math.round(clamp(p.roughness+fibres*(stone?.chip!==undefined?.13:fabric?.045:.025))*255);roughness[j+3]=255
+  const tone=clamp(stone?.95-stone.chip*(.13+stone.tint*.22)+n*.035:(fabric?.95:.985)+fibres*(fabric?.035:.008))
+  albedo[j]=Math.round(displayGamma(clamp(tone+(stone?.chip??0)*.04))*255)
+  albedo[j+1]=Math.round(displayGamma(tone)*255)
+  albedo[j+2]=Math.round(displayGamma(clamp(tone+(stone?.chip??0)*(.12-(stone?.tint??0)*.08)))*255);albedo[j+3]=255
+  roughness[j]=roughness[j+1]=roughness[j+2]=Math.round(clamp(p.roughness+fibres*(stone?.13:fabric?.045:.025))*255);roughness[j+3]=255
   height[i]=fibres*p.relief
  }
  const at=(x,y)=>height[((y+size)%size)*size+(x+size)%size]
@@ -188,8 +188,9 @@ export function realisticInteriorMaterial(source,options={}){
  const aquariumFloor=!!options.aquarium&&role==='tile'&&/^Sunny_AquariumFloor/.test(options.name)
  const aquariumCeiling=!!options.aquarium&&options.name==='Sunny_Aquarium_ceiling'
  const libraryFloor=!!options.library&&role==='tile'&&/^Sunny_InteriorFloor_F3_library/.test(options.name)
- const key=[source.name,source.color.getHexString(),role,projected,tile,aquariumCeiling,libraryFloor].join(':')
- if(!aquariumFloor&&materials.has(key))return materials.get(key)
+ const bathWater=!!options.bath&&role==='bath-water'
+ const key=[source.name,source.color.getHexString(),role,projected,tile,aquariumCeiling,libraryFloor,bathWater].join(':')
+ if(!aquariumFloor&&!bathWater&&materials.has(key))return materials.get(key)
  const shared=role==='brass'||role==='steel'?'metal':['water','bath-water','glass','mirror','lamp'].includes(role)?null:role
  const profile=profiles[role]
  const m=new THREE.MeshPhysicalMaterial({name:source.name,color:source.color.clone(),side:THREE.DoubleSide,
@@ -205,7 +206,7 @@ export function realisticInteriorMaterial(source,options={}){
   m.roughness=.32;m.emissive.copy(source.color);m.emissiveIntensity=1.65
  }else if(role==='mirror'){
   m.roughness=.055;m.color.setRGB(.92,.94,.95);m.clearcoat=1
- }else if(role==='bath-water'&&options.bath){
+ }else if(bathWater){
   m.transparent=true;m.opacity=.78;m.depthWrite=false;m.roughness=.14;m.ior=1.333;m.clearcoat=.9;m.clearcoatRoughness=.08
   m.onBeforeCompile=shader=>applyBathWater(shader,options.bath)
   m.customProgramCacheKey=()=>`bath-water-v1`
@@ -213,7 +214,8 @@ export function realisticInteriorMaterial(source,options={}){
   m.transparent=true;m.opacity=role==='water'?.16:.20;m.depthWrite=false;m.roughness=role==='water'?.08:.065;m.ior=1.5;m.clearcoat=1;m.clearcoatRoughness=.08
  }
  m.userData={interiorSurface:role,interiorProjection:projected?'metric':'authored-uv',finishVersion:1}
- if(aquariumFloor||role==='bath-water'&&options.bath)m.userData.aquariumOwned=true
+ if(aquariumFloor)m.userData.aquariumOwned=true
+ else if(bathWater)m.userData.bathOwned=true
  else materials.set(key,m)
  return m
 }

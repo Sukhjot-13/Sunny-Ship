@@ -153,3 +153,25 @@ def bath_floor_finish(obj,cx,cy):
         if face.normal.z>.98 and face.center.y>=wet_edge:
             face.material_index=dry
     obj['sunny_floor_pattern']='R12 wet pebble mosaic and dry timber separated by the Bath partition'
+
+
+def toilet_details(cx,cy,floor):
+    from sunny_room_accuracy import soft_box
+    centre=(cx+.44,cy+4.22,floor)
+    pole('Bath_wc_toilet_foot',centre,L(centre,0,0,0,.26),.125,'bath_porcelain',radius2=.10,sides=24)['sunny_obstacle']=True
+    profiled_basin('Bath_wc_toilet_bowl',centre,
+                  ((.12,.15,.21),(.18,.23,.32),(.20,.25,.425),(.193,.242,.45),(.153,.207,.45),(.108,.148,.28)),
+                  ('bath_porcelain','bath_porcelain','bath_porcelain','bath_jade','bath_porcelain'),True)
+    soft_box('Bath_wc_cistern',centre,0,(.39,.142,.31),'bath_porcelain',(0,.298,.62),radius=.04)
+    soft_box('Bath_wc_cistern_lid',centre,0,(.423,.162,.050),'bath_porcelain',(0,.298,.80),radius=.02)
+    rpole('Bath_wc_flush',centre,0,(.113,.218,.719),(.165,.206,.719),.011,'bath_pipe',sides=10)
+    back=(cx+.30,cy+4.503,floor)
+    soft_box('Bath_wc_book_shelf',back,0,(.66,.24,.066),'bath_cedar',(0,0,1.14),radius=.022,obstacle=False)
+    for x in (-.24,.24):
+        rpole('Bath_wc_book_shelf_brace',back,0,(x,.097,.99),(x,-.065,1.111),.014,'bath_pipe',sides=10)
+    for index,key in enumerate(('library_binding0','library_binding2')):
+        book=L(back,0,.025,-.025,1.198+index*.056)
+        soft_box('Bath_wc_book',book,.10*(-1)**index,(.244,.156,.055),key,radius=.008,obstacle=False)
+        rbox('Bath_wc_book_pages',book,.10*(-1)**index,(.219,.013,.034),'paper_library',(0,-.073,0),obstacle=False)
+    rpole('Bath_wc_roll_mount',centre,0,(.46,-.09,.72),(.36,-.09,.72),.018,'bath_pipe')
+    rpole('Bath_wc_roll',centre,0,(.355,-.14,.72),(.355,-.035,.72),.061,'paper_library',sides=24)

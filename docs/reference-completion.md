@@ -1,6 +1,8 @@
 ## Active: finish the interiors room by room — November 17, 2026
 
-Aquarium commit `1b1a9aa` has been pushed. The [Library](library-reference-audit.md) is now applied locally on both ports, including the actual new Bath ladder. Five renderer views, 116 asset checks, three keyboard round trips (Library, existing stern ladder, new Bath ladder), production build and all 7,504 reversed meshes passed. The [interior matrix](interior-acceptance-matrix.md) marks the Library checkpoint and the now-active Bath, washroom and WC; Dining follows. The user requested realistic textures and lighting wherever work occurs. Preserve the Aquarium and parked exterior through scoped comparisons.
+Aquarium commit `1b1a9aa` is pushed. The [Library](library-reference-audit.md) is applied locally in `437106d`, including the working Bath ladder and three verified access round trips. The [Bath suite](bath-reference-audit.md) has passed the scoped finish and access checks, including the washroom and toilet. The [interior matrix](interior-acceptance-matrix.md) tracks these checkpoints and the active Dining room. Preserve the verified rooms and exterior through scoped comparisons.
+
+Dining follows R10. The initial source pass replaces the provisional oversized table and hard seats with woven mint linen, ochre upholstered chairs and one green port bench. The open Kitchen relationship, mast service lift and AftEntrance are existing interfaces to retain.
 
 ## Aquarium Bar applied — November 17, 2026
 

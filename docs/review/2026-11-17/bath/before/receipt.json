@@ -1,0 +1,70 @@
+{
+  "roomName": "Bath",
+  "url": "http://localhost:5173",
+  "shots": [
+    {
+      "name": "bath",
+      "camera": [
+        31.209999999999997,
+        -24.425,
+        -0.575
+      ],
+      "target": [
+        28.509999999999998,
+        -25.105,
+        2.6750000000000003
+      ],
+      "fov": 72
+    },
+    {
+      "name": "shower",
+      "camera": [
+        31.86,
+        -24.455000000000002,
+        2.875
+      ],
+      "target": [
+        27.209999999999997,
+        -25.105,
+        2.1750000000000003
+      ],
+      "fov": 68
+    },
+    {
+      "name": "entrance",
+      "camera": [
+        27.56,
+        -24.445,
+        -4.584999999999999
+      ],
+      "target": [
+        30.709999999999997,
+        -24.825,
+        -4.0249999999999995
+      ],
+      "fov": 74
+    },
+    {
+      "name": "toilet",
+      "camera": [
+        28.959999999999997,
+        -24.445,
+        -5.129999999999999
+      ],
+      "target": [
+        29.839999999999996,
+        -25.205000000000002,
+        -5.8199999999999985
+      ],
+      "fov": 75
+    }
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "bathWater": false,
+  "assets": {
+    "sunny.glb": "d8336014cf606119b4fb345094b7f3081119098381b359fd7d082b0bb0fbfae3",
+    "ship-metadata.json": "aba41af0f22c2aac57f45bc46cb770bd7aecf904eddd2639128ab6f808e69478"
+  },
+  "note": "Actual renderer, inspection camera only. Keyboard routes are verified separately."
+}

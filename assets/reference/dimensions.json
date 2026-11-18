@@ -1,8 +1,8 @@
 {
-  "source": "/private/tmp/sunny-library-candidate/sunny-master.blend",
-  "workingVisualSource": "/private/tmp/sunny-library-candidate/sunny.glb",
-  "sourceSha256": "db3ca567777f04fa0ec9cf20590a43e57e01ad3bd199860c196fb204c6428853",
-  "workingVisualSha256": "d8336014cf606119b4fb345094b7f3081119098381b359fd7d082b0bb0fbfae3",
+  "source": "/private/tmp/sunny-bath-rim-fixed/sunny-master.blend",
+  "workingVisualSource": "/private/tmp/sunny-bath-rim-fixed/sunny.glb",
+  "sourceSha256": "bd1ee195f5dfe2c1d50b3ea47fdaf91109ea1efcfdf5ea7a67ac3c0cd356ef09",
+  "workingVisualSha256": "397558c2a1f70816a44cfe1f64b70fc778b5831a70a37e62650ce1e2360dc380",
   "workingScale": 2.2,
   "referenceScale": 1,
   "rootMultiplier": 0.45454545454545453,

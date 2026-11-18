@@ -97,6 +97,7 @@ const suites=[
  ['interiorMaterials.test.mjs','physical interior materials and metric projection'],
  ['aquariumRoom.test.mjs','Aquarium tank, furnishings and preserved route interfaces'],
  ['libraryRoom.test.mjs','Library furnishings, clear glazing and full Bath ladder'],
+ ['bathRoom.test.mjs','Bath fixtures, material regions and contained water'],
  ['exteriorMaterials.test.mjs','physical exterior materials and reflection guards'],
  ['navigation.test.mjs','navigation logic'],['foodLift.test.mjs','C04 mast-integrated food lift'],['climbing.test.mjs','climbing and interaction logic'],['assets.test.mjs','asset structure'],['exterior.test.mjs','exterior coplanar geometry'],['doors.test.mjs','door and hatch collision'],
  ['physics.test.mjs','collision physics'],['reachability.mjs','deck reachability'],
@@ -107,6 +108,7 @@ const suites=[
  ['foreFacadeJourneys.mjs','both actual lower fore thresholds and grounded lawn returns'],
  ['climbing.mjs','continuous lookout rope, ladder, hatch and return descent'],
  ['interiorJourneys.mjs','continuous room tour and interior stairs'],
+ ['bathJourneys.mjs','continuous Bath, washroom and toilet journey via the Library ladder'],
  ['navigation.mjs','walking to ship controls and operating navigation'],['interaction.mjs','pointer / orbit interaction'],['exteriorMotion.mjs','exterior movement and stationary comparison'],['visual.mjs','visual capture'],
 ]
 const results=[]

@@ -361,33 +361,6 @@ def energy_details(floor):
         rpole('Energy_gauge_needle',p,0,(-.65+i*.65,-.716,2.94),(-.61+i*.65,-.716,3.01),.008,'black')
 
 
-def bath_details(cx, cy, floor):
-    """Communal bath's showers, wash bowls, towels, vent and patterned tiles."""
-    repaint_family('Bath_tub_rim','upholstery_teal')
-    for i in range(2):
-        p=(cx-2.4+i*1.30,cy-3.65,floor)
-        rpole('Bath_shower_pipe',p,0,(0,0,.65),(0,0,1.95),.018,'steel')
-        rpole('Bath_shower_head_arm',p,0,(0,0,1.95),(0,-.24,1.95),.018,'steel')
-        pole('Bath_shower_head',L(p,0,0,-.24,1.94),L(p,0,0,-.24,1.90),.085,'steel',sides=20)
-        for dx in (-.17,.17):
-            rpole('Bath_wash_tap',p,0,(dx,0,.64),(dx,-.12,.64),.020,'brass')
-        stool('Bath_wash_stool',L(p,0,0,-.5,0),seat=.24,key='leaflight')
-        ring('Bath_wash_bowl',L(p,0,.33,-.65,.20),.18,.028,'leaflight')
-        pole('Bath_wash_bowl_bottom',L(p,0,.33,-.65,.03),L(p,0,.33,-.65,.06),.17,'leaflight',sides=20)
-    p=(cx+.2,cy-4.0,floor)
-    rbox('Bath_vent',p,0,(.72,.06,.48),'steel',(0,0,2.12),obstacle=False)
-    for i in range(6):
-        rbox('Bath_vent_slat',p,0,(.63,.025,.023),'black',(0,-.043,1.95+i*.062),obstacle=False)
-    for i in range(3):
-        soft_box('Bath_towel',(cx+1.1,cy-3.35,floor),0,(.48,.28,.08),'linen',(0,0,.10+i*.083),radius=.015,obstacle=False)
-    # Separate mirror and bath towel stand in the entrance washroom.
-    p=(cx+2.0,cy+3.83,floor)
-    mirror=sphere('Bath_wash_mirror',L(p,math.pi,0,.20,1.55),(.30,.015,.38),'glass',segments=32,rings=16)
-    ring('Bath_wash_mirror_frame',L(p,math.pi,0,.22,1.55),.32,.025,'brass','Y')
-    rpole('Bath_towel_rail',p,math.pi,(-.3,.2,1.07),(.3,.2,1.07),.018,'brass')
-    cloth_panel('Bath_wash_towel',L(p,math.pi,0,.21,.52),math.pi,.40,.54,4,'linen')
-
-
 def complete_room_fittings(objects, frame, interiors):
     """Apply supplied room silhouettes/palette without altering the exterior."""
     before=set(bpy.data.objects)
@@ -403,7 +376,8 @@ def complete_room_fittings(objects, frame, interiors):
     workshop_details(rooms,levels['B1'])
     energy_details(levels['B1'])
     lc=(rooms['Library']['x'][0]+rooms['Library']['x'][1])/2
-    bath_details(lc,cy,levels['F3B'])
+    from sunny_bath import bath_details, bath_floor_finish
+    bath_details(lc,cy,levels['F3B'],rooms['Bath'])
     for obj in list(bpy.data.objects):
         if obj.type=='MESH' and obj.name.startswith(('Sunny_Dining_sofa','Sunny_Womens_sofa')) and any(word in obj.name for word in ('_base','_back','_arm','_cushion')):
             key='upholstery_lilac' if obj.name.startswith('Sunny_Womens') else 'upholstery_teal'
@@ -426,7 +400,7 @@ def complete_room_fittings(objects, frame, interiors):
     tile_floor(bpy.data.objects['Sunny_InteriorFloor_F3_library'],.65,('tile_library_blue','tile_library_sage'))
     tile_floor(bpy.data.objects['Sunny_InteriorFloor_lower'],.85,('steel',),(8.5,20.2,cy,13.2))
     tile_floor(bpy.data.objects['Sunny_InteriorFloor_F2_service'],.55,('tile_ivory','tile_dark'),(20.6,24.8,-11.5,cy))
-    tile_floor(bpy.data.objects['Sunny_InteriorFloor_F3_bath'],.55,('tile_ivory','tile_sage'))
+    bath_floor_finish(bpy.data.objects['Sunny_InteriorFloor_F3_bath'],lc,cy)
     tile_floor(bpy.data.objects['Sunny_InteriorFloor_F2_aft'],.65,('tile_ivory','tile_dark'),
                (12.3,20.6,cy,13.5))
     lights=[]

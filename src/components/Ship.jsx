@@ -27,7 +27,7 @@ import { shipYaw, voyage } from '../systems/navigation.js'
  * cloned the sail meshes and that mis-placed them, because several of the
  * FBX objects carry baked vertex offsets relative to their origin.)
  */
-export function Ship({ sunDir, skyColor = '#9fc4e0', deckY = 0, waterY = -14, roomLights, aquariumLayout, libraryLayout, ...props }) {
+export function Ship({ sunDir, skyColor = '#9fc4e0', deckY = 0, waterY = -14, roomLights, aquariumLayout, libraryLayout, bathLayout, ...props }) {
   const bobRef = useRef()
   const timeRef = useRef(0)
   const { scene } = useGLTF('/models/sunny.glb')
@@ -41,7 +41,8 @@ export function Ship({ sunDir, skyColor = '#9fc4e0', deckY = 0, waterY = -14, ro
     const sails = []
     const interiorGeometries = []
     const aquarium = createAquariumFinish(aquariumLayout)
-    const aquariumHalos = [], aquariumFloorMaterials = new Map()
+    const aquariumHalos = [], roomMaterials = new Map()
+    const bath=bathLayout?{time:aquarium.time}:null
     let sailCount = 0
 
     root.updateMatrixWorld(true)
@@ -90,11 +91,11 @@ export function Ship({ sunDir, skyColor = '#9fc4e0', deckY = 0, waterY = -14, ro
         }
         const finish=outside?realisticExteriorMaterial:exteriorMaterial
         const paintInterior=m=>{
-          const floor=/^Sunny_AquariumFloor/.test(child.name)
-          if(floor&&aquariumFloorMaterials.has(m.name))return aquariumFloorMaterials.get(m.name)
+          const animated=/^Sunny_AquariumFloor/.test(child.name)||m.name==='Sunny_bath_water'
+          if(animated&&roomMaterials.has(m.name))return roomMaterials.get(m.name)
           const result=realisticInteriorMaterial(m,{wood:tags.sunny_wood_kind,name:child.name,fabric:tags.sunny_fabric,uv:!!tags.sunny_uv_space,
-            aquarium:aquariumLayout?aquarium:null,library:libraryLayout})
-          if(result.userData.aquariumOwned)aquariumFloorMaterials.set(m.name,result)
+            aquarium:aquariumLayout?aquarium:null,library:libraryLayout,bath})
+          if(result.userData.aquariumOwned||result.userData.bathOwned)roomMaterials.set(m.name,result)
           return result
         }
         const paint = m => inside
@@ -112,8 +113,8 @@ export function Ship({ sunDir, skyColor = '#9fc4e0', deckY = 0, waterY = -14, ro
     })
 
     for(const position of aquariumHalos)aquarium.addHalo(root,position)
-    return { root, sails, sailCount, interiorGeometries, aquarium, aquariumFloorMaterials }
-  }, [scene, emblem, sunDir, skyColor, deckY, waterY, aquariumLayout, libraryLayout])
+    return { root, sails, sailCount, interiorGeometries, aquarium, roomMaterials }
+  }, [scene, emblem, sunDir, skyColor, deckY, waterY, aquariumLayout, libraryLayout, bathLayout])
 
   useEffect(() => {
     const unregister = []
@@ -164,7 +165,7 @@ export function Ship({ sunDir, skyColor = '#9fc4e0', deckY = 0, waterY = -14, ro
     () => () => {
       for (const { mat } of ship.sails) mat.dispose()
       for (const geometry of ship.interiorGeometries) geometry.dispose()
-      for(const material of ship.aquariumFloorMaterials.values())material.dispose()
+      for(const material of ship.roomMaterials.values())material.dispose()
       ship.aquarium.dispose()
     },
     [ship]

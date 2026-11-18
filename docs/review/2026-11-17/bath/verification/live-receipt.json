@@ -1,0 +1,19 @@
+{
+  "backup": "/private/tmp/sunny-bath-live-before",
+  "stage": "/private/tmp/sunny-bath-rim-fixed",
+  "url": "http://localhost:5173",
+  "applied": {
+    "assets/sunny-master.blend": "bd1ee195f5dfe2c1d50b3ea47fdaf91109ea1efcfdf5ea7a67ac3c0cd356ef09",
+    "public/models/sunny.glb": "397558c2a1f70816a44cfe1f64b70fc778b5831a70a37e62650ce1e2360dc380",
+    "public/models/sunny-collision.glb": "63f2056b0c202ad4feb0a766c64a53be3c785777ca9c5beaf589b1e07c7eafa6",
+    "public/models/ship-metadata.json": "c8bacfaa210f8a93947961ac5c2c7adcda92c841ce4dbde2ad0bbf7a7b9faf71",
+    "assets/reference/sunny-reference.blend": "5682bbb75b5c8474ed525309b690dc789f52de5b2dda2f4c34c2a22910ae52ac",
+    "assets/reference/sunny-reference.glb": "3b23ffc0a19b64bd2fb990dd15b667b5067b43e3fbd4a7feffd2df96ff7f611a",
+    "assets/reference/dimensions.json": "741339566da4ae8564f2788c5d08aab15314f35fb425b778254240276ffea115"
+  },
+  "served": {
+    "sunny.glb": "397558c2a1f70816a44cfe1f64b70fc778b5831a70a37e62650ce1e2360dc380",
+    "sunny-collision.glb": "63f2056b0c202ad4feb0a766c64a53be3c785777ca9c5beaf589b1e07c7eafa6",
+    "ship-metadata.json": "c8bacfaa210f8a93947961ac5c2c7adcda92c841ce4dbde2ad0bbf7a7b9faf71"
+  }
+}
