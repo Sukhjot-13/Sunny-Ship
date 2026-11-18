@@ -1,6 +1,7 @@
 import { create } from 'zustand'
 import { CAMERA_MODES, MOVEMENT_MODES, PERSON_MODES } from '../config/shipConfig.js'
-import { COLA } from '../systems/navigation.js'
+import { COLA, voyage } from '../systems/navigation.js'
+import { operateAudibleBurst } from '../systems/burstAudio.js'
 
 /**
  * Global app state.
@@ -48,6 +49,11 @@ export const useStore = create((set, get) => ({
   openDoorCount: 0,
   navigation: { heading:270, speed:0, channel:1, cola:COLA.capacity, prompt:'' },
   setNavigation: (navigation) => set({navigation}),
+  triggerBurst: () => {
+    const result=operateAudibleBurst()
+    if(result.ok||voyage.burst===0)set(s=>({hudMessage:result.message,navigation:{...s.navigation,...voyage}}))
+    return result.ok
+  },
 
   setLoading: (loading, progress = 0) => set({ loading, progress }),
   setStarted: (started) => set({ started, showHelp: started }),

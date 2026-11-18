@@ -2,7 +2,11 @@
 export const CHANNELS=['Shiro Mokuba I','Mini Merry II','Shark Submerge III','Kurosai FR-U IV','Brachio Tank V','Inflatable Pool']
 export const LOG_BEARINGS=[35,145,285]
 export const COLA={capacity:30,perSecond:5}
-export const BURST={seconds:6,height:32,range:240,cost:3}
+const burstCharge=.68,burstFlight=6.1,burstLanding=1.55
+export const BURST={
+ charge:burstCharge,flight:burstFlight,landing:burstLanding,
+ seconds:burstCharge+burstFlight+burstLanding,height:102,range:1000,cost:3,
+}
 export const GAON={seconds:2.5,cost:.5}
 const initial=()=>({heading:270,throttle:0,speed:0,east:0,south:0,helm:false,channel:1,dockGateChannel:1,dockOpen:false,shutter:0,dockAngle:0,logNeedle:0,cola:COLA.capacity,burst:0,lift:0,pitch:0,wheel:0,chicken:false,maneAngle:0,jawOpen:false,jaw:0,gaon:0,paddleAngle:0,foodLift:0,foodLiftTarget:0})
 export const voyage=initial()
@@ -18,6 +22,43 @@ export function selectDockChannel(channel){
 export function toggleDockShutters(){
  voyage.dockOpen=!voyage.dockOpen
  return voyage.dockOpen?'Soldier Dock: align, then roll shutters open':'Soldier Dock: close shutters'
+}
+const clamp01=t=>Math.max(0,Math.min(1,t))
+const ease=t=>{t=clamp01(t);return t*t*(3-2*t)}
+
+/** One ship-local trajectory for the hull, camera and effects. */
+export function sampleBurst(age){
+ if(age<BURST.charge){
+  const load=ease(age/BURST.charge)
+  return {phase:'charging',distance:0,lift:0,pitch:-.13*load}
+ }
+ const t=(age-BURST.charge)/BURST.flight
+ if(t<1){
+  const apex=.44
+  const slope=(t-apex)/(t<apex?apex:1-apex)
+  const pitch=-.13-.24*ease(t/.12)+.33*ease((t-.12)/.39)+.18*ease((t-.51)/.39)
+  const distance=BURST.range*(t+.23*Math.sin(Math.PI*t)/Math.PI)
+  return {phase:'airborne',distance,lift:BURST.height*(1-slope*slope),pitch}
+ }
+ const landing=clamp01((age-BURST.charge-BURST.flight)/BURST.landing)
+ const decay=(1-landing)**2
+ return {phase:landing<1?'landing':'idle',
+  distance:BURST.range+32*BURST.landing*(1-(1-landing)**3)/3,
+  lift:-2.5*Math.sin(landing*2*Math.PI)*decay,
+  pitch:.14*Math.cos(landing*3*Math.PI)*decay}
+}
+
+export function burstStatus(state=voyage){
+ if(state.burst>0)return sampleBurst(BURST.seconds-state.burst).phase
+ return 'idle'
+}
+
+export function burstAvailability(state=voyage){
+ const phase=burstStatus(state)
+ const reason=phase==='charging'?'Cola pressure building…':phase==='airborne'?'Coup de Burst airborne':
+  phase==='landing'?'Coup de Burst splashdown':state.gaon>0?'Wait for the Gaon blast to clear.':
+  state.cola<BURST.cost?'Coup de Burst needs three cola barrels.':''
+ return {phase,canFire:!reason,reason}
 }
 /** Shared readiness for the visible panel and keyboard mechanism actions. */
 export function cannonAvailability(state=voyage){
@@ -76,7 +117,7 @@ export function advanceDock(dt,dockOccupied=false,shutterOccupied=false){
  if(!dockOccupied&&voyage.shutter===0)voyage.dockAngle+=(target-voyage.dockAngle)*Math.min(1,dt*1.8)
 }
 
-/** Advance the ship and its guarded moving mechanisms in Explore. */
+/** Advance the ship and its guarded moving mechanisms while sailing or bursting. */
 export function advanceVoyage(elapsed,keys={},dockOccupied=false,shutterOccupied=false){
  const dt=Math.min(.1,Math.max(0,elapsed))
  if(voyage.helm&&voyage.burst===0){
@@ -91,12 +132,13 @@ export function advanceVoyage(elapsed,keys={},dockOccupied=false,shutterOccupied
  if(voyage.chicken)voyage.maneAngle=(voyage.maneAngle+dt*2.4)%(Math.PI*2)
  let distance
  if(voyage.burst>0){
+  const before=sampleBurst(BURST.seconds-voyage.burst)
   const used=Math.min(dt,voyage.burst)
-  voyage.burst=Math.max(0,voyage.burst-dt)
-  const t=1-voyage.burst/BURST.seconds
-  voyage.lift=4*BURST.height*t*(1-t)
-  voyage.pitch=-.18*Math.sin(t*Math.PI*2)
-  voyage.speed=BURST.range/BURST.seconds;distance=voyage.speed*used
+  voyage.burst=voyage.burst-used<1e-9?0:voyage.burst-used
+  const frame=sampleBurst(BURST.seconds-voyage.burst)
+  voyage.lift=frame.lift;voyage.pitch=frame.pitch
+  distance=frame.distance-before.distance
+  if(used>0)voyage.speed=distance/used
   if(voyage.burst===0){voyage.lift=0;voyage.pitch=0;voyage.speed=voyage.throttle*5}
  }else{
   const paddle=voyage.dockGateChannel===0&&voyage.shutter>.98&&voyage.cola>0
@@ -109,8 +151,13 @@ export function advanceVoyage(elapsed,keys={},dockOccupied=false,shutterOccupied
  advanceCannon(elapsed)
  return voyage
 }
-/** Three tank barrels fund one Burst. Flight dimensions are simulated. */
-export function startBurst(){if(voyage.cola<BURST.cost||voyage.burst>0||voyage.gaon>0)return false;voyage.cola-=BURST.cost;voyage.burst=BURST.seconds;return true}
+/** Three cola barrels trigger a single stern impulse and airborne arc. */
+export function startBurst(){
+ if(!burstAvailability().canFire)return false
+ voyage.cola-=BURST.cost
+ voyage.burst=BURST.seconds
+ return true
+}
 /** The Gaon uses part of the shared cola reserve and recoils. */
 export function fireGaon(){
  if(!cannonAvailability().canFire)return false

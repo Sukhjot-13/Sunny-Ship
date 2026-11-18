@@ -1,6 +1,5 @@
 import {operateCannon} from './navigation.js'
-
-let context, blast, output
+import {playShipSound} from './shipAudio.js'
 
 function makeBlast(audio){
  const buffer=audio.createBuffer(1,Math.ceil(audio.sampleRate*1.8),audio.sampleRate)
@@ -25,28 +24,6 @@ function makeBlast(audio){
 /** Play the same sound for a successful shot from the panel or the helm. */
 export function operateAudibleCannon(action){
  const result=operateCannon(action)
- const Audio=globalThis.AudioContext??globalThis.webkitAudioContext
- if(action!=='fire'||!result.ok||!Audio)return result
- try{
-  context??=new Audio()
-  blast??=makeBlast(context)
-  if(!output){
-   output=context.createDynamicsCompressor()
-   output.threshold.value=-10
-   output.knee.value=10
-   output.ratio.value=12
-   output.attack.value=.003
-   output.release.value=.23
-   output.connect(context.destination)
-  }
-  const source=context.createBufferSource()
-  source.buffer=blast
-  source.connect(output)
-  source.onended=()=>source.disconnect()
-  source.start()
-  if(context.state==='suspended')void context.resume().catch(()=>{})
- }catch{
-  // A browser or device without audio can still operate the cannon.
- }
+ if(action==='fire'&&result.ok)playShipSound('gaon',makeBlast)
  return result
 }

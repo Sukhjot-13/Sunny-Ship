@@ -51,6 +51,7 @@ export function UI({ onEnter }) {
             <li><b>V</b> — Inspect Ship</li>
             <li><b>H</b> — Toggle help</li>
             <li><b>K</b> — Fire Gaon · <b>X</b> — Cannon controls</li>
+            <li><b>G</b> — Coup de Burst</li>
             <li><b>0–6</b> — Dock channel · <b>L</b> — Dock shutters</li>
             <li><b>Esc</b> — Release Mouse</li>
           </ul>
@@ -76,7 +77,7 @@ export function UI({ onEnter }) {
       */}
       {cameraMode === CAMERA_MODES.INSPECT && (
         <div style={styles.hint}>
-          Drag to orbit · Scroll to zoom · <b>V</b> to step aboard
+          {nav.burst>0?null:'Drag to orbit · Scroll to zoom · '}<b>V</b> to step aboard
         </div>
       )}
 
@@ -122,7 +123,7 @@ export function UI({ onEnter }) {
           <div>F fly · B flight collision · C 1st/3rd person · V inspect ship · H hide help</div>
           <div>Esc release mouse</div>
           <div>K fire Gaon · J open or close mouth · X cannon panel</div>
-          <div>E interact · Helm: W/S speed, A/D steer · G Burst · T Chicken Voyage</div>
+          <div>G Coup de Burst · E interact · Helm: W/S speed, A/D steer · T Chicken Voyage</div>
           <div>Ladders: E grabs · W/S climb up/down · E operates a reachable hatch</div>
           <div>0–6 select Dock channel · L dock shutters · R reset voyage and player</div>
         </div>

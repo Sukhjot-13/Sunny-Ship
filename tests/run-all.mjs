@@ -104,6 +104,7 @@ const suites=[
  ['physics.test.mjs','collision physics'],['reachability.mjs','deck reachability'],
  ['roomRoutes.mjs','all room and interior stair routes'],['gameplay.mjs','in-browser gameplay'],
  ['cannonControls.mjs','universal visible cannon controls'],
+ ['coupDeBurst.mjs','global Coup de Burst keyboard, actual flight, sound and landing'],
  ['exteriorJourneys.mjs','continuous balcony, gallery, slide and exterior passages'],
  ['exteriorAccess.mjs','outdoor thresholds, exterior hatch descents and returns'],
  ['foreFacadeJourneys.mjs','both actual lower fore thresholds and grounded lawn returns'],

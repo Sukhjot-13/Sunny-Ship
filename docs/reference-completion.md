@@ -1,3 +1,11 @@
+## Coup de Burst — November 18, 2026
+
+`G` and the **Coup de Burst** button launch the ship in Inspect or Explore. A launch uses three cola barrels from the existing reserve. The stern impulse raises the bow, the ship flies 1,000 simulated metres along its current heading, and the bow dips into a splash before the hull settles. Inspect follows the launch and restores the previous orbit view. Explore keeps the player in the same place aboard the ship.
+
+The reconstruction uses the Thousand Sunny’s escape in chapter 439 and episode 324 as the reference. The duration, height and three original synthesized cues are interactive choices. [VIZ chapter 439](https://www.viz.com/shonenjump/one-piece-chapter-439/chapter/11573) · [Official episode 324](https://one-piece.com/anime/324/index.html) · [Crunchyroll spelling](https://www.crunchyroll.com/watch/GRVDDKKZR/ill-be-back-luffy-deadly-departure)
+
+Browser checks cover the keyboard and button, the three-barrel debit, repeat protection, audio playback, the filmed lift and spray, the player’s position aboard and restoration of the prior camera. The helm walkthrough, Gaon repeat shots, same-page cola refill and Dock switching all pass. [Browser check](../tests/coupDeBurst.mjs)
+
 ## Exterior resumed — November 18, 2026
 
 The interior checkpoint `251fa3b` was pushed before exterior changes. `K` fires one Gaon shot, `J` operates the mouth, `X` opens the cannon panel, `0`–`6` select the numbered Dock position, and `L` controls the shutters. Cola holds 30 and refills automatically at five per second. A Gaon shot uses half a cola and plays one synthesized sound. Actual input verifies rapid shots, held-key suppression, same-page refill, correct Dock rotation and the transition from the previous physical bay. [Keyboard and refill evidence](review/2026-11-18/dock-rims/verification/cola-controls.json)

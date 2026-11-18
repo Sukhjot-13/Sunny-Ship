@@ -6,6 +6,7 @@ import { useProgress } from '@react-three/drei'
 import { DoorSystem } from './components/DoorSystem.jsx'
 import { NavigationSystem } from './components/NavigationSystem.jsx'
 import { FoodLiftSystem } from './components/FoodLiftSystem.jsx'
+import { CoupDeBurstEffects } from './components/CoupDeBurstEffects.jsx'
 import { Ship } from './components/Ship.jsx'
 import { Ocean } from './components/Ocean.jsx'
 import { Lighting, SkyDome, InspectCamera, SUN_DIR } from './components/Environment.jsx'
@@ -102,6 +103,7 @@ function SceneRig({ meta, keys, look }) {
         />
       )}
       <NavigationSystem meta={meta} keys={keys} />
+      <CoupDeBurstEffects outlet={meta?.exterior?.mechanisms?.burst} waterLevel={waterLevel} />
       <FoodLiftSystem meta={meta} />
 
       <InspectCamera target={framing.target} distance={framing.distance} />

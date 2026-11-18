@@ -3,7 +3,7 @@ import { forwardRef, useEffect, useMemo, useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { WAVE_HEIGHT, WATER_LEVEL } from '../config/shipConfig.js'
 import { OCEAN_SIZE_M, OCEAN_HORIZON_SIZE_M, OCEAN_SEGMENTS, WAVE_SCALE } from '../config/renderConfig.js'
-import { voyage, shipYaw } from '../systems/navigation.js'
+import { BURST, sampleBurst, voyage, shipYaw } from '../systems/navigation.js'
 import { createOceanReflection } from '../systems/oceanReflection.js'
 
 /**
@@ -99,6 +99,7 @@ const frag = /* glsl */ `
   uniform vec3 uHullProfile[32];
   uniform float uShipYaw;
   uniform float uShipLift;
+  uniform vec2 uBurstImpact;
 
   varying vec3 vWorldPos;
   varying vec3 vNormal;
@@ -185,7 +186,17 @@ const frag = /* glsl */ `
     float spread=1.0+max(trailing,0.0)*.24;
     float wake=(1.0-smoothstep(.2,1.1,abs(abs(local.y)-spread)))*exp(-max(trailing,0.0)*.045)*step(0.0,trailing)*step(trailing,45.0)*speed;
     wake*=smoothstep(.35,.78,breakup)*.36;
+    float impact=0.0;
+    if(uBurstImpact.x>=0.0){
+      vec2 offset=local-vec2(-20.0+uBurstImpact.y,0.0);
+      float radius=length(offset*vec2(.78,1.0));
+      float edge=7.0+uBurstImpact.x*27.0;
+      float cresting=1.0-smoothstep(1.0,5.0,abs(radius-edge));
+      float wash=(1.0-smoothstep(edge*.35,edge,radius))*.58;
+      impact=clamp(cresting+wash,0.0,1.0)*smoothstep(.14,.66,breakup)*exp(-uBurstImpact.x*1.7);
+    }
     float foam=clamp(crest+(contact+wake)*(1.0-step(.5,uShipLift)),0.0,.65);
+    foam=min(.83,foam+impact);
     col=mix(col,vec3(.72,.81,.82),foam);
 
     gl_FragColor = vec4(col, 1.0);
@@ -242,6 +253,7 @@ export const Ocean = forwardRef(function Ocean({ waterLevel = WATER_LEVEL, hullP
           uHullCount: { value: hullProfile.length },
           uShipYaw: { value: 0 },
           uShipLift: { value: 0 },
+          uBurstImpact: { value: new THREE.Vector2(-1,0) },
           uWorldOffset: { value: new THREE.Vector2() },
           uHullProfile: { value: Array.from({length:32},(_,i)=>new THREE.Vector3(...(hullProfile[i]??[0,0,0]))) },
         },
@@ -269,6 +281,10 @@ export const Ocean = forwardRef(function Ocean({ waterLevel = WATER_LEVEL, hullP
     u.uShipYaw.value = shipYaw()
     u.uShipLift.value = voyage.lift
     u.uShipSpeed.value = voyage.speed
+    const age=BURST.seconds-voyage.burst
+    const sinceSplash=age-BURST.charge-BURST.flight
+    if(voyage.burst>0&&sinceSplash>=0)u.uBurstImpact.value.set(sinceSplash,sampleBurst(age).distance-BURST.range)
+    else u.uBurstImpact.value.set(-1,0)
     u.uWorldOffset.value.set(voyage.east,voyage.south)
     u.uCameraPos.value.copy(state.camera.position)
     if (props.sunDir) u.uSunDir.value.copy(props.sunDir).normalize()

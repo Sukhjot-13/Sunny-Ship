@@ -4,6 +4,7 @@ import { useFrame, useThree } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { useStore } from '../state/useStore.js'
 import { CAMERA_MODES } from '../config/shipConfig.js'
+import { BURST, shipYaw, voyage } from '../systems/navigation.js'
 
 export const SUN_DIR = new THREE.Vector3(0.45, 0.78, 0.35).normalize()
 
@@ -112,11 +113,47 @@ export function SkyDome() {
 export function InspectCamera({ target = [0, 0, 0], distance = 45 }) {
   const cameraMode = useStore((s) => s.cameraMode)
   const ready = useRef(false)
+  const orbit = useRef(null)
+  const startingView = useRef(null)
+  const burstView = useMemo(() => ({
+    eye:new THREE.Vector3(),focus:new THREE.Vector3(),up:new THREE.Vector3(0,1,0),
+  }), [])
+
+  useFrame(({camera})=>{
+    const controls=orbit.current
+    if(!controls){startingView.current=null;return}
+    if(voyage.burst===0){
+      const saved=startingView.current
+      if(!saved)return
+      camera.position.copy(saved.eye)
+      controls.target.copy(saved.focus)
+      controls.enabled=true
+      controls.update()
+      startingView.current=null
+      return
+    }
+    startingView.current??={eye:camera.position.clone(),focus:controls.target.clone()}
+    controls.enabled=false
+    const age=BURST.seconds-voyage.burst
+    const weight=Math.min(1,age/BURST.charge,voyage.burst/.62)
+    const blend=weight*weight*(3-2*weight)
+    const lift=Math.max(0,voyage.lift)
+    const elevation=lift/BURST.height
+    const pass=Math.max(0,Math.min(1,(age-BURST.charge-.4)/(BURST.flight-.65)))
+    const sweep=pass*pass*(3-2*pass)
+    const {eye,focus,up}=burstView
+    eye.set(94-178*sweep,34+lift*.72,145+23*Math.sin(pass*Math.PI)+14*elevation).applyAxisAngle(up,shipYaw())
+    focus.set(13-19*sweep,-8+lift*.72+6*elevation,0).applyAxisAngle(up,shipYaw())
+    camera.position.copy(startingView.current.eye).lerp(eye,blend)
+    focus.lerp(startingView.current.focus,1-blend)
+    camera.lookAt(focus)
+  },-.5)
 
   if (cameraMode !== CAMERA_MODES.INSPECT) return null
 
   return (
     <OrbitControls
+      ref={orbit}
       makeDefault
       enabled={cameraMode === CAMERA_MODES.INSPECT}
       target={target}

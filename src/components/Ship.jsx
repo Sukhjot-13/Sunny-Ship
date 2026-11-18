@@ -136,7 +136,7 @@ export function Ship({ sunDir, skyColor = '#9fc4e0', deckY = 0, waterY = -14, ro
     const wind = updateWind(timeRef.current)
 
     if (bobRef.current) {
-      if (useStore.getState().cameraMode === 'explore') {
+      if (useStore.getState().cameraMode === 'explore' || voyage.burst>0) {
         bobRef.current.rotation.set(0, shipYaw(), voyage.pitch, 'YXZ')
         bobRef.current.position.y = voyage.lift
       } else {

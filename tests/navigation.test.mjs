@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict'
-import {voyage,resetVoyage,shipYaw,rotatePoint,dockBounds,advanceVoyage,advanceCannon,cannonAvailability,operateCannon,startBurst,fireGaon,shutterPose,channelName,selectDockChannel,toggleDockShutters,BURST,CHANNELS,LOG_BEARINGS} from '../src/systems/navigation.js'
+import {voyage,resetVoyage,shipYaw,rotatePoint,dockBounds,advanceVoyage,advanceCannon,burstStatus,burstAvailability,sampleBurst,cannonAvailability,operateCannon,startBurst,fireGaon,shutterPose,channelName,selectDockChannel,toggleDockShutters,BURST,CHANNELS,LOG_BEARINGS} from '../src/systems/navigation.js'
 resetVoyage()
 assert.equal(shipYaw(),0)
 assert.equal(CHANNELS.length,6)
@@ -11,11 +11,26 @@ assert(Math.hypot(voyage.east,voyage.south)>10)
 const local=[-25,-30,2],world=rotatePoint(local,shipYaw())
 const restored=rotatePoint(world,-shipYaw())
 assert(restored.every((v,i)=>Math.abs(v-local[i])<1e-10))
-assert(startBurst());assert.equal(voyage.cola,27);assert(!startBurst())
-for(let i=0;i<30;i++)advanceVoyage(.1)
-assert(Math.abs(voyage.lift-BURST.height)<.01,'Burst should reach its airborne apex')
-for(let i=0;i<31;i++)advanceVoyage(.1)
+const departure={east:voyage.east,south:voyage.south,heading:voyage.heading}
+assert(startBurst());assert.equal(voyage.cola,27);assert(!startBurst());assert.equal(burstStatus(),'charging')
+for(let i=0;i<6;i++)advanceVoyage(.1,{right:true})
+assert.equal(voyage.lift,0);assert(voyage.pitch<0&&voyage.east===departure.east,'the bow loads before propulsion')
+let apex=0
+for(let i=0;i<Math.ceil(BURST.seconds/.043)&&burstStatus()!=='landing';i++){
+ advanceVoyage(.043,{right:true})
+ apex=Math.max(apex,voyage.lift)
+}
+assert.equal(burstStatus(),'landing')
+assert(Math.abs(apex-BURST.height)<.02,'Burst should reach its airborne apex')
+assert(voyage.pitch>0,'the bow dips into the landing')
+assert.equal(voyage.heading,departure.heading,'airborne helm input preserves the launch bearing')
+assert(Math.abs(Math.hypot(voyage.east-departure.east,voyage.south-departure.south)-BURST.range)<2)
+assert.equal(sampleBurst(BURST.charge+BURST.flight).distance,BURST.range)
+assert.equal(sampleBurst(BURST.charge+BURST.flight).phase,'landing')
+assert(!burstAvailability().canFire)
+for(let i=0;i<Math.ceil(BURST.landing/.06)&&voyage.burst>0;i++)advanceVoyage(.06)
 assert.equal(voyage.lift,0);assert.equal(voyage.pitch,0);assert.equal(voyage.burst,0)
+assert(burstAvailability().canFire,'same reserve can launch again after the hull settles')
 voyage.channel=4
 const angle=voyage.dockAngle
 advanceVoyage(.1,{},true);assert.equal(voyage.dockAngle,angle)
