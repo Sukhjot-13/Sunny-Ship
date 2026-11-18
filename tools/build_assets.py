@@ -1147,6 +1147,7 @@ meta = {
         "foreFacade":interiors.get('foreFacade'),
         "foreTrimVolumes":interiors['foreTrimVolumes'],
         "workshopTrimRepair":interiors.get('workshopTrimRepair'),
+        "workshopPortCovers":interiors.get('workshopPortCovers', []),
         "foreTrimRepair":interiors['foreTrimRepair'],
         "aftEnclosures":interiors.get('aftEnclosures', []),
         "aftFacade":interiors.get('aftFacade'),

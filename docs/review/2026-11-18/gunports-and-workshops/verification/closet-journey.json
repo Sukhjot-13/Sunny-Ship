@@ -1,0 +1,60 @@
+{
+  "trace": [
+    {
+      "label": "Men Starboard Cannon Closet",
+      "position": [
+        -24.80082701855532,
+        -40.55070114135742,
+        -8.585647913497423
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "Men Port Cannon Closet",
+      "position": [
+        -24.748820569136093,
+        -40.55070114135742,
+        9.330062771163746
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "Women Starboard Cannon Closet",
+      "position": [
+        -26.218834159591278,
+        -36.41469955444336,
+        -8.413927870399142
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "Women Port Cannon Closet",
+      "position": [
+        -24.992096208145785,
+        -36.41469955444336,
+        9.400002826318131
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "return to lawn",
+      "position": [
+        -4.18591203331211,
+        -40.55070114135742,
+        -1.0000000643514444
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    }
+  ],
+  "errors": []
+}

@@ -6,6 +6,8 @@ The closed figurehead’s nose stroke now meets the smile. Four inherited hull b
 
 Both numbered Dock rims now have a rounded dark face and continuous backing into the existing timber reveals. Actual rays find at least 0.177 m of overlapping material at all 96 sampled angles on each side. The numbered shutters, physical mouth opening and collision remain exact. [Rim views and checks](review/2026-11-18/dock-rims/)
 
+Four real lined apertures connect the fore closet cannons to the bow. Four fitted low covers enclose the exposed hull ports at the aft B1 floor. The rig retains the configured reference envelope and the reconstructed deployed pose. Exact mast and yard placement remains approximate because the supplied views imply different coordinates. [Final exterior ledger](exterior-feature-ledger.md) · [Gunport and workshop checks](review/2026-11-18/gunports-and-workshops/)
+
 ## Enclosed interior furnishing and materials — November 18, 2026
 
 Aquarium commit `1b1a9aa` is pushed. The [Library](library-reference-audit.md) is applied locally in `437106d`, including the working Bath ladder and three verified access round trips. The [Bath suite](bath-reference-audit.md) has passed the scoped finish and access checks, including the washroom and toilet. The [interior matrix](interior-acceptance-matrix.md) tracks completed sections. Preserve the verified rooms and exterior through scoped comparisons.

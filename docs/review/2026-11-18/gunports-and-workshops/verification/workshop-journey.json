@@ -1,0 +1,60 @@
+{
+  "trace": [
+    {
+      "label": "Usopp's Main Factory",
+      "position": [
+        14.485583112237462,
+        -47.15060043334961,
+        -7.200000001591658
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "assembly bench",
+      "position": [
+        14.599996977610239,
+        -47.15060043334961,
+        -9.52572189450196
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "Franky's Weapon Development Room",
+      "position": [
+        14.399999999999459,
+        -47.15060043334961,
+        5.149041873266349
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "drawing bench",
+      "position": [
+        12.618115375498878,
+        -47.15060043334961,
+        6.598725085203131
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "return to lawn",
+      "position": [
+        -4.162489804289485,
+        -40.55070114135742,
+        -0.9999999564956434
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    }
+  ],
+  "errors": []
+}

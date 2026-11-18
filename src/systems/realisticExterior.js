@@ -121,7 +121,7 @@ export function realisticTextureSet(role){
  textures.set(role,result);return result
 }
 
-const outdoorFeatures=/^(?:AftEntryDeck|AftF2|AftFacade|AftFrontOrnament\d+|AquariumFrontPort\d+|AftEntrance|Anchor|AquariumDoorApproach|AquariumLadder|AquariumWindow|CoupDeBurst|DiningWindow|Dock1|DockNumber|DockSlat|ForedeckSupport|ForeEntryTunnel|ForePortGallery|ForeFrontPort\d+|ForeFacade\w*|ForeLanding|ForeUpperLanding|ForeStair|AftStair|ForePortRail|ForeStarRail|ForeUpperRail|ForeDoorApproach|ForeStarboardDoorApproach|WomensDoorApproach|Gaon|GardenDeck|GardenStair|Helm|HullPort\d+|KitchenChimney|Lantern|Lawn|LawnSidewalk-?1|LibraryRoof|LionEye|LionSmile|LogPose|Lookout|MastPlatform|Mikan\d+|Paddle|PopGreens|RobinGarden|SailTie|ShadeTree|Slide|SoldierDock|SternAccess|SternBalcony|Swing|Usopp)$/
+const outdoorFeatures=/^(?:AftEntryDeck|AftF2|AftFacade|AftFrontOrnament\d+|AquariumFrontPort\d+|AftEntrance|Anchor|AquariumDoorApproach|AquariumLadder|AquariumWindow|CoupDeBurst|DiningWindow|Dock1|DockNumber|DockSlat|ForedeckSupport|ForeEntryTunnel|ForePortGallery|ForeFrontPort\d+|ForeFacade\w*|ForeLanding|ForeUpperLanding|ForeStair|AftStair|ForePortRail|ForeStarRail|ForeUpperRail|ForeDoorApproach|ForeStarboardDoorApproach|WomensDoorApproach|Gaon|GardenDeck|GardenStair|Helm|HullPort\d+|HullPortCloset|KitchenChimney|Lantern|Lawn|LawnSidewalk-?1|LibraryRoof|LionEye|LionSmile|LogPose|Lookout|MastPlatform|Mikan\d+|Paddle|PopGreens|RobinGarden|SailTie|ShadeTree|Slide|SoldierDock|SternAccess|SternBalcony|Swing|Usopp)$/
 /** Protect authored room finishes/furniture while upgrading actual exterior. */
 export function usesRealisticExterior(tags,name){
  if(!tags.sunny_uv_space)return false

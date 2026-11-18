@@ -68657,7 +68657,7 @@
     ],
     "doorCount": 33,
     "partitions": 53,
-    "furniture": 2316,
+    "furniture": 2320,
     "workshopTrimRepair": [
       {
         "node": "Box118",
@@ -68678,6 +68678,48 @@
         "node": "Line007",
         "sourceFaces": 10536,
         "resultFaces": 10514
+      }
+    ],
+    "workshopPortCovers": [
+      {
+        "node": "Sunny_WorkshopPortCover_2_port",
+        "hardware": [
+          "Sunny_HullPort2_port_bore",
+          "Sunny_HullPort2_port_bore_rear",
+          "Sunny_HullPort2_port_frame",
+          "Sunny_HullPort2_port_inner"
+        ],
+        "side": "port"
+      },
+      {
+        "node": "Sunny_WorkshopPortCover_2_starboard",
+        "hardware": [
+          "Sunny_HullPort2_starboard_bore",
+          "Sunny_HullPort2_starboard_bore_rear",
+          "Sunny_HullPort2_starboard_frame",
+          "Sunny_HullPort2_starboard_inner"
+        ],
+        "side": "starboard"
+      },
+      {
+        "node": "Sunny_WorkshopPortCover_0_port",
+        "hardware": [
+          "Sunny_HullPort0_port_bore",
+          "Sunny_HullPort0_port_bore_rear",
+          "Sunny_HullPort0_port_frame",
+          "Sunny_HullPort0_port_inner"
+        ],
+        "side": "port"
+      },
+      {
+        "node": "Sunny_WorkshopPortCover_0_starboard",
+        "hardware": [
+          "Sunny_HullPort0_starboard_bore",
+          "Sunny_HullPort0_starboard_bore_rear",
+          "Sunny_HullPort0_starboard_frame",
+          "Sunny_HullPort0_starboard_inner"
+        ],
+        "side": "starboard"
       }
     ]
   },
@@ -69239,6 +69281,56 @@
           ],
           "yawDegrees": 38,
           "tiltDegrees": -11
+        }
+      ],
+      "closetGunports": [
+        {
+          "node": "Sunny_ClosetPort_F1_-1",
+          "barrel": "Sunny_Quarters_cannon-1_barrel",
+          "axis": [
+            -25.8028564453125,
+            -40.03871536254883
+          ],
+          "inner": -11.179915868282317,
+          "exit": -15.843745248476665,
+          "direction": -1,
+          "clearRadius": 0.176
+        },
+        {
+          "node": "Sunny_ClosetPort_F1_1",
+          "barrel": "Sunny_Quarters_cannon1_barrel",
+          "axis": [
+            -25.8028564453125,
+            -40.03871536254883
+          ],
+          "inner": 13.661187194824217,
+          "exit": 18.340865668614708,
+          "direction": 1,
+          "clearRadius": 0.176
+        },
+        {
+          "node": "Sunny_ClosetPort_F2_-1",
+          "barrel": "Sunny_Womens_cannon-1_barrel",
+          "axis": [
+            -25.652856826782227,
+            -35.90271759033203
+          ],
+          "inner": -11.800031545797983,
+          "exit": -16.14779203828176,
+          "direction": -1,
+          "clearRadius": 0.176
+        },
+        {
+          "node": "Sunny_ClosetPort_F2_1",
+          "barrel": "Sunny_Womens_cannon1_barrel",
+          "axis": [
+            -25.652856826782227,
+            -35.90271759033203
+          ],
+          "inner": 14.281298481464384,
+          "exit": 18.644831634521484,
+          "direction": 1,
+          "clearRadius": 0.176
         }
       ]
     },
@@ -71948,6 +72040,10 @@
       "Sunny_Bath_wc_sign",
       "Sunny_Bath_wc_toilet_bowl",
       "Sunny_Bath_wc_toilet_foot",
+      "Sunny_ClosetPort_F1_-1",
+      "Sunny_ClosetPort_F1_1",
+      "Sunny_ClosetPort_F2_-1",
+      "Sunny_ClosetPort_F2_1",
       "Sunny_CoupDeBurst_bore",
       "Sunny_CoupDeBurst_hoop",
       "Sunny_CoupDeBurst_hoop.001",
@@ -77665,7 +77761,11 @@
       "Sunny_WorkshopDoor_frame_head",
       "Sunny_WorkshopDoor_frame_jamb-1",
       "Sunny_WorkshopDoor_frame_jamb1",
-      "Sunny_WorkshopDoor_handle"
+      "Sunny_WorkshopDoor_handle",
+      "Sunny_WorkshopPortCover_0_port",
+      "Sunny_WorkshopPortCover_0_starboard",
+      "Sunny_WorkshopPortCover_2_port",
+      "Sunny_WorkshopPortCover_2_starboard"
     ],
     "trim": [
       "Circle003.001",
@@ -77695,7 +77795,7 @@
     "floorSlabDepth": 0.6
   },
   "counts": {
-    "shipObjects": 8072,
+    "shipObjects": 8080,
     "removedJunkObjects": 102,
     "skippedDegenerateMeshes": 3
   }

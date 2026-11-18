@@ -1503,7 +1503,7 @@ def build_interiors(objects, vertex_bbox, shift, aft_snapshot=None):
                  openings=((door_x-wall_x, 1.0, 2.15),), key='cream', thickness=0.18)
         door('WomensCannonDoor%d' % side, ((w[0] + w[1]) / 2, yv, F2F), 0.0, 1.0, 2.15,
              'swing', side, rooms=("Women's Quarters", 'Gun Closet'), key='white')
-        cannon('Womens_cannon%d' % side, ((w[0] + w[1]) / 2 - 0.9, yv + side * 1.2, F2F), side*math.pi/2, 0.8)
+        cannon('Womens_cannon%d' % side, ((w[0] + w[1]) / 2 + 0.37, yv + side * 1.2, F2F), side*math.pi/2, 0.8)
     rooms.append(dict(level='F2F', name="Women's Quarters", x=w, y=wy_))
 
     # women's washroom, with the wine and tea cupboard

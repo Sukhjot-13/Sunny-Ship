@@ -1,8 +1,8 @@
 {
-  "source": "/private/tmp/sunny-square-rig-slope-candidate/sunny-master.blend",
-  "workingVisualSource": "/private/tmp/sunny-square-rig-slope-candidate/sunny.glb",
-  "sourceSha256": "4dc7594f070ced4c2b343d473b8210ad9cc8c7d0efcc643223d8d44fa347351c",
-  "workingVisualSha256": "f4f8381c5a8591f27ddd0c81ae81e396c82fc618b78731ce6f03dc7ea75859f7",
+  "source": "assets/sunny-master.blend",
+  "workingVisualSource": "public/models/sunny.glb",
+  "sourceSha256": "6b06a8aef0c8a02111be87d4966f7aa1d32bfad8eaa474fc58463739f32733d4",
+  "workingVisualSha256": "f3b41dd054de13fcc082ec962318acf0219e76b9f961ba71de0a87072cc08f56",
   "workingScale": 2.2,
   "referenceScale": 1,
   "rootMultiplier": 0.45454545454545453,

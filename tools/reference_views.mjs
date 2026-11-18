@@ -67,6 +67,16 @@ for(const opening of meta.exterior.mechanisms.dockOpenings??[]){
  const [x,y,z]=opening.centre,side=opening.side==='port'?1:-1,target=[x,z,-y]
  views.push(['dock-rim-'+opening.side,offset(target,[5,5,side*25]),target,'R01/R02/R14',55])
 }
+for(const opening of meta.exterior.mechanisms.closetGunports??[]){
+ const [x,y]=opening.axis,side=-opening.direction
+ const suffix=opening.node.replace('Sunny_ClosetPort_','').replace('_-1','-port').replace('_1','-starboard')
+ const outer=[x,y,-opening.exit]
+ views.push(['closet-port-'+suffix,offset(outer,[-.55,.45,side*2.8]),outer,'R09 exterior gunport',53])
+}
+for(const cover of meta.interiors.workshopPortCovers??[]){
+ const target=centre(cover.node),side=cover.side==='port'?1:-1
+ views.push([cover.node.replace('Sunny_WorkshopPortCover_','workshop-cover-'),offset(target,[-2.7,1.5,-side*3.5]),target,'B1 fitted workshop floor junction',69])
+}
 for(const id of ['ForeDoor','WomensDoor','AquariumDoor','AftEntrance','DiningEntrance','KitchenEntrance','LibraryDoor']){
  const spec=meta.interiors.doors.find(d=>d.id===id);if(!spec)continue
  const [x,y,z]=spec.pos,normal=[-Math.sin(spec.rot),0,-Math.cos(spec.rot)]

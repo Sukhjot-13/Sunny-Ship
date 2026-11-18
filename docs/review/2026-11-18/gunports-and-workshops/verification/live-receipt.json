@@ -1,0 +1,19 @@
+{
+  "backup": "/private/tmp/sunny-fore-b1-live-before",
+  "stage": "/private/tmp/sunny-fore-b1-final",
+  "url": "http://localhost:5173",
+  "applied": {
+    "assets/sunny-master.blend": "6b06a8aef0c8a02111be87d4966f7aa1d32bfad8eaa474fc58463739f32733d4",
+    "public/models/sunny.glb": "f3b41dd054de13fcc082ec962318acf0219e76b9f961ba71de0a87072cc08f56",
+    "public/models/sunny-collision.glb": "6864d80fd5c9715d6fd152cf9e75141391a989b90ab1f49c896027c1651df9c9",
+    "public/models/ship-metadata.json": "0a69104468dc44ab2fbd4f89197537e7c98dbf5bf9e9a9f6327f96f8b4bcf8ed",
+    "assets/reference/sunny-reference.blend": "66db676939758596c498f1c82baa563d8661380ed225d371e9672db55e0160c4",
+    "assets/reference/sunny-reference.glb": "7194c9b48643c080668485cf30b349218bc75b11ce37a41f098039a2e379807e",
+    "assets/reference/dimensions.json": "162231ee9f238c921d042c199b037d8a1177e3bf9f592abd97df04983ddcbb97"
+  },
+  "served": {
+    "sunny.glb": "f3b41dd054de13fcc082ec962318acf0219e76b9f961ba71de0a87072cc08f56",
+    "sunny-collision.glb": "6864d80fd5c9715d6fd152cf9e75141391a989b90ab1f49c896027c1651df9c9",
+    "ship-metadata.json": "0a69104468dc44ab2fbd4f89197537e7c98dbf5bf9e9a9f6327f96f8b4bcf8ed"
+  }
+}

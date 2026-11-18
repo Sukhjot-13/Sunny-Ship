@@ -1376,7 +1376,7 @@ def restore_exterior(objects, vertex_bbox):
     library_ceiling_finish(objects)
     # Final construction ownership follows all overlap/topology cleanup so a
     # later n-gon tessellation cannot bridge a repaired room boundary.
-    from sunny_fore_trim import reconcile_fore_trim, reconcile_workshop_trim
+    from sunny_fore_trim import fit_workshop_port_covers, reconcile_fore_trim, reconcile_workshop_trim
     log(f'[pipeline]   fore trim final construction cuts: {reconcile_fore_trim(objects,interiors)}')
     log(f'[pipeline]   workshop trim final construction cuts: {reconcile_workshop_trim(objects,interiors)}')
     from sunny_surfaces import smooth_painted_normals
@@ -1385,6 +1385,11 @@ def restore_exterior(objects, vertex_bbox):
     for obj in repaired:
         smooth_painted_normals(obj)
     prepare_exterior_uvs(repaired)
+    from sunny_closet_ports import fit_closet_ports
+    ports,interiors['exteriorMechanisms']['closetGunports']=fit_closet_ports(vertex_bbox)
+    covers,interiors['workshopPortCovers']=fit_workshop_port_covers(objects,interiors['levels']['B1'])
+    objects.extend(ports+covers)
+    prepare_exterior_uvs(ports)
     bpy.context.view_layer.update()
     levels=dict(interiors['levels'])
     levels['foredeck']=vertex_bbox(next(o for o in objects if o.name=='Sunny_ForeUpperLanding'))[1].z

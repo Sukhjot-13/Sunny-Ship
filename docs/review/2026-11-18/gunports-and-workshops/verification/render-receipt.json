@@ -1,0 +1,123 @@
+{
+  "phase": "final",
+  "modelDir": "/private/tmp/sunny-fore-b1-final",
+  "previewURL": "http://localhost:5174",
+  "shots": [
+    {
+      "name": "stern-quarter",
+      "camera": [
+        75,
+        -6,
+        -65
+      ],
+      "target": [
+        8,
+        -24,
+        -1.287
+      ],
+      "reference": "R01/R02/R13"
+    },
+    {
+      "name": "closet-port-F1-port",
+      "camera": [
+        -26.3528564453125,
+        -39.588715362548825,
+        18.643745248476666
+      ],
+      "target": [
+        -25.8028564453125,
+        -40.03871536254883,
+        15.843745248476665
+      ],
+      "reference": "R09 exterior gunport"
+    },
+    {
+      "name": "closet-port-F1-starboard",
+      "camera": [
+        -26.3528564453125,
+        -39.588715362548825,
+        -21.14086566861471
+      ],
+      "target": [
+        -25.8028564453125,
+        -40.03871536254883,
+        -18.340865668614708
+      ],
+      "reference": "R09 exterior gunport"
+    },
+    {
+      "name": "closet-port-F2-port",
+      "camera": [
+        -26.202856826782227,
+        -35.45271759033203,
+        18.94779203828176
+      ],
+      "target": [
+        -25.652856826782227,
+        -35.90271759033203,
+        16.14779203828176
+      ],
+      "reference": "R09 exterior gunport"
+    },
+    {
+      "name": "closet-port-F2-starboard",
+      "camera": [
+        -26.202856826782227,
+        -35.45271759033203,
+        -21.444831634521485
+      ],
+      "target": [
+        -25.652856826782227,
+        -35.90271759033203,
+        -18.644831634521484
+      ],
+      "reference": "R09 exterior gunport"
+    },
+    {
+      "name": "workshop-cover-2_port",
+      "camera": [
+        12.380125808715821,
+        -45.51909637451172,
+        9.839253425598145
+      ],
+      "target": [
+        15.08012580871582,
+        -47.01909637451172,
+        13.339253425598145
+      ],
+      "reference": "B1 fitted workshop floor junction"
+    },
+    {
+      "name": "workshop-cover-2_starboard",
+      "camera": [
+        12.380125808715821,
+        -45.51909637451172,
+        -12.410114288330078
+      ],
+      "target": [
+        15.08012580871582,
+        -47.01909637451172,
+        -15.910114288330078
+      ],
+      "reference": "B1 fitted workshop floor junction"
+    }
+  ],
+  "context": {
+    "drawCalls": 64,
+    "triangles": 150286,
+    "framesPerSecond": 33.81402287419194,
+    "viewport": [
+      1440,
+      900
+    ],
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)"
+  },
+  "errors": [],
+  "consoleErrors": [],
+  "assets": {
+    "sunny.glb": "f3b41dd054de13fcc082ec962318acf0219e76b9f961ba71de0a87072cc08f56",
+    "sunny-collision.glb": "6864d80fd5c9715d6fd152cf9e75141391a989b90ab1f49c896027c1651df9c9",
+    "ship-metadata.json": "0a69104468dc44ab2fbd4f89197537e7c98dbf5bf9e9a9f6327f96f8b4bcf8ed"
+  },
+  "note": "Appearance survey only. Main camera moves; no mesh hiding, player placement or movement-proof claim."
+}

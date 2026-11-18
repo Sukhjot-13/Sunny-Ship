@@ -155,3 +155,47 @@ def reconcile_workshop_trim(objects, interiors):
         receipt.append(dict(node=obj.name,sourceFaces=source_faces,resultFaces=result_faces))
     interiors['workshopTrimRepair']=receipt
     return receipt
+
+
+def fit_workshop_port_covers(objects, floor):
+    """Box in the shallow port crowns that meet both aft work-bay floors."""
+    from mathutils import Vector
+    from sunny_accuracy import yard_skin
+    from sunny_room_accuracy import soft_box
+
+    records, covers = [], []
+    lining = [yard_skin(obj) for obj in objects if obj.name.startswith('Sunny_InteriorWall_B1_')]
+    stations = ((index, side, direction, finish)
+                for index in (2, 0)
+                for side, direction, finish in (('port', -1, 'workshop_painted_steel'),
+                                                ('starboard', 1, 'workshop_maple')))
+    for index, side, direction, finish in stations:
+        prefix = f'Sunny_HullPort{index}_{side}'
+        hardware = [obj for obj in objects if obj.name.startswith(prefix)]
+        cutoff = floor - .035
+        exposed = []
+        for obj in hardware:
+            points = [obj.matrix_world @ vertex.co for vertex in obj.data.vertices]
+            exposed.extend(point for point in points if point.z >= cutoff)
+            for edge in obj.data.edges:
+                a, b = (points[index] for index in edge.vertices)
+                if (a.z < cutoff) != (b.z < cutoff):
+                    exposed.append(a.lerp(b, (cutoff-a.z)/(b.z-a.z)))
+        x0 = min(p.x for p in exposed) - .08
+        x1 = max(p.x for p in exposed) + .08
+        top = max(p.z for p in exposed) + .032
+        front = min(direction*p.y for p in exposed) - .065
+        x = (x0+x1)/2
+        outward = Vector((0, direction, 0))
+        wall = []
+        for station in (x0, x, x1):
+            origin = Vector((station, 0, floor+.15))
+            hits = [bvh.ray_cast(origin, outward, 23)[0] for bvh in lining]
+            wall.append(min(direction*p.y for p in hits if p is not None))
+        back = max(*wall, *(direction*p.y for p in exposed)) + .045
+        assert back > front and top-floor < .40, 'workshop cover must stay at the base of the wall'
+        cover = soft_box(f'WorkshopPortCover_{index}_{side}', (x, direction*(front+back)/2, (cutoff+top)/2),
+                         0, (x1-x0, back-front, top-cutoff), finish, radius=.018)
+        covers.append(cover)
+        records.append(dict(node=cover.name, hardware=[obj.name for obj in hardware], side=side))
+    return covers, records

@@ -90,6 +90,7 @@ const suites=[
  ['dockRotatingClearance.test.mjs','C03 actual rotating chamber clearance'],
  ['dockAlignment.test.mjs','C03 selected bay alignment'],
  ['dockOutletShell.test.mjs','C02 complete local mouth shell and body clearance'],
+ ['closetGunports.test.mjs','actual aligned cannon closet port openings'],
  ['dockApertures.test.mjs','C02 actual paired dock lining apertures'],
  ['foreTrim.test.mjs','C01 actual exported fore trim clearance'],
  ['foreStorage.test.mjs','C01 real storage enclosure and physical join'],

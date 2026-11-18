@@ -20,7 +20,8 @@ const roomDeltas=[['aquarium-room-delta',rooms.find(room=>room.name==='Aquarium 
  ['lower-interior-room-delta',meta.interiors.lookoutRoom],
  ['exterior-detail-delta',meta.interiors.workshopTrimRepair],
  ['dock-rim-delta',meta.exterior.mechanisms.dockOpenings?.length&&meta.exterior.mechanisms.dockOpenings.every(opening=>opening.rim)],
- ['square-rig-delta',meta.exterior.mechanisms.squareRigPose?.length]]
+ ['square-rig-delta',meta.exterior.mechanisms.squareRigPose?.length],
+ ['fore-gunport-delta',meta.exterior.mechanisms.closetGunports?.length]]
 for(const [fixture,active] of roomDeltas){
  if(!active)continue
  const roomPatch=JSON.parse(fs.readFileSync(`tests/fixtures/${fixture}.json`))
