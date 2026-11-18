@@ -1,0 +1,7 @@
+# Fore cabins and washrooms — November 18, 2026
+
+The R09 fore rooms now have fitted cedar berths and linen on the original suspension, six vented lockers, low blue kotatsu cushions, rounded red seating, a single canopied bed with a woven coverlet, and a supported oval vanity. Both washrooms have rounded porcelain basins and mirrors. The women’s cupboard carries the original tea service and new wine bottles. Both under-stair toilets have rounded porcelain fittings, and all four cannon closets have cast iron and oiled timber surfaces on the retained models.
+
+The first tea cupboard overlapped the previously verified women’s entry corridor. Moving it inward changed only 36 cupboard, bottle and tea-set meshes and seven furniture colliders. The original R09 body clearance check passed on the corrected model. The [continuous keyboard trace](review/2026-11-18/fore-cabins/verification/room-set-journey.json) records both cabins, both washrooms, all four closets, both toilets and the final lawn return.
+
+The [final views](review/2026-11-18/fore-cabins/final/) and [asset checks](review/2026-11-18/fore-cabins/verification/static.log) are from the same applied model. The isolated package retained all doors, every floor collider, 57,401 frozen hull boxes and 7,687 other visual meshes. Exact reversible scaling passed across all 7,951 meshes. See the [live receipt](review/2026-11-18/fore-cabins/verification/live-receipt.json).

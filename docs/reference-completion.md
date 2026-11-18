@@ -2,7 +2,7 @@
 
 Aquarium commit `1b1a9aa` is pushed. The [Library](library-reference-audit.md) is applied locally in `437106d`, including the working Bath ladder and three verified access round trips. The [Bath suite](bath-reference-audit.md) has passed the scoped finish and access checks, including the washroom and toilet. The [interior matrix](interior-acceptance-matrix.md) tracks these checkpoints and the active Dining room. Preserve the verified rooms and exterior through scoped comparisons.
 
-The [Dining Room](dining-reference-audit.md), [Kitchen](kitchen-reference-audit.md), and [rear service rooms](rear-service-room-audit.md) are applied locally. The full aft walk now includes the Kitchen workstations and both Pantry and Sick Bay outside thresholds. The shared entrance, checker floor and mast service lift are protected. Fore cabins, washrooms and cannon closets are active. The remaining exterior stays parked.
+The [Dining Room](dining-reference-audit.md), [Kitchen](kitchen-reference-audit.md), [rear service rooms](rear-service-room-audit.md), and [fore cabin suite](fore-cabin-reference-audit.md) are applied locally. The verified routes include both Pantry and Sick Bay outside thresholds, the fore cabins and washrooms, all four cannon closets and both under-stair toilets. The lower rooms and enclosed lookout are active. The remaining exterior, including the open observation deck and its branch office, stays parked.
 
 ## Aquarium Bar applied — November 17, 2026
 

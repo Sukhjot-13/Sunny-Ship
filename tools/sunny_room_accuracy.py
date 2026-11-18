@@ -10,7 +10,7 @@ import bpy
 import bmesh
 from mathutils import Vector
 from sunny_exterior import PALETTE, material, box, pole, ring, sphere, text, clip_face, assign_world_mesh
-from sunny_interiors import L, rbox, rpole, sofa, armchair, stool, desk, shelf_unit, laundry_hamper
+from sunny_interiors import L, rbox, rpole, sofa, armchair, stool, desk, laundry_hamper
 
 PALETTE.update({
     'tile_ivory': '#e9ddbd', 'tile_dark': '#394344',
@@ -333,6 +333,12 @@ def complete_room_fittings(objects, frame, interiors):
     rooms={room['name']:room for room in interiors['rooms']}
     cy=frame.y(.585)
     quarters_details(frame,levels,rooms)
+    from sunny_quarters import finish_cannon_closet_surfaces, finish_forward_toilets, finish_mens, finish_womens, finish_washrooms
+    finish_mens(rooms["Men's Quarters"],levels['F1'],frame)
+    finish_womens(rooms["Women's Quarters"],levels['F2F'],frame)
+    finish_washrooms(rooms,levels)
+    finish_cannon_closet_surfaces()
+    finish_forward_toilets(rooms,levels['F1'])
     kitchen_details(cy,levels['F2A'])
     from sunny_kitchen import finish_galley
     galley_light=finish_galley(rooms['Kitchen'],cy,levels['F2A'])
@@ -347,10 +353,6 @@ def complete_room_fittings(objects, frame, interiors):
     lc=(rooms['Library']['x'][0]+rooms['Library']['x'][1])/2
     from sunny_bath import bath_details, bath_floor_finish
     bath_details(lc,cy,levels['F3B'],rooms['Bath'])
-    for obj in list(bpy.data.objects):
-        if obj.type=='MESH' and obj.name.startswith('Sunny_Womens_sofa') and any(word in obj.name for word in ('_base','_back','_arm','_cushion')):
-            obj.data.materials.clear();obj.data.materials.append(material('upholstery_lilac'))
-            for face in obj.data.polygons:face.material_index=0
     from sunny_pantry import finish_dry_stores
     pantry_light=finish_dry_stores(rooms['Pantry'],interiors['doors'],cy,levels['F2A'])
     from sunny_room_details import complete_reference_details

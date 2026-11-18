@@ -1,0 +1,362 @@
+{
+  "visual": {
+    "unchanged": 7915,
+    "removed": {},
+    "updated": {
+      "Sunny_WWash_cupboard_back": {
+        "before": "ca47e577ad48387ce6a839d5a2a2cecb59c67f97166ca858c1741e96bdbb2cd9",
+        "after": "142d922fef49f845c9489fca27f86e22e595484397c85d6552d5b2005499cd3a"
+      },
+      "Sunny_WWash_cupboard_door": {
+        "before": "743cf4148783669c34434bc6420dcde941d5a07fa15b574de9a4f2722abdc6ba",
+        "after": "0e1c1b5f0f9d6590783761c3896cd8aeefbf28e2ddacfab373316c55091d9153"
+      },
+      "Sunny_WWash_cupboard_door.001": {
+        "before": "78c61e89bf43354576b3b08db6325948cc0def6a593bce77b16e4531dabbcf41",
+        "after": "7a83f4ca188126d24fdb15028c3073654914e1f9ce4445f2e43ca79797ffa24e"
+      },
+      "Sunny_WWash_cupboard_pull": {
+        "before": "1f55eedbdcaeec833fb7d36a712e9a6afb1ab4be2a204cae10d424c95172b3a7",
+        "after": "ba26ed008f30e3ce1a2703997df9438b5c90c1628fdcc927441e32bed5cad52c"
+      },
+      "Sunny_WWash_cupboard_pull.001": {
+        "before": "3bd902bec1bf663014f37cdfb7fed8acb8433b71994c2a051708c170d9aa21c9",
+        "after": "91d373dcde4ae016401f63a03caef4cab84d1e3ffd7784ed2d3128baf304c77b"
+      },
+      "Sunny_WWash_cupboard_shelf0": {
+        "before": "d859c87c097db9388b4693a080e732b8145211a49c6b5a9491688933f994f012",
+        "after": "ecb1feb715aff7aaa5dfb955cafbe18f4df673cc673dffb812ea008e20099715"
+      },
+      "Sunny_WWash_cupboard_shelf1": {
+        "before": "46e742e4abc7cc4a9b02c54b52abda48f6d95183b13604f98c1534581cb26167",
+        "after": "efddeec1e71bde36aa92682efe6a155bced3348d1d8e6d9fb150f2237a9ae856"
+      },
+      "Sunny_WWash_cupboard_shelf2": {
+        "before": "5968a0b8fa6dc579dbae0bfbb5749725fc3dcf8255c42267c9dbe1dceb935a3b",
+        "after": "02da90ceb8d63f5df688c72f1da71525314ee7ed54172218b6316622f7eef37b"
+      },
+      "Sunny_WWash_cupboard_shelf3": {
+        "before": "a9121dc4ab199a34c576fb57d841c647de3555ccebf3b3106952c611f7d03bc9",
+        "after": "8e0bfc84e9b52080264e0b24568d4ac0fbdeb36ff8cddf6769d58d0883eb7f91"
+      },
+      "Sunny_WWash_cupboard_side": {
+        "before": "a1805901dd6f2b65134106c81de8d110e8c200889d0eaf625c5bf8749cc478ca",
+        "after": "3b784d6385c58d292e27f6063ffd134f1e63cd1c76d7a8ee96bb4ef3ae270366"
+      },
+      "Sunny_WWash_cupboard_side.001": {
+        "before": "64d71938c7b67a385a8ff711c56dd81e0c7a3f0ce09318855c2c02d75711de1c",
+        "after": "8537d470dd96de44bda6225dc61d9891b6d23360d8d98088b865465631ad30ce"
+      },
+      "Sunny_WWash_tea": {
+        "before": "1c53d6c02f117030e8c6336360371e116eb96fde95c59717fbe6ad001b95f661",
+        "after": "47b8c22f13f886330e59e9f21d9db0f7ca6602298c8182083d0772361f659a2a"
+      },
+      "Sunny_WWash_tea.001": {
+        "before": "c139ce4ae777e8691727ebd9e61fbceac0dac9f5bcc81882c326d4c0dd36013b",
+        "after": "9f0ad02ed8201bf96f3752e8ff8f9a4378ac28b309ac64c5448b1b6d49dd6cb5"
+      },
+      "Sunny_WWash_tea.002": {
+        "before": "ac149c835844228d507e73068ff3a59d9f08ae5a8f82200e0424078b767d78e1",
+        "after": "5b39c6db93268f87f736f0e9af4725a0ba5aae9cdfef2ac25172275bced320b1"
+      },
+      "Sunny_WWash_tea.003": {
+        "before": "ed7bffc849f42d9b43f26666cfb700d5c65ab5d0888b0170e36df145f65ff956",
+        "after": "24a7dd0789676696820a39144d902a6dacc781c80b2962822db53faf96f22c74"
+      },
+      "Sunny_WWash_teacup": {
+        "before": "bc98b9b419a5bddb6d63cb6ad671fc6c3a738c293aeea9f0131d8e62c718fa88",
+        "after": "bcd435e85c0aa617d63a1db616a4d223cc3f17bfd7d3b43c31c7f7051b1ae3d4"
+      },
+      "Sunny_WWash_teacup.001": {
+        "before": "a862b0e0d5e678064d68670619574ed30ac873f7b959565b2f4549c0e7828ffc",
+        "after": "9a972f84364466e93c2de1005fe473e2ea50d002baf86c61e6712a86de577902"
+      },
+      "Sunny_WWash_teacup.002": {
+        "before": "2245b67ed30713eddb363cb871cc189e2cfe24b0f0bc79d61f234792feb2ac89",
+        "after": "2032b1f1990eb5051b1c5b645b1bc30e069d96d7ff9a244f665f7aa89ab550aa"
+      },
+      "Sunny_WWash_teacup.003": {
+        "before": "58291162136b47c5b034d9500f0f8e4e284f6b09cf87e1c3eb99fd6d46be4eed",
+        "after": "d68316b3e49d16de3ae4b9a683fc1f0bd2a9863ad16836fe91eb091fdab9e0aa"
+      },
+      "Sunny_WWash_teapot": {
+        "before": "74c250496cc3ce9fd9dbb718fe93ae0d0e7e2d5e98d30893c73242fbfe79fc69",
+        "after": "3202247df19ecd4f705d11ff726662ce20792b8dcc0fbc026be0eb96eb33d7b3"
+      },
+      "Sunny_WWash_teapot_handle": {
+        "before": "82e4ddd74c38979988d5a56fb6948071893d516dc96de7200b3a114a780586ca",
+        "after": "e5d89664fe5aebe5d1175bb7c6258e6a02b48ade82283a4a151c61ce29005ed7"
+      },
+      "Sunny_WWash_teapot_knob": {
+        "before": "17aea25849b8e53827c50df742e352bc052a1c3d62aa62e5d361358b568615ed",
+        "after": "2745ed087487075505a1c129216f3f6083c90c060747675a8f96ecea1b50a059"
+      },
+      "Sunny_WWash_teapot_lid": {
+        "before": "a0f667d81071b0e5a6da1614e7d75936d0fe58587dc7400512cf3bbd28d3c07f",
+        "after": "679f25d7347e9691ffbba667a987c6012f5ab127f5246082893f630327b2e324"
+      },
+      "Sunny_WWash_teapot_spout": {
+        "before": "d7243063856cfa0eadbf21c0e9772d85338968fff855ebecf29511021d0444a7",
+        "after": "dc3b11d546bd5552f24eda309b51dc704cd438abf5f4f5938223925ee8fb433f"
+      },
+      "Sunny_WWash_wine_bottle": {
+        "before": "7df01a6748f3f972c94c10b881f61658ef3c2af4680c8090a1b156182fab8593",
+        "after": "684089f44a2cb892786230aeca3b3df56cb4dea6828c1c1dba92e0d31267f481"
+      },
+      "Sunny_WWash_wine_bottle.001": {
+        "before": "36b0211a5ccd3194239ebf9e9c5353a04fdade14e0b98837079e1e1a061a25ac",
+        "after": "0b3fec06f8673b1c7595c18cdc966a2134c37731b9df720e369fe0f66409ee8e"
+      },
+      "Sunny_WWash_wine_bottle.002": {
+        "before": "a1bc958b5cec114b031252a885e63e8b62199367f35ceda72ef6727f16a4947b",
+        "after": "8118236b2977d7446e6a894ef8c27779910e1fa77b2089be3575e948ac05f887"
+      },
+      "Sunny_WWash_wine_bottle.003": {
+        "before": "12fbe879e627aa0387e5a9f9eed1672813931e79c3056d98bd955f08cf61a4a9",
+        "after": "e905a8cd5ad8cc796c89e0a572281b5405b69e53cde24ff1bbf5ddeb51c74095"
+      },
+      "Sunny_WWash_wine_label": {
+        "before": "82628d83951744a240feef4f0227f1b41d23c3dcad4ae384828f06f73520c442",
+        "after": "cb0915d8e9f35ac30706b12448ec98a22ebc3a2af6fc4c62ea510330282ecba7"
+      },
+      "Sunny_WWash_wine_label.001": {
+        "before": "2f831ab40c9c5893582a13f9c4a04d52d9675db6fa592794300cd432ff867e58",
+        "after": "8df0bd878072d27345d1c87666031f8192962243ecf1d4e05574fefaaf2e3682"
+      },
+      "Sunny_WWash_wine_label.002": {
+        "before": "1f4c7bf332c54495b59cbbc4bbd2ed4a5cadd81e1a104f51f0100cdee498e5d1",
+        "after": "8c9eb0240499eb065af25a3e1d057259333694f1f997b852fdcc4f53b51fca36"
+      },
+      "Sunny_WWash_wine_label.003": {
+        "before": "c3e0b4e4a0db96a24469d3f3db3916a2bb8ee53ec6ce73a4582a901f8e5b1a56",
+        "after": "08453edab1c2897453b18fe8dcd1c57759dedf298b00cd8e182931fa1185328d"
+      },
+      "Sunny_WWash_wine_neck": {
+        "before": "7fc324a620edbfd6bcae199ef363c5c1e3428e66d728202d731e33b2f68bb5cc",
+        "after": "04a0fcf42ad5abac29e340cbfc6dc642229ec3dcc6e1b5e3a7f33ae2c32ce1f7"
+      },
+      "Sunny_WWash_wine_neck.001": {
+        "before": "bfe426a13f485c4d478d8c8d2e96cb3d2fcbaddad3fc384a21518bc1a2349db0",
+        "after": "d4d2ed51f15b1f4a7bb8ded7632be014a87e90869aad75ca4bdc9dc532f0762a"
+      },
+      "Sunny_WWash_wine_neck.002": {
+        "before": "f03c78f9bec8561162c8d3b080d049a88b6550f9b221f41f4659cdbc0dc591d9",
+        "after": "9a847bb62c5ec2f14ac22cf7ce1aa38767cea504a33eb46bf75f964973577da9"
+      },
+      "Sunny_WWash_wine_neck.003": {
+        "before": "c0a21edbfedfa63a7bc67569cb506bddb57ae18e6afc856dca65b93df3c567ab",
+        "after": "ed351cba3e5a9630724d11d714039007fe5267025fc2ce579f36c3d746c68a10"
+      }
+    }
+  },
+  "collision": {
+    "sha256": [
+      "6fcb9ea59240e50eae1fa111e19b5b1429630233d7621e0610bfdca276efa73c",
+      "3c854f7f31c2bd4b9ab3f0fc5124d52765976ace92b9e6f042a4886caf027ee5"
+    ],
+    "counts": [
+      217441,
+      217441
+    ],
+    "removed": [
+      {
+        "name": "COLL_Solid_Sunny_WWash_cupboard_back",
+        "isFloor": false,
+        "min": [
+          -21.880714416503906,
+          -36.41471481323242,
+          -8.654999732971191
+        ],
+        "max": [
+          -20.750713348388672,
+          -34.53471755981445,
+          -8.605000495910645
+        ]
+      },
+      {
+        "name": "COLL_Solid_Sunny_WWash_cupboard_shelf0",
+        "isFloor": false,
+        "min": [
+          -21.880714416503906,
+          -36.31971740722656,
+          -8.649999618530273
+        ],
+        "max": [
+          -20.750713348388672,
+          -36.26971435546875,
+          -8.309999465942383
+        ]
+      },
+      {
+        "name": "COLL_Solid_Sunny_WWash_cupboard_shelf1",
+        "isFloor": false,
+        "min": [
+          -21.880714416503906,
+          -35.75971984863281,
+          -8.649999618530273
+        ],
+        "max": [
+          -20.750713348388672,
+          -35.709716796875,
+          -8.309999465942383
+        ]
+      },
+      {
+        "name": "COLL_Solid_Sunny_WWash_cupboard_shelf2",
+        "isFloor": false,
+        "min": [
+          -21.880714416503906,
+          -35.1997184753418,
+          -8.649999618530273
+        ],
+        "max": [
+          -20.750713348388672,
+          -35.149715423583984,
+          -8.309999465942383
+        ]
+      },
+      {
+        "name": "COLL_Solid_Sunny_WWash_cupboard_shelf3",
+        "isFloor": false,
+        "min": [
+          -21.880714416503906,
+          -34.63971710205078,
+          -8.649999618530273
+        ],
+        "max": [
+          -20.750713348388672,
+          -34.58971405029297,
+          -8.309999465942383
+        ]
+      },
+      {
+        "name": "COLL_Solid_Sunny_WWash_cupboard_side",
+        "isFloor": false,
+        "min": [
+          -21.880714416503906,
+          -36.41471481323242,
+          -8.649999618530273
+        ],
+        "max": [
+          -21.83071517944336,
+          -34.53471755981445,
+          -8.309999465942383
+        ]
+      },
+      {
+        "name": "COLL_Solid_Sunny_WWash_cupboard_side.001",
+        "isFloor": false,
+        "min": [
+          -20.80071449279785,
+          -36.41471481323242,
+          -8.649999618530273
+        ],
+        "max": [
+          -20.750715255737305,
+          -34.53471755981445,
+          -8.309999465942383
+        ]
+      }
+    ],
+    "added": [
+      {
+        "name": "COLL_Solid_Sunny_WWash_cupboard_back",
+        "isFloor": false,
+        "min": [
+          -22.230714797973633,
+          -36.41471481323242,
+          -8.774999618530273
+        ],
+        "max": [
+          -21.1007137298584,
+          -34.53471755981445,
+          -8.725000381469727
+        ]
+      },
+      {
+        "name": "COLL_Solid_Sunny_WWash_cupboard_shelf0",
+        "isFloor": false,
+        "min": [
+          -22.230714797973633,
+          -36.31971740722656,
+          -8.770000457763672
+        ],
+        "max": [
+          -21.1007137298584,
+          -36.26971435546875,
+          -8.430000305175781
+        ]
+      },
+      {
+        "name": "COLL_Solid_Sunny_WWash_cupboard_shelf1",
+        "isFloor": false,
+        "min": [
+          -22.230714797973633,
+          -35.75971984863281,
+          -8.770000457763672
+        ],
+        "max": [
+          -21.1007137298584,
+          -35.709716796875,
+          -8.430000305175781
+        ]
+      },
+      {
+        "name": "COLL_Solid_Sunny_WWash_cupboard_shelf2",
+        "isFloor": false,
+        "min": [
+          -22.230714797973633,
+          -35.1997184753418,
+          -8.770000457763672
+        ],
+        "max": [
+          -21.1007137298584,
+          -35.149715423583984,
+          -8.430000305175781
+        ]
+      },
+      {
+        "name": "COLL_Solid_Sunny_WWash_cupboard_shelf3",
+        "isFloor": false,
+        "min": [
+          -22.230714797973633,
+          -34.63971710205078,
+          -8.770000457763672
+        ],
+        "max": [
+          -21.1007137298584,
+          -34.58971405029297,
+          -8.430000305175781
+        ]
+      },
+      {
+        "name": "COLL_Solid_Sunny_WWash_cupboard_side",
+        "isFloor": false,
+        "min": [
+          -22.230714797973633,
+          -36.41471481323242,
+          -8.770000457763672
+        ],
+        "max": [
+          -22.180715560913086,
+          -34.53471755981445,
+          -8.430000305175781
+        ]
+      },
+      {
+        "name": "COLL_Solid_Sunny_WWash_cupboard_side.001",
+        "isFloor": false,
+        "min": [
+          -21.150712966918945,
+          -36.41471481323242,
+          -8.770000457763672
+        ],
+        "max": [
+          -21.1007137298584,
+          -34.53471755981445,
+          -8.430000305175781
+        ]
+      }
+    ]
+  }
+}

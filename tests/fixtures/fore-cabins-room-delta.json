@@ -1,0 +1,1133 @@
+{
+  "removed": {
+    "Sunny_ForeToilet1_seat": "068a7780a78113ec520163b9ddf197ce2ea43201d279bb661eecbeb5fe3a9ba1",
+    "Sunny_ForeToilet-1_seat": "ed9df8f1b507cf57b3216d002b7beaf323dc44f0dc65c4cd287569bdb4cf97ad",
+    "Sunny_ForeToilet_sink1_basin": "8ebcb5a6962bc02d129ae2ab8105b1f8fe25611de9f2a5ee85a83ccf39d5c3c3",
+    "Sunny_ForeToilet_sink-1_basin": "13d25821f1896a97bebff94ba43299dbcf4b71fab134a6730fe4234339638dae",
+    "Sunny_Quarters_kotatsu_pot": "fbead2b428a0190163ce0f7b99358ad7fd98e069cb818ccc78e0bedbc7c06991",
+    "Sunny_Quarters_kotatsu_sofa_arm": "43914d57662c5629783dead0d9d4bc3ade2fb877bf86eae94d6bad82f9b58d3a",
+    "Sunny_Quarters_kotatsu_sofa_arm.001": "697ec87d4f14851c121a87925204dd9ce8ebb0f97c2e38d3d5817a34be0e29e5",
+    "Sunny_Quarters_kotatsu_sofa_arm.002": "c3d3ab9419d70726843673dab88a78c5caaf3ce0dbf5e00abcfbc16937183c0c",
+    "Sunny_Quarters_kotatsu_sofa_arm.003": "8b64128824222427f4a47e4e5ac033a1dd5ebae1ea6c2b49806e918fbeb092b3",
+    "Sunny_Quarters_kotatsu_sofa_back": "84ff665015a54dba0947df7374fa33c7e963d5f02e212e75f5de93e07daf0725",
+    "Sunny_Quarters_kotatsu_sofa_back.001": "539f77cefe70e4e260d7ba3ce5bc27093d7bde11b4952cec7a22b78a979e600c",
+    "Sunny_Quarters_kotatsu_sofa_base": "30c9322c634c6a98f310d2316736f2967e92fc72895cf877584f92a2a46d79bc",
+    "Sunny_Quarters_kotatsu_sofa_base.001": "7ba41c0cea7b2765341459867328c7f7c0404567b970e3c0bc22bb07ede23ae9",
+    "Sunny_Quarters_kotatsu_sofa_cushion0": "b58c698f20dee66a59f692ebacfff0d5840fe033138f35e49202760d15c2d152",
+    "Sunny_Quarters_kotatsu_sofa_cushion0.001": "9c3269fa1b2f33701a80648a4800b776aedd26547d02f9c60d61c5de2afc8a3d",
+    "Sunny_Quarters_kotatsu_sofa_cushion1": "99aaf5d0d26fb9042ab8dd5f35bcdf38f0b85ddffef434f9a12c65925818f85c",
+    "Sunny_Quarters_kotatsu_sofa_cushion1.001": "82157a96bf17a32902c73f2abe52f5ba4242104db098ef09187f1ba6c397f804",
+    "Sunny_Quarters_kotatsu_sofa_foot": "a58547340cd5f6a06dc7bda45bfd5ccaf3391b1c696806e4b046997c732564e0",
+    "Sunny_Quarters_kotatsu_sofa_foot.001": "66456dec79eaee305819c1ff3e0dc9522fd9539d762a3ad884787c01c393cef6",
+    "Sunny_Quarters_kotatsu_sofa_foot.002": "c9595f515bfde8899cd8052b5987d08a6022040266b189ad0f4c78219441096e",
+    "Sunny_Quarters_kotatsu_sofa_foot.003": "2c8dc4bed384e6e582da905e2d2cbebf8a19d2f5448af1368ba800f5d05f7a0e",
+    "Sunny_Quarters_kotatsu_sofa_foot.004": "2c638915c263e2528cd87865be0b5732da5d891b8164a6af714d1b04436486d9",
+    "Sunny_Quarters_kotatsu_sofa_foot.005": "03472b24ac307c423e0884f08d2dcaf527ee237d7899f7376c086c30bee93436",
+    "Sunny_Quarters_kotatsu_sofa_foot.006": "76150a8c6442cb9212a22a8c912a977367a3d00f1c526d32104c5102ccf4a960",
+    "Sunny_Quarters_kotatsu_sofa_foot.007": "41450513e8055ad1d810c5673852319d06aeb3dbd9e1a002ee571a42f8dd2154",
+    "Sunny_Quarters_lockers_handle0": "9932417751199efbc2e041155c1d5b7910b78a4b4da970607020c09d9e00f4af",
+    "Sunny_Quarters_lockers_handle1": "694a658bf4079f87ced530aa388617a819fa0badfc72d41e0570aaa3a87bef37",
+    "Sunny_Quarters_lockers_handle2": "abadb400db878ed8a08fabd10f10b2776fec0917e8c85dfc53f03f43f7089f45",
+    "Sunny_Quarters_lockers_handle3": "9991d87ba14d879537159dd49f2843113c27938ae71c9683a66e28e0a9885202",
+    "Sunny_Quarters_lockers_handle4": "b1afb6f5652160f3c8c26eb802f2a15976f722599d0e66fefd16aee7fa946fb2",
+    "Sunny_Quarters_lockers_handle5": "525c3ce06b160ffa7df735063fed1f6f251b32419f467687da711e4ef2e90220",
+    "Sunny_Wash_bell": "efe85c8fbe6c58e9e93069de8f36189f4f09021dfae05f922bd1901ebf5cabea",
+    "Sunny_Wash_sink_basin": "0ddd5af98de73a55491a7c50300c460c2c755c836d8098a24800f8f3639a9ce2",
+    "Sunny_Wash_toothbrushes_0": "b2b5b298c5021bdf93eb225b15bfb3c8eef6f3ec49be3e06e7f9c4a6c34a9c62",
+    "Sunny_Wash_toothbrushes_1": "df19e20b4e89ffad5ed56614d617e2b092fb1478406dfe5c122204715911e4c4",
+    "Sunny_Wash_toothbrushes_2": "321452161bbc09a3b2cb0fb442188a36fe714629b2a4fe2f9279c616d98d1845",
+    "Sunny_Wash_toothbrushes_3": "1d36dc7a42fa003e33d6066dea84fc87b0a1a050d6364a3d1cb5892c4d56ac54",
+    "Sunny_Wash_toothbrushes_cup": "c94170b4ee14441a61dcb19aa6aa03acbc8cada33ea37e8dbf1dcb3455a6546a",
+    "Sunny_Womens_bed_blanket": "6dc685a82abbed8d3d36fac1d75f4a14ede575a0a8ab942bfd0f479402dcadb9",
+    "Sunny_Womens_blanket": "9066e52f0494c09b6b26d36851417b07590273251d0e3ab80fc8622f342f13dc",
+    "Sunny_Womens_mirror": "116b514321f039fe0a993d281087490c3179d966ee9bba82d9b72f44fccdaa58",
+    "Sunny_Womens_mirror_edge": "287865a1083715b727f0b531e1c6c003018607d24d74de554cbdc49ff4b9f460",
+    "Sunny_Womens_mirror_edge.001": "b7593ff6b0ca1f204975dff8e82511b80dc0c709ff85656bba248f22e2e88084",
+    "Sunny_Womens_mirror_side": "8c37f0f468d65da288ca32651ea59f00ea2f2cac5d4cdfbad0dad35118b7a234",
+    "Sunny_Womens_mirror_side.001": "1d28bcbe4b540bcf2cbb654c25b64d879485d8e817bc9708c23be6467d3f37fe",
+    "Sunny_Womens_mirror_support": "1f296eb891f1e6f41435898aa9b7f0c3b054718900f1fac146b176d080dae83e",
+    "Sunny_Womens_mirror_support.001": "00652917b9a21795a7179392d6a0c032f5f6731c3ccacde8da2e94202a84c67d",
+    "Sunny_Womens_sofa_arm": "fc87897181dd79f4969a23f4933982a6443d700164014e3f66fe6667fe5223db",
+    "Sunny_Womens_sofa_arm.001": "dabed6ad3a64108c35fad4a3eecae1780d156561ee9f4407d6b12985c53f3dee",
+    "Sunny_Womens_sofa_back": "ce601c83330d7d562943d9503280aa9504899f5a55eae5c97c083d13633acdf8",
+    "Sunny_Womens_sofa_base": "2370c75d82fdbbce0ff885d27b7d46518cca98826f4622d0a8abef173cc123af",
+    "Sunny_Womens_sofa_cushion0": "17e1f4421cfecf77e7575dc9591597cfbda42405d620af527f994d488b534a51",
+    "Sunny_Womens_sofa_cushion1": "3b53d13c1b82b9f0f8673e22a717a4e622438de95267dec44abb1d6c28446ec1",
+    "Sunny_Womens_sofa_foot": "efbc997e3163c3c00dd7472ff6914211378ce34d8cd1b470ed53e777eb312bc5",
+    "Sunny_Womens_sofa_foot.001": "201a70ddbf74620975c9caeb91b1b2181960c76eaea046cb024e3ab3a39044b1",
+    "Sunny_Womens_sofa_foot.002": "728ff749c809fb828658b167fc037901cedba39b902bdfaea4fbfebdb94ccb65",
+    "Sunny_Womens_sofa_foot.003": "61d8fceb5d177869aee1450951e22717c67c9f3b20d4efef1d4f344587068aa6",
+    "Sunny_Womens_vanity_drawer0": "72c1750a92846016c0f7988508691cc096c97db357dc17953d7da3e2a07673ea",
+    "Sunny_Womens_vanity_drawer1": "52d8bfbd8882353e13d5e514742d7b3fdab0c20282586f65ca3b29df942f44e5",
+    "Sunny_Womens_vanity_drawer2": "c123ae1f56450fd132dd6e3cc3d94b7187b7dfb769b9fb87dcbd5f9be44971e7",
+    "Sunny_Womens_vanity_leg": "ebd82c4bb7eff0e1ccb0882139187b1decfd5a9047930c65896f9736cad2bb6b",
+    "Sunny_Womens_vanity_leg.001": "ba0117e8fdef444593223f2a344188f4eb3ac85f59eecd9e4aeb382b5606fd4d",
+    "Sunny_Womens_vanity_pedestal": "620b695cb1d7f3925fbee539016003a753dc0313ed1089f3fb482fb5f3c8c4b8",
+    "Sunny_WWash_bottle0": "814e10bc818ea589eb5d458dc18ab507664ab8f4d6b60b6e7096e4b54c974be1",
+    "Sunny_WWash_bottle1": "e770143b84385cefd24f387b8827b89ee9d05d15c5778641f15f84f8226e5ebe",
+    "Sunny_WWash_bottle2": "79420b8abca674124089fbdab88354e68ed714d129e2a227b7b800baaa834d15",
+    "Sunny_WWash_bottle3": "c78f6f7f22b381070162c1a397a3fa54edc69a5e87c7797461cecceb59810bc4",
+    "Sunny_WWash_bottle4": "721bb5b26355168f0e9dd8ebb99eed8c7fe6c689606d7336c40b6282c01333b4",
+    "Sunny_WWash_bottle5": "c6000a74d04f01e19f421f8b683cf3e7131cf5dc6cd1f1e02def8024cd7ca354",
+    "Sunny_WWash_sink_basin": "d675e2ac6b26a37e81450511f0948b0be4831a447af9c96e0348049cf4169afc"
+  },
+  "updated": {
+    "Sunny_ForeToilet1_bowl": {
+      "before": "987535c269d23032f6958c336458c28657dd95d60429bb0590c6b736332b88e6",
+      "after": "b638dc046b644a3eb2eec64df474ffd17826b8eff140949c50ed94e0beab36f4"
+    },
+    "Sunny_ForeToilet1_cistern": {
+      "before": "8267b60cc68b9680145c9d45921964422143472b3e2825ad064b1c8e03a73c8b",
+      "after": "104a21566545061b65500c533d8a758a9b54965b9f9d1f3d9575ae48edd74a24"
+    },
+    "Sunny_ForeToilet1_flush": {
+      "before": null,
+      "after": "06b9ff2e82622f783b796e982aa2b763d3e76980853744f553eea4368de2fc9e"
+    },
+    "Sunny_ForeToilet1_pedestal": {
+      "before": null,
+      "after": "106124f37da7f44967f502db164d6fc1b0086a4fadc20c7b7f96309bc3487668"
+    },
+    "Sunny_ForeToilet-1_bowl": {
+      "before": "bbc3c0644713606bb5418bf256ae9f9bfab52d7485c4c9f96dd834ac90317d44",
+      "after": "130f56b47e7665625c5e3426da87f33ca6535c63d94ff95c754c074a748d28ea"
+    },
+    "Sunny_ForeToilet-1_cistern": {
+      "before": "e8dcdb9222fafa452ef764cea8b3819dd54bdfec5a5caa6158ef6fb3290b4c15",
+      "after": "73000b26ca122afb1f170e0acd6558e5cc27ba944092682d0f1c796d928bcf51"
+    },
+    "Sunny_ForeToilet-1_flush": {
+      "before": null,
+      "after": "9016c2d3086c308c6f7b5bc390ac9566c2ea2f2ccb27b4d590eafb9ade3bca83"
+    },
+    "Sunny_ForeToilet-1_pedestal": {
+      "before": null,
+      "after": "5fe6b1108a3a9c01c895fe229c3bb5ebfd8ccfc83d9d7e06380c246d03386a6b"
+    },
+    "Sunny_ForeToilet_sink1_bowl": {
+      "before": "f14f506a170f79cba16d0e7fe7f021779ceca5685f314075188c0648cf51c316",
+      "after": "82c14ae924eab9379274198ee96562210ad0341b1eb5f616ef985efccd7804e5"
+    },
+    "Sunny_ForeToilet_sink1_drain": {
+      "before": null,
+      "after": "42979f77d2b52c61a3dcb32c8e81cce93dfc592cc8ee8d93705722542c9b32f0"
+    },
+    "Sunny_ForeToilet_sink1_mirror": {
+      "before": null,
+      "after": "f2253ef3dc9f8aaeb4a67934b1835f670d12522c586cdb0caddb4a791dcc12eb"
+    },
+    "Sunny_ForeToilet_sink1_mirror_back": {
+      "before": null,
+      "after": "ee7a6414de353d38110fa433c908a1180322b462b22e98ae88174e5911e09195"
+    },
+    "Sunny_ForeToilet_sink1_pedestal": {
+      "before": "c5856cbeb7c1a6ae9e5eab119ff5e44b7730a8e8edba8b86448a81879f878667",
+      "after": "2320ff90a160ea8e05e823d8e65943037a27baf909f36089910a857451c53b03"
+    },
+    "Sunny_ForeToilet_sink1_spout": {
+      "before": "7393cde77ca9e46568b1253f729db192941296ce4232a3bcbf9d5aba5936b43f",
+      "after": "c68ef57bc0707af88dfa70a0d9e55a7c85a2196ab41e71c290f15b32bcf20c6e"
+    },
+    "Sunny_ForeToilet_sink1_tap": {
+      "before": "fdec11197be5475b2d692c9b00750eb66e99a3a6d7f1ecddc8bac89c628f160e",
+      "after": "798c554b16f81cf7470e069b46b6ea43f9f0a2d53c269741533a00dad3048f71"
+    },
+    "Sunny_ForeToilet_sink1_tap_handle": {
+      "before": null,
+      "after": "c1d949c38cda3f158d1bd2f1b18a5019102f18cfac7445ca42167d1943b290ca"
+    },
+    "Sunny_ForeToilet_sink1_tap_handle.001": {
+      "before": null,
+      "after": "f253dd0b7383c4b5b6bb3945f8897743aca0fa787342768d1b51a49d8c6bdb51"
+    },
+    "Sunny_ForeToilet_sink-1_bowl": {
+      "before": "d78ebcb2f5363451c1989d10bad3490e43b6b5bc58d87a3b1d614d0defad59a9",
+      "after": "241bf472f23d86756cfd150126b5426d54b267c78b2abef548a7b21cb1730535"
+    },
+    "Sunny_ForeToilet_sink-1_drain": {
+      "before": null,
+      "after": "16e35576b8491808ce4019d4f771d0dcd18e42a5a514226f698a01f230c84c7c"
+    },
+    "Sunny_ForeToilet_sink-1_mirror": {
+      "before": null,
+      "after": "9fd19e735b6296d6eee6bb1143668debbda776ed5137d7291c9f7b1f4f3dbe12"
+    },
+    "Sunny_ForeToilet_sink-1_mirror_back": {
+      "before": null,
+      "after": "cb09f948681d9819afa7a4eb28809a71da8f8e6d1e3fb42b7c2e55487029278f"
+    },
+    "Sunny_ForeToilet_sink-1_pedestal": {
+      "before": "3885a7a2f06cbc1a467ed3277f643498f70495bfb341348e7b9ec618a3983d07",
+      "after": "3ea49d64969b85c9c3efec7a24752462bcc7c53ebca67d145ffc50c8724e585b"
+    },
+    "Sunny_ForeToilet_sink-1_spout": {
+      "before": "7717fdabd2a5168a53b9e92c7c89fc147ff8f406e8f4a4460d2d70140cf4df1d",
+      "after": "cfc7de13a03d0eb71821142361889ef09bddfb3b8259abed21c808a19318310d"
+    },
+    "Sunny_ForeToilet_sink-1_tap": {
+      "before": "d59b6c51f4fa6f3151e70a187483e0a337985626ed06e46fbbd39f49189b4cb1",
+      "after": "9c56e9b6ff122827516e8a1063b4ccd4ac259eb986a4cb8609f7bcb052230fb9"
+    },
+    "Sunny_ForeToilet_sink-1_tap_handle": {
+      "before": null,
+      "after": "b557556032fb6d6b2d59d7a026a6a8752041c4358aab04b7100cbcc411e41479"
+    },
+    "Sunny_ForeToilet_sink-1_tap_handle.001": {
+      "before": null,
+      "after": "bba5922964f06f69856f251b2abf4338f40c90fba5155b29d7add5f379f8cb17"
+    },
+    "Sunny_Quarters_bunk0_blanket": {
+      "before": "246e06bac2c6c69140661f39e2cbe6e6fb0275d79f1b629d0125a0af0b64d243",
+      "after": "ef36eb3aa9aff7f9113ebcefdb7be52ca6d49a6ab7d5d261f7cc256e7bc53890"
+    },
+    "Sunny_Quarters_bunk0_blanket.001": {
+      "before": "d439a07e71f5daaf2c1b84487c11d8ea3491b8c7b37a0e33621f41d18b660a5a",
+      "after": "a752da7c17b6898b7d2cdd588e8408c7b7d8f5119974bb708f51302ca43e184b"
+    },
+    "Sunny_Quarters_bunk0_cedar_end": {
+      "before": null,
+      "after": "0649e1b8db4e5feae69821293604e96547cab4ec60cdd80d5038278ef4fd1769"
+    },
+    "Sunny_Quarters_bunk0_cedar_end.001": {
+      "before": null,
+      "after": "8b09f9d26b80c0126ba868dba583a56aad605f30f4d5d4a461684a47409c5ab3"
+    },
+    "Sunny_Quarters_bunk0_cedar_end.002": {
+      "before": null,
+      "after": "6553a32ac7ae86076283bdb4e4dde933ff08e1b811014e715296c5b59bc13d3b"
+    },
+    "Sunny_Quarters_bunk0_cedar_end.003": {
+      "before": null,
+      "after": "b81bc030e499a9996292a17936c2e682f49a96d310647ce2666104ab8d536b98"
+    },
+    "Sunny_Quarters_bunk0_cedar_side": {
+      "before": null,
+      "after": "f5adcaef29c951d691d34bd395a940f9ac7a8f74836f3a3630f35e39dff47521"
+    },
+    "Sunny_Quarters_bunk0_cedar_side.001": {
+      "before": null,
+      "after": "8f1c547f432f6976bd5bc60d1997abdbf9c0ba3c8d9728858458efbf81f7fbb4"
+    },
+    "Sunny_Quarters_bunk0_cedar_side.002": {
+      "before": null,
+      "after": "6b11b05481e0714c3bfd34514fd5ab81371e2c73cba3baa5a0da47a20f390198"
+    },
+    "Sunny_Quarters_bunk0_cedar_side.003": {
+      "before": null,
+      "after": "809facbb2c9b0387b2ec0e50cb3fe30f2b817a2fc2be46ce33772940fec731b1"
+    },
+    "Sunny_Quarters_bunk0_mattress": {
+      "before": "f0f9c21eae95784ddac5bc22bf25e59d60d32f81ee82cdccef24ebb0b2ca7504",
+      "after": "f83ba894a8a346415ca487659552a79216ff6a6f4cc78cb7cc6138a3b68fdd91"
+    },
+    "Sunny_Quarters_bunk0_mattress.001": {
+      "before": "2bfa35068151b81b83c683477e651022fdca6c542b66e57abaafe33a93914e0b",
+      "after": "9d505241de8c447a437be607766136c1942757f470da4f9ae7071ce9a3cafbe8"
+    },
+    "Sunny_Quarters_bunk0_pillow": {
+      "before": null,
+      "after": "115daca6035bd59522ae70074d2b9ab1cbe7d85f2647fa9d31445e773f011d98"
+    },
+    "Sunny_Quarters_bunk0_pillow.001": {
+      "before": null,
+      "after": "e1599621838471fe7280248bcefe153f3121ef20221a43de87539e443a71e03d"
+    },
+    "Sunny_Quarters_bunk1_blanket": {
+      "before": "edb1047d021fd88a4a5bd21c33fe62958142a3bf7fb10feebb24ca5ce65e3c31",
+      "after": "829f86b0f17215117bbd476cd6ef6b2b90048a8f0789c4da317d8b557f1d5507"
+    },
+    "Sunny_Quarters_bunk1_blanket.001": {
+      "before": "4e9550301ca91c9cf09b5fea2840826f60b5979eff8ad85007915b6b0ae46c7e",
+      "after": "171f5316dee94526e1feba011f7b7788458b88b537f042be950292d897e042ea"
+    },
+    "Sunny_Quarters_bunk1_cedar_end": {
+      "before": null,
+      "after": "917c1d1f5a63d6e92d432b1875a59adc4d0846870bdfaa8d7ebeae370ce40b0f"
+    },
+    "Sunny_Quarters_bunk1_cedar_end.001": {
+      "before": null,
+      "after": "44f48059f4366831a0439f29b74b6ce2f64d0ef8339208fd8ca6970754010f76"
+    },
+    "Sunny_Quarters_bunk1_cedar_end.002": {
+      "before": null,
+      "after": "24ea90dd1c8e44671f84142f762ee514cc440fc22b8d1482dc478d9fde4c3643"
+    },
+    "Sunny_Quarters_bunk1_cedar_end.003": {
+      "before": null,
+      "after": "1fdb482026479147ed518b4cbf96255a3bef0ffc01999d0afc200fe4f1bbeaff"
+    },
+    "Sunny_Quarters_bunk1_cedar_side": {
+      "before": null,
+      "after": "b9b312271801d7db5db625d68102d29fa3c1942ccf7bf6244acc42069ac83891"
+    },
+    "Sunny_Quarters_bunk1_cedar_side.001": {
+      "before": null,
+      "after": "d0a996df7205f6c61b59b602f4be837068e10d8d0d8559b37d21f12395ffcc98"
+    },
+    "Sunny_Quarters_bunk1_cedar_side.002": {
+      "before": null,
+      "after": "a519c5259ca1fe1f24719c18da7096c25b2ddb0d7ab3476ee8f79fa26ed5a741"
+    },
+    "Sunny_Quarters_bunk1_cedar_side.003": {
+      "before": null,
+      "after": "c575d6908f59e824e6aa6a0f99cadf204225cbff26b9c4361c848d676e233307"
+    },
+    "Sunny_Quarters_bunk1_mattress": {
+      "before": "0d30becf42f3a1811b082466240082b1b2d4f28e0e84859d1db6099283e6bc8e",
+      "after": "b37abf091e7ee7a6d501fd6775b4d9cc1fc607fb7d6f62463f57a6c9874f35a5"
+    },
+    "Sunny_Quarters_bunk1_mattress.001": {
+      "before": "427801f83dafe913a28ec05d6040d4ecc9150d4e76c0980aa0dc3cfb67836b35",
+      "after": "14304347a3eed3694ff1f337fa454a3e0cdc0378f53bb17e00c9dba4ba3a6365"
+    },
+    "Sunny_Quarters_bunk1_pillow": {
+      "before": null,
+      "after": "455d5fbabeb13d89184f80e0a83f7bd997fc156fe30f3e6ba0fb6e886659a228"
+    },
+    "Sunny_Quarters_bunk1_pillow.001": {
+      "before": null,
+      "after": "600c2f5bf477418587a246a5c9badafb9c0ad7202bee3ada8815dd92ca92bbed"
+    },
+    "Sunny_Quarters_bunk2_blanket": {
+      "before": "0d36e1b20fa2f4042fa3f7de6a3e2339631101c9e1244847c2d82f97a88347fe",
+      "after": "e5641b85f172a1fb1c4cce38956c0fc316853f253206b6f1c9d55f1cdd77a734"
+    },
+    "Sunny_Quarters_bunk2_blanket.001": {
+      "before": "c316f9b6f01b8dedb980764d40d3304315215e2168d7566d702b850fef1dd377",
+      "after": "1df39c7f9f944360d4c0db0b821cc24ec37d197ae784fa8146ca91aa67ddf046"
+    },
+    "Sunny_Quarters_bunk2_cedar_end": {
+      "before": null,
+      "after": "8bea4b06556f48010379d2e93f1ae3876fa7a015bc3434e608ec36d935d82c96"
+    },
+    "Sunny_Quarters_bunk2_cedar_end.001": {
+      "before": null,
+      "after": "0f604865c2d4ed7c9b341b7c3eb633e8c0b8b15a7cdab159484aa62184e7889b"
+    },
+    "Sunny_Quarters_bunk2_cedar_end.002": {
+      "before": null,
+      "after": "3ceaa191226d45b60691839bf295eebb3c0652f0f78180cfea4e0f96895895bd"
+    },
+    "Sunny_Quarters_bunk2_cedar_end.003": {
+      "before": null,
+      "after": "c539e13c225acd3706e2388063053e4f7f0f2a5387cf8416bb8827410104167e"
+    },
+    "Sunny_Quarters_bunk2_cedar_side": {
+      "before": null,
+      "after": "a8b186c4e6db9d6eab5c35ce66a59511b4f4e3ac457262c7643d0017cb16a4b1"
+    },
+    "Sunny_Quarters_bunk2_cedar_side.001": {
+      "before": null,
+      "after": "56c99c1a326c7c21bb156d4c34089e3bcdabe52c37ce1fe4ea7cefe80a418706"
+    },
+    "Sunny_Quarters_bunk2_cedar_side.002": {
+      "before": null,
+      "after": "8eaeab45dcfd61c46414ba35e304fa5374040a6610939ee061a09c710cad94e8"
+    },
+    "Sunny_Quarters_bunk2_cedar_side.003": {
+      "before": null,
+      "after": "9ed31ca18924a03b858104421c09c4ab4b8463b791dc5e3e949236798e1dc2d3"
+    },
+    "Sunny_Quarters_bunk2_mattress": {
+      "before": "b1e81e1a6076c00a29e4a05f3ae652fa23109312d2efebddec44332cff81221d",
+      "after": "b336c7762be003a66572ed99590e96c7cd6a83b9e3f54f661937cf0015779d53"
+    },
+    "Sunny_Quarters_bunk2_mattress.001": {
+      "before": "ea50e6edd1255954e32b0e320f12d84e27819d5237d7d12c24345cbb1a3e707d",
+      "after": "8c22ff09dbdfa90a4ce1c4a89afa1c1cae9d9bea8a8674cd01648cb23704dd15"
+    },
+    "Sunny_Quarters_bunk2_pillow": {
+      "before": null,
+      "after": "de7ad15fbad85104d0d7129c88f9c5d454e6ad2d16682be72f087df356de2381"
+    },
+    "Sunny_Quarters_bunk2_pillow.001": {
+      "before": null,
+      "after": "f32d79294d32e179c0523901aa541c92771589c2318085ed9242c830f73d7e99"
+    },
+    "Sunny_Quarters_cannon1_barrel": {
+      "before": "c187ae1dcd3d78319612f9a1987d235e347f0f3497b61db26880796714f2ca2f",
+      "after": "73cecd3323f412aee95352b83554658140e86d3f3ff0b28048441fb0c1380b1a"
+    },
+    "Sunny_Quarters_cannon1_carriage": {
+      "before": "4a43c29fac8bbee5366b756a1072362748a4c7962a4ccd4ad6be60c6c1397f18",
+      "after": "a1a671c56ef08c8bdaf9b380adad23e31ccb850325deb80ebd3c0271375b4909"
+    },
+    "Sunny_Quarters_cannon1_rim": {
+      "before": "7dbeeda3efaa7fc767a07b094cc1e3a2220953b466599611eb548aa631be1552",
+      "after": "b06e4af4add8a6a4801422ca1a830f4e91deef94a26e4c41e5b05bf24a0f7e45"
+    },
+    "Sunny_Quarters_cannon1_wheel": {
+      "before": "d55a5452b50cf0bdaa1813ef9a7a43cf1ef16e00e83edf3fb18a7297e707539d",
+      "after": "0aafed35444978bed797742f66c1164f8de2c19979d787a432051c33ce7b8a55"
+    },
+    "Sunny_Quarters_cannon1_wheel.001": {
+      "before": "5ae9c69fb319ad93a695f954fcf6e416f1760f5da5e43c758f62538173c8ad2e",
+      "after": "c1521cf69e8ba05633ebd00028cbb6cf6ea066d40cd5fcb8ad98664ce6b72acc"
+    },
+    "Sunny_Quarters_cannon1_wheel.002": {
+      "before": "aad18c444b4e9ff926651c9cc4d32bb7df74c0330bcce4fa16da44aec31e3e24",
+      "after": "a1aa55cd182407964ef1d9547ca8ebe4ca66f924631e48970ded17ed5db2b41c"
+    },
+    "Sunny_Quarters_cannon1_wheel.003": {
+      "before": "91a01be2e9db0e84214ed75674e0cdbd5890522adebaeb1a781ed416b809f2e8",
+      "after": "f186912d26c2145a891ac60bff63fa4b5c5ee1986a5de187b8e81cfd8e8a0004"
+    },
+    "Sunny_Quarters_cannon-1_barrel": {
+      "before": "ee88013739652b7a94ff5c89a28bf65a273afd41c7e6dfba05d0e401d2fd581f",
+      "after": "0754305db493f773d4c0c8752d07e141ce0e05743d87501d79c11930382d3d2a"
+    },
+    "Sunny_Quarters_cannon-1_carriage": {
+      "before": "6d90bfac1ab7c8dca637c70e4ed8ae306c4d4f920a7c357b244d28e4779d9ddf",
+      "after": "1a4b0c61afc38b24fefd046f1c79ad353997149fd2ab29479c0ab266ab010694"
+    },
+    "Sunny_Quarters_cannon-1_rim": {
+      "before": "1e43445ccb6b19ce5ac5f0398b860754d0786aade50569fff2b0919820dde35e",
+      "after": "31c6ae1b104c4e41af66bd124c017b903cb7cdacd8e299c10c8ceae5f503619b"
+    },
+    "Sunny_Quarters_cannon-1_wheel": {
+      "before": "b8ef51780bde8fb4e0c76b608675b1468bb32bb6568dd776665169593244e10e",
+      "after": "8cbe2fb726ae7aa9073351c17a48e2fe985a5eaa7c635748cedad282b075a459"
+    },
+    "Sunny_Quarters_cannon-1_wheel.001": {
+      "before": "0cd6ca8a5810e7d5af851763536958ad0d296ab6d9043c506a978ae3a90e6050",
+      "after": "06dde75b932abfca4779cecd3f807bcc5eb09b30ef50cdb26e0ee1eccebaed24"
+    },
+    "Sunny_Quarters_cannon-1_wheel.002": {
+      "before": "592e504d97c9db50376f9579e2790374b288507694f3b0c489c4be620dd4b007",
+      "after": "55aa48073605e0270c7b8129caedb1090b56afd0ed0ac61116b5fb8593b90067"
+    },
+    "Sunny_Quarters_cannon-1_wheel.003": {
+      "before": "6e82f3d2aa20faa6c40c91ede701f8839354813c9d1715ca3310e6e4e51a45ef",
+      "after": "c4f465c9c9bdb5b31fa5f2de960f2fa4f9abd6278ece7b6ebdff527e93e2aceb"
+    },
+    "Sunny_Quarters_kotatsu_bolster": {
+      "before": null,
+      "after": "f86baa2084f2be607aa5ebcc9086ad50feab4eca1d6f9a60cb45450cfb74966e"
+    },
+    "Sunny_Quarters_kotatsu_bolster.001": {
+      "before": null,
+      "after": "217c0237a47231957d3045957715492542253820093e1c4bd6fab05e0d1b818d"
+    },
+    "Sunny_Quarters_kotatsu_bolster_piping": {
+      "before": null,
+      "after": "9e7d645a568425bd5903d19162db3e6936ed6632d9576cc392e144ead498e422"
+    },
+    "Sunny_Quarters_kotatsu_bolster_piping.001": {
+      "before": null,
+      "after": "fda46f6bd3c46cf5e74ab5082881e88dd0e3a89b6796c1308c3b9ddf1502d3f5"
+    },
+    "Sunny_Quarters_kotatsu_bolster_piping.002": {
+      "before": null,
+      "after": "4a74af37b53789354ee744e8232db72d4fbe8203aff63a2016d41e2ba3525621"
+    },
+    "Sunny_Quarters_kotatsu_bolster_piping.003": {
+      "before": null,
+      "after": "2ceec901094d7fe21bebcfcf58929ba7cb82e1a9580d8628ba502783a6e8ca15"
+    },
+    "Sunny_Quarters_kotatsu_cushion": {
+      "before": null,
+      "after": "5c336cfb7ad28af202a79ff5c4c9396012326e0c037a8d97cbc425659ae31b4e"
+    },
+    "Sunny_Quarters_kotatsu_cushion.001": {
+      "before": null,
+      "after": "960fe61e8187f6a5732497e0e430de5326cddaf54d0d8202cfef1d26e0dd1e07"
+    },
+    "Sunny_Quarters_kotatsu_table": {
+      "before": "0f01f9e0d62ad9b6bad63a287b324c3db2322371458f678549483427360c3719",
+      "after": "24ed4a6ea27774f1e02630127d635e63184cb98b24bacc6ed109f9ce29ca4259"
+    },
+    "Sunny_Quarters_lockers_body": {
+      "before": "4262787ab41cfe8fd4835d741b4d46a4b4d8dbb95d59fd2bde374831979d56ba",
+      "after": "84c0e87234690be82fe73ea2ec21199301f036824996867a115ba2ecca9ff17f"
+    },
+    "Sunny_Quarters_lockers_card": {
+      "before": null,
+      "after": "58bdaf9b2d810eb52555f3b1681d61e48e15803247a5d5498361faa31b33da9c"
+    },
+    "Sunny_Quarters_lockers_card.001": {
+      "before": null,
+      "after": "b0721e547b37ebb32e983e462dd49c98dc64dc46d073ac1aa739ed0c32616058"
+    },
+    "Sunny_Quarters_lockers_card.002": {
+      "before": null,
+      "after": "8d08f4351e05a489b02c0728e26fee745b7a35ca9792e083c0b5ff22961875db"
+    },
+    "Sunny_Quarters_lockers_card.003": {
+      "before": null,
+      "after": "4c82e3af28193ddcb38f3ac2d6208a29ef3b13803628acbf96449b6592c8de16"
+    },
+    "Sunny_Quarters_lockers_card.004": {
+      "before": null,
+      "after": "d68e554e19b1900f7c252ab93c858d76324a9f5bbb099b0284a7d4a43a0cd496"
+    },
+    "Sunny_Quarters_lockers_card.005": {
+      "before": null,
+      "after": "d2eff64749fbebe41bf64290b3b42b8e0c73fbfdbc0a11e3c8550ff7e77b6283"
+    },
+    "Sunny_Quarters_lockers_card_frame": {
+      "before": null,
+      "after": "ed12b4c734ab06f0e1b7e3859bee07ec8233df9482bf32f0d2850e7d132a533c"
+    },
+    "Sunny_Quarters_lockers_card_frame.001": {
+      "before": null,
+      "after": "1bee11791d5f1b9d67e0b45469d8538e0b2c9517f9cfc33a5c8ccddc1f1f886a"
+    },
+    "Sunny_Quarters_lockers_card_frame.002": {
+      "before": null,
+      "after": "790310e898b8d0ec0ec497bbc509af0327dff6e010765bf9bbbca8239276b877"
+    },
+    "Sunny_Quarters_lockers_card_frame.003": {
+      "before": null,
+      "after": "713260c7e8eb892abadf3102e0c620494062600d8357855ef2d9b2e3b43e73a4"
+    },
+    "Sunny_Quarters_lockers_card_frame.004": {
+      "before": null,
+      "after": "d75f0ad8dbe1097e7b6b24c4fbbb67fc1a8632ffca19a535d8da051a3d6fdc33"
+    },
+    "Sunny_Quarters_lockers_card_frame.005": {
+      "before": null,
+      "after": "29106ece80b9c56d858472e9d7128bba8b10d41b38a112d6d61674d70a5837a1"
+    },
+    "Sunny_Quarters_lockers_door0": {
+      "before": "883aef423b241b0b7e21cb88fc9152241c21d976d1576b4980a88e3f54154bd4",
+      "after": "f58faed41da72a0214bce6a352a1095f1264bf2d859b880fdcf5892503a67402"
+    },
+    "Sunny_Quarters_lockers_door1": {
+      "before": "555b32db321ab151d2cd23fe86fc9f845c1e0ddb72970631f1eb8c3d3152734b",
+      "after": "7d3407f05bfaedaf78dfa96c0ae245cf77f4c389acba3ff538d7f343798acdea"
+    },
+    "Sunny_Quarters_lockers_door2": {
+      "before": "5b10e382538c04ed9764a88ebb4629347a9644221591151b1542b0db0d55179b",
+      "after": "b7c34657e5a305d61e752e5bc2a1cd0269a10691a21ed0b72434d5606a7c5a18"
+    },
+    "Sunny_Quarters_lockers_door3": {
+      "before": "7896caaca255d8ff59868d64e14a5dcfba2e04f61f3514ce3fa5486b60cfd1d1",
+      "after": "5eb9667a7e5b8a6239b27cc5e952b4c28c937976b2f73bc6ddedf14aa5c9f759"
+    },
+    "Sunny_Quarters_lockers_door4": {
+      "before": "5b0beba4ef94cf39b3b9da230b39d5f69c3e9a4d45fd16e84726d4bdf3d34df7",
+      "after": "1798340564c6b63428d486817ab4f05bdb86bb36029dceae6fec6e86c438d06e"
+    },
+    "Sunny_Quarters_lockers_door5": {
+      "before": "3c89385a21e23bc4e609d9989354f552130a4daa37649a418b21ae1d8de4f6fd",
+      "after": "e1f8d7adff57279829b9da34fe170557d3f40b91be7679f319a704863966e369"
+    },
+    "Sunny_Quarters_lockers_recess_pull": {
+      "before": null,
+      "after": "94c188330432f51cb27b90b1ebfb6a301ef256e8619584a0f10d1f8834e4b289"
+    },
+    "Sunny_Quarters_lockers_recess_pull.001": {
+      "before": null,
+      "after": "9df42d04a78589b4bfa66c46e3614db48afa584c427a0369a89ba58b9e69cc2a"
+    },
+    "Sunny_Quarters_lockers_recess_pull.002": {
+      "before": null,
+      "after": "67babadee97e1c19db7740d15d7cd3afa3cb32d7058072491686935b7c8ec859"
+    },
+    "Sunny_Quarters_lockers_recess_pull.003": {
+      "before": null,
+      "after": "89bc1705eabdac3f5054d3be4bcb648f74b3d0b4a36c027104d5001fe5eb7b04"
+    },
+    "Sunny_Quarters_lockers_recess_pull.004": {
+      "before": null,
+      "after": "13688cbff73ac9a560b7d383bcd52050fffceb09497566b27383a89278f6f0a9"
+    },
+    "Sunny_Quarters_lockers_recess_pull.005": {
+      "before": null,
+      "after": "a845cf38ad6f6158b6142ba2d267990215e9989bbd220d76e270438aa33c70d6"
+    },
+    "Sunny_Quarters_lockers_vent": {
+      "before": null,
+      "after": "9b5d0676b20abb14913dd46c23cbe11ce990522dedd9bab050d9f4f99a26aa47"
+    },
+    "Sunny_Quarters_lockers_vent.001": {
+      "before": null,
+      "after": "dd4dce0b9af09b9e2079ce9ee0bbf6b536b8d54af4b3b6fe365e134b633fd0c6"
+    },
+    "Sunny_Quarters_lockers_vent.002": {
+      "before": null,
+      "after": "aa9f58d52ad768a3c027f9f6cd72cf714189c418779d521ba318df0426c12af8"
+    },
+    "Sunny_Quarters_lockers_vent.003": {
+      "before": null,
+      "after": "6913f521d26453e42b90bf08f66d50aea700cbee0be4ef91b5c6bd386458d3ad"
+    },
+    "Sunny_Quarters_lockers_vent.004": {
+      "before": null,
+      "after": "c5a9939ef915e37855e05b0c0eb7b83bd705794891354f8736dbd015522e074b"
+    },
+    "Sunny_Quarters_lockers_vent.005": {
+      "before": null,
+      "after": "848e93eb626a8eae628480ccc4cf87f88680d3972d61d8f3d689c5ed842e5074"
+    },
+    "Sunny_Quarters_lockers_vent.006": {
+      "before": null,
+      "after": "64cd3e9058d6fbd4efe512c3cc258362ced38b55ad9381d121ada5af19678076"
+    },
+    "Sunny_Quarters_lockers_vent.007": {
+      "before": null,
+      "after": "4e8084d82678618fd78eac86df5c9da9faa65eb5193a94622e084fe7d0f552b8"
+    },
+    "Sunny_Quarters_lockers_vent.008": {
+      "before": null,
+      "after": "7c4b1a903cd15eef41a7ef88b1f6aef66fb2a8c2fb436d330ba1f20cb78e79e0"
+    },
+    "Sunny_Quarters_lockers_vent.009": {
+      "before": null,
+      "after": "16ace8f79c7097c9f9812263a0f1067cde45d581cfe03be1c34a2a9231a69868"
+    },
+    "Sunny_Quarters_lockers_vent.010": {
+      "before": null,
+      "after": "5cd7aa0670f3fbf859e3ddf1cac5ce009c5c4dca0a91e7edcd0745bd2f758323"
+    },
+    "Sunny_Quarters_lockers_vent.011": {
+      "before": null,
+      "after": "a333cf3e4a5a4ee725a31d0080b420932d01a940c7e66aad17e3cfe61ec8c475"
+    },
+    "Sunny_Quarters_lockers_vent.012": {
+      "before": null,
+      "after": "df95e306215fc179e396d8ec932cb806205dd942d033385b3de5f352379eed2b"
+    },
+    "Sunny_Quarters_lockers_vent.013": {
+      "before": null,
+      "after": "82a340582d8afe2a065606c2b02ecba68e131477588a588a2759c486110e2b44"
+    },
+    "Sunny_Quarters_lockers_vent.014": {
+      "before": null,
+      "after": "f49de3bb90db0742ff69536bc5da9441a0226944a0935f97f5f663541192d6c4"
+    },
+    "Sunny_Quarters_lockers_vent.015": {
+      "before": null,
+      "after": "485e183d267866e945b08d3ee94ac3906d4e7d7c425a1eb6a650c759d742e7e8"
+    },
+    "Sunny_Quarters_lockers_vent.016": {
+      "before": null,
+      "after": "6c7fcf141359d808afcaaf31ba2722356569bfb7280bc0d3d39e0f5244179ad5"
+    },
+    "Sunny_Quarters_lockers_vent.017": {
+      "before": null,
+      "after": "1888aa4cbcb1149e891a911118f118670823e5d33a07bf43ce417ed449463cca"
+    },
+    "Sunny_Wash_alarm_bell": {
+      "before": null,
+      "after": "cce00c2fa2c063821cd1befff971d3508191768684057e042e97f113dffc4ffa"
+    },
+    "Sunny_Wash_alarm_bell.001": {
+      "before": null,
+      "after": "1ca333c14718938ff93818d0a6a205e836a9289df68ead4bfca1be80fc58155d"
+    },
+    "Sunny_Wash_alarm_bell.002": {
+      "before": null,
+      "after": "689fdfc0437fb0350f705c15dff7c102602d94cf69213d91ca719477f028aebe"
+    },
+    "Sunny_Wash_alarm_bell_arm": {
+      "before": null,
+      "after": "a3cb568b72708ef12aaa219547d4166b53062f15fe63565e859c21810da2b759"
+    },
+    "Sunny_Wash_alarm_bell_clapper": {
+      "before": null,
+      "after": "30b841fa7c1f8813d18999d388a5b8a8f986d13562c1732c459bc6604775b314"
+    },
+    "Sunny_Wash_alarm_bell_pull": {
+      "before": null,
+      "after": "c2265001589d2754776415ca80aec15d7006c00d22e1ec942921a71d9f3b3484"
+    },
+    "Sunny_Wash_sink_bowl": {
+      "before": "3a82f83b8cedad1652026654442f6dddd21f8f526537d80cd6bb12f6de3fa8fe",
+      "after": "0aaca9db1778ad6daaad5e32870e4d9ef2ac5ce29bc783f4e41d2556bb3487fc"
+    },
+    "Sunny_Wash_sink_drain": {
+      "before": null,
+      "after": "029fe0606aa2d0ebe58a89d3a6e77837139ec6a73753c73a7dd1995e01b9c3cf"
+    },
+    "Sunny_Wash_sink_mirror": {
+      "before": null,
+      "after": "1e1854ff652265748e431eacbbdd5a34f4b541e77b0ab02c1ce541c69534df6d"
+    },
+    "Sunny_Wash_sink_mirror_back": {
+      "before": null,
+      "after": "c5aeda39417841c936468d0a8de14bd0eda06c446518a2185d42fc703733b33d"
+    },
+    "Sunny_Wash_sink_pedestal": {
+      "before": "f11c5ebb46e7dc8356fbfb3195fd0349d2788dbb157663f1bf028f1aa148cea3",
+      "after": "ac21898dde7e1e64cf5087e60fdbfca1c208bfb043c456047df0c2cd333dae43"
+    },
+    "Sunny_Wash_sink_spout": {
+      "before": "d33a1d0f094a27965c20bff29cb8cb2c5062c3aa4e915b9a254c43410ad79770",
+      "after": "fa4512ce515dd18a319ee785ba912d1c1656bd1f8935030ff42e495313ff8fe5"
+    },
+    "Sunny_Wash_sink_tap": {
+      "before": "911665161dfbc741d1ac50521d85674b983a5855d0e1196232be98122dc946cf",
+      "after": "891807f7279cc36d7a83137a1b4a930277cc1a299a5e447a6c6d963076fe1b79"
+    },
+    "Sunny_Wash_sink_tap_handle": {
+      "before": null,
+      "after": "0a5adf82f7f1980bca2ac2eccad037c511061a3738c15600ecc461618e588100"
+    },
+    "Sunny_Wash_sink_tap_handle.001": {
+      "before": null,
+      "after": "f70661f9cd31fcf9cffd1d9d384c14e7f51c6e03ac31653afadbd8766e43062a"
+    },
+    "Sunny_Wash_toothbrush": {
+      "before": null,
+      "after": "ce4b6b93858b4719ad165a3363ffa9f81d706257bf3bfa7e23afb010141d9770"
+    },
+    "Sunny_Wash_toothbrush.001": {
+      "before": null,
+      "after": "933181584452002ac0a6850138e23e7e0cd3c5e6493714ada581d3d6aa0e2f95"
+    },
+    "Sunny_Wash_toothbrush.002": {
+      "before": null,
+      "after": "ff85c30684b918d89c9e4a6be2ae29e9473c7d4894002873969eefe45ceaf1bf"
+    },
+    "Sunny_Wash_toothbrush.003": {
+      "before": null,
+      "after": "3fcb02c828a9605fd0c2d8017893870f21e63de8999f40c3eedbcf94c5022081"
+    },
+    "Sunny_Wash_toothbrush_cup": {
+      "before": null,
+      "after": "3f9fa5dcb8159133664006f5d642ab33b0b7f3e19b037e943538a483efcd631c"
+    },
+    "Sunny_Wash_toothbrush_shelf": {
+      "before": null,
+      "after": "daf2fc1daf39ced78e102103cfbd2f71a2f2d56e065173a78a7a81947a3d8748"
+    },
+    "Sunny_Wash_toothbrush_shelf_brace": {
+      "before": null,
+      "after": "338f57d34767dbbc62f4240ac2d7724c0fe0ea71b6c8972620147cb9fbe3688d"
+    },
+    "Sunny_Wash_toothbrush_shelf_brace.001": {
+      "before": null,
+      "after": "973e4f3e8fcaec39d3bce6a4b6b3f0c7d4dc9ccc6f9a980c9bb9ff2252f90fb9"
+    },
+    "Sunny_Womens_bed_coverlet": {
+      "before": null,
+      "after": "23c9e755076adb594d73686dbde6a50f4897d106a0492bc81e3e0b86d9708393"
+    },
+    "Sunny_Womens_bed_coverlet_edge": {
+      "before": null,
+      "after": "7611ed5796b5e1b892e454cd688766da11ff7b598ae9591f73f31999442473cd"
+    },
+    "Sunny_Womens_bed_coverlet_edge.001": {
+      "before": null,
+      "after": "94d2b993fdcf2fa53429aac60d7ed5143f0791d5aac1aaace19a8309fcc2b0d2"
+    },
+    "Sunny_Womens_bed_mattress": {
+      "before": "288e2ce201abb3e9befc9723ef2c9e2aebd4d8f3221e292653b0025dbd45315c",
+      "after": "21fa714d406d5ca7d3e199c22398cbb5429d004ae47832e7e293b935fc9924a6"
+    },
+    "Sunny_Womens_bed_pillow": {
+      "before": "348eee50440869d028b32f1e31eca2e592fc0eb4fef643aa2f73febbeec5ed84",
+      "after": "d386f2607d7fbe5ef3a12c430fc0b81b381575a8db7060543ccc75641ec612fe"
+    },
+    "Sunny_Womens_bed_pillow.001": {
+      "before": null,
+      "after": "0be63e3f61f9f90372d9248716582b822d88449de1b11a63a24771aa82eb2f09"
+    },
+    "Sunny_Womens_cannon1_barrel": {
+      "before": "9103749d6bde23f6ef3f05706b6623d3ccb9dcfd603a5745efa23705f69852e7",
+      "after": "c9eb2eeacf122ea763d25a4de88aede47d73c7afb34d71c082ba89d9d3730e8a"
+    },
+    "Sunny_Womens_cannon1_carriage": {
+      "before": "084fe570d941fb167f564e763b3ebcab5b7a3667de3c461ca0db00a01f260983",
+      "after": "387ca43f2d17f8f3cd9b5a63f3f4fcce2b573767881a0a95a53132497f1a4b6e"
+    },
+    "Sunny_Womens_cannon1_rim": {
+      "before": "aed817cf2a246d03c8df6f4274467a1bcfc43cc3b44b02b6e68e4ffc9881603e",
+      "after": "474ec424ed32b76cc99085fdb196da4ad7778419aedabe4dbee816692352bab8"
+    },
+    "Sunny_Womens_cannon1_wheel": {
+      "before": "9ba8e7a32df5adfca7bc477aed96169688fe0759e00a485b0d336163ac3b7896",
+      "after": "06a940716b89ac8a5748fbda6fc603533a4e435644d754b68d85ea4bd22b78ab"
+    },
+    "Sunny_Womens_cannon1_wheel.001": {
+      "before": "374c3216e1c67177ef8e4ae2b5f90ff18e19195605df3b5a3d645b009a46d1e5",
+      "after": "794877be9cebde6bce3c9dcfc4722ee5ff4bc012208806cfcd86a6b586321ca1"
+    },
+    "Sunny_Womens_cannon1_wheel.002": {
+      "before": "1c3eb2f988de0a6f270b7fb7dbd7ce407e37c794ce9792ddc861e523f6d5eacb",
+      "after": "376a3a7e0c0c432d36614dbea07d57e1f9c60811410108581d06030d3ed5a87f"
+    },
+    "Sunny_Womens_cannon1_wheel.003": {
+      "before": "65149cb7a2b62791bacab427749d2849aefa76174b55cf67fbd0ec199206469e",
+      "after": "36b4f7116803c645ffbd98ad0bd6006736537b11f313c50f1fde824359224871"
+    },
+    "Sunny_Womens_cannon-1_barrel": {
+      "before": "d4ffa9aa2401cb26bd33701c6569074a2473514b92923287139f5b75205c3a84",
+      "after": "67c8335ed2dba324a63d6fe3281257a760c41c5316ed3991035d0e9b3662600a"
+    },
+    "Sunny_Womens_cannon-1_carriage": {
+      "before": "2264da50778acaf54063c9965ebf8272a77d647f6d36567528c522972f5942d6",
+      "after": "ce919ab42c1c4a81c5d8093afa2ebdacdc4b4905b04843b8c54c73ed01b9cfe3"
+    },
+    "Sunny_Womens_cannon-1_rim": {
+      "before": "17d007125c78d5fd61ff9ba72d4c5b1bb425b266a0bfe13db7b694fb8942013b",
+      "after": "62c11d2d298914fa3e32339f6233e17109f7bf73239c77fa1be1f9b4fa50a051"
+    },
+    "Sunny_Womens_cannon-1_wheel": {
+      "before": "703c57f49ecb1deccc62ff591e0112cebd3a17259fb496b19836ceb1830aeed9",
+      "after": "ce428f37ad2786e5e9cfeba418f15dea2a220d220444e316fde59cd6806dbc85"
+    },
+    "Sunny_Womens_cannon-1_wheel.001": {
+      "before": "9d11f4708b020610c6b15cc2d703549cd36903ab990ce9e172e3369911ca51af",
+      "after": "18bb9a76d83d3e3dc858afaea68a4eed73d103dbf28b0473115ab256915531a0"
+    },
+    "Sunny_Womens_cannon-1_wheel.002": {
+      "before": "647475a686b800a81f97b08b431d54528a62f80f87d73852162643f267fab060",
+      "after": "5826a533e26b6e9042b0b0e71dc7b000689801b0cadcb291225b05eb689c4d7f"
+    },
+    "Sunny_Womens_cannon-1_wheel.003": {
+      "before": "54a43c1ef250ef1bf004b56b384678d79ee2c1f27938eb4401535720fcf535f1",
+      "after": "1b67901da929c39612be8ef75c2ec4355f858ae205eafa08733e42216b0498d7"
+    },
+    "Sunny_Womens_closet_body": {
+      "before": "4bf0731184aab976855fe1d4397e473dcd0b9686808b6a2a2c9bf102319e3045",
+      "after": "56c499be34f7ff219c5ad8e4cc07550188141e7e5d11bf13da375637f4088cd4"
+    },
+    "Sunny_Womens_closet_door0": {
+      "before": "6aa0bb0aecfb93558eb8beeb97b771f522ce9b197a7bb58a21b4d9cdd96e0c6e",
+      "after": "72972ab79519fa000df1712c37dd703c1c688f9e90e4be16a6f1c1e41e1de5fc"
+    },
+    "Sunny_Womens_closet_door1": {
+      "before": "0415909615d1c56ac9bc7b84a44d2863fe6e55dc9a9a5b179922bf4d6881abcd",
+      "after": "4066714b4ae1ed631f87ef8fb76fb664b2af0492ccca14475573301c8a5dc4f6"
+    },
+    "Sunny_Womens_closet_door2": {
+      "before": "be1f1f0e7e0fb5aafde8ec989bf330c4fc219b27e3d1087747c92d976d95bea2",
+      "after": "8825fcf73b6d106d754b28f632c8794a845ab1fe2f27b7cc20f8de571e1f7472"
+    },
+    "Sunny_Womens_closet_door3": {
+      "before": "4be197ac06c1cb89af7fd7b9cabad9e2bbec4bcd5e95f16281018e4bb2928d69",
+      "after": "a531842b0fd2a56449b9337b457239ca94329f2c4b3ee6e24b8154787668335f"
+    },
+    "Sunny_Womens_tea_armchair_arm": {
+      "before": null,
+      "after": "c0c0025f35aabf9653d112c13f140d157eff5b91f53ffd0337253163b8ca0d66"
+    },
+    "Sunny_Womens_tea_armchair_arm.001": {
+      "before": null,
+      "after": "e39073f548c4694aaef4184e754ac75edab5c9994f986ad16ac090a2ab2cffb6"
+    },
+    "Sunny_Womens_tea_armchair_arm.002": {
+      "before": null,
+      "after": "e0d7d0c3e601edab45a2d71d01bde50f887f025522dbdc6e79df807b07a0378d"
+    },
+    "Sunny_Womens_tea_armchair_arm.003": {
+      "before": null,
+      "after": "c09f41542aabcc650e949aa72a6f760d088ca34b85b551feac1d151797cea553"
+    },
+    "Sunny_Womens_tea_armchair_back": {
+      "before": null,
+      "after": "ea11e5652c68b39a263189b2c264b5ab4896997cbd9f0b8b38db14ff2d47a067"
+    },
+    "Sunny_Womens_tea_armchair_back.001": {
+      "before": null,
+      "after": "4ea3ac071981698299b981326ed278060fc33c464405a01f651582b8b39c15d4"
+    },
+    "Sunny_Womens_tea_armchair_cushion": {
+      "before": null,
+      "after": "86b62f263674b911a485ca9b9b35a28876871cb9f1380ca216620323774a8c53"
+    },
+    "Sunny_Womens_tea_armchair_cushion.001": {
+      "before": null,
+      "after": "e2d53cf494bb316739cd41525e49b42ff48f8f1a313dbe3af0b3c9264465d2cf"
+    },
+    "Sunny_Womens_tea_armchair_deck": {
+      "before": null,
+      "after": "b69feb312250a975e259a9c2e82263db275f85e1396721aed15e2c384c98846e"
+    },
+    "Sunny_Womens_tea_armchair_deck.001": {
+      "before": null,
+      "after": "d958c41fc8eab95bdcdfd7c4195453f065fade5602b2d280850a7b80a0517ff7"
+    },
+    "Sunny_Womens_tea_armchair_leg": {
+      "before": null,
+      "after": "5d6f9e90f930c0dc3a25faf816047bc313939e5cb22afb798800993f863f6a01"
+    },
+    "Sunny_Womens_tea_armchair_leg.001": {
+      "before": null,
+      "after": "e61f3b74c976f825f4d214723ecf32b2c34378873462e1c51de8a89368f3de57"
+    },
+    "Sunny_Womens_tea_armchair_leg.002": {
+      "before": null,
+      "after": "1c1cd610a3a68bae90ae9f794f728f516ff7bc53c41a7f7a7a70472910d1ec6d"
+    },
+    "Sunny_Womens_tea_armchair_leg.003": {
+      "before": null,
+      "after": "f7489531f1ff8dd8ca2e4e202f44abdd61013be9ae40cf89c89ffe62c3b5b7d7"
+    },
+    "Sunny_Womens_tea_armchair_leg.004": {
+      "before": null,
+      "after": "21750be94825149634748b7e765157a52abe61e4f868bda12b0855a803a7749a"
+    },
+    "Sunny_Womens_tea_armchair_leg.005": {
+      "before": null,
+      "after": "295f9280f8498f7fbe63e307706b892528432decd3fcfd1720babf0ccd887116"
+    },
+    "Sunny_Womens_tea_armchair_leg.006": {
+      "before": null,
+      "after": "c028c8737b60f2f53e477e2cf968552b8491ab216ce616be053e8399031cf474"
+    },
+    "Sunny_Womens_tea_armchair_leg.007": {
+      "before": null,
+      "after": "ce59720b0b5dc281c56f18af93a4d96f88ad918c6483a3357782b9ae642e5718"
+    },
+    "Sunny_Womens_tea_table_column": {
+      "before": null,
+      "after": "0d1c9230bc42d1af45e8c344e7780e448bd94878dfd502d6f1f9dc7c2fe6b002"
+    },
+    "Sunny_Womens_tea_table_foot": {
+      "before": null,
+      "after": "ab87aae5ffd3100f4d7b5da3078ab8ba82dbaa8b8fd6d8f377f6f9e509ff52a3"
+    },
+    "Sunny_Womens_tea_table_top": {
+      "before": null,
+      "after": "7bb7fff85414f791bd94bf5e69aea04e79afb04bcabf3bc6a9450a64be406d52"
+    },
+    "Sunny_Womens_vanity_bottle": {
+      "before": null,
+      "after": "3ce601d16de6f6c8f78d24d67a96f8f2590e5276252f788e16bc30bb4c266d09"
+    },
+    "Sunny_Womens_vanity_bottle.001": {
+      "before": null,
+      "after": "8dc595356e95e20c4fe2c7d7f17c56cc12884cc4c73457dc15281fcf72af53f3"
+    },
+    "Sunny_Womens_vanity_bottle.002": {
+      "before": null,
+      "after": "2164fb011ff0cffa5c942a07df7d61352786b23a949099484750fa319288e74e"
+    },
+    "Sunny_Womens_vanity_bottle_cap": {
+      "before": null,
+      "after": "74b8b681dd361484d3aa7f6ab00907420e2ff99f41f2ee0dcc4c4ff9edfd7e33"
+    },
+    "Sunny_Womens_vanity_bottle_cap.001": {
+      "before": null,
+      "after": "8d3ecfc7397b2538594670b067d654e7c060464327f38d02a0aefc43d6355502"
+    },
+    "Sunny_Womens_vanity_bottle_cap.002": {
+      "before": null,
+      "after": "32a461f214c0e8b8886c0d609b5090ee77967d440ab1d8050e9e547f1da09c4b"
+    },
+    "Sunny_Womens_vanity_cabinet": {
+      "before": null,
+      "after": "f5dab2cc35a48d5d4a2059e842a6606fbd8dae8e8600cab30bc01661891a34c4"
+    },
+    "Sunny_Womens_vanity_cabinet.001": {
+      "before": null,
+      "after": "af5d6a5ff52429209855f17af8807fdca7293107d96d4784502f5087da0793da"
+    },
+    "Sunny_Womens_vanity_mirror": {
+      "before": null,
+      "after": "eaaaf38dcedf1fff4b8e18b2a96b1fc63c7e7adbbad3bad43c07f6a24e88bf2c"
+    },
+    "Sunny_Womens_vanity_mirror_mount": {
+      "before": null,
+      "after": "184bd36af78e1e9b4fadab768e2b4842b0bf734e9ea9112ff48fc690c7692893"
+    },
+    "Sunny_Womens_vanity_mirror_mount.001": {
+      "before": null,
+      "after": "683cdcb17854fe53f85b9bbbc008585f521bcedcf704b3d90a7b00b3aeb1de01"
+    },
+    "Sunny_Womens_vanity_panel": {
+      "before": null,
+      "after": "9d9eab3b636388261296ca80a047f940fbca488bf64e96b8010eafa0f4065e7b"
+    },
+    "Sunny_Womens_vanity_panel.001": {
+      "before": null,
+      "after": "7a1788d9dc36bdee308cd7c0ba8ea2895847a27fa98fa73bd60bad89eb4febcc"
+    },
+    "Sunny_Womens_vanity_pull": {
+      "before": null,
+      "after": "96c54029fcf296fe961227876345e504cd12db3389cb11b2bdaaa8f87ea14f63"
+    },
+    "Sunny_Womens_vanity_pull.001": {
+      "before": null,
+      "after": "3c5fc8b36d61f96baf8b0f59295309c8fefa17abaef4bdb67a674b87105a0cdd"
+    },
+    "Sunny_Womens_vanity_top": {
+      "before": "e700ef8c8deec27d5e6ee4ba2c453272e7303ff21a37c5fd998250f84a87614a",
+      "after": "35c192b64ab95b48f88b008c1949ce666df5278e51a996c798e78176ca14dc92"
+    },
+    "Sunny_WWash_cupboard_back": {
+      "before": "bf014a4d62a01344889ba6c58b9b22f988fa6c1041465d15edfdacde08b79716",
+      "after": "142d922fef49f845c9489fca27f86e22e595484397c85d6552d5b2005499cd3a"
+    },
+    "Sunny_WWash_cupboard_door": {
+      "before": null,
+      "after": "0e1c1b5f0f9d6590783761c3896cd8aeefbf28e2ddacfab373316c55091d9153"
+    },
+    "Sunny_WWash_cupboard_door.001": {
+      "before": null,
+      "after": "7a83f4ca188126d24fdb15028c3073654914e1f9ce4445f2e43ca79797ffa24e"
+    },
+    "Sunny_WWash_cupboard_pull": {
+      "before": null,
+      "after": "ba26ed008f30e3ce1a2703997df9438b5c90c1628fdcc927441e32bed5cad52c"
+    },
+    "Sunny_WWash_cupboard_pull.001": {
+      "before": null,
+      "after": "91d373dcde4ae016401f63a03caef4cab84d1e3ffd7784ed2d3128baf304c77b"
+    },
+    "Sunny_WWash_cupboard_shelf0": {
+      "before": "5c796016031b7382c97711d20439cd19a352bdd1db71582ad0fc3f7f4ea19482",
+      "after": "ecb1feb715aff7aaa5dfb955cafbe18f4df673cc673dffb812ea008e20099715"
+    },
+    "Sunny_WWash_cupboard_shelf1": {
+      "before": "0648e0e5bfd55349030754d90a5b03eaca9b64c0f78bcf89675f36d61d560501",
+      "after": "efddeec1e71bde36aa92682efe6a155bced3348d1d8e6d9fb150f2237a9ae856"
+    },
+    "Sunny_WWash_cupboard_shelf2": {
+      "before": "ac8b25b13fc396d14a25905f98780b2fe1e7092ba979bcc5c1e4f9db9bda8a6d",
+      "after": "02da90ceb8d63f5df688c72f1da71525314ee7ed54172218b6316622f7eef37b"
+    },
+    "Sunny_WWash_cupboard_shelf3": {
+      "before": "a9fd29dd75e712265f9dd510136bb9c6da3113e98e7b875dc629e314918eab0a",
+      "after": "8e0bfc84e9b52080264e0b24568d4ac0fbdeb36ff8cddf6769d58d0883eb7f91"
+    },
+    "Sunny_WWash_cupboard_side": {
+      "before": "a88111481e73f8f04f8c37593f3fb9d07df7ebfc421a50bec5c08ddc79e97a52",
+      "after": "3b784d6385c58d292e27f6063ffd134f1e63cd1c76d7a8ee96bb4ef3ae270366"
+    },
+    "Sunny_WWash_cupboard_side.001": {
+      "before": "8c30b4b7bce3a6404aa0cd2823f95c839a2917988c881f314d17b3f2b49f0c46",
+      "after": "8537d470dd96de44bda6225dc61d9891b6d23360d8d98088b865465631ad30ce"
+    },
+    "Sunny_WWash_sink_bowl": {
+      "before": "f5b35aa889c4ed5a0e1ff65ddae087e964079c79942578242c09744ba57d35d1",
+      "after": "a2b6e0089b2621912ce0dae52bd7dd59f54cbb4017c2ca68835bafd648697d15"
+    },
+    "Sunny_WWash_sink_drain": {
+      "before": null,
+      "after": "2185a33185c226892f563172b2362c651fda9706d2c0051b08d72e9f34fce6dd"
+    },
+    "Sunny_WWash_sink_mirror": {
+      "before": null,
+      "after": "9e0d1700409d9182ff392f7071e95a6f623a61e3a101af4ade156e8c5efcf52c"
+    },
+    "Sunny_WWash_sink_mirror_back": {
+      "before": null,
+      "after": "0749bba573859593535d94a8b0f88679d5d294c878bf99ce1bd643e3cf7c6247"
+    },
+    "Sunny_WWash_sink_pedestal": {
+      "before": "f7ba236b41e71a02c359626c0687dd797c60ea84c8192ad703cc0232fd5104f2",
+      "after": "39541f8387f2ed477450c1171a10f8b97ced82838311e3d64ab3bfa7ecc6527e"
+    },
+    "Sunny_WWash_sink_spout": {
+      "before": "15f2febe75cc3c2275bfb0e6394d8d8c392c693c92636f5367752fd2558c30b4",
+      "after": "622a7372242a95c9587cec031e5e2dc04fd367c371a4ef08c68b9c7f19bf3347"
+    },
+    "Sunny_WWash_sink_tap": {
+      "before": "bb0a5b2250ddbe08bca95a2340e814edd65d11a34eb42457237f76bdbdcbf56b",
+      "after": "74a38ac0b3ab7e9974ee73fa72581dc7be07ba5e6670f3d294ef8d6d257141e0"
+    },
+    "Sunny_WWash_sink_tap_handle": {
+      "before": null,
+      "after": "944cbd388d35720be96cc0b09e20cf2dcebfda8632ff424a40cd0ef69f017535"
+    },
+    "Sunny_WWash_sink_tap_handle.001": {
+      "before": null,
+      "after": "b6f388a0ef9676fb395e1f03ed5c89a6968e1011ace66123d864afee194d1f25"
+    },
+    "Sunny_WWash_tea": {
+      "before": "1a13738eed1b6a74d93301a9414e03f635524d737ccaeb8b7c9c6428e44d521f",
+      "after": "47b8c22f13f886330e59e9f21d9db0f7ca6602298c8182083d0772361f659a2a"
+    },
+    "Sunny_WWash_tea.001": {
+      "before": "8c43274fdb13331e86228e4e60e0921ca6fa33c47b628e3d3d84cdf92441a2c2",
+      "after": "9f0ad02ed8201bf96f3752e8ff8f9a4378ac28b309ac64c5448b1b6d49dd6cb5"
+    },
+    "Sunny_WWash_tea.002": {
+      "before": "27d57049e117d1e096989bf2f3a4dc98b2794ab272a6f633c992b1ab0371e38e",
+      "after": "5b39c6db93268f87f736f0e9af4725a0ba5aae9cdfef2ac25172275bced320b1"
+    },
+    "Sunny_WWash_tea.003": {
+      "before": "1318b7b192fced8047458ae9e8d5bf4f20bdf2390a211b3eb3a1d22fd7f07791",
+      "after": "24a7dd0789676696820a39144d902a6dacc781c80b2962822db53faf96f22c74"
+    },
+    "Sunny_WWash_teacup": {
+      "before": "a7666a7a13fcaa8552ae31c73dff1315499b34dae01807e92e77f7ba997f80be",
+      "after": "bcd435e85c0aa617d63a1db616a4d223cc3f17bfd7d3b43c31c7f7051b1ae3d4"
+    },
+    "Sunny_WWash_teacup.001": {
+      "before": "bed9c87dd92734dc80dc100b28c40335ac34b56391e76f3b59f34dde3318c970",
+      "after": "9a972f84364466e93c2de1005fe473e2ea50d002baf86c61e6712a86de577902"
+    },
+    "Sunny_WWash_teacup.002": {
+      "before": "b49bbc37a3e6f9ffadd62b384e5fc767fb11f3ee0f81823f48fb357ac3880d20",
+      "after": "2032b1f1990eb5051b1c5b645b1bc30e069d96d7ff9a244f665f7aa89ab550aa"
+    },
+    "Sunny_WWash_teacup.003": {
+      "before": "5cebbba9c372d1660a7c54cd372de7ca373c549926ce7d4012b2d72b1efe2425",
+      "after": "d68316b3e49d16de3ae4b9a683fc1f0bd2a9863ad16836fe91eb091fdab9e0aa"
+    },
+    "Sunny_WWash_teapot": {
+      "before": "2cc96353efe058fef89603e5a5bf8123cd7de9ce0af53814408f99f86260fafd",
+      "after": "3202247df19ecd4f705d11ff726662ce20792b8dcc0fbc026be0eb96eb33d7b3"
+    },
+    "Sunny_WWash_teapot_handle": {
+      "before": "af320a0996037ac2ff77ede275af497a232b6c50bf7fc17238c924b082251e4f",
+      "after": "e5d89664fe5aebe5d1175bb7c6258e6a02b48ade82283a4a151c61ce29005ed7"
+    },
+    "Sunny_WWash_teapot_knob": {
+      "before": "d99d579c2f1fd1d6dd0a4d5b41a83bb2716e92b262efa704389f9af0bb6a69a8",
+      "after": "2745ed087487075505a1c129216f3f6083c90c060747675a8f96ecea1b50a059"
+    },
+    "Sunny_WWash_teapot_lid": {
+      "before": "6fb53b19f761d0ad562e1b9dd02a839c08d2a7909ba64f28296050501c48269d",
+      "after": "679f25d7347e9691ffbba667a987c6012f5ab127f5246082893f630327b2e324"
+    },
+    "Sunny_WWash_teapot_spout": {
+      "before": "4f2bb3f3018539e54b5550218a1dd809800b7d260ffe0645473806382dd9c876",
+      "after": "dc3b11d546bd5552f24eda309b51dc704cd438abf5f4f5938223925ee8fb433f"
+    },
+    "Sunny_WWash_wine_bottle": {
+      "before": null,
+      "after": "684089f44a2cb892786230aeca3b3df56cb4dea6828c1c1dba92e0d31267f481"
+    },
+    "Sunny_WWash_wine_bottle.001": {
+      "before": null,
+      "after": "0b3fec06f8673b1c7595c18cdc966a2134c37731b9df720e369fe0f66409ee8e"
+    },
+    "Sunny_WWash_wine_bottle.002": {
+      "before": null,
+      "after": "8118236b2977d7446e6a894ef8c27779910e1fa77b2089be3575e948ac05f887"
+    },
+    "Sunny_WWash_wine_bottle.003": {
+      "before": null,
+      "after": "e905a8cd5ad8cc796c89e0a572281b5405b69e53cde24ff1bbf5ddeb51c74095"
+    },
+    "Sunny_WWash_wine_label": {
+      "before": null,
+      "after": "cb0915d8e9f35ac30706b12448ec98a22ebc3a2af6fc4c62ea510330282ecba7"
+    },
+    "Sunny_WWash_wine_label.001": {
+      "before": null,
+      "after": "8df0bd878072d27345d1c87666031f8192962243ecf1d4e05574fefaaf2e3682"
+    },
+    "Sunny_WWash_wine_label.002": {
+      "before": null,
+      "after": "8c9eb0240499eb065af25a3e1d057259333694f1f997b852fdcc4f53b51fca36"
+    },
+    "Sunny_WWash_wine_label.003": {
+      "before": null,
+      "after": "08453edab1c2897453b18fe8dcd1c57759dedf298b00cd8e182931fa1185328d"
+    },
+    "Sunny_WWash_wine_neck": {
+      "before": null,
+      "after": "04a0fcf42ad5abac29e340cbfc6dc642229ec3dcc6e1b5e3a7f33ae2c32ce1f7"
+    },
+    "Sunny_WWash_wine_neck.001": {
+      "before": null,
+      "after": "d4d2ed51f15b1f4a7bb8ded7632be014a87e90869aad75ca4bdc9dc532f0762a"
+    },
+    "Sunny_WWash_wine_neck.002": {
+      "before": null,
+      "after": "9a847bb62c5ec2f14ac22cf7ce1aa38767cea504a33eb46bf75f964973577da9"
+    },
+    "Sunny_WWash_wine_neck.003": {
+      "before": null,
+      "after": "ed351cba3e5a9630724d11d714039007fe5267025fc2ce579f36c3d746c68a10"
+    }
+  },
+  "collisionSha256": "3c854f7f31c2bd4b9ab3f0fc5124d52765976ace92b9e6f042a4886caf027ee5"
+}

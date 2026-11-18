@@ -30,6 +30,11 @@ SCOPES = {
         'solids': ('Sunny_Pantry_', 'Sunny_Sick_'),
         'floor_bounds': None,
     },
+    'ForeCabins': {
+        'visual': ('Sunny_Quarters_', 'Sunny_Womens_', 'Sunny_Wash_', 'Sunny_WWash_', 'Sunny_ForeToilet'),
+        'solids': ('Sunny_Quarters_', 'Sunny_Womens_', 'Sunny_Wash_', 'Sunny_WWash_', 'Sunny_ForeToilet'),
+        'floor_bounds': None,
+    },
 }
 
 

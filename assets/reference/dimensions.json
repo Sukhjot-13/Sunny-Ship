@@ -1,8 +1,8 @@
 {
-  "source": "/private/tmp/sunny-rear-service-candidate/sunny-master.blend",
-  "workingVisualSource": "/private/tmp/sunny-rear-service-candidate/sunny.glb",
-  "sourceSha256": "c097f1eff1dc5c7f86800fdda5123d00b44c36f71ebc024d0657d5e176d9abe6",
-  "workingVisualSha256": "b9d439ba68784e93e8450d4537cb4457dfdf725f704ae5fbf06f77eb894bdb69",
+  "source": "/private/tmp/sunny-fore-cabins-clear-candidate/sunny-master.blend",
+  "workingVisualSource": "/private/tmp/sunny-fore-cabins-clear-candidate/sunny.glb",
+  "sourceSha256": "7f37dfdd1f7596a125f7bb0dafcaf84b1df27135458a6716b61ffb6b9d2379fd",
+  "workingVisualSha256": "f1f165ec579f750608283af4b441b5bed5d7e1bb7998e91a60bc35a072b0712d",
   "workingScale": 2.2,
   "referenceScale": 1,
   "rootMultiplier": 0.45454545454545453,

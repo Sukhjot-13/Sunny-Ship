@@ -110,6 +110,7 @@ const suites=[
  ['interiorJourneys.mjs','continuous room tour and interior stairs'],
  ['bathJourneys.mjs','continuous Bath, washroom and toilet journey via the Library ladder'],
  ['aftInteriorJourneys.mjs','continuous galley workstations and Pantry threshold journey'],
+ ['roomSetJourneys.mjs','continuous fore cabin, washroom, closet and toilet journey'],
  ['navigation.mjs','walking to ship controls and operating navigation'],['interaction.mjs','pointer / orbit interaction'],['exteriorMotion.mjs','exterior movement and stationary comparison'],['visual.mjs','visual capture'],
 ]
 const results=[]

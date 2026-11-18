@@ -1,0 +1,126 @@
+{
+  "trace": [
+    {
+      "label": "Men's Quarters",
+      "position": [
+        -24.705082295701533,
+        -40.55070114135742,
+        0.40151599452951653
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "Men's Washroom",
+      "position": [
+        -19.999930644535922,
+        -40.55070114135742,
+        -6.831562997773211
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "Men Starboard Cannon Closet",
+      "position": [
+        -24.801199574082837,
+        -40.55070114135742,
+        -8.483581497799092
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "Men Port Cannon Closet",
+      "position": [
+        -24.75036913209888,
+        -40.55070114135742,
+        9.33163438321629
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "Women's Quarters",
+      "position": [
+        -26.000000000000004,
+        -36.41469955444336,
+        0.37580403686984737
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "Women's Washroom",
+      "position": [
+        -21.799999986747636,
+        -36.41469955444336,
+        -7.318144708072974
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "Women Starboard Cannon Closet",
+      "position": [
+        -26.000035195038414,
+        -36.41469955444336,
+        -8.596053954089637
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "Women Port Cannon Closet",
+      "position": [
+        -26.00000019356728,
+        -36.41469955444336,
+        9.308895973440578
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "Fore Port Toilet",
+      "position": [
+        -15.799463805252868,
+        -40.55070114135742,
+        3.7637620830535887
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "Fore Starboard Toilet",
+      "position": [
+        -15.764306133113347,
+        -40.55070114135742,
+        -3.6179224767224185
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "return to lawn",
+      "position": [
+        -4.106159811986737,
+        -40.55070114135742,
+        -0.9999984729545482
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    }
+  ],
+  "errors": []
+}

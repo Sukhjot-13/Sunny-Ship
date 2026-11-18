@@ -13,7 +13,10 @@ const asset=async name=>{
 }
 const [visual,metaBytes]=await Promise.all(['sunny.glb','ship-metadata.json'].map(asset))
 const meta=JSON.parse(metaBytes)
-const room=meta.interiors.rooms.find(room=>room.name===roomName)
+const foreCabins=["Men's Quarters","Women's Quarters","Men's Washroom","Women's Washroom",
+ 'Men Starboard Cannon Closet','Men Port Cannon Closet','Women Starboard Cannon Closet','Women Port Cannon Closet',
+ 'Fore Port Toilet','Fore Starboard Toilet']
+const room=meta.interiors.rooms.find(room=>room.name===(roomName==='Fore Cabins'?foreCabins[0]:roomName))
 assert(room,`Unknown room: ${roomName}`)
 const x=(room.x[0]+room.x[1])/2,z=-(room.y[0]+room.y[1])/2,floor=meta.interiors.levels[room.level]
 const views={
@@ -27,18 +30,34 @@ const views={
  Pantry:[['stores',[-1.44,1.66,1.45],[1.15,1.38,-1.20],72],['outer-door',[-1.23,1.66,1.108],[1.8,1.27,1.108],74]],
  'Sick Bay':[['bed-and-entry',[-1.32,1.68,-.02],[1.26,1.12,2.04],78],
   ['workstation',[1.18,1.62,1.48],[-1.46,1.19,1.77],74],['passage',[-1.42,1.66,-1.392],[1.75,1.35,-1.392],73]],
+ "Men's Quarters":[['mens-room',[3.2,1.65,-.68],[-2.8,1.20,.95],76],
+  ['bunks',[-.80,1.55,3.41],[-3.1,1.23,-.55],75]],
+ "Women's Quarters":[['womens-room',[2.74,1.64,-.86],[-2.48,1.17,1.65],78],
+  ['canopy',[-.26,1.60,-3.40],[2.57,1.15,-5.20],72]],
+ "Men's Washroom":[['mens-wash',[-.54,1.61,.36],[.84,1.16,-.04],72]],
+ "Women's Washroom":[['womens-wash',[.22,1.63,.87],[-.18,1.24,-.80],75]],
+ 'Fore Port Toilet':[['port-toilet',[.48,1.47,.38],[-.39,.83,-.04],69]],
+ 'Fore Starboard Toilet':[['starboard-toilet',[.48,1.47,-.38],[-.39,.83,.04],69]],
+ 'Fore Cabins':[],
+}
+for(const name of foreCabins.filter(name=>name.includes('Cannon Closet'))){
+ const closet=meta.interiors.rooms.find(room=>room.name===name)
+ if(!closet)continue
+ const direction=closet.y[0]>0?-1:1
+ views[name]=[[name.toLowerCase().replaceAll(' ','-'),[.43,1.36,0],[-1.10,.54,.50*direction],65]]
 }
 assert(views[roomName],`No camera study configured for ${roomName}`)
 const point=([dx,dy,dz])=>[x+dx,floor+dy,z+dz]
 if(room.libraryLayout)views.Library.push(['bath-ladder',[-.44,1.66,.75],[-2.16,1.58,-2.83],68])
 if(room.diningLayout)views['Dining Room'].push(['table-length',[-3.39,1.61,-.96],[2.51,1.13,.74],76])
 if(room.galleyLayout)views.Kitchen.push(['prep-aisle',[-2.26,1.65,-1.30],[2.42,1.18,-3.74],78])
-if(roomName==='Bath'){
- for(const name of ['Bath Washroom','Bath Toilet']){
+if(roomName==='Bath'||roomName==='Fore Cabins'){
+ for(const name of roomName==='Bath'?['Bath Washroom','Bath Toilet']:foreCabins){
   const linked=meta.interiors.rooms.find(room=>room.name===name)
   const offsetX=(linked.x[0]+linked.x[1])/2-x,offsetZ=-(linked.y[0]+linked.y[1])/2-z
-  const offset=([dx,dy,dz])=>[dx+offsetX,dy,dz+offsetZ]
-  for(const [label,eye,focus,fov] of views[name])views.Bath.push([label,offset(eye),offset(focus),fov])
+  const offsetY=meta.interiors.levels[linked.level]-floor
+  const offset=([dx,dy,dz])=>[dx+offsetX,dy+offsetY,dz+offsetZ]
+  for(const [label,eye,focus,fov] of views[name])views[roomName].push([label,offset(eye),offset(focus),fov])
  }
 }
 const browser=await puppeteer.launch({headless:true,args:['--use-gl=angle','--use-angle=metal','--enable-unsafe-swiftshader','--enable-webgl']})
@@ -59,7 +78,10 @@ try{
   window.__roomReview=_roots.get(document.querySelector('canvas')).store.getState()
   window.__roomReview.controls.enabled=false
  })
- for(const [name,eye,focus,fov] of views[roomName]){
+ const filter=process.env.ROOM_VIEW_FILTER
+ const requested=views[roomName].filter(([name])=>!filter||name.includes(filter))
+ assert(requested.length,'The room camera filter selected no views')
+ for(const [name,eye,focus,fov] of requested){
   const camera=point(eye),target=point(focus)
   await page.evaluate(({camera,target,fov})=>{
    const scene=window.__roomReview
