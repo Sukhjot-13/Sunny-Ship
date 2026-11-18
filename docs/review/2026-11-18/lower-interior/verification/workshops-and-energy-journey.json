@@ -1,0 +1,82 @@
+{
+  "trace": [
+    {
+      "label": "Usopp's Main Factory",
+      "position": [
+        14.498222547991645,
+        -47.15060043334961,
+        -7.200000000506194
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "assembly bench",
+      "position": [
+        14.600052373273902,
+        -47.15060043334961,
+        -9.47967803449113
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "Franky's Weapon Development Room",
+      "position": [
+        14.399999999999963,
+        -47.15060043334961,
+        5.186307601014553
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "drawing bench",
+      "position": [
+        12.656303359441994,
+        -47.15060043334961,
+        6.5925996579005295
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "Energy Room",
+      "position": [
+        24.0006752913846,
+        -47.15060043334961,
+        -0.41185413255884823
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "boiler controls aisle",
+      "position": [
+        23.199999995640944,
+        -47.15060043334961,
+        -7.067803427609421
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "return to lawn",
+      "position": [
+        -4.149330226856451,
+        -40.55070114135742,
+        -0.99999998792941
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    }
+  ],
+  "errors": []
+}

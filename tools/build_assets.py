@@ -1033,7 +1033,7 @@ interior_prefixes=('Sunny_Quarters','Sunny_Womens','Sunny_WWash','Sunny_Wash_',
     'Sunny_Kitchen_','Sunny_Dining_','Sunny_Sick_','Sunny_Pantry_','Sunny_Energy_',
     'Sunny_Store_','Sunny_Factory_','Sunny_Weapons_','Sunny_Aquarium_',
     'Sunny_Library_','Sunny_Bath_','Sunny_RoomLamp_','Sunny_InteriorFloor_',
-    'Sunny_RoomPartition_','Sunny_Dock_','Sunny_Vehicle')
+    'Sunny_RoomPartition_','Sunny_Dock_','Sunny_Vehicle','Sunny_SurveyGym_')
 for obj in ship_objects:
     moving=any(obj.get(key) for key in ('sunny_door','sunny_hatch','sunny_rudder','sunny_dock_shutter','sunny_jaw','sunny_mane'))
     target=interactive_collection if moving else interior_collection if obj.name.startswith(interior_prefixes) else exterior_collection
@@ -1142,6 +1142,7 @@ meta = {
     "oceanHullProfile": ocean_profile,
     "interiors": {"finishedRooms":False,"dockCentre":interiors['dockCentre'],"dockSolids":interiors['dockSolids'],"dockWaterLevel":interiors['dockWaterLevel'],"foodLift":interiors['foodLift'],"levels":{k:round(v,3) for k,v in interiors['levels'].items()},
         "lights":interiors.get('lights', []),
+        "lookoutRoom":interiors.get('lookoutRoom'),
         "foreEnclosures":interiors['foreEnclosures'],
         "foreFacade":interiors.get('foreFacade'),
         "foreTrimVolumes":interiors['foreTrimVolumes'],

@@ -1,6 +1,6 @@
 # Sunny interior completion contract — October 15, 2026
 
-## Active room order — November 17, 2026
+## Interior completion record — November 18, 2026
 
 The Aquarium (`1b1a9aa`) and earlier exterior checkpoints are pushed on `reference-completion`. Leave their verified features alone unless a shared interface changes or an actual regression appears. The user has requested all interiors now, with realistic materials and lighting in each room. Remaining exterior work is parked. The older order and graphics hold below are historical.
 
@@ -12,10 +12,10 @@ The Aquarium (`1b1a9aa`) and earlier exterior checkpoints are pushed on `referen
 | Dining | Applied locally. [Evidence](dining-reference-audit.md) covers fitted furnishings, material and lighting passes, and the normal visit and return. |
 | Kitchen | Applied locally. [Evidence](kitchen-reference-audit.md) covers material roles, the preserved mast lift and the actual walk through the prep aisle and back. |
 | Pantry and Sick Bay | Applied locally. [Evidence](rear-service-room-audit.md) covers fitted shelves and clinic furnishings and normal circulation through both outside doorways and back. |
-| Men’s and women’s quarters, both washrooms and four cannon closets | Applied locally. [Evidence](fore-cabin-reference-audit.md) covers the finishes, original women’s entry corridor and the continuous ten-space walk. |
+| Men’s and women’s quarters, both washrooms and four cannon closets | Applied locally. The finishes, original women’s entry corridor and continuous ten-space walk passed. Gunport alignment belongs to the remaining exterior work. [Evidence](fore-cabin-reference-audit.md) |
 | Two fore toilets beneath the stairwells | Applied locally as part of the fore suite. Both were visited on the normal walk. |
-| Storage, Energy Room, Dock interior and both workshops | Active. Verify the actual storage ladder and lower circulation. |
-| Crow’s Nest, survey instruments and gym | Active. Preserve the verified exterior rope, ladder and hatch. |
+| Storage, Energy Room, Dock interior and both workshops | Applied locally. Both workshops are in their R07 bays. The Storage and Dock ladders, workstations and Energy Room controls passed normal visits and lawn returns. [Evidence](lower-interior-reference-audit.md) |
+| Crow’s Nest, survey instruments and gym | Applied locally. The rope, ladder, hatch, telescope and training aisle passed an uninterrupted ascent and return to the lawn. [Evidence](lower-interior-reference-audit.md) |
 
 For each checkpoint, compare the supplied drawings and anime still, check the actual materials and editable geometry, and walk the affected access/return. Use before/after fingerprints to avoid reopening accepted rooms. The working 2.2 scale and normal player remain unchanged; exact metre sizes are reconstructed.
 

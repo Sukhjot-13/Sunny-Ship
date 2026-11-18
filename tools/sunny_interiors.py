@@ -1339,21 +1339,14 @@ def build_interiors(objects, vertex_bbox, shift, aft_snapshot=None):
                 dock_solids.append(entry)
     rooms.append(dict(level='B1',name='Soldier Dock System',x=dock,y=(cy-11.4,cy+11.4)))
 
-    # Franky's port workshop and Usopp's starboard workshop share the aft bay.
+    # R07 puts Usopp on the slide side and Franky on the swing side.
     for i,x in enumerate((11.0,14.5,18.0)):
-        workbench('Factory_bench%d'%i,(x,-9.0,B1),0,2.5)
-        tool_board('Factory_board%d'%i,(x,-9.5,B1),0,2.4,1.2)
-        crate('Factory_crate%d'%i,(x,-2.2,B1),.06*i,.7)
-        workbench('Weapons_bench%d'%i,(x,10.6,B1),math.pi,2.5)
-        tool_board('Weapons_board%d'%i,(x,11.1,B1),math.pi,2.4,1.1)
+        crate('Factory_crate%d'%i,(x,2*cy+2.2,B1),.06*i,.7)
     for i in range(4):
-        barrel('Factory_oil%d'%i,(9.6+i*.78,-3.5,B1))
-        rbox('Weapons_cola%d'%i,(9.6+i*.72,3.5,B1),0,(.42,.42,1.1),'red',(0,0,.55))
-    workbench('Factory_boatstand',(17,-4,B1),0,2.2)
-    cannon('Factory_cannon',(17,-4,B1+.9),0,.6)
-    cannon('Weapons_prototype',(17,5.5,B1),0,1.15)
-    rooms.append(dict(level='B1',name="Usopp's Main Factory",x=shop,y=(-11.5,cy)))
-    rooms.append(dict(level='B1',name="Franky's Weapon Development Room",x=shop,y=(cy,13.2)))
+        barrel('Factory_oil%d'%i,(9.6+i*.78,2*cy+3.5,B1))
+        rbox('Weapons_cola%d'%i,(9.6+i*.72,2*cy-3.5,B1),0,(.42,.42,1.1),'red',(0,0,.55))
+    rooms.append(dict(level='B1',name="Usopp's Main Factory",x=shop,y=(cy,13.2)))
+    rooms.append(dict(level='B1',name="Franky's Weapon Development Room",x=shop,y=(-11.5,cy)))
 
     # --- Energy Room: below the aquarium bar, at the back, per reference --
     enx = (en[0] + en[1]) / 2

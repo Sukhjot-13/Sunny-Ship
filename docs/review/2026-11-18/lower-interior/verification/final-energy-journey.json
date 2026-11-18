@@ -1,0 +1,49 @@
+{
+  "trace": [
+    {
+      "label": "Energy Room",
+      "position": [
+        23.999999960387775,
+        -47.15060043334961,
+        -0.46154592695523383
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "boiler chamber aisle",
+      "position": [
+        23.199999877679247,
+        -47.15060043334961,
+        -6.949237803770121
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "boiler control cabinet",
+      "position": [
+        24.139504008774896,
+        -47.150699615478516,
+        -3.196670870772432
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "return to lawn",
+      "position": [
+        -4.1303115318397925,
+        -40.55070114135742,
+        -1.0000000291678335
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    }
+  ],
+  "errors": []
+}

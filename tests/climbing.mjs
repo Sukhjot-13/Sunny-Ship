@@ -72,6 +72,11 @@ try{
  await climb('w',s=>!s.c,'through hatch to lookout floor')
  assert((await read()).g,'arrival has real floor support')
  await walk('lookout floor excursion',[end[0]-.7,floor,end[2]+.8])
+ if(meta.interiors.lookoutRoom){
+  const {scope,training}=meta.interiors.lookoutRoom
+  await walk('survey telescope station',[scope[0]+.93,floor,-scope[1]+.44])
+  await walk('training locker aisle',[training[0],floor,-training[1]-1.14])
+ }
  await page.evaluate(()=>window.__sunny.look(Math.PI,-.12));await page.screenshot({path:'docs/review/walk-Lookout-floor.png'})
  await walk('return to ladder endpoint',end)
  await page.keyboard.press('e');await sleep(120);assert((await read()).c,'E reattaches for descent')

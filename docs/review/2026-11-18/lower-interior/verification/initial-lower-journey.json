@@ -1,0 +1,4565 @@
+{
+  "trace": [
+    {
+      "label": "Men’s cabin storage hatch approach",
+      "position": [
+        -22.92626450748425,
+        -40.55070114135742,
+        3.80002241229068
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "storage-ladder E open",
+      "p": [
+        -23,
+        -40.54870114135742,
+        3.9
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 8.200000000000001,
+        "length": 8.200000000000001
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 27618.09999999404
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -40.54870114135742,
+        4.0011932778903745
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 8.09857000000626,
+        "length": 8.200000000000001
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 27762.19999998808
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -40.54870114135742,
+        4.102362001883104
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 7.99724500000626,
+        "length": 8.200000000000001
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 27859.19999998808
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -40.54870114135742,
+        4.203006144673286
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 7.896445000006261,
+        "length": 8.200000000000001
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 27954.90000000596
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -40.54870114135742,
+        4.278021648035018
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 7.821894999974969,
+        "length": 8.200000000000001
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 28051
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -40.55069133365255,
+        4.379109435164472
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 7.720569999974969,
+        "length": 8.200000000000001
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 28146.59999999404
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -40.55067798862374,
+        4.477858858922206
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 7.621659999987486,
+        "length": 8.200000000000001
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 28240.29999998212
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -40.55066651592166,
+        4.5770334378794795
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 7.5223299999624516,
+        "length": 8.200000000000001
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 28335.59999999404
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -40.54870114135742,
+        4.65342629414106
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 7.446414999949935,
+        "length": 8.200000000000001
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 28431.09999999404
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -40.54870114135742,
+        4.752491535862517
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 7.3471899999499355,
+        "length": 8.200000000000001
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 28525.90000000596
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -40.54870114135742,
+        4.851344201020411
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 7.24817499996871,
+        "length": 8.200000000000001
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 28619.69999998808
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -40.54870114135742,
+        4.950936198498157
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 7.17414999996871,
+        "length": 8.200000000000001
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 28715.29999998212
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -40.54870114135742,
+        4.999920248674992
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 7.099914999981228,
+        "length": 8.200000000000001
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 28809.69999998808
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -40.54870114135742,
+        5.1001396733184325
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 6.999534999987486,
+        "length": 8.200000000000001
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 28905.40000000596
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -40.54870114135742,
+        5.198891090668762
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 6.90062499996871,
+        "length": 8.200000000000001
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 29000.19999998808
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -40.55071716260724,
+        5.298144987896671
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 6.801294999974968,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 29094.59999999404
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -40.55071716308594,
+        5.399049987890413
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 6.700389999981226,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 29190.19999998808
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -40.55071716308594,
+        5.497749987890414
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 6.601689999981225,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 29285.09999999404
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -40.6495121630922,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 6.5012049999937425,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 29380.69999998808
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -40.748632163098456,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 6.402084999987484,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 29474.79999998212
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -40.84827716310471,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 6.3024399999812255,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 29570.5
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -40.94949716311097,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 6.201219999974967,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 29665.79999998212
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -41.04914216311723,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 6.101574999968708,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 29760.29999998212
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -41.14920716309845,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 6.001509999987483,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 29856
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -41.25042716310472,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 5.900289999981224,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 29952.09999999404
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -41.35185716309846,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 5.798859999987482,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 30049.09999999404
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -41.43396716311723,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 5.716749999968707,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 30131.59999999404
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -41.52437216311097,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 5.626344999974966,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 30216.79999998212
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -41.605642163117224,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 5.5450749999687075,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 30294
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -41.71295216310471,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 5.4377649999812245,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 30393.59999999404
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -41.81375216310471,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 5.336964999981224,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 30488.5
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -41.91245216310471,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 5.238264999981224,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 30582.90000000596
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -42.012097163110965,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 5.138619999974965,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 30677
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -42.11037716310471,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 5.040339999981224,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 30771.19999998808
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -42.20823716309219,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 4.942479999993742,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 30864.09999999404
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -42.30609716311096,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 4.844619999974967,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 30957
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -42.40448216309844,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 4.746234999987484,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 31051.09999999404
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -42.50276216309218,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 4.647954999993742,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 31144.29999998212
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -42.60146216309219,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 4.549254999993742,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 31239
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -42.700582163098446,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 4.450134999987483,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 31333.09999999404
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -42.80001716311722,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 4.350699999968707,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 31427.09999999404
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -42.8978771631047,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 4.252839999981224,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 31520.59999999404
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -42.99563216309845,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 4.155084999987483,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 31614.40000000596
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -43.093807163098454,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 4.056909999987482,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 31708.19999998808
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -43.19229716311097,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 3.9584199999749647,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 31801.5
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -43.290997163110966,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 3.8597199999749647,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 31896.79999998212
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -43.38990716309845,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 3.7608099999874813,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 31989.69999998808
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -43.48787216311097,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 3.662844999974964,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 32083
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -43.58667716310472,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 3.5640399999812225,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 32176.79999998212
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -43.684012163092206,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 3.46670499999374,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 32270
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -43.7842871630922,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 3.3664299999937404,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 32367.79999998212
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -43.885612163092205,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 3.26510499999374,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 32461.69999998808
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -43.98368216309846,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 3.1670349999874814,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 32555.69999998808
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -44.08311716311724,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 3.0675999999687065,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 32649.5
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -44.180872163110976,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 2.969844999974965,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 32742.79999998212
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -44.2798871630922,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 2.8708299999937408,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 32837.29999998212
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -44.37827216311098,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 2.772444999974965,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 32931.09999999404
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -44.476447163110976,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 2.6742699999749653,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 33023.90000000596
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -44.576197163110976,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 2.574519999974965,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 33118.59999999404
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -44.67384716311098,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 2.476869999974965,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 33212.79999998212
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -44.77244216311723,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 2.3782749999687063,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 33306
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -44.872822163110975,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 2.277894999974965,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 33401.69999998808
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -44.970892163117234,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 2.179824999968707,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 33495.09999999404
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -45.06927716310472,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 2.081439999981224,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 33588.69999998808
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -45.1681871630922,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 1.9825299999937407,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 33683.19999998808
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -45.26667716310471,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 1.8840399999812236,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 33776.69999998808
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -45.36611216309219,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 1.7846049999937406,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 33871.5
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -45.46449716311097,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 1.6862199999749652,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 33966.09999999404
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -45.5635121630922,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 1.5872049999937408,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 34062.19999998808
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -45.66609716311097,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 1.4846199999749654,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 34160.19999998808
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -45.768262163092196,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 1.382454999993741,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 34264.5
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -45.86510716309845,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 1.2856099999874826,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 34351.69999998808
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -45.95792716310471,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 1.1927899999812241,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 34439.59999999404
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -46.04728216309846,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 1.1034349999874826,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 34524.19999998808
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -46.12970716309846,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 1.0210099999874827,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 34602.79999998212
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -46.234287163092205,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 0.9164299999937412,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 34702
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -46.338552163104715,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 0.8121649999812242,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 34800.29999998212
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -46.43882716310472,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 0.7118899999812242,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 34896.79999998212
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -46.543827163104716,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 0.6068899999812242,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 34995.69999998808
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -46.644942163085936,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 0.5057749999999996,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 35093.40000000596
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -46.75193716309219,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 0.3987799999937412,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 35195.69999998808
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -46.85924716311096,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 0.29146999997496575,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 35299.5
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -46.96991716308592,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 0.18079999999999968,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 35401.59999999404
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -47.07029716311095,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 0.08041999997496574,
+        "length": 8.200000000000001
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 35497.09999999404
+    },
+    {
+      "label": "storage-ladder descent",
+      "p": [
+        -23,
+        -47.14869961547851,
+        5.5
+      ],
+      "c": null,
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 35592.90000000596
+    },
+    {
+      "label": "Storage Room stock aisle",
+      "position": [
+        -23.800000000000633,
+        -47.150699615478516,
+        -2.999071390662167
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "Storage ladder footing",
+      "position": [
+        -22.999999999999755,
+        -47.150699615478516,
+        5.446740114766024
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -47.05096716308594,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 0.09975,
+        "length": 8.200000000000001
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 52732.90000000596
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -46.95100716309846,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 0.19970999998748304,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 52827.90000000596
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -46.851362163092205,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 0.29935499999374154,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 52923.19999998808
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -46.75140216307343,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 0.39931500001251696,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 53018.5
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -46.65070716309847,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 0.5000099999874831,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 53114.40000000596
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -46.550537163092216,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 0.6001799999937417,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 53209.29999998212
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -46.45036716308596,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 0.7003500000000001,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 53304.90000000596
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -46.34977716307345,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 0.8009400000125172,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 53400.59999999404
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -46.25023716309222,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 0.9004799999937416,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 53495.29999998212
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -46.15059216308596,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 1.0001250000000002,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 53590.5
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -46.050947163079705,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 1.0997700000062587,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 53685.29999998212
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -45.95098716309222,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 1.1997299999937416,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 53780.19999998808
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -45.85029216308596,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 1.3004250000000002,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 53876.19999998808
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -45.750647163079705,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 1.4000700000062587,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 53970.90000000596
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -45.650582163098484,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 1.5001349999874831,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 54066.29999998212
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -45.55072716307345,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 1.5999900000125171,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 54161.19999998808
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -45.454127163073444,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 1.6965900000125171,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 54253.09999999404
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -45.3568971630797,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 1.7938200000062585,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 54345.90000000596
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -45.25830216307344,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 1.8924150000125168,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 54439.90000000596
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -45.1605471630797,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 1.990170000006258,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 54532.69999998808
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -45.06415716309847,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 2.0865599999874824,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 54624.79999998212
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -44.9678721630797,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 2.1828450000062585,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 54716.59999999404
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -44.8696971630797,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 2.2810200000062584,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 54809.79999998212
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -44.77267716307343,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 2.378040000012517,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 54902.19999998808
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -44.674187163092206,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 2.476529999993742,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 54996.40000000596
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -44.576222163079684,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 2.5744950000062587,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 55089.5
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -44.478782163098465,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 2.6719349999874833,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 55182.19999998808
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -44.38081716308595,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 2.7699000000000003,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 55275.5
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -44.28390216307343,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 2.8668150000125174,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 55368.79999998212
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -44.184992163085944,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 2.9657250000000004,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 55462.69999998808
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -44.08765716309846,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 3.0630599999874835,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 55555.40000000596
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -43.990217163085944,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 3.1605000000000003,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 55648.19999998808
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -43.89918216309846,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 3.2515349999874834,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 55734.69999998808
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -43.80100716309846,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 3.3497099999874838,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 55827.69999998808
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -43.704197163079684,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 3.446520000006259,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 55920.79999998212
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -43.605392163085945,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 3.5453250000000005,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 56013.90000000596
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -43.50858216309846,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 3.6421349999874835,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 56106.09999999404
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -43.411247163079686,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 3.739470000006259,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 56198.79999998212
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -43.31506716308594,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 3.8356500000000007,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 56290.29999998212
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -43.218257163098464,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 3.9324599999874836,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 56383.5
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -43.12092216307968,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 4.029795000006258,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 56475.19999998808
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -43.024847163079684,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 4.125870000006257,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 56566.59999999404
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -42.92677716307343,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 4.223940000012515,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 56660.19999998808
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -42.830387163092205,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 4.3203299999937395,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 56751.90000000596
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -42.73315716309847,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 4.417559999987481,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 56845.40000000596
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -42.63634716307969,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 4.514370000006256,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": null,
+      "t": 56937.29999998212
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -42.538172163079686,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 4.612545000006256,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 57030.79999998212
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -42.44031216309221,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 4.71040499999374,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 57124
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -42.34423716309221,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 4.80647999999374,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 57215.59999999404
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -42.246902163073436,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 4.903815000012516,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 57307.79999998212
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -42.14914716307969,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 5.001570000006256,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 57401.59999999404
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -42.05244216308595,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 5.0982749999999974,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 57493.5
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -41.954897163079686,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 5.195820000006256,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 57586.09999999404
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -41.85829716307969,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 5.2924200000062545,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 57678
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -41.76127716307343,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 5.389440000012512,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 57770.90000000596
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -41.664467163085945,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 5.486249999999996,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 57862.90000000596
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -41.56786716308595,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 5.582849999999996,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 57955.69999998808
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -41.469062163092204,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 5.6816549999937385,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 58048.79999998212
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -41.37151716308595,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 5.779199999999997,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 58141.5
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -41.272817163085946,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 5.877899999999997,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 58235.40000000596
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -41.176112163092206,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 5.974604999993738,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 58327.40000000596
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -41.07793716309221,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 6.072779999993737,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 58422.40000000596
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -40.97986716308595,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 6.170849999999994,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 58514.5
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -40.88295216307343,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 6.267765000012511,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 58606.69999998808
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -40.784882163098466,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 6.365834999987477,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 58700.19999998808
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -40.68796716308595,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 6.4627499999999936,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 58792.59999999404
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -40.591052163073435,
+        5.5
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 6.55966500001251,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 58886
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -40.55071716308594,
+        5.441215000012526
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 6.658784999987476,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 58979.40000000596
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -40.55071716308594,
+        5.344509999987491
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 6.75549000001251,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 59071.79999998212
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -40.55071716308594,
+        5.246125000000009
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 6.853874999999992,
+        "length": 8.200000000000001
+      },
+      "g": false,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 59165.69999998808
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -40.55071716308594,
+        5.148370000006268
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 6.951629999993734,
+        "length": 8.200000000000001
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 59258.79999998212
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -40.55071716308594,
+        5.049354999993751
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 7.05064500000625,
+        "length": 8.200000000000001
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 59353.5
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -40.55071716308594,
+        4.949709999987493
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 7.150290000012508,
+        "length": 8.200000000000001
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 59448.19999998808
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -40.55071716308594,
+        4.85132500000001
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 7.2486749999999915,
+        "length": 8.200000000000001
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 59541.40000000596
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -40.55071716308594,
+        4.7531500000000095
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 7.346849999999992,
+        "length": 8.200000000000001
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 59634.69999998808
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -40.55071716308594,
+        4.654345000006268
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 7.445654999993733,
+        "length": 8.200000000000001
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 59729.19999998808
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -40.55071716308594,
+        4.554595000006268
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 7.545404999993734,
+        "length": 8.200000000000001
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 59823.79999998212
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -40.55071716308594,
+        4.456315000012527
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 7.6436849999874745,
+        "length": 8.200000000000001
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 59918.29999998212
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -40.55071716308594,
+        4.356565000012527
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 7.743434999987475,
+        "length": 8.200000000000001
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 60012.5
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -40.55071716308594,
+        4.255975000000009
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 7.844024999999992,
+        "length": 8.200000000000001
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 60108.29999998212
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -40.55071716308594,
+        4.155175000000009
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 7.944824999999993,
+        "length": 8.200000000000001
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 60207.79999998212
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -40.55071716308594,
+        4.0688650000125275
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 8.031134999987474,
+        "length": 8.200000000000001
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 60288.5
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -40.55071716308594,
+        3.9894849999874933
+      ],
+      "c": {
+        "id": "storage-ladder",
+        "progress": 8.110515000012509,
+        "length": 8.200000000000001
+      },
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 60365.5
+    },
+    {
+      "label": "storage-ladder ascent",
+      "p": [
+        -23,
+        -40.55071716308594,
+        3.9
+      ],
+      "c": null,
+      "g": true,
+      "r": 0,
+      "h": {
+        "openness": 1,
+        "target": 1,
+        "blocked": false,
+        "holdOpen": false,
+        "latched": true
+      },
+      "near": {
+        "id": "StorageHatch",
+        "kind": "hatch",
+        "label": "Men's Quarters / Storage Room hatch",
+        "open": true
+      },
+      "t": 60467.90000000596
+    },
+    {
+      "label": "return from Storage to lawn",
+      "position": [
+        -4.105753114411933,
+        -40.55070114135742,
+        -1.0000004606117165
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "Soldier Dock System",
+      "position": [
+        3.9638085325999532,
+        -47.15060043334961,
+        6.399834041564795
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "Usopp's Main Factory",
+      "position": [
+        14.365850183399722,
+        -47.15060043334961,
+        5.199999949061286
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "assembly bench",
+      "position": [
+        14.582445457266289,
+        -47.15060043334961,
+        9.800133974405021
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "Franky's Weapon Development Room",
+      "position": [
+        14.400000000000034,
+        -47.150699615478516,
+        -7.111483331918307
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "drawing bench",
+      "position": [
+        12.623881798003083,
+        -47.15060043334961,
+        -10.59995652219401
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "Energy Room",
+      "position": [
+        24.000004551131713,
+        -47.15060043334961,
+        -0.4962412944944955
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "boiler controls aisle",
+      "position": [
+        23.19999985190876,
+        -47.15060043334961,
+        -6.933149081740749
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "return to lawn",
+      "position": [
+        -4.163875441366022,
+        -40.55070114135742,
+        -1.000000009490829
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    }
+  ],
+  "errors": []
+}

@@ -1388,7 +1388,7 @@ def restore_exterior(objects, vertex_bbox):
     levels=dict(interiors['levels'])
     levels['foredeck']=vertex_bbox(next(o for o in objects if o.name=='Sunny_ForeUpperLanding'))[1].z
     return (objects, -shift,
-            sorted({o.get('sunny_feature') for o in objects if o.get('sunny_feature')}),
+            sorted({feature for o in objects if (feature:=o.get('sunny_feature')) and feature!='SurveyGym'}),
             ratio, levels, interiors)
 
 

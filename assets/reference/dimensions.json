@@ -1,8 +1,8 @@
 {
-  "source": "/private/tmp/sunny-fore-cabins-clear-candidate/sunny-master.blend",
-  "workingVisualSource": "/private/tmp/sunny-fore-cabins-clear-candidate/sunny.glb",
-  "sourceSha256": "7f37dfdd1f7596a125f7bb0dafcaf84b1df27135458a6716b61ffb6b9d2379fd",
-  "workingVisualSha256": "f1f165ec579f750608283af4b441b5bed5d7e1bb7998e91a60bc35a072b0712d",
+  "source": "/private/tmp/sunny-lower-interior-ready/sunny-master.blend",
+  "workingVisualSource": "/private/tmp/sunny-lower-interior-ready/sunny.glb",
+  "sourceSha256": "ae29f0b2b86c84bcc301f3e3af4e3e6f3654cb538607fdc8b9a537ae86ea1cfe",
+  "workingVisualSha256": "368b1e3a09c48ad897ffa4b0bc41e69df6970a4faf67b22e171dac37bf6c22f5",
   "workingScale": 2.2,
   "referenceScale": 1,
   "rootMultiplier": 0.45454545454545453,

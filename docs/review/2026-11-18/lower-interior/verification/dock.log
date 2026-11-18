@@ -1,0 +1,8 @@
+PASS Dock waiting-room ladder upper landing [ 3.215288606154776, -40.55070114135742, -1.1993698321659763 ]
+PASS Dock waiting-room ladder complete descent [ 1.5950000000000013, -51.400699615478516, -1.287 ]
+PASS Dock waiting-room ladder lower floor excursion [ 1.7902278443398123, -51.400699615478516, -1.7415963187203014 ]
+PASS Dock waiting-room ladder walking return to ladder [ 1.657879553843781, -51.400699615478516, -1.2870030855013146 ]
+PASS Dock waiting-room ladder complete ascent [ 3.195000000000001, -40.55070114135742, -1.287 ]
+PASS Dock waiting-room ladder return along upper walking approach [ -4.146008481722211, -40.55070114135742, -0.9389555228288977 ]
+PASS Dock waiting-room ladder continuous return to spawn [ -4.146100532347362, -40.55070114135742, -0.9390595319103693 ]
+PASS dock-waiting-ladder full descents/ascents/closures and lawn returns; real W/E, no placement/flight/recovery

@@ -1,0 +1,51 @@
+{
+  "roomName": "Lower Rooms",
+  "url": "http://localhost:5174",
+  "shots": [
+    {
+      "name": "boiler-room",
+      "camera": [
+        22.424999999999997,
+        -45.49100000000001,
+        -5.32
+      ],
+      "target": [
+        24.234999999999992,
+        -45.67100000000001,
+        -8.780000000000001
+      ],
+      "fov": 76
+    },
+    {
+      "name": "boiler-controls",
+      "camera": [
+        24.199999999999996,
+        -45.561,
+        -2.4000000000000004
+      ],
+      "target": [
+        24.199999999999996,
+        -46.271,
+        -4.290000000000001
+      ],
+      "fov": 62
+    }
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "bathWater": false,
+  "surfaceRoles": {
+    "Sunny_Store_hessian_sack": "hessian",
+    "Sunny_Factory_assembly_table_top": "grain",
+    "Sunny_Weapons_furnace": "iron",
+    "Sunny_Energy_control_box": "enamel",
+    "Sunny_Vehicle3_shark_hull": "enamel",
+    "Sunny_Vehicle4_front_wheel": "rubber",
+    "Sunny_SurveyGym_training_bar": "steel"
+  },
+  "assets": {
+    "sunny.glb": "368b1e3a09c48ad897ffa4b0bc41e69df6970a4faf67b22e171dac37bf6c22f5",
+    "ship-metadata.json": "47ab93ea192f427ffecd58980b0ee6e2ec90d8d91e96269797de707e509db294"
+  },
+  "note": "Actual renderer, inspection camera only. Keyboard routes are verified separately."
+}

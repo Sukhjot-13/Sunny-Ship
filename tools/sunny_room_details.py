@@ -42,14 +42,14 @@ def workshop_metals(cy):
         if obj.name.startswith('Sunny_InteriorWall_B1_'):
             points=[obj.matrix_world@v.co for v in obj.data.vertices]
             x=sum(p.x for p in points)/len(points);y=sum(p.y for p in points)/len(points)
-            if 8.5<x<20.2 and y>cy:
+            if 8.5<x<20.2 and y<cy:
                 obj.data.materials.clear();obj.data.materials.append(material('steel'))
                 for face in obj.data.polygons:face.material_index=0
         elif obj.name.startswith('Sunny_RoomPartition_workshops'):
             index=len(obj.data.materials);obj.data.materials.append(material('steel'))
             normals=obj.matrix_world.to_3x3().inverted().transposed()
             for face in obj.data.polygons:
-                if (normals@face.normal).y>.9:face.material_index=index
+                if (normals@face.normal).y<-.9:face.material_index=index
 
 
 def lumber_storage(rooms, floor):

@@ -1,0 +1,9 @@
+{
+  "room": "LowerRoomsAndLookout",
+  "protectedHullBoxes": 57401,
+  "unchangedMeshes": 7567,
+  "collisionSha256": "6881ec0ed37df6a9905e5ef7e9f65498456bfc111358edfbb5b8f94ef69e4ef2",
+  "metadataSha256": "337085afb615f28f213ca8498bb2010e818046db3ce1a30505cbc81db32ac0d6",
+  "restoredWorkshopFloorCells": 2331,
+  "restoredLookoutFloorBox": "COLL_Floor_1747"
+}

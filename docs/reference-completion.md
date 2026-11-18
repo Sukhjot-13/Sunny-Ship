@@ -1,8 +1,10 @@
-## Active: finish the interiors room by room — November 17, 2026
+## Enclosed interior furnishing and materials — November 18, 2026
 
-Aquarium commit `1b1a9aa` is pushed. The [Library](library-reference-audit.md) is applied locally in `437106d`, including the working Bath ladder and three verified access round trips. The [Bath suite](bath-reference-audit.md) has passed the scoped finish and access checks, including the washroom and toilet. The [interior matrix](interior-acceptance-matrix.md) tracks these checkpoints and the active Dining room. Preserve the verified rooms and exterior through scoped comparisons.
+Aquarium commit `1b1a9aa` is pushed. The [Library](library-reference-audit.md) is applied locally in `437106d`, including the working Bath ladder and three verified access round trips. The [Bath suite](bath-reference-audit.md) has passed the scoped finish and access checks, including the washroom and toilet. The [interior matrix](interior-acceptance-matrix.md) tracks completed sections. Preserve the verified rooms and exterior through scoped comparisons.
 
-The [Dining Room](dining-reference-audit.md), [Kitchen](kitchen-reference-audit.md), [rear service rooms](rear-service-room-audit.md), and [fore cabin suite](fore-cabin-reference-audit.md) are applied locally. The verified routes include both Pantry and Sick Bay outside thresholds, the fore cabins and washrooms, all four cannon closets and both under-stair toilets. The lower rooms and enclosed lookout are active. The remaining exterior, including the open observation deck and its branch office, stays parked.
+The Dining Room, Kitchen, Pantry, Sick Bay and fore cabin suite are applied locally. The verified routes include both outside service thresholds, the fore cabins and washrooms, all four cannon closets and both under-stair toilets. [Dining](dining-reference-audit.md) · [Kitchen](kitchen-reference-audit.md) · [Aft service](rear-service-room-audit.md) · [Fore cabin suite](fore-cabin-reference-audit.md)
+
+The lower deck and Crow’s Nest complete the enclosed furnishing pass. The final checks cover the corrected workshop bays, the Storage and Soldier Dock ladders, the relocated boiler controls and the entire lookout ascent and return. The lower build retains all floor colliders, 57,401 hull boxes and 7,567 visual meshes from the fore checkpoint. The remaining exterior includes the open observation deck, its branch office and the inherited hull intrusions visible along parts of B1. [Lower interior audit](lower-interior-reference-audit.md)
 
 ## Aquarium Bar applied — November 17, 2026
 

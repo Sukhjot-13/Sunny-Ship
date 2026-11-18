@@ -5,7 +5,7 @@ import {interiorTextureSet,interiorSurfaceRole,interiorTileSize,interiorGeometry
 import {realisticTextureSet,realisticExteriorMaterial} from '../src/systems/realisticExterior.js'
 import {createInteriorLightRig} from '../src/systems/interiorLighting.js'
 
-for(const role of ['upholstery','linen','curtain','tile','porcelain','paper','marble','hessian']){
+for(const role of ['upholstery','linen','curtain','tile','porcelain','paper','marble','hessian','rubber','vinyl','enamel']){
  const set=interiorTextureSet(role)
  assert.equal(interiorTextureSet(role),set)
  let lo=255,hi=0
@@ -40,6 +40,13 @@ for(const [label,name,role] of [
  ['kitchen_marble','Sunny_Kitchen_prep_cabinet_stone','marble'],
  ['kitchen_steel','Sunny_Kitchen_sink_bowl','steel'],['kitchen_enamel','Sunny_Kitchen_fridge_door','porcelain'],
  ['cloth_pantry_hessian','Sunny_Pantry_floor_sack','hessian'],['cloth_sick_blanket','Sunny_Sick_bed_sheet','linen'],
+ ['workshop_maple','Sunny_Factory_assembly_table_top','grain'],
+ ['workshop_cast_iron','Sunny_Weapons_furnace','iron'],
+ ['workshop_painted_steel','Sunny_Energy_control_box','enamel'],
+ ['dock_marine_blue','Sunny_Vehicle3_shark_hull','enamel'],
+ ['dock_rubber','Sunny_Vehicle4_front_wheel','rubber'],
+ ['dock_pool_vinyl_ivory','Sunny_Vehicle6_inflatable','vinyl'],
+ ['lookout_optic_metal','Sunny_SurveyGym_training_bar','steel'],
 ])assert.equal(interiorSurfaceRole(mat(label),{name}),role)
 const lamp=realisticInteriorMaterial(mat('lamp_glow'))
 assert(lamp.emissiveIntensity>1&&lamp.emissive.getHex()!==0&&!lamp.transparent)
@@ -47,6 +54,7 @@ for(const role of ['glass','tankwater']){
  const m=realisticInteriorMaterial(mat(role));assert(m.transparent&&!m.depthWrite&&m.opacity>.1&&m.opacity<.3)
 }
 assert(usesRealisticInterior({sunny_authored:true,sunny_feature:'Library'},'Sunny_Library_table'))
+assert(usesRealisticInterior({sunny_authored:true,sunny_feature:'SurveyGym'},'Sunny_SurveyGym_training_bar'))
 assert(usesRealisticInterior({sunny_authored:true,sunny_fabric:true},'Sunny_Aquarium_curtain'))
 assert(!usesRealisticInterior({sunny_authored:true,sunny_feature:'Anchor'},'Sunny_Anchor'))
 assert(!usesRealisticInterior({sunny_authored:true},'NativeHull'))
@@ -103,4 +111,4 @@ assert(rig.slots.every(s=>s.light.intensity<.00001),'distant lamp budget did not
 assert.deepEqual(fixtureRecords,recordCopy,'light selection mutated metadata')
 let disposed=0;for(const s of rig.slots){s.light.shadow.map=new THREE.WebGLRenderTarget(8,8);s.light.shadow.map.addEventListener('dispose',()=>disposed++)}
 rig.dispose();assert.equal(disposed,2);assert.equal(rig.group.children.length,0)
-console.log('PASS: six interior map sets, physical projection/source invariants, palette/cache isolation, patterned floor grids and fixture finishes')
+console.log('PASS interior map sets, fixed metric projection, palette isolation, floor grids and fixture finishes')

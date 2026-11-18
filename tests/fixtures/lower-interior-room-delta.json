@@ -1,0 +1,2196 @@
+{
+  "removed": {
+    "Sunny_Factory_bench0_drawer": "ba4969d446de85c4d26ca3bc476a69ac801218f87780017e38fdf7155f87523c",
+    "Sunny_Factory_bench0_leg": "eb8c602161af3c1ea5dd8bc422056ca7b46339e27be900916779ce7b848a8247",
+    "Sunny_Factory_bench0_leg.001": "7c83fb481c60114767c750eff01193fa748c5dfe3342c8621ad2110d7cb059e2",
+    "Sunny_Factory_bench0_leg.002": "c2922d6399551bba644f9e1883c6e97b9bbf383b5d4f9de6591bf29c28c207b3",
+    "Sunny_Factory_bench0_leg.003": "ef954b2ebb876852952340c4d9d8b555a48cb219e3f08018cb4161050b21b8a0",
+    "Sunny_Factory_bench0_top": "1ce5404cdddf0a3ba15ad168e72ab6228cd4ce9cda2dcc18a82e79827469b35b",
+    "Sunny_Factory_bench0_vice": "6069192e8057d6486591c6f226f5eea6268a380b03b37739058f78716e1380c2",
+    "Sunny_Factory_bench1_drawer": "5155e61d3b87ff8c419574151faf1153287fcd2265223c6a96ce384708aba995",
+    "Sunny_Factory_bench1_leg": "2b2b0857293de80976789c8c3bc74a4de029e2e88b32ba0ca91bf8d331a6c1c9",
+    "Sunny_Factory_bench1_leg.001": "cc1b97e2c2e7509a8b5cd370112017a4269b3b0d2549baad8b3d3d49895dae9d",
+    "Sunny_Factory_bench1_leg.002": "57fcc8912904b174fd07ee23172081748d868debc110ba657fd3234b4e17c497",
+    "Sunny_Factory_bench1_leg.003": "d5ff2b7ec2c4067a9e196512a08f4d7488b659e382ed215933b7b33adcde5d8b",
+    "Sunny_Factory_bench1_top": "48f009f57a51d2230cb1e471b05c7ae90f1172e9c874b122e6bd17300b031fbd",
+    "Sunny_Factory_bench1_vice": "c7a2fbaad37e923dba6fe7e075936eb7209a3357da515f0ae1e912c8c1915abd",
+    "Sunny_Factory_bench2_drawer": "7832aaf1cf27854f2be4859f9e1a51d28dc1500c14eccfb05f7ecd1e8da42dbb",
+    "Sunny_Factory_bench2_leg": "ac22b49d714fb359b2d7cbc791adc73563c1e28549a841d550dacfa875850957",
+    "Sunny_Factory_bench2_leg.001": "563c4fd4f493cdd6e7a44dc47baeb5158b510c5d37640a830cfcc87ce25e549e",
+    "Sunny_Factory_bench2_leg.002": "9ccf3baea1f1c92d785f34da0c5f359599adad4b79680faedd47aa1f4a4152b6",
+    "Sunny_Factory_bench2_leg.003": "ab758ef95702774e12f4629aa3479a41ba399ab4acb137894d2a152e87fb5a45",
+    "Sunny_Factory_bench2_top": "3f878a2bf5efe8ce8806e6c8aea0ea46eb429f969b3fd97746097f8bd72dc1f0",
+    "Sunny_Factory_bench2_vice": "e0fdb92840b600971ce69121dadbf68c8bde1b46057b0889e3b884b55aba7902",
+    "Sunny_Factory_board0_foot": "ffd57b7d092d1571b15bfe831382fb7fe4af33e53f55bf2daee4a266c52e8b00",
+    "Sunny_Factory_board0_foot.001": "f39b50946b078e6b89ab7dc5a537f8e9213e01ca165e491c262d3994fab58ed9",
+    "Sunny_Factory_board0_panel": "5d6a29db86a2b1e4cec7b65936097ba00ce7563a50896c951f279d4e49590593",
+    "Sunny_Factory_board0_stand": "bdfed2c6cfcbf52450928b2964b53934b540b3e373d70235ab3d65a8c21015be",
+    "Sunny_Factory_board0_stand.001": "bd5905866620eb35d6664ed977b29d987c013d228cbcca9a342c130ca9de3f3d",
+    "Sunny_Factory_board0_tool0": "a1c8599eeff721106b0b88037c773920dc49c0080605be79feffd0807459c11e",
+    "Sunny_Factory_board0_tool1": "874cd450e20c20e5e024261ccc9e080e49552af972f5c36c284720a249b7c1b0",
+    "Sunny_Factory_board0_tool2": "32f9861344e1e9243dfe62b558442e626c43fdf0c5b63d38a49af706b9c00463",
+    "Sunny_Factory_board0_tool3": "8027556f88b45779768e960bfc1da67034369fb4e6758f11e734cf5948b667f0",
+    "Sunny_Factory_board0_tool4": "06dfbab714b13a51e5dc19d4a23b5b50af14d4a37a2493ba8b49fb15f11f27da",
+    "Sunny_Factory_board0_tool5": "6aee5404f570f6babf0c69ec463747511632c2f158fae2a3f5fbecb1fc71eb9e",
+    "Sunny_Factory_board0_tool6": "968dbb808ae873a9034de4f861d48de85140655d4d1f93de23f816104a2cf0dc",
+    "Sunny_Factory_board0_tool7": "0d77e0cc7bb06577704531510a1f8a4534ba2df61df6b975e2818b12a7f1848a",
+    "Sunny_Factory_board0_tool8": "845fcb7c92bd85ccc180902b103528ed647a75981ed78f43ceddda854eec9d3f",
+    "Sunny_Factory_board1_foot": "68ed18abe059e563d9b223f3f7cfade0db1fad72fe349512f24cef3816ca0022",
+    "Sunny_Factory_board1_foot.001": "ca6f8e65abe76191e506fa78f83e4ff72bb3dba48053a54cec611fdad0ca4026",
+    "Sunny_Factory_board1_panel": "b1ec6d3894619e4aabca3fc4b4c8dfcd0940a8837c919aa247a051d149d054a2",
+    "Sunny_Factory_board1_stand": "8c764c82ff2797e980da05a3bdcdca8bcf74ed748cb701ca9ee1641a29a05d55",
+    "Sunny_Factory_board1_stand.001": "b3559e23b404333dcea9252c8c094413675fd0a1c3f999bad929074fa20625ec",
+    "Sunny_Factory_board1_tool0": "84e7ce3ac44c490f4e1b8399d0bbb1d1637f1dc23a92fb1166c7c9dac42d3055",
+    "Sunny_Factory_board1_tool1": "9fa469a12b0a4a8fd0ddb2a3b0250139834cc160c78eab3e9a00ac40572a0615",
+    "Sunny_Factory_board1_tool2": "4d7d4a7899d5d73b5244d379bc828e3f8984bf0f16b4ec2a2a260feeaf174811",
+    "Sunny_Factory_board1_tool3": "b23558a8be173f2506058db4906b83203af38ef5aee0e3c3dd02a0bafa984ba6",
+    "Sunny_Factory_board1_tool4": "438234a2ac56297706d44b827bd188e329077680679ecb5d1636c17af236c600",
+    "Sunny_Factory_board1_tool5": "b852c9ec78ff5f1c8b1a1577480b51e3e39c0f26c73149631624d1cebba05499",
+    "Sunny_Factory_board1_tool6": "afe5ed1c90eb3f18abdf5437d904f67af77b376553e745167a60a36c842e4932",
+    "Sunny_Factory_board1_tool7": "049027ac0962bb471d2ede0e1b40bdc3654cd9f66faba127a119c9495e6e6be3",
+    "Sunny_Factory_board1_tool8": "755e8619600b010eb5246996387ff242c5b2a9f24616e9185043d80c83d7f378",
+    "Sunny_Factory_board2_foot": "78fec6a3cdaa6386c4ad223cf80bd89a65b8f8250c0902c219df7237db6d2f8e",
+    "Sunny_Factory_board2_foot.001": "848141c39f8d580f1a347f3722e7b8883663dbebbb9a6d991a1a43f18a61dac7",
+    "Sunny_Factory_board2_panel": "5d5dfd7338726dab692a11a24de2864f57d9a57777dd06e81ff13fe793e7a219",
+    "Sunny_Factory_board2_stand": "25f745fcce6fbc7e7d5784bf5721621dc2873cadb73777e49e22dcefc86563e0",
+    "Sunny_Factory_board2_stand.001": "1c096374d9d3eea4dbcd047338b9bcc48236616d1bd5b7620cc34e71654d4d63",
+    "Sunny_Factory_board2_tool0": "f95d34523b15910aa39657db4b3d0b4bd01eb1d959c38e85f12fc34904aded4e",
+    "Sunny_Factory_board2_tool1": "cd33923a824aac8d08df249469c730264980ef15df7827f9284d1b23065304dc",
+    "Sunny_Factory_board2_tool2": "61ebcd9b7b4117e82c26d24796bb6bba7f3c26d162aa58dcaa22f0c643f1f3c9",
+    "Sunny_Factory_board2_tool3": "9db40edc44700f7c7f9b4363d99666e8016c76ca90fbef28b6ff9e52790135b9",
+    "Sunny_Factory_board2_tool4": "83ce2197a0242d51aefa5b6d66c1a7d4a4008c55d9930371373eece7c5c394bf",
+    "Sunny_Factory_board2_tool5": "a3ed5616f4f4b9eb8934472b080ccf055a9aac69273b9a2907438a1231e8d02d",
+    "Sunny_Factory_board2_tool6": "566d696b0894d437ca121d8465f9da80efa6a6e1dabd14425b8a14dcd446ac02",
+    "Sunny_Factory_board2_tool7": "c576eff5e169b682b60b4498646176a1d2e9546dce6609d7afd4c8ff56179a73",
+    "Sunny_Factory_board2_tool8": "d9e30cc572c0ea0e391c25675c1ae39a30ebeb235f9aea8638218719a1adcb2f",
+    "Sunny_Factory_boatstand_drawer": "8aae6564451f4ba3ce15b5647cf77a9d2e6c38ad6bf50321bd8f725b6477882f",
+    "Sunny_Factory_boatstand_leg": "9f71dcfc82b358c0e79bad03db548eb7c8f756ca2ad4254b15ae3de09f1092f0",
+    "Sunny_Factory_boatstand_leg.001": "8ea2cc38e96d6d6233778fe5ffd94d7414775114d57f737a69c99683b80de160",
+    "Sunny_Factory_boatstand_leg.002": "13d7b3ed77ab47c2b1245ebfb7d71d4f2c07f529141021971f11f958f3eb9d4f",
+    "Sunny_Factory_boatstand_leg.003": "3b2c89fe8d8b6d92a0ef16b0de954831f1e3f94bb8399f2163447c20b863de50",
+    "Sunny_Factory_boatstand_top": "99f5009dd7c7beb2a3d0248b235a61d58de68e6a366a47ba6cceb6d7bf04e760",
+    "Sunny_Factory_boatstand_vice": "1a076c3e7ade39fc475bce65f536bf1fcb3a0224be134f1a5235f4e0d6a3feb5",
+    "Sunny_Factory_cannon_barrel": "d37304a3a9a037dded72fe480a001734d6ae867054191ea26610b29a6e1aa83e",
+    "Sunny_Factory_cannon_carriage": "2dc0006c2952d0c68554048af19647f51238336c199c5d128b8035f175967f74",
+    "Sunny_Factory_cannon_rim": "9ed9d4733129d34086d0152a2ec2bbe5296cca77e368670360a510eb2865edd1",
+    "Sunny_Factory_cannon_wheel": "7c333c58fc1ff5641f057dd48f657f3baf08fc96ac8a08f165f1ac2242f16191",
+    "Sunny_Factory_cannon_wheel.001": "66df053d20aa364d5b07618a3525d27083fd533faf185e335db233f415017c91",
+    "Sunny_Factory_cannon_wheel.002": "8e86697e14d49108298fb1f8d858b71592cf0553bea4b6160a291aef64eeef9e",
+    "Sunny_Factory_cannon_wheel.003": "0d186020b0f17ca977a5c37632d59bd2db1bb4aa17f3af6f652debddaac5445d",
+    "Sunny_Factory_cannon_wheel_hub": "78092ce3f420393a8d19e07458d39287bc2cfae4273d21b465a707e95702ca3c",
+    "Sunny_Factory_cannon_wheel_hub.001": "247cbfc332676f43f6f0103bb39e33670754c3d8ce33c2d027f0facc81ad5606",
+    "Sunny_Factory_cannon_wheel_hub.002": "4288038c585f6dd030cc8889e2af88e652b196601a5f246a008915bc770de33b",
+    "Sunny_Factory_cannon_wheel_hub.003": "f5b735964a1a2457969d94c6c22e3b37fb008e56c3dff85f3675ff3e3b129a41",
+    "Sunny_Store_sack0": "5a6ca7fd638e4cff06e9d3f5116270b970fea04b8e68f608457520f45345359d",
+    "Sunny_Store_sack1": "e6090876ddc0cf9a399b7d5bd348200a4bd6c820c8b3d77d164452e3f7cc9e6a",
+    "Sunny_Store_sack2": "005817fe48c2878bf574c5fa0137e7ec8ddb2a66c49465d912dcbb4b2d64c203",
+    "Sunny_Store_sack3": "493f807b0a3f412859af018a73f23171b325541a5fa31402cdf089e7edaf233f",
+    "Sunny_Store_sack4": "11d6c1f7fb1b000acd8dea6825c2b4735c2c941ec1f20fb822912ff347b6f7ef",
+    "Sunny_Store_sack5": "bcd19025dc11b3fee8dce20b3e8af0033af0e17b16c6c08ab8b12c514c33713f",
+    "Sunny_Store_sack6": "a6980284e04d4e03f936edd8a0da24fb3382d9f87b89204d0bbb3017c844b481",
+    "Sunny_Weapons_bench0_drawer": "d8e195d2b2ef339c856309e900ef65df7e29457fc9f55c641af948753008a68f",
+    "Sunny_Weapons_bench0_leg": "dff2a3c99109fd1aaed453a036a0b07dfe5103029e803b33813c7e9232358e2e",
+    "Sunny_Weapons_bench0_leg.001": "80f3b2d4de10bdf4a9b63cf28c503e7c640e600a045abade92008b9c18a702ae",
+    "Sunny_Weapons_bench0_leg.002": "5bc6b1c5fdfa60654bf9dc7b76f5874b72faefa87a582f2d331c570e1d800311",
+    "Sunny_Weapons_bench0_leg.003": "506ae4df761b3fe4a5fcaf16f1bd817eb7f68f38125447c36208f4cd2c6732d2",
+    "Sunny_Weapons_bench0_top": "69b7900a45a347b1df49d5b03fe8e0261d9e6e098ea7dfe59dd396c1c6e175d0",
+    "Sunny_Weapons_bench0_vice": "40cb860bbe9ebee38259c270b887c3627d0b863a22db24ca7aef72bc2412ffa4",
+    "Sunny_Weapons_bench1_drawer": "e8c60a6ce902596c69ed042f30d52a7cf0aac1cd7939a538e55f351e07847bf8",
+    "Sunny_Weapons_bench1_leg": "15a31e7bca9fac3e94264cda1f7fb9c2b1209f1b469a2404d3356f43b52c53a6",
+    "Sunny_Weapons_bench1_leg.001": "a9e6b745c416d096625415f53bce20d14d92c754f3ad16b831cba9beece5bd67",
+    "Sunny_Weapons_bench1_leg.002": "cf4d52cc3080a8c5c2ca02223d07b451a81348a2c1eacc2f98067deb54ebec28",
+    "Sunny_Weapons_bench1_leg.003": "5b7ac2adfd9f6c3a5ca9e4f40b8576d3722a75f1a58e7d808f01bfaff106a288",
+    "Sunny_Weapons_bench1_top": "51399044d2d3cc8d66e7c7272b01a5c612f340dc81c0fc9be97e1531c1891666",
+    "Sunny_Weapons_bench1_vice": "ee73887696958830d9a837ea7923579062f2a3f4422a041c3e981bc3c71aa54e",
+    "Sunny_Weapons_bench2_drawer": "d8ff58726e0684cfcd8106884de7ae7e40abfd1e593348407feb930edbdcecc3",
+    "Sunny_Weapons_bench2_leg": "475771219832eadaa8d0b8a68ced21adb0aefa7490c01dbfc4fedb50daf05ea0",
+    "Sunny_Weapons_bench2_leg.001": "36caf3cd11967bf2397b5ffb0ed66e6712359949fb11eab616417233f1d3f27a",
+    "Sunny_Weapons_bench2_leg.002": "9ea42b023649a002302feb0d76e995437c5324bd395f0f86bb2b75e3fdb32dd9",
+    "Sunny_Weapons_bench2_leg.003": "8aaf5d74f738a1003f4360ae54af92c7e8143b5e31a7dc69385a5eb2fe35c682",
+    "Sunny_Weapons_bench2_top": "77a66ee4a75400262df62ff53f43f30467ae07d4bc75fd49dd7401dadc531c4c",
+    "Sunny_Weapons_bench2_vice": "d30a823ee44da975a9befe4ff09be562d6ba8d2a1631cff46ff9f639f98c7710",
+    "Sunny_Weapons_board0_foot": "6efd00b06742e901fa81fbeb435d60e4f1f504fc26b2eef5347505a7d4e4aead",
+    "Sunny_Weapons_board0_foot.001": "9260826898dc554feaf21de08e11b860e255cf9b688e170432e32657df2761aa",
+    "Sunny_Weapons_board0_panel": "049854e67db49ac9d39a8d33f015e0db0819abd3bd6dfc9ade3ded908de933ea",
+    "Sunny_Weapons_board0_stand": "b3c586010ef6f73984acd411558bc9d646ba4b1c9ba56223e8f83205c330176a",
+    "Sunny_Weapons_board0_stand.001": "75b481a39de6891ea80b39f3f59b0a45e468a0518fe0666a428500fd5368f289",
+    "Sunny_Weapons_board0_tool0": "4b63ad3f891dd5a21379c82aa79185cc12c7e5d44b6979c24ab87d95b5b72225",
+    "Sunny_Weapons_board0_tool1": "e567058c96e6746f518d33e3ff828e7e67e28a5ad241af5e3b76f2df7dc7ddf2",
+    "Sunny_Weapons_board0_tool2": "9f48deabe5a643b0b6ffba721b396f4d9a82d58c8461ae89308952900b335d38",
+    "Sunny_Weapons_board0_tool3": "0dcb421a6acc4b6be257fa4e7aaf8bf915387ec02e400f2e15448aa654ef32d0",
+    "Sunny_Weapons_board0_tool4": "d00f015310b7cca26b8b6a39e6843fdd5a2528666a9751f76c44270440e3ef0e",
+    "Sunny_Weapons_board0_tool5": "6a3573cce018fa9832d0c681be48c9031f4ff01e07049b0fbb2df9769d6e5572",
+    "Sunny_Weapons_board0_tool6": "0cc1357bffc641999f3cb03be76e41d931ecf49336e4ca47739954270b135967",
+    "Sunny_Weapons_board0_tool7": "9b7ad2fdd585dac0eb5d5874e653021440bbbb6a0b3b5a87ceb0fd45bcc04ab3",
+    "Sunny_Weapons_board0_tool8": "cb345adad12ed8862488ec72ab5d249e74b5de443731da81484b6ae7a72feac7",
+    "Sunny_Weapons_board1_foot": "05914289e1017b5ed4db994966f4b51e50c245846e88547b45923992ac86cccd",
+    "Sunny_Weapons_board1_foot.001": "01bf4512ed90ddc8a4807e7f058fe1876bda85d2b63202fce2d3c48ded791a16",
+    "Sunny_Weapons_board1_panel": "fb98e65a7ed6640338e45ba7878039ccb0d192dbe21567525e26466c3582dabf",
+    "Sunny_Weapons_board1_stand": "1f4e0db1bd7dddd5e9f634e856512a60016b7609774403b4f795bbe853aa9378",
+    "Sunny_Weapons_board1_stand.001": "04504aeec500bffa057e3cd24d2666a8335430536929b0a3a9306a374653fedf",
+    "Sunny_Weapons_board1_tool0": "3214a26c2e2e9296771fe22d1ec7542aa59e605770df1ce1e8a1c9198aa1b4f8",
+    "Sunny_Weapons_board1_tool1": "6252f1763246ec229118eb988bc2a72ab02f1c85a4c4f909cc2e68269a782ca6",
+    "Sunny_Weapons_board1_tool2": "da6b55dc60b7f910d2b32e56965d3fa4b47ec9192b083d315ba895240084694f",
+    "Sunny_Weapons_board1_tool3": "4839cf14af99b5be667c493c80b410558e967a9377e04131e89d85f2ff01c127",
+    "Sunny_Weapons_board1_tool4": "5b5f26d6bd15874d4eee50602abd01e1e39855d9c8746db3e2167901dd7b97bf",
+    "Sunny_Weapons_board1_tool5": "e387417f1b0ce6c8aae44d7b921d6b488a0c5748358e17de95c51730f9ca72c9",
+    "Sunny_Weapons_board1_tool6": "c57402bfefe4ce6875ffcfbf3dd0a9119f7aa58d3460d9c868e9382dc005bc01",
+    "Sunny_Weapons_board1_tool7": "b5b681024dacb8f963c88f8730c03e3d110b5916a81c356ac0f9286b9ed03ba5",
+    "Sunny_Weapons_board1_tool8": "81572e3a90d7b3186ec1e013c68fb59eb9bf8747419cee6305eb48c859e5b4cf",
+    "Sunny_Weapons_board2_foot": "f4e5f2389be41b817bbf26288a26df816e19356b5c3fdc955c210638a5d87e3b",
+    "Sunny_Weapons_board2_foot.001": "7918e8284802360215bcc6897810c409e4fc428b122ad117cd9a15de4cd41951",
+    "Sunny_Weapons_board2_panel": "f4e60352994b578cc267fe65717e47552983a5163d214f5e6d4830bc4aca3a71",
+    "Sunny_Weapons_board2_stand": "c379fb4acf930e708cb3948e7ed15d6872211a3fc2751462ebdf8bf1063d3560",
+    "Sunny_Weapons_board2_stand.001": "1008337899c597f51d9624ed7299236bccc26534f19808e6c5b8778405e39b57",
+    "Sunny_Weapons_board2_tool0": "9a598fff689dc3a59c9efec6e7bca3b5cfee4698acb3d272d733f17a8eb974c7",
+    "Sunny_Weapons_board2_tool1": "dbecdd9b18df02c7b59b3692138b68cf7591b025036b03cf6b197f7a8e430f62",
+    "Sunny_Weapons_board2_tool2": "d66f863b105ad14dd503ddada9cb0acb6db5bddfad08132b0e3f6d36272b52a2",
+    "Sunny_Weapons_board2_tool3": "8ccf573eeacd01d0f8ff67ae587269a6467443f95366fb300d8c3954b3b3eab5",
+    "Sunny_Weapons_board2_tool4": "2e6a4fdb8d88e1178d2282e6b84d001f9208464bf3fb3d9fec030cf118ee9ba7",
+    "Sunny_Weapons_board2_tool5": "b5458df25ab4f45f94b2359f1afa0249fa68dac2224d369017ed5bcffda310c6",
+    "Sunny_Weapons_board2_tool6": "f53ffebc535f4f7bd524917c303ddf921d868dc2f6015eb18f90009f387868f4",
+    "Sunny_Weapons_board2_tool7": "1fb7c64bb4120a0761ca0797cf783ad2eed4463cb8eb0bcac7d1ab00169bef6b",
+    "Sunny_Weapons_board2_tool8": "1a9033e089d1b49311494736ad8aff3023c0222f83d1f698a0f46caad3834a71",
+    "Sunny_Weapons_furnace_grille": "cf4b1b21415ff85151f12b25fffb1a2f8a647f7dd666deddc54cc60b3fc3801e",
+    "Sunny_Weapons_furnace_grille.001": "229c9edffd47428f18b8b7f71f5a3779c50f8a6c0c8003f90efe845a89286084",
+    "Sunny_Weapons_furnace_grille.002": "525ba00c1e6c5a3620d0d445894f57104ba87e89cfa06351bd0c6efd81d0f877",
+    "Sunny_Weapons_furnace_grille.003": "909578e21c29cfad5e22642612e2804e0c875437ba6379ab53b858df70c3b71d",
+    "Sunny_Weapons_furnace_grille.004": "ad6d0f2a081ee491ebb4e60d49765fb840f1e7422bd1dad4bdd8e65d019de20b",
+    "Sunny_Weapons_furnace_grille.005": "d805a455a3e8fa4f886fdf1a4ac4a04959d27d25cc1506598ab595e77fa619b8",
+    "Sunny_Weapons_furnace_mouth": "69fe8f85c83ddcbecb32404e17583c9ff5a526a6e55f996d9ad6eef3af0f78d8",
+    "Sunny_Weapons_prototype_barrel": "4aa1e3c83256f18dacdd937165c58a0b97b4c496d956b27a95bdc39b54c32951",
+    "Sunny_Weapons_prototype_carriage": "5fa48f8d9a7d0591576aa7b5e5489462896b30248b65c75b1758efb8d540feda",
+    "Sunny_Weapons_prototype_rim": "dc638b67e25719a90e01d17e207120a2055ebcf7deba0cda34857b3238837c03",
+    "Sunny_Weapons_prototype_wheel": "40059bc54ad7bcc9dc4869064e6fce6463bd61909d28d2cb8a2426d0dd167ea6",
+    "Sunny_Weapons_prototype_wheel.001": "7ef74a44e4c01522807ae31bd422e568405a2e7b78701d63f03e95c45d5956e4",
+    "Sunny_Weapons_prototype_wheel.002": "882df68af68dfd72723c91e121b2f296b49b0ed68766dd39826118a3f77efd2b",
+    "Sunny_Weapons_prototype_wheel.003": "9de87c260a5fd4a94a57e711d9c7b16287d9931f4cb0ab4a33b1f4693f724290",
+    "Sunny_Weapons_prototype_wheel_hub": "df972b3f1f23883fc7497e4012783853f8daaff3c150b2bf2082b1ca0ff1310b",
+    "Sunny_Weapons_prototype_wheel_hub.001": "03b074b1bf7599b2f5ce1df05f08f71e6f26eb4a35c2cbfea5daf7dd79030e36",
+    "Sunny_Weapons_prototype_wheel_hub.002": "fee7ead1499e1a5b0cffa05c76e0bba88b6532aebf868bcc152486b3cdc45900",
+    "Sunny_Weapons_prototype_wheel_hub.003": "837718a719ede9cc8664dd1723963e9b892cd26cf6f4135f6b285873ca57acaa"
+  },
+  "updated": {
+    "Sunny_Dock_capstan_binding": {
+      "before": null,
+      "after": "2380fe626ad7802313afdf9c9bc2e86744d457d8d779d7f0595d10eb458c58ff"
+    },
+    "Sunny_Dock_capstan_binding.001": {
+      "before": null,
+      "after": "da46d68006f435443779f87e90b9d327ade56df6b183646a1c505263922a0225"
+    },
+    "Sunny_Dock_capstan_binding.002": {
+      "before": null,
+      "after": "52d72682904bc6f7495b58526e6a032297ac255559e6aaedd5494af7d8e2b514"
+    },
+    "Sunny_Dock_capstan_spoke0": {
+      "before": "3414fefad29fd388724623b8101ffd3da54ed9502bbdb50b7ac97a939e9358ec",
+      "after": "54b039c627c2251f9eddb45a1fff34ebf10247a0b8ea6d7973795c829f4de5db"
+    },
+    "Sunny_Dock_capstan_spoke1": {
+      "before": "36bb4e806a33d32f4d3efc3027e6d9444ae09d704472772b7a097699d30696a6",
+      "after": "5e2db3d9a4fae4c266bdebd91efcf89f58b980633fec80d5de3252906d880726"
+    },
+    "Sunny_Dock_capstan_spoke2": {
+      "before": "ce4465ec5d61eb2d83e8cf6b6b574e0009ac8d965a273b1b48bed2d96f86d664",
+      "after": "4461cf4de0639be63c95c25345a381d10c9dd1b36d91b561dd5a136287be3eb0"
+    },
+    "Sunny_Dock_capstan_spoke3": {
+      "before": "773807a351183542050419e7201da493c0bc4b3e1f035a8994efe5a8796d57e4",
+      "after": "e2ff97f88c0b0392dc784a080843185e1b54715fcdd26550c14817e45e947c79"
+    },
+    "Sunny_Dock_capstan_spoke4": {
+      "before": "8a2a85e0c27209ada653e1de746a1eeb65097dee929df87f0c029bdee368e698",
+      "after": "c2571b06046ff32b8df35a309b0fc576b1ebf23a5bfce9b617a9905854b82d22"
+    },
+    "Sunny_Dock_capstan_spoke5": {
+      "before": "64cfe0140491b518f828001a0b3f14c0bda73ce65036ee13cde95c76ff5dd345",
+      "after": "b95198c564c033b22d4cf208d7e80505116e5da6a7df5a330f849587c22f4bb8"
+    },
+    "Sunny_Dock_turntable_deck": {
+      "before": "df7c908df95b95fded3a396ab8ab31f73decf81d3baee04179e5276efa8cc6be",
+      "after": "2d20296cc5f7be7d1257234c434f4b8300dacb46bc5d96f5c4f9aa63deb44fb7"
+    },
+    "Sunny_Dock_turntable_hub": {
+      "before": "107419ef17affd5156d01c8b469d115aac08b8d8d86e5c38c8eca08cce40bab7",
+      "after": "55f781f0726059e8a61c641eda114e07f55d4252520ed0c78b64d510db52e93e"
+    },
+    "Sunny_Energy_boiler_foot": {
+      "before": null,
+      "after": "5cac86b08c74e7977988f49ec8e303ce4891c194138fc38fc1af566f8bee1b75"
+    },
+    "Sunny_Energy_boiler_foot.001": {
+      "before": null,
+      "after": "a7af8c80d37e654baab8369d922e790c228302ebb1fcebb06942d20ae2f97c83"
+    },
+    "Sunny_Energy_boiler_rivet": {
+      "before": null,
+      "after": "ca5f30980c868b4d83adbe20039171ea428b5b203a2954fde7e33082999bda26"
+    },
+    "Sunny_Energy_boiler_rivet.001": {
+      "before": null,
+      "after": "f6e069b178f134d66071dbee96b5420e6ea45d299eb3c86037883b2a3952968d"
+    },
+    "Sunny_Energy_boiler_rivet.002": {
+      "before": null,
+      "after": "69ced4218569356490cd152baecd69a24df14bc70a5a0bd91e71f33c45c1acab"
+    },
+    "Sunny_Energy_boiler_rivet.003": {
+      "before": null,
+      "after": "c8b17011681a41670393f646e516603462c4388b96ddefa9989819a8ca947952"
+    },
+    "Sunny_Energy_boiler_rivet.004": {
+      "before": null,
+      "after": "a30d96b6a2508e9098f68e138eebabc01bd2b71ed090e356854a8e6cb66e8470"
+    },
+    "Sunny_Energy_boiler_rivet.005": {
+      "before": null,
+      "after": "873052881edf3404d2b16498417ea6d65ffdc4fce0c08b40a70856349af8e87d"
+    },
+    "Sunny_Energy_boiler_rivet.006": {
+      "before": null,
+      "after": "ca3f67658361225a58a9b1545facc6dae8ef85e85caa88fb7bfd25fe7383fb5d"
+    },
+    "Sunny_Energy_boiler_rivet.007": {
+      "before": null,
+      "after": "eec7ac08b803843218f5efe7c20afa73935a693a8c9e3bb3b8820abebd5b510f"
+    },
+    "Sunny_Energy_boiler_rivet.008": {
+      "before": null,
+      "after": "0c8167ed7c052c345066dc01a5257492588da0f891c44667cf6e63a98ccb2add"
+    },
+    "Sunny_Energy_boiler_rivet.009": {
+      "before": null,
+      "after": "4e402a47c7e4d7a47c4ea057492f5f58b46286778c352ecad1c6de2397e82cd5"
+    },
+    "Sunny_Energy_boiler_rivet.010": {
+      "before": null,
+      "after": "1e5842b6e755163fcd75dbc8f43ef06fd1fcede049df2ff5f11f5cf2cf17f4c2"
+    },
+    "Sunny_Energy_boiler_rivet.011": {
+      "before": null,
+      "after": "956b3adcac6f588613b343d85431eb0c919ff716542b2c2a0c0c91f241d45faa"
+    },
+    "Sunny_Energy_boiler_rivet.012": {
+      "before": null,
+      "after": "5150455fd4d42171db910fbe406e648029c5e84062cc5b86873d614f1bc6dcc2"
+    },
+    "Sunny_Energy_boiler_rivet.013": {
+      "before": null,
+      "after": "7ab551eccc2b42a86e11eaa95114eb2c32874a42cc38038e25365148ea7b6e24"
+    },
+    "Sunny_Energy_chamber_grille": {
+      "before": "d42d080f38a5f7dec564cd7a34153fff8643cf56698b03db777a2a52cd990cec",
+      "after": "3dba2a8979772d9c7956b32eac33635068c37b4ef190e1ac4ed38998f18c459e"
+    },
+    "Sunny_Energy_chamber_grille.001": {
+      "before": "548b668f285ce71fddfef5a7b6f6757ee9bb0ea9f490a37ebe7a2120d9422fab",
+      "after": "355ffc78484443a52a3066df314e3bd5b19749e8ff0d6a64eec02e8295f28ae3"
+    },
+    "Sunny_Energy_chamber_grille.002": {
+      "before": "078dad7d0571f8b719bd98f3f75808743adc71327dd8d1d977fda3ff970a06fd",
+      "after": "dde0ccab34e8949b3a8b83d54c4e50efa6c2951e027898aadcd39d6cfa978b30"
+    },
+    "Sunny_Energy_chamber_grille.003": {
+      "before": "0cd20733c1e624a6dc200604ca567f0267743bb1e17500b3e80a03de437924cd",
+      "after": "9ffa270a713f8ac621aaf8e31b4ede6d82c89c1000ffb610b358a33e1a20679b"
+    },
+    "Sunny_Energy_chamber_grille.004": {
+      "before": "acf92be0ef6ca6c4ff86457c4019d4aabc0ab8587cc1e476a660f789dfb781ab",
+      "after": "1a067d9f0ba1dc96f805479738af9f4f0a8f2b8aa6e14cc398399b50912f78d9"
+    },
+    "Sunny_Energy_chamber_grille.005": {
+      "before": "c127a55027188ec58eb6e1ffbc20671d6fd9932718fc5e1217e7f4c566b67498",
+      "after": "82337ba07cbff78fe466b5ba6e24b9c09df2b6989879fb0674a166b76258c201"
+    },
+    "Sunny_Energy_chamber_grille.006": {
+      "before": "cb719cda3584801e11398fe6c3f9f107f3bfd4d920f18e0bc9ce056b157009b7",
+      "after": "546d6a11a903c021cdc373c87b4b3ae4e402e6ea374218e7e366bc9d1793230f"
+    },
+    "Sunny_Energy_chamber_grille.007": {
+      "before": "7dd1b130accfc79acaebc762ccf9853b9edccb9f411f9507a319a54e107e8cf1",
+      "after": "486a90a27b255f194086cb9159de418e43b25d491134bea9c32f90669715102a"
+    },
+    "Sunny_Energy_chamber_grille.008": {
+      "before": "22b0a9ea622f89cfca31e1aa78e41a072e16b83c7b99410c8e55dc362b21c612",
+      "after": "3037f82cf6d336e55e19a930b262310f9401762e97f6142b36837d611f71b2b6"
+    },
+    "Sunny_Energy_chamber_grille_cross": {
+      "before": "70abfb671a5acd615f1c2a7c4e526cf31a827c314119567aab4cc034a4fb1aa6",
+      "after": "716034fdcae84fa483e23bb6bf4784d97bd5201a95ab7f7333c26c8a812299f3"
+    },
+    "Sunny_Energy_chamber_grille_cross.001": {
+      "before": "ca7ff381e8f23ad0cf6931731177b2eb5c162321f13e8561f9dc12f238b73c42",
+      "after": "567650f0a935c25fee286782309d4108e0a753ed4820922b422426e0d16e91e3"
+    },
+    "Sunny_Energy_cola_chamber": {
+      "before": "45554aeb5030976f27aa673f61a3b1a0e2b3c703a72a11971da613e004519012",
+      "after": "210d6f3fbba04b8da717a3bd5d55c5855a939ebd85d5adeeece0c48b41bff2f2"
+    },
+    "Sunny_Energy_control_bezel": {
+      "before": null,
+      "after": "2d2611df14afe71e8961ac5011245492df77a5c3a82d49ae066606339c5782c4"
+    },
+    "Sunny_Energy_control_bezel.001": {
+      "before": null,
+      "after": "bcb13ef9f405a37b38277e754b3faf8cb70855af9756ee4463fe5a70ef85a496"
+    },
+    "Sunny_Energy_control_bezel.002": {
+      "before": null,
+      "after": "4ab535863b55154bdde257558955d65ccaaf8126ba1123d1222f14158df14985"
+    },
+    "Sunny_Energy_control_box": {
+      "before": null,
+      "after": "952d4828ee2eeb74a5036e544b8a3a8b9bc46168ec487e17ed960300c4f3c301"
+    },
+    "Sunny_Energy_control_face": {
+      "before": null,
+      "after": "69a5af98e61f197040a021340251babe8b71cafe000e3035553bf8ee70f720e1"
+    },
+    "Sunny_Energy_control_face.001": {
+      "before": null,
+      "after": "9128fa721861bda257686c85d43bf45fa05db3cfdfb35924f3845b4cdb100526"
+    },
+    "Sunny_Energy_control_face.002": {
+      "before": null,
+      "after": "45106eb8e0466a5befdfbe52d69686c80c7bfa1a43ab154644e2675223c1aca9"
+    },
+    "Sunny_Energy_control_pointer": {
+      "before": null,
+      "after": "812e5ee46bad25ed15a5883e8bd4d5ac611cbbc8bc43c2a416bf36a0baf9e6da"
+    },
+    "Sunny_Energy_control_pointer.001": {
+      "before": null,
+      "after": "c67c578dbdf38c0016f7edc48cd66bd04aec8fa790121bcbe829b5d0f00c9c6a"
+    },
+    "Sunny_Energy_control_pointer.002": {
+      "before": null,
+      "after": "002b0aadc19d48d210804d69aba0214a3093a7b4fc1f93d4df155e16972d7946"
+    },
+    "Sunny_Energy_feed_pipe": {
+      "before": "086d47ab9e1dd9e7f67b5f7ce0ae5f9761be1f04ec47382cea391c1bbc400966",
+      "after": "418b1752e3520e0ff6f99278345eecb50514320ff2c3600251e4d24a7e849cb5"
+    },
+    "Sunny_Energy_feed_pipe.001": {
+      "before": "7f53ed1f323fb75a01332066857d8b36894fc01db17d2b5d9b5b531ec66d7c1a",
+      "after": "68b1baabff9e10eaeef95427700b4897dfa9d41260f2926c864d0e1edc030d51"
+    },
+    "Sunny_Factory_assembly_table_chart": {
+      "before": null,
+      "after": "04c4ab1996f96239c116a0b27e54b068cd6c23895a136880c4691b26c92c0014"
+    },
+    "Sunny_Factory_assembly_table_chart.001": {
+      "before": null,
+      "after": "23f3750ceeb24f21b46ddd3aa21a916d9f127cc5e18c80497b208797d62732cf"
+    },
+    "Sunny_Factory_assembly_table_dowel": {
+      "before": null,
+      "after": "1d669807b89b4b92405cd60d7e90e9e29207db8da36fa18545c0a4b31f857777"
+    },
+    "Sunny_Factory_assembly_table_dowel.001": {
+      "before": null,
+      "after": "95f857b1849a40941f31aa4d8e3a2db168f03cae10370bdb0ef843520bedb03d"
+    },
+    "Sunny_Factory_assembly_table_dowel.002": {
+      "before": null,
+      "after": "8b10cc26bf87cbd9230b27e42fe6c5150470fca48cdb20d0a4a73641337d5445"
+    },
+    "Sunny_Factory_assembly_table_dowel.003": {
+      "before": null,
+      "after": "dc94cbd94d52acfe0ea27828546fca27293247103ddde05b005e4b39b938bdc7"
+    },
+    "Sunny_Factory_assembly_table_dowel.004": {
+      "before": null,
+      "after": "4a4f2d65201c8bc2762196816ddba5d12e7900995a46f8e55360cfcf34c9ad3c"
+    },
+    "Sunny_Factory_assembly_table_dowel.005": {
+      "before": null,
+      "after": "d8065d43fc20f9b4deff76c27a67f9d6f6159574ef020394f1a082de0fb1d009"
+    },
+    "Sunny_Factory_assembly_table_edge_pin": {
+      "before": null,
+      "after": "a694020e1f5dd4a0734e4e10274c7c4513088b7aef4ea44a5db81a8bb156a74d"
+    },
+    "Sunny_Factory_assembly_table_edge_pin.001": {
+      "before": null,
+      "after": "1ff16cf6289e322975d2ee6052a54254f269cb176ea003ef480595c22c05608e"
+    },
+    "Sunny_Factory_assembly_table_edge_pin.002": {
+      "before": null,
+      "after": "046f2a97053cf6f31788a929181986642ee78b127106645a4dd3b3890d479ac6"
+    },
+    "Sunny_Factory_assembly_table_edge_pin.003": {
+      "before": null,
+      "after": "abf5ada4d393fb6da75c21f0f3fa64e58723bbaa629742c8243b940e5ed96e0e"
+    },
+    "Sunny_Factory_assembly_table_edge_pin.004": {
+      "before": null,
+      "after": "f92a1ccf3f3431651b38faf3ceed0113dfd8bafb6baeab194a5301d8f075e782"
+    },
+    "Sunny_Factory_assembly_table_edge_pin.005": {
+      "before": null,
+      "after": "4e4d291bf451e04b2f98fddaee2ef6fd0acdad202f744dc3b013fc63ac787ad3"
+    },
+    "Sunny_Factory_assembly_table_edge_pin.006": {
+      "before": null,
+      "after": "f2d958d6a2231d574eccb2ed514402e3804a16d34bc895f546c66b0988bf6603"
+    },
+    "Sunny_Factory_assembly_table_leg": {
+      "before": null,
+      "after": "c8227919e77e4ea52a0cac2aafdef93ef0467c6e1ca00604266926997a1cfec5"
+    },
+    "Sunny_Factory_assembly_table_leg.001": {
+      "before": null,
+      "after": "23b80fbc2e2085abcd86ba7fd2e17512d2ca473149cc569ff24934bafee38228"
+    },
+    "Sunny_Factory_assembly_table_leg.002": {
+      "before": null,
+      "after": "c78442d82600a90ac1fd4706103591940dbaecadaeecd48f2bfc8deb5bdeb868"
+    },
+    "Sunny_Factory_assembly_table_leg.003": {
+      "before": null,
+      "after": "7fc7ead9ca283b4db00df6036811ef6db4d435a8450a3418b137c8a53db09985"
+    },
+    "Sunny_Factory_assembly_table_stretcher": {
+      "before": null,
+      "after": "6185917ba55c88aabb4399975463aa35b19ef39d9c9eaee885bbe30e0ff85359"
+    },
+    "Sunny_Factory_assembly_table_top": {
+      "before": null,
+      "after": "1ec8631ba6b31978797ea55b15c5b261473300ecd238818e746d7255393a1036"
+    },
+    "Sunny_Factory_crate0": {
+      "before": "7a15741d31aaabe1e44e092eeccdd8d674ffe62059c9c28df8ea23c16fcd44c5",
+      "after": "6a6977533b32e873d8cb499627f630455163661ffbc6ea8088937e817391187b"
+    },
+    "Sunny_Factory_crate0_band": {
+      "before": "864300e03cc8dc4d33ea962603ec5a866fd0c9d0f48d001585c059216fe3275d",
+      "after": "773075f94328b844efc9a9d272e359e7bf858f8104e5861995bc51e1bc0ce94a"
+    },
+    "Sunny_Factory_crate0_band.001": {
+      "before": "6d57199fcb2ee5931ebb63699ffc72baef0dea8be93b9507a76c596cc5c6525d",
+      "after": "6c175ad2ccf014a22528b58f8a8db58aad87c013df87b6e3ef264940306c9d7f"
+    },
+    "Sunny_Factory_crate1": {
+      "before": "edca560fea3ddcd40fcedbb230ea690f4fa2317c3283c3321892eeb2fc6be2cf",
+      "after": "22f026d9cd22f26eac345fe637d60575ab1c5505643a3e760663171905d15d7b"
+    },
+    "Sunny_Factory_crate1_band": {
+      "before": "c1c71e29736ec8f0b7df9102ac70ce8ec3370ae749e86bf0d460088ba57ce160",
+      "after": "dca3af5387a6c1526ed89b391e5103f709fc32eb687682bede4ca87da5455bc5"
+    },
+    "Sunny_Factory_crate1_band.001": {
+      "before": "c3e9dbf6ef81d633f68397050b3f240aec09796b3ab2e339c15fc3ec943b360f",
+      "after": "c38edaa15f4952116a8d715554a5f2ca9332d29715c1ad9a0d2c3c08e0c8a1bb"
+    },
+    "Sunny_Factory_crate2": {
+      "before": "9fec3e02558a79fba555e3b836c4b0b063f0df597e4b49d4a93d42c06d101b11",
+      "after": "0fa1b15ebd6b6116a0dc5c3ce45b738e0755e13b9e7d4d80fb34c7bd097c1de1"
+    },
+    "Sunny_Factory_crate2_band": {
+      "before": "dc06cde2499b2c19fe81b11d3ea172864b1fbc811b6166ca00127a75729b131d",
+      "after": "f887c5d1a9e0d803682c667d0c027a003b0e646874fb11be4a2d28b9b5812c1f"
+    },
+    "Sunny_Factory_crate2_band.001": {
+      "before": "66fa536f28aee2e50bc965d4fa52ed4c992954be81660e42b685516f6fc02626",
+      "after": "d8bb00bc470123d9bfc91078486d15dffb3321ba175a5f9814b987106343b3cc"
+    },
+    "Sunny_Factory_oil0_body": {
+      "before": "ed78b682cfb54e22922a7ee7a9bb8656c13576f4f96446c4331de02d76186fb3",
+      "after": "4fa4e273d9401ca0efc85a99591d2760c0cb6901e328dbb5a5eec9c43e5f3310"
+    },
+    "Sunny_Factory_oil0_hoop": {
+      "before": "372a0a8584cba86017b1f6defd294b09027710aa465142443404cd685f089371",
+      "after": "acb904e14ae5abb4df268f3947c8d4737942d27e5e439546b8441b0034112634"
+    },
+    "Sunny_Factory_oil0_hoop.001": {
+      "before": "7d113cfd11f8b9ce9ffde5ce9eaaaf009ca5db037245517628d8715273b60a5a",
+      "after": "438e5b481c42efd721775513bb4fb17c6315aab43c0b4afaba00b6c176050ce2"
+    },
+    "Sunny_Factory_oil1_body": {
+      "before": "8518268f82ec26bf6dce01fe2d31496c479a97aab6e8ada9f9d3509cbf907239",
+      "after": "e6007654ec23a972fa78995911ac3057f936ba3e57c0d025feae4eafa16e3f45"
+    },
+    "Sunny_Factory_oil1_hoop": {
+      "before": "85b3932ca6e1d01b92be549f2936fe5ede6f3903ec9560a1cf693fd19b590ba4",
+      "after": "a10b2f3d51c4a8591cc207aab02bb43b14ca9f06ebc9b099a13259389919ae62"
+    },
+    "Sunny_Factory_oil1_hoop.001": {
+      "before": "93d571f93fae471ffd4fbafbd90f5e2ce8253d39f67a58854364630773daa79a",
+      "after": "cd052472f3a80db19674f273079ef20ac0b42befbaf63908a37fe37440f650cc"
+    },
+    "Sunny_Factory_oil2_body": {
+      "before": "200010a8decb7f1885a78920ad2f852dd92e927a321fcbe6913aa268fa2deef3",
+      "after": "23442cdc0d524dd6b1a271e829f7caa7241576ef425c2f34baeccb2efa0242d1"
+    },
+    "Sunny_Factory_oil2_hoop": {
+      "before": "15e09513ffc305049b9eb503f8c184cba1dd7b6211fd077c43bdfdc7d52476ba",
+      "after": "3ec4ba9ccd227f18e0566e79d8d59dab16fa87b6d6379ef3d0302ea262f0b3fb"
+    },
+    "Sunny_Factory_oil2_hoop.001": {
+      "before": "143011069848b60fd1ce44973f4440ea4183db6fd9b598be8f28731669e88719",
+      "after": "a863d90bdb242c8850b673064c9a63e10915d57195a52f9e9d3a2ef3a8f03fb7"
+    },
+    "Sunny_Factory_oil3_body": {
+      "before": "4fbc38678afde1278caed91236105f5503fa26fe6194242694280cfbfc8e2b25",
+      "after": "b36725b3bff993411ed496af74c457b5894225f4f1c229cd8795788747ac4652"
+    },
+    "Sunny_Factory_oil3_hoop": {
+      "before": "63043b356110d36d41b1e505486ff12dd9b0e4b7216e8afa2e018f16d309079f",
+      "after": "ce4e78d36e5a0ac42b2a17ec27135f805f20634f523594b55f4d8add033365d0"
+    },
+    "Sunny_Factory_oil3_hoop.001": {
+      "before": "d1830105b47c17668eecdda718fa79eee25e2a8275512bd393634c749b2f4fe0",
+      "after": "513f20269b08ed039529ddcde428cd05e7bd6dedb9a3d4a9e7b7c4b39cc9d54f"
+    },
+    "Sunny_Factory_portable_box": {
+      "before": null,
+      "after": "728f20966c4771cee0892ed0c3532281a47481af91584d7aabc30b38a91dc090"
+    },
+    "Sunny_Factory_sign": {
+      "before": "56143beab594b903e308eb2a140a84ac99e89a705d3d90a734a8c1b9a690047a",
+      "after": "71e9d847915ebd18f4cd82f7bca83d06f918cca7b0e4094acb63aed6c381bb13"
+    },
+    "Sunny_Factory_sign_panel": {
+      "before": null,
+      "after": "a52ee25a52248c7ffd852e8ee725cbcba98d1feaea00ecd10379f6429d03afa5"
+    },
+    "Sunny_Factory_sign_post": {
+      "before": null,
+      "after": "f5c1e80356cbea32a5f6aca54fe7712e533fc040f6768c6fd8178629c1ce6632"
+    },
+    "Sunny_Factory_sign_post.001": {
+      "before": null,
+      "after": "276fb275cbcf0484b43841a058ea62605b317a7617827a5790dd28a1d6414637"
+    },
+    "Sunny_Factory_tool_box_handle": {
+      "before": null,
+      "after": "f4e27fb0127e7d5fe1967cf712aa66e7c6acb98634e47c3aa327ba15e226361b"
+    },
+    "Sunny_Factory_tool_case_body": {
+      "before": null,
+      "after": "a620c41d4f2bf49152c337e7eb16e7d897c26c22eeb6311e2e23452deb80ed6c"
+    },
+    "Sunny_Factory_tool_case_face": {
+      "before": null,
+      "after": "51d4e0ac0ceee4197dcb542a0ee48bdd85260a156040ac313dfb6619ffb2de4d"
+    },
+    "Sunny_Factory_tool_case_face.001": {
+      "before": null,
+      "after": "c5442d77666bc3d4102d00ac4dcd7fca3ae2a54fceaef3464fbc0862484360f4"
+    },
+    "Sunny_Factory_tool_case_face.002": {
+      "before": null,
+      "after": "a462fafbf230705ee6b29dedc7a906a72d50462398b9b91c0ab0e322da0c5966"
+    },
+    "Sunny_Factory_tool_case_face.003": {
+      "before": null,
+      "after": "26ecefd18871190cfe652821c795c3e285ec63332e3ed5823fce9fcb8ac8a504"
+    },
+    "Sunny_Factory_tool_case_face.004": {
+      "before": null,
+      "after": "4de1e48600fb985923c11452171c69c6884cb7e8dc96632757bff8be99803db1"
+    },
+    "Sunny_Factory_tool_case_face.005": {
+      "before": null,
+      "after": "de9e73a2a2f93c2341b57ea9b7034f4bdc6ecc223204d3f0ef344f41aad1b859"
+    },
+    "Sunny_Factory_tool_case_pull": {
+      "before": null,
+      "after": "0e8d11e3c43a01c967d70b3b146458ef2c8f210a13732f7eff37128174a288f0"
+    },
+    "Sunny_Factory_tool_case_pull.001": {
+      "before": null,
+      "after": "2223220d378cf7d16aa76b66cb01c603d580bc0b2eaab12d3d8a7a393a015500"
+    },
+    "Sunny_Factory_tool_case_pull.002": {
+      "before": null,
+      "after": "684bbe595cf56260d3ee9d79982ee3db862f1a528931cccfefc2d81c8518a1aa"
+    },
+    "Sunny_Factory_tool_case_pull.003": {
+      "before": null,
+      "after": "323219769e7d961bbe4414afa0306a84062f33eb9bc9ea6781137a352d44a8fa"
+    },
+    "Sunny_Factory_tool_case_pull.004": {
+      "before": null,
+      "after": "3d3c31439a1e017ba035443c0cd7f5e659e4e2b33791dfed54d88d0c6b21625c"
+    },
+    "Sunny_Factory_tool_case_pull.005": {
+      "before": null,
+      "after": "6e3ea3e70b0219f2a792d2b9d260969bcee396a0ee1db1458864d6dc9a8018e1"
+    },
+    "Sunny_Factory_tool_case_toe": {
+      "before": null,
+      "after": "385f48c2677195d49d4d8447a09415b3075bc3b968a1d7b4118c86c8f80a5a6a"
+    },
+    "Sunny_Factory_tool_rack_hook": {
+      "before": null,
+      "after": "ce228194606a1be698490b96b54259963cb916e0080dd8db07fbf33a7180a9de"
+    },
+    "Sunny_Factory_tool_rack_hook.001": {
+      "before": null,
+      "after": "a7721d6da9c853609ee2c52c3aa3b4e0b1ca7f8634c333dfd0c628f768b64bbd"
+    },
+    "Sunny_Factory_tool_rack_hook.002": {
+      "before": null,
+      "after": "01ac210bb176d23a9dbbd18cc25da0018e62ca65531dc0603e5d4501a8f444b4"
+    },
+    "Sunny_Factory_tool_rack_hook.003": {
+      "before": null,
+      "after": "c3c18ae60357ef102b680ae47a5f661f118e0b5491188fbbafadde6d8db1cc35"
+    },
+    "Sunny_Factory_tool_rack_hook.004": {
+      "before": null,
+      "after": "163b5936a1125d58caf3671e5d823d1ebe146dfcc79557e5c9e428fe49248a5e"
+    },
+    "Sunny_Factory_tool_rack_panel": {
+      "before": null,
+      "after": "c12e557c6ebcebe07f50e0d5cff634d2e2929c72d7b08719d6294c2835093b01"
+    },
+    "Sunny_Factory_tool_rack_tool_handle": {
+      "before": null,
+      "after": "a11494c748dc5d06fb72566f4faae949f6413bcf1967a23374ea6a00fba13717"
+    },
+    "Sunny_Factory_tool_rack_tool_handle.001": {
+      "before": null,
+      "after": "636753d48e80b6ccac7f9550510227667d2c5bc519a43a7abb21af57bf7df141"
+    },
+    "Sunny_Factory_tool_rack_tool_handle.002": {
+      "before": null,
+      "after": "3709052acffa00e8052a6960c1db876627365ca47f1f1988c2d20136f4000a3c"
+    },
+    "Sunny_Factory_tool_rack_tool_handle.003": {
+      "before": null,
+      "after": "22f905e597e36052e2566e14e31a79b550fafce5ce813fcee691bfccc87c5b3f"
+    },
+    "Sunny_Factory_tool_rack_tool_handle.004": {
+      "before": null,
+      "after": "2bf01a6097d04d4c16908f99901c04838d3e2fa1daa96bfe34e58e0d4b5af326"
+    },
+    "Sunny_Factory_tool_rack_tool_head": {
+      "before": null,
+      "after": "2359d3c658c4c6cc392dc30c680cedc329cc37d7ac2a5f1b511b1258f556a5d3"
+    },
+    "Sunny_Factory_tool_rack_tool_head.001": {
+      "before": null,
+      "after": "27d6ad57b54e8f33ae640cd7aea046c5a1a041e43ea5d69a1d320ace38a5d731"
+    },
+    "Sunny_Factory_tool_rack_tool_head.002": {
+      "before": null,
+      "after": "e671d55579cf4dd8aa05c82b182e77814bed21b6c14ff7582612fca36b3fb38a"
+    },
+    "Sunny_Factory_tool_rack_tool_shank": {
+      "before": null,
+      "after": "dcc9d5e8911c681af89daad23c787bf484218898f409ec31eb811ab07179b12a"
+    },
+    "Sunny_Factory_tool_rack_tool_shank.001": {
+      "before": null,
+      "after": "1d50af126f6ed056e99f1bd712fe693faf2bf13c57421b66ed1763d7fa8510e6"
+    },
+    "Sunny_Factory_tool_rack_tool_shank.002": {
+      "before": null,
+      "after": "7673b50214b2ce73af88a3ab602a9a0bf9ddf81e30e08b19e839cf09c982c7ba"
+    },
+    "Sunny_Factory_tool_rack_tool_shank.003": {
+      "before": null,
+      "after": "2b1ee8dcac92f74bea28f49ae219d7451add0285030ee3060bfd4ad3061cf496"
+    },
+    "Sunny_Factory_tool_rack_tool_shank.004": {
+      "before": null,
+      "after": "1a3637bdc880fc67ea4665d04c3b172037c604d109ae85f1dbcdeed1bce75e06"
+    },
+    "Sunny_Factory_tool_rack_upright": {
+      "before": null,
+      "after": "7cfb373f101854408a6b358f616ae80bad91bb7648b4cc0f52ed7ef4367c12b1"
+    },
+    "Sunny_Factory_tool_rack_upright.001": {
+      "before": null,
+      "after": "e796c6f799b2052d3d9f5de347cba03d273d25c352ed44e1e89a99d61e5b2a68"
+    },
+    "Sunny_InteriorFloor_lower": {
+      "before": "e1d4d657c0dc12a1f1b0dce494d7075d580d774757bde5bea3de213bcc205db4",
+      "after": "910b30748bd8bd7475e356cc91e16a3457adf22d7fb47040e2897bda454cd961"
+    },
+    "Sunny_InteriorWall_B1_88_seg0": {
+      "before": "e6dc593bcbd558c8ae5c0fd6eb2fab0ecf6001ed37dde459c198b57abfca876c",
+      "after": "78732183e09bd050c1e553c668c226d68684b7997864e87224aeb878dc8fa6ed"
+    },
+    "Sunny_InteriorWall_B1_89_seg0": {
+      "before": "51ec1c80b8bb4df872883b43c3ec04fd10636c2582d29fd7d72cbe18af621cec",
+      "after": "106269179ddd2968b9b6af97aa71a23a6fbaef3cb1d779852fbee208ea6ad68b"
+    },
+    "Sunny_InteriorWall_B1_90_seg0": {
+      "before": "4eac043dded7adb41cc3333f1f064f1298bdcb36aeb0b7b462d46541310e1d98",
+      "after": "9ef10fbe632e6d5f9e7bd2f001c64967ae948eb3d1e32f7d05786a3c374d2689"
+    },
+    "Sunny_InteriorWall_B1_91_seg0": {
+      "before": "5b16a4306ea54eb2bb567c14c24e101cb64d715e062dc828f002e4a60c01e4de",
+      "after": "83abe367590066a98f1c6e2f7aa6338f45710818438b044ad7767d2a5b4b0542"
+    },
+    "Sunny_InteriorWall_B1_92_seg0": {
+      "before": "7be556627a19cde5347a95c4f744e065a815dbfb79d4971968fa6e015a8baee0",
+      "after": "cd5f9436e83a3dbc4fc12e42b52f9738e813042d3b6e851552f9eede91ca59ed"
+    },
+    "Sunny_InteriorWall_B1_93_seg0": {
+      "before": "b70b03f4298c4b7e6d1b0203bac6774c7f85240d79c3d5cf1d24bfe40c05d053",
+      "after": "3f64dc3ace5204c7fe118edfb799e613ff41ea3c40e186e678279745e166770a"
+    },
+    "Sunny_InteriorWall_B1_94_seg0": {
+      "before": "ffdcc75c5286c569a3dfaf9db1e5ac952a29b6734da1a0a0be20df8f61cf2c56",
+      "after": "09bb4debc8922794e786a6e868a5695949af8d51bf3e408d410ae61f6352956b"
+    },
+    "Sunny_InteriorWall_B1_95_seg0": {
+      "before": "f408faa57496dc9cedaf2a37431b804cd6c215a97acefddeb225c6eb8cd21e10",
+      "after": "764a8c7a77c72cc648f6b9aa518ce3735934ac90e1fc34bd3927bda827619ef7"
+    },
+    "Sunny_InteriorWall_B1_96_seg0": {
+      "before": "81ec1dd83add2b6e808512fec427abb3f27dbe9c8af0775bc84794f46ca3a97a",
+      "after": "15bdbc90c742cef28b9202cd4a79fe890349557398243601cbef53bfd965f8d6"
+    },
+    "Sunny_InteriorWall_B1_97_seg0": {
+      "before": "71e30e47a466aabf0a05657d3c6ed9321ed3a8741407f486e6702c2aa98e3926",
+      "after": "487ad58ed24e985a05c9abf6067a8773eb6d7d9ce2236302d334ad767662565b"
+    },
+    "Sunny_InteriorWall_B1_98_seg0": {
+      "before": "ac3403ccb9a4d6c2b85b39c6a9e748c92b64e2909261c9116a9dc91660bae7cd",
+      "after": "9b545058f326f2f74d45d7c564e082944c2e3427659879b0f04a7103e91ca855"
+    },
+    "Sunny_InteriorWall_B1_99_seg0": {
+      "before": "05b1f9d8d6658dc5711eb13f13fa08e6c8f70ba066a72a750222ab5a97edb730",
+      "after": "7f36677815193e622b83f90615205cd908c60fa2991132bae9f7511b0ae8cb71"
+    },
+    "Sunny_InteriorWall_B1_100_seg0": {
+      "before": "75bd4c42d6bbfda3db5a3b235bb00f807a1f4136a79cad727ed364af926e7631",
+      "after": "cf6dd3bf3d93bfdba4854e6123a8dc08ab18eecedbfc684c2e83615fc773d733"
+    },
+    "Sunny_InteriorWall_B1_101_seg0": {
+      "before": "218505fda7161bad135b041000e6bd31343f398b7106c383a693d926ca29c157",
+      "after": "cee4b1da80c69bd56035fba01d80c2087faa6fae4ceddb31343ad9d2ca659c6a"
+    },
+    "Sunny_InteriorWall_B1_102_seg0": {
+      "before": "bfc98814a8783b158b75106ffab13045bf90fbe369f611eee8bd1318eabf3b11",
+      "after": "bb1147a420c981aa6a291c9a31f88f37f7300a5433f6d03379b84fb5e0ba2fd3"
+    },
+    "Sunny_InteriorWall_B1_103_seg0": {
+      "before": "96297f3e313611f474be9f8c16549838da12af6253e14d9333cb657695a1872e",
+      "after": "2abf4ec2774cc0138efbac11f883ae110dfce3bad0eef8e0489aaf9be62ff0f1"
+    },
+    "Sunny_InteriorWall_B1_104_seg0": {
+      "before": "cba3487cd2523a89a49ccdfe88ad1c2bc7db9cf86cb810837a556399e47e1ea3",
+      "after": "f1102e00464a28f9f9ba7459f9f4036d782b57804c42caa64d30ccc1bc15de6d"
+    },
+    "Sunny_InteriorWall_B1_105_seg0": {
+      "before": "0cba487a8bdc2075b5431cfe6c6c2be5daddd7a51a214b2eb9a1ad1bea552137",
+      "after": "445458e9ec7c13efb66550c5a19d1bceba8012c30eed1e5bc254213b032699d0"
+    },
+    "Sunny_InteriorWall_B1_106_seg0": {
+      "before": "2f769d516091dfc0f20bf04e9540ff62fec46af6c3036cd692845d6fb28d0a57",
+      "after": "ea96dba7ce714756f43af4b86a6b45a6569fbf336e12a58d11e4478982902a92"
+    },
+    "Sunny_InteriorWall_B1_107_seg0": {
+      "before": "5e6da2f23a3e6673f5b02e80e42dee2574653fdedbc4a02f9a1f7d5475ab125f",
+      "after": "412bea1dc28526706f300004e209f535fdee26618eaaaad0cf8912522a6569c7"
+    },
+    "Sunny_InteriorWall_B1_108_seg0": {
+      "before": "c14c2a89e79e9fe8e6015488220f32c505c4d56168a24453404d6a4ba951a41f",
+      "after": "7c01376439271263b9cd2b71b9e17bc10d141318da8ccbb06e947f39b87a6b22"
+    },
+    "Sunny_InteriorWall_B1_109_seg0": {
+      "before": "94ad303111df3b0400cd25d6d9b9c415b8388b4d803d9b67a9c3d90ff445d5f1",
+      "after": "986ef6a5156350bd93ccf39136552059d7e4c39f838bf5d46363080d21b308d3"
+    },
+    "Sunny_InteriorWall_B1_110_seg0": {
+      "before": "4249580b751387a87d24d4f11e7980b90f5401b0869094d44abc7740310aab9b",
+      "after": "2e2071e620085cc9be235c8bad86ee3a1ffe8e29405e642e5c7e5f69cbbaf2e1"
+    },
+    "Sunny_InteriorWall_B1_111_seg0": {
+      "before": "58660b890e5f88d91eb563545c9f31ad100c64b5a551827ca9945fea4abbd20c",
+      "after": "90594e2e2920e074be09e2b48e2f47d7cc781632d5c3200076ab2d4383ecd1a9"
+    },
+    "Sunny_InteriorWall_B1_112_seg0": {
+      "before": "cdae9cdb3adace050fe37e7ba36a42a7cdd2cff5ad727c89571042737b2ed0e0",
+      "after": "df0a4bdc8a8a859b9384b49d3eb081df8ba3ad75c8738709dd2a44747151749c"
+    },
+    "Sunny_InteriorWall_B1_113_seg0": {
+      "before": "425e27985834ae5c98c0db08eafc7735d977f5a4ab519c8855238d74c1e513c3",
+      "after": "6df78578efad1da8c1b46b0ea0ccba39494138c4b2e43a3c5c886f292c79a7e0"
+    },
+    "Sunny_InteriorWall_B1_114_seg0": {
+      "before": "8e38d3ed794d75753ecbedb296fbaa117d0bb2d9286881b20d2ece71421a1462",
+      "after": "a58ada3a2ac365a08ae3aacd56c30a27050028df6781bd95b69f499a5e3826dd"
+    },
+    "Sunny_InteriorWall_B1_115_seg0": {
+      "before": "733a73fbe631cf665334dcc70ab075269106544ea9db498fdbcf6208adc8d0e9",
+      "after": "3082a9eebbab01bb7c61ba9a2a24fedb2bbc31862a3a8b665bf2680ee291b162"
+    },
+    "Sunny_InteriorWall_B1_116_seg0": {
+      "before": "6830b01910c2e336a933a3f8469b18ca20dbef7b8cdf68449153c46dd700e5b9",
+      "after": "90fc89e970490f7f73b23d06e54ec80450e183c0bc6e74eb5368b55891e93da5"
+    },
+    "Sunny_InteriorWall_B1_117_seg0": {
+      "before": "00c427b47905f82624c57964c826d2beea084b47531381d4810d2bdfc839b6f9",
+      "after": "40789991ef0484819396db45efcf2eceaa39102a259e291b6664e67d30bef069"
+    },
+    "Sunny_InteriorWall_B1_118_seg0": {
+      "before": "14c516cc6d3c5525b3941ee6fbb122ddaead15f07dd11f267484823762577b2b",
+      "after": "a18adc65ace5bf554022ba9c71166ead6b6555bab081f419006dfa8733b60c53"
+    },
+    "Sunny_InteriorWall_B1_119_seg0": {
+      "before": "2508e219ab9fad48766374d0858221787539d221faff9213b076c5a79c52f6dd",
+      "after": "3f222807e2e8f295fddd3db7766834c55d95725384c00590979a78fc33fe39e6"
+    },
+    "Sunny_InteriorWall_B1_120_seg0": {
+      "before": "7973d980b7dae936ddea9ee1b168957f6409535df87c8d12ccb63105f2bdae66",
+      "after": "87a1a42896cd1fed1c5771b26dcaf2acbc39ccbb4cff2be9a64bd949c5f2b471"
+    },
+    "Sunny_InteriorWall_B1_152_seg0": {
+      "before": "0820f422157d615a749da0cf1aae5acfb78684ba3df3020e405ce3b502e4101d",
+      "after": "5928ed8e303a367698da53b9be81bf878ba903272fe7f39f23a7e145092f473a"
+    },
+    "Sunny_InteriorWall_B1_153_seg0": {
+      "before": "e70f89c61a51a14b3bb7fa73f37fd5811ef111fa633f3df3cc54476a4e4dfe14",
+      "after": "262fd28b597fb4051c4af75ec0d32ec3fa1e6930f33d89df4d1e1cfbe5489f9d"
+    },
+    "Sunny_InteriorWall_B1_154_seg0": {
+      "before": "41f98db7a823722f5edf800ec5afc7d28e6a7e779202208419f0bcff15336ddb",
+      "after": "fc183ff8f9a000ef329717452952a4aa1f9449922c37736eb96ae484d1db42c9"
+    },
+    "Sunny_InteriorWall_B1_155_seg0": {
+      "before": "1f7570e480da4ca65c906088524867cc96b28f8bac83cec60961983687d9724b",
+      "after": "ed367dd0147d33a5100dadf666618c722290b97fccb007088ab831400dedaf0c"
+    },
+    "Sunny_InteriorWall_B1_156_seg0": {
+      "before": "4f417f65bf4d213e35b2c8e587afe9cd4b5d9c27c495f25b09a4dd4173b54d16",
+      "after": "9aaaebc18b0effdd5c26eba1ef5dcfe51fc693aee70638e1b7f97ba31ae4214e"
+    },
+    "Sunny_InteriorWall_B1_157_seg0": {
+      "before": "01b0005b385efe8510d284d0560a8a9bb25ac8d7544118e8ff9da0d2af49a753",
+      "after": "054f728553c4b20b5ce7d8c5b715bbcdc0b42c5f9b18472da7aed45c4ffa4d1e"
+    },
+    "Sunny_InteriorWall_B1_158_seg0": {
+      "before": "4bbccb95d17d844ea3ceebdc2c1a76dca0d819e8e5af82c4d3ea08b7a3a7437d",
+      "after": "dc11c567b0b010c26385115312c4bf38bd8cb8ff76736f7c4e6b2f389f5418f9"
+    },
+    "Sunny_InteriorWall_B1_159_seg0": {
+      "before": "d73b68f3de65626795f2f25676dfea1b07c4dcfe95e0df1cd72fee5261805d5f",
+      "after": "351910d0dfa8ae660f9abd2a8f068dbe180b0e3bee076d935082bbdb5156abfe"
+    },
+    "Sunny_InteriorWall_B1_160_seg0": {
+      "before": "0df6951d11f780032ef7db4e46805bbec37169cf6c84e163ca9ef4addef7f33c",
+      "after": "44f86a6c7386e8fbbfe6bbac9321e42efbc5c25a4f81eaeacd6de4a0b20bb40f"
+    },
+    "Sunny_InteriorWall_B1_161_seg0": {
+      "before": "f512f1034c667352769806944802b19b6d9e19abc856935121401fc90d359ca8",
+      "after": "0f1e1c19cb20b21f9c51d5ad28bdf10fc2abdf1153edadb1d2aeabd52d4f177f"
+    },
+    "Sunny_InteriorWall_B1_162_seg0": {
+      "before": "fd0e050211d2fdc16af320ab14f0da7f4a81fc49e359ad9e2cc2ae9d48fb7148",
+      "after": "b1f637c61ee36ccadb9eec682027d09a5aafe8bfa570ab463e3f6e93b041b66a"
+    },
+    "Sunny_InteriorWall_B1_163_seg0": {
+      "before": "495551e750efbb38e5bd7c3781a4c97c7dc4f7ba252926d0f2f63a488ef8691b",
+      "after": "0f9c94c3534d0ead4260d48e15c2dc94735dc0622460aad098308226dafd29d3"
+    },
+    "Sunny_InteriorWall_B1_164_seg0": {
+      "before": "a08920e3a7b9fa6228d788297981a14df9e9317c1c962160c4e50ce425f44995",
+      "after": "ecbe529d4dc85139c7be5e5294218a06a78db1de0bdf0d8d296b4203ab65747f"
+    },
+    "Sunny_InteriorWall_B1_165_seg0": {
+      "before": "87c1536afb303901b33b2d49f68765a7d9866208d3e1d154cfa284db9818e51e",
+      "after": "26e1d80873ca3467724b4344dc06dbeaae6ca88705287e8407bbf0862731da71"
+    },
+    "Sunny_InteriorWall_B1_166_seg0": {
+      "before": "ae9f82d8c8cf4a0b45b66318e56d5bad738d9d9d47fd2e846fe985a634c70bbd",
+      "after": "bc0790d5ca58ef7c2f8e396d116d14bfc9efff630dc9077b999e8339eea04e81"
+    },
+    "Sunny_InteriorWall_B1_167_seg0": {
+      "before": "971f1795992f911222a5559da2c56dca65a8f526ade6012d37e25366b4611a27",
+      "after": "8f1072eef3f53e97c1e3fc59141b639421aacea2ed8daf87b3404048af2fee6d"
+    },
+    "Sunny_InteriorWall_B1_168_seg0": {
+      "before": "d75d4abb88ac80933a96e114e242997f2b8b626b75580e9d5f3fa6a3c84174d5",
+      "after": "fe6b815bb5625845e8b9d55b921da87030c389569d07d362a48ade7104a0734a"
+    },
+    "Sunny_InteriorWall_B1_169_seg0": {
+      "before": "5e289427f36726d46b37b2f58fc3cf0525176847b26180ba7de02390b6e4ed7a",
+      "after": "b7d40c9e3f9b3a74963e0ccde55e4904e214727cca35fbc3af34e0135cb9a2bd"
+    },
+    "Sunny_InteriorWall_B1_170_seg0": {
+      "before": "85c24d0ec49f07f72d1a398c149bd5f6cda3ab7244baef6ad1f9a80edfe68c6d",
+      "after": "7f85e924304f33de49d991af88f889bab023256d63025c3d9164d5441433d1ee"
+    },
+    "Sunny_InteriorWall_B1_171_seg0": {
+      "before": "6a8c3a65b0f6530a9f8828fcd6a2f56ce4c4ee55f5280442d7749a8311059900",
+      "after": "9414238026cb352e5f1023e10c45258cfd2d186f838fce93c2db9ec685d55998"
+    },
+    "Sunny_InteriorWall_B1_172_seg0": {
+      "before": "b31b738f4a3acdeab9eacfa0cfc5dc578d6e83621528dd740892be589cddad76",
+      "after": "fa15e3c399ed5cd336622dc0e7f5135d866a4990c3ea13b097680422faacd566"
+    },
+    "Sunny_InteriorWall_B1_173_seg0": {
+      "before": "a26117475ed54781f22ac9b55c80d878185724a57dc04ca7214487a45063d243",
+      "after": "055f0b01f50d50ccaebe3ea4fd24e862b109d9435bf59e2c8fae09c3ff238f6c"
+    },
+    "Sunny_InteriorWall_B1_174_seg0": {
+      "before": "9c37e8c7ffe3161d0aa3c2510a3dba3b0a698cf36b5c0e39bfeb584f9602795e",
+      "after": "47b16fbb1e1640a02821f8ca576cfd1cfafe1ed5960aa56c6dbc0ceea11cb28a"
+    },
+    "Sunny_InteriorWall_B1_175_seg0": {
+      "before": "008452917a50a7a183d0d14c259f9dd2649a14e5138b8eabe06dbf56281be39c",
+      "after": "b67289bc4047b517fb13f258742073c437a7635e75f7599a6bb6cb2659b1f063"
+    },
+    "Sunny_InteriorWall_B1_176_seg0": {
+      "before": "33fe872190bd3588569a989fb6096bba9c7014ff19c3c2c46504b93b96576444",
+      "after": "b03c6dc3cd2f7344ff5367057a54253dd50539957882d84e8cffbe8417edfee7"
+    },
+    "Sunny_InteriorWall_B1_177_seg0": {
+      "before": "c58cca76d09872e1bb7d173bad1765bb5a85ad8ee7bcd568dc874d39de76948a",
+      "after": "4993b6d81cd7302ab8163a3ac0f1285f1a4d48da2ade9548d2d001509eedc808"
+    },
+    "Sunny_InteriorWall_B1_178_seg0": {
+      "before": "02e73e966dbdde9dbf283c47adff52282ed95833ad81319ec0779fcc4d073d87",
+      "after": "e2b94b837e3701e2d7b2c4ff513bd309a57e6149b1385e8ca7c28d7a847fb6e1"
+    },
+    "Sunny_InteriorWall_B1_179_seg0": {
+      "before": "95c50f6bed365b08edc26c16e65b943c8c8e09ca30f9e22999e05cf8b9e2eeec",
+      "after": "b92190ceceb584f13f7ad882765e6aaacdbae89dfcd9e17b169d06cf1464dc95"
+    },
+    "Sunny_InteriorWall_B1_180_seg0": {
+      "before": "361bca8205115cf884d80a8b5815342724b4e2488614b4ba10e76b064bb7d4a0",
+      "after": "aa2f0f7cf2f36065c832ce2a887615c1c0fbed8751b8826edc9e5931c53e36a4"
+    },
+    "Sunny_InteriorWall_B1_181_seg0": {
+      "before": "39c4b4ec27958d5d53df2f2fd51cf4309bee6911ff410ca64ff01e36acd699ba",
+      "after": "d41d00272c57265805611ad9bdb6edb87376466ea4bcef55ddede5a57d7733d6"
+    },
+    "Sunny_InteriorWall_B1_182_seg0": {
+      "before": "521f404e7abce546bf4889926debad9aa2f9c5a8d82973ffe3f3328bf7d5ed58",
+      "after": "c3d3ae66b183f37f42d1603c68ec509a259f685f708a1f3c4406e00bca841ac8"
+    },
+    "Sunny_InteriorWall_B1_183_seg0": {
+      "before": "a13729b26571fce9ecc1befa7a8b2c7d2b877151587a2919e91c109511badc3e",
+      "after": "2ac8a4346d85d4dcb7f8a5f0cf00f2f0fae031555af3a34019d66bfb80a7933f"
+    },
+    "Sunny_InteriorWall_B1_184_seg0": {
+      "before": "b1fc393edbed3deda968e51f14f0d4b0ce81d872fb34d5fbce0900f51fb06abb",
+      "after": "7c33a2ad7dbf924a6a912cafe7f79177ac0b36d523d4c4d662bf487f9bf5303c"
+    },
+    "Sunny_RoomLamp_Frankys_Weapon_Development_Room_bulb": {
+      "before": "a9dd9a4cfd181a7503ec451bdae0b82d3db849a96e7eefdd7c1c111699a79f94",
+      "after": "155931dd5918e74030ea4f19893372fb7508565dd4533467b28cbb307337ee34"
+    },
+    "Sunny_RoomLamp_Frankys_Weapon_Development_Room_cage": {
+      "before": "e2692acbbfc46659b567054c5b2db8f337185008a8c65a19aaef02da0bd23c39",
+      "after": "b79d12267d793d642633a69f234ea17194869523a545c5ba70ca48b779aabf1c"
+    },
+    "Sunny_RoomLamp_Frankys_Weapon_Development_Room_cage.001": {
+      "before": "4d6b826ad6608ab55b564e188c4dce022d64fc9e13009d9d1c374e8aeda018d2",
+      "after": "a4439df278628973837ebbcbe02fcf5d56ad739bd4f08ef501efea8624dc8445"
+    },
+    "Sunny_RoomLamp_Frankys_Weapon_Development_Room_cage.002": {
+      "before": "62156f65d078bb2531db388f8515eb869dd1dddf04e9b129f865537a081f14e0",
+      "after": "ad1dcc59503f96aa838237e720be32721bc39bf0f8d8a2600fc7bf83e80103a2"
+    },
+    "Sunny_RoomLamp_Frankys_Weapon_Development_Room_cage.003": {
+      "before": "8cc01ed9a2de0828c603201b894cf3cadbede5b26ce7bb81c9b0c375c54522c5",
+      "after": "2fd0ff9179975c8773b5eb9af30e9c1e860dede3651e2d56ded39a6f5e12830e"
+    },
+    "Sunny_RoomLamp_Frankys_Weapon_Development_Room_cage.004": {
+      "before": "b14b096d404f13dc7c6eb8c6ab0efbf890834b1a07b0491ae5aa09d13778d847",
+      "after": "2a20d128d5d0b895912b9a32456e3bacc139408cb78e5461659e2133feca7481"
+    },
+    "Sunny_RoomLamp_Frankys_Weapon_Development_Room_cage.005": {
+      "before": "714102b620bfea5b80680b4224c292991b2a5570a8bb40f619580a66c270574a",
+      "after": "66967b9fac2bca06eb806fc9c08794ef8f624198f0659c64828ab7f6fd5522a0"
+    },
+    "Sunny_RoomLamp_Frankys_Weapon_Development_Room_cage_ring": {
+      "before": "a93e52a790054aa2df2517d2ddec790def0e58877d36258067b8081f8de4c48f",
+      "after": "f3dbb0317b910e7c24f7a7f36e6a91dee1532164e5741f79b94e9600a1b523ba"
+    },
+    "Sunny_RoomLamp_Frankys_Weapon_Development_Room_cage_ring.001": {
+      "before": "3cc4916bfc0df9d4952018056b899078ebf959ab9716591a17b1b17e6beb475e",
+      "after": "eb20d0659074ef969ab503843a83e64234fec4e7c97fdf7cd0fe15ac0def3c45"
+    },
+    "Sunny_RoomLamp_Frankys_Weapon_Development_Room_cage_ring.002": {
+      "before": "0c61e8d16f26f9e350e93e15357d553b415c2784120426111bb665f2b0c552f0",
+      "after": "bb1bf68c25b244c99f6a66f7c5870994ea72ecb2af1d851279549efae3ef4cfa"
+    },
+    "Sunny_RoomLamp_Frankys_Weapon_Development_Room_ceiling_mount": {
+      "before": "9c0949cb8be7b4885bb13c6386e51e1ebc50c175736e237ee95372c802eadd1a",
+      "after": "3981cd8936ff2610d7f9cc1ef0fc4b24583c7801711dad262d8b849866f03b42"
+    },
+    "Sunny_RoomLamp_Frankys_Weapon_Development_Room_chain": {
+      "before": "1febf9ed7b803f923ff1a18581e0da00e86c0a35276d11ab11c31c3755d960e9",
+      "after": "37595cf3f9636d13eade9abf4877108044e610305c5d53059a0344e779eb7a21"
+    },
+    "Sunny_RoomLamp_Usopps_Main_Factory_bulb": {
+      "before": "155931dd5918e74030ea4f19893372fb7508565dd4533467b28cbb307337ee34",
+      "after": "a9dd9a4cfd181a7503ec451bdae0b82d3db849a96e7eefdd7c1c111699a79f94"
+    },
+    "Sunny_RoomLamp_Usopps_Main_Factory_cage": {
+      "before": "b79d12267d793d642633a69f234ea17194869523a545c5ba70ca48b779aabf1c",
+      "after": "e2692acbbfc46659b567054c5b2db8f337185008a8c65a19aaef02da0bd23c39"
+    },
+    "Sunny_RoomLamp_Usopps_Main_Factory_cage.001": {
+      "before": "a4439df278628973837ebbcbe02fcf5d56ad739bd4f08ef501efea8624dc8445",
+      "after": "4d6b826ad6608ab55b564e188c4dce022d64fc9e13009d9d1c374e8aeda018d2"
+    },
+    "Sunny_RoomLamp_Usopps_Main_Factory_cage.002": {
+      "before": "ad1dcc59503f96aa838237e720be32721bc39bf0f8d8a2600fc7bf83e80103a2",
+      "after": "62156f65d078bb2531db388f8515eb869dd1dddf04e9b129f865537a081f14e0"
+    },
+    "Sunny_RoomLamp_Usopps_Main_Factory_cage.003": {
+      "before": "2fd0ff9179975c8773b5eb9af30e9c1e860dede3651e2d56ded39a6f5e12830e",
+      "after": "8cc01ed9a2de0828c603201b894cf3cadbede5b26ce7bb81c9b0c375c54522c5"
+    },
+    "Sunny_RoomLamp_Usopps_Main_Factory_cage.004": {
+      "before": "2a20d128d5d0b895912b9a32456e3bacc139408cb78e5461659e2133feca7481",
+      "after": "b14b096d404f13dc7c6eb8c6ab0efbf890834b1a07b0491ae5aa09d13778d847"
+    },
+    "Sunny_RoomLamp_Usopps_Main_Factory_cage.005": {
+      "before": "66967b9fac2bca06eb806fc9c08794ef8f624198f0659c64828ab7f6fd5522a0",
+      "after": "714102b620bfea5b80680b4224c292991b2a5570a8bb40f619580a66c270574a"
+    },
+    "Sunny_RoomLamp_Usopps_Main_Factory_cage_ring": {
+      "before": "f3dbb0317b910e7c24f7a7f36e6a91dee1532164e5741f79b94e9600a1b523ba",
+      "after": "a93e52a790054aa2df2517d2ddec790def0e58877d36258067b8081f8de4c48f"
+    },
+    "Sunny_RoomLamp_Usopps_Main_Factory_cage_ring.001": {
+      "before": "eb20d0659074ef969ab503843a83e64234fec4e7c97fdf7cd0fe15ac0def3c45",
+      "after": "3cc4916bfc0df9d4952018056b899078ebf959ab9716591a17b1b17e6beb475e"
+    },
+    "Sunny_RoomLamp_Usopps_Main_Factory_cage_ring.002": {
+      "before": "bb1bf68c25b244c99f6a66f7c5870994ea72ecb2af1d851279549efae3ef4cfa",
+      "after": "0c61e8d16f26f9e350e93e15357d553b415c2784120426111bb665f2b0c552f0"
+    },
+    "Sunny_RoomLamp_Usopps_Main_Factory_ceiling_mount": {
+      "before": "3981cd8936ff2610d7f9cc1ef0fc4b24583c7801711dad262d8b849866f03b42",
+      "after": "9c0949cb8be7b4885bb13c6386e51e1ebc50c175736e237ee95372c802eadd1a"
+    },
+    "Sunny_RoomLamp_Usopps_Main_Factory_chain": {
+      "before": "37595cf3f9636d13eade9abf4877108044e610305c5d53059a0344e779eb7a21",
+      "after": "1febf9ed7b803f923ff1a18581e0da00e86c0a35276d11ab11c31c3755d960e9"
+    },
+    "Sunny_RoomPartition_workshops_lintel0": {
+      "before": "e0b2abd7cfd803e2e2f67a01dff0ebfc86d9d866106a3a84f93762ccf696989d",
+      "after": "dd676c732f84b19939400414e889072d85f07b86be8e6f813e56a0b926fb071d"
+    },
+    "Sunny_RoomPartition_workshops_seg0": {
+      "before": "f4c6833faf3f53480e1af034e0a5f85946348a6ba93e11bea14ebc1cc0740672",
+      "after": "1957a03d5bedd4def52b5732a42c2055df7fe9ea98064773690984f9e2bdaa8a"
+    },
+    "Sunny_RoomPartition_workshops_seg2": {
+      "before": "739a5b6b49ee3f364ea40e69fafbce11d716216514d767105086bf70e8117b3c",
+      "after": "16c62552214bf85f92eb71a2f65d07298fc7574da32657723668d7a1bce3102e"
+    },
+    "Sunny_Store_dry_bin": {
+      "before": null,
+      "after": "c5aa693cd82a24cf56f07be944a25860a0a7c077130ad1178dc783f39a353995"
+    },
+    "Sunny_Store_dry_bin.001": {
+      "before": null,
+      "after": "2a108bc07fbd47d3f07820e0a342a7110cfe014fa6878e7466b41cd59f73f1f2"
+    },
+    "Sunny_Store_dry_bin.002": {
+      "before": null,
+      "after": "a0b9daeb93f6fcf85ecf227c94fd0a10148dc1a590d44dedea4cfcd59bbc576d"
+    },
+    "Sunny_Store_dry_bin.003": {
+      "before": null,
+      "after": "3e43de6b5c116fd313f4db5fe315befb762fb722cd9f6d9a8c626000e411a015"
+    },
+    "Sunny_Store_dry_bin_band": {
+      "before": null,
+      "after": "1131f7b867d014e94356bd8060ca75110b6faba7a831665e42d2f234d992e824"
+    },
+    "Sunny_Store_dry_bin_band.001": {
+      "before": null,
+      "after": "07123f1030c715ac3608c4ce3a710624ebb101ef7c4001875a61efe0b765887b"
+    },
+    "Sunny_Store_dry_bin_band.002": {
+      "before": null,
+      "after": "565bc4c3e3378b23460d1680afcd4378825b222a4587f248154e81143b06d246"
+    },
+    "Sunny_Store_dry_bin_band.003": {
+      "before": null,
+      "after": "5952943a85d92e11ee2a36d4e13d62c75574724dda81f4b1c29bd838e5b4050f"
+    },
+    "Sunny_Store_dry_bin_band.004": {
+      "before": null,
+      "after": "0a43505f1b5e6a4d70659890dddfbc5565d45193de99b1601137417eae2ca5a6"
+    },
+    "Sunny_Store_dry_bin_band.005": {
+      "before": null,
+      "after": "3d5667dd091c026710995ba6a416e2ff121c40700d9da766af0f2a299ef7ca63"
+    },
+    "Sunny_Store_dry_bin_band.006": {
+      "before": null,
+      "after": "5c9be6dd30333c16f18b5471fe8a6542abfb38d33967dead1eed331996279bfc"
+    },
+    "Sunny_Store_dry_bin_band.007": {
+      "before": null,
+      "after": "3155c9a95290af0c42ff51b1292c8d343f04e15224f9e641567e41b8d0d95955"
+    },
+    "Sunny_Store_hessian_sack": {
+      "before": null,
+      "after": "c164581de9cb5d138e2a57eb42265729d8f6fd8c0b207cb373a7e72f088c6c85"
+    },
+    "Sunny_Store_hessian_sack.001": {
+      "before": null,
+      "after": "bd8cec3eb5d1c842f313ce586bdfaa4d89bdcc666a4bd5b7a27881af660966fc"
+    },
+    "Sunny_Store_hessian_sack.002": {
+      "before": null,
+      "after": "dc630ac033f9c58da92e5d1eb5023028909e37568d971d9f682fa78d1443f635"
+    },
+    "Sunny_Store_hessian_sack.003": {
+      "before": null,
+      "after": "a46850110353023c99a7923c9935a40467439372d0f54d4347bcd0b3310fafc8"
+    },
+    "Sunny_Store_hessian_sack.004": {
+      "before": null,
+      "after": "e5100c5c47c73a975d60a6eec7952f5d4b4961019223794bd9eaabb7b3633ede"
+    },
+    "Sunny_Store_hessian_sack.005": {
+      "before": null,
+      "after": "c20b9f92cfa3d1fde7b8825265459222ae857038e2bbd71fdc4438ba94c40ba8"
+    },
+    "Sunny_Store_hessian_sack.006": {
+      "before": null,
+      "after": "dec280fb411e4a0d8ce16bf59796387b06f8c6f0c52a672d904d94714ba81df5"
+    },
+    "Sunny_Store_hessian_sack_tie": {
+      "before": null,
+      "after": "8b400686ea271d9dff07c36c9b8b7ab6d21d44ae28b0278f1c8eebf3549dc572"
+    },
+    "Sunny_Store_hessian_sack_tie.001": {
+      "before": null,
+      "after": "903bdbd9c120ad2eb98a034f68ad76bcd14d14c40afc00003335fee9c43aa547"
+    },
+    "Sunny_Store_hessian_sack_tie.002": {
+      "before": null,
+      "after": "3c52bb3bcfeb00a83e9d7c8638e85efd1028a6b220326b8256ee7faf391b7663"
+    },
+    "Sunny_Store_hessian_sack_tie.003": {
+      "before": null,
+      "after": "ac6ee3846f5433b1243d7593b7f3c24132701f2a01c2919975b11e74a8982d6b"
+    },
+    "Sunny_Store_hessian_sack_tie.004": {
+      "before": null,
+      "after": "5ecb34643674005ad6ee2308693498f66da9a9902a122fa03145265e3259c2a0"
+    },
+    "Sunny_Store_hessian_sack_tie.005": {
+      "before": null,
+      "after": "22e0fcea241a7a72d548f0245ced7bef6ba70bb06a74f7b278a4251c10254b05"
+    },
+    "Sunny_Store_hessian_sack_tie.006": {
+      "before": null,
+      "after": "966a309c17cc787e25c5c10b6053029e6eeef869dda3127955bde1677edb77b5"
+    },
+    "Sunny_Store_hessian_sack_tie.007": {
+      "before": null,
+      "after": "90ce1fd2ec22462f18a670da578248cea38bd355d45e6d7b6fa92031cf3bda9c"
+    },
+    "Sunny_Store_hessian_sack_tie.008": {
+      "before": null,
+      "after": "030ed07948b3ee512f6e27c31c6924bcf45b3150ca3e7354e015cb69b683b981"
+    },
+    "Sunny_Store_hessian_sack_tie.009": {
+      "before": null,
+      "after": "7a0cbe4f73dba32cc2eab18489afe950bf7b65fa06ca5b64844085f8d3793691"
+    },
+    "Sunny_Store_hessian_sack_tie.010": {
+      "before": null,
+      "after": "3f5c3ba3e5ce8a5dab52b3df83a98709d3824d70dc1f4947ad274ea072dfad17"
+    },
+    "Sunny_Store_hessian_sack_tie.011": {
+      "before": null,
+      "after": "f9092021996657a92446145be8d5d7a3a09689b2d35fa3522aeb05f0a0db5a95"
+    },
+    "Sunny_Store_hessian_sack_tie.012": {
+      "before": null,
+      "after": "e1cdc64a671add5654bb88533b6971e39bb46c33e77b80f58df12d36f398ce83"
+    },
+    "Sunny_Store_hessian_sack_tie.013": {
+      "before": null,
+      "after": "31e8f9c3aa9acbea77b880e0a32dcb2268f62604d51737afb24f3b15d7b28b42"
+    },
+    "Sunny_Store_hessian_sack_tie.014": {
+      "before": null,
+      "after": "71909ed6cab36ce56db00b31b8cae70de49ac7671a74707b608d84d83cd805fa"
+    },
+    "Sunny_Store_hessian_sack_tie.015": {
+      "before": null,
+      "after": "a79d831489943543ad415a03ba0cebc5c86ec082febd449b0c60fee6674f8df3"
+    },
+    "Sunny_Store_hessian_sack_tie.016": {
+      "before": null,
+      "after": "7ec1d6ccfb76d4995d8896edee5b58b01db41e1257b6684dd6adff81e8daedca"
+    },
+    "Sunny_Store_hessian_sack_tie.017": {
+      "before": null,
+      "after": "b9b3c1019f8e82bd69fb58fac966ea19620b9b16e482f677db064a8f50449252"
+    },
+    "Sunny_Store_hessian_sack_tie.018": {
+      "before": null,
+      "after": "8d94d95b5ee150b98190af2b0c00a59c92c3ce65366d651e3f31c091a0036805"
+    },
+    "Sunny_Store_hessian_sack_tie.019": {
+      "before": null,
+      "after": "b5c5548d7372f0aa4de2b5ec820ad0095578c773142288430211fdd7a1e0f578"
+    },
+    "Sunny_Store_hessian_sack_tie.020": {
+      "before": null,
+      "after": "0532b502652fab3c1d0c7e5807f5720c60968b0aefac273fa04c7770942de39e"
+    },
+    "Sunny_Store_spare_cask": {
+      "before": null,
+      "after": "bc250129f0fdcebac38f3f36d8ce7ff8e20bc0c2c9958724b308c8a864f08d02"
+    },
+    "Sunny_Store_spare_cask.001": {
+      "before": null,
+      "after": "39dec79afc31943c44eab97b97eddff7a097f26085e56edbafd72af1673fed14"
+    },
+    "Sunny_Store_spare_cask.002": {
+      "before": null,
+      "after": "b212a3a4f5ea531df6fa077da8921caa5d777e4025d84eecee3c0a92b590c82f"
+    },
+    "Sunny_Store_spare_cask_ring": {
+      "before": null,
+      "after": "69a148c86bb64a795df86897813a73a5397bb68e664758a85e351616c67855a6"
+    },
+    "Sunny_Store_spare_cask_ring.001": {
+      "before": null,
+      "after": "396195cb0f592270393f485260bfae0e1936aaf7518b0967d5f3addab96617b4"
+    },
+    "Sunny_Store_spare_cask_ring.002": {
+      "before": null,
+      "after": "4cae165c2566c9990bd3ced48058d49e655d99e41b18d4b3ed2e560fbac34e73"
+    },
+    "Sunny_Store_spare_cask_ring.003": {
+      "before": null,
+      "after": "47dc97b9f29668067cea14641f0b4edcd785ab026a93d328158ab02d119c1444"
+    },
+    "Sunny_Store_spare_cask_ring.004": {
+      "before": null,
+      "after": "77f26b1f504948987a8af9e6eb106ecba281b03021048bf2d567206d83aced2d"
+    },
+    "Sunny_Store_spare_cask_ring.005": {
+      "before": null,
+      "after": "d4b4520047211e165f569850021f331c4ec85d272df6f34f334829fd6b168d4d"
+    },
+    "Sunny_SurveyGym_bar_base": {
+      "before": null,
+      "after": "5437240cb4eb873e0ef0c722f6c4311f2a4e419d3c99cf8392508d197928f653"
+    },
+    "Sunny_SurveyGym_bar_base.001": {
+      "before": null,
+      "after": "4d2130402a9b36ca5e5c742da2eca9ec9ed8f8f86ee8eda0fc3c74a34dc79e94"
+    },
+    "Sunny_SurveyGym_bar_post": {
+      "before": null,
+      "after": "a5d66e2fa368f9b8dffa74a4c0ed77996e782f7f5cdd38d698d78a6782ed4d65"
+    },
+    "Sunny_SurveyGym_bar_post.001": {
+      "before": null,
+      "after": "24f1395b9df7977767b050300fafce8ebbc8a0351388533a781f5c1e6bb61ce7"
+    },
+    "Sunny_SurveyGym_binoculars_barrel": {
+      "before": null,
+      "after": "3046852442665aeaa48a1ae5c3fe730d8fff4e82e73ce0a4dabc9599bed435c8"
+    },
+    "Sunny_SurveyGym_binoculars_barrel.001": {
+      "before": null,
+      "after": "714af794cabec00af03886232e2412d49fd09824325450692d602219a0c9a351"
+    },
+    "Sunny_SurveyGym_binoculars_bridge": {
+      "before": null,
+      "after": "414876e0f599ceeeec815f4fad7c6cf37d18330e465fe3075ff7b0fb323f8249"
+    },
+    "Sunny_SurveyGym_binoculars_lens": {
+      "before": null,
+      "after": "96370c0a9c912c12118dc8a244e22c7534afa1b097e0334328abeac6aac84322"
+    },
+    "Sunny_SurveyGym_binoculars_lens.001": {
+      "before": null,
+      "after": "0dd559c53d9a582e77943a6ca22e127bae5f6012413b01bfa17b7fc8ef80c45c"
+    },
+    "Sunny_SurveyGym_dumbbell_grip": {
+      "before": null,
+      "after": "76a4d21496ab1429bc75acd374f10e47aa4df101330a150e2301a4782632b08e"
+    },
+    "Sunny_SurveyGym_dumbbell_grip.001": {
+      "before": null,
+      "after": "5ce6cc841c2ba5e8e1ba00ad89b4a44665e96d1c2c917edc5186a943535a0b3f"
+    },
+    "Sunny_SurveyGym_dumbbell_grip.002": {
+      "before": null,
+      "after": "4c7b82be800bfb24f5ec247e0b6804b9564e16193f629e4fabc4e6852923f1b6"
+    },
+    "Sunny_SurveyGym_dumbbell_weight": {
+      "before": null,
+      "after": "b6cd320d9d5b2487969052cda71f03717960c27b49a65acda72596c63d7daecf"
+    },
+    "Sunny_SurveyGym_dumbbell_weight.001": {
+      "before": null,
+      "after": "0e92ad2119d9173315b35aa45385db290db43c9d33d4428be9d95e6a4172578e"
+    },
+    "Sunny_SurveyGym_dumbbell_weight.002": {
+      "before": null,
+      "after": "6a28f9c6e55d994f2da952665200463ef4672e097da22bb34e387a3a84b7f139"
+    },
+    "Sunny_SurveyGym_dumbbell_weight.003": {
+      "before": null,
+      "after": "8256e15459fa9039f398369f09e2441883a40207e62d1607116f02fae519072d"
+    },
+    "Sunny_SurveyGym_dumbbell_weight.004": {
+      "before": null,
+      "after": "f7af7c29c1c875b6871cfc746fd434babfd88f917eeafbb567500a097e9a5301"
+    },
+    "Sunny_SurveyGym_dumbbell_weight.005": {
+      "before": null,
+      "after": "6933c5b14c29d2fc1322c366fd991723e93957978eb85c76bf4f72ba2e3fae3c"
+    },
+    "Sunny_SurveyGym_mic_base": {
+      "before": null,
+      "after": "412ecdc4ad657ec455169b4950642ddddc7395dd436903f98543dac2f67c83ee"
+    },
+    "Sunny_SurveyGym_mic_head": {
+      "before": null,
+      "after": "2e6a4486946999b0d531484ce809e32ceb3e0e58903c5d18c7e6f53da5f14c13"
+    },
+    "Sunny_SurveyGym_mic_post": {
+      "before": null,
+      "after": "52d20a56a14706e0f348b8a861401bbf57e2712fa15e9e6d7f8dd611a3f0a7d4"
+    },
+    "Sunny_SurveyGym_optics_stand": {
+      "before": null,
+      "after": "00bdab03fccd67a8321d31e39c93dcd138290503aab7ae471fdc97405c214212"
+    },
+    "Sunny_SurveyGym_optics_stand_base": {
+      "before": null,
+      "after": "e55935370bad9ffab99e4253847519e3a25f6b740d5eef0b60a8e477d61d57d1"
+    },
+    "Sunny_SurveyGym_optics_stand_leg": {
+      "before": null,
+      "after": "f8d16adf0aa332b6a05a535605dfcd02f71b6d998d0bb292ac137a55c131a38c"
+    },
+    "Sunny_SurveyGym_telescope_focus": {
+      "before": null,
+      "after": "be68c45e1fa8700fc2976d061a2ebb2099a41234f82c99a346e254a2eb61ad96"
+    },
+    "Sunny_SurveyGym_telescope_head": {
+      "before": null,
+      "after": "0b15fe8ae7abd1b45d520a731c6779f550706308c5cc7553cde46a54b0cdb6f0"
+    },
+    "Sunny_SurveyGym_telescope_lens": {
+      "before": null,
+      "after": "435554d4cfb56a104174dc4087cb516fcad939bb23da024c1320e13240517b8f"
+    },
+    "Sunny_SurveyGym_telescope_tube": {
+      "before": null,
+      "after": "d384e75259b15800a2cd1ec7642f11aea810d005863fd34be776bcd73612f265"
+    },
+    "Sunny_SurveyGym_telescope_tube.001": {
+      "before": null,
+      "after": "fa04516bf5394d8d7dde2b1acc2c8dad64ef4e16acd89ce31fa70d1e3f2c80d8"
+    },
+    "Sunny_SurveyGym_telescope_tube.002": {
+      "before": null,
+      "after": "52992c12266f08fca968e9eae2a62c2270ea638647c487f57301f6e83ef9f750"
+    },
+    "Sunny_SurveyGym_telescope_tube.003": {
+      "before": null,
+      "after": "686a1dc47cd8b9f9fbb709b8e68ed70a95bcfce01a1899e4e096d33e7c591201"
+    },
+    "Sunny_SurveyGym_telescope_tube.004": {
+      "before": null,
+      "after": "022c582f2cf3b293d9b7d95a98f64127d9367ec36553632558ca45368e1c35b2"
+    },
+    "Sunny_SurveyGym_towel": {
+      "before": null,
+      "after": "488908cd1bdf14983279cf253754ad64d8fa2f369619ac650e0deb19f2b1a057"
+    },
+    "Sunny_SurveyGym_towel.001": {
+      "before": null,
+      "after": "cbeffe4dfe52268304f5a2737e567be8d14acf585c80a00e2cebf5b7206bea49"
+    },
+    "Sunny_SurveyGym_towel_rail": {
+      "before": null,
+      "after": "1970b9447cd5f25b470a0ae13d654690eac544ccbd6b8753aef5462b3ca77376"
+    },
+    "Sunny_SurveyGym_towel_rail_post": {
+      "before": null,
+      "after": "97775f476ba45f84c2d8aef314bd719ec840d1c8368ec7e6a13a7b1fd5c7908f"
+    },
+    "Sunny_SurveyGym_towel_rail_post.001": {
+      "before": null,
+      "after": "0e77007640a824689a38789cc7bb060384dd0e17f9b92bef1c32087f7f5dbfae"
+    },
+    "Sunny_SurveyGym_training_bar": {
+      "before": null,
+      "after": "14294d0e97724a77bdadcae1e2c27f5f8641cb85a046288cb2a972f8a943abd8"
+    },
+    "Sunny_SurveyGym_training_case": {
+      "before": null,
+      "after": "3edc8b19ca2391812e16862739471b951e366b0c2fb3a90c5042bbc1ecae8e50"
+    },
+    "Sunny_SurveyGym_training_mat": {
+      "before": null,
+      "after": "83f307a1e8178340b21165222fea1efb2cbb667d4544ec0494a330741e25f75f"
+    },
+    "Sunny_SurveyGym_training_pull": {
+      "before": null,
+      "after": "4a5b5d55c1761b3e3dfe42c8d44b8ace0f0696878db205b454fb47cfa2a0baef"
+    },
+    "Sunny_SurveyGym_training_pull.001": {
+      "before": null,
+      "after": "1fc6449a8131853bc8dcd85c9cfe0686419472476ced3604fb024e3289a2af9a"
+    },
+    "Sunny_SurveyGym_training_pull.002": {
+      "before": null,
+      "after": "e7bb3746a4e61a0eaacb59d339d3a47568c74af4ff6782558a138ce561d34c1b"
+    },
+    "Sunny_SurveyGym_training_slot": {
+      "before": null,
+      "after": "510e6bf9f45b78025f0e505a5605d894b1e46c7a8963f922d6cda2d577064488"
+    },
+    "Sunny_SurveyGym_training_slot.001": {
+      "before": null,
+      "after": "d05d6f32bedbcaa0e95678cb5f87ffad173e82c2a005c995e078baaeedd1522c"
+    },
+    "Sunny_SurveyGym_training_slot.002": {
+      "before": null,
+      "after": "768c3427ffa4b0a0f8a8a0b48c0570dac8a319a6c05b40d8ef37aa808c25bf69"
+    },
+    "Sunny_SurveyGym_tripod_foot": {
+      "before": null,
+      "after": "302f279cd89fb69ad09adc460e6188d44be8683fb9e1a1bf095cdb572030891d"
+    },
+    "Sunny_SurveyGym_tripod_foot.001": {
+      "before": null,
+      "after": "99fa9d6e057c3922e518005a42a4a5c8e437eb0d6621821046bc42d525e621e6"
+    },
+    "Sunny_SurveyGym_tripod_foot.002": {
+      "before": null,
+      "after": "fad867dcb0cc363ae6442ce10e273f71c4a256b1f616bda8bf503dab09e764b4"
+    },
+    "Sunny_SurveyGym_tripod_lower": {
+      "before": null,
+      "after": "684b4150e5688b8495a9aa511f47c4420be3faa2cf1fbecb9d9b5e21c452a269"
+    },
+    "Sunny_SurveyGym_tripod_lower.001": {
+      "before": null,
+      "after": "b45bcda9933c719fb754a8e98d6c36da3a1b06df9346760a73b259f75e489b63"
+    },
+    "Sunny_SurveyGym_tripod_lower.002": {
+      "before": null,
+      "after": "b03ce4d46ebc4ec72ea88373e2fe3d5e75ec4c6debb2482ecd052a61910793ea"
+    },
+    "Sunny_SurveyGym_tripod_upper": {
+      "before": null,
+      "after": "c44c9b2e66b5928b7e3f830723c5bab2405a074d2f3f740ec70712d9a44f48af"
+    },
+    "Sunny_SurveyGym_tripod_upper.001": {
+      "before": null,
+      "after": "f3b419d274d1ebd5592f10bc8b0a6aec03a5a04d6b641b57f7631565f121f255"
+    },
+    "Sunny_SurveyGym_tripod_upper.002": {
+      "before": null,
+      "after": "ff90caf260fa10c088d277baad12aa618e9303889a1fdd434899d52b690e861c"
+    },
+    "Sunny_SurveyGym_weight_cradle": {
+      "before": null,
+      "after": "0463fab0f72883b166a022e8a3dab4fce7f239815d0e5703bd1629ff667a9563"
+    },
+    "Sunny_SurveyGym_window_seat": {
+      "before": null,
+      "after": "f6894df2caf378b3d8f3dfba026f160e02f4b62d6564bed1d1339d07070b7090"
+    },
+    "Sunny_SurveyGym_window_seat.001": {
+      "before": null,
+      "after": "c779cc204a0e69445562eee2876ddf35eba88e725b390de260cba764f8b39c7c"
+    },
+    "Sunny_SurveyGym_window_seat.002": {
+      "before": null,
+      "after": "c263c88ac7f100cdc9664e9cebb78fbecfc98630d4a4976c31c032541176811d"
+    },
+    "Sunny_SurveyGym_window_seat_foot": {
+      "before": null,
+      "after": "9260dcee8105f9b6148f20e7e6cf78434cd96c0c2680b8204099edf51d49eee8"
+    },
+    "Sunny_SurveyGym_window_seat_foot.001": {
+      "before": null,
+      "after": "f9e26fb70007b1ca7f617bd0c5a1a203ef786bc6cb6cc079a1ef7eb8766bfd8a"
+    },
+    "Sunny_SurveyGym_window_seat_foot.002": {
+      "before": null,
+      "after": "b23a8ca1c43c780aad26920ded97601bbc5569b6fcf80086e0f17fcf6cdd5f57"
+    },
+    "Sunny_SurveyGym_window_seat_foot.003": {
+      "before": null,
+      "after": "afb3ea3609bee0d2043c1ba8e77850e80ecbdfdeaf345dc2f94b33847c73292e"
+    },
+    "Sunny_SurveyGym_window_seat_foot.004": {
+      "before": null,
+      "after": "edf89d8c9466fb97594d03d047a9d3255d2d7defb2438026214e844971b067ad"
+    },
+    "Sunny_SurveyGym_window_seat_foot.005": {
+      "before": null,
+      "after": "6706a8df0d1f0d82f6881fa1e02c44130ef73c8c5b0e8420d33f808c018f8eca"
+    },
+    "Sunny_Vehicle1_horse_bow": {
+      "before": "191ba6837471bc83d4ca6b727c7f0fedb45f5c10f3cf31afa650f56d9fedb04c",
+      "after": "1f159ff99e09bdb32e05b31045cb81d3ce3d215f092275f1c0c6c5684ced8c62"
+    },
+    "Sunny_Vehicle1_horse_ear": {
+      "before": "ec3c3750c6d385d00a1e8c36eb202051ac41d9b2b70d1c8010e9c0b25b483dfc",
+      "after": "8322cb7ec0d5a182e71aac5209f40bcc15c5a0d4e226db0bf4e7c693e966ba9a"
+    },
+    "Sunny_Vehicle1_horse_ear.001": {
+      "before": "850ef84aa38b74b00eea459a9cc28e81ab0f4e6e8ffffbbb102bc5bd3ced227e",
+      "after": "414c8b2c86160396bc2a6a848ba009e77f44ba26b1caaf41b9d13d2f7ebee357"
+    },
+    "Sunny_Vehicle1_horse_head": {
+      "before": "1a37bee90fe9d0eb076c6cfc115bf9fd7140c6eb1f6577fa977ec227b4e17a08",
+      "after": "b59b26e4c2b41446657e72717d847ead388b69bd203373439b51b6d5d71fdc9d"
+    },
+    "Sunny_Vehicle1_horse_hull": {
+      "before": "bab8360c48482a6de4708523bcb5616b21793303459dd80ef0ae3e608cf10e30",
+      "after": "4d543d9673a82806f1d5ccbd5746ea13f9d2dd5c58afa576a8579ddc935d52e3"
+    },
+    "Sunny_Vehicle1_horse_muzzle": {
+      "before": "21e2098455329a0afa69d58783f32fc0540352fc85cbf608cf516840947f5bcb",
+      "after": "c012236369c8b4fd9a1861c908161c5b45528bca07310fef9d233a034c2dd28f"
+    },
+    "Sunny_Vehicle1_horse_neck": {
+      "before": "1b32b48680ba6d5f0048126b9a4f6e356a29840ca6de2982d03e2591303f3a2b",
+      "after": "bd13ceb2ad44e9048e81dde5de129d0701960c6d4575f000d85cd386f3be6eff"
+    },
+    "Sunny_Vehicle1_red_stripe": {
+      "before": "d6dfbb626ebdd078aebbee7a7a3a5f8e387ffe82f66a069284581d3df42b33f8",
+      "after": "438fee977002ef32e3d0ac01e6382903312a77b4d016fe6cf553f9f7fda2e6f1"
+    },
+    "Sunny_Vehicle2_gunwale": {
+      "before": "e24df00f46bbbfc6bca0991d7d488f6a98dc444bfa10610e22762c02ee90b5dc",
+      "after": "0b0c505f29732735483b01e6d45a186cbdf75716bd408e6f09115e2d56457dba"
+    },
+    "Sunny_Vehicle2_gunwale.001": {
+      "before": "95fa5cb00475800f56d16825a68b848faabc0d9e73988374812f191d876a2288",
+      "after": "23410ffdb8b8da36afb5dd396928e6f13a15bd4b9dfb793194039935bccf8bb1"
+    },
+    "Sunny_Vehicle2_sail": {
+      "before": "70619c339603eb412acf58c3858ec170e3017c1522ad49508ba570344d6c9d2d",
+      "after": "0dace0eeac030b826a66f70302a4c55ad21e75fb5027abf5ea9566c978c02309"
+    },
+    "Sunny_Vehicle2_sheep_head": {
+      "before": "44cfb5e4cc9eb94853c2a98e990572190b6e2f092c836b4cfa6edd759fea6184",
+      "after": "7ad6c604ca761d4563aec86affb19690eb6b20940e6de4d67b780a66a34baa89"
+    },
+    "Sunny_Vehicle3_dorsal": {
+      "before": "afed6db27b7379b4f3ebbdecee1d46b497654305ea24c7a94391cd91d0b80704",
+      "after": "ad4df98bd4f935c318ecffbdb9e584fc517e2c3c8d8f04d24767ea773cc63993"
+    },
+    "Sunny_Vehicle3_eye": {
+      "before": "6502bc2c6aa643daf4a5c24521de8e2667ac8fa8f1ff24334d20d659fd9d02e5",
+      "after": "54e952112bbe475b7639ff51bc78c17ff1b4352299590e566e6d0d5f294e51a9"
+    },
+    "Sunny_Vehicle3_eye.001": {
+      "before": "3ed9b6b921219cae604b2953a177cf10a294f189b0db16406fb0ce52f206c546",
+      "after": "809c4e660f01a71ecb6716ee40ebef351c3e4ee19088377ac985eeeb4a341885"
+    },
+    "Sunny_Vehicle3_fin": {
+      "before": "cdf4b71ff3e2feb7635c7bdeea6c03f7e6301e3e692b62eae5146bffbf279b56",
+      "after": "eec7a4631666840287273799da33caffbb88f73f089b05edfc89aec625ae470f"
+    },
+    "Sunny_Vehicle3_fin.001": {
+      "before": "946709e9cbc1ef265be8462ad492f4715ecf3340c775ab7d35d237c713e14f46",
+      "after": "b18384614d18dde92b22a2dd546d4d891ea97b8f2963eb9187fe6e376feeadb7"
+    },
+    "Sunny_Vehicle3_shark_hull": {
+      "before": "b1c3039f875b75e7cc7d98b67fd9c67ae4b372f8e4123757b64a7a8bcf4930bb",
+      "after": "960f5ca4c42b032b23316e1411f9f450b97973663ee8c31633c0de6fd024c9c7"
+    },
+    "Sunny_Vehicle3_shark_nose": {
+      "before": "1753006ffac6a10eeafff2a1475ed8399366a0e85f4e703d865947b6597f5bbd",
+      "after": "7d5702c616f43c758666c568d5d376b05a78592d153c36831dabf423fb0f1afe"
+    },
+    "Sunny_Vehicle3_tail": {
+      "before": "88e13fccc951f86ef3bb7c3eb0f4f279d122e79da1d9307437710bff647fdff9",
+      "after": "8f4db855c5fa5f970a28f26d50d87755d849b4c6f0a8d3ae29cef13519115c0b"
+    },
+    "Sunny_Vehicle3_tail_fin": {
+      "before": "ffb23219e890c556797d938f63f95be8fd590816208e5952fc62de3afaff55b5",
+      "after": "10a0607e416a099b01f262f724c64c4fa10b336fe31ac1e7d5a2537ca825ea64"
+    },
+    "Sunny_Vehicle3_tooth": {
+      "before": "6877d0df100a1792c48eb17f952df9bb113e2beb3ddc3ea66b5b2b615cdc496f",
+      "after": "78572f5df561bb7a51bcd4efd70641a02109d16e03a55712bf73831ce400b8f9"
+    },
+    "Sunny_Vehicle3_tooth.001": {
+      "before": "c5aa5c0472d161c032e19fba0284810e755ea342101fc724bf8ec8d468c933eb",
+      "after": "26348473af2d9151b1626913f95189bb90d1dce02c72c2e40a694a962a6484ef"
+    },
+    "Sunny_Vehicle3_tooth.002": {
+      "before": "a4327e0b4dae5cfe710a9b558ac2a7d78f7af5f5798a0eb227edca5ac18bf9aa",
+      "after": "4d8ecd7e2a755c08d822930055144eb8bc0be0bf547d4ed0fe6a601822718ae5"
+    },
+    "Sunny_Vehicle3_tooth.003": {
+      "before": "c51fdb74c66b418f5e0e2bfff27431b55430bca39d7d212a94dd25b02fab8a2b",
+      "after": "9b99f59062a245de99b09fc0504f3499577adda9e8b81d00274fe6e3d09ee602"
+    },
+    "Sunny_Vehicle4_chassis": {
+      "before": "7223b7193f4c7138a4897c63d9ea9285beed1894fffcb1f93251c158e1fe1921",
+      "after": "1d9662295db2391d66eafd1c5baada86ecc4f9be91defd5c66e5df089ab5820d"
+    },
+    "Sunny_Vehicle4_fork": {
+      "before": "3e978d83f1c3cfa73acd603685b196131fffc7ecade8ab31235cc0637598173b",
+      "after": "d88e09e1c583a4c5b9e02aedfd5a7190c90ae2b04eef8c31c0be83770c00b155"
+    },
+    "Sunny_Vehicle4_front_wheel": {
+      "before": "7b3b1c01776cf22ddfea5b3fa597de8c62cede9c7a55a6b2baf8e327a83a695a",
+      "after": "5b0c38d8134b4d2374a7f2c2473e86a50495f98f774a8e9024c6b06e77b48c5a"
+    },
+    "Sunny_Vehicle4_front_wheel_hub": {
+      "before": "7391078292a98fffc661906a396c716e312a20ff3016c704057b85b1d01e6c7a",
+      "after": "9277d3b2b351f60278e938710a33213f077294d440a9ae4c597f9539e6c594a0"
+    },
+    "Sunny_Vehicle4_rear_wheel": {
+      "before": "dc99d226a12065969b1c374a19f16c8789a5ffaa185c6569eac8bbfd2b0e128c",
+      "after": "dfdf5e9384cee832207e94a0dbee4ee0d2f2505c2723dbc86f1daf492a247cf7"
+    },
+    "Sunny_Vehicle4_rear_wheel.001": {
+      "before": "e7db6f8703540cfaaf4e5ed3951605fe1128ad2415b989a6ddfe64166a1af3fd",
+      "after": "a256e77e1b12a2d90e4bfc447cd6a90039183d694e478f2d5c9ad3cd3b95ba61"
+    },
+    "Sunny_Vehicle4_rear_wheel_hub": {
+      "before": "ff78255724c8d6bf64444e6a5a1a846eb2c67b942bcc2a4241becfbb5f71906c",
+      "after": "84ee0fdd2ae151d4029d3f6d6d5dc3a4771d8cc5ed66402e260cd7dcc6802f86"
+    },
+    "Sunny_Vehicle4_rear_wheel_hub.001": {
+      "before": "f0709180e0933791a3528a8e835e6c6e5ed01990f5e4ee0c825e4f893de3570b",
+      "after": "52a72e782753c58a603820a7f41c24f05ee3765ba5c30e918efff0ff2d24f9ff"
+    },
+    "Sunny_Vehicle4_rhino_eye": {
+      "before": "44cdb0765588d6db781803fc115b812589fb40222f327a617868d8a6f3ad95ac",
+      "after": "b10d7e755b93bf1545cb71ee26ce9be6ba276aa2d36bbc5f53c34c3ad0dfd123"
+    },
+    "Sunny_Vehicle4_rhino_eye.001": {
+      "before": "643bab310071400cfd729bfdb1b1c193427ffc4b3aabe0f4c47b88f56767c4b4",
+      "after": "0ba2c723244be868fa866e6c3fc42e2221a16bbe7b80fb823086065655c204fc"
+    },
+    "Sunny_Vehicle4_rhino_horn": {
+      "before": "312f2e865ab2a76b4adbef39aa3751a8f0a678b0a0391805257bd6fc98f1b3f0",
+      "after": "7b35fcc91bb1a29889e482cd5a67116309ec319108c85dd8a197bdbf86292bdb"
+    },
+    "Sunny_Vehicle4_seat": {
+      "before": "e9767bf9586531ef431073efe20692b3cca1c5a8d2bb600f36b90c630a0d686f",
+      "after": "f0999f2783085aa8a16ef50850d6eaa8c88fa4061604e73fa60351075db7348f"
+    },
+    "Sunny_Vehicle5_cylindrical_body": {
+      "before": "1dd8a92e31824bec7063e620e7b712e8fc0a3e8b09fd207c04f9a747a8467fc2",
+      "after": "fb8667ed9b29a1c77cb5861c46dc9b281af3923046a991d38aa5eb5ac8091bf4"
+    },
+    "Sunny_Vehicle5_dinosaur_eye": {
+      "before": "3be7c7b46e6e7b1a3891e74d1687ebced43e0c5d6b19c90080c5c45cadf8342d",
+      "after": "8d9cd8be8f9092bf6c1751601b4f4ba0b997a665b9f132e9df5425cc3b7dd1ff"
+    },
+    "Sunny_Vehicle5_dinosaur_eye.001": {
+      "before": "ab2345d9d216ab588882d1ffb01d4aa61ffa317eb4c64ab12954145a1fd5618a",
+      "after": "d68505201640ca2d897de07106b3ee39ca34f348edff7d7ca6a4e216b55ffaf7"
+    },
+    "Sunny_Vehicle5_fender": {
+      "before": "f2967dcc238b6fdc9275dab80388720f44a131ca7870650ee8ea95db0ca96835",
+      "after": "eef81011780ec517d928111ab37b26ad4c0cc135b11ab4962170a51a56a5e984"
+    },
+    "Sunny_Vehicle5_fender.001": {
+      "before": "0f149d6e6af3713399d72d3b8500ea39ef04149e14888cb3c200cf24d8ecd15b",
+      "after": "bb83d17c6bfe5f39b3d5fbda368af4eb9a5d18f4a7b476c2f146f82554865f12"
+    },
+    "Sunny_Vehicle5_red_front": {
+      "before": "dc73a2b8a98c409adde6df56e0edd6e10835429e78b8206e857e852f1e46788b",
+      "after": "fcc8e089056c251c548540cbbe79cc8b4bb2c4be4aadda53ec94511f34c01cb6"
+    },
+    "Sunny_Vehicle5_tread": {
+      "before": "3c434d9f9a497a1af0e07457eb60356927ad75dd5d56a003f1a72b26e307382f",
+      "after": "3c16e3488b933bf9bff0b6a9ac3a93c511942a9673c0d328baa4af70802dc328"
+    },
+    "Sunny_Vehicle5_tread.001": {
+      "before": "a339a2d03c2e012d044502f4aef2f8744f634b853e544f83fc02a7bd51da84a8",
+      "after": "ac79b173b61428643c55af39dd974ba1b0978d6e287c32d6ffc90dd559469139"
+    },
+    "Sunny_Vehicle5_turret": {
+      "before": "001c90e4d2098fc3a0a0119c211fc9e9039f3f9fa88410b6b16b5c8b3b34ed45",
+      "after": "8703968581213eefe0b0819ce714a19e32eb1c859bfa712d7b0a454bd409725a"
+    },
+    "Sunny_Vehicle6_bottom": {
+      "before": "87933edbac6b5d03cbe92f07b2101bb97d3bfe31fab64ce554f5d2f15d55885e",
+      "after": "cc4ad0a13a6ac25dd303790fef57a87235efb37e810fc2baaa9a1a18c74a7442"
+    },
+    "Sunny_Vehicle6_inflatable": {
+      "before": "c6ec40e6ae421058ef12e0444d5fa2681550d9855b5901c1b5bb89b7933ffb60",
+      "after": "84b983a6f31a395988a81b81df3e83fd1a9b82b1b210d4a7a1f90087c6157151"
+    },
+    "Sunny_Vehicle6_inflatable.001": {
+      "before": "44fd9b279838081f9ecc259a824e268e41dbf49917451fe3ee253e8ad15b4192",
+      "after": "58870235af9ba853815e69f71e6ea86a0c6748436f87de625c977a4469342945"
+    },
+    "Sunny_Vehicle6_inflatable.002": {
+      "before": "0e8bd2fcfbb167406482dba2c8fe18cb3af8bfd8bed6a3c2b4521347dce931b3",
+      "after": "119d438041acd190b3c0e765ebab86b5b0f7151c8ef7466e814b5f59341dd007"
+    },
+    "Sunny_Weapons_cola0": {
+      "before": "2a91b065f56d780796dca7b517fad4091eb8dd9906ac452592b2bd7788fbb7e5",
+      "after": "94fb6ee159bfe9ca48303ed56c35603169fe048324a8d3a2535671227db55a90"
+    },
+    "Sunny_Weapons_cola1": {
+      "before": "8be543d4df18d7cf5dc8fd6638912a854d0fc8043a956e2a49d8212981372ed9",
+      "after": "672759b60059b9e8c43e21d3b4e795bf8cc448179288f8e7b823edda9f7354fa"
+    },
+    "Sunny_Weapons_cola2": {
+      "before": "7c27c588be2f2a9c374c1bd99eb2d507c6e6e761283f05ef4e5b252292c447eb",
+      "after": "56cb4b3c4e083852e6fc6aa8ec8f5a52683b4c684ebc8fddf42534f5dc9f6b4d"
+    },
+    "Sunny_Weapons_cola3": {
+      "before": "e1701840611f6fc397849b6bf465473cff90fb9e647b0c3629cc99ce8c1829f4",
+      "after": "061cdd9fc6eb2314b0d1c1587f1df1864633b9826f4979f769712ffabe2bc912"
+    },
+    "Sunny_Weapons_drawing_bench_body": {
+      "before": null,
+      "after": "7e17c7c54fbd875c492765aac3aa9a18114964125746ec686019c49d393c0ffd"
+    },
+    "Sunny_Weapons_drawing_bench_drawing": {
+      "before": null,
+      "after": "1331f08ca6a580c7f00187fa37e3744518559a743ef7652b254f91bf7eaeb1a1"
+    },
+    "Sunny_Weapons_drawing_bench_drawing_clip": {
+      "before": null,
+      "after": "9d44e2962277792dfa0896710836dfd166593b1e0cc92939ee43402e2389def3"
+    },
+    "Sunny_Weapons_drawing_bench_drawing_clip.001": {
+      "before": null,
+      "after": "e45354bc7b180eb8b226d5fe9d56981446e122997f56897c3c9dd93e233b406f"
+    },
+    "Sunny_Weapons_drawing_bench_drawing_clip.002": {
+      "before": null,
+      "after": "dad0aa130fa73c15b317b644bbde6b0e7d1e46a83dbebdfb6a6b34da4bf78270"
+    },
+    "Sunny_Weapons_drawing_bench_drawing_clip.003": {
+      "before": null,
+      "after": "2bc3631f0ac4f103acebd77bc2913d06d9563e6ab17b8ca4bf5479d9f5a880df"
+    },
+    "Sunny_Weapons_drawing_bench_drawing_slab": {
+      "before": null,
+      "after": "e1275075b37ddf444779012179ffb99c03c50e0b9fc942cd8a9888d50cd5eb54"
+    },
+    "Sunny_Weapons_drawing_bench_face": {
+      "before": null,
+      "after": "c61050421f3a8dc145cdf5def973d781e8fbcf3eed29047322fc16ab9e25dd19"
+    },
+    "Sunny_Weapons_drawing_bench_face.001": {
+      "before": null,
+      "after": "a4058ebda4da931c169b2a9a970f96e30faa8c9bb2aba9ef50df0e4753952c0e"
+    },
+    "Sunny_Weapons_drawing_bench_face.002": {
+      "before": null,
+      "after": "d5aa6358ffcc0b796808b65ea47c8c4d3d3ef7984e46a8b11f2280d16df72156"
+    },
+    "Sunny_Weapons_drawing_bench_face.003": {
+      "before": null,
+      "after": "bdf3f16c453d8197719c0bd703e2b47b88ade07a33f132f54c97422e2f7f3931"
+    },
+    "Sunny_Weapons_drawing_bench_face.004": {
+      "before": null,
+      "after": "73ee6a4eb89b859565213ffdee544accb93a494139fc5a31f6bee9f177e9c614"
+    },
+    "Sunny_Weapons_drawing_bench_face.005": {
+      "before": null,
+      "after": "7537663413dbab03c19f8fe2c321c16bb06b4a47b627f675f21d4b7b3256ce52"
+    },
+    "Sunny_Weapons_drawing_bench_pull": {
+      "before": null,
+      "after": "3dd0e9bd97063269fbbf3bd1ba3ec608f6d8f822f6d04a121311931344dd5c03"
+    },
+    "Sunny_Weapons_drawing_bench_pull.001": {
+      "before": null,
+      "after": "74368f0da7f97914132268c291b59f729b2681617e033fb3de11de5af2e426dc"
+    },
+    "Sunny_Weapons_drawing_bench_pull.002": {
+      "before": null,
+      "after": "ff1faf63b97867468f4edd5e31ff32a439e81cda75304eca5312921e14b7de59"
+    },
+    "Sunny_Weapons_drawing_bench_pull.003": {
+      "before": null,
+      "after": "06cf991f3b9c293f5e80048f9c8427e44f8bcaada4a9bb6a6c8e2e681f76b86d"
+    },
+    "Sunny_Weapons_drawing_bench_pull.004": {
+      "before": null,
+      "after": "a1f550ccc7c3ff2d8277f30691fc6e2b2d70ab2c298362f1735b4b62ed928aae"
+    },
+    "Sunny_Weapons_drawing_bench_pull.005": {
+      "before": null,
+      "after": "2c3e0883295caad6853017f59b00e1ba1c16753435a88754f57f89ec258cd01c"
+    },
+    "Sunny_Weapons_drawing_bench_toe": {
+      "before": null,
+      "after": "8798c29e79dea322b5444aff795cb3c023c30958ddbdde9e030a08740f83128c"
+    },
+    "Sunny_Weapons_furnace": {
+      "before": "3c6e3aeab01200a30660df2dd0466955be912cc3d080c33f2bb2a2e24ae74132",
+      "after": "0e44f23d893a6048525dc91e9e4eee0b936005de79e64f0a6131b4c2c97b9201"
+    },
+    "Sunny_Weapons_furnace_door_bezel": {
+      "before": null,
+      "after": "567a1411a9dc8eda85ef3f5c4d55b1b45f1a72b19805481c5976f2489ed0fb13"
+    },
+    "Sunny_Weapons_furnace_door_handle": {
+      "before": null,
+      "after": "0129b3dbf312eb66c5b2dc7ab83d35a3e0b5b61097793f81109af54e69c0e072"
+    },
+    "Sunny_Weapons_furnace_firebrick_door": {
+      "before": null,
+      "after": "8232e635793f8ee6e5b34c1848d867b0bcecfc57b3cf085212d8b2cddfb364b1"
+    },
+    "Sunny_Weapons_furnace_flue": {
+      "before": "c1ea23b941651144c258c612b380e7da9c3a374c001a0a2ce6325d1b5db79a14",
+      "after": "627bcaa44aa0ea4f8723323ad4b06672b265898b924e3d937a26e5e32ef4240b"
+    },
+    "Sunny_Weapons_furnace_flue_band": {
+      "before": null,
+      "after": "beace132f00021ba8ce6d75109bbe78502b36b0b7f680c1d793e7eebb8f12767"
+    },
+    "Sunny_Weapons_furnace_flue_band.001": {
+      "before": null,
+      "after": "5db7ae5394dd995fa180f33e8f72e8835fd78ce3724d790259480709661445c1"
+    },
+    "Sunny_Weapons_furnace_vent": {
+      "before": null,
+      "after": "f219de57d2d57dfa8dd2d144036ea1ef4694654f9c8afe8b243c610c4a60849c"
+    },
+    "Sunny_Weapons_furnace_vent.001": {
+      "before": null,
+      "after": "b48624f332b1cdb38f6e236b40f52fa8983fe27e9bf4ccd6c45dc59365ac26fb"
+    },
+    "Sunny_Weapons_furnace_vent.002": {
+      "before": null,
+      "after": "ac40e140534aaccc3180b88754876a8c0408de210927c2afd334893f48604553"
+    },
+    "Sunny_Weapons_furnace_vent.003": {
+      "before": null,
+      "after": "9a2efcab6c9e2dfd1d7fc6cdcba5f0ff81b536fbebf7c2f8e5ff6dd99e83d44a"
+    },
+    "Sunny_Weapons_furnace_vent.004": {
+      "before": null,
+      "after": "da45ec7307eb291560d6ab338856dd0006dc94fd1cd471253e10aadb38a0e17c"
+    },
+    "Sunny_Weapons_furnace_vent.005": {
+      "before": null,
+      "after": "6a3a35f5a010342aaf39056dfbbeb641be53fd8aea175a1264e6ab4efd8ffc99"
+    },
+    "Sunny_Weapons_parts_cabinet_body": {
+      "before": null,
+      "after": "b654c6cc75815d2e7ef646be014386796cef29fb00e174a259cf01b66a5e2f6e"
+    },
+    "Sunny_Weapons_parts_cabinet_face": {
+      "before": null,
+      "after": "4becaf39973fef45d8ddb245528ecb8179df60714c0c900287593d4be439d165"
+    },
+    "Sunny_Weapons_parts_cabinet_face.001": {
+      "before": null,
+      "after": "37246b9c5affb209edfa5aec3053f9214ef24a1e254e796f55f17ed36f4e099d"
+    },
+    "Sunny_Weapons_parts_cabinet_face.002": {
+      "before": null,
+      "after": "0a319ee04dcac6fab4d41890294659fcd1abae752a542a07449a98f7090b2aad"
+    },
+    "Sunny_Weapons_parts_cabinet_face.003": {
+      "before": null,
+      "after": "b3e6138c07ff943eca14fe693568296e00b23772b0547f0c8b5dce6413e6b9bc"
+    },
+    "Sunny_Weapons_parts_cabinet_face.004": {
+      "before": null,
+      "after": "783b900d7acb0faf2a7f475f8116377e59cef1c7b851dc6e9535073e1ffdf860"
+    },
+    "Sunny_Weapons_parts_cabinet_face.005": {
+      "before": null,
+      "after": "8f66d014b7c86aebb3402a40d3f5cf78194c6f7e047292e85104c838a4fdf400"
+    },
+    "Sunny_Weapons_parts_cabinet_face.006": {
+      "before": null,
+      "after": "2add870a62df1be532129ee396cea9d9591e687e79e01e6313b58e619bbc239b"
+    },
+    "Sunny_Weapons_parts_cabinet_face.007": {
+      "before": null,
+      "after": "1d07e4e890b14cdfe535ec4e13b5926799523d6c9328bc4d72e61c8d401d6d3e"
+    },
+    "Sunny_Weapons_parts_cabinet_face.008": {
+      "before": null,
+      "after": "9eaba39961207727d6ffdc0a732f429e51ff9dbe053a0597e5c420b56323fb05"
+    },
+    "Sunny_Weapons_parts_cabinet_face.009": {
+      "before": null,
+      "after": "e01cfc0f1498809dbd70dcee03b635fd8f2237372dc24349fd8db9cf59872e5b"
+    },
+    "Sunny_Weapons_parts_cabinet_face.010": {
+      "before": null,
+      "after": "7f04e95972e42cc1ff2a23a43ffd55aad125d32fef241ae612b39dc41f050d8b"
+    },
+    "Sunny_Weapons_parts_cabinet_face.011": {
+      "before": null,
+      "after": "34418dce4821f7a6ba1b9a71ce4d4e65d1cfc9aed60e6aec5ca6227e27e3cab2"
+    },
+    "Sunny_Weapons_parts_cabinet_face.012": {
+      "before": null,
+      "after": "aef63183bae47ab1e68d1f4e4974c7cd73b895218741856fe1e0f674073137c1"
+    },
+    "Sunny_Weapons_parts_cabinet_face.013": {
+      "before": null,
+      "after": "4cc002ba82271135548ed251749cd9da6beec06020e8f16ef14649f46179772f"
+    },
+    "Sunny_Weapons_parts_cabinet_face.014": {
+      "before": null,
+      "after": "482861606ac2437d92bf3b9cb3d8a362a86322d0510cb74dfef57ab2d51fd750"
+    },
+    "Sunny_Weapons_parts_cabinet_pull": {
+      "before": null,
+      "after": "db53aed2db8e1b2b418e19118be99b1b3ca78bd2c511ea5a1de1f8cbb3238125"
+    },
+    "Sunny_Weapons_parts_cabinet_pull.001": {
+      "before": null,
+      "after": "a22f4c5b648a4030eafd88ba0320042b96a17ca0fe2a3d5179ea3b37da335006"
+    },
+    "Sunny_Weapons_parts_cabinet_pull.002": {
+      "before": null,
+      "after": "8f7509be68754ba2b28eccb85ad7d0b5d468005496575dd5cc4edd0ebee6cc72"
+    },
+    "Sunny_Weapons_parts_cabinet_pull.003": {
+      "before": null,
+      "after": "8adbfd55afb4a02a68f9a4b6190f5a47336473f8a844ba5f4e6faa866f3df59d"
+    },
+    "Sunny_Weapons_parts_cabinet_pull.004": {
+      "before": null,
+      "after": "b746c09b27eebeefc1b2ae6ed7125a665d85f7fbb215a9008ce71e7909e92dcd"
+    },
+    "Sunny_Weapons_parts_cabinet_pull.005": {
+      "before": null,
+      "after": "19aa48c13964f6b32705bc664fa5bfeb580aa30764b1d98a20a98e6bba9aa5b3"
+    },
+    "Sunny_Weapons_parts_cabinet_pull.006": {
+      "before": null,
+      "after": "5d19fb8806a142b56c572b86f02e975e3a82fcffc952f3cdce4a2eefdb218df6"
+    },
+    "Sunny_Weapons_parts_cabinet_pull.007": {
+      "before": null,
+      "after": "fbac93fd56a1a073bbbc4a305c60e209bc6c04cd6333933e63ec22721967801f"
+    },
+    "Sunny_Weapons_parts_cabinet_pull.008": {
+      "before": null,
+      "after": "b95305b31e15cf1fed6a402c99521fd5fe7cb229e4486450fd749f8946b87c8d"
+    },
+    "Sunny_Weapons_parts_cabinet_pull.009": {
+      "before": null,
+      "after": "ed21ef9df595419d82b9375ea810f7aa894e67ca7bfda58d21cc5e6ed45c8054"
+    },
+    "Sunny_Weapons_parts_cabinet_pull.010": {
+      "before": null,
+      "after": "1cfb3d5da27842bcd0d9a3241da02dbd4c01688085cf56d1c105887fe6b0fdd9"
+    },
+    "Sunny_Weapons_parts_cabinet_pull.011": {
+      "before": null,
+      "after": "deaaf62849414ec2c8d06a32e34abb05256c4b3a999e448e1c96ff6b6cd1eec4"
+    },
+    "Sunny_Weapons_parts_cabinet_pull.012": {
+      "before": null,
+      "after": "039d9e1aae18105b57528e0ca77a043fd70a6486c6911c58e7b567f8a0402e9b"
+    },
+    "Sunny_Weapons_parts_cabinet_pull.013": {
+      "before": null,
+      "after": "f3bbeafe7addf246f4e86687d52432f168dd38e73b7fbdad4bf932cd8620b0ed"
+    },
+    "Sunny_Weapons_parts_cabinet_pull.014": {
+      "before": null,
+      "after": "cc6b5774900828261aebfc271a6a9c91a0370d0dd5f0715b9258cf304082b2be"
+    },
+    "Sunny_Weapons_parts_cabinet_toe": {
+      "before": null,
+      "after": "efd7e56c4b0e26c8b9bea950a559ee67c6e1cdb2888164240da08418e74b0882"
+    },
+    "Sunny_Weapons_scrap_crate": {
+      "before": "f144a85c4bc96ad704117becc4fbe1807da19b00541a84f22ffd47078e145130",
+      "after": "67501abfb539e9f6b878064033a7055562042d52e7427d244ba88c2472c88b74"
+    },
+    "Sunny_Weapons_scrap_crate_side": {
+      "before": "2fedd9ba45811cf5d4955ba8e9737009cf86adf760b2578bc8192731e82f0f6e",
+      "after": "23bbc27da33ab56de4e909192da24706341649552681e9b871aa073c35d296c7"
+    },
+    "Sunny_Weapons_scrap_crate_side.001": {
+      "before": "64edfce45a5e5f2ef3f43d9fdbe1be19f7004afd969424aad2cbbe916ee977fa",
+      "after": "871e265ae885b6d4804b66f718d75616ee7a50e1e051c0ba93e51e7d9c6a8ccd"
+    },
+    "Sunny_Weapons_scrap_crate_side.002": {
+      "before": null,
+      "after": "4fb4efe1122df886b430faa16be823ecdc6c3976f9a54f5c60e8800d02bc38ed"
+    },
+    "Sunny_Weapons_scrap_crate_side.003": {
+      "before": null,
+      "after": "55c94c3bf94fc23a593ee847ef57245d7cab63b366d7f22cd6d058d58ed92252"
+    },
+    "Sunny_Weapons_scrap_gear": {
+      "before": "4fd0e8dc874a86b0a8d932409dedf13a98d272264d02151011ef88eb5bfda4a8",
+      "after": "29da5a79f1743d97f5600c5ab88e19d493edb4d0d59fbd8af32d9a3210543f73"
+    },
+    "Sunny_Weapons_scrap_gear.001": {
+      "before": "46969adaf7111279e07b0b1893a685b2cc1fc69ad2c65d2b516df7e928b87e0e",
+      "after": "abafb84e6de8bc859d7c60ebd472ab4efac5726329cb5b644c1edf2c362810af"
+    },
+    "Sunny_Weapons_scrap_gear.002": {
+      "before": "996ee076888379e6df50428fedaf7490a3a10691c437e50db89db1452c36d700",
+      "after": "240ed6a3131c70a23180b60e07fdbcf1349389f6bfdf4d4da0547237adf79ff3"
+    },
+    "Sunny_Weapons_scrap_gear.003": {
+      "before": "ab471cea37336b63e02b80c27178d5fb6a1ed5019e9ddcf11472f5a8cc25463b",
+      "after": "56e68b63491bc3d70742df585e40f38d53b76c8bbf4f709067326654ec726d6c"
+    },
+    "Sunny_Weapons_scrap_gear.004": {
+      "before": "c7f86dbea00da17ec9c84f00779d228aefd999f189faba3cabdd41e3134d8d92",
+      "after": "1c72d2e2e888041130ad6415774fa1eee1f3c7815087455f5a07f4c24cf1152a"
+    },
+    "Sunny_Weapons_scrap_gear.005": {
+      "before": "b31474e685b958f41beca96cb90a8d73f3aa1df9cac346effe83eb172f8778e6",
+      "after": "c8c80970f1b9e55c012487729d2cde898a69190e987273c021d4c5a3de1475d3"
+    },
+    "Sunny_Weapons_scrap_gear.006": {
+      "before": "227007eefbbacc39adb76abf5274788ab221e7889196427ee6607d5f2e61293f",
+      "after": "7884c3f90e6229056509fdd14aa5bc72db37fc734e4874aadb7a973332433fd7"
+    },
+    "Sunny_Weapons_scrap_gear.007": {
+      "before": "02f2219c5190fc6169de1fc720972d846fbfc42eb469fe0bda2f0f85023e7a4c",
+      "after": "21a7a44f72c8d34f7d40629cc6ac84cfec5b4c5fc2726a030eecbda8a699777f"
+    },
+    "Sunny_Weapons_scrap_gear.008": {
+      "before": "ce5d796fedd97791e53ec8e588c20f82b7ccddce5e477e684495230b3fb213f3",
+      "after": "f33f121dc83fb23f633e9cf772b56a3f64dfe3c1444d3a5f0a32d7d0ab87bcfe"
+    },
+    "Sunny_Weapons_scrap_tube": {
+      "before": "f4363313eb7e17dd42104a82bcea984d18315208055cede89516981686f38d77",
+      "after": "4cf9316c0dd202a956811f9f5266e7708fde718407849c4f7004bca9b8c6f170"
+    },
+    "Sunny_Weapons_scrap_tube.001": {
+      "before": "98bd73c64b355090f7413deea20fdba4df645552c0d501cb1536c19ea6178c9b",
+      "after": "5118dabf5952e1a6d113cdc22c1a419c077d11b2c5820c2bf87c3a2864bd6ddb"
+    },
+    "Sunny_Weapons_scrap_tube.002": {
+      "before": "988d02af5315f4638bc5512bceffa8a3709b1eaa4abb36b1d7e2cc7386cc5399",
+      "after": "bc500876ad2044334b95501b96b06887e118c7e94aa36f5f9c59a573491fc13f"
+    },
+    "Sunny_Weapons_scrap_tube.003": {
+      "before": "9cc5d57dffc50010a5869a54ec609f0d52c38668a6a71ba723e018002e3f6711",
+      "after": "c4b6badacb6c957a02f595f9d132b1eba5eccec80fd1d9a5c09faeb355015207"
+    },
+    "Sunny_Weapons_scrap_tube.004": {
+      "before": "5d3d98679bb81b71f6f298de395de24aae341929d0f203400ca49338197b0ad6",
+      "after": "69d0edeaadbf84c6de3d27b3d3682fd3f0f1527bb06a7d871ce0605eaaed2404"
+    },
+    "Sunny_Weapons_scrap_tube.005": {
+      "before": "6fdea09190028d24180eeaa6b797d12806a93156c326f7156335da116cb2228b",
+      "after": "8fca3d28dd26ff6018460957a121088a7665b3566b10ab43acf51d6d32ecc93c"
+    },
+    "Sunny_Weapons_scrap_tube.006": {
+      "before": "3e4e0ba6c1af8a13e481c0595055304cc96241b8993259e75c1b75a287fdc24c",
+      "after": "7c888b381c875d4291653fe07d320c5e1599ac36d3752493563eac8cbc835d78"
+    },
+    "Sunny_Weapons_scrap_tube.007": {
+      "before": "8088202aa02732b848febe1f0aa0cb12af46b853c127e78b6652b77af0aef6b0",
+      "after": "c701a29b7e72084136f79cab6a75c0b16670115e3f8da61eaecdc8b783f0b32a"
+    },
+    "Sunny_Weapons_scrap_tube.008": {
+      "before": "dbdf5c00866be6eddb273b46f82d447a6675e5716dbf1c787776b67e089aa9cc",
+      "after": "7603bbce5be451160216816e14f18faeb65b4d1de5082e5f88a39b63ebe70e28"
+    },
+    "Sunny_Weapons_tool_rack_hook": {
+      "before": null,
+      "after": "647316ca055bd77473a82024914d45725a0e509517253ffc36b0976aa67277b1"
+    },
+    "Sunny_Weapons_tool_rack_hook.001": {
+      "before": null,
+      "after": "f69be91277a25b00c964be4179ec1ce0781247ce8f1ec0995dbb309737d67b9e"
+    },
+    "Sunny_Weapons_tool_rack_hook.002": {
+      "before": null,
+      "after": "0283625e68c1724114bbc9a361a410173f3285a272f913440c35859eb6c4215a"
+    },
+    "Sunny_Weapons_tool_rack_hook.003": {
+      "before": null,
+      "after": "a88d323e1b0bc103f5357df6da045e1ac31b31e2343259c539038380ba00d702"
+    },
+    "Sunny_Weapons_tool_rack_hook.004": {
+      "before": null,
+      "after": "aa05bea1959416bb4b6a35bbc0e71da0171f1a18440e832f57aafb8fd77a2371"
+    },
+    "Sunny_Weapons_tool_rack_panel": {
+      "before": null,
+      "after": "b136cb922ebe282e751a0d157098c3ec44539612940844d318e9beb047a119a6"
+    },
+    "Sunny_Weapons_tool_rack_tool_handle": {
+      "before": null,
+      "after": "b2f0c431c0e009b1cbfdcc03bc4054bbd7676be91afedaa223f7176db1acf593"
+    },
+    "Sunny_Weapons_tool_rack_tool_handle.001": {
+      "before": null,
+      "after": "8b4c870e24c374cead4699881fbe875b91a5b9adc7c25acb2df06225914f93aa"
+    },
+    "Sunny_Weapons_tool_rack_tool_handle.002": {
+      "before": null,
+      "after": "1338cd20621ff4909cbdad3921eb04442c08d25d6eacbf94a9b6386266b1bdeb"
+    },
+    "Sunny_Weapons_tool_rack_tool_handle.003": {
+      "before": null,
+      "after": "fe3533eab8ee26e494a36648fd4fe2d19b60dff1bc65ca62674a6d1ce1e27b9e"
+    },
+    "Sunny_Weapons_tool_rack_tool_handle.004": {
+      "before": null,
+      "after": "0bc416f1c2f845e028eae22a708fcaee8310ed470d4cf015a58dcdc883eed266"
+    },
+    "Sunny_Weapons_tool_rack_tool_head": {
+      "before": null,
+      "after": "19ceefe5d35bd0aa44c24ad4fddccd234815126cc2472e7743201bb8b4eb2a4e"
+    },
+    "Sunny_Weapons_tool_rack_tool_head.001": {
+      "before": null,
+      "after": "91bbbbfd649e1149ec6a3b8945974831ea94c44587129a1196403dd33cbac0d9"
+    },
+    "Sunny_Weapons_tool_rack_tool_head.002": {
+      "before": null,
+      "after": "69f846cf17adef115cd2f5703154c907bcaf496db8d3ae0bdac7de99424de035"
+    },
+    "Sunny_Weapons_tool_rack_tool_shank": {
+      "before": null,
+      "after": "c63d80cb19edb4812717a50cb3a04eb2e2b58a456a838f463c97aba37d41be1e"
+    },
+    "Sunny_Weapons_tool_rack_tool_shank.001": {
+      "before": null,
+      "after": "49b9ab4080315d8c0b4cf679b282067f0bd7a981b43f439b60a933ca189e4e6c"
+    },
+    "Sunny_Weapons_tool_rack_tool_shank.002": {
+      "before": null,
+      "after": "0541a83018f9979f1e2767dadb61be5882c7457064a21b261a1eb04dad9002fd"
+    },
+    "Sunny_Weapons_tool_rack_tool_shank.003": {
+      "before": null,
+      "after": "b904ee0295f561be6f1c759a07f63072535d65817f2e4c71bd66dd6348d6ae10"
+    },
+    "Sunny_Weapons_tool_rack_tool_shank.004": {
+      "before": null,
+      "after": "3d285b3ecd35c4951775ea6b24ea776c0df03a1a7450d32c597e7b87512b13a7"
+    },
+    "Sunny_Weapons_tool_rack_upright": {
+      "before": null,
+      "after": "b499f3a58dbc66bf456ae58d2a434aed27e44c1bf7b0266588ad6b33145e5528"
+    },
+    "Sunny_Weapons_tool_rack_upright.001": {
+      "before": null,
+      "after": "b6eeef3b7313ccd9798c608053634a81551f3445fd787cea2d22932b9fa0d802"
+    }
+  },
+  "collisionSha256": "7be1103698d3ba7b7a990a3aba4c266017419c8a0f785c433e187778463fba90"
+}

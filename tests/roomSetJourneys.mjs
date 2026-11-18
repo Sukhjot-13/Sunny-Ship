@@ -12,6 +12,16 @@ const rooms=process.argv.length>2?process.argv.slice(2):[
  "Women's Quarters","Women's Washroom",'Women Starboard Cannon Closet','Women Port Cannon Closet',
  'Fore Port Toilet','Fore Starboard Toilet',
 ]
+const metadata=JSON.parse(fs.readFileSync('public/models/ship-metadata.json','utf-8'))
+const layouts=new Map(metadata.interiors.rooms.map(room=>[room.name,room]))
+const fittingVisits={
+ "Usopp's Main Factory":[['assembly bench',layouts.get("Usopp's Main Factory")?.workshopLayout?.aisle]],
+ "Franky's Weapon Development Room":[['drawing bench',layouts.get("Franky's Weapon Development Room")?.workshopLayout?.aisle]],
+ 'Energy Room':[
+  ['boiler chamber aisle',layouts.get('Energy Room')?.boilerLayout?.chamber,1.55],
+  ['boiler control cabinet',layouts.get('Energy Room')?.boilerLayout?.cabinet,1.05],
+ ],
+}
 const plan=roomRoutes(),trace=[],errors=[]
 const out=process.env.ROOM_SET_EVIDENCE??'docs/review/fore-room-journey'
 const storage=rooms.includes('Storage Room')?plan.ladders.find(route=>route.climb.id==='storage-ladder'):null
@@ -63,6 +73,12 @@ try{
  for(const [index,route] of routes.entries()){
   const path=index?plan.pathBetween((await read()).position,route.target):route.path
   await follow(route.name,path,route.target)
+  for(const [label,position,offset=0] of fittingVisits[route.name]??[]){
+   if(!position)continue
+   const [x,y,floor]=position
+   const station=[x,floor,-y+offset]
+   await follow(label,plan.pathBetween((await read()).position,station),station)
+  }
  }
  if(routes.length)await follow('return to lawn',plan.pathBetween((await read()).position,plan.spawn),plan.spawn)
  assert.deepEqual(errors,[])

@@ -1,0 +1,90 @@
+{
+  "visual": {
+    "unchanged": 8062,
+    "removed": {},
+    "updated": {
+      "Sunny_Energy_control_bezel": {
+        "before": "79da35ae7a2059992eb1e2171377bac16f2f6c90401726c8a5af94da5a471d54",
+        "after": "2d2611df14afe71e8961ac5011245492df77a5c3a82d49ae066606339c5782c4"
+      },
+      "Sunny_Energy_control_bezel.001": {
+        "before": "ae710bee0bc3a9f894b41a513f4f9cb926bc8b944bd73a6d2bdf066b5692b1f0",
+        "after": "bcb13ef9f405a37b38277e754b3faf8cb70855af9756ee4463fe5a70ef85a496"
+      },
+      "Sunny_Energy_control_bezel.002": {
+        "before": "38de66fed4fcaa132f8458e595a04a29a45c2dba2ce0c040fa8f45bce10c2862",
+        "after": "4ab535863b55154bdde257558955d65ccaaf8126ba1123d1222f14158df14985"
+      },
+      "Sunny_Energy_control_box": {
+        "before": "bcd2f140705bf8280e6692b721761dda748a76bb29b582f7a4ba03bc7afed59f",
+        "after": "952d4828ee2eeb74a5036e544b8a3a8b9bc46168ec487e17ed960300c4f3c301"
+      },
+      "Sunny_Energy_control_face": {
+        "before": "d3b61be33fcef856d0704367bfbe829e11e82ec99fbd69fc25c7aece917a59f6",
+        "after": "69a5af98e61f197040a021340251babe8b71cafe000e3035553bf8ee70f720e1"
+      },
+      "Sunny_Energy_control_face.001": {
+        "before": "22a549865fe1b4f8679e674067fd766f1fe50d0e2c0b2293d392074f0d91fa47",
+        "after": "9128fa721861bda257686c85d43bf45fa05db3cfdfb35924f3845b4cdb100526"
+      },
+      "Sunny_Energy_control_face.002": {
+        "before": "f83e483380c3f1259134080d568de68cb1cb6233e2e573c405b0fb4417a1baf3",
+        "after": "45106eb8e0466a5befdfbe52d69686c80c7bfa1a43ab154644e2675223c1aca9"
+      },
+      "Sunny_Energy_control_pointer": {
+        "before": "ffbf529a59f63b41c3ee71db25223fd03412508be1d347561f754dfdd02dbc6b",
+        "after": "812e5ee46bad25ed15a5883e8bd4d5ac611cbbc8bc43c2a416bf36a0baf9e6da"
+      },
+      "Sunny_Energy_control_pointer.001": {
+        "before": "98f8d2677039f1a4e9089ac647e9c8397323b95bc824991aac4ed55c1b7fcff2",
+        "after": "c67c578dbdf38c0016f7edc48cd66bd04aec8fa790121bcbe829b5d0f00c9c6a"
+      },
+      "Sunny_Energy_control_pointer.002": {
+        "before": "8b001d2f68757452c97fe8a70126b84d3f1e529af958b24ee5dceae35cda9f02",
+        "after": "002b0aadc19d48d210804d69aba0214a3093a7b4fc1f93d4df155e16972d7946"
+      }
+    }
+  },
+  "collision": {
+    "sha256": [
+      "6881ec0ed37df6a9905e5ef7e9f65498456bfc111358edfbb5b8f94ef69e4ef2",
+      "7be1103698d3ba7b7a990a3aba4c266017419c8a0f785c433e187778463fba90"
+    ],
+    "counts": [
+      217606,
+      217606
+    ],
+    "removed": [
+      {
+        "name": "COLL_Solid_Sunny_Energy_control_box",
+        "isFloor": false,
+        "min": [
+          24.849998474121094,
+          -47.150718688964844,
+          -7.755000114440918
+        ],
+        "max": [
+          25.59000015258789,
+          -45.79071807861328,
+          -7.324999809265137
+        ]
+      }
+    ],
+    "added": [
+      {
+        "name": "COLL_Solid_Sunny_Energy_control_box",
+        "isFloor": false,
+        "min": [
+          23.829998016357422,
+          -47.150718688964844,
+          -4.515000343322754
+        ],
+        "max": [
+          24.56999969482422,
+          -45.79071807861328,
+          -4.085000038146973
+        ]
+      }
+    ]
+  }
+}

@@ -252,27 +252,6 @@ def kitchen_details(cy, floor):
         rbox('Kitchen_fridge_lock_digit',fridge,math.pi/2,(.032,.013,.035),'cream',(.15+i*.045,-.438,1.11),obstacle=False)
 
 
-def workshop_details(rooms, floor):
-    """Distinct timber Usopp factory and Franky's metal furnace/scrap station."""
-    factory=rooms["Usopp's Main Factory"]
-    weapons=rooms["Franky's Weapon Development Room"]
-    fx=(factory['x'][0]+factory['x'][1])/2
-    wx=(weapons['x'][0]+weapons['x'][1])/2
-    text('Factory_sign','USOPP FACTORY',(fx,-9.35,floor+2.35),.30,'darkwood',(math.pi/2,0,math.pi))
-    soft_box('Weapons_furnace',(wx,10.0,floor),0,(1.25,.80,1.25),'black',(0,0,.63),radius=.12)
-    rbox('Weapons_furnace_mouth',(wx,10.0,floor),0,(.70,.05,.60),'mane',(0,-.43,.56),obstacle=False)
-    for i in range(6):
-        rpole('Weapons_furnace_grille',(wx,10.0,floor),0,(-.30+i*.12,-.47,.30),(-.30+i*.12,-.47,.81),.014,'steel')
-    pole('Weapons_furnace_flue',(wx,10.0,floor+1.25),(wx,10.0,floor+3.0),.13,'black',sides=16)
-    for i in range(9):
-        p=(18.1+(i%3)*.20,7.4+(i//3)*.23,floor+.22+(i%2)*.15)
-        ring('Weapons_scrap_gear',p,.13+i*.01,.035,'steel')
-        rpole('Weapons_scrap_tube',p,i*.4,(-.30,0,-.08),(.30,0,.15),.045,'steel')
-    rbox('Weapons_scrap_crate',(18.3,7.7,floor),0,(1.10,1.1,.12),'darkwood',(0,0,.08),obstacle=True)
-    for x in (17.8,18.8):
-        rbox('Weapons_scrap_crate_side',(x,7.7,floor),0,(.08,1.1,.55),'timber',(0,0,.30))
-
-
 def arched_chamber(name, p, width=3.18, depth=1.18, height=3.3):
     """Closed annular boiler housing around a real barrel-loading cavity."""
     outside,inside=width/2,1.22
@@ -348,7 +327,6 @@ def complete_room_fittings(objects, frame, interiors):
     finish_infirmary(rooms['Sick Bay'],cy,levels['F2A'])
     from sunny_library import library_details
     library_details(rooms['Library'],levels['F3L'])
-    workshop_details(rooms,levels['B1'])
     energy_details(levels['B1'])
     lc=(rooms['Library']['x'][0]+rooms['Library']['x'][1])/2
     from sunny_bath import bath_details, bath_floor_finish
@@ -357,6 +335,13 @@ def complete_room_fittings(objects, frame, interiors):
     pantry_light=finish_dry_stores(rooms['Pantry'],interiors['doors'],cy,levels['F2A'])
     from sunny_room_details import complete_reference_details
     complete_reference_details(frame, interiors)
+    from sunny_lower_rooms import finish_dock, finish_energy_room, finish_storage, finish_workshops
+    finish_storage(rooms['Storage Room'],levels['B1'])
+    finish_workshops(rooms,levels['B1'])
+    finish_energy_room(rooms['Energy Room'],levels['B1'])
+    finish_dock(rooms['Soldier Dock System'],interiors['dockCentre'],interiors['dockWaterLevel'])
+    from sunny_lookout_interior import fit_lookout
+    fit_lookout(interiors)
     from sunny_aquarium import open_aquarium_entrance
     entry=next(door for door in interiors['doors'] if door['id']=='AquariumDoor')
     rooms['Aquarium Bar']['lounge']['entryBay']=open_aquarium_entrance(
@@ -367,7 +352,8 @@ def complete_room_fittings(objects, frame, interiors):
         if obj:
             tile_floor(obj,.75,('tile_aquarium_pale','tile_aquarium_dark'))
     tile_floor(bpy.data.objects['Sunny_InteriorFloor_F3_library'],.65,('tile_library_blue','tile_library_sage'))
-    tile_floor(bpy.data.objects['Sunny_InteriorFloor_lower'],.85,('steel',),(8.5,20.2,cy,13.2))
+    metal_room=rooms["Franky's Weapon Development Room"]
+    tile_floor(bpy.data.objects['Sunny_InteriorFloor_lower'],.85,('workshop_steel',),(*metal_room['x'],*metal_room['y']))
     tile_floor(bpy.data.objects['Sunny_InteriorFloor_F2_service'],.55,('tile_ivory','tile_dark'),(20.6,24.8,-11.5,cy))
     bath_floor_finish(bpy.data.objects['Sunny_InteriorFloor_F3_bath'],lc,cy)
     aft_floor=bpy.data.objects['Sunny_InteriorFloor_F2_aft']
@@ -381,8 +367,8 @@ def complete_room_fittings(objects, frame, interiors):
         ('Sick Bay',(22.8,cy-5.4,levels['F2A']+2.6),levels['F3G']-.18),
         ('Library',(lc-.38,cy,levels['F3L']+2.43),levels['F3L']+2.87),
         ('Bath',(lc,cy-.8,levels['F3B']+2.16),levels['F3B']+2.58),
-        ("Usopp's Main Factory",(14.4,-5.6,levels['B1']+3.2),levels['F1']-.18),
-        ("Franky's Weapon Development Room",(14.4,6.6,levels['B1']+3.2),levels['F1']-.18),
+        ("Usopp's Main Factory",(14.4,6.6,levels['B1']+3.2),levels['F1']-.18),
+        ("Franky's Weapon Development Room",(14.4,-5.6,levels['B1']+3.2),levels['F1']-.18),
         ('Energy Room',(22.65,cy,levels['B1']+3.1),levels['F1']-.18),
     ):
         safe=name.replace("'",'').replace(' ','_')

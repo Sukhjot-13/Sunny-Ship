@@ -18,6 +18,9 @@ const profiles={
  'bath-stone':{period:[1.22,1.22],roughness:.37,relief:.0014,coat:.3},
  marble:{period:[1.74,1.23],roughness:.32,relief:.000028,coat:.44},
  hessian:{period:[.153,.162],roughness:.95,relief:.00015,sheen:.12},
+ rubber:{period:[.091,.091],roughness:.84,relief:.00008},
+ vinyl:{period:[.13,.13],roughness:.42,relief:.000019,coat:.28},
+ enamel:{period:[.175,.175],roughness:.34,relief:.000016,coat:.40},
 }
 /** Stable periodic noise for fine fibres and fired glaze, without animation. */
 function noise(u,v,seed=1){
@@ -89,7 +92,7 @@ export function interiorTextureSet(role){
 /** Upgrade authored rooms/furniture only after the exterior classifier has declined. */
 export function usesRealisticInterior(tags,name){
  return !!tags.sunny_authored&&name.startsWith('Sunny_')&&(tags.sunny_fabric||
-  /^(?:Aquarium|B1$|Bath|Dining|AftRearWindow|AftSideWindow|Dock$|Energy|Factory|ForeF1|ForeF2|ForeToilet|Interior|Kitchen$|Kotatsu|Library$|Pantry|Quarters|RoomLamp|RoomPartition|Sick|StorageStair|Store|Vehicle|Wash|Weapons|Womens|WWash)/.test(tags.sunny_feature??'')||
+  /^(?:Aquarium|B1$|Bath|Dining|AftRearWindow|AftSideWindow|Dock$|Energy|Factory|ForeF1|ForeF2|ForeToilet|Interior|Kitchen$|Kotatsu|Library$|Pantry|Quarters|RoomLamp|RoomPartition|Sick|StorageStair|Store|SurveyGym|Vehicle|Wash|Weapons|Womens|WWash)/.test(tags.sunny_feature??'')||
   /^Sunny_(?:Door|Hatch)_/.test(name))
 }
 /** Retain the authored surface identity and existing patterned colour regions. */
@@ -117,6 +120,14 @@ export function interiorSurfaceRole(source,{name='',wood='grain',fabric=false}={
  if(/^cloth_(?:quarters|womens)_/.test(label))return 'linen'
  if(label==='quarters_cannon_iron')return 'iron'
  if(label==='quarters_porcelain'||label==='quarters_locker_enamel'||label==='womens_wardrobe_enamel')return 'porcelain'
+ if(/^(?:workshop_(?:maple|oak)|lookout_(?:ash|wood_trim))$/.test(label))return 'grain'
+ if(label==='dock_deck_oak')return 'boards'
+ if(label==='workshop_cast_iron'||label==='lookout_training_iron')return 'iron'
+ if(label==='workshop_steel'||label==='lookout_optic_metal')return 'steel'
+ if(label==='workshop_copper')return 'brass'
+ if(label==='dock_rubber'||label==='lookout_mat')return 'rubber'
+ if(/^dock_pool_vinyl_/.test(label))return 'vinyl'
+ if(/^dock_(?:porcelain_paint|marine_(?:blue|red))$/.test(label)||label==='workshop_painted_steel')return 'enamel'
  if(label==='glass')return /mirror/i.test(name)?'mirror':'glass'
  if(/^tile_/.test(label))return 'tile'
  if(label==='paper'||label.startsWith('paper_'))return 'paper'

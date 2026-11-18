@@ -1,0 +1,20 @@
+# Lower rooms and Crow’s Nest — November 18, 2026
+
+| Space | Refit |
+| --- | --- |
+| Storage | Full stock aisle with tied hessian and hemp sacks, timber bins and banded spare casks. The original cabin hatch and ladder serve the lower deck. |
+| Usopp’s Main Factory | Timber assembly table, cloth sign, tool rack, drawer case and portable toolbox in the R07 bay on the slide side. |
+| Franky’s Weapon Development Room | Angled drawing bench, plate floor, parts cabinet, foundry and scrap crate in the R07 bay on the swing side. |
+| Energy Room | Enamel boiler housing and control box, cast-iron grille and feet, copper feeds and the retained three-barrel chamber. |
+| Soldier Dock | Oiled waiting deck, iron capstan binding and marine enamel, rubber and vinyl for the six retained display vehicles. |
+| Crow’s Nest | Telescope and binoculars, curved window seats, training locker, weights, bars, towels and a padded mat arranged around the original hatch. |
+
+R07 locates the workshops and lower-deck spaces. R04 ties the two workshop sides to the slide and swing. R12, R23 and R24 supply workshop silhouettes and finishes. R14 shows the Dock, capstan and cola chamber. R12, R13 and R25 show the lookout and its fittings. The annotated source list identifies each supplied drawing or anime still. [Reference list](whole-ship-blueprint-audit.md)
+
+The reconstructed interior uses human-scale fittings and existing player controls. The Dock vehicles retain their simplified profiles. The inherited hull pieces are visible along both workshop walls. Mesh rays in the original lower preview identify `Line004` and `Box118` on the swing side. Their hull surfaces are part of the parked exterior work. [Ray log](review/2026-11-18/lower-interior/verification/inherited-workshop-meshes.log)
+
+The native Storage walk descends its cabin ladder, visits the stock aisle and returns to the lawn. The waiting-room ladder checks entry, descent, floor support, ascent and hatch closure. The Crow’s Nest walk reaches both survey and training stations and returns through the original hatch, ladder and rope. The corrected workshop walk visits both workstations, reaches the Energy Room and returns to the lawn. The final Energy Room walk also stops directly in front of the relocated control cabinet. [Storage](review/2026-11-18/lower-interior/verification/initial-lower-journey.json) · [Dock ladder](review/2026-11-18/lower-interior/verification/dock-waiting-ladder-journey.json) · [Lookout](review/2026-11-18/lower-interior/verification/lookout-climb-journey.json) · [Workshops](review/2026-11-18/lower-interior/verification/workshops-and-energy-journey.json) · [Final Energy Room walk](review/2026-11-18/lower-interior/verification/final-energy-journey.json)
+
+The package reuses every prior floor collider and all 57,401 hull boxes. The native steel-floor material split changed how the exporter grouped 2,331 existing support cells. Per-cell coverage matched and heights differed by less than 0.2 mm before the exact prior records were restored. The revised workshop layout changed only its fixtures, surfaces, lights and associated metadata. The last cabinet correction moved ten decorative meshes and one fitted solid. [Package receipt](review/2026-11-18/lower-interior/verification/package.json) · [Workshop comparison](review/2026-11-18/lower-interior/verification/workshop-change-vs-initial.json.gz) · [Cabinet comparison](review/2026-11-18/lower-interior/verification/cabinet-only-delta.json)
+
+All 121 asset assertions and six scoped suites passed. The editable and browser models match the reversible 1/2.2 reference copy across 8,072 meshes. Ten final views cover the six fitted areas, with the two Energy Room views captured after the localized cabinet correction. The production build passed, and the seven files loaded on port 5173 match the verified package. [Final views](review/2026-11-18/lower-interior/final/) · [Asset checks](review/2026-11-18/lower-interior/verification/static.log) · [Live receipt](review/2026-11-18/lower-interior/verification/live-receipt.json)

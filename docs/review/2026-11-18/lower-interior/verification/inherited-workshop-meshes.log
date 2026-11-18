@@ -1,0 +1,24 @@
+[ 1230, 240 ] [
+  [ 'Line004', 7.441 ],
+  [ 'Sunny_InteriorWall_B1_101_seg0', 7.561 ],
+  [ 'Sunny_InteriorWall_B1_101_seg0', 7.75 ],
+  [ 'Line002', 8.377 ]
+]
+[ 741, 385 ] [
+  [ 'Box118', 10.372 ],
+  [ 'Box118', 11.052 ],
+  [ 'Sunny_InteriorWall_B1_124_seg0', 11.709 ],
+  [ 'Sunny_InteriorWall_B1_124_seg0', 11.969 ]
+]
+[ 957, 487 ] [
+  [ 'Sunny_InteriorWall_B1_109_seg0', 8.652 ],
+  [ 'Sunny_InteriorWall_B1_110_seg0', 8.77 ],
+  [ 'Sunny_InteriorWall_B1_109_seg0', 8.837 ],
+  [ 'Sunny_InteriorWall_B1_110_seg0', 8.868 ]
+]
+[ 30, 375 ] [
+  [ 'Sunny_Door_B1_door2_0_leaf', 8.637 ],
+  [ 'Sunny_Door_B1_door2_0_leaf', 8.715 ],
+  [ 'Sunny_InteriorWall_B1_136_seg0', 13.535 ],
+  [ 'Sunny_InteriorWall_B1_136_seg0', 13.722 ]
+]

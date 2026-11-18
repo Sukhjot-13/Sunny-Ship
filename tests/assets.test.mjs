@@ -347,6 +347,14 @@ console.log('\n=== METADATA ===')
   check('full lookout path and real hatch hole clear a 1.75 m body with 0.34 m radius',
     lookoutPaths.length===1&&Array.from({length:Math.ceil(lookoutPath.length/.25)+1},(_,i)=>pointAt(lookoutPath,i*.25)).every(p=>
       !physical.some(b=>p[0]+.34>b.min.x+.02&&p[0]-.34<b.max.x-.02&&p[2]+.34>b.min.z+.02&&p[2]-.34<b.max.z-.02&&p[1]+1.75>b.min.y+.02&&p[1]<b.max.y-.02)))
+  if(meta.interiors.lookoutRoom){
+    const floor=lookoutPath.points.at(-1)[1]
+    const footing=ship.filter(o=>/^Sunny_SurveyGym_(?:tripod_lower|bar_post)(?:\.\d+)?$/.test(o.name))
+    check('survey tripod and both training posts are grounded on the existing lookout floor',
+      footing.length===5&&footing.every(o=>Math.abs(o.min.y-floor)<.035)&&
+      ['telescope_lens','training_case','training_bar','window_seat'].every(part=>
+        ship.some(o=>o.name==='Sunny_SurveyGym_'+part)))
+  }
   const aquariumPath=climbPaths.find(p=>p.id==='aquarium-ladder'),aquariumHatch=meta.interiors.doors.find(d=>d.id==='AquariumHatch')
   check('Aquarium uses the small sealed hinged gallery hatch and actual ladder from N',
     climbPaths.filter(p=>p.id!=='library-bath-ladder').length===(meta.interiors.foreFacade?5:4)&&(!meta.interiors.foreFacade||climbPaths.some(p=>p.id==='storage-ladder'&&p.hatch==='StorageHatch'))&&climbPaths.some(p=>p.id==='dock-waiting-ladder'&&p.hatch==='DockLadderHatch')&&aquariumPath?.hatch==='AquariumHatch'&&aquariumHatch?.mode==='lift'&&
@@ -392,6 +400,32 @@ console.log('\n=== METADATA ===')
     ['Storage Room','Soldier Dock System',"Usopp's Main Factory", "Franky's Weapon Development Room", 'Energy Room',
      "Men's Quarters", "Women's Quarters",'Aquarium Bar','Dining Room','Kitchen','Pantry','Sick Bay','Library','Bath']
       .every(n=>meta.interiors.rooms.some(r=>r.name===n)))
+  if(meta.interiors.lookoutRoom){
+    const along=piece=>{
+      const mesh=ship.find(object=>object.name===piece)
+      return (mesh.min.z+mesh.max.z)/2
+    }
+    const centre=-meta.interiors.dockCentre[1]
+    const side=piece=>Math.sign(along(piece)-centre)
+    const validBay=(roomName,piece)=>{
+      const room=meta.interiors.rooms.find(item=>item.name===roomName)
+      const y=-along(piece)
+      return room.y[0]<y&&y<room.y[1]&&Math.abs(room.workshopLayout.bench[1]-y)<2
+    }
+    check('physical B1 workshops match the R07 bays relative to the retained swing and slide',
+      side('Sunny_Factory_assembly_table_top')===side('Sunny_Slide_chute')&&
+      side('Sunny_Weapons_drawing_bench_drawing_slab')===side('Sunny_Swing_seat')&&
+      side('Sunny_Factory_assembly_table_top')!==side('Sunny_Weapons_drawing_bench_drawing_slab')&&
+      validBay("Usopp's Main Factory",'Sunny_Factory_assembly_table_top')&&
+      validBay("Franky's Weapon Development Room",'Sunny_Weapons_drawing_bench_drawing_slab'))
+    const cabinet=ship.find(mesh=>mesh.name==='Sunny_Energy_control_box')
+    const cabinetSolid=coll.find(box=>box.name==='COLL_Solid_Sunny_Energy_control_box')
+    const fixtureTouchesWall=cabinet&&coll.some(box=>/^(?:COLL_Solid_Sunny_InteriorWall_B1_|COLL_Rail_Line002_)/.test(box.name)&&
+      ['x','y','z'].every(axis=>cabinet.max[axis]>box.min[axis]&&cabinet.min[axis]<box.max[axis]))
+    check('Energy Room controls stand clear of both hull and room lining with a fitted solid',
+      cabinet&&cabinetSolid&&!fixtureTouchesWall&&cabinet.min.distanceTo(cabinetSolid.min)<.002&&
+      cabinet.max.distanceTo(cabinetSolid.max)<.002)
+  }
   check('doors and six access hatches have moving nodes and no static leaf colliders',
     meta.interiors.doors.filter(d=>d.kind==='hatch').length===6 && ['DockLadderHatch','BathLadderHatch'].every(id=>meta.interiors.doors.some(d=>d.id===id)) && meta.interiors.doors.every(d=>
       ship.some(o=>o.name===d.node) && !coll.some(o=>o.name==='COLL_Solid_'+d.node)))

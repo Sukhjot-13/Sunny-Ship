@@ -1,0 +1,163 @@
+{
+  "roomName": "Lower Rooms",
+  "url": "http://localhost:5174",
+  "shots": [
+    {
+      "name": "dry-storage",
+      "camera": [
+        -22.735,
+        -45.511,
+        -1.68
+      ],
+      "target": [
+        -25.784999999999997,
+        -46.261,
+        -4.37
+      ],
+      "fov": 76
+    },
+    {
+      "name": "spare-stores",
+      "camera": [
+        -12.334999999999997,
+        -45.501000000000005,
+        8.68
+      ],
+      "target": [
+        -10.134999999999998,
+        -46.131,
+        7.619999999999999
+      ],
+      "fov": 69
+    },
+    {
+      "name": "factory",
+      "camera": [
+        11.810000000000002,
+        -45.501000000000005,
+        -8.774999999999999
+      ],
+      "target": [
+        14.649999999999999,
+        -45.931000000000004,
+        -10.745
+      ],
+      "fov": 76
+    },
+    {
+      "name": "development-room",
+      "camera": [
+        12.530000000000001,
+        -45.511,
+        6.005000000000001
+      ],
+      "target": [
+        16.65,
+        -45.941,
+        8.415000000000001
+      ],
+      "fov": 79
+    },
+    {
+      "name": "boiler-room",
+      "camera": [
+        22.424999999999997,
+        -45.49100000000001,
+        -5.32
+      ],
+      "target": [
+        24.234999999999992,
+        -45.67100000000001,
+        -8.780000000000001
+      ],
+      "fov": 76
+    },
+    {
+      "name": "boiler-controls",
+      "camera": [
+        24.964999999999996,
+        -45.561,
+        -5.36
+      ],
+      "target": [
+        24.534999999999997,
+        -45.961000000000006,
+        -7.82
+      ],
+      "fov": 69
+    },
+    {
+      "name": "dock-waiting-platform",
+      "camera": [
+        1.4100000000000001,
+        -49.820717163085945,
+        -0.37
+      ],
+      "target": [
+        -0.3000000000000007,
+        -50.27071716308594,
+        -2.13
+      ],
+      "fov": 78
+    },
+    {
+      "name": "dock-channel-one",
+      "camera": [
+        1,
+        -50.01071716308594,
+        -4.51
+      ],
+      "target": [
+        0.4800000000000004,
+        -50.930717163085944,
+        -6.58
+      ],
+      "fov": 73
+    },
+    {
+      "name": "survey-optics",
+      "camera": [
+        -12.538835487365724,
+        30.800999999999995,
+        0.1501497006416319
+      ],
+      "target": [
+        -15.158835487365723,
+        30.421,
+        -1.4398502993583682
+      ],
+      "fov": 73
+    },
+    {
+      "name": "training-area",
+      "camera": [
+        -14.368835487365722,
+        30.830999999999996,
+        -1.989850299358368
+      ],
+      "target": [
+        -12.108835487365724,
+        30.240999999999993,
+        1.1001497006416316
+      ],
+      "fov": 75
+    }
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "bathWater": false,
+  "surfaceRoles": {
+    "Sunny_Store_hessian_sack": "hessian",
+    "Sunny_Factory_assembly_table_top": "grain",
+    "Sunny_Weapons_furnace": "iron",
+    "Sunny_Energy_control_box": "enamel",
+    "Sunny_Vehicle3_shark_hull": "enamel",
+    "Sunny_Vehicle4_front_wheel": "rubber",
+    "Sunny_SurveyGym_training_bar": "steel"
+  },
+  "assets": {
+    "sunny.glb": "daad72b2351d28598d3f1b2c5b793ba6f14a7e44ef4ea224d14296d9173d370e",
+    "ship-metadata.json": "337085afb615f28f213ca8498bb2010e818046db3ce1a30505cbc81db32ac0d6"
+  },
+  "note": "Actual renderer, inspection camera only. Keyboard routes are verified separately."
+}
