@@ -92,6 +92,8 @@ export function interiorSurfaceRole(source,{name='',wood='grain',fabric=false}={
  if(label==='bath_pipe')return 'steel'
  if(/^bath_(?:jade|porcelain|enamel|tile)$/.test(label))return 'porcelain'
  if(/^bath_(?:cedar|amber)$/.test(label))return 'boards'
+ if(label==='dining_floor_oak')return 'boards'
+ if(/^dining_(?:oak|walnut)$/.test(label))return 'grain'
  if(label==='glass')return /mirror/i.test(name)?'mirror':'glass'
  if(/^tile_/.test(label))return 'tile'
  if(label==='paper'||label.startsWith('paper_'))return 'paper'

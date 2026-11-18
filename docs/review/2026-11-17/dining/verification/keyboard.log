@@ -1,0 +1,7 @@
+PASS lawn to Dining Room {
+  pos: [ 15.800443493181435, -35.62269973754883, 5.392999973297119 ],
+  grounded: true,
+  blocker: null
+}
+PASS Dining Room return to lawn [ -4.241826643281074, -40.55070114135742, -1.008784967908921 ]
+Interior journey failures: []

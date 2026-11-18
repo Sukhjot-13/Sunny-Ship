@@ -30,6 +30,7 @@ const views={
 assert(views[roomName],`No camera study configured for ${roomName}`)
 const point=([dx,dy,dz])=>[x+dx,floor+dy,z+dz]
 if(room.libraryLayout)views.Library.push(['bath-ladder',[-.44,1.66,.75],[-2.16,1.58,-2.83],68])
+if(room.diningLayout)views['Dining Room'].push(['table-length',[-3.39,1.61,-.96],[2.51,1.13,.74],76])
 if(roomName==='Bath'){
  for(const name of ['Bath Washroom','Bath Toilet']){
   const linked=meta.interiors.rooms.find(room=>room.name===name)

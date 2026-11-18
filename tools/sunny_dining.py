@@ -1,14 +1,15 @@
 """R10 Dining furnishings in the preserved open galley enclosure."""
 import math
 
-from sunny_exterior import PALETTE, _mesh, finish, pole
-from sunny_interiors import L, rbox
+from sunny_exterior import PALETTE, _mesh, finish, material, pole, ring, sphere
+from sunny_interiors import L, rbox, rpole
 from sunny_library import upholstered_chair
 
 
 PALETTE.update({
     'upholstery_dining_ochre':'#b8964a','upholstery_dining_emerald':'#2e6555',
-    'cloth_dining':'#9eb8a0','dining_walnut':'#785132','dining_oak':'#a67447',
+    'cloth_dining':'#9eb8a0','dining_walnut':'#67422e','dining_oak':'#a67447',
+    'dining_floor_oak':'#a5825f',
 })
 
 
@@ -68,11 +69,53 @@ def wall_sofa(cx,cy,floor):
         back.rotation_euler.x=.14
 
 
+def ship_phone(position):
+    """Table-mounted snail phone and cradle in the aft corner of Dining."""
+    from sunny_room_accuracy import soft_box
+    soft_box('Dining_phone_table',position,0,(.62,.58,.055),'dining_oak',(0,0,.755),radius=.022)
+    for x in (-.24,.24):
+        for y in (-.22,.22):
+            rpole('Dining_phone_table_leg',position,0,(x*1.13,y*1.13,.006),(x,y,.73),.032,'dining_walnut',sides=12)
+    soft_box('Dining_phone_cradle',position,0,(.34,.24,.063),'dining_walnut',(0,0,.836),radius=.028,obstacle=False)
+    sphere('Dining_phone_body',L(position,0,-.025,.006,.925),(.152,.098,.085),'cream',segments=24,rings=12)
+    sphere('Dining_phone_shell',L(position,0,.031,.047,1.015),(.119,.109,.126),'brass',segments=24,rings=12)
+    sphere('Dining_phone_head',L(position,0,-.106,-.006,1.019),(.074,.083,.076),'cream',segments=20,rings=12)
+    for x in (-.14,-.079):
+        rpole('Dining_phone_eye_stalk',position,0,(x,-.025,1.047),(x,-.071,1.112),.011,'cream',sides=10)
+        sphere('Dining_phone_eye',L(position,0,x,-.071,1.112),(.019,.019,.024),'white',segments=16,rings=8)
+        sphere('Dining_phone_pupil',L(position,0,x,-.088,1.112),(.008,.005,.013),'black',segments=12,rings=6)
+    rpole('Dining_phone_handset',position,0,(-.105,-.079,.897),(.103,-.079,.899),.017,'black',sides=12)
+    for x in (-.109,.109):
+        rpole('Dining_phone_handset_cup',position,0,(x,-.065,.898),(x,-.105,.898),.034,'black',sides=12)
+
+
+def bulkhead_sconce(position):
+    """Lamp mounted to the Dining face of the existing service bulkhead."""
+    x,y,z=position
+    pole('Dining_sconce_plate',(x-.025,y,z),(x+.012,y,z),.075,'brass',sides=24)
+    pole('Dining_sconce_arm',(x,y,z),(x-.17,y,z-.06),.018,'brass',sides=12)
+    pole('Dining_sconce_socket',(x-.17,y,z-.07),(x-.17,y,z+.035),.037,'brass',radius2=.066,sides=20)
+    sphere('Dining_sconce_globe',(x-.17,y,z+.114),(.069,.069,.098),'lamp_glow',segments=24,rings=14)
+    ring('Dining_sconce_collar',(x-.17,y,z+.047),.061,.009,'brass')
+    return {'room':'Dining Room','pos':[x-.36,y,z-.10],'colour':'#ffd395','intensity':20,'distance':12}
+
+
 def dining_details(room,floor,cy):
     from sunny_room_accuracy import remove_family
-    for family in ('Dining_table','Dining_chair','Dining_sofa'):
+    for family in ('Dining_table','Dining_chair','Dining_sofa','Dining_dendenmushi'):
         remove_family(family)
     cx=sum(room['x'])/2
     layout=dining_set((cx,cy-5.43,floor))
     wall_sofa(cx,cy,floor)
+    ship_phone((room['x'][1]-.91,cy-9.59,floor))
     room['diningLayout']=layout
+    return [bulkhead_sconce((room['x'][1]-.10,cy+dy,floor+2.38)) for dy in (-7.15,-10.25)]
+
+
+def finish_dining_floor(obj, room):
+    """Use oiled oak on the existing Dining-side deck surface."""
+    obj.data.materials.append(material('dining_floor_oak'))
+    slot=len(obj.data.materials)-1
+    for face in obj.data.polygons:
+        if face.normal.z>.98 and face.center.y<room['y'][1] and face.center.x<room['x'][1]:
+            face.material_index=slot

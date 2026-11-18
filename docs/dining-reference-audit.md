@@ -1,0 +1,7 @@
+# Dining Room — verified November 17, 2026
+
+The supplied R10 drawing and the galley anime still show a long mint-covered table, ochre upholstered seats, a green wall bench, a table-mounted snail phone and warm brass fixtures beside the open Kitchen. The eight-chair count is a reconstruction of the seats drawn around the table. The top remains 0.76 m high, and the new chairs and phone stand on their own supports. The existing deck has oiled oak in the Dining region, woven fabric uses metric surface maps, and the two sconces mount to the service bulkhead.
+
+The [three final renders](review/2026-11-17/dining/final/) are from the same generation as the applied files. The normal [keyboard round trip](review/2026-11-17/dining/verification/keyboard.log) passed from the lawn to the table aisle and back, with no blockers or recovery. Route planning also verified that Kitchen, Pantry and Sick Bay remained connected. The [static checks](review/2026-11-17/dining/verification/static.log) passed 116/116, and all 7,502 meshes passed the uniform 1/2.2 copy check.
+
+The scoped delta retained 7,405 visual meshes exactly, all existing floor colliders and all 57,401 previously accepted hull boxes. The [live application receipt](review/2026-11-17/dining/verification/live-receipt.json) links the editable master, visual and collision models, metadata and scale copy. The shared galley work surfaces, mast lift interfaces and rear service rooms are separate checkpoints.

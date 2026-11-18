@@ -409,11 +409,18 @@ console.log('\n=== METADATA ===')
       }
       return d.height>=2&&d.height<=2.5&&d.width>=0.85&&d.width<=2.6
     }))
-  const chairs=ship.filter(o=>/^Sunny_Dining_chair\d+_seat$/.test(o.name))
-  check('sixteen human-sized dining chairs have 0.45 m seats',chairs.length===16&&chairs.every(o=>
-    Math.abs((o.min.y+o.max.y)/2-meta.interiors.levels.F2A-0.45)<0.01&&o.max.x-o.min.x<0.5&&o.max.z-o.min.z<0.5))
+  const diningLayout=meta.interiors.rooms.find(room=>room.name==='Dining Room')?.diningLayout
+  const chairs=ship.filter(o=>(diningLayout?/^Sunny_Dining_seat\d+_seat$/:/^Sunny_Dining_chair\d+_seat$/).test(o.name))
+  check('dining chairs are human sized and supported',chairs.length===(diningLayout?8:16)&&chairs.every(o=>{
+    const rise=(o.min.y+o.max.y)/2-meta.interiors.levels.F2A
+    if(!diningLayout)return Math.abs(rise-.45)<.01&&o.max.x-o.min.x<.5&&o.max.z-o.min.z<.5
+    const prefix=o.name.slice(0,-5),parts=['shell','column','foot']
+    return Math.abs(rise-.55)<.01&&o.max.x-o.min.x<.60&&o.max.z-o.min.z<.60&&
+      parts.every(part=>ship.some(piece=>piece.name===prefix+'_'+part))
+  }))
   const table=ship.find(o=>o.name==='Sunny_Dining_table_top')
-  check('dining table stays 0.76 m high',table&&Math.abs((table.min.y+table.max.y)/2-meta.interiors.levels.F2A-0.76)<0.01)
+  check('dining table stays 0.76 m high',table&&
+    Math.abs((diningLayout?table.max.y:(table.min.y+table.max.y)/2)-meta.interiors.levels.F2A-.76)<.01)
   const tanks=ship.filter(o=>o.name==='Sunny_Aquarium_passage_ceiling_water')
   check('rear passage aquarium water stays inside its glazed tank',tanks.length===1&&tanks.every(w=>{
     const prefix=w.name.slice(0,-6), glass=ship.filter(o=>o.name.startsWith(prefix+'_glass'))
@@ -446,7 +453,9 @@ console.log('\n=== METADATA ===')
   check('SBS room fixtures include library table, canopy, oven, showers and workshop furnace',
     ['Sunny_Library_central_table_top','Sunny_Womens_canopy_head','Sunny_Kitchen_giant_oven',
      'Sunny_Bath_shower_head','Sunny_Weapons_furnace','Sunny_Sick_bulletin_board'].every(name=>ship.some(o=>o.name===name)))
-  check('all eleven authored room lamps have usable finite metadata',meta.interiors.lights?.length===11&&
+  const diningLights=meta.interiors.lights?.filter(light=>light.room==='Dining Room')
+  check('all authored room lamps have usable finite metadata',meta.interiors.lights?.length===(diningLayout?12:11)&&
+    diningLights.length===(diningLayout?2:1)&&
     meta.interiors.lights.every(l=>l.pos.length===3&&l.pos.every(Number.isFinite)&&l.intensity>0&&l.distance>0))
   const bunkBeams=ship.filter(o=>/^Sunny_Quarters_bunk\d+_ceiling_beam$/.test(o.name))
   check('all three bunk suspension beams meet the actual fore ceiling',bunkBeams.length===3&&bunkBeams.every(o=>

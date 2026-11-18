@@ -1,0 +1,56 @@
+{
+  "roomName": "Dining Room",
+  "url": "http://localhost:5174",
+  "shots": [
+    {
+      "name": "from-entry",
+      "camera": [
+        13.170000000000003,
+        -33.943,
+        1.0850000000000009
+      ],
+      "target": [
+        17.1,
+        -34.413,
+        4.765000000000001
+      ],
+      "fov": 78
+    },
+    {
+      "name": "table-and-seating",
+      "camera": [
+        16.650000000000002,
+        -33.933,
+        2.6350000000000002
+      ],
+      "target": [
+        17.03,
+        -34.702999999999996,
+        6.765000000000001
+      ],
+      "fov": 76
+    },
+    {
+      "name": "table-length",
+      "camera": [
+        13.060000000000002,
+        -34.013,
+        4.1450000000000005
+      ],
+      "target": [
+        18.96,
+        -34.492999999999995,
+        5.845000000000001
+      ],
+      "fov": 76
+    }
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "bathWater": false,
+  "assets": {
+    "sunny.glb": "35aeeaeb4dd737e9595ec3002edeb3ffc8bddf2fb32cfea472aa523e2eac4255",
+    "ship-metadata.json": "d48fa472aecb407807ac39330ee2ab31f8894345e70a4b609de218643aa2a380"
+  },
+  "note": "Actual renderer, inspection camera only. Keyboard routes are verified separately."
+}

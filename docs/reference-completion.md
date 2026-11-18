@@ -2,7 +2,7 @@
 
 Aquarium commit `1b1a9aa` is pushed. The [Library](library-reference-audit.md) is applied locally in `437106d`, including the working Bath ladder and three verified access round trips. The [Bath suite](bath-reference-audit.md) has passed the scoped finish and access checks, including the washroom and toilet. The [interior matrix](interior-acceptance-matrix.md) tracks these checkpoints and the active Dining room. Preserve the verified rooms and exterior through scoped comparisons.
 
-Dining follows R10. The initial source pass replaces the provisional oversized table and hard seats with woven mint linen, ochre upholstered chairs and one green port bench. The open Kitchen relationship, mast service lift and AftEntrance are existing interfaces to retain.
+The [Dining Room](dining-reference-audit.md) is applied locally with a verified normal walk from the lawn and back. It retains the open galley, mast service lift and AftEntrance. Kitchen is the active room, followed by Pantry and Sick Bay. The remaining exterior stays parked.
 
 ## Aquarium Bar applied — November 17, 2026
 

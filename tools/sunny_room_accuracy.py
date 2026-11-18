@@ -228,7 +228,7 @@ def quarters_details(frame, levels, rooms):
 
 
 def kitchen_details(cy, floor):
-    """SBS giant oven, cooker hood, dish rack, tablecloth and locked fridge."""
+    """SBS giant oven, cooker hood, dish rack and locked fridge."""
     # Kitchen is starboard (+Blender Y), dining is port, as the F2 plan shows.
     p=(13.0,cy+7.4,floor)
     soft_box('Kitchen_giant_oven',p,math.pi/2,(1.50,.72,1.95),'cream',(0,0,.98),radius=.035)
@@ -254,9 +254,6 @@ def kitchen_details(cy, floor):
     soft_box('Kitchen_hood',(18.7,cy+10.0,floor),0,(1.85,.90,.24),'steel',(0,0,2.12),radius=.035)
     for i in range(6):
         rbox('Kitchen_hood_vent',(18.7,cy+10.0,floor),0,(.025,.92,.08),'black',(-.69+i*.275,0,2.10),obstacle=False)
-    # Table top stays the original 0.76 m; fabric adds only its physical thickness.
-    cloth_panel('Dining_tablecloth_side',(16.3,cy-5.6-.69,floor+.54),0,6.42,.24,12,'cloth_aqua')
-    rbox('Dining_tablecloth',(16.3,cy-5.6,floor),0,(6.42,1.34,.008),'cloth_aqua',(0,0,.792),obstacle=False)
     for i in range(5):
         x=13.1+i*.18
         rpole('Kitchen_plate', (x,cy+9.5,floor+.99),0,(0,0,0),(0,.025,0),.15,'white',sides=24)
@@ -370,6 +367,8 @@ def complete_room_fittings(objects, frame, interiors):
     cy=frame.y(.585)
     quarters_details(frame,levels,rooms)
     kitchen_details(cy,levels['F2A'])
+    from sunny_dining import dining_details, finish_dining_floor
+    dining_lights=dining_details(rooms['Dining Room'],levels['F2A'],cy)
     infirmary_details(cy,levels['F2A'])
     from sunny_library import library_details
     library_details(rooms['Library'],levels['F3L'])
@@ -379,9 +378,8 @@ def complete_room_fittings(objects, frame, interiors):
     from sunny_bath import bath_details, bath_floor_finish
     bath_details(lc,cy,levels['F3B'],rooms['Bath'])
     for obj in list(bpy.data.objects):
-        if obj.type=='MESH' and obj.name.startswith(('Sunny_Dining_sofa','Sunny_Womens_sofa')) and any(word in obj.name for word in ('_base','_back','_arm','_cushion')):
-            key='upholstery_lilac' if obj.name.startswith('Sunny_Womens') else 'upholstery_teal'
-            obj.data.materials.clear();obj.data.materials.append(material(key))
+        if obj.type=='MESH' and obj.name.startswith('Sunny_Womens_sofa') and any(word in obj.name for word in ('_base','_back','_arm','_cushion')):
+            obj.data.materials.clear();obj.data.materials.append(material('upholstery_lilac'))
             for face in obj.data.polygons:face.material_index=0
     for i in range(3):
         remove_family('Pantry_shelf%d'%i)
@@ -401,14 +399,14 @@ def complete_room_fittings(objects, frame, interiors):
     tile_floor(bpy.data.objects['Sunny_InteriorFloor_lower'],.85,('steel',),(8.5,20.2,cy,13.2))
     tile_floor(bpy.data.objects['Sunny_InteriorFloor_F2_service'],.55,('tile_ivory','tile_dark'),(20.6,24.8,-11.5,cy))
     bath_floor_finish(bpy.data.objects['Sunny_InteriorFloor_F3_bath'],lc,cy)
-    tile_floor(bpy.data.objects['Sunny_InteriorFloor_F2_aft'],.65,('tile_ivory','tile_dark'),
-               (12.3,20.6,cy,13.5))
-    lights=[]
+    aft_floor=bpy.data.objects['Sunny_InteriorFloor_F2_aft']
+    tile_floor(aft_floor,.65,('tile_ivory','tile_dark'),(12.3,20.6,cy,13.5))
+    finish_dining_floor(aft_floor,rooms['Dining Room'])
+    lights=dining_lights
     for name, p, ceiling in (
         ("Men's Quarters",((rooms["Men's Quarters"]['x'][0]+rooms["Men's Quarters"]['x'][1])/2,cy,levels['F1']+2.9),levels['F2F']-.18),
         ("Women's Quarters",((rooms["Women's Quarters"]['x'][0]+rooms["Women's Quarters"]['x'][1])/2,cy,levels['F2F']+2.25),levels['F2F']+2.80),
         ('Kitchen',(16.4,cy+5.2,levels['F2A']+2.9),levels['F3G']-.18),
-        ('Dining Room',(16.4,cy-5.2,levels['F2A']+2.9),levels['F3G']-.18),
         ('Sick Bay',(22.8,cy-5.4,levels['F2A']+2.6),levels['F3G']-.18),
         ('Library',(lc-.38,cy,levels['F3L']+2.43),levels['F3L']+2.87),
         ('Bath',(lc,cy-.8,levels['F3B']+2.16),levels['F3B']+2.58),

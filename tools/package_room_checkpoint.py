@@ -15,6 +15,11 @@ SCOPES = {
         'solids': ('Bath', 'bath'),
         'floor_bounds': ((24.60, 34.40), (-26.30, -26.04), (-6.40, 3.35)),
     },
+    'Dining': {
+        'visual': ('Sunny_Dining_', 'Sunny_RoomLamp_Dining_Room_', 'Sunny_InteriorFloor_F2_aft'),
+        'solids': ('Dining',),
+        'floor_bounds': None,
+    },
 }
 
 
@@ -23,8 +28,9 @@ def verify_scope(report, scope):
     assert all(name.startswith(scope['visual']) for name in (*visual['removed'],*visual['updated']))
     for entry in report['collision']['removed']+report['collision']['added']:
         if entry['isFloor']:
-            assert all(low<=entry['min'][axis] and entry['max'][axis]<=high
-                       for axis,(low,high) in enumerate(scope['floor_bounds'])),entry
+            assert scope['floor_bounds'] is not None and all(
+                low<=entry['min'][axis] and entry['max'][axis]<=high
+                for axis,(low,high) in enumerate(scope['floor_bounds'])),entry
         else:
             assert 'Line002' in entry['name'] or any(token in entry['name'] for token in scope['solids']),entry
 

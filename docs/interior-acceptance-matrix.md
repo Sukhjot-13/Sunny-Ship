@@ -9,7 +9,8 @@ The Aquarium (`1b1a9aa`) and earlier exterior checkpoints are pushed on `referen
 | Aquarium lounge, rear passage and gallery ladder | Applied and pushed; [evidence and limits](aquarium-reference-audit.md). |
 | Library and its immediate entry/landing | Applied locally. [Evidence](library-reference-audit.md): clear glazing, bound books, furnishings/finishes, three actual access round trips. Bench rotation remains a mechanism item. |
 | Bath, washroom and toilet | Verified. [Evidence](bath-reference-audit.md) covers the finishes, four native views and the full keyboard route through all three areas and back to the lawn. |
-| Dining, Kitchen, Pantry and Sick Bay | Dining active. Kitchen, Pantry and Sick Bay pending. Check the common open room and retain the real service lift and existing exterior access. |
+| Dining | Applied locally. [Evidence](dining-reference-audit.md) covers fitted furnishings, material and lighting passes, and the normal visit and return. |
+| Kitchen, Pantry and Sick Bay | Kitchen active. Pantry and Sick Bay pending. Check the common open room and retain the real service lift and existing exterior access. |
 | Men’s and women’s quarters, both washrooms and four cannon closets | Pending. |
 | Storage and service passage, Energy Room, Dock interior and both workshops | Pending. |
 | Crow’s Nest/survey and gym | Pending. Keep the verified exterior rope/ladder and hatch. |

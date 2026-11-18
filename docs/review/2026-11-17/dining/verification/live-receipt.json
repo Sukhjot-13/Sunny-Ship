@@ -1,0 +1,19 @@
+{
+  "backup": "/private/tmp/sunny-dining-live-before",
+  "stage": "/private/tmp/sunny-dining-candidate",
+  "url": "http://localhost:5173",
+  "applied": {
+    "assets/sunny-master.blend": "f1a3d9b33170777bab667d84456b022a13b05fb012e4e080dbaae2c469dc4fd9",
+    "public/models/sunny.glb": "35aeeaeb4dd737e9595ec3002edeb3ffc8bddf2fb32cfea472aa523e2eac4255",
+    "public/models/sunny-collision.glb": "cae04610f404d7659865a9526fa13f3da15b4ebce2c67975ce6efdce16dd10dc",
+    "public/models/ship-metadata.json": "d48fa472aecb407807ac39330ee2ab31f8894345e70a4b609de218643aa2a380",
+    "assets/reference/sunny-reference.blend": "37f434146dc923368f447747180654cf93f7123d80ef1c0b836f2f00b777b1f4",
+    "assets/reference/sunny-reference.glb": "161b1006740969dedbd982c1f55e3da244d142d3bcd7f4c1bbdb7945e8fd1d31",
+    "assets/reference/dimensions.json": "998cc0730c41d4c1083652f90382466d4b1bea3c057ac737490860f2b437c0cc"
+  },
+  "served": {
+    "sunny.glb": "35aeeaeb4dd737e9595ec3002edeb3ffc8bddf2fb32cfea472aa523e2eac4255",
+    "sunny-collision.glb": "cae04610f404d7659865a9526fa13f3da15b4ebce2c67975ce6efdce16dd10dc",
+    "ship-metadata.json": "d48fa472aecb407807ac39330ee2ab31f8894345e70a4b609de218643aa2a380"
+  }
+}
