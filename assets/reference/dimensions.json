@@ -1,8 +1,8 @@
 {
-  "source": "/private/tmp/sunny-lower-interior-ready/sunny-master.blend",
-  "workingVisualSource": "/private/tmp/sunny-lower-interior-ready/sunny.glb",
-  "sourceSha256": "ae29f0b2b86c84bcc301f3e3af4e3e6f3654cb538607fdc8b9a537ae86ea1cfe",
-  "workingVisualSha256": "368b1e3a09c48ad897ffa4b0bc41e69df6970a4faf67b22e171dac37bf6c22f5",
+  "source": "/private/tmp/sunny-exterior-detail-candidate/sunny-master.blend",
+  "workingVisualSource": "/private/tmp/sunny-exterior-detail-candidate/sunny.glb",
+  "sourceSha256": "27fd7f994652570a1abf16482bf9cd499150802d6536561f96d973757e16d812",
+  "workingVisualSha256": "1c5e5646acba442ab0f4e58e84290bafca3949fb62e105d0e0e960d6252e10dd",
   "workingScale": 2.2,
   "referenceScale": 1,
   "rootMultiplier": 0.45454545454545453,

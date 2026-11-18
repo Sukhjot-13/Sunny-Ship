@@ -2,17 +2,27 @@
 export const CHANNELS=['Shiro Mokuba I','Mini Merry II','Shark Submerge III','Kurosai FR-U IV','Brachio Tank V','Inflatable Pool']
 export const LOG_BEARINGS=[35,145,285]
 export const BURST={seconds:6,height:32,range:240,cost:3}
-const initial=()=>({heading:270,throttle:0,speed:0,east:0,south:0,helm:false,channel:1,dockOpen:false,shutter:0,dockAngle:0,logNeedle:0,cola:3,burst:0,lift:0,pitch:0,wheel:0,chicken:false,maneAngle:0,jawOpen:false,jaw:0,gaon:0,paddleAngle:0,foodLift:0,foodLiftTarget:0})
+export const GAON={seconds:2.5,cost:.5}
+const initial=()=>({heading:270,throttle:0,speed:0,east:0,south:0,helm:false,channel:1,dockGateChannel:1,dockOpen:false,shutter:0,dockAngle:0,logNeedle:0,cola:3,burst:0,lift:0,pitch:0,wheel:0,chicken:false,maneAngle:0,jawOpen:false,jaw:0,gaon:0,paddleAngle:0,foodLift:0,foodLiftTarget:0})
 export const voyage=initial()
 const RAD=Math.PI/180
 export function resetVoyage(){Object.assign(voyage,initial())}
 export function shipYaw(){return (270-voyage.heading)*RAD}
 export function channelName(channel){return channel===0?'Paddles':CHANNELS[channel-1]}
 export function channelAngle(channel){return -(Math.max(1,channel)-1)*Math.PI/3}
+export function selectDockChannel(channel){
+ if(channel!==voyage.channel){voyage.channel=channel;voyage.dockOpen=false}
+ return `Channel ${channel}: ${channelName(channel)}`
+}
+export function toggleDockShutters(){
+ voyage.dockOpen=!voyage.dockOpen
+ return voyage.dockOpen?'Soldier Dock: align, then roll shutters open':'Soldier Dock: close shutters'
+}
 /** Shared readiness for the visible panel and keyboard mechanism actions. */
 export function cannonAvailability(state=voyage){
- const reason=state.gaon>0?'Gaon is firing.':state.burst>0?'Wait for Coup de Burst to land.':state.cola<3?'Needs 3 cola barrels.':''
- return {canFire:!reason,reason}
+ const shots=Math.floor(state.cola/GAON.cost)
+ const reason=state.burst>0?'Wait for Coup de Burst to land.':shots===0?'Needs half a cola barrel.':''
+ return {canFire:!reason,reason,shots}
 }
 /** Operate the existing real cannon from either user interface. */
 export function operateCannon(action){
@@ -21,9 +31,8 @@ export function operateCannon(action){
   return {ok:true,message:voyage.jawOpen?'Gaon mouth opening':'Gaon mouth closing'}
  }
  if(action==='fire'){
-  const {canFire,reason}=cannonAvailability()
-  if(!canFire)return {ok:false,message:reason}
-  return {ok:fireGaon(),message:'Gaon air blast · three barrels spent · reverse recoil'}
+  if(!fireGaon())return {ok:false,message:cannonAvailability().reason}
+  return {ok:true,message:'Gaon air blast · half a barrel spent · reverse recoil'}
  }
  return {ok:false,message:'Unknown cannon action'}
 }
@@ -55,7 +64,17 @@ export function shutterPose(centre,top,radius,travel,progress,side){
  const wound=radius+Math.floor(angle/(Math.PI*2))*.022
  return {centre:[centre[0],top+wound*Math.sin(angle),centre[2]+sign*wound*(1-Math.cos(angle))],angle:sign*angle}
 }
-/** Closures pause for occupied apertures; carousel turns after full closure. */
+/** Keep an open inner shutter with its physical bay until it has closed. */
+export function advanceDock(dt,dockOccupied=false,shutterOccupied=false){
+ dt=Math.min(.1,Math.max(0,dt))
+ if(voyage.shutter===0)voyage.dockGateChannel=voyage.channel
+ const target=channelAngle(voyage.channel),aligned=Math.abs(target-voyage.dockAngle)<.02
+ const opening=voyage.dockOpen&&aligned&&voyage.dockGateChannel===voyage.channel
+ if(opening||!shutterOccupied)voyage.shutter=Math.max(0,Math.min(1,voyage.shutter+(opening?1:-1)*dt*.45))
+ if(!dockOccupied&&voyage.shutter===0)voyage.dockAngle+=(target-voyage.dockAngle)*Math.min(1,dt*1.8)
+}
+
+/** Advance the ship and its guarded moving mechanisms in Explore. */
 export function advanceVoyage(dt,keys={},dockOccupied=false,shutterOccupied=false){
  dt=Math.min(.1,Math.max(0,dt))
  if(voyage.helm&&voyage.burst===0){
@@ -64,10 +83,7 @@ export function advanceVoyage(dt,keys={},dockOccupied=false,shutterOccupied=fals
   voyage.heading=(voyage.heading+steering*dt*18*(.25+.75*Math.min(1,Math.abs(voyage.speed)/5))+360)%360
   voyage.wheel+=((steering*.55)-voyage.wheel)*Math.min(1,dt*6)
  }else voyage.wheel*=Math.exp(-dt*6)
- const target=channelAngle(voyage.channel),aligned=Math.abs(target-voyage.dockAngle)<.02
- const opening=voyage.dockOpen&&aligned
- if(opening||!shutterOccupied)voyage.shutter=Math.max(0,Math.min(1,voyage.shutter+(opening?1:-1)*dt*.45))
- if(!dockOccupied&&voyage.shutter<.001)voyage.dockAngle+=(target-voyage.dockAngle)*Math.min(1,dt*1.8)
+ advanceDock(dt,dockOccupied,shutterOccupied)
  advanceCannon(dt)
  voyage.foodLift+=(((voyage.foodLiftTarget>0)?1:0)-voyage.foodLift)*Math.min(1,dt*2.2)
  if(Math.abs(voyage.foodLift-voyage.foodLiftTarget)<.001)voyage.foodLift=voyage.foodLiftTarget>0?1:0
@@ -82,7 +98,7 @@ export function advanceVoyage(dt,keys={},dockOccupied=false,shutterOccupied=fals
   voyage.speed=BURST.range/BURST.seconds;distance=voyage.speed*used
   if(voyage.burst===0){voyage.lift=0;voyage.pitch=0;voyage.speed=voyage.throttle*5}
  }else{
-  const paddle=voyage.channel===0&&voyage.shutter>.98&&voyage.cola>0
+  const paddle=voyage.dockGateChannel===0&&voyage.shutter>.98&&voyage.cola>0
   const desired=voyage.gaon>0?-8:voyage.throttle*(voyage.chicken?-2:paddle?4:5)
   voyage.speed+=(desired-voyage.speed)*(1-Math.exp(-dt*.6));distance=voyage.speed*dt
   if(paddle&&voyage.throttle>0){voyage.paddleAngle+=dt*voyage.throttle*1.5;voyage.cola=Math.max(0,voyage.cola-dt*.003)}
@@ -93,5 +109,9 @@ export function advanceVoyage(dt,keys={},dockOccupied=false,shutterOccupied=fals
 }
 /** Three tank barrels fund one Burst. Flight dimensions are simulated. */
 export function startBurst(){if(voyage.cola<BURST.cost||voyage.burst>0||voyage.gaon>0)return false;voyage.cola-=BURST.cost;voyage.burst=BURST.seconds;return true}
-/** Uncompensated Gaon spends three barrels and recoils; no damage simulation. */
-export function fireGaon(){if(voyage.cola<3||voyage.burst>0||voyage.gaon>0)return false;voyage.cola-=3;voyage.jawOpen=true;voyage.gaon=2.5;return true}
+/** The Gaon uses part of the shared cola reserve and recoils. */
+export function fireGaon(){
+ if(!cannonAvailability().canFire)return false
+ voyage.cola-=GAON.cost;voyage.jawOpen=true;voyage.gaon=GAON.seconds
+ return true
+}

@@ -103,7 +103,7 @@ try{
  const reset=await page.evaluate(()=>window.__sunnyNavigation.state);assert.equal(reset.heading,270);assert.equal(reset.cola,3);assert.equal(reset.speed,0)
  const gaonTrace=await walkJourney(page,meshes,'helm','starboard',{returnToLawn:false});assert(gaonTrace.length>5&&gaonTrace.every(p=>p.ok))
  await aim('helm');await page.keyboard.press('e');await sleep(250);await page.keyboard.press('k');await sleep(700)
- const gaon=await page.evaluate(()=>window.__sunnyNavigation.state);assert.equal(gaon.cola,0);assert(gaon.jaw>.9&&gaon.gaon>0&&gaon.speed<0)
+ const gaon=await page.evaluate(()=>window.__sunnyNavigation.state);assert.equal(gaon.cola,2.5);assert(gaon.jaw>.9&&gaon.gaon>0&&gaon.speed<0)
  await page.screenshot({path:'docs/review/walk-Gaon-recoil.png'})
  assert.deepEqual(errors,[])
  console.log('PASS actual walking to integrated controls; steering/water/UVs, seven petals/jaw, airborne Burst/landing, rolling channel digits/collision, Log Pose simulation, continuous return descent, reset and separate Gaon/recoil')

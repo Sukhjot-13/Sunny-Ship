@@ -1,0 +1,27 @@
+{
+  "trace": [
+    {
+      "label": "Observation Deck",
+      "position": [
+        20.599964726183494,
+        -29.37470054626465,
+        -1.3365633800637429
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "return to lawn",
+      "position": [
+        -4.200000000322395,
+        -40.55070114135742,
+        -0.9153180828125295
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    }
+  ],
+  "errors": []
+}

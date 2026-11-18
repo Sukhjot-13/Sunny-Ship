@@ -4,7 +4,7 @@ import path from 'node:path'
 import crypto from 'node:crypto'
 import puppeteer from 'puppeteer'
 import {loadColliders} from '../tests/glb.mjs'
-const phase=process.argv[2]??'candidate',out=path.join('docs/review/2026-11-16',phase)
+const phase=process.argv[2]??'candidate',out=process.env.REFERENCE_EVIDENCE??path.join('docs/review/2026-11-16',phase)
 fs.mkdirSync(out,{recursive:true})
 const modelDir=process.env.REFERENCE_MODELS??'public/models',previewURL=process.env.REFERENCE_URL??'http://localhost:5173'
 const meta=JSON.parse(fs.readFileSync(path.join(modelDir,'ship-metadata.json'))),bounds=loadColliders(path.join(modelDir,'sunny.glb'))
@@ -73,22 +73,26 @@ for(const id of ['ForeDoor','WomensDoor','AquariumDoor','AftEntrance','DiningEnt
 const browser=await puppeteer.launch({headless:true,args:['--use-gl=angle','--use-angle=metal','--enable-unsafe-swiftshader','--enable-webgl']})
 try{
  const page=await browser.newPage();await page.setViewport({width:1440,height:900})
- const errors=[];page.on('pageerror',e=>errors.push(e.message))
+ const errors=[],consoleErrors=[]
+ page.on('pageerror',e=>errors.push(e.message))
+ page.on('console',message=>{if(message.type()==='error')consoleErrors.push(message.text())})
  await page.goto(previewURL,{waitUntil:'domcontentloaded',timeout:120000})
  await page.waitForFunction(()=>window.__ship&&!document.body.innerText.includes('Loading the ship'),{timeout:120000})
  await page.mouse.click(720,450)
  await page.evaluate(async()=>{const moduleURL=performance.getEntriesByType('resource').map(e=>e.name).find(url=>url.includes('/deps/@react-three_fiber.js'));if(!moduleURL)throw Error('actual renderer module URL not found');const {_roots}=await import(moduleURL);window.__review=_roots.get(document.querySelector('canvas')).store.getState();window.__review.controls.enabled=false})
  const shots=[]
- for(const [name,p,t,reference,fov=62] of views){
+ const filter=process.env.REFERENCE_VIEW_FILTER?new RegExp(process.env.REFERENCE_VIEW_FILTER):null
+ for(const [name,p,t,reference,fov=62] of views.filter(view=>!filter||filter.test(view[0]))){
   await page.evaluate(({p,t,fov})=>{const s=window.__review;s.camera.fov=fov;s.camera.updateProjectionMatrix();s.controls.enabled=false;s.camera.up.set(0,1,0);s.camera.position.set(...p);s.camera.lookAt(...t);s.camera.updateMatrixWorld()}, {p,t,fov})
   await new Promise(r=>setTimeout(r,350));await page.screenshot({path:path.join(out,name+'.png')})
   shots.push({name,camera:p,target:t,reference})
  }
  const sha=file=>crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')
  const context=await page.evaluate(()=>({drawCalls:window.__review.gl.info.render.calls,triangles:window.__review.gl.info.render.triangles}))
- fs.writeFileSync(path.join(out,'receipt.json'),JSON.stringify({phase,modelDir,previewURL,shots,context,errors,
+ if(!shots.length)throw Error('The selected exterior camera filter matched no views')
+ fs.writeFileSync(path.join(out,'receipt.json'),JSON.stringify({phase,modelDir,previewURL,shots,context,errors,consoleErrors,
   assets:Object.fromEntries(['sunny.glb','sunny-collision.glb','ship-metadata.json'].map(f=>[f,sha(path.join(modelDir,f))])),
   note:'Appearance survey only. Main camera moves; no mesh hiding, player placement or movement-proof claim.'},null,2))
- if(errors.length)throw Error(errors.join('\n'))
+ if(errors.length||consoleErrors.length)throw Error([...errors,...consoleErrors].join('\n'))
  console.log('PASS',shots.length,'framed actual exterior views',out)
 }finally{await browser.close()}

@@ -50,7 +50,8 @@ export function UI({ onEnter }) {
             <li><b>C</b> — 1st / 3rd person</li>
             <li><b>V</b> — Inspect Ship</li>
             <li><b>H</b> — Toggle help</li>
-            <li><b>X</b> — Cannon controls · open mouth / fire</li>
+            <li><b>K</b> — Fire Gaon · <b>X</b> — Cannon controls</li>
+            <li><b>0–6</b> — Dock channel · <b>L</b> — Dock shutters</li>
             <li><b>Esc</b> — Release Mouse</li>
           </ul>
         </div>
@@ -120,10 +121,10 @@ export function UI({ onEnter }) {
           <div>WASD move · Mouse look · Shift run · Space jump</div>
           <div>F fly · B flight collision · C 1st/3rd person · V inspect ship · H hide help</div>
           <div>Esc release mouse</div>
-          <div>X cannon panel · Open/Close Mouth and Fire Gaon from anywhere</div>
-          <div>E interact · Helm: W/S speed, A/D steer · G Burst · T Chicken Voyage · J mouth · K Gaon</div>
+          <div>K fire Gaon · J open or close mouth · X cannon panel</div>
+          <div>E interact · Helm: W/S speed, A/D steer · G Burst · T Chicken Voyage</div>
           <div>Ladders: E grabs · W/S climb up/down · E operates a reachable hatch</div>
-          <div>Dock channels 0–6 · Log Pose bearings are simulated · R reset voyage and player</div>
+          <div>0–6 select Dock channel · L dock shutters · R reset voyage and player</div>
         </div>
       )}
     </>

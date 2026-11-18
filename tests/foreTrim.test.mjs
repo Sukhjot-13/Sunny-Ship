@@ -124,6 +124,19 @@ for (const triangle of bands) {
 console.log('C01 exported dark/white bands / fore storage overlap:', JSON.stringify({bandHits,bandArea}))
 assert.equal(bandHits, 0, 'no imported dark band may enter actual forward storage construction')
 
+if (meta.interiors.workshopTrimRepair) {
+  const dock = meta.interiors.rooms.find(room => room.name === 'Soldier Dock System')
+  const volume = {...volumes[0], top: meta.interiors.levels.F1-.18}
+  const cells = prisms(volume).map(planes => [...planes, [new THREE.Vector3(1,0,0),dock.x[1]+epsilon]])
+  const aftBands = bands.filter(triangle => Math.max(...triangle.map(p => p.x)) > dock.x[1] &&
+    Math.max(...triangle.map(p => p.z)) > volume.bottom && Math.min(...triangle.map(p => p.z)) < volume.top)
+  const overlap = aftBands.reduce((area,triangle) => area + cells.reduce((sum,planes) =>
+    sum+intersectionArea(triangle,planes),0),0)
+  assert(aftBands.length > 100,'outboard hull band skins must remain in the aft B1 region')
+  assert(overlap < 1e-6,`aft B1 trim must stop behind the workshop lining (${overlap} m² inside)`)
+  console.log('PASS the four retained hull bands clear both B1 workshops and the aft aisle')
+}
+
 const colliders = loadColliders('public/models/sunny-collision.glb')
 for (const level of ['F1', 'F2']) {
   assert(colliders.some(c => c.name.includes('Fore'+level+'_shell')), 'physical '+level+' lining retained')

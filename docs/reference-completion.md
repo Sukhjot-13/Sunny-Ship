@@ -1,3 +1,9 @@
+## Exterior resumed — November 18, 2026
+
+The interior checkpoint `251fa3b` was pushed before exterior changes. The Gaon accepts six individual shots from a full tank, with one synthesized sound per shot. `K` fires, `J` operates the mouth, `X` opens the cannon panel, `0`–`6` select the numbered Dock position, and `L` controls the shutters. Actual input verifies rapid shots, held-key suppression, correct Dock rotation, and the roll-closed transition from the previous physical bay. [Keyboard evidence](review/2026-11-18/exterior-controls/verification/keyboard-controls.json)
+
+The closed figurehead’s nose stroke now meets the smile. Four inherited hull bands are terminated at the aft B1 lining, and the remaining model meshes and collision file match the verified interior checkpoint. The Observation Deck lawn round trip passed. [Render and source checks](review/2026-11-18/exterior-controls/) · [Open exterior items](exterior-feature-ledger.md)
+
 ## Enclosed interior furnishing and materials — November 18, 2026
 
 Aquarium commit `1b1a9aa` is pushed. The [Library](library-reference-audit.md) is applied locally in `437106d`, including the working Bath ladder and three verified access round trips. The [Bath suite](bath-reference-audit.md) has passed the scoped finish and access checks, including the washroom and toilet. The [interior matrix](interior-acceptance-matrix.md) tracks completed sections. Preserve the verified rooms and exterior through scoped comparisons.

@@ -7,7 +7,8 @@ import {setDynamic} from '../systems/collision.js'
 import {surfaceCollisionBounds} from '../systems/surfaceCollision.js'
 import {innerGateSections} from '../systems/innerGateCollision.js'
 import {boxToThree,toThree} from '../systems/shipMeta.js'
-import {voyage,LOG_BEARINGS,advanceVoyage,advanceCannon,operateCannon,channelAngle,channelName,dockBounds,rotatePoint,resetVoyage,shipYaw,shutterPose,startBurst} from '../systems/navigation.js'
+import {voyage,LOG_BEARINGS,GAON,advanceVoyage,advanceCannon,advanceDock,channelAngle,selectDockChannel,toggleDockShutters,dockBounds,rotatePoint,resetVoyage,shipYaw,shutterPose,startBurst} from '../systems/navigation.js'
+import {operateAudibleCannon} from '../systems/cannonAudio.js'
 
 const axisX=new THREE.Vector3(1,0,0),axisY=new THREE.Vector3(0,1,0),axisZ=new THREE.Vector3(0,0,1)
 /** Apply an authored pivot rotation while preserving baked mesh offsets. */
@@ -96,18 +97,26 @@ export function NavigationSystem({meta,keys}){
    if(!near.current)return
    if(near.current==='helm'){voyage.helm=true;s.setHudMessage('Helm: W/S speed · A/D steer · E release')}
    if(near.current==='log'){voyage.logNeedle=(voyage.logNeedle+1)%3;s.setHudMessage(`Log Pose simulation: needle ${voyage.logNeedle+1}, ${LOG_BEARINGS[voyage.logNeedle]}° illustrative bearing`)}
-   if(near.current==='selector'){voyage.channel=(voyage.channel+1)%7;voyage.dockOpen=false;s.setHudMessage(`Channel ${voyage.channel}: ${channelName(voyage.channel)}`)}
-   if(near.current==='lever'){voyage.dockOpen=!voyage.dockOpen;s.setHudMessage(voyage.dockOpen?'Soldier Dock: align, then roll shutters open':'Soldier Dock: close shutters')}
+   if(near.current==='selector')s.setHudMessage(selectDockChannel((voyage.channel+1)%7))
+   if(near.current==='lever')s.setHudMessage(toggleDockShutters())
   })
   const operate=e=>{
-   if(useStore.getState().cannonPanelOpen||e.target.closest?.('button, input, textarea, select, [contenteditable="true"]'))return
-   if(e.code==='KeyR')resetVoyage()
-   if(!voyage.helm||e.repeat)return
    const s=useStore.getState()
+   if(!s.started||e.repeat||e.metaKey||e.ctrlKey||e.altKey||e.target.closest?.('input, textarea, select, [contenteditable]'))return
+   const channel=e.code.match(/^(?:Digit|Numpad)([0-6])$/)
+   if(channel||['KeyJ','KeyK','KeyL'].includes(e.code)){
+    e.preventDefault()
+    const message=channel?selectDockChannel(Number(channel[1])):e.code==='KeyL'?toggleDockShutters():
+     operateAudibleCannon(e.code==='KeyK'?'fire':'toggle-mouth').message
+    s.setHudMessage(message)
+    s.setNavigation({...s.navigation,...voyage})
+    return
+   }
+   if(s.cannonPanelOpen||e.target.closest?.('button'))return
+   if(e.code==='KeyR')resetVoyage()
+   if(!voyage.helm)return
    if(e.code==='KeyG')s.setHudMessage(startBurst()?'Coup de Burst · three cola barrels spent':'Coup de Burst needs three cola barrels')
    if(e.code==='KeyT'){voyage.chicken=!voyage.chicken;s.setHudMessage(voyage.chicken?'Chicken Voyage: mane turning, reverse propulsion':'Chicken Voyage stopped')}
-   if(e.code==='KeyJ')s.setHudMessage(operateCannon('toggle-mouth').message)
-   if(e.code==='KeyK')s.setHudMessage(operateCannon('fire').message)
   }
   window.addEventListener('keydown',operate)
   window.__sunnyNavigation={get state(){return {...voyage}},get yaw(){return shipYaw()},get dockColliders(){return dockBounds(layout.solids,layout.centre,voyage.dockAngle)},get jawColliders(){return jaws.current},get innerGates(){return nodes.current.filter(n=>n.o.userData.sunny_inner_gate).map(n=>({name:n.o.name,channel:n.o.userData.sunny_dock_channel,position:n.o.position.toArray(),quaternion:n.o.quaternion.toArray()}))},get shutters(){return nodes.current.filter(n=>n.o.userData.sunny_dock_shutter&&!('sunny_dock_digit' in n.o.userData)).map(n=>({name:n.o.name,position:n.o.position.toArray(),quaternion:n.o.quaternion.toArray()}))}}
@@ -118,12 +127,12 @@ export function NavigationSystem({meta,keys}){
   const store=useStore.getState(),explore=store.cameraMode==='explore',player=window.__sunny?.position??store.position
   if(!explore||store.flying)voyage.helm=false
   const occupied=Math.abs(player[1]-layout.centre[1])<3&&Math.hypot(player[0]-layout.centre[0],player[2]-layout.centre[2])<8.4
-  const selectedAngle=Math.PI/2+(Math.max(1,voyage.channel)-1)*Math.PI/3
+  const selectedAngle=Math.PI/2+(Math.max(1,voyage.dockGateChannel)-1)*Math.PI/3
   const gate=rotatePoint([layout.centre[0]+2.30*Math.cos(selectedAngle),(meta?.interiors?.dockWaterLevel??layout.centre[1])+.45,layout.centre[2]-2.30*Math.sin(selectedAngle)],voyage.dockAngle,layout.centre)
-  const innerOccupied=voyage.channel>0&&Math.abs(player[1]-gate[1])<2.6&&Math.hypot(player[0]-gate[0],player[2]-gate[2])<1.1
+  const innerOccupied=voyage.dockGateChannel>0&&Math.abs(player[1]-gate[1])<2.6&&Math.hypot(player[0]-gate[0],player[2]-gate[2])<1.1
   const shutterOccupied=innerOccupied||(layout.mechanisms.dockOpenings??[]).some(d=>{const c=toThree(...d.centre);return Math.abs(player[2]-c[2])<1.5&&Math.hypot(player[0]-c[0],player[1]+.9-c[1])<d.radius+1})
   if(explore)advanceVoyage(delta,keys.current,occupied,shutterOccupied)
-  else advanceCannon(delta)
+  else{advanceCannon(delta);advanceDock(delta,occupied,shutterOccupied)}
   setDynamic(dockBounds(layout.solids,layout.centre,voyage.dockAngle),'dock')
   if(root.current!==window.__ship){
    root.current=window.__ship;nodes.current=[]
@@ -143,7 +152,7 @@ export function NavigationSystem({meta,keys}){
   for(const n of nodes.current){
    const tags=n.o.userData
    if(tags.sunny_inner_gate||tags.sunny_inner_digit){
-    const boxes=innerGateBounds(n,new THREE.Vector3(...layout.centre),voyage.dockAngle,tags.sunny_dock_channel===voyage.channel?voyage.shutter:0)
+    const boxes=innerGateBounds(n,new THREE.Vector3(...layout.centre),voyage.dockAngle,tags.sunny_dock_channel===voyage.dockGateChannel?voyage.shutter:0)
     if(tags.sunny_inner_gate)innerBoxes.push(...boxes)
    }
    else if(tags.sunny_dock_channel){n.o.position.fromArray(rotatePoint(n.p,voyage.dockAngle,layout.centre));n.o.quaternion.copy(n.q).premultiply(q.setFromAxisAngle(axisY,voyage.dockAngle))}
@@ -152,7 +161,7 @@ export function NavigationSystem({meta,keys}){
     const rolled=shutterPose(centre.toArray(),tags.sunny_roll_top,tags.sunny_roll_radius,tags.sunny_roll_travel,voyage.shutter,tags.sunny_dock_shutter)
     const translation=new THREE.Vector3(...rolled.centre).sub(centre)
     q.setFromAxisAngle(axisX,rolled.angle);pivotNode(n,centre,q,translation)
-    if('sunny_dock_digit' in tags)n.o.visible=tags.sunny_dock_digit===voyage.channel
+    if('sunny_dock_digit' in tags)n.o.visible=tags.sunny_dock_digit===voyage.dockGateChannel
     else shutterBoxes.push(movingBounds(n,centre,q,translation))
    }else if(tags.sunny_rudder){const pivot=new THREE.Vector3(...toThree(...tags.sunny_pivot));q.setFromAxisAngle(axisY,-voyage.wheel*.65);pivotNode(n,pivot,q);for(const section of n.sections)rudderBoxes.push(movingBounds(section,pivot,q,new THREE.Vector3()))}
    else if(tags.sunny_mane){q.setFromAxisAngle(axisX,voyage.maneAngle);pivotNode(n,new THREE.Vector3(...toThree(...tags.sunny_pivot)),q)}
@@ -162,7 +171,7 @@ export function NavigationSystem({meta,keys}){
     q.setFromAxisAngle(axis,voyage.jaw*(tags.sunny_jaw_angle??1.05));pivotNode(n,pivot,q)
     if(n.o.name==='Sunny_Gaon_jaw'||n.o.name==='Sunny_Gaon_chin')jawBoxes.push(movingBounds(n,pivot,q,new THREE.Vector3()))
    }
-   else if(tags.sunny_paddle){n.o.visible=voyage.channel===0&&voyage.shutter>.98;q.setFromAxisAngle(axisZ,voyage.paddleAngle*(tags.sunny_paddle==='port'?1:-1));pivotNode(n,new THREE.Vector3(...toThree(...tags.sunny_pivot)),q)}
+   else if(tags.sunny_paddle){n.o.visible=voyage.dockGateChannel===0&&voyage.shutter>.98;q.setFromAxisAngle(axisZ,voyage.paddleAngle*(tags.sunny_paddle==='port'?1:-1));pivotNode(n,new THREE.Vector3(...toThree(...tags.sunny_pivot)),q)}
    else if(/Helm_(wheel|spoke|grip)/.test(n.o.name)){q.setFromAxisAngle(axisX,voyage.wheel);pivotNode(n,wheelPivot,q)}
    else if(/SoldierDock_dial|SoldierDock_selector/.test(n.o.name)){q.setFromAxisAngle(axisX,-voyage.channel*Math.PI*2/7);pivotNode(n,wheelPivot,q)}
    else if(/SoldierDock_lever(?:_grip)?$/.test(n.o.name)){q.setFromAxisAngle(axisZ,-voyage.shutter*.35);const p=layout.mechanisms.controls?.targets?.lever;if(p)pivotNode(n,new THREE.Vector3(...toThree(...p)),q)}
@@ -182,7 +191,7 @@ export function NavigationSystem({meta,keys}){
    const mesh=air.current[i];if(!mesh)continue
    const burst=i<3,active=burst?voyage.burst>5.1:voyage.gaon>0
    mesh.visible=active
-   if(active){const t=burst?6-voyage.burst:2.5-voyage.gaon;mesh.material.opacity=.22*(1-(t% .9)/.9);mesh.scale.setScalar(1+(t+i*.17)% .9*3)}
+   if(active){const t=burst?6-voyage.burst:GAON.seconds-voyage.gaon;mesh.material.opacity=.22*(1-(t% .9)/.9);mesh.scale.setScalar(1+(t+i*.17)% .9*3)}
   }
   const controls=layout.mechanisms.controls
   const anchors=controls?['helm','log','selector','lever'].map(id=>({id,p:toThree(...controls[id])})):[]

@@ -1,6 +1,6 @@
 # Current section record — November 18, 2026
 
-The enclosed interior furnishing pass is applied on port 5173. The remaining exterior is parked. The supplied drawings and anime references govern the room layouts and identifying features. Use each accepted checkpoint and its recorded evidence when investigating a regression or changing an interface. [Interior status](interior-acceptance-matrix.md) · [Exterior feature record](exterior-feature-ledger.md) · [Verification receipts](reference-completion.md)
+The enclosed interior furnishing pass is applied on port 5173 and pushed as `251fa3b`. Exterior work has resumed. The supplied drawings and anime references govern the identifying features and layouts. Use each accepted checkpoint and its evidence when investigating a regression or changing an interface. [Interior status](interior-acceptance-matrix.md) · [Exterior feature record](exterior-feature-ledger.md) · [Verification receipts](reference-completion.md)
 
 ---
 

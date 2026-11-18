@@ -68657,7 +68657,29 @@
     ],
     "doorCount": 33,
     "partitions": 53,
-    "furniture": 2316
+    "furniture": 2316,
+    "workshopTrimRepair": [
+      {
+        "node": "Box118",
+        "sourceFaces": 5296,
+        "resultFaces": 5208
+      },
+      {
+        "node": "Box119",
+        "sourceFaces": 5296,
+        "resultFaces": 5248
+      },
+      {
+        "node": "Line004",
+        "sourceFaces": 10537,
+        "resultFaces": 10467
+      },
+      {
+        "node": "Line007",
+        "sourceFaces": 10536,
+        "resultFaces": 10514
+      }
+    ]
   },
   "exterior": {
     "version": "post-timeskip",

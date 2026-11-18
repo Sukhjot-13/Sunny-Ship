@@ -67,9 +67,54 @@ def subtract_prism(points, planes):
     return kept
 
 
+BAND_MESHES = ('Box118', 'Box119', 'Line004', 'Line007')
+
+
+def terminate_trim(obj, prisms):
+    """Keep the original materials and surfaces outside the approved lining."""
+    old = obj.data
+    old.calc_loop_triangles()
+    vertices, faces, indices = [], [], []
+    for face in old.loop_triangles:
+        pieces = [[tuple(obj.matrix_world @ old.vertices[i].co) for i in face.vertices]]
+        for x0,x1,y0,y1,planes in prisms:
+            next_pieces = []
+            for points in pieces:
+                if (max(p[0] for p in points) < x0 or min(p[0] for p in points) > x1
+                        or max(p[1] for p in points) < y0 or min(p[1] for p in points) > y1):
+                    next_pieces.append(points)
+                else:
+                    next_pieces.extend(subtract_prism(points,planes))
+            pieces = next_pieces
+            if not pieces:
+                break
+        for points in pieces:
+            # Clip actual source triangles, then emit explicit triangles.
+            # Retessellating nonplanar/concave source n-gons after clipping
+            # can bridge the cut and recreate tiny room intersections.
+            for i in range(1,len(points)-1):
+                a = tuple(v-u for u,v in zip(points[0],points[i]))
+                b = tuple(v-u for u,v in zip(points[0],points[i+1]))
+                area = sqrt(sum(c*c for c in (a[1]*b[2]-a[2]*b[1],
+                    a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0])))
+                if area <= 1e-12:
+                    continue
+                faces.append(tuple(range(len(vertices),len(vertices)+3)))
+                vertices.extend((points[0],points[i],points[i+1]))
+                indices.append(face.material_index)
+    mesh = bpy.data.meshes.new(old.name+'_room_terminated')
+    mesh.from_pydata(vertices,[],faces); mesh.update()
+    for mat in old.materials:
+        mesh.materials.append(mat)
+    for face,index in zip(mesh.polygons,indices):
+        face.material_index = index
+    assign_world_mesh(obj,mesh)
+    return len(old.polygons), len(faces)
+
+
 def reconcile_fore_trim(objects, interiors):
     """Terminate shield intrusions and confirmed dark bands at real room boundaries."""
-    targets = [o for o in objects if o.name.split('.')[0] in ('Circle038', 'Box118', 'Box119', 'Line004', 'Line007')]
+    targets = [o for o in objects if o.name.split('.')[0] in ('Circle038', *BAND_MESHES)]
     if sum(o.name.split('.')[0] == 'Circle038' for o in targets) != 1:
         raise RuntimeError('one retained bow shield is required')
     receipt = []
@@ -82,45 +127,31 @@ def reconcile_fore_trim(objects, interiors):
             # surfaces belong to other construction and must remain untouched.
             prisms = [(x0,min(x1,-9.0),y0,y1,planes+[((-1,0,0),9.0)])
                       for x0,x1,y0,y1,planes in prisms if x0 < -9.0]
-        old = obj.data
-        old.calc_loop_triangles()
-        vertices, faces, indices = [], [], []
-        for face in old.loop_triangles:
-            pieces = [[tuple(obj.matrix_world @ old.vertices[i].co) for i in face.vertices]]
-            for x0,x1,y0,y1,planes in prisms:
-                next_pieces = []
-                for points in pieces:
-                    if (max(p[0] for p in points) < x0 or min(p[0] for p in points) > x1
-                            or max(p[1] for p in points) < y0 or min(p[1] for p in points) > y1):
-                        next_pieces.append(points)
-                    else:
-                        next_pieces.extend(subtract_prism(points,planes))
-                pieces = next_pieces
-                if not pieces:
-                    break
-            for points in pieces:
-                # Clip actual source triangles, then emit explicit triangles.
-                # Retessellating nonplanar/concave source n-gons after clipping
-                # can bridge the cut and recreate tiny room intersections.
-                for i in range(1,len(points)-1):
-                    a = tuple(v-u for u,v in zip(points[0],points[i]))
-                    b = tuple(v-u for u,v in zip(points[0],points[i+1]))
-                    area = sqrt(sum(c*c for c in (a[1]*b[2]-a[2]*b[1],
-                        a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0])))
-                    if area <= 1e-12:
-                        continue
-                    faces.append(tuple(range(len(vertices),len(vertices)+3)))
-                    vertices.extend((points[0],points[i],points[i+1]))
-                    indices.append(face.material_index)
-        mesh = bpy.data.meshes.new(old.name+'_room_terminated')
-        mesh.from_pydata(vertices,[],faces); mesh.update()
-        for mat in old.materials:
-            mesh.materials.append(mat)
-        for face,index in zip(mesh.polygons,indices):
-            face.material_index = index
-        assign_world_mesh(obj,mesh)
+        source_faces, result_faces = terminate_trim(obj, prisms)
         obj['sunny_fore_trim_terminated'] = True
-        receipt.append(dict(node=obj.name,sourceFaces=len(old.polygons),resultFaces=len(faces),
+        receipt.append(dict(node=obj.name,sourceFaces=source_faces,resultFaces=result_faces,
                             ownership='existing fore floor/ceiling/lining volumes; dark bands limited to storage X<-9; exterior surface retained'))
     interiors['foreTrimRepair'] = receipt
+    return receipt
+
+
+def reconcile_workshop_trim(objects, interiors):
+    """Clear the lining in the aft B1 bays while retaining the Dock and outer skins."""
+    lower = next(volume for volume in interiors['foreTrimVolumes'] if volume['level']=='B1')
+    dock = next(room for room in interiors['rooms'] if room['name']=='Soldier Dock System')
+    wall = dock['x'][1]
+    # Stop at the back of the Dock partition and at the existing B1 ceiling.
+    # This second cut never opens the fore store or the channel mouths.
+    volume = {**lower, 'top':interiors['levels']['F1']-.18}
+    prisms = [(max(x0,wall),x1,y0,y1,planes+[((1,0,0),wall)])
+              for x0,x1,y0,y1,planes in profile_prisms(volume) if x1 > wall]
+    receipt=[]
+    bands=[obj for obj in objects if obj.name.split('.')[0] in BAND_MESHES]
+    if len(bands)!=len(BAND_MESHES):
+        raise RuntimeError('Expected two white bands and two dark bands around B1')
+    for obj in bands:
+        source_faces,result_faces=terminate_trim(obj,prisms)
+        obj['sunny_workshop_trim_terminated']=True
+        receipt.append(dict(node=obj.name,sourceFaces=source_faces,resultFaces=result_faces))
+    interiors['workshopTrimRepair']=receipt
     return receipt

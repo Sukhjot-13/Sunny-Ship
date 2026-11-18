@@ -1,0 +1,19 @@
+{
+  "backup": "/private/tmp/sunny-exterior-detail-live-before",
+  "stage": "/private/tmp/sunny-exterior-detail-candidate",
+  "url": "http://localhost:5173",
+  "applied": {
+    "assets/sunny-master.blend": "27fd7f994652570a1abf16482bf9cd499150802d6536561f96d973757e16d812",
+    "public/models/sunny.glb": "1c5e5646acba442ab0f4e58e84290bafca3949fb62e105d0e0e960d6252e10dd",
+    "public/models/sunny-collision.glb": "7be1103698d3ba7b7a990a3aba4c266017419c8a0f785c433e187778463fba90",
+    "public/models/ship-metadata.json": "d5fd5bd47cd8afdcc6874ab5f0c55e09606370e09db070e69509b9a6eebc382d",
+    "assets/reference/sunny-reference.blend": "e247b2e991d03c00c2e3f3152f4052b3aaaeb46617534ebbffa09155cb5d771f",
+    "assets/reference/sunny-reference.glb": "495955da047ca4229cdb55963340dc5a731d1e0a87a136df594f2165f22c334f",
+    "assets/reference/dimensions.json": "30a34b63b3f8c9a3e2441367045bfbacb7038792d1eef70bd46833c3da86ac1a"
+  },
+  "served": {
+    "sunny.glb": "1c5e5646acba442ab0f4e58e84290bafca3949fb62e105d0e0e960d6252e10dd",
+    "sunny-collision.glb": "7be1103698d3ba7b7a990a3aba4c266017419c8a0f785c433e187778463fba90",
+    "ship-metadata.json": "d5fd5bd47cd8afdcc6874ab5f0c55e09606370e09db070e69509b9a6eebc382d"
+  }
+}

@@ -1,18 +1,20 @@
-# Active authority — November 17, 2026
+# Active exterior record — November 18, 2026
 
-Sukhjot has paused remaining exterior work and moved the Aquarium Bar to the front of the queue. The table below is the checklist for work already verified. Leave these specific fixes alone unless a new change touches their geometry, shared boundaries or access, a test regresses, or a concrete source discrepancy comes to light. Use targeted checks in that case. Older entries below are history, not a fresh checklist. Only the supplied images establish design.
+Exterior work has resumed after the enclosed interior pass. The table records checks already completed. Revisit a verified feature when a shared boundary changes, an actual regression appears, or the supplied images establish a discrepancy. [Current handoff](reference-completion.md)
 
 | Section | Verified work to retain | Checkpoint |
 | --- | --- | --- |
-| Bow and figurehead | Seven supported mane petals; mouth/cannon construction; compact muzzle, eyes and nose; attached bones, collar heads, shield bosses and stowed anchors/hawses. Scope is the named geometry and attachments. | `5a21cb7`; actual exterior geometry checks at `b1c0dfb` |
+| Bow and figurehead | Seven supported mane petals, working mouth, compact muzzle, eyes and nose, attached bones and stowed anchors. The nose stroke now meets the closed smile. The Gaon accepts six single shots per full tank, with one air blast sound per press. | [Current bow and controls](review/2026-11-18/exterior-controls/) |
 | Fore cabin exterior | True fore ports and broader trim, pair placement relative to the panel, fore entrances and gallery corrections. Real opening depth and normal threshold access retained. | `bcee1ad`, `42232a1`, `e0237f4` |
 | Fore stairs and helm rim | Source-shaped guard profiles on all six stair sides and the curved rim, actual tread support and open transitions. Both complete helm routes passed. | `c0d6894` |
 | Midship lawn and outside routes | Lawn/galleries, supported slide and side passages, two rounded anchored shade crowns and swing area. Continuous exterior route passed, including both lawn returns. | `6da9830`, `f3f822f` |
 | Stern and garden | Source-shaped aft shell, shared entrance, six lower Aquarium exterior arches and deep glazing; supported garden flights, inboard beds and citrus, gallery/balcony/Library routes. Aquarium room contents are separate. | `ad12616`, `065fae9`, `f3f822f` |
 | Dock access and channel | Rounded continuous throat, moving shutters, supported ladder and hatch with full return route. The visible annulus shape and its relation to the hull remain open. | `356c50a`, `3eccb21`, `f3f822f` |
 | Fore shrouds and lookout access | Outboard longitudinal fan planes, attached ends and 30 reconstructed rows per fan. Full normal rope, ladder, hatch, floor and reverse-to-lawn journey passed. Mast/yard proportions are separate. | `e0237f4`, `b1c0dfb` |
+| Open Observation Deck | Normal lawn-to-deck walk and return verified on the enclosed-interior checkpoint. | [Keyboard trace](review/2026-11-18/exterior-controls/verification/observation-journey.json) |
+| Hull bands through aft B1 lining | Four imported band meshes terminate at the existing room lining. Current renders show two much smaller side-port fixtures at the floor line. | [Workshop views](review/2026-11-18/exterior-controls/final/) |
 
-Parked exterior work: rig and canvas pose, mast height/station, Dock rim/hull backing, remaining whole-ship and fitting proportions, and a fresh full suite/performance baseline. These are open, not evidence that the verified rows above need rework. See [current handoff](reference-completion.md) and [rigging evidence](rigging-reference-audit.md).
+Open work includes the Dock rim and hull backing, rig and canvas pose, mast height and station, remaining whole-ship fitting proportions, and a fresh full suite and performance baseline. [Rigging evidence](rigging-reference-audit.md)
 
 # Exterior feature ledger — current repair and reference boundaries
 

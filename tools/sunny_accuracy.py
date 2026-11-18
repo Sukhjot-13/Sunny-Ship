@@ -1407,6 +1407,23 @@ def muzzle_seam(jaw, bounds, level):
     return [pole('LionSmile', a, b, .025, 'black') for a, b in zip(points, points[1:])]
 
 
+def muzzle_philtrum(muzzle, centre_y, split, nose_bottom):
+    """Seat the nose stroke on the muzzle and meet the closed smile."""
+    bpy.context.view_layer.update()
+    inverse=muzzle.matrix_world.inverted()
+    start,end=split+.004,nose_bottom+.02
+    points=[]
+    for i in range(9):
+        z=start+(end-start)*i/8
+        hit,point,_,_=muzzle.ray_cast(inverse@Vector((-100,centre_y,z)),inverse.to_3x3()@Vector((1,0,0)))
+        if not hit:
+            raise RuntimeError('The nose stroke must stay seated on the upper muzzle')
+        point=muzzle.matrix_world@point
+        point.x-=.018
+        points.append(point)
+    return [pole('Lion_philtrum',a,b,.022,'black') for a,b in zip(points,points[1:])]
+
+
 def lion_mechanisms(objects,bounds):
     """H: source-led tall cavity, sealed lower face and a deep hollow cannon."""
     head=next(o for o in objects if o.name.split('.')[0]=='Sphere001')
@@ -1441,16 +1458,8 @@ def lion_mechanisms(objects,bounds):
     bpy.context.scene.collection.objects.link(jaw)
     finish(jaw, 'Gaon_jaw', 'cream')
     seam = muzzle_seam(jaw, bounds, split)
-    # R08's short vertical muzzle line joins the nose and upward-ended smile.
-    bpy.context.view_layer.update()
-    na,nb=bounds(next(o for o in objects if o.name=='Sphere005'))
-    inv=muzzle.matrix_world.inverted();philtrum=[]
-    for i in range(9):
-        z=split+.04+(na.z-split-.02)*i/8
-        hit,point,_,_=muzzle.ray_cast(inv@Vector((-100,cy,z)),inv.to_3x3()@Vector((1,0,0)))
-        if hit:
-            point=muzzle.matrix_world@point;point.x-=.018;philtrum.append(point)
-    for left,right in zip(philtrum,philtrum[1:]):pole('Lion_philtrum',left,right,.022,'black')
+    nose=bounds(next(o for o in objects if o.name=='Sphere005'))[0]
+    muzzle_philtrum(muzzle,cy,split,nose.z)
     # Keep the original face silhouette; detach its thin curved lower panel.
     # Black cut walls/back make a real cavity rather than a painted front disk.
     cutter = mouth_prism(head, bounds, cy, split, bottom, half_width, back)

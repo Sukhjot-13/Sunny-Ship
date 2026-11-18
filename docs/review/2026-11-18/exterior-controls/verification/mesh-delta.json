@@ -1,0 +1,68 @@
+{
+  "visual": {
+    "unchanged": 8060,
+    "removed": {},
+    "updated": {
+      "Box118": {
+        "before": "ff9e3781f714b8992a84b0568fece4f22bbd58cd24e0285a97ce0d2fc1a99812",
+        "after": "c738af0241e82974f9cf8d615407e3f0c27f20414d0a7fdc330c25e02604102c"
+      },
+      "Box119": {
+        "before": "db853185aad71ee25aa49897312991fc4cccd70059b8559da6e4b39fcf84080e",
+        "after": "0e9a2bc805b4d0267b8e3995768a0ab3ff8e0c6c2817dc2bbaef4b82e6f5d7c3"
+      },
+      "Line004": {
+        "before": "598ab9bcef2a0ae0c26a7348218c535b289abc44b83ff663735473114cb9db6b",
+        "after": "198d1ffd3c67c473179e00b1a36674d673c30be2a3e99ccda76efd3621c36cc6"
+      },
+      "Line007": {
+        "before": "9e4dd2301d912cc9d232efc47d5639b16eca10ebf62739ebd50e42f778ba8eb2",
+        "after": "2b71b46a44a8adc82ccc9f977501f62982c7b4344e540b5d4858506ff9b1ba09"
+      },
+      "Sunny_Lion_philtrum": {
+        "before": "6a4f51a479536b85917118d8657cc3152eb764d0127fc12e889ef829a2d00bdd",
+        "after": "a327aac19dc9bf0fab7a4cd1779847a58c002b3de47de0e4bb66af7f27a945dd"
+      },
+      "Sunny_Lion_philtrum.001": {
+        "before": "957dcd406f2f18d35b3dba94f6ce70a546b8e583a9261dd04d64264ec89c1b7a",
+        "after": "e48d20aaa10e56d4fc79270dfc95a109d5a4c6cd56dd7568e63cf46bab65c034"
+      },
+      "Sunny_Lion_philtrum.002": {
+        "before": "ee1ededfa14e767c264ae81b193fade58500d106776aa4364740a181fc71fdb2",
+        "after": "d19d38406ae60fa451d97d4d3cf2cf1bf132104981ad25c60558c6e233a112a8"
+      },
+      "Sunny_Lion_philtrum.003": {
+        "before": "6464e9e1c4b586af19e29f3d7a6499939c273bb4f427d6d447cbedea4a858f34",
+        "after": "90275d928f208dfab595757d5a2e023f72aa7c1c0ac845ea93cb693852c20bc1"
+      },
+      "Sunny_Lion_philtrum.004": {
+        "before": "2f63ec30cc8e42f2765f28d80737112531001c6c7b6d1a392e3b452a59ef6609",
+        "after": "fe7e62bc5f69ba0f9fd147d6f331c033fd4afe2fc80d3aab366e661f2567e6e7"
+      },
+      "Sunny_Lion_philtrum.005": {
+        "before": "04beedc091798cfbfeaeaef5fa680a0030b0d851a63f95123372c2bd55d1d262",
+        "after": "99582509f21ba7cd4c22752175082b47e19b0689749f358d5fe29cb270f1d744"
+      },
+      "Sunny_Lion_philtrum.006": {
+        "before": "f53f2e45eef085b9ee0cebf63d470fa4dbd87b4ec3e42e260c49c1815ac24c63",
+        "after": "48bf2b3ee6ef8adf44fe4be1b0d210e9e473e6b276031e05a3cff6fa138eeea4"
+      },
+      "Sunny_Lion_philtrum.007": {
+        "before": "91fc15f05a5b90e7895e0d2a76020e054995033910f2ead2cab7796dc2a897b5",
+        "after": "31010d7cfdd2ca1a8f34659263e326c229342aa2f6883aba26848cf3b7ea680e"
+      }
+    }
+  },
+  "collision": {
+    "sha256": [
+      "7be1103698d3ba7b7a990a3aba4c266017419c8a0f785c433e187778463fba90",
+      "7be1103698d3ba7b7a990a3aba4c266017419c8a0f785c433e187778463fba90"
+    ],
+    "counts": [
+      217606,
+      217606
+    ],
+    "removed": [],
+    "added": []
+  }
+}

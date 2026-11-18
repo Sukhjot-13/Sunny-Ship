@@ -1,6 +1,7 @@
 import {useEffect,useRef,useState} from 'react'
 import {useStore} from '../state/useStore.js'
-import {cannonAvailability,operateCannon,voyage} from '../systems/navigation.js'
+import {cannonAvailability,voyage} from '../systems/navigation.js'
+import {operateAudibleCannon} from '../systems/cannonAudio.js'
 
 /** Visible global controls for the actual Gaon mechanism, with focus handoff. */
 export function CannonControls(){
@@ -26,7 +27,7 @@ export function CannonControls(){
  function showPanel(){document.exitPointerLock?.();setOpen(true)}
  /** Execute shared mechanism actions; domain guards remain authoritative. */
  function operate(action){
-  const result=operateCannon(action)
+  const result=operateAudibleCannon(action)
   setFeedback(result.message);setMessage(result.message)
   useStore.getState().setNavigation({...useStore.getState().navigation,...voyage})
  }
@@ -35,12 +36,13 @@ export function CannonControls(){
    onClick={()=>open?setOpen(false):showPanel()} style={styles.trigger}>Cannon · X</button>
   {open?<div id="cannon-panel" style={styles.panel}>
    <h2 style={styles.title}>Gaon cannon</h2>
-   <p style={styles.detail}>Use from anywhere. Fire spends 3 cola barrels.</p>
-   <p style={styles.detail}>Mouth {nav.jawOpen?'open':'closed'} · Cola {(nav.cola??3).toFixed(1)} / 3</p>
+   <p style={styles.detail}>{ready.shots} {ready.shots===1?'shot':'shots'} remaining · Cola {(nav.cola??3).toFixed(1)} / 3</p>
+   <p style={styles.detail}>Mouth {nav.jawOpen?'open':'closed'}. Press K to fire. Each shot uses half a barrel.</p>
    <div style={styles.actions}>
     <button ref={mouth} type="button" aria-pressed={!!nav.jawOpen}
      onClick={()=>operate('toggle-mouth')} style={styles.action}>{nav.jawOpen?'Close Mouth':'Open Mouth'}</button>
     <button type="button" disabled={!ready.canFire} aria-describedby="cannon-readiness"
+     onKeyDown={event=>{if(event.repeat&&(event.key==='Enter'||event.key===' '))event.preventDefault()}}
      onClick={()=>operate('fire')} style={{...styles.action,...(!ready.canFire?styles.disabled:{})}}>Fire Gaon</button>
    </div>
    <p id="cannon-readiness" style={styles.detail}>{ready.reason||'Ready to fire. Firing also opens the mouth.'}</p>

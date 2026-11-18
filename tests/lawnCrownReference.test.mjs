@@ -17,7 +17,8 @@ const roomDeltas=[['aquarium-room-delta',rooms.find(room=>room.name==='Aquarium 
  ['kitchen-room-delta',rooms.find(room=>room.name==='Kitchen')?.galleyLayout],
  ['aft-service-room-delta',rooms.find(room=>room.name==='Pantry')?.pantryLayout],
  ['fore-cabins-room-delta',rooms.find(room=>room.name==="Men's Quarters")?.cabinLayout],
- ['lower-interior-room-delta',meta.interiors.lookoutRoom]]
+ ['lower-interior-room-delta',meta.interiors.lookoutRoom],
+ ['exterior-detail-delta',meta.interiors.workshopTrimRepair]]
 for(const [fixture,active] of roomDeltas){
  if(!active)continue
  const roomPatch=JSON.parse(fs.readFileSync(`tests/fixtures/${fixture}.json`))
