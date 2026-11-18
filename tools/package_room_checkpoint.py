@@ -20,6 +20,11 @@ SCOPES = {
         'solids': ('Dining',),
         'floor_bounds': None,
     },
+    'Kitchen': {
+        'visual': ('Sunny_Kitchen_',),
+        'solids': ('Kitchen',),
+        'floor_bounds': None,
+    },
 }
 
 

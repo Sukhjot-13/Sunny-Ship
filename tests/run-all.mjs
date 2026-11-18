@@ -109,6 +109,7 @@ const suites=[
  ['climbing.mjs','continuous lookout rope, ladder, hatch and return descent'],
  ['interiorJourneys.mjs','continuous room tour and interior stairs'],
  ['bathJourneys.mjs','continuous Bath, washroom and toilet journey via the Library ladder'],
+ ['aftInteriorJourneys.mjs','continuous galley workstations and Pantry threshold journey'],
  ['navigation.mjs','walking to ship controls and operating navigation'],['interaction.mjs','pointer / orbit interaction'],['exteriorMotion.mjs','exterior movement and stationary comparison'],['visual.mjs','visual capture'],
 ]
 const results=[]

@@ -1,0 +1,71 @@
+{
+  "trace": [
+    {
+      "label": "lawn to open galley",
+      "position": [
+        16.399985289718835,
+        -35.62269973754883,
+        -6.905494391985683
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "stone serving island work side",
+      "position": [
+        15.892189817724791,
+        -35.62269973754883,
+        -9.199920010130741
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "inset sink approach",
+      "position": [
+        13.411976462589388,
+        -35.62269973754883,
+        -10.399987347851182
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "stove working position",
+      "position": [
+        18.585998632075746,
+        -35.62269973754883,
+        -10.200000073283976
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "Kitchen side of Pantry doorway",
+      "position": [
+        19.799950487672298,
+        -35.62269973754883,
+        -6.231044525071864
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    },
+    {
+      "label": "galley return to lawn",
+      "position": [
+        -4.1999999969371045,
+        -40.55070114135742,
+        -0.9128873628893325
+      ],
+      "grounded": true,
+      "blocker": null,
+      "recoveries": 0
+    }
+  ],
+  "errors": []
+}

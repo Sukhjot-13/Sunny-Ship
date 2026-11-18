@@ -1,8 +1,8 @@
 {
-  "source": "/private/tmp/sunny-dining-candidate/sunny-master.blend",
-  "workingVisualSource": "/private/tmp/sunny-dining-candidate/sunny.glb",
-  "sourceSha256": "f1a3d9b33170777bab667d84456b022a13b05fb012e4e080dbaae2c469dc4fd9",
-  "workingVisualSha256": "35aeeaeb4dd737e9595ec3002edeb3ffc8bddf2fb32cfea472aa523e2eac4255",
+  "source": "/private/tmp/sunny-kitchen-candidate/sunny-master.blend",
+  "workingVisualSource": "/private/tmp/sunny-kitchen-candidate/sunny.glb",
+  "sourceSha256": "88fa5b8ff202edab7f16b3ce7057c8cdf9bb8a49f93950626597f4f95d9eb0df",
+  "workingVisualSha256": "75d5728a71aa46cef95839b9007b213375d831624b711024f966e568ce5ddc6a",
   "workingScale": 2.2,
   "referenceScale": 1,
   "rootMultiplier": 0.45454545454545453,

@@ -31,6 +31,7 @@ assert(views[roomName],`No camera study configured for ${roomName}`)
 const point=([dx,dy,dz])=>[x+dx,floor+dy,z+dz]
 if(room.libraryLayout)views.Library.push(['bath-ladder',[-.44,1.66,.75],[-2.16,1.58,-2.83],68])
 if(room.diningLayout)views['Dining Room'].push(['table-length',[-3.39,1.61,-.96],[2.51,1.13,.74],76])
+if(room.galleyLayout)views.Kitchen.push(['prep-aisle',[-2.26,1.65,-1.30],[2.42,1.18,-3.74],78])
 if(roomName==='Bath'){
  for(const name of ['Bath Washroom','Bath Toilet']){
   const linked=meta.interiors.rooms.find(room=>room.name===name)
@@ -42,6 +43,7 @@ if(roomName==='Bath'){
 const browser=await puppeteer.launch({headless:true,args:['--use-gl=angle','--use-angle=metal','--enable-unsafe-swiftshader','--enable-webgl']})
 const errors=[],consoleErrors=[],shots=[]
 let bathWater=false
+let surfaceRoles=null
 try{
  const page=await browser.newPage();await page.setViewport({width:1440,height:900})
  page.on('pageerror',error=>errors.push(error.message))
@@ -73,10 +75,23 @@ try{
   tub?.traverse(node=>{if(node.isMesh&&node.material.userData.bathOwned)animated=true})
   return animated
  })
+ if(room.galleyLayout)surfaceRoles=await page.evaluate(()=>{
+  const parts=['serving_island_marble','serving_island_base','sink_bowl','fridge_body']
+  return Object.fromEntries(parts.map(part=>{
+   const roles=[]
+   window.__ship.getObjectByName('Sunny_Kitchen_'+part)?.traverse(node=>{
+    if(node.isMesh&&node.material.isMeshPhysicalMaterial)roles.push(node.material.userData.interiorSurface)
+   })
+   return [part,[...new Set(roles)]]
+  }))
+ })
 } finally {await browser.close()}
 const sha=bytes=>crypto.createHash('sha256').update(bytes).digest('hex')
-fs.writeFileSync(path.join(out,'receipt.json'),JSON.stringify({roomName,url,shots,errors,consoleErrors,bathWater,
+fs.writeFileSync(path.join(out,'receipt.json'),JSON.stringify({roomName,url,shots,errors,consoleErrors,bathWater,surfaceRoles,
  assets:{'sunny.glb':sha(visual),'ship-metadata.json':sha(metaBytes)},note:'Actual renderer, inspection camera only. Keyboard routes are verified separately.'},null,2)+'\n')
 assert.deepEqual(errors,[]);assert.deepEqual(consoleErrors,[])
 if(room.bathLayout)assert(bathWater,'The actual Bath material must use moving water')
+if(room.galleyLayout)assert.deepEqual(surfaceRoles,{
+ serving_island_marble:['marble'],serving_island_base:['grain'],sink_bowl:['steel'],fridge_body:['porcelain'],
+})
 console.log(`PASS ${roomName} actual renderer: ${shots.length} views`)

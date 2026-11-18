@@ -16,11 +16,19 @@ const profiles={
  bookcloth:{period:[.043,.046],roughness:.81,relief:.000065,sheen:.12},
  leather:{period:[.067,.061],roughness:.57,relief:.000038,coat:.16},
  'bath-stone':{period:[1.22,1.22],roughness:.37,relief:.0014,coat:.3},
+ marble:{period:[1.74,1.23],roughness:.32,relief:.000028,coat:.44},
 }
 /** Stable periodic noise for fine fibres and fired glaze, without animation. */
 function noise(u,v,seed=1){
  return Math.sin(TAU*(u*7+v*3)+seed)*Math.sin(TAU*(u*3-v*11)-seed)*.5+
   Math.sin(TAU*(u*29+v*17)+seed*2)*.25
+}
+
+function marbleVein(u,v){
+ const bend=.15*noise(u,v,2)+.041*Math.sin(TAU*(u*13+v*7))
+ const primary=Math.sin(TAU*(u*2-v*3+bend))
+ const secondary=Math.sin(TAU*(u*5-v*7+bend*1.7+.27))
+ return Math.pow(1-Math.abs(primary),12)*.78+Math.pow(1-Math.abs(secondary),25)*.22
 }
 
 function stoneChip(u,v){
@@ -53,18 +61,19 @@ export function interiorTextureSet(role){
  if(!profiles[role])return realisticTextureSet(role)
  if(maps.has(role))return maps.get(role)
  const p=profiles[role],size=512,count=size*size
+ const fabric=['upholstery','linen','curtain','bookcloth'].includes(role)
  const albedo=new Uint8Array(count*4),normal=new Uint8Array(count*4),roughness=new Uint8Array(count*4),height=new Float32Array(count)
  for(let y=0;y<size;y++)for(let x=0;x<size;x++){
   const u=x/size,v=y/size,i=y*size+x,j=i*4,n=noise(u,v)
-  const fabric=['upholstery','linen','curtain','bookcloth'].includes(role)
   const warp=Math.sin(TAU*u*64),weft=Math.sin(TAU*v*64),weave=warp*weft
   const stone=role==='bath-stone'?stoneChip(u,v):null
+  const marble=role==='marble'?marbleVein(u,v):0
   const fibres=stone?stone.chip*.67+n*.09:fabric?weave*.65+noise(u,v,4)*.35:n
-  const tone=clamp(stone?.95-stone.chip*(.13+stone.tint*.22)+n*.035:(fabric?.95:.985)+fibres*(fabric?.035:.008))
+  const tone=clamp((stone?.95-stone.chip*(.13+stone.tint*.22)+n*.035:(fabric?.95:.985)+fibres*(fabric?.035:.008))-marble*.17)
   albedo[j]=Math.round(displayGamma(clamp(tone+(stone?.chip??0)*.04))*255)
   albedo[j+1]=Math.round(displayGamma(tone)*255)
   albedo[j+2]=Math.round(displayGamma(clamp(tone+(stone?.chip??0)*(.12-(stone?.tint??0)*.08)))*255);albedo[j+3]=255
-  roughness[j]=roughness[j+1]=roughness[j+2]=Math.round(clamp(p.roughness+fibres*(stone?.13:fabric?.045:.025))*255);roughness[j+3]=255
+  roughness[j]=roughness[j+1]=roughness[j+2]=Math.round(clamp(p.roughness+fibres*(stone?.13:fabric?.045:.025)+marble*.06)*255);roughness[j+3]=255
   height[i]=fibres*p.relief
  }
  const at=(x,y)=>height[((y+size)%size)*size+(x+size)%size]
@@ -94,6 +103,10 @@ export function interiorSurfaceRole(source,{name='',wood='grain',fabric=false}={
  if(/^bath_(?:cedar|amber)$/.test(label))return 'boards'
  if(label==='dining_floor_oak')return 'boards'
  if(/^dining_(?:oak|walnut)$/.test(label))return 'grain'
+ if(label==='kitchen_marble')return 'marble'
+ if(label==='kitchen_enamel'||label==='kitchen_oven_glaze')return 'porcelain'
+ if(label==='kitchen_steel')return 'steel'
+ if(label==='kitchen_walnut')return 'grain'
  if(label==='glass')return /mirror/i.test(name)?'mirror':'glass'
  if(/^tile_/.test(label))return 'tile'
  if(label==='paper'||label.startsWith('paper_'))return 'paper'

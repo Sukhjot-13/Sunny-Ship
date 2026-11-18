@@ -367,6 +367,8 @@ def complete_room_fittings(objects, frame, interiors):
     cy=frame.y(.585)
     quarters_details(frame,levels,rooms)
     kitchen_details(cy,levels['F2A'])
+    from sunny_kitchen import finish_galley
+    galley_light=finish_galley(rooms['Kitchen'],cy,levels['F2A'])
     from sunny_dining import dining_details, finish_dining_floor
     dining_lights=dining_details(rooms['Dining Room'],levels['F2A'],cy)
     infirmary_details(cy,levels['F2A'])
@@ -402,7 +404,7 @@ def complete_room_fittings(objects, frame, interiors):
     aft_floor=bpy.data.objects['Sunny_InteriorFloor_F2_aft']
     tile_floor(aft_floor,.65,('tile_ivory','tile_dark'),(12.3,20.6,cy,13.5))
     finish_dining_floor(aft_floor,rooms['Dining Room'])
-    lights=dining_lights
+    lights=[*dining_lights,galley_light]
     for name, p, ceiling in (
         ("Men's Quarters",((rooms["Men's Quarters"]['x'][0]+rooms["Men's Quarters"]['x'][1])/2,cy,levels['F1']+2.9),levels['F2F']-.18),
         ("Women's Quarters",((rooms["Women's Quarters"]['x'][0]+rooms["Women's Quarters"]['x'][1])/2,cy,levels['F2F']+2.25),levels['F2F']+2.80),

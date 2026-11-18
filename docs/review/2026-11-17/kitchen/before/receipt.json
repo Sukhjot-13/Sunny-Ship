@@ -1,0 +1,42 @@
+{
+  "roomName": "Kitchen",
+  "url": "http://localhost:5173",
+  "shots": [
+    {
+      "name": "galley",
+      "camera": [
+        13.200000000000003,
+        -33.943,
+        -3.8149999999999995
+      ],
+      "target": [
+        18.220000000000002,
+        -34.323,
+        -7.925
+      ],
+      "fov": 80
+    },
+    {
+      "name": "appliances",
+      "camera": [
+        14.580000000000002,
+        -33.943,
+        -7.755
+      ],
+      "target": [
+        18.050000000000004,
+        -34.422999999999995,
+        -10.844999999999999
+      ],
+      "fov": 75
+    }
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "bathWater": false,
+  "assets": {
+    "sunny.glb": "35aeeaeb4dd737e9595ec3002edeb3ffc8bddf2fb32cfea472aa523e2eac4255",
+    "ship-metadata.json": "d48fa472aecb407807ac39330ee2ab31f8894345e70a4b609de218643aa2a380"
+  },
+  "note": "Actual renderer, inspection camera only. Keyboard routes are verified separately."
+}

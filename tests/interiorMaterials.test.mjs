@@ -5,7 +5,7 @@ import {interiorTextureSet,interiorSurfaceRole,interiorTileSize,interiorGeometry
 import {realisticTextureSet,realisticExteriorMaterial} from '../src/systems/realisticExterior.js'
 import {createInteriorLightRig} from '../src/systems/interiorLighting.js'
 
-for(const role of ['upholstery','linen','curtain','tile','porcelain','paper']){
+for(const role of ['upholstery','linen','curtain','tile','porcelain','paper','marble']){
  const set=interiorTextureSet(role)
  assert.equal(interiorTextureSet(role),set)
  let lo=255,hi=0
@@ -37,6 +37,8 @@ for(const [label,name,role] of [
  ['upholstery_teal','chair','upholstery'],['paper','book_page','paper'],['white','Sunny_Wash_sink','porcelain'],
  ['steel','workshop','steel'],['brass','tap','brass'],['glass','window','glass'],['glass','Wash_mirror','mirror'],
  ['tankwater','aquarium','water'],['lamp_glow','RoomLamp_bulb','lamp'],['black','cannon_barrel','iron'],
+ ['kitchen_marble','Sunny_Kitchen_prep_cabinet_stone','marble'],
+ ['kitchen_steel','Sunny_Kitchen_sink_bowl','steel'],['kitchen_enamel','Sunny_Kitchen_fridge_door','porcelain'],
 ])assert.equal(interiorSurfaceRole(mat(label),{name}),role)
 const lamp=realisticInteriorMaterial(mat('lamp_glow'))
 assert(lamp.emissiveIntensity>1&&lamp.emissive.getHex()!==0&&!lamp.transparent)

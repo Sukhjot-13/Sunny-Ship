@@ -22,7 +22,7 @@ def round_rectangle(centre, radii, z, steps=64, exponent=3.4):
             for angle in (i*math.tau/steps for i in range(steps))]
 
 
-def profiled_basin(name,centre,profile,keys,obstacle):
+def profiled_basin(name,centre,profile,keys,obstacle,feature='Bath'):
     from sunny_interiors import _merge
     count=64;vertices=[];faces=[];finishes=[]
     for rx,ry,z in profile:vertices.extend(round_rectangle(centre,(rx,ry),z,count))
@@ -36,7 +36,7 @@ def profiled_basin(name,centre,profile,keys,obstacle):
     mesh=bmesh.new();mesh.from_mesh(obj.data)
     bmesh.ops.recalc_face_normals(mesh,faces=list(mesh.faces));mesh.to_mesh(obj.data);mesh.free()
     for face in obj.data.polygons:face.use_smooth=face.index<len(faces)-2
-    obj['sunny_authored']=True;obj['sunny_feature']='Bath';obj['sunny_obstacle']=obstacle
+    obj['sunny_authored']=True;obj['sunny_feature']=feature;obj['sunny_obstacle']=obstacle
     if obstacle:obj['sunny_rail']=True
     return obj
 
