@@ -2,7 +2,7 @@ import * as THREE from 'three'
 import { sweepFlight } from './flightCollision.js'
 import { stepSupport } from './stepSupport.js'
 import { CONTACT_GAP } from './doors.js'
-import {readCollisionWorld,preloadCollisionWorld} from './collisionWorld.js'
+import {COLLISION_PROXY_URL,readCollisionWorld,preloadCollisionWorld} from './collisionWorld.js'
 import {resolveList} from './bodyCollision.js'
 export {resolveList} from './bodyCollision.js'
 
@@ -134,7 +134,7 @@ function blockedIn(list, min, max) {
 }
 
 export function useCollision() {
-  const world=readCollisionWorld('/models/sunny-collision.glb')
+  const world=readCollisionWorld(COLLISION_PROXY_URL)
   world.dynamic=dynamicEntries
 
   // ---- queries -------------------------------------------------------
@@ -220,4 +220,4 @@ export function useCollision() {
   return { world, setDynamic, clearDynamic, moveFlight, raycastDown, stepHeightAt, resolve, hasCeiling, isBlocked }
 }
 
-if(typeof window!=='undefined')preloadCollisionWorld('/models/sunny-collision.glb')
+if(typeof window!=='undefined')preloadCollisionWorld(COLLISION_PROXY_URL)

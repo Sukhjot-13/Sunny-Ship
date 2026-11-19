@@ -10,6 +10,7 @@ import {boxToThree,toThree} from '../systems/shipMeta.js'
 import {voyage,LOG_BEARINGS,GAON,advanceVoyage,advanceCannon,advanceDock,burstStatus,channelAngle,selectDockChannel,toggleDockShutters,dockBounds,rotatePoint,resetVoyage,shipYaw,shutterPose} from '../systems/navigation.js'
 import {playBurstCue} from '../systems/burstAudio.js'
 import {operateAudibleCannon} from '../systems/cannonAudio.js'
+import {isNavigationNode} from '../systems/shipMotion.js'
 
 const axisX=new THREE.Vector3(1,0,0),axisY=new THREE.Vector3(0,1,0),axisZ=new THREE.Vector3(0,0,1)
 /** Apply an authored pivot rotation while preserving baked mesh offsets. */
@@ -147,8 +148,8 @@ export function NavigationSystem({meta,keys}){
    root.current?.updateMatrixWorld(true)
    const inverse=root.current?root.current.matrixWorld.clone().invert():new THREE.Matrix4()
    root.current?.traverse(o=>{
+    if(!isNavigationNode(o))return
     const tags=o.userData
-    if(!(tags.sunny_dock_channel||tags.sunny_dock_shutter||tags.sunny_mane||tags.sunny_jaw||tags.sunny_paddle||tags.sunny_rudder||/Sunny_(?:Helm_(?:wheel|spoke|grip)|SoldierDock_|LogPose_needle)/.test(o.name)))return
     const box=shipLocalBounds(o,inverse),centre=box.getCenter(new THREE.Vector3()),corners=[]
     for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z])corners.push(new THREE.Vector3(x,y,z))
     nodes.current.push({o,p:o.position.toArray(),q:o.quaternion.clone(),centre,corners,sections:tags.sunny_rudder?rudderSurfaceSections(o,inverse):null,

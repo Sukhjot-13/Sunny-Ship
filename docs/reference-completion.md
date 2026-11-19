@@ -1,3 +1,11 @@
+## Rendering performance — November 18, 2026
+
+The renderer groups nearby stationary opaque fittings that share a material. Named source geometry still supplies picking and inspection. Shadow maps refresh when the hull, a mechanism or a room light moves. The third-person camera skips an unused scan of the collision boxes.
+
+Local Chrome at 1440 × 900 on the M3 Pro recorded 50–60 FPS in ordinary orbiting, up from about 21 FPS. The full-ship view submits about 2,450 draw calls per frame, down from about 8,200. The on-deck view measured about 60 FPS in both camera modes. The Blender master, exported model, collision bounds and current material assets are the basis for the next texture pass.
+
+The browser downloads a 3.31 MB gzip collision payload derived by Vite from the authoritative 104.5 MB collision GLB. The compact format preserves all 217,610 box bounds, names and resolution order. The development server and production build generate the same payload. [Collision equivalence check](../tests/collisionData.test.mjs) · [Batch preservation check](../tests/staticShipMeshes.test.mjs)
+
 ## Coup de Burst — November 18, 2026
 
 `G` and the **Coup de Burst** button launch the ship in Inspect or Explore. A launch uses three cola barrels from the existing reserve. The stern impulse raises the bow, the ship flies 1,000 simulated metres along its current heading, and the bow dips into a splash before the hull settles. Inspect follows the launch and restores the previous orbit view. Explore keeps the player in the same place aboard the ship.

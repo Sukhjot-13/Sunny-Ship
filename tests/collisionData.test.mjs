@@ -1,16 +1,28 @@
 /** Every decoded bound must equal the old actual Float32 mesh measurement. */
 import assert from 'node:assert/strict'
 import fs from 'node:fs'
+import {gzipSync} from 'node:zlib'
 import {decodeCollisionBoxes} from '../src/systems/collisionData.js'
+import {decodePackedCollision,encodePackedCollision,PACKED_COLLISION_FILE} from '../src/systems/packedCollision.js'
 import {loadColliders} from './glb.mjs'
-const decoded=decodeCollisionBoxes(fs.readFileSync('public/models/sunny-collision.glb'))
+const original=fs.readFileSync('public/models/sunny-collision.glb')
+const decoded=decodeCollisionBoxes(original)
 const measured=loadColliders('public/models/sunny-collision.glb')
+const packed=encodePackedCollision(decoded),restored=decodePackedCollision(packed)
 assert.equal(decoded.length,measured.length)
+assert.equal(restored.length,measured.length)
+assert(gzipSync(packed).length<original.length/10,'packing should substantially reduce transfer size')
 for(let i=0;i<measured.length;i++){
  assert.equal(decoded[i].name,measured[i].name,'retain every collider in original resolution order')
  assert(decoded[i].box.min.equals(measured[i].min)&&decoded[i].box.max.equals(measured[i].max),'exact old Float32 vertex bounds: '+measured[i].name)
  assert.equal(decoded[i].isFloor,measured[i].name.startsWith('COLL_Floor'))
+ assert.equal(restored[i].name,decoded[i].name)
+ assert.equal(restored[i].isFloor,decoded[i].isFloor)
+ assert(restored[i].box.equals(decoded[i].box),'packed proxy must preserve exact box bounds')
 }
+assert.throws(()=>decodePackedCollision(packed.subarray(0,45)),/Incomplete/)
+assert.throws(()=>decodePackedCollision(packed.subarray(0,packed.length-1)),/Invalid/)
+assert.deepEqual(decodePackedCollision(encodePackedCollision([])),[])
 /** Tiny format fixture to isolate malformed-header/transform rejection. */
 function fixture(transform=false){
  const json={asset:{version:'2.0',generator:'Sunny axis-aligned collision proxy'},scene:0,scenes:[{nodes:[0]}],
@@ -26,10 +38,16 @@ assert.equal(decodeCollisionBoxes(fixture())[0].box.min.y,Math.fround(-40.550717
 assert.throws(()=>decodeCollisionBoxes(fixture(true)),/transformed/)
 assert.throws(()=>decodeCollisionBoxes(new Uint8Array(8)),/Incomplete/)
 const wrong=fixture();wrong[0]=0;assert.throws(()=>decodeCollisionBoxes(wrong),/header/)
-const {readCollisionWorld,preloadCollisionWorld}=await import('../src/systems/collisionWorld.js')
+const {COLLISION_PROXY_URL,readCollisionWorld,preloadCollisionWorld}=await import('../src/systems/collisionWorld.js')
 const originalFetch=globalThis.fetch;let requests=0
 try{
- globalThis.fetch=async url=>{requests++;return url==='fixture:missing'?{ok:false,status:404}:{ok:true,arrayBuffer:async()=>fixture().buffer}}
+ globalThis.fetch=async url=>{
+  requests++
+  if(url==='fixture:missing')return {ok:false,status:404}
+  if(url==='/'+PACKED_COLLISION_FILE)return new Response(gzipSync(encodePackedCollision(decodeCollisionBoxes(fixture()))))
+  assert.notEqual(url,COLLISION_PROXY_URL,'the current runtime should request only the compressed proxy')
+  return {ok:true,arrayBuffer:async()=>fixture().buffer}
+ }
  let suspended=null
  try{readCollisionWorld('fixture:shared')}catch(value){suspended=value}
  assert(suspended instanceof Promise,'first reader suspends on actual load promise')
@@ -42,5 +60,8 @@ try{
  await preloadCollisionWorld('fixture:missing')
  assert.throws(()=>readCollisionWorld('fixture:missing'),/404/,'failed loads propagate through the reader')
  assert.equal(requests,2,'failed/ready resources are cached rather than refetched each render')
+ await preloadCollisionWorld(COLLISION_PROXY_URL)
+ assert(readCollisionWorld(COLLISION_PROXY_URL).boxes[0].box.equals(world.boxes[0].box))
+ assert.equal(requests,3)
 }finally{globalThis.fetch=originalFetch}
 console.log('PASS exact original names/order/floor roles and Float32 mesh bounds for',decoded.length,'real boxes, format guards and shared Suspense loading/error lifecycle')

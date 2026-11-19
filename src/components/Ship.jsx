@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef } from 'react'
 import { useGLTF, useTexture } from '@react-three/drei'
 import * as THREE from 'three'
-import { useFrame } from '@react-three/fiber'
+import { useFrame, useThree } from '@react-three/fiber'
 import { resolveMaterial, authoredMaterial } from '../systems/materials.js'
 import { exteriorMaterial } from '../systems/exteriorMaterials.js'
 import { realisticExteriorMaterial,usesRealisticExterior } from '../systems/realisticExterior.js'
@@ -13,6 +13,9 @@ import { SHIP_COLORS } from '../config/shipConfig.js'
 import { registerDoorNode } from './DoorSystem.jsx'
 import { useStore } from '../state/useStore.js'
 import { shipYaw, voyage } from '../systems/navigation.js'
+import { isMovingShipNode } from '../systems/shipMotion.js'
+import { installShipShadows } from '../systems/shipShadows.js'
+import { batchStaticShipMeshes } from '../systems/staticShipMeshes.js'
 
 /**
  * The Thousand Sunny.
@@ -31,6 +34,7 @@ export function Ship({ sunDir, skyColor = '#9fc4e0', deckY = 0, waterY = -14, ro
   const bobRef = useRef()
   const timeRef = useRef(0)
   const { scene } = useGLTF('/models/sunny.glb')
+  const { gl, scene:renderScene, camera } = useThree()
   const emblem = useTexture('/artwork/straw-hat-jolly-roger.svg')
   const interiorLights=useMemo(()=>createInteriorLightRig(roomLights),[roomLights])
   useEffect(()=>()=>interiorLights.dispose(),[interiorLights])
@@ -39,6 +43,7 @@ export function Ship({ sunDir, skyColor = '#9fc4e0', deckY = 0, waterY = -14, ro
   const ship = useMemo(() => {
     const root = scene.clone(true)
     const sails = []
+    const movingNodes = []
     const interiorGeometries = []
     const aquarium = createAquariumFinish(aquariumLayout)
     const aquariumHalos = [], roomMaterials = new Map()
@@ -47,6 +52,7 @@ export function Ship({ sunDir, skyColor = '#9fc4e0', deckY = 0, waterY = -14, ro
 
     root.updateMatrixWorld(true)
     root.traverse((child) => {
+      if (isMovingShipNode(child)) movingNodes.push(child)
       if (!child.isMesh) return
       const tags = child.userData?.sunny_part ? child.userData : child.parent?.userData ?? {}
       const part = tags.sunny_part ?? inferPart(child.name)
@@ -112,9 +118,13 @@ export function Ship({ sunDir, skyColor = '#9fc4e0', deckY = 0, waterY = -14, ro
       child.frustumCulled = true
     })
 
+    const batchGeometries=batchStaticShipMeshes(root)
     for(const position of aquariumHalos)aquarium.addHalo(root,position)
-    return { root, sails, sailCount, interiorGeometries, aquarium, roomMaterials }
+    return { root, sails, sailCount, interiorGeometries, aquarium, roomMaterials, movingNodes, batchGeometries }
   }, [scene, emblem, sunDir, skyColor, deckY, waterY, aquariumLayout, libraryLayout, bathLayout])
+
+  useEffect(() => installShipShadows(gl,renderScene,camera,bobRef.current,ship.movingNodes,
+    interiorLights.slots.map(slot=>slot.light)),[gl,renderScene,camera,ship,interiorLights])
 
   useEffect(() => {
     const unregister = []
@@ -165,6 +175,7 @@ export function Ship({ sunDir, skyColor = '#9fc4e0', deckY = 0, waterY = -14, ro
     () => () => {
       for (const { mat } of ship.sails) mat.dispose()
       for (const geometry of ship.interiorGeometries) geometry.dispose()
+      for (const geometry of ship.batchGeometries) geometry.dispose()
       for(const material of ship.roomMaterials.values())material.dispose()
       ship.aquarium.dispose()
     },

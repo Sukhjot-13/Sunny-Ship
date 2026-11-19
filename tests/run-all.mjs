@@ -100,6 +100,7 @@ const suites=[
  ['libraryRoom.test.mjs','Library furnishings, clear glazing and full Bath ladder'],
  ['bathRoom.test.mjs','Bath fixtures, material regions and contained water'],
  ['exteriorMaterials.test.mjs','physical exterior materials and reflection guards'],
+ ['staticShipMeshes.test.mjs','static ship batching preserves surfaces, picking and moving objects'],
  ['navigation.test.mjs','navigation logic'],['foodLift.test.mjs','C04 mast-integrated food lift'],['climbing.test.mjs','climbing and interaction logic'],['assets.test.mjs','asset structure'],['exterior.test.mjs','exterior coplanar geometry'],['doors.test.mjs','door and hatch collision'],
  ['physics.test.mjs','collision physics'],['reachability.mjs','deck reachability'],
  ['roomRoutes.mjs','all room and interior stair routes'],['gameplay.mjs','in-browser gameplay'],

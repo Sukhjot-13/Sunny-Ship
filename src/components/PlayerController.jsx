@@ -457,21 +457,16 @@ export function PlayerController({ keys, look, spawn, climbs, waterLevel = -14, 
     const eyeZ = pos.current.z
 
     if (store.personMode === PERSON_MODES.THIRD && grounded.current) {
-      // third person: pull back along the view direction, clip through walls
+      // Third person pulls the camera back along the view direction.
       const dir = new THREE.Vector3(
         Math.sin(yaw.current) * Math.cos(pitch.current),
         Math.sin(pitch.current),
         Math.cos(yaw.current) * Math.cos(pitch.current)
       ).normalize()
-      let dist = THIRD_PERSON_DISTANCE
-      // shorten if it would put the camera inside something
-      for (const { box } of collision.world.boxes) {
-        if (box.containsPoint(new THREE.Vector3(eyeX, eyeY, eyeZ))) break
-      }
       camera.position.set(
-        eyeX + dir.x * dist,
-        eyeY + dir.y * dist + THIRD_PERSON_HEIGHT * 0.2,
-        eyeZ + dir.z * dist
+        eyeX + dir.x * THIRD_PERSON_DISTANCE,
+        eyeY + dir.y * THIRD_PERSON_DISTANCE + THIRD_PERSON_HEIGHT * 0.2,
+        eyeZ + dir.z * THIRD_PERSON_DISTANCE
       )
       camera.lookAt(eyeX, eyeY + 0.25, eyeZ)
     } else {

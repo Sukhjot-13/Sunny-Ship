@@ -83,6 +83,7 @@ export function createAquariumFinish(layout) {
   if(!materials.has(key))materials.set(key,new THREE.SpriteMaterial({map:haloTexture,color:'#ffb84a',transparent:true,
    blending:THREE.AdditiveBlending,depthWrite:false,opacity:.72,toneMapped:false}))
   const sprite=new THREE.Sprite(materials.get(key));sprite.position.copy(position)
+  sprite.raycast=()=>{}
   sprite.scale.set(1.65,1.65,1);sprite.name='AquariumWarmHalo';root.add(sprite)
  }
  return {materialFor,addHalo,time,mast,dispose(){for(const material of materials.values())material.dispose();haloTexture?.dispose()}}
