@@ -9,7 +9,7 @@ import { FoodLiftSystem } from './components/FoodLiftSystem.jsx'
 import { CoupDeBurstEffects } from './components/CoupDeBurstEffects.jsx'
 import { Ship } from './components/Ship.jsx'
 import { Ocean } from './components/Ocean.jsx'
-import { Lighting, SkyDome, InspectCamera, SUN_DIR } from './components/Environment.jsx'
+import { Lighting, SkyDome, InspectCamera, SUN_DIR, SKY_FILL_COLOR } from './components/Environment.jsx'
 import { ProceduralEnvironment } from './components/EnvironmentMap.jsx'
 import { PlayerController } from './components/PlayerController.jsx'
 import { UI } from './components/UI.jsx'
@@ -83,10 +83,10 @@ function SceneRig({ meta, keys, look }) {
     <>
       <SkyDome />
       <ProceduralEnvironment sunDir={SUN_DIR} />
-      <Lighting />
-      <Ocean sunDir={SUN_DIR} waterLevel={waterLevel} hullProfile={meta?.oceanHullProfile} skyColor="#9fc4e0" />
+      <Lighting rooms={meta?.interiors?.rooms} levels={meta?.interiors?.levels} dockWaterLevel={meta?.interiors?.dockWaterLevel ?? waterLevel} />
+      <Ocean sunDir={SUN_DIR} waterLevel={waterLevel} hullProfile={meta?.oceanHullProfile} skyColor={SKY_FILL_COLOR} />
 
-      <Ship sunDir={SUN_DIR} skyColor="#9fc4e0" deckY={deckY} waterY={waterLevel} roomLights={meta?.interiors?.lights}
+      <Ship sunDir={SUN_DIR} skyColor={SKY_FILL_COLOR} deckY={deckY} waterY={waterLevel} roomLights={meta?.interiors?.lights}
         aquariumLayout={meta?.interiors?.rooms?.find(room=>room.name==='Aquarium Bar')?.lounge}
         libraryLayout={meta?.interiors?.rooms?.find(room=>room.name==='Library')?.libraryLayout}
         bathLayout={meta?.interiors?.rooms?.find(room=>room.name==='Bath')?.bathLayout} />
@@ -138,15 +138,15 @@ export default function App() {
     <main className="scene-frame">
       <Canvas
         shadows="soft"
-        dpr={1}
+        dpr={[1, 2]}
         gl={{
           antialias: true,
           powerPreference: 'high-performance',
           toneMapping: THREE.ACESFilmicToneMapping,
-          toneMappingExposure: 1.05,
+          toneMappingExposure: 0.96,
           outputColorSpace: THREE.SRGBColorSpace,
         }}
-        camera={{ fov: 62, near: 0.08, far: 800, position: [34, 14, 34] }}
+        camera={{ fov: 62, near: 0.08, far: 2200, position: [34, 14, 34] }}
         onClick={onCanvasClick}
       >
         <ProgressBridge />

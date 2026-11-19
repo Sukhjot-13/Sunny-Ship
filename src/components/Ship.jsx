@@ -107,7 +107,7 @@ export function Ship({ sunDir, skyColor = '#9fc4e0', deckY = 0, waterY = -14, ro
         const paint = m => inside
           ? paintInterior(m)
           : tags.sunny_uv_space
-          ? finish(m,{wood:tags.sunny_wood_kind,kind:tags.sunny_uv_kind,name:child.name,feature:tags.sunny_feature})
+          ? finish(m,{wood:tags.sunny_wood_kind,kind:tags.sunny_uv_kind,name:child.name,feature:tags.sunny_feature,waterY})
           : authoredMaterial(m,{solid:part==='mast'||part==='rigging',vertical:part==='mast'})
         child.material = tags.sunny_authored
           ? (Array.isArray(child.material) ? child.material.map(paint) : paint(child.material))
