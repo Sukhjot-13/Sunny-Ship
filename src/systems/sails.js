@@ -1,6 +1,7 @@
 import * as THREE from 'three'
 import { WIND } from '../config/shipConfig.js'
 import { realisticTextureSet } from './realisticExterior.js'
+import { SUN_COLOR } from './maritimeLight.js'
 
 /**
  * Sail deformation shader + shared wind state.
@@ -20,6 +21,10 @@ const vert = /* glsl */ `
   uniform float uAuthoredUV;
   uniform float uFlag;
   uniform float uFlagEdge;
+  uniform vec3 uSunDir;
+
+  #include <common>
+  #include <shadowmap_pars_vertex>
 
   varying vec3  vNormal;
   varying vec3  vWorldPos;
@@ -60,6 +65,9 @@ const vert = /* glsl */ `
     n = normalize(n + push * d * 0.8);
     vNormal = normalize(mat3(modelMatrix) * n);
 
+    vec3 transformedNormal = mat3(viewMatrix) * vNormal;
+    vec4 worldPosition = wp + vec4(uSunDir * .12, 0.0);
+    #include <shadowmap_vertex>
     gl_Position = projectionMatrix * viewMatrix * wp;
   }
 `
@@ -77,6 +85,10 @@ const frag = /* glsl */ `
   uniform sampler2D uFabricRoughness;
   uniform vec2 uClothMetres;
   uniform vec2 uFabricPeriod;
+
+  #include <common>
+  #include <packing>
+  #include <shadowmap_pars_fragment>
 
   varying vec3  vNormal;
   varying vec3  vWorldPos;
@@ -121,24 +133,27 @@ const frag = /* glsl */ `
     // Sewn vertical panels, edge reinforcement and filtered paired stitching.
     float panelEdge=min(fract(metres.x/.9),1.0-fract(metres.x/.9))*.9;
     float pixel=max(fwidth(metres.x),.0001);
-    float seam=1.0-smoothstep(.004,.014+pixel,panelEdge);
+    float seam=1.0-smoothstep(.008,.029+pixel,panelEdge);
     float stitchLine=(1.0-smoothstep(.001,.002+pixel,abs(panelEdge-.021)))*(1.0-smoothstep(.002,.006,pixel));
     float stitches=.5+.5*sin(metres.y*628.3185);
     float hem=1.0-smoothstep(.018,.035,min(min(metres.x,uClothMetres.x-metres.x),min(metres.y,uClothMetres.y-metres.y)));
-    col*=1.0-seam*.09-hem*.08+stitchLine*stitches*.04;
+    float panel=fract(sin(floor(metres.x/.9)*43.7)*7531.77);
+    float waviness=sin(metres.x*5.0+sin(metres.y*.73)*.85);
+    float dampHem=smoothstep(.78,1.0,p.y) * (.55 + .45*sin(metres.x*1.6));
+    col*=.93+panel*.07+waviness*.024-seam*.16-hem*.13-dampHem*.10+stitchLine*stitches*.06;
 
-    // --- lighting: cloth is thin, so light both sides
-    float lam = abs(dot(N, L));
-    col *= 0.72 + lam * 0.68;
-    col *= vec3(0.86) + uSkyColor * 0.14;
-
-    // --- translucency when backlit
-    float trans = pow(max(dot(-N, L), 0.0), 2.0);
-    col += col * uSunColor * trans * 0.22;
-
-    // --- sheen along the bulge
-    vec3 H = normalize(L + V);
-    col += uSunColor * pow(1.0-max(dot(N,V),0.0),5.0) * rough * .04;
+    float sunlight = dot(N, L);
+    float inSun = 1.0;
+    #if defined(USE_SHADOWMAP) && NUM_DIR_LIGHT_SHADOWS > 0
+      DirectionalLightShadow solar = directionalLightShadows[0];
+      inSun = getShadow(directionalShadowMap[0], solar.shadowMapSize, solar.shadowIntensity, solar.shadowBias, solar.shadowRadius, vDirectionalShadowCoord[0]);
+    #endif
+    vec3 direct = uSunColor * max(sunlight, 0.0) * 1.10 * inSun;
+    vec3 transmitted = uSunColor * pow(max(-sunlight, 0.0), .72) * .55 * inSun;
+    vec3 indirect = (vec3(.45) + uSkyColor*.31) * (.91 + .09*N.y);
+    float grazing = pow(1.0-max(dot(N,V),0.0), 4.0);
+    col *= indirect + direct + transmitted;
+    col += (uSkyColor*.30+uSunColor*abs(sunlight)) * grazing * rough * .075;
 
     gl_FragColor = vec4(col, 1.0);
     #include <tonemapping_fragment>
@@ -164,8 +179,10 @@ export function makeSailMaterial({
   const material=new THREE.ShaderMaterial({
     vertexShader: vert,
     fragmentShader: frag,
+    lights: true,
     side: THREE.DoubleSide,
     uniforms: {
+      ...THREE.UniformsUtils.clone(THREE.UniformsLib.lights),
       uTime: { value: 0 },
       uWind: { value: WIND.baseStrength },
       uWindDir: { value: new THREE.Vector3(...WIND.direction) },
@@ -186,7 +203,7 @@ export function makeSailMaterial({
       uFabricPeriod: { value: new THREE.Vector2(...fabric.period) },
       uClothMetres: { value: new THREE.Vector2(Math.max(.1,projection==='x'?extent.x:extent.z),Math.max(.1,extent.y)) },
       uSunDir: { value: sunDir ? sunDir.clone().normalize() : new THREE.Vector3(0.4, 0.82, 0.4) },
-      uSunColor: { value: new THREE.Color('#fff4dc') },
+      uSunColor: { value: new THREE.Color(SUN_COLOR) },
       uSkyColor: { value: new THREE.Color(skyColor) },
     },
   })

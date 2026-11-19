@@ -1,6 +1,7 @@
-import { useEffect, useMemo } from 'react'
+import { useEffect } from 'react'
 import * as THREE from 'three'
 import { useThree } from '@react-three/fiber'
+import { SUN_DIR, skyRadiance } from '../systems/maritimeLight.js'
 
 /**
  * Procedural image-based lighting.
@@ -12,7 +13,7 @@ import { useThree } from '@react-three/fiber'
  * which gives physically plausible ambient/reflective light with no HDR
  * download and no network dependency.
  */
-export function ProceduralEnvironment({ sunDir, resolution = 128 }) {
+export function ProceduralEnvironment() {
   const { gl, scene } = useThree()
 
   useEffect(() => {
@@ -27,7 +28,7 @@ export function ProceduralEnvironment({ sunDir, resolution = 128 }) {
       new THREE.ShaderMaterial({
         side: THREE.BackSide,
         uniforms: {
-          uSunDir: { value: sunDir.clone().normalize() },
+          uSunDir: { value: SUN_DIR },
         },
         vertexShader: /* glsl */ `
           varying vec3 vDir;
@@ -39,16 +40,13 @@ export function ProceduralEnvironment({ sunDir, resolution = 128 }) {
         fragmentShader: /* glsl */ `
           uniform vec3 uSunDir;
           varying vec3 vDir;
+          ${skyRadiance}
           void main() {
             vec3 d = normalize(vDir);
-            float h = d.y;
-            vec3 sky    = mix(vec3(0.66, 0.78, 0.90), vec3(0.16, 0.36, 0.66), clamp(h, 0.0, 1.0));
-            vec3 ground = mix(vec3(0.34, 0.38, 0.36), vec3(0.12, 0.14, 0.16), clamp(-h, 0.0, 1.0));
-            vec3 col = h > 0.0 ? sky : ground;
-            // sun disc + glow, so metal picks up a highlight
-            float sd = max(dot(d, normalize(uSunDir)), 0.0);
-            col += vec3(1.0, 0.95, 0.84) * pow(sd, 48.0) * 6.0;
-            col += vec3(1.0, 0.92, 0.78) * pow(sd, 6.0) * 0.35;
+            vec3 sea = mix(vec3(.15, .23, .29), vec3(.035, .076, .103), clamp(-d.y, 0.0, 1.0));
+            vec3 sky = maritimeSky(d, uSunDir);
+            float solarReflection = pow(max(dot(d, uSunDir), 0.0), 430.0);
+            vec3 col = mix(sea, sky + vec3(4.8, 2.6, 1.1) * solarReflection, smoothstep(-.10, .05, d.y));
             gl_FragColor = vec4(col, 1.0);
           }
         `,
@@ -67,7 +65,7 @@ export function ProceduralEnvironment({ sunDir, resolution = 128 }) {
       sky.geometry.dispose()
       sky.material.dispose()
     }
-  }, [gl, scene, sunDir, resolution])
+  }, [gl, scene])
 
   return null
 }

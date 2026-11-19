@@ -5,6 +5,7 @@ import { WAVE_HEIGHT, WATER_LEVEL } from '../config/shipConfig.js'
 import { OCEAN_SIZE_M, OCEAN_HORIZON_SIZE_M, OCEAN_SEGMENTS, WAVE_SCALE } from '../config/renderConfig.js'
 import { BURST, sampleBurst, voyage, shipYaw } from '../systems/navigation.js'
 import { createOceanReflection } from '../systems/oceanReflection.js'
+import { SUN_COLOR, skyRadiance } from '../systems/maritimeLight.js'
 
 /**
  * Physical water shading over the existing navigation-matched wave surface.
@@ -85,9 +86,6 @@ const frag = /* glsl */ `
   uniform vec3 uSunColor;
   uniform vec3 uDeepColor;
   uniform vec3 uShallowColor;
-  uniform vec3 uSkyColor;
-  uniform vec3 uSkyHorizon;
-  uniform vec3 uSkyZenith;
   uniform vec3 uCameraPos;
   uniform float uTime;
   uniform sampler2D uReflectionMap;
@@ -105,6 +103,8 @@ const frag = /* glsl */ `
   varying vec3 vNormal;
   varying float vFoam;
   varying vec4 vReflectCoord;
+
+  ${skyRadiance}
 
   // cheap value-noise for foam breakup
   float hash(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
@@ -144,7 +144,7 @@ const frag = /* glsl */ `
     vec2 broad=surface*.65+vec2(-uTime*.11,uTime*.08);
     vec2 undulation=vec2(noise(broad+vec2(.12,0))-noise(broad-vec2(.12,0)),noise(broad+vec2(0,.12))-noise(broad-vec2(0,.12)));
     float broadWeight=1.0-smoothstep(.25,1.0,max(length(dFdx(broad)),length(dFdy(broad))));
-    vec3 N = normalize(vNormal+vec3(rippleX,0.0,rippleZ)*.42*rippleWeight+vec3(undulation.x,0,undulation.y)*.32*broadWeight);
+    vec3 N = normalize(vNormal + vec3(rippleX,0.0,rippleZ)*.49*rippleWeight + vec3(undulation.x,0.0,undulation.y)*.38*broadWeight);
     vec3 V = normalize(uCameraPos - vWorldPos);
     vec3 L = normalize(uSunDir);
 
@@ -157,7 +157,7 @@ const frag = /* glsl */ `
     body*=mix(vec3(.65),transmission,.35)*(.65+.35*nl);
     float fres=.0204+.9796*pow(1.0-nv,5.0);
     vec3 reflectedDir=reflect(-V,N);
-    vec3 sky=mix(uSkyHorizon,uSkyZenith,pow(clamp(reflectedDir.y,0.0,1.0),.62));
+    vec3 sky=maritimeSky(reflectedDir,uSunDir);
     vec2 reflectionUV=vReflectCoord.xy/max(vReflectCoord.w,.001);
     reflectionUV+=N.xz*.018;
     float inside=step(0.0,reflectionUV.x)*step(reflectionUV.x,1.0)*step(0.0,reflectionUV.y)*step(reflectionUV.y,1.0)*step(.001,vReflectCoord.w);
@@ -171,17 +171,17 @@ const frag = /* glsl */ `
     vec3 H = normalize(L + V);
     float nh=max(dot(N,H),0.0),vh=max(dot(V,H),0.0);
     float variance=max(dot(dFdx(N),dFdx(N)),dot(dFdy(N),dFdy(N)));
-    float a2=clamp(.006+variance*.6,.006,.15),denom=nh*nh*(a2-1.0)+1.0;
+    float a2=clamp(.0027+variance*.7,.0027,.14),denom=nh*nh*(a2-1.0)+1.0;
     float D=a2/(3.14159265*denom*denom),k=sqrt(a2)*.5;
     float G=(nv/(nv*(1.0-k)+k))*(nl/(nl*(1.0-k)+k));
     float F=.0204+.9796*pow(1.0-vh,5.0);
-    col+=uSunColor*min(D*G*F/(4.0*nv),3.0)*1.6;
+    col+=uSunColor*min(D*G*F/(4.0*nv),4.0)*2.3;
 
     float bubbles=noise(surface*6.0+vec2(uTime*.15,0.0));
     float breakup=noise(surface*1.7-uTime*.14);
-    float crest=smoothstep(.75,1.0,vFoam)*smoothstep(.48,.77,breakup)*.22;
+    float crest=smoothstep(.78,1.0,vFoam)*smoothstep(.51,.78,breakup)*.15;
     float speed=clamp(abs(uShipSpeed)/5.0,0.0,1.0);
-    float contact=(1.0-smoothstep(.04,.48,hullDistance))*smoothstep(.30,.72,bubbles)*(.14+.40*speed);
+    float contact=(1.0-smoothstep(.10,.74+breakup*.55,hullDistance))*smoothstep(.35,.69,bubbles)*(.38+.32*speed);
     float trailing=uShipSpeed>=0.0?local.x-uHullProfile[31].x:uHullProfile[0].x-local.x;
     float spread=1.0+max(trailing,0.0)*.24;
     float wake=(1.0-smoothstep(.2,1.1,abs(abs(local.y)-spread)))*exp(-max(trailing,0.0)*.045)*step(0.0,trailing)*step(trailing,45.0)*speed;
@@ -197,7 +197,11 @@ const frag = /* glsl */ `
     }
     float foam=clamp(crest+(contact+wake)*(1.0-step(.5,uShipLift)),0.0,.65);
     foam=min(.83,foam+impact);
-    col=mix(col,vec3(.72,.81,.82),foam);
+    vec3 foamLight=mix(vec3(.51,.64,.72),uSunColor,clamp(nl*1.15,0.0,1.0));
+    col=mix(col,foamLight,foam);
+    float distanceToCamera=length(uCameraPos-vWorldPos);
+    float haze=1.0-exp(-distanceToCamera*distanceToCamera*.00000092);
+    col=mix(col,maritimeSky(normalize(vWorldPos-uCameraPos),uSunDir),haze);
 
     gl_FragColor = vec4(col, 1.0);
     #include <tonemapping_fragment>
@@ -238,12 +242,9 @@ export const Ocean = forwardRef(function Ocean({ waterLevel = WATER_LEVEL, hullP
           uHorizon: { value: 0 },
           uNearEdge: { value: OCEAN_SIZE_M/2 },
           uSunDir: { value: new THREE.Vector3(0.4, 0.82, 0.4).normalize() },
-          uSunColor: { value: new THREE.Color('#fff4dc') },
-          uDeepColor: { value: new THREE.Color('#123d4e') },
-          uShallowColor: { value: new THREE.Color('#287887') },
-          uSkyColor: { value: new THREE.Color('#9fc4e0') },
-          uSkyHorizon: { value: new THREE.Color('#cfe3f2') },
-          uSkyZenith: { value: new THREE.Color('#2f6fa8') },
+          uSunColor: { value: new THREE.Color(SUN_COLOR) },
+          uDeepColor: { value: new THREE.Color('#102c40') },
+          uShallowColor: { value: new THREE.Color('#246477') },
           uCameraPos: { value: new THREE.Vector3() },
           uReflectionMap: { value: reflection.texture },
           uReflectionMatrix: { value: reflection.matrix },
@@ -262,9 +263,11 @@ export const Ocean = forwardRef(function Ocean({ waterLevel = WATER_LEVEL, hullP
   )
 
   const horizonMaterial=useMemo(()=>{
-    const far=material.clone()
-    far.uniforms={...material.uniforms,uHorizon:{value:1}}
-    return far
+    return new THREE.ShaderMaterial({
+      vertexShader: material.vertexShader,
+      fragmentShader: material.fragmentShader,
+      uniforms: {...material.uniforms,uHorizon:{value:1}},
+    })
   },[material])
 
   useEffect(() => {
@@ -290,7 +293,6 @@ export const Ocean = forwardRef(function Ocean({ waterLevel = WATER_LEVEL, hullP
     if (props.sunDir) u.uSunDir.value.copy(props.sunDir).normalize()
     if (props.shallowColor) u.uShallowColor.value.set(props.shallowColor)
     if (props.deepColor) u.uDeepColor.value.set(props.deepColor)
-    if (props.skyColor) u.uSkyColor.value.set(props.skyColor)
     reflection.update(state,[meshRef.current,horizonRef.current],{hullProfile,yaw:u.uShipYaw.value})
     u.uReflectionReady.value=reflection.ready?1:0
     if (ref) ref.current = u.uTime

@@ -4,6 +4,7 @@ import * as THREE from 'three'
 import {interiorTextureSet,interiorSurfaceRole,interiorTileSize,interiorGeometry,realisticInteriorMaterial,usesRealisticInterior,applyInteriorProjection} from '../src/systems/realisticInterior.js'
 import {realisticTextureSet,realisticExteriorMaterial} from '../src/systems/realisticExterior.js'
 import {createInteriorLightRig} from '../src/systems/interiorLighting.js'
+import {createInteriorBounce} from '../src/systems/interiorBounce.js'
 
 for(const role of ['upholstery','linen','curtain','tile','porcelain','paper','marble','hessian','rubber','vinyl','enamel']){
  const set=interiorTextureSet(role)
@@ -111,4 +112,31 @@ assert(rig.slots.every(s=>s.light.intensity<.00001),'distant lamp budget did not
 assert.deepEqual(fixtureRecords,recordCopy,'light selection mutated metadata')
 let disposed=0;for(const s of rig.slots){s.light.shadow.map=new THREE.WebGLRenderTarget(8,8);s.light.shadow.map.addEventListener('dispose',()=>disposed++)}
 rig.dispose();assert.equal(disposed,2);assert.equal(rig.group.children.length,0)
+
+// A room probe stays on its own deck and on the correct side of the ship.
+const bounce=createInteriorBounce({
+ levels:{F1:-10,F2A:-4},
+ rooms:[{name:'Storage',level:'F1',x:[0,5],y:[2,7]},{name:'Library',level:'F2A',x:[0,5],y:[2,7]}],
+ lights:[{room:'Storage',pos:[2.5,4.5,-8],intensity:35}],
+})
+const {data,width,height,depth}=bounce.texture.image
+const sampleRoom=(x,y,z)=>{
+ const xi=Math.floor((x-bounce.origin.x)/bounce.size.x*width)
+ const yi=Math.floor((y-bounce.origin.y)/bounce.size.y*height)
+ const zi=Math.floor((z-bounce.origin.z)/bounce.size.z*depth)
+ const i=((zi*height+yi)*width+xi)*4
+ return [...data.slice(i,i+4)]
+}
+const storage=sampleRoom(2.5,-8,-4.5),library=sampleRoom(2.5,-2,-4.5)
+assert(storage[0]>storage[2]&&library[2]>library[0],'interior fill lost the warm practical and cool window distinction')
+assert(storage[3]>library[3],'open Library lighting should retain more environment fill')
+assert.deepEqual(sampleRoom(2.5,-4.95,-4.5),[0,0,0,0],'bounce leaked between decks')
+assert.deepEqual(sampleRoom(2.5,-8,-.98),[0,0,0,0],'bounce reached outside the room')
+const bounced=realisticInteriorMaterial(mat('timber'),{uv:true,bounce})
+assert.notEqual(bounced,realisticInteriorMaterial(mat('timber'),{uv:true}))
+const roomShader={uniforms:{},vertexShader:'#include <common>\n#include <begin_vertex>',fragmentShader:'#include <common>\n#include <aomap_fragment>'}
+bounced.onBeforeCompile(roomShader)
+assert.equal(roomShader.uniforms.roomLight.value,bounce.texture)
+assert(roomShader.fragmentShader.includes('reflectedLight.indirectDiffuse += roomBounce.rgb'))
+bounce.dispose()
 console.log('PASS interior map sets, fixed metric projection, palette isolation, floor grids and fixture finishes')

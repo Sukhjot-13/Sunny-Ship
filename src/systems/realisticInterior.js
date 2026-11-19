@@ -1,7 +1,8 @@
 /** Room finishes on the existing meshes; no construction or palette changes. */
 import * as THREE from 'three'
-import {realisticTextureSet} from './realisticExterior.js'
+import {applyClearGlazing,realisticTextureSet} from './realisticExterior.js'
 import {applyAquariumFloorLight} from './aquariumFinish.js'
+import {applyInteriorBounce} from './interiorBounce.js'
 
 const maps=new Map(),materials=new Map(),TAU=Math.PI*2
 const clamp=v=>Math.max(0,Math.min(1,v))
@@ -21,6 +22,7 @@ const profiles={
  rubber:{period:[.091,.091],roughness:.84,relief:.00008},
  vinyl:{period:[.13,.13],roughness:.42,relief:.000019,coat:.28},
  enamel:{period:[.175,.175],roughness:.34,relief:.000016,coat:.40},
+ plaster:{period:[1.12,.98],roughness:.82,relief:.00032},
 }
 /** Stable periodic noise for fine fibres and fired glaze, without animation. */
 function noise(u,v,seed=1){
@@ -72,12 +74,14 @@ export function interiorTextureSet(role){
   const warp=Math.sin(TAU*u*64),weft=Math.sin(TAU*v*64),weave=warp*weft
   const stone=role==='bath-stone'?stoneChip(u,v):null
   const marble=role==='marble'?marbleVein(u,v):0
-  const fibres=stone?stone.chip*.67+n*.09:fabric?weave*.65+noise(u,v,4)*.35:n
-  const tone=clamp((stone?.95-stone.chip*(.13+stone.tint*.22)+n*.035:(fabric?.95:.985)+fibres*(fabric?.035:.008))-marble*.17)
+  const slub=noise(u*2,v,3), plaster=role==='plaster'
+  const pores=Math.pow(Math.max(0, noise(u*5,v*6,19)-.12), 2)
+  const fibres=stone?stone.chip*.67+n*.09:fabric?weave*.56+slub*.26+n*.18:plaster?n*.53-pores*.55:n
+  const tone=clamp((stone?.95-stone.chip*(.13+stone.tint*.22)+n*.035:(fabric?.93:plaster?.94:.985)+fibres*(fabric?.095:plaster?.13:.016))-marble*.23)
   albedo[j]=Math.round(displayGamma(clamp(tone+(stone?.chip??0)*.04))*255)
   albedo[j+1]=Math.round(displayGamma(tone)*255)
   albedo[j+2]=Math.round(displayGamma(clamp(tone+(stone?.chip??0)*(.12-(stone?.tint??0)*.08)))*255);albedo[j+3]=255
-  roughness[j]=roughness[j+1]=roughness[j+2]=Math.round(clamp(p.roughness+fibres*(stone?.13:fabric?.045:.025)+marble*.06)*255);roughness[j+3]=255
+  roughness[j]=roughness[j+1]=roughness[j+2]=Math.round(clamp(p.roughness+fibres*(stone?.13:fabric?.075:plaster?.14:.055)+marble*.06)*255);roughness[j+3]=255
   height[i]=fibres*p.relief
  }
  const at=(x,y)=>height[((y+size)%size)*size+(x+size)%size]
@@ -92,8 +96,8 @@ export function interiorTextureSet(role){
 /** Upgrade authored rooms/furniture only after the exterior classifier has declined. */
 export function usesRealisticInterior(tags,name){
  return !!tags.sunny_authored&&name.startsWith('Sunny_')&&(tags.sunny_fabric||
-  /^(?:Aquarium|B1$|Bath|Dining|AftRearWindow|AftSideWindow|Dock$|Energy|Factory|ForeF1|ForeF2|ForeToilet|Interior|Kitchen$|Kotatsu|Library$|Pantry|Quarters|RoomLamp|RoomPartition|Sick|StorageStair|Store|SurveyGym|Vehicle|Wash|Weapons|Womens|WorkshopPortCover|WWash)/.test(tags.sunny_feature??'')||
-  /^Sunny_(?:Door|Hatch)_/.test(name))
+  /^(?:Aquarium|B1$|Bath|Dining|AftRearWindow|AftSideWindow|Dock(?:$|Ladder)|Energy|Factory|FoodLift|ForeF1|ForeF2|ForeToilet|Interior|Kitchen$|Kotatsu|Library$|MensWash|Pantry|Quarters|RoomLamp|RoomPartition|Sick|Storage|Store|SurveyGym|Vehicle|Wash|Weapons|Womens|Workshop|WWash)/.test(tags.sunny_feature??'')||
+  /^Sunny_(?:Door_|Hatch_|Energy_)/.test(name))
 }
 /** Retain the authored surface identity and existing patterned colour regions. */
 export function interiorSurfaceRole(source,{name='',wood='grain',fabric=false}={}){
@@ -144,6 +148,7 @@ export function interiorSurfaceRole(source,{name='',wood='grain',fabric=false}={
  if(label==='black'&&/cannon|barrel|furnace|boiler|oven|stove|machine/i.test(name))return 'iron'
  if(['deck','timber','darkwood'].includes(label))return wood==='boards'||/InteriorFloor|_ceiling|_floor/.test(name)?'boards':'grain'
  if(label==='white'&&/sink|basin|toilet|bath_(?:tub|rim)|plate|dish|cup|teapot|bowl|bottle|jar/i.test(name))return 'porcelain'
+ if(/^(?:cream|white|ivory)$/.test(label)&&/shell|lining|wall|ceiling|partition/i.test(name))return 'plaster'
  if(label==='rope')return 'rope'
  if(label==='grass')return 'lawn'
  if(/^leaf/.test(label))return 'leaf'
@@ -209,10 +214,16 @@ export function applyInteriorProjection(shader,set,tileSize=0){
   if(iTile<=0.)return 0.;
   vec2 uv=vInteriorPosition.xz/iTile,edge=min(fract(uv),1.-fract(uv))*iTile;
   float distanceToJoint=min(edge.x,edge.y),aa=max(length(fwidth(vInteriorPosition.xz))*.5,.0002);
-  return (1.-smoothstep(.0015-aa,.003+aa,distanceToJoint))*smoothstep(.85,.98,abs(normalize(vInteriorNormal).y));
+  return (1.-smoothstep(.0017-aa,.0038+aa,distanceToJoint))*smoothstep(.85,.98,abs(normalize(vInteriorNormal).y));
+ }
+ float interiorTileTone(){
+  if(iTile<=0.)return 1.;
+  vec2 cell=floor(vInteriorPosition.xz/iTile);
+  float variance=fract(sin(dot(cell,vec2(43.137,23.713)))*14357.41);
+  return mix(1.,.91+variance*.15,smoothstep(.85,.98,abs(normalize(vInteriorNormal).y)));
  }`)
  shader.fragmentShader=shader.fragmentShader.replace('#include <map_fragment>',`diffuseColor*=interiorSample(iAlbedo);
- diffuseColor.rgb*=1.-interiorJoint()*.38;`)
+ diffuseColor.rgb*=interiorTileTone()*(1.-interiorJoint()*.47);`)
  shader.fragmentShader=shader.fragmentShader.replace('#include <roughnessmap_fragment>',`float roughnessFactor=roughness*interiorSample(iRoughness).g;
  roughnessFactor=mix(roughnessFactor,.87,interiorJoint());`)
  shader.fragmentShader=shader.fragmentShader.replace('#include <normal_fragment_maps>',`normal=interiorRelief(normal,faceDirection);`)
@@ -221,25 +232,34 @@ export function applyInteriorProjection(shader,set,tileSize=0){
 /** Separate cached room materials; source/exterior instances are never modified. */
 export function realisticInteriorMaterial(source,options={}){
  const role=interiorSurfaceRole(source,options),projected=!options.uv||role==='tile',tile=role==='tile'?interiorTileSize(options.name??''):0
+ const cache=options.bounce?.materials??materials
  const aquariumFloor=!!options.aquarium&&role==='tile'&&/^Sunny_AquariumFloor/.test(options.name)
  const aquariumCeiling=!!options.aquarium&&options.name==='Sunny_Aquarium_ceiling'
  const libraryFloor=!!options.library&&role==='tile'&&/^Sunny_InteriorFloor_F3_library/.test(options.name)
  const bathWater=!!options.bath&&role==='bath-water'
  const key=[source.name,source.color.getHexString(),role,projected,tile,aquariumCeiling,libraryFloor,bathWater].join(':')
- if(!aquariumFloor&&!bathWater&&materials.has(key))return materials.get(key)
+ if(!aquariumFloor&&!bathWater&&cache.has(key))return cache.get(key)
  const shared=role==='brass'||role==='steel'?'metal':['water','bath-water','glass','mirror','lamp'].includes(role)?null:role
  const profile=profiles[role]
  const m=new THREE.MeshPhysicalMaterial({name:source.name,color:source.color.clone(),side:THREE.DoubleSide,
-  roughness:1,metalness:['brass','steel','iron','mirror'].includes(role)?role==='mirror'?1:.82:0,
+  roughness:role==='grain'?.76:role==='boards'?.91:1,metalness:['brass','steel','iron','mirror'].includes(role)?role==='mirror'?1:.82:0,
   clearcoat:profile?.coat??(['grain','boards'].includes(role)?.16:role==='paint'?.24:0),clearcoatRoughness:.35,envMapIntensity:.85})
  if(aquariumCeiling)m.color.multiplyScalar(.22)
  if(shared){
   const set=interiorTextureSet(shared)
-  if(projected){m.onBeforeCompile=shader=>{applyInteriorProjection(shader,set,tile);if(aquariumFloor)applyAquariumFloorLight(shader,options.aquarium);if(libraryFloor)applyLibraryDaylight(shader,options.library)};m.customProgramCacheKey=()=>`interior-metric-v1${aquariumFloor?':aquarium-light':libraryFloor?':library-light':''}`}
-  else{m.map=set.map;m.normalMap=set.normalMap;m.roughnessMap=set.roughnessMap}
+  if(!projected){m.map=set.map;m.normalMap=set.normalMap;m.roughnessMap=set.roughnessMap}
+  if(projected||options.bounce){
+   m.onBeforeCompile=shader=>{
+    if(projected)applyInteriorProjection(shader,set,tile)
+    if(aquariumFloor)applyAquariumFloorLight(shader,options.aquarium)
+    if(libraryFloor)applyLibraryDaylight(shader,options.library)
+    if(options.bounce)applyInteriorBounce(shader,options.bounce,projected)
+   }
+   m.customProgramCacheKey=()=>`interior-finish:${projected}:${!!options.bounce}:${aquariumFloor}:${libraryFloor}`
+  }
   if(profile?.sheen){m.sheen=profile.sheen;m.sheenColor.copy(source.color);m.sheenRoughness=.9}
  }else if(role==='lamp'){
-  m.roughness=.32;m.emissive.copy(source.color);m.emissiveIntensity=1.65
+  m.roughness=.32;m.emissive.set('#ffe3bd').multiply(source.color);m.emissiveIntensity=2.2
  }else if(role==='mirror'){
   m.roughness=.055;m.color.setRGB(.92,.94,.95);m.clearcoat=1
  }else if(bathWater){
@@ -248,11 +268,12 @@ export function realisticInteriorMaterial(source,options={}){
   m.customProgramCacheKey=()=>`bath-water-v1`
  }else{
   m.transparent=true;m.opacity=role==='water'?.16:.20;m.depthWrite=false;m.roughness=role==='water'?.08:.065;m.ior=1.5;m.clearcoat=1;m.clearcoatRoughness=.08
+  if(role==='glass')applyClearGlazing(m)
  }
  m.userData={interiorSurface:role,interiorProjection:projected?'metric':'authored-uv',finishVersion:1}
  if(aquariumFloor)m.userData.aquariumOwned=true
  else if(bathWater)m.userData.bathOwned=true
- else materials.set(key,m)
+ else cache.set(key,m)
  return m
 }
 

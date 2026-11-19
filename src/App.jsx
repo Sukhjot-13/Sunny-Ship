@@ -9,7 +9,8 @@ import { FoodLiftSystem } from './components/FoodLiftSystem.jsx'
 import { CoupDeBurstEffects } from './components/CoupDeBurstEffects.jsx'
 import { Ship } from './components/Ship.jsx'
 import { Ocean } from './components/Ocean.jsx'
-import { Lighting, SkyDome, InspectCamera, SUN_DIR } from './components/Environment.jsx'
+import { Lighting, SkyDome, InspectCamera } from './components/Environment.jsx'
+import { SKY_FILL, SUN_DIR } from './systems/maritimeLight.js'
 import { ProceduralEnvironment } from './components/EnvironmentMap.jsx'
 import { PlayerController } from './components/PlayerController.jsx'
 import { UI } from './components/UI.jsx'
@@ -55,7 +56,7 @@ function SceneRig({ meta, keys, look }) {
     const fov = 62 * (Math.PI / 180)
     return {
       target: [center[0], center[1], center[2]],
-      distance: (radius * 1.25) / Math.tan(fov / 2),
+      distance: (radius * 1.19) / Math.tan(fov / 2),
     }
   }, [meta])
 
@@ -64,7 +65,7 @@ function SceneRig({ meta, keys, look }) {
     if (cameraMode !== CAMERA_MODES.INSPECT) return
     if (!framing) return
     const { target, distance } = framing
-    const dir = new THREE.Vector3(0.66, 0.34, 0.67).normalize()
+    const dir = new THREE.Vector3(-0.63, -0.075, 0.77).normalize()
     camera.position.set(
       target[0] + dir.x * distance,
       target[1] + dir.y * distance,
@@ -82,11 +83,11 @@ function SceneRig({ meta, keys, look }) {
   return (
     <>
       <SkyDome />
-      <ProceduralEnvironment sunDir={SUN_DIR} />
+      <ProceduralEnvironment />
       <Lighting />
-      <Ocean sunDir={SUN_DIR} waterLevel={waterLevel} hullProfile={meta?.oceanHullProfile} skyColor="#9fc4e0" />
+      <Ocean sunDir={SUN_DIR} waterLevel={waterLevel} hullProfile={meta?.oceanHullProfile} />
 
-      <Ship sunDir={SUN_DIR} skyColor="#9fc4e0" deckY={deckY} waterY={waterLevel} roomLights={meta?.interiors?.lights}
+      <Ship sunDir={SUN_DIR} skyColor={SKY_FILL} deckY={deckY} waterY={waterLevel} interiors={meta?.interiors}
         aquariumLayout={meta?.interiors?.rooms?.find(room=>room.name==='Aquarium Bar')?.lounge}
         libraryLayout={meta?.interiors?.rooms?.find(room=>room.name==='Library')?.libraryLayout}
         bathLayout={meta?.interiors?.rooms?.find(room=>room.name==='Bath')?.bathLayout} />
@@ -138,15 +139,15 @@ export default function App() {
     <main className="scene-frame">
       <Canvas
         shadows="soft"
-        dpr={1}
+        dpr={[1, 1.35]}
         gl={{
           antialias: true,
           powerPreference: 'high-performance',
-          toneMapping: THREE.ACESFilmicToneMapping,
-          toneMappingExposure: 1.05,
+          toneMapping: THREE.AgXToneMapping,
+          toneMappingExposure: 1.09,
           outputColorSpace: THREE.SRGBColorSpace,
         }}
-        camera={{ fov: 62, near: 0.08, far: 800, position: [34, 14, 34] }}
+        camera={{ fov: 62, near: 0.08, far: 3000, position: [-34, 10, 34] }}
         onClick={onCanvasClick}
       >
         <ProgressBridge />

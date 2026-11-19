@@ -36,6 +36,12 @@ assert.equal(outside.color.getHex(),timber.color.getHex(),'source palette change
 assert.equal(outside.opacity,1);assert(!outside.transparent)
 assert.equal(realisticExteriorMaterial(timber,{wood:'boards'}),outside)
 assert.notEqual(realisticExteriorMaterial(timber,{wood:'grain'}),outside)
+const wet=realisticExteriorMaterial(timber,{wood:'boards',waterline:-14})
+assert.notEqual(wet,outside,'only hull material instances should receive the waterline')
+const wetShader={uniforms:{},vertexShader:'#include <common>\n#include <worldpos_vertex>',fragmentShader:'#include <common>\n#include <map_fragment>\n#include <roughnessmap_fragment>'}
+wet.onBeforeCompile(wetShader)
+assert.equal(wetShader.uniforms.hullWaterline.value,-14)
+assert(wetShader.fragmentShader.includes('roughnessFactor=mix(roughnessFactor,.32,damp*.74)'))
 assert.notEqual(realisticExteriorMaterial(new THREE.MeshStandardMaterial({name:'Sunny_timber',color:'#ffffff'}),{wood:'boards'}),outside)
 const uv={sunny_uv_space:'metres'}
 assert(usesRealisticExterior(uv,'NativeHull'))
@@ -45,6 +51,11 @@ assert(usesRealisticExterior(uv,'Sunny_Door_AftEntrance_leaf'),'actual shared en
 assert(usesRealisticExterior(uv,'Sunny_Library_lining_glass0'))
 for(const name of ['Sunny_InteriorMainMast','Sunny_ForeF1_lining','Sunny_Dining_table_top','Sunny_Womens_bed_frame'])assert(!usesRealisticExterior(uv,name),`${name}: room scope changed`)
 assert(!usesRealisticExterior({},'NativeHull'),'unmapped meshes must retain original path')
+const philtrumName='Sunny_Lion_philtrum.001'
+assert(usesRealisticExterior({sunny_authored:true},philtrumName))
+const lacquer=realisticExteriorMaterial(new THREE.MeshStandardMaterial({name:'Sunny_black'}),{name:philtrumName,uv:false})
+assert.equal(lacquer.userData.exteriorSurface,'lacquer')
+assert.equal(lacquer.map,null,'unmapped features must not sample the texture origin')
 const bounds=new THREE.Box3(new THREE.Vector3(-1,0,-3),new THREE.Vector3(2,5,4))
 const sail=makeSailMaterial({bounds,authoredUV:true,design:'hat'})
 assert.deepEqual(sail.uniforms.uClothMetres.value.toArray(),[7,5])

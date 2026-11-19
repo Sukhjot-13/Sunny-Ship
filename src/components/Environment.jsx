@@ -1,104 +1,113 @@
 import { useMemo, useRef } from 'react'
 import * as THREE from 'three'
-import { useFrame, useThree } from '@react-three/fiber'
+import { useFrame } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { useStore } from '../state/useStore.js'
 import { CAMERA_MODES } from '../config/shipConfig.js'
 import { BURST, shipYaw, voyage } from '../systems/navigation.js'
-
-export const SUN_DIR = new THREE.Vector3(0.45, 0.78, 0.35).normalize()
+import { SKY_FILL, SUN_COLOR, SUN_DIR, skyRadiance } from '../systems/maritimeLight.js'
 
 /**
- * Lighting rig: a warm key sun that casts the shadows, a cool hemisphere fill
- * for sky/ground bounce, and a soft rim so the hull silhouette reads against
- * the sky.
+ * Low sun and cool sky fill give the ship a readable light and shadow side.
  */
 export function Lighting() {
   return (
     <>
-      <hemisphereLight args={['#dfeaf5', '#8a7f66', 1.25]} />
-      <ambientLight intensity={0.30} color="#f2ece0" />
+      <hemisphereLight args={[SKY_FILL, '#74736c', .54]} />
       <directionalLight
         castShadow
-        position={[SUN_DIR.x * 90, SUN_DIR.y * 90, SUN_DIR.z * 90]}
-        intensity={2.9}
-        color="#fff3dc"
-        shadow-mapSize={[2048, 2048]}
+        position={SUN_DIR.clone().multiplyScalar(115)}
+        intensity={3.25}
+        color={SUN_COLOR}
+        shadow-mapSize={[3072, 3072]}
         shadow-camera-near={1}
-        shadow-camera-far={260}
-        shadow-camera-left={-80}
-        shadow-camera-right={80}
+        shadow-camera-far={225}
+        shadow-camera-left={-65}
+        shadow-camera-right={65}
         shadow-camera-top={80}
         shadow-camera-bottom={-80}
-        shadow-bias={-0.0001}
-        shadow-normalBias={0.12}
+        shadow-bias={-0.00008}
+        shadow-normalBias={0.055}
       />
-      {/* cool rim from behind for silhouette separation */}
-      <directionalLight
-        position={[-60, 30, -70]}
-        intensity={0.9}
-        color="#9ec4e6"
-      />
-      {/* low bounce from the sea */}
-      <directionalLight position={[0, -20, 20]} intensity={0.4} color="#7fa8c4" />
     </>
   )
 }
 
 /**
- * Procedural sky dome. A cheap gradient + sun disc that also feeds the scene
- * environment so PBR materials get sensible ambient reflections.
+ * Distant cloud layer with soft sunlit edges above the maritime haze.
  */
 export function SkyDome() {
-  const matRef = useRef()
-  const { gl, scene } = useThree()
-
-  const material = useMemo(() => {
-    const m = new THREE.ShaderMaterial({
+  const material = useMemo(() => new THREE.ShaderMaterial({
       side: THREE.BackSide,
       depthWrite: false,
       uniforms: {
         uSunDir: { value: SUN_DIR.clone() },
-        uTop: { value: new THREE.Color('#2f6fa8') },
-        uHorizon: { value: new THREE.Color('#cfe3f2') },
-        uBottom: { value: new THREE.Color('#8fb0c4') },
       },
       vertexShader: /* glsl */ `
         varying vec3 vDir;
         void main() {
           vDir = normalize(position);
-          gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+          gl_Position = projectionMatrix * vec4(mat3(viewMatrix) * position, 1.0);
           // Sky is infinitely distant, including in the oblique water camera.
           // The reflection clip plane must not cut a finite dome into a band.
           gl_Position.z = gl_Position.w;
         }
       `,
       fragmentShader: /* glsl */ `
-        uniform vec3 uSunDir, uTop, uHorizon, uBottom;
+        uniform vec3 uSunDir;
         varying vec3 vDir;
+        ${skyRadiance}
+
+        float cloudHash(vec2 p) {
+          p = fract(p * vec2(.31831, .36787));
+          p += dot(p, p.yx + 19.19);
+          return fract(p.x * p.y);
+        }
+
+        float cloudNoise(vec2 p) {
+          vec2 cell = floor(p), t = fract(p);
+          t *= t * (3.0 - 2.0 * t);
+          return mix(mix(cloudHash(cell), cloudHash(cell + vec2(1, 0)), t.x),
+                     mix(cloudHash(cell + vec2(0, 1)), cloudHash(cell + 1.0), t.x), t.y);
+        }
+
+        float cloudField(vec2 p) {
+          mat2 turn = mat2(1.64, 1.21, -1.21, 1.64);
+          float density = cloudNoise(p) * .51;
+          p = turn * p + 11.7;
+          density += cloudNoise(p) * .26;
+          p = turn * p + 7.3;
+          density += cloudNoise(p) * .13;
+          p = turn * p;
+          density += cloudNoise(p) * .068;
+          density += cloudNoise(turn * p) * .032;
+          return density;
+        }
+
         void main() {
           vec3 d = normalize(vDir);
-          float h = d.y;
-          vec3 col;
-          if (h >= 0.0) {
-            col = mix(uHorizon, uTop, pow(clamp(h, 0.0, 1.0), 0.62));
-          } else {
-            col = mix(uHorizon, uBottom, pow(clamp(-h, 0.0, 1.0), 0.5));
+          vec3 col = maritimeSky(d, uSunDir);
+          float sun = max(dot(d, uSunDir), 0.0);
+          if (d.y > -.015) {
+            vec2 p = d.xz * 2.9 / (max(d.y, 0.0) + .19) + vec2(3.8, 1.7);
+            float density = cloudField(p);
+            float cover = smoothstep(.515, .675, density) * smoothstep(-.016, .13, d.y);
+            float shade = smoothstep(.01, .108, density - cloudField(p + uSunDir.xz * .52) + .032);
+            vec3 cloud = mix(vec3(.33, .39, .51), vec3(1.17, .91, .66), shade);
+            cloud += vec3(.43, .21, .07) * pow(sun, 7.0);
+            col += vec3(15.0, 8.6, 3.55) * smoothstep(.99986, .99994, sun);
+            col = mix(col, cloud, cover * .94);
           }
-          // sun disc + broad glow
-          float sd = max(dot(d, normalize(uSunDir)), 0.0);
-          col += vec3(1.0, 0.96, 0.86) * pow(sd, 620.0) * 2.2;
-          col += vec3(1.0, 0.93, 0.78) * pow(sd, 12.0) * 0.16;
           gl_FragColor = vec4(col, 1.0);
+          #include <tonemapping_fragment>
           #include <colorspace_fragment>
         }
       `,
-    })
-    return m
-  }, [])
+    }), [])
 
   return (
-    <mesh ref={matRef} material={material} frustumCulled={false} renderOrder={-1}>
+    <mesh frustumCulled={false} renderOrder={-1}>
+      <primitive object={material} attach="material" />
       <sphereGeometry args={[450, 24, 16]} />
     </mesh>
   )
@@ -164,7 +173,7 @@ export function InspectCamera({ target = [0, 0, 0], distance = 45 }) {
       panSpeed={0.5}
       minDistance={8}
       maxDistance={400}
-      maxPolarAngle={Math.PI * 0.495}
+      maxPolarAngle={Math.PI * 0.54}
       onStart={() => {
         ready.current = true
       }}
