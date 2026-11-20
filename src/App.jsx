@@ -1,4 +1,4 @@
-import { Suspense, useEffect, useMemo, useRef } from 'react'
+import { Suspense, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { Canvas, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
 import { useProgress } from '@react-three/drei'
@@ -8,6 +8,8 @@ import { NavigationSystem } from './components/NavigationSystem.jsx'
 import { FoodLiftSystem } from './components/FoodLiftSystem.jsx'
 import { CoupDeBurstEffects } from './components/CoupDeBurstEffects.jsx'
 import { Ship } from './components/Ship.jsx'
+import { PatrolFleet } from './components/PatrolFleet.jsx'
+import { Archipelago } from './components/Archipelago.jsx'
 import { Ocean } from './components/Ocean.jsx'
 import { Lighting, SkyDome, InspectCamera, SUN_DIR, SKY_FILL_COLOR } from './components/Environment.jsx'
 import { ProceduralEnvironment } from './components/EnvironmentMap.jsx'
@@ -16,7 +18,8 @@ import { UI } from './components/UI.jsx'
 import { useInput } from './hooks/useInput.js'
 import { useShipMeta } from './systems/shipMeta.js'
 import { useStore } from './state/useStore.js'
-import { CAMERA_MODES, MOVEMENT_MODES } from './config/shipConfig.js'
+import { shipYaw } from './systems/navigation.js'
+import { CAMERA_MODES } from './config/shipConfig.js'
 
 /** Feed drei's loader progress into the store for the loading screen. */
 function ProgressBridge() {
@@ -37,40 +40,57 @@ function ProgressBridge() {
  * The player transform lives in the zustand store, so returning from Inspect
  * to Explore restores exactly where the player was standing.
  */
-function SceneRig({ meta, keys, look }) {
+function SceneRig({ meta, keys, look, touchHelm }) {
   const cameraMode = useStore((s) => s.cameraMode)
   const { camera } = useThree()
 
   const spawn = meta?.spawn?.position ?? [0, -7.2, 0]
   const waterLevel = meta?.waterLevel ?? -14
+  const flightBounds = useMemo(() => {
+    const hull = meta?.hull
+    if (!hull) return undefined
+    return { min: [hull.min[0], hull.min[2], -hull.max[1]], max: [hull.max[0], hull.max[2], -hull.min[1]] }
+  }, [meta])
   // deck height in three.js space, used by the ship surface material
   const deckY = meta?.deck?.main?.zAvg ?? meta?.deck?.height ?? -7.2
 
-  // shared Inspect framing: fit the whole hull in the vertical fov
+  const aspect = useThree((state) => state.size.width / Math.max(1, state.size.height))
   const framing = useMemo(() => {
-    const h = meta?.hull
-    const size = h?.size ?? [39, 24, 22]
-    const center = h?.center ?? [0, 0, 0]
-    const radius = Math.max(size[0], size[1], size[2]) * 0.5
-    const fov = 62 * (Math.PI / 180)
-    return {
-      target: [center[0], center[1], center[2]],
-      distance: (radius * 1.25) / Math.tan(fov / 2),
+    const min = meta?.hull?.min ?? [-43, -21, -62]
+    const max = meta?.hull?.max ?? [43, 21, 62]
+    const bottom = Math.max(min[2], waterLevel)
+    const center = new THREE.Vector3((min[0] + max[0]) / 2, (bottom + max[2]) / 2, -(min[1] + max[1]) / 2)
+    const direction = new THREE.Vector3(-0.72, -0.10, 0.69).normalize()
+    const right = new THREE.Vector3().crossVectors(new THREE.Vector3(0, 1, 0), direction).normalize()
+    const up = new THREE.Vector3().crossVectors(direction, right)
+    const tangent = Math.tan(THREE.MathUtils.degToRad(31))
+    const corner = new THREE.Vector3()
+    let distance = 0
+    // Metadata is Z-up. Fit the above-water envelope along both camera axes.
+    for (const x of [min[0], max[0]]) {
+      for (const y of [bottom, max[2]]) {
+        for (const z of [-max[1], -min[1]]) {
+          corner.set(x, y, z).sub(center)
+          const horizontal = Math.abs(corner.dot(right)) / (tangent * Math.max(0.2, aspect) * 0.88)
+          const vertical = Math.abs(corner.dot(up)) / (tangent * 0.84)
+          distance = Math.max(distance, corner.dot(direction) + Math.max(horizontal, vertical))
+        }
+      }
     }
-  }, [meta])
+    return { center, direction, distance }
+  }, [meta, waterLevel, aspect])
 
-  // frame the whole ship when entering Inspect, using the real hull bounds
-  useEffect(() => {
+  // Each entry to Inspect frames the bow in the ship's current heading.
+  const [inspectTarget, setInspectTarget] = useState([0, 0, 0])
+  useLayoutEffect(() => {
     if (cameraMode !== CAMERA_MODES.INSPECT) return
-    if (!framing) return
-    const { target, distance } = framing
-    const dir = new THREE.Vector3(0.66, 0.34, 0.67).normalize()
-    camera.position.set(
-      target[0] + dir.x * distance,
-      target[1] + dir.y * distance,
-      target[2] + dir.z * distance
-    )
-    camera.lookAt(target[0], target[1], target[2])
+    const yaw = shipYaw()
+    const axis = new THREE.Vector3(0, 1, 0)
+    const target = framing.center.clone().applyAxisAngle(axis, yaw)
+    const direction = framing.direction.clone().applyAxisAngle(axis, yaw)
+    camera.position.copy(target).addScaledVector(direction, framing.distance)
+    camera.lookAt(target)
+    setInspectTarget(target.toArray())
   }, [cameraMode, camera, framing])
 
   // expose the camera for the browser tests (e.g. proving Inspect can orbit)
@@ -84,6 +104,8 @@ function SceneRig({ meta, keys, look }) {
       <SkyDome />
       <ProceduralEnvironment sunDir={SUN_DIR} />
       <Lighting rooms={meta?.interiors?.rooms} levels={meta?.interiors?.levels} dockWaterLevel={meta?.interiors?.dockWaterLevel ?? waterLevel} />
+      <Archipelago waterLevel={waterLevel} />
+      <PatrolFleet waterLevel={waterLevel} />
       <Ocean sunDir={SUN_DIR} waterLevel={waterLevel} hullProfile={meta?.oceanHullProfile} skyColor={SKY_FILL_COLOR} />
 
       <Ship sunDir={SUN_DIR} skyColor={SKY_FILL_COLOR} deckY={deckY} waterY={waterLevel} roomLights={meta?.interiors?.lights}
@@ -99,20 +121,22 @@ function SceneRig({ meta, keys, look }) {
           look={look}
           spawn={spawn}
           climbs={meta?.exterior?.mechanisms?.climbs}
+          flightBounds={flightBounds}
           waterLevel={waterLevel}
         />
       )}
-      <NavigationSystem meta={meta} keys={keys} />
+      <NavigationSystem meta={meta} keys={keys} touchHelm={touchHelm} />
       <CoupDeBurstEffects outlet={meta?.exterior?.mechanisms?.burst} waterLevel={waterLevel} />
       <FoodLiftSystem meta={meta} />
 
-      <InspectCamera target={framing.target} distance={framing.distance} />
+      <InspectCamera target={inspectTarget} />
     </>
   )
 }
 
 export default function App() {
   const { keys, look } = useInput()
+  const touchHelm = useRef({})
   const meta = useShipMeta()
 
   const cameraMode = useStore((s) => s.cameraMode)
@@ -151,11 +175,11 @@ export default function App() {
       >
         <ProgressBridge />
         <Suspense fallback={null}>
-          <SceneRig meta={meta} keys={keys} look={look} />
+          <SceneRig meta={meta} keys={keys} look={look} touchHelm={touchHelm} />
         </Suspense>
       </Canvas>
 
-      <UI onEnter={enter} />
+      <UI onEnter={enter} touchHelm={touchHelm} />
     </main>
   )
 }

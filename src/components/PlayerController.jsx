@@ -3,19 +3,21 @@ import { useFrame, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
 import { useStore } from '../state/useStore.js'
 import { useCollision } from '../systems/collision.js'
+import { flightSpeed } from '../systems/flight.js'
 import { voyage } from '../systems/navigation.js'
 import { createClimbingSystem, pointAt, reachedClimbPoint, CLIMB_SPEED } from '../systems/climbing.js'
 import { onInteract } from '../hooks/useInput.js'
 import { CONTACT_GAP } from '../systems/doors.js'
 import {
   WALK_SPEED, RUN_SPEED, JUMP_SPEED, GRAVITY, GROUND_ACCEL, AIR_ACCEL,
-  FLY_SPEED, FLY_FAST_SPEED, MOUSE_SENSITIVITY, PLAYER_HEIGHT_M,
+  MOUSE_SENSITIVITY, PLAYER_HEIGHT_M,
   EYE_HEIGHT_M, CAMERA_MODES, PERSON_MODES, MOVEMENT_MODES,
   THIRD_PERSON_DISTANCE, THIRD_PERSON_HEIGHT,
 } from '../config/shipConfig.js'
 
 const PLAYER_RADIUS = 0.34
 const STEP_HEIGHT = 0.8
+const FALLBACK_FLIGHT_BOUNDS = { min: [-43, -53, -21], max: [43, 62, 21] }
 /**
  * How far the "leaving the ship" guard looks for a floor before it decides the
  * player has fallen out of the world. It has to be generous: the ship has four
@@ -38,7 +40,7 @@ const VOID_LOOKAHEAD = 30
  * The player transform lives in the zustand store so switching to Inspect and
  * back restores it exactly.
  */
-export function PlayerController({ keys, look, spawn, climbs, waterLevel = -14, onFrame }) {
+export function PlayerController({ keys, look, spawn, climbs, flightBounds = FALLBACK_FLIGHT_BOUNDS, waterLevel = -14, onFrame }) {
   const { camera } = useThree()
   const collision = useCollision()
   const climbing = useMemo(()=>createClimbingSystem(climbs),[climbs])
@@ -211,10 +213,11 @@ export function PlayerController({ keys, look, spawn, climbs, waterLevel = -14, 
     if (flying) {
       climbing.detach()
       climbExitHold.current=false
-      const fast = k.run
-      const speed = fast ? FLY_FAST_SPEED : FLY_SPEED
-
-      const dir = wish.clone()
+      const speed = flightSpeed(pos.current.toArray(), flightBounds, k.run)
+      const forward = (k.forward ? 1 : 0) - (k.back ? 1 : 0)
+      const strafe = (k.right ? 1 : 0) - (k.left ? 1 : 0)
+      const dir = fwd.multiplyScalar(Math.cos(pitch.current) * forward).addScaledVector(right, strafe)
+      dir.y = Math.sin(pitch.current) * forward
       // E rises and Q descends (what the HUD advertises); Space also rises because
       // that is the muscle-memory key from walking mode.
       if (k.up || k.jump) dir.y += 1
@@ -230,14 +233,14 @@ export function PlayerController({ keys, look, spawn, climbs, waterLevel = -14, 
       } else pos.current.addScaledVector(vel.current, dt)
       grounded.current = false
 
-      // keep the player over the ship horizontally in fly mode
+      // Bound the survey view to the rendered ocean and sky.
       const r = Math.hypot(pos.current.x, pos.current.z)
-      const maxR = 420
+      const maxR = 785
       if (r > maxR) {
         pos.current.x *= maxR / r
         pos.current.z *= maxR / r
       }
-      pos.current.y = Math.max(pos.current.y, -60)
+      pos.current.y = THREE.MathUtils.clamp(pos.current.y, -60, 520)
 
       // camera
       camera.position.set(pos.current.x, pos.current.y + EYE_HEIGHT_M, pos.current.z)

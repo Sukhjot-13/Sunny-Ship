@@ -1,17 +1,21 @@
+import { firstShoal, readLogPose } from '../config/archipelago.js'
+import { fireAtFleet, resetFleet } from './fleet.js'
+
 /** Navigation is simulated; collision queries remain in ship coordinates. */
 export const CHANNELS=['Shiro Mokuba I','Mini Merry II','Shark Submerge III','Kurosai FR-U IV','Brachio Tank V','Inflatable Pool']
-export const LOG_BEARINGS=[35,145,285]
+export const LOG_BEARINGS=readLogPose({ east: 0, south: 0 }).map(reading => reading.bearing)
 export const COLA={capacity:30,perSecond:5}
 const burstCharge=.68,burstFlight=6.1,burstLanding=1.55
 export const BURST={
  charge:burstCharge,flight:burstFlight,landing:burstLanding,
  seconds:burstCharge+burstFlight+burstLanding,height:102,range:1000,cost:3,
 }
+export const SAIL_SPEED=19
 export const GAON={seconds:2.5,cost:.5}
-const initial=()=>({heading:270,throttle:0,speed:0,east:0,south:0,helm:false,channel:1,dockGateChannel:1,dockOpen:false,shutter:0,dockAngle:0,logNeedle:0,cola:COLA.capacity,burst:0,lift:0,pitch:0,wheel:0,chicken:false,maneAngle:0,jawOpen:false,jaw:0,gaon:0,paddleAngle:0,foodLift:0,foodLiftTarget:0})
+const initial=()=>({heading:270,throttle:0,speed:0,east:0,south:0,helm:false,shoal:'',channel:1,dockGateChannel:1,dockOpen:false,shutter:0,dockAngle:0,logNeedle:0,cola:COLA.capacity,burst:0,lift:0,pitch:0,wheel:0,chicken:false,maneAngle:0,jawOpen:false,jaw:0,gaon:0,paddleAngle:0,foodLift:0,foodLiftTarget:0})
 export const voyage=initial()
 const RAD=Math.PI/180
-export function resetVoyage(){Object.assign(voyage,initial())}
+export function resetVoyage(){Object.assign(voyage,initial());resetFleet()}
 export function shipYaw(){return (270-voyage.heading)*RAD}
 export function channelName(channel){return channel===0?'Paddles':CHANNELS[channel-1]}
 export function channelAngle(channel){return -(Math.max(1,channel)-1)*Math.PI/3}
@@ -58,6 +62,10 @@ export function burstAvailability(state=voyage){
  const reason=phase==='charging'?'Cola pressure building…':phase==='airborne'?'Coup de Burst airborne':
   phase==='landing'?'Coup de Burst splashdown':state.gaon>0?'Wait for the Gaon blast to clear.':
   state.cola<BURST.cost?'Coup de Burst needs three cola barrels.':''
+ const heading=state.heading*RAD
+ const range=BURST.range+32*BURST.landing/3
+ const shoal=reason?null:firstShoal(state.east,state.south,Math.sin(heading)*range,-Math.cos(heading)*range)
+ if(shoal)return {phase,canFire:false,reason:`Turn clear of ${shoal.island.name} before launching.`}
  return {phase,canFire:!reason,reason}
 }
 /** Shared readiness for the visible panel and keyboard mechanism actions. */
@@ -74,7 +82,11 @@ export function operateCannon(action){
  }
  if(action==='fire'){
   if(!fireGaon())return {ok:false,message:cannonAvailability().reason}
-  return {ok:true,message:'Gaon air blast · half a barrel spent · reverse recoil'}
+  const target=fireAtFleet(voyage)
+  const message=target
+   ? target.health ? `Gaon hit ${target.name} · ${target.health} hull remaining` : `${target.name} is sinking`
+   : 'Gaon air blast · half a barrel spent · reverse recoil'
+  return {ok:true,message}
  }
  return {ok:false,message:'Unknown cannon action'}
 }
@@ -122,8 +134,8 @@ export function advanceVoyage(elapsed,keys={},dockOccupied=false,shutterOccupied
  const dt=Math.min(.1,Math.max(0,elapsed))
  if(voyage.helm&&voyage.burst===0){
   const steering=(keys.right?1:0)-(keys.left?1:0)
-  voyage.throttle=Math.max(0,Math.min(1,voyage.throttle+((keys.forward?1:0)-(keys.back?1:0))*dt*.35))
-  voyage.heading=(voyage.heading+steering*dt*18*(.25+.75*Math.min(1,Math.abs(voyage.speed)/5))+360)%360
+  voyage.throttle=Math.max(0,Math.min(1,voyage.throttle+((keys.forward?1:0)-(keys.back?1:0))*dt*.65))
+  voyage.heading=(voyage.heading+steering*dt*18*(.25+.75*Math.min(1,Math.abs(voyage.speed)/10))+360)%360
   voyage.wheel+=((steering*.55)-voyage.wheel)*Math.min(1,dt*6)
  }else voyage.wheel*=Math.exp(-dt*6)
  advanceDock(dt,dockOccupied,shutterOccupied)
@@ -139,15 +151,24 @@ export function advanceVoyage(elapsed,keys={},dockOccupied=false,shutterOccupied
   voyage.lift=frame.lift;voyage.pitch=frame.pitch
   distance=frame.distance-before.distance
   if(used>0)voyage.speed=distance/used
-  if(voyage.burst===0){voyage.lift=0;voyage.pitch=0;voyage.speed=voyage.throttle*5}
+  if(voyage.burst===0){voyage.lift=0;voyage.pitch=0;voyage.speed=voyage.throttle*SAIL_SPEED}
  }else{
   const paddle=voyage.dockGateChannel===0&&voyage.shutter>.98&&voyage.cola>0
-  const desired=voyage.gaon>0?-8:voyage.throttle*(voyage.chicken?-2:paddle?4:5)
-  voyage.speed+=(desired-voyage.speed)*(1-Math.exp(-dt*.6));distance=voyage.speed*dt
+  const desired=voyage.gaon>0?-8:voyage.throttle*(voyage.chicken?-7:paddle?13:SAIL_SPEED)
+  voyage.speed+=(desired-voyage.speed)*(1-Math.exp(-dt*1.15));distance=voyage.speed*dt
   if(paddle&&voyage.throttle>0){voyage.paddleAngle+=dt*voyage.throttle*1.5;voyage.cola=Math.max(0,voyage.cola-dt*.003)}
  }
- voyage.east+=Math.sin(voyage.heading*RAD)*distance
- voyage.south-=Math.cos(voyage.heading*RAD)*distance
+ const eastward=Math.sin(voyage.heading*RAD)*distance
+ const southward=-Math.cos(voyage.heading*RAD)*distance
+ const shore=firstShoal(voyage.east,voyage.south,eastward,southward)
+ const travel=shore?Math.max(0,shore.fraction-.02/Math.abs(distance)):1
+ voyage.east+=eastward*travel
+ voyage.south+=southward*travel
+ if(shore){
+  voyage.shoal=shore.island.name
+  voyage.throttle=0
+  voyage.speed=0
+ }else if(Math.abs(distance)>.001)voyage.shoal=''
  advanceCannon(elapsed)
  return voyage
 }

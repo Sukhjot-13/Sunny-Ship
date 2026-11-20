@@ -5,6 +5,8 @@ the reasoning is not lost.
 
 ## 🔴 Vulnerabilities / correctness risks
 
+- **2026-11-20 — Reconcile the prior bow coverage and interior-route assertions.** The C01 bow ray test and the Storage Room and Bath isolation findings reproduce using Gemini's models and navigation code.
+
 - **2026-10-03 — Probe an opaque source shell before fitting internal cavities.** An imported head can have an open back while appearing solid from the front. Rear rays through the raw dome then return front skin and can silently empty an intersection. Source fitting now seals the head first, rejects empty/nonmanifold Boolean output, and uses a source-front-only closed chin rather than carrying rear skin into the moving face. Actual closed/open owner rays and exported body closure remain required; passing bounds alone does not accept the mechanism.
 
 - **2026-10-01 — Blender parent deletion silently corrupts world transforms.**
@@ -50,6 +52,10 @@ the reasoning is not lost.
 - **2026-10-23 — Interior finish consistency (active).** Add physically scaled timber, cloth, tile, ceramic, paper and metal detail to the existing rooms. Keep authored tile colors and patterns, existing construction and exterior finishes; use source-relative projection for unmapped furniture so texture stays fixed during ship motion.
 
 ## 🟡 New features
+
+- **2026-11-20 — Focus the sailing view on the route ahead.** Implemented an elevated stern view, adjustable external orbit, a longer visible wake, three moving Gaon targets, and faster open-water and survey movement.
+
+- **2026-11-20 — An explorable route for the Sunny.** Implemented three original islands with live Log Pose bearings, manual steering from Inspect, coastal shallows, and a lighthouse at Lantern Cay.
 
 - **2026-10-01 — Fly-mode altitude keys are inconsistent.** `useInput.js` maps `E` to
   up and `Q` to down, and the HUD documents `Q`/`E`, but `PlayerController.jsx` checks

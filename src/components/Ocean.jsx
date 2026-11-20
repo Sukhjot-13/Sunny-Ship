@@ -1,9 +1,10 @@
 import * as THREE from 'three'
 import { forwardRef, useEffect, useMemo, useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
+import { ISLANDS } from '../config/archipelago.js'
 import { WATER_LEVEL } from '../config/shipConfig.js'
 import { OCEAN_SIZE_M, OCEAN_HORIZON_SIZE_M, OCEAN_SEGMENTS, WAVE_SCALE } from '../config/renderConfig.js'
-import { BURST, sampleBurst, voyage, shipYaw } from '../systems/navigation.js'
+import { BURST, SAIL_SPEED, sampleBurst, voyage, shipYaw } from '../systems/navigation.js'
 import { createOceanReflection } from '../systems/oceanReflection.js'
 
 /**
@@ -86,6 +87,8 @@ const frag = /* glsl */ `
   uniform vec3 uSkyHorizon;
   uniform vec3 uSkyHorizonCool;
   uniform vec3 uSkyZenith;
+  uniform vec3 uSkyBottom;
+  uniform vec3 uSkyMid;
   uniform vec3 uCameraPos;
   uniform float uTime;
   uniform sampler2D uReflectionMap;
@@ -95,6 +98,7 @@ const frag = /* glsl */ `
   uniform float uWaterLevel;
   uniform int uHullCount;
   uniform vec3 uHullProfile[32];
+  uniform vec4 uIslands[${ISLANDS.length}];
   uniform float uShipYaw;
   uniform float uShipLift;
   uniform vec2 uBurstImpact;
@@ -139,20 +143,36 @@ const frag = /* glsl */ `
     return vec2(gx, gz) * weight;
   }
 
+  // Keep this shoreline contour in sync with coastRadius in config/archipelago.js.
+  float shorelineDistance(vec2 position, vec4 island) {
+    vec2 delta = (position - island.xy) * vec2(1.0, 1.09);
+    float radius = length(delta);
+    if (radius > island.z * 1.62) return 1000.0;
+    float angle = atan(delta.y, delta.x + 0.000001);
+    float seed = island.w;
+    float coast = 0.94 + 0.085 * sin(3.0 * angle + seed) +
+      0.057 * cos(5.0 * angle - seed) + 0.035 * sin(9.0 * angle);
+    return radius - island.z * coast;
+  }
+
   // Analytical Golden Hour sky matching SkyDome for reflections & horizon haze
   vec3 evalGoldenSky(vec3 dir, vec3 sunDir) {
     vec3 d = normalize(dir);
-    float h = max(d.y, 0.0);
+    float h = d.y;
     float sunAz = clamp(dot(normalize(vec2(d.x, d.z) + 1e-5), normalize(vec2(sunDir.x, sunDir.z))) * 0.5 + 0.5, 0.0, 1.0);
     vec3 hor = mix(uSkyHorizonCool, uSkyHorizon, pow(sunAz, 1.55) * 0.86 + 0.14);
-    vec3 mid = vec3(0.17, 0.42, 0.69);
-    vec3 col = mix(hor, mid, pow(smoothstep(0.0, 0.28, h), 0.68));
-    col = mix(col, uSkyZenith, pow(smoothstep(0.16, 0.88, h), 0.86));
-    float belt = exp(-h * 8.5) * (0.22 + 0.78 * pow(sunAz, 1.8));
-    col += vec3(1.0, 0.64, 0.28) * belt * 0.48;
+    vec3 belt = vec3(1.0, 0.64, 0.28) * (0.22 + 0.78 * pow(sunAz, 1.8)) * 0.48;
+    vec3 col;
+    if (h >= 0.0) {
+      col = mix(hor, uSkyMid, pow(smoothstep(0.0, 0.28, h), 0.68));
+      col = mix(col, uSkyZenith, pow(smoothstep(0.16, 0.88, h), 0.86));
+      col += belt * exp(-h * 8.5);
+    } else {
+      col = mix(hor + belt, uSkyBottom, pow(smoothstep(0.0, 0.35, -h), 0.75));
+    }
     float sd = max(dot(d, sunDir), 0.0);
-    col += vec3(1.0, 0.68, 0.32) * pow(sd, 5.5) * 0.50;
-    col += vec3(1.0, 0.84, 0.52) * pow(sd, 42.0) * 1.25;
+    col += vec3(1.0, 0.68, 0.32) * pow(sd, 5.5) * 0.52;
+    col += vec3(1.0, 0.84, 0.52) * pow(sd, 42.0) * 1.35;
     return col;
   }
 
@@ -198,6 +218,12 @@ const frag = /* glsl */ `
 
     // Subsurface sunlight passing through thin wave peaks when looking toward the sun
     float backScatter = pow(clamp(dot(V, -L + N * 0.45), 0.0, 1.0), 3.0) * vCrest;
+    float shore = 1000.0;
+    for (int i = 0; i < ${ISLANDS.length}; i++) {
+      shore = min(shore, abs(shorelineDistance(surface, uIslands[i])));
+    }
+    float shallows = 1.0 - smoothstep(2.0, 43.0, shore);
+    body += vec3(0.008, 0.075, 0.072) * shallows * (0.72 + 0.28 * vCrest);
     body += vec3(0.05, 0.34, 0.36) * uSunColor * backScatter * 0.58;
 
     // Physical water Fresnel (IOR 1.333 -> F0 = 0.0204), slightly restrained so open sea stays rich deep blue
@@ -241,10 +267,10 @@ const frag = /* glsl */ `
     // (No periodic grid crest polka-dots in the open ocean!)
     float foamTex = fbm3(surface * 1.15 + vec2(uTime * 0.14, -uTime * 0.11));
     float fineBubbles = noise(surface * 5.2 + vec2(-uTime * 0.22, uTime * 0.16));
-    float speed = clamp(abs(uShipSpeed) / 5.0, 0.0, 1.0);
+    float speed = clamp(abs(uShipSpeed) / ${SAIL_SPEED.toFixed(1)}, 0.0, 1.0);
 
     // Rich frothy bow & hull-side waterline wash hugging the hull curve
-    float bowFocus = smoothstep(4.0, -34.0, local.x);
+    float bowFocus = 1.0 - smoothstep(-34.0, 4.0, local.x);
     float contactBand = mix(1.55, 3.25, bowFocus) * (1.0 + 0.35 * speed);
     float contactMask = 1.0 - smoothstep(0.05, contactBand, hullDistance);
     float contact = contactMask * smoothstep(0.28, 0.68, foamTex * 0.66 + fineBubbles * 0.42) * (0.52 + 0.45 * speed + 0.36 * bowFocus);
@@ -253,9 +279,13 @@ const frag = /* glsl */ `
 
     float trailing = uShipSpeed >= 0.0 ? local.x - uHullProfile[31].x : uHullProfile[0].x - local.x;
     float spread = 1.0 + max(trailing, 0.0) * 0.24;
-    float wake = (1.0 - smoothstep(0.2, 1.25, abs(abs(local.y) - spread))) *
-                 exp(-max(trailing, 0.0) * 0.042) * step(0.0, trailing) * step(trailing, 48.0) * speed;
-    wake *= smoothstep(0.34, 0.76, foamTex) * 0.46;
+    float wakeLength = mix(39.0, 106.0, speed);
+    float trailFade = step(0.0, trailing) * (1.0 - smoothstep(wakeLength * 0.42, wakeLength, trailing));
+    float vWake = (1.0 - smoothstep(0.2, 1.8, abs(abs(local.y) - spread))) * trailFade;
+    float churn = (1.0 - smoothstep(0.1, 5.0 + max(trailing, 0.0) * 0.09, abs(local.y))) *
+      trailFade * smoothstep(0.23, 0.69, foamTex + fineBubbles * 0.13);
+    float wake = (vWake * smoothstep(0.25, 0.74, foamTex) * 0.57 + churn * 0.41) * speed;
+
 
     float impact = 0.0;
     if (uBurstImpact.x >= 0.0) {
@@ -268,7 +298,9 @@ const frag = /* glsl */ `
     }
 
     float foam = clamp((contact + tightRim + wake) * (1.0 - step(0.5, uShipLift)), 0.0, 0.82);
-    foam = min(0.90, foam + impact);
+    float shoreWash = (1.0 - smoothstep(0.3, 2.7, abs(shore - 1.3 * foamTex))) *
+      smoothstep(0.32, 0.73, foamTex) * 0.39;
+    foam = min(0.90, foam + impact + shoreWash);
     // Foam tinted warmly by golden-hour sun on lit side, soft cool pearl in shadow
     vec3 foamCol = mix(vec3(0.68, 0.76, 0.84), vec3(1.0, 0.90, 0.78), 0.35 + 0.65 * nl);
     col = mix(col, foamCol, foam);
@@ -276,7 +308,7 @@ const frag = /* glsl */ `
     // Distant atmospheric horizon mist — keeps nearby sea rich deep navy while dissolving the far edge
     float dist = length(vWorldPos.xz - uCameraPos.xz);
     vec3 viewDir = normalize(vWorldPos - uCameraPos);
-    vec3 horizonMist = evalGoldenSky(vec3(viewDir.x, 0.0, viewDir.z), L);
+    vec3 horizonMist = evalGoldenSky(viewDir, L);
     float fog = pow(smoothstep(300.0, 860.0, dist), 1.45);
     col = mix(col, horizonMist, clamp(fog, 0.0, 1.0));
 
@@ -330,6 +362,8 @@ export const Ocean = forwardRef(function Ocean({ waterLevel = WATER_LEVEL, hullP
           uSkyHorizon: { value: new THREE.Color('#f4ae68') },
           uSkyHorizonCool: { value: new THREE.Color('#b6c5d8') },
           uSkyZenith: { value: new THREE.Color('#0d3266') },
+          uSkyMid: { value: new THREE.Color('#2c6bb0') },
+          uSkyBottom: { value: new THREE.Color('#0c2138') },
           uCameraPos: { value: new THREE.Vector3() },
           uReflectionMap: { value: reflection.texture },
           uReflectionMatrix: { value: reflection.matrix },
@@ -341,6 +375,7 @@ export const Ocean = forwardRef(function Ocean({ waterLevel = WATER_LEVEL, hullP
           uShipLift: { value: 0 },
           uBurstImpact: { value: new THREE.Vector2(-1, 0) },
           uWorldOffset: { value: new THREE.Vector2() },
+          uIslands: { value: ISLANDS.map(({ east, south, radius, seed }) => new THREE.Vector4(east, south, radius, seed)) },
           uHullProfile: { value: Array.from({ length: 32 }, (_, i) => new THREE.Vector3(...(hullProfile[i] ?? [0, 0, 0]))) },
         },
       }),

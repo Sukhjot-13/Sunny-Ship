@@ -312,12 +312,12 @@ export function SkyDome() {
 /**
  * Orbit camera used by Inspect mode.
  *
- * The target and framing distance are shared with SceneRig so the camera and
- * the controls agree on what "the whole ship" means.
+ * SceneRig sets the opening pose and the orbit target.
  */
-export function InspectCamera({ target = [0, 0, 0], distance = 45 }) {
+export function InspectCamera({ target = [0, 0, 0] }) {
   const cameraMode = useStore((s) => s.cameraMode)
-  const ready = useRef(false)
+  const helm = useRef({ view: null, previous: null, yaw: 0, inspectTarget: null })
+  const helmView = useStore((s) => s.helmView)
   const orbit = useRef(null)
   const startingView = useRef(null)
   const burstView = useMemo(() => ({
@@ -326,15 +326,51 @@ export function InspectCamera({ target = [0, 0, 0], distance = 45 }) {
 
   useFrame(({camera})=>{
     const controls=orbit.current
-    if(!controls){startingView.current=null;return}
-    if(voyage.burst===0){
-      const saved=startingView.current
-      if(!saved)return
-      camera.position.copy(saved.eye)
-      controls.target.copy(saved.focus)
-      controls.enabled=true
-      controls.update()
-      startingView.current=null
+    if (!controls) {
+      startingView.current = null
+      helm.current.view = null
+      helm.current.previous = null
+      return
+    }
+    if (voyage.burst === 0) {
+      const saved = startingView.current
+      if (saved) {
+        camera.position.copy(saved.eye)
+        controls.target.copy(saved.focus)
+        controls.enabled = true
+        startingView.current = null
+      }
+      const follow = helm.current
+      if (voyage.helm) {
+        const yaw = shipYaw()
+        follow.previous ??= { eye: camera.position.clone(), focus: controls.target.clone() }
+        if (follow.view !== helmView || follow.inspectTarget !== target) {
+          if (helmView === 'chase') {
+            // Look forward from high above the stern. A small port offset keeps
+            // the sails from blocking the water directly ahead.
+            camera.position.set(132, 105, -34)
+            controls.target.set(-106, -23, 0)
+          } else {
+            camera.position.set(82, 32, 113)
+            controls.target.set(-7, -3, 0)
+          }
+          camera.position.applyAxisAngle(burstView.up, yaw)
+          controls.target.applyAxisAngle(burstView.up, yaw)
+        } else if (helmView === 'chase') {
+          camera.position.applyAxisAngle(burstView.up, yaw - follow.yaw)
+          controls.target.applyAxisAngle(burstView.up, yaw - follow.yaw)
+        }
+        follow.inspectTarget = target
+        follow.yaw = yaw
+        follow.view = helmView
+        controls.update()
+      } else if (follow.previous) {
+        camera.position.copy(follow.previous.eye)
+        controls.target.copy(follow.previous.focus)
+        follow.previous = null
+        follow.view = null
+        controls.update()
+      } else if (saved) controls.update()
       return
     }
     startingView.current??={eye:camera.position.clone(),focus:controls.target.clone()}
@@ -367,15 +403,9 @@ export function InspectCamera({ target = [0, 0, 0], distance = 45 }) {
       rotateSpeed={0.55}
       zoomSpeed={0.8}
       panSpeed={0.5}
-      minDistance={8}
+      minDistance={3}
       maxDistance={400}
-      maxPolarAngle={Math.PI * 0.495}
-      onStart={() => {
-        ready.current = true
-      }}
-      onChange={() => {
-        // keep OrbitControls authoritative in inspect mode
-      }}
+      maxPolarAngle={Math.PI * 0.539}
     />
   )
 }

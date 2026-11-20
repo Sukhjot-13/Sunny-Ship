@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict'
-import {voyage,resetVoyage,shipYaw,rotatePoint,dockBounds,advanceVoyage,advanceCannon,burstStatus,burstAvailability,sampleBurst,cannonAvailability,operateCannon,startBurst,fireGaon,shutterPose,channelName,selectDockChannel,toggleDockShutters,BURST,CHANNELS,LOG_BEARINGS} from '../src/systems/navigation.js'
+import { ISLANDS, coastRadius, firstShoal, readLogPose, shoalRadius } from '../src/config/archipelago.js'
+import {voyage,SAIL_SPEED,resetVoyage,shipYaw,rotatePoint,dockBounds,advanceVoyage,advanceCannon,burstStatus,burstAvailability,sampleBurst,cannonAvailability,operateCannon,startBurst,fireGaon,shutterPose,channelName,selectDockChannel,toggleDockShutters,BURST,CHANNELS,LOG_BEARINGS} from '../src/systems/navigation.js'
 resetVoyage()
 assert.equal(shipYaw(),0)
 assert.equal(CHANNELS.length,6)
@@ -11,6 +12,8 @@ assert(Math.hypot(voyage.east,voyage.south)>10)
 const local=[-25,-30,2],world=rotatePoint(local,shipYaw())
 const restored=rotatePoint(world,-shipYaw())
 assert(restored.every((v,i)=>Math.abs(v-local[i])<1e-10))
+assert(voyage.speed > SAIL_SPEED - 1,'full throttle reaches the new cruise speed')
+voyage.heading=270
 const departure={east:voyage.east,south:voyage.south,heading:voyage.heading}
 assert(startBurst());assert.equal(voyage.cola,27);assert(!startBurst());assert.equal(burstStatus(),'charging')
 for(let i=0;i<6;i++)advanceVoyage(.1,{right:true})
@@ -124,4 +127,33 @@ voyage.foodLiftTarget=0
 for(let i=0;i<40;i++)advanceVoyage(.1)
 assert(Math.abs(voyage.foodLift-0)<.01,'food lift returns F2->F1')
 resetVoyage()
-console.log('PASS 30 cola, 60 Gaon shots, 5 cola per second, steering, Burst, guarded Dock selection and paddles')
+// The chart's coastline and safety margin share the island data used by the renderer.
+for (const island of ISLANDS) {
+ const bound = shoalRadius(island)
+ for(let angle = 0; angle < 2 * Math.PI; angle += .025) {
+  assert(island.radius * coastRadius(angle, island.seed) + 60 < bound)
+ }
+ assert.equal(firstShoal(island.east - bound - 10, island.south, 20, 0)?.island, island)
+ assert.equal(firstShoal(island.east - bound - 10, island.south, -20, 0), null)
+}
+const cay = ISLANDS[0], clearance = shoalRadius(cay)
+Object.assign(voyage, {east:cay.east-clearance-.2,south:cay.south,heading:90,helm:true,speed:5,throttle:1})
+assert.equal(startBurst(),false,'an obstructed Burst route preserves the ship and its cola')
+assert.match(burstAvailability().reason,/Lantern Cay/)
+assert.equal(voyage.cola,30)
+advanceVoyage(.1)
+assert.equal(voyage.speed,0)
+assert.equal(voyage.throttle,0)
+assert.equal(voyage.shoal,cay.name)
+assert(voyage.east < cay.east-clearance,'the bow stops in open water')
+const atShoal = voyage.east
+const reading = readLogPose(voyage)[0]
+assert.equal(reading.bearing,90)
+assert(reading.near && reading.range >= clearance)
+voyage.heading=270
+for(let i=0;i<15;i++) advanceVoyage(.1,{forward:true})
+assert(voyage.east<atShoal && voyage.shoal==='','the ship can turn away from the shoal')
+assert(readLogPose(voyage)[0].range>reading.range)
+resetVoyage()
+assert.deepEqual([voyage.east,voyage.south,voyage.logNeedle,voyage.shoal],[0,0,0,''])
+console.log('PASS 30 cola, 60 Gaon shots, 5 cola per second, steering, Burst, guarded Dock selection, paddles and charted shoals')

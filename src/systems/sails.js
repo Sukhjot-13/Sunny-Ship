@@ -39,13 +39,15 @@ const vert = /* glsl */ `
     // Belly profile: 0 at edges, max mid-span
     float bellyAmt = mix(sin(across * 3.14159) * sin(h * 3.14159), pow(across, 0.85), uFlag) * uWind;
 
-    float phase = uTime * 1.5;
+    float phase = uTime * mix(1.18, 2.25, uFlag);
     float flap =
       sin(phase + h * 4.5 + across * 1.4) * 0.34 +
       sin(phase * 1.73 + h * 8.0 + across * 5.0) * 0.16;
 
     vec3 push = normalize(uWindDir + vec3(0.0001));
-    float d = flap * bellyAmt * 0.30;
+    // A slow pressure swell on sails and a smaller traveling wave on pennants.
+    float pressure = sin(phase * 0.47 - across * 5.0 + h * 1.7) * 0.34;
+    float d = (flap + pressure) * bellyAmt * mix(2.2, 0.95, uFlag);
 
     pos += push * d * 0.85;
     pos.y += d * 0.12 * (1.0 - h);
@@ -57,7 +59,7 @@ const vert = /* glsl */ `
 
     // Approximate the deformed normal from the bulge direction
     vec3 n = normal;
-    n = normalize(n + push * d * 0.95);
+    n = normalize(n + push * d * 0.21);
     vNormal = normalize(mat3(modelMatrix) * n);
 
     gl_Position = projectionMatrix * viewMatrix * wp;

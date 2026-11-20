@@ -1,6 +1,7 @@
 import { create } from 'zustand'
 import { CAMERA_MODES, MOVEMENT_MODES, PERSON_MODES } from '../config/shipConfig.js'
-import { COLA, voyage } from '../systems/navigation.js'
+import { ISLANDS } from '../config/archipelago.js'
+import { voyage } from '../systems/navigation.js'
 import { operateAudibleBurst } from '../systems/burstAudio.js'
 
 /**
@@ -47,7 +48,7 @@ export const useStore = create((set, get) => ({
   nearInteraction: null,
   /** How many openings are currently open (HUD readout). */
   openDoorCount: 0,
-  navigation: { heading:270, speed:0, channel:1, cola:COLA.capacity, prompt:'' },
+  navigation: { ...voyage, prompt:'' },
   setNavigation: (navigation) => set({navigation}),
   triggerBurst: () => {
     const result=operateAudibleBurst()
@@ -60,14 +61,32 @@ export const useStore = create((set, get) => ({
 
   setLocked: (locked) => set({ locked }),
 
-  toggleCameraMode: () =>
+  helmView: 'chase',
+  toggleHelmView: () => set(s => ({ helmView: s.helmView === 'chase' ? 'orbit' : 'chase' })),
+  toggleInspectHelm: () => {
+    const s = get()
+    if (s.cameraMode !== CAMERA_MODES.INSPECT || s.cannonPanelOpen) return
+    voyage.helm = !voyage.helm
+    set({ helmView: 'chase', navigation: { ...s.navigation, ...voyage } })
+  },
+
+  nextLogNeedle: () => {
+    const s = get()
+    voyage.logNeedle = (voyage.logNeedle + 1) % ISLANDS.length
+    set({ navigation: { ...s.navigation, ...voyage } })
+  },
+
+  toggleCameraMode: () => {
+    voyage.helm = false
     set((s) => ({
+      navigation: { ...s.navigation, helm: false },
       cameraMode:
         s.cameraMode === CAMERA_MODES.EXPLORE
           ? CAMERA_MODES.INSPECT
           : CAMERA_MODES.EXPLORE,
       showHelp: false,
-    })),
+    }))
+  },
 
   togglePersonMode: () =>
     set((s) => ({

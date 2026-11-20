@@ -39,6 +39,11 @@ export function CannonControls(){
    <button type="button" aria-keyshortcuts="G" aria-label="Coup de Burst" disabled={!burst.canFire}
     title={burst.reason||'Launch Coup de Burst for three cola barrels'} onClick={triggerBurst}
     style={{...styles.trigger,...(!burst.canFire?styles.disabled:{})}}>{burstLabel||'Coup de Burst'} · G</button>
+   <button type="button" aria-keyshortcuts="J" onClick={()=>operate('toggle-mouth')} style={styles.trigger}>
+    {nav.jawOpen ? 'Close jaw' : 'Open jaw'} · J
+   </button>
+   <button type="button" aria-keyshortcuts="K" disabled={!ready.canFire} title={ready.reason}
+    onClick={()=>operate('fire')} style={{...styles.trigger,...(!ready.canFire?styles.disabled:{})}}>Fire Gaon · K</button>
    <button ref={trigger} type="button" aria-expanded={open} aria-controls="cannon-panel"
     onClick={()=>open?setOpen(false):showPanel()} style={styles.trigger}>Cannon · X</button>
   </div>

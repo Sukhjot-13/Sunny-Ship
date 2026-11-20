@@ -7,7 +7,9 @@ import {setDynamic} from '../systems/collision.js'
 import {surfaceCollisionBounds} from '../systems/surfaceCollision.js'
 import {innerGateSections} from '../systems/innerGateCollision.js'
 import {boxToThree,toThree} from '../systems/shipMeta.js'
-import {voyage,LOG_BEARINGS,GAON,advanceVoyage,advanceCannon,advanceDock,burstStatus,channelAngle,selectDockChannel,toggleDockShutters,dockBounds,rotatePoint,resetVoyage,shipYaw,shutterPose} from '../systems/navigation.js'
+import {voyage,GAON,advanceVoyage,advanceCannon,advanceDock,burstStatus,channelAngle,selectDockChannel,toggleDockShutters,dockBounds,rotatePoint,resetVoyage,shipYaw,shutterPose} from '../systems/navigation.js'
+import {advanceFleet,aimGaon,nearestContact} from '../systems/fleet.js'
+import {readLogPose} from '../config/archipelago.js'
 import {playBurstCue} from '../systems/burstAudio.js'
 import {operateAudibleCannon} from '../systems/cannonAudio.js'
 import {isNavigationNode} from '../systems/shipMotion.js'
@@ -87,7 +89,7 @@ function rudderSurfaceSections(node, inverse) {
  })
 }
 /** Wheel controls, guarded rolling apertures, mane/jaw/paddles and navigation. */
-export function NavigationSystem({meta,keys}){
+export function NavigationSystem({meta,keys,touchHelm}){
  const {camera}=useThree(),near=useRef(null),clock=useRef(0),nodes=useRef([]),root=useRef(null),effects=useRef(null),air=useRef([]),jaws=useRef([])
  const q=useMemo(()=>new THREE.Quaternion(),[]),pose=useMemo(()=>new THREE.Quaternion(),[])
  const layout=useMemo(()=>({centre:toThree(...(meta?.interiors?.dockCentre??[.45,1.17,-42.86])),solids:(meta?.interiors?.dockSolids??[]).map(b=>({...b,...boxToThree(b.min,b.max),...(b.footprint?{footprint:b.footprint.map(([x,y])=>[x,-y])}:{})})),mechanisms:meta?.exterior?.mechanisms??{}}),[meta])
@@ -98,7 +100,11 @@ export function NavigationSystem({meta,keys}){
    if(voyage.helm){voyage.helm=false;s.setHudMessage('Left the helm');return}
    if(!near.current)return
    if(near.current==='helm'){voyage.helm=true;s.setHudMessage('Helm: W/S speed · A/D steer · E release')}
-   if(near.current==='log'){voyage.logNeedle=(voyage.logNeedle+1)%3;s.setHudMessage(`Log Pose simulation: needle ${voyage.logNeedle+1}, ${LOG_BEARINGS[voyage.logNeedle]}° illustrative bearing`)}
+   if(near.current==='log'){
+    s.nextLogNeedle()
+    const reading=readLogPose(voyage)[voyage.logNeedle]
+    s.setHudMessage(`Log Pose simulation · ${reading.name} · ${Math.round(reading.bearing)%360}°`)
+   }
    if(near.current==='selector')s.setHudMessage(selectDockChannel((voyage.channel+1)%7))
    if(near.current==='lever')s.setHudMessage(toggleDockShutters())
   })
@@ -119,8 +125,11 @@ export function NavigationSystem({meta,keys}){
     s.setNavigation({...s.navigation,...voyage})
     return
    }
-   if(s.cannonPanelOpen||e.target.closest?.('button'))return
-   if(e.code==='KeyR'){resetVoyage();playBurstCue('idle')}
+   if(s.cannonPanelOpen)return
+   if(e.code==='KeyM'&&s.cameraMode==='inspect'){s.toggleInspectHelm();return}
+   if(e.code==='KeyP'&&s.cameraMode==='inspect'&&voyage.helm){s.toggleHelmView();return}
+   if(e.code==='KeyN'&&s.cameraMode==='inspect'){s.nextLogNeedle();return}
+   if(e.code==='KeyR'){resetVoyage();playBurstCue('idle');s.setNavigation({...voyage})}
    if(!voyage.helm)return
    if(e.code==='KeyT'){voyage.chicken=!voyage.chicken;s.setHudMessage(voyage.chicken?'Chicken Voyage: mane turning, reverse propulsion':'Chicken Voyage stopped')}
   }
@@ -131,15 +140,29 @@ export function NavigationSystem({meta,keys}){
  // Advance voyage and carry the local eye before Ship renders its current pose.
  useFrame((_,delta)=>{
   const store=useStore.getState(),explore=store.cameraMode==='explore',player=window.__sunny?.position??store.position
-  if(!explore||store.flying)voyage.helm=false
+  if(explore&&store.flying)voyage.helm=false
   const occupied=Math.abs(player[1]-layout.centre[1])<3&&Math.hypot(player[0]-layout.centre[0],player[2]-layout.centre[2])<8.4
   const selectedAngle=Math.PI/2+(Math.max(1,voyage.dockGateChannel)-1)*Math.PI/3
   const gate=rotatePoint([layout.centre[0]+2.30*Math.cos(selectedAngle),(meta?.interiors?.dockWaterLevel??layout.centre[1])+.45,layout.centre[2]-2.30*Math.sin(selectedAngle)],voyage.dockAngle,layout.centre)
   const innerOccupied=voyage.dockGateChannel>0&&Math.abs(player[1]-gate[1])<2.6&&Math.hypot(player[0]-gate[0],player[2]-gate[2])<1.1
   const shutterOccupied=innerOccupied||(layout.mechanisms.dockOpenings??[]).some(d=>{const c=toThree(...d.centre);return Math.abs(player[2]-c[2])<1.5&&Math.hypot(player[0]-c[0],player[1]+.9-c[1])<d.radius+1})
   const before=burstStatus()
-  if(explore||before!=='idle')advanceVoyage(delta,keys.current,occupied,shutterOccupied)
-  else{advanceCannon(delta);advanceDock(delta,occupied,shutterOccupied)}
+  const controlsHeld = keys.current
+  const touch = touchHelm.current
+  const helmInput = explore ? controlsHeld : {
+   forward: controlsHeld.forward || touch.forward,
+   back: controlsHeld.back || touch.back,
+   left: controlsHeld.left || touch.left,
+   right: controlsHeld.right || touch.right,
+  }
+  if(explore||voyage.helm||voyage.throttle>0||Math.abs(voyage.speed)>.001||before!=='idle'){
+   advanceVoyage(delta,store.cannonPanelOpen?undefined:helmInput,occupied,shutterOccupied)
+  }else{
+   advanceCannon(delta)
+   advanceDock(delta,occupied,shutterOccupied)
+  }
+  advanceFleet(Math.min(.1,delta),voyage)
+  const readings=readLogPose(voyage)
   const phase=burstStatus()
   if(before!==phase&&(phase==='airborne'||phase==='landing'))playBurstCue(phase)
   setDynamic(dockBounds(layout.solids,layout.centre,voyage.dockAngle),'dock')
@@ -185,7 +208,7 @@ export function NavigationSystem({meta,keys}){
    else if(/SoldierDock_dial|SoldierDock_selector/.test(n.o.name)){q.setFromAxisAngle(axisX,-voyage.channel*Math.PI*2/7);pivotNode(n,wheelPivot,q)}
    else if(/SoldierDock_lever(?:_grip)?$/.test(n.o.name)){q.setFromAxisAngle(axisZ,-voyage.shutter*.35);const p=layout.mechanisms.controls?.targets?.lever;if(p)pivotNode(n,new THREE.Vector3(...toThree(...p)),q)}
    else if(n.o.name.startsWith('Sunny_LogPose_needle')){
-    const i=Number(n.o.name.match(/needle(\d)/)?.[1]??0),a=-LOG_BEARINGS[i]*Math.PI/180-shipYaw()
+    const i=Number(n.o.name.match(/needle(\d)/)?.[1]??0),a=-readings[i].bearing*Math.PI/180-shipYaw()
     n.o.quaternion.copy(n.q).premultiply(q.setFromAxisAngle(axisY,a))
    }
   }
@@ -198,9 +221,15 @@ export function NavigationSystem({meta,keys}){
   if(effects.current){effects.current.quaternion.copy(pose);effects.current.position.y=voyage.lift}
   for(let i=0;i<air.current.length;i++){
    const mesh=air.current[i];if(!mesh)continue
-   const active=voyage.gaon>0
+   const age=GAON.seconds-voyage.gaon-i*.055
+   const active=voyage.gaon>0&&age>=0&&age<.95
    mesh.visible=active
-   if(active){const t=GAON.seconds-voyage.gaon;mesh.material.opacity=.22*(1-(t% .9)/.9);mesh.scale.setScalar(1+(t+i*.17)% .9*3)}
+   if(active){
+    const progress=age/.95
+    mesh.position.x=outlet[0]-age*330
+    mesh.material.opacity=.31*(1-progress)
+    mesh.scale.setScalar(1+progress*(5+i*1.4))
+   }
   }
   const controls=layout.mechanisms.controls
   const anchors=controls?['helm','log','selector','lever'].map(id=>({id,p:toThree(...controls[id])})):[]
@@ -210,7 +239,7 @@ export function NavigationSystem({meta,keys}){
   const aimed=Object.entries(controls?.targets??{}).map(([id,p])=>{const d=new THREE.Vector3(...toThree(...p)).sub(eye);return {id,d:d.length(),alignment:forward.dot(d.normalize())}}).filter(a=>a.d<2.2&&a.alignment>.96).sort((a,b)=>b.alignment-a.alignment)[0]
   near.current=explore&&!store.flying?(aimed?.id??nearby?.id):null
   clock.current+=delta
-  if(clock.current>.2||before!==phase){clock.current=0;store.setNavigation({...voyage,prompt:voyage.helm?'E release · T Chicken · J mouth · K Gaon':near.current?`E ${near.current==='log'?'Log Pose (simulation)':near.current==='selector'?'select dock channel':near.current==='lever'?'toggle dock shutters':'take helm'}`:occupied&&Math.abs(voyage.dockAngle-channelAngle(voyage.channel))>.02?'Dock paused: clear the turntable':''})}
+  if(clock.current>.2||before!==phase){clock.current=0;const target=aimGaon(voyage);store.setNavigation({...voyage,contact:nearestContact(voyage),gaonTarget:target?{name:target.name,health:target.health}:null,prompt:voyage.helm?'E release · T Chicken · J mouth · K Gaon':near.current?`E ${near.current==='log'?'Log Pose (simulation)':near.current==='selector'?'select dock channel':near.current==='lever'?'toggle dock shutters':'take helm'}`:occupied&&Math.abs(voyage.dockAngle-channelAngle(voyage.channel))>.02?'Dock paused: clear the turntable':''})}
  },-1)
  const outlet=toThree(...(layout.mechanisms.lion?.outlet??[-42,1.287,-33]))
  return <group ref={effects}>{Array.from({length:3},(_,i)=><mesh key={i} ref={o=>{air.current[i]=o}} position={[outlet[0]-i*3,outlet[1],outlet[2]]} rotation={[0,Math.PI/2,0]} visible={false}><torusGeometry args={[.7,.10,6,40]}/><meshBasicMaterial color="#e6f1f4" transparent opacity={.2} depthWrite={false}/></mesh>)}</group>

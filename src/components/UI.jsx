@@ -1,11 +1,12 @@
 import { useStore, } from '../state/useStore.js'
 import { CAMERA_MODES, PERSON_MODES, MOVEMENT_MODES } from '../config/shipConfig.js'
+import { VoyageControls } from './VoyageControls.jsx'
 import { CannonControls } from './CannonControls.jsx'
 
 /**
  * Minimal UI: a title screen before you enter, and a subtle HUD once playing.
  */
-export function UI({ onEnter }) {
+export function UI({ onEnter, touchHelm }) {
   const started = useStore((s) => s.started)
   const locked = useStore((s) => s.locked)
   const loading = useStore((s) => s.loading)
@@ -36,25 +37,11 @@ export function UI({ onEnter }) {
 
   if (!started) {
     return (
-      <div style={styles.overlay} onClick={onEnter}>
-        <div style={styles.card}>
-          <h1 style={styles.title}>THOUSAND SUNNY</h1>
-          <p style={styles.tagline}>Grand Ship Collection — Thousand Sunny</p>
-          <div style={styles.cta}>Click to Explore</div>
-          <ul style={styles.controls}>
-            <li><b>WASD</b> — Move</li>
-            <li><b>Mouse</b> — Look</li>
-            <li><b>Shift</b> — Run</li>
-            <li><b>Space</b> — Jump</li>
-            <li><b>F</b> — Fly mode</li>
-            <li><b>C</b> — 1st / 3rd person</li>
-            <li><b>V</b> — Inspect Ship</li>
-            <li><b>H</b> — Toggle help</li>
-            <li><b>K</b> — Fire Gaon · <b>X</b> — Cannon controls</li>
-            <li><b>G</b> — Coup de Burst</li>
-            <li><b>0–6</b> — Dock channel · <b>L</b> — Dock shutters</li>
-            <li><b>Esc</b> — Release Mouse</li>
-          </ul>
+      <div className="sunny-title" onClick={onEnter}>
+        <div className="sunny-title-copy">
+          <h1>Thousand Sunny</h1>
+          <p>Explore the ship or take the helm.</p>
+          <div><button type="button">Click to Explore</button></div>
         </div>
       </div>
     )
@@ -70,12 +57,13 @@ export function UI({ onEnter }) {
   return (
     <>
       <CannonControls />
+      {cameraMode === CAMERA_MODES.INSPECT && !cannonPanelOpen && <VoyageControls touchHelm={touchHelm} />}
       {/*
         Inspect mode: OrbitControls drives the camera with drag/scroll, so there
         must be NO full-screen overlay here - one would swallow every pointer
         event and leave the user unable to orbit at all. Show a passive hint.
       */}
-      {cameraMode === CAMERA_MODES.INSPECT && (
+      {cameraMode === CAMERA_MODES.INSPECT && !nav.helm && (
         <div style={styles.hint}>
           {nav.burst>0?null:'Drag to orbit · Scroll to zoom · '}<b>V</b> to step aboard
         </div>
@@ -91,8 +79,8 @@ export function UI({ onEnter }) {
       {/* subtle mode indicator */}
       <div style={styles.hud}>
         <span style={styles.chip}>{cameraMode === CAMERA_MODES.INSPECT ? 'INSPECT' : 'EXPLORE'}</span>
-        <span style={styles.chip}>{modeLabel}</span>
-        <span style={styles.chipDim}>{movementMode === MOVEMENT_MODES.FLY ? 'Q/E altitude' : 'WASD'}</span>
+        {cameraMode === CAMERA_MODES.EXPLORE && <span style={styles.chip}>{modeLabel}</span>}
+        {cameraMode === CAMERA_MODES.EXPLORE && <span style={styles.chipDim}>{movementMode === MOVEMENT_MODES.FLY ? 'W/S follow aim · Q/E altitude' : 'WASD'}</span>}
         <span style={styles.chipDim}>{Math.round(nav.heading)}° · {nav.speed.toFixed(1)} m/s · Dock {nav.channel} · Cola {nav.cola.toFixed(1)}</span>
       </div>
 
@@ -107,7 +95,11 @@ export function UI({ onEnter }) {
           {hudMessage}
         </div>
       )}
-      {nav.prompt && cameraMode === CAMERA_MODES.EXPLORE && <div style={{...styles.toast,bottom:112}}>{nav.prompt}</div>}
+      {(nav.shoal || nav.prompt) && cameraMode === CAMERA_MODES.EXPLORE && (
+        <div style={{...styles.toast,bottom:112}}>
+          {nav.shoal ? `Shallow water near ${nav.shoal}. Turn out to sea.` : nav.prompt}
+        </div>
+      )}
       {cameraMode===CAMERA_MODES.EXPLORE&&nearClimb&&<div style={{...styles.toast,bottom:148}}>{nearClimb}</div>}
       {cameraMode===CAMERA_MODES.EXPLORE&&nearOpening?.kind==='hatch'&&<div style={{...styles.toast,bottom:184}}>E · {nearOpening.open?'Close':'Open'} {nearOpening.label}</div>}
 
@@ -139,20 +131,9 @@ const styles = {
     background: 'radial-gradient(ellipse at 50% 40%, #1b3a52 0%, #0a1622 70%)',
     color: '#f3ede0', zIndex: 40, userSelect: 'none', gap: 14,
   },
-  card: { textAlign: 'center', padding: '0 24px', display:'flex', flexDirection:'column', alignItems:'center' },
   title: {
     fontSize: 'clamp(30px, 6.5vw, 62px)', letterSpacing: '0.16em', fontWeight: 300,
     margin: 0, textShadow: '0 4px 26px rgba(0,0,0,0.6)',
-  },
-  tagline: { fontSize: 13, opacity: 0.62, letterSpacing: '0.09em', margin: '10px 0 0' },
-  cta: {
-    margin: '34px 0 22px', fontSize: 15, letterSpacing: '0.12em',
-    padding: '11px 26px', border: '1px solid rgba(243,237,224,0.42)',
-    borderRadius: 999, display: 'inline-block', background: 'rgba(255,255,255,0.05)',
-  },
-  controls: {
-    listStyle: 'none', padding: 0, margin: 0, fontSize: 12.5, lineHeight: 1.95,
-    opacity: 0.76, textAlign: 'left', display: 'inline-block',
   },
   barWrap: {
     width: 'min(360px, 70vw)', height: 3, background: 'rgba(255,255,255,0.16)',

@@ -79,8 +79,16 @@ export function useInput() {
         useStore.getState().setCannonPanelOpen(!useStore.getState().cannonPanelOpen)
         return
       }
-      if (useStore.getState().cannonPanelOpen || e.target.closest?.('button, input, textarea, select, [contenteditable="true"]')) return
-      if (e.code === 'KeyV') { toggleCameraMode(); return }
+      const state = useStore.getState()
+      if (state.cannonPanelOpen || e.target.closest?.('input, textarea, select, [contenteditable="true"]')) return
+      const sailing = state.cameraMode === 'inspect' && state.navigation.helm
+      if (sailing && /^(Key[WASD]|Arrow(Up|Down|Left|Right))$/.test(e.code)) {
+        e.preventDefault()
+        set(e.code, true)
+        return
+      }
+      if (e.code === 'KeyV' && state.started) { toggleCameraMode(); return }
+      if (e.target.closest?.('button')) return
       if (e.code === 'KeyC') { togglePersonMode(); return }
       if (e.code === 'KeyF') { toggleFlight(); return }
       if (e.code === 'KeyB' && useStore.getState().flying) { useStore.getState().toggleFlyCollision(); return }
